@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Sony Keeps Digging Itself Deeper &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Sony Keeps Digging Itself Deeper</h1>
+  <span class="post-date">Nov 10, 2005 7:00 PM</span>
+  <p>The furor over the rootkit technology used by Sony in their DRM software continues to grow. After Mark Russinovich <a href="http://www.sysinternals.com/blog/2005/10/sony-rootkits-and-digital-rights.html">unveiled the truth</a>, Sony released a patch that supposedly allows for the DRM technology to be uninstalled. Of course, Mark <a href="http://www.sysinternals.com/blog/2005/11/more-on-sony-dangerous-decloaking.html">reviewed the uninstallation</a>, and he found it left a little bit to be desired (putting it mildly). Basically, it left you at risk of a blue screen of death. And Mark&rsquo;s not the only one not satisfied&ndash;<a href="http://www.eweek.com/article2/0,1759,1883820,00.asp">this article</a> cites several other security experts as well who are not happy with this situation.</p>
+
+<p>Then, First 4 Internet (the company behind the cloaking technology that Sony uses for their DRM software) <a href="http://www.sysinternals.com/blog/2005/11/sonys-rootkit-first-4-internet.html">responds</a> to Mark&rsquo;s posts and attempts to refute his findings. Finally, today, Mark posted more details on the <a href="http://www.sysinternals.com/blog/2005/11/sony-you-dont-reeeeaaaally-want-to_09.html">actual uninstallation process</a> and what is required in order to make it work.</p>
+
+<p>Sony just keeps digging itself deeper and deeper into this hole. It&rsquo;s bad enough that the company uses stealth/cloaking technologies to hide their files. It&rsquo;s bad enough by itself that the DRM software is communicating back to Sony whenever a CD is played. It&rsquo;s bad enough that the uninstallation process requires so many steps and is so complicated.</p>
+
+<p>Finally, to make matters worse&hellip;check out <a href="http://entmag.com/news/article.asp?editorialsid=7033">this news</a>.</p>
+
+<p>Put it all together, and you get a mistake so massive that it could change Sony&rsquo;s business fortunes. Don&rsquo;t believe me? Are <strong><em>you</em></strong> going to buy any Sony CDs or software now, after everything that&rsquo;s been disclosed? I&rsquo;m not, that&rsquo;s for sure. (Of course, I don&rsquo;t really have to worry about it that much since I&rsquo;m using a Mac and not Windows, but that&rsquo;s a different story for a different day.)</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Just in Case &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Just in Case</h1>
+  <span class="post-date">Oct 8, 2005 5:58 PM</span>
+  <p>I&rsquo;ve mentioned the bug discussed in <a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;905809">KB905809</a> several times in this blog. In reading those posts (or reading the KB article), you&rsquo;ve probably seen that you can use the SC.EXE command to set the security descriptors on the Service Control Manager to fix the bug. What happens, though, if you mess up the SC.EXE command?</p>
+
+<p>It turns out that this very thing happened recently. A systems administrator copied the required SC.EXE command line from a Word document, thinking it was safer to copy and paste than try to type the command line directly. As it turns out, the copied text from Word had a carriage return in it, and this caused the command line to terminate early (before all the security descriptors were applied). In fact, what happened is that all of the &ldquo;Write&rdquo; permissions were removed.</p>
+
+<p>If you run &ldquo;sc sdshow scmanager&rdquo; on a system running Windows Server 2003 SP1, you&rsquo;ll get this:</p>
+
+<pre><code>D:(A;;CC;;;AU)(A;;CCLCRPRC;;;IU)(A;;CCLCRPRC;;;SU)  
+(A;;CCLCRPWPRC;;;SY)(A;;KA;;;BA)S:(AU;FA;KA;;;WD)  
+(AU;OIIOFA;GA;;;WD)
+</code></pre>
+
+<p>(Side note: The first section is the problem area, as this is what grants permission to the Authenticated Users group. In the fix described in KB905809, this section changes to grant Authenticated Users more permissions.)</p>
+
+<p>In this particular situation, all of the &ldquo;Write&rdquo; permissions&mdash;everything after the <code>(A;;CCLCRPRC;;;SU)</code> section&mdash;was accidentally removed. So, when the administrator realized what had happened and went back to try to fix it the system kicked back an &ldquo;Access Denied&rdquo; error message, because the permissions had been removed. With no permission to change the permissions, what could be done?</p>
+
+<p>Fortunately, we found a fix. This <a href="http://www.exchangeserveradmin.org/ftopic24842_Could_NOT_change_mail_address_after_windows_server_2003_sp1.html">URL</a> describes a Registry key that someone else had concocted trying to fix this very problem. In my discussions with Microsoft Product Support services, they analyzed this Registry hack and determined that the end result was the same as the SC.EXE command. By importing this Registry fix, we were able to restore the permissions that had been inadvertently removed. We then used SC again (with &ldquo;sdshow scmanager&rdquo;) to verify that the permissions were as they needed to be.</p>
+
+<p>We are fortunate that this Registry fix solved the problem. Had the Registry fix not worked, we most likely would have had to rebuild the server in question&mdash;not a pleasant thought given that we had several hundred users already migrated over to that server.</p>
+
+<p>What can we learn from this situation? Here are my thoughts:</p>
+
+<ol>
+<li><p>Always type your commands by hand, instead of copying and pasting.</p></li>
+
+<li><p>Take appropriate precautions. In large-scale production environments, pull a hot-plug hard drive from the RAID array first. If things go south, shut the server down and reboot from the pristine drive.</p></li>
+
+<li><p>When running a command like this, pray.</p></li>
+</ol>
+
+<p>The real question, in my mind, is this: why isn&rsquo;t Microsoft going to fix this bug? We may never know the answer to that question.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

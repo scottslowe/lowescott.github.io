@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/ssl/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-13 11:18:37 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Application-Specific VPNs</title>
+          <link>http://lowescott.github.io/2005/12/13/application-specific-vpns/</link>
+          <pubDate>Tue, 13 Dec 2005 11:18:37 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/13/application-specific-vpns/</guid>
+          <description>
+
+&lt;p&gt;I coined the term &amp;ldquo;application specific VPNs&amp;rdquo; as I began exploring the many uses of tools such as SSH (the &lt;a href=&#34;http://www.openssh.org/&#34;&gt;OpenSSH&lt;/a&gt; implementation, in particular) and &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; (the open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Secure_Sockets_Layer&#34;&gt;SSL&lt;/a&gt; wrapper). An &amp;ldquo;application specific VPN&amp;rdquo; is a technique for employing encrypted communication with a particular remote application that does not affect the operation of other applications (local or remote) on the system.&lt;/p&gt;
+
+&lt;p&gt;In general, most VPNs employ technology such as &lt;a href=&#34;http://en.wikipedia.org/wiki/PPTP&#34;&gt;PPTP&lt;/a&gt; or &lt;a href=&#34;http://en.wikipedia.org/wiki/Ipsec&#34;&gt;IPSec&lt;/a&gt;. These protocols usually affect &lt;em&gt;all&lt;/em&gt; traffic originating from that system (unless we use split tunneling). With an application specific VPN, only particular types of traffic are affected, and these particular types of traffic are wrapped in an encrypted SSH or SSL tunnel using either OpenSSH or Stunnel, respectively. Other types of traffic are unaffected.&lt;/p&gt;
+
+&lt;p&gt;While this may seem old hat to long-time Linux, Unix, or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; users, this is a relatively new concept to other platforms. Being a (fairly) new convert to Mac OS X myself, I found myself enjoying the tremendous flexibility offered by application specific VPNs. However, this functionality is certainly not limited to these platforms, and it is possible for &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; users to utilize this functionality as well.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Some Examples&lt;/h3&gt;
+
+&lt;p&gt;Here are a few examples of how you can use application specific VPNs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=PROHOME_Main&#34;&gt;Citrix Presentation Server&lt;/a&gt;: Users can wrap Citrix ICA traffic in SSL using Stunnel; this avoids the need to pay for commercial solutions (although, quite honestly, the commercial solutions are typically easier to deploy and manage).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;E-Mail: Lots of people talk about securing e-mail, but not usually in the context of securing client-to-server traffic. With Stunnel, you can add SSL support for IMAP, POP, and/or SMTP even if the server doesn&amp;rsquo;t support SSL natively. In fact, you can add Stunnel to &lt;a href=&#34;http://www.microsoft.com/exchange/default.mspx&#34;&gt;Microsoft Exchange&lt;/a&gt; to help bolster that product&amp;rsquo;s built-in support for SSL (such as using SMTPS instead of STARTTLS for encrypting SMTP traffic).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Remote Desktop: This is a great technique for sysadmins. Need to use Remote Desktop to manage a Windows-based server remotely, but don&amp;rsquo;t want to run into security problems? Use Stunnel or OpenSSH to encrypt the RDP traffic. Stunnel, in my opinion, is particularly good here, since it&amp;rsquo;s incredibly easy to use the Windows port of Stunnel to establish an SSL listener on an arbitrary high port for this very purpose.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Using Stunnel for SSL-based Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;On Windows, there is no graphical user interface (GUI) for configuring Stunnel; all configuration must be done with the &lt;code&gt;stunnel.conf&lt;/code&gt; configuration file. A sample &lt;code&gt;stunnel.conf&lt;/code&gt; file is found below; this file listens on TCP port 1494 and forwards traffic to TCP port 3389 on the same system. (Note that this would be a sample &lt;code&gt;stunnel.conf&lt;/code&gt; file for a server-side configuration.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CApath = c:\windows\system32\stunnel  
+cert = c:\windows\system32\stunnel\stunnel.pem  
+client = no  
+service = SSLTunnel  
+[rdp]  
+accept = 1494  
+connect = 3389
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once Stunnel has been configured, running &lt;code&gt;stunnel --install&lt;/code&gt; will install it as a system service; this service can then be stopped and started through the Services MMC console just like any other background service.&lt;/p&gt;
+
+&lt;p&gt;Of course, this is only half the work; you&amp;rsquo;ll also need an equivalent Stunnel configuration on the client side, since the Microsoft RDP client (the &lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=80111f21-d48d-426e-96c2-08aa2bd23a49&amp;amp;DisplayLang=en&#34;&gt;Windows version&lt;/a&gt; or the &lt;a href=&#34;http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient&#34;&gt;Mac OS X&lt;/a&gt; version) does not support SSL. Also, note that the SSL certificate used by Stunnel needs to be in PEM format (which is a nice lead-in to my article discussing the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/02/certificate-conversion-using-openssl/&#34;&gt;conversion of certificates&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, there is a graphical utility for managing Stunnel called SSL Enabler. (Note that I was not able to find a home page for this utility; downloads can be found at various sites.)&lt;/p&gt;
+
+&lt;p&gt;On Linux, the configuration again involves editing the &lt;code&gt;stunnel.conf&lt;/code&gt; file and launching stunnel (either in the foreground or as a daemon). I&amp;rsquo;m not aware of any GUI utilities for configuring Stunnel on Linux, but that certainly doesn&amp;rsquo;t mean they don&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Using SSH for Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;As with Stunnel, it&amp;rsquo;s also possible to use SSH to create application specific VPNs. Mac OS X comes with OpenSSH, as do most distributions of Linux and various flavors of BSD. Windows users can also find various ports of OpenSSH and utilities such as &lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/putty/&#34;&gt;PuTTY&lt;/a&gt; that make it possible to use SSH for application specific VPNs as well.&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, the following command in Terminal will create an application specific VPN to encrypt IMAP traffic to a remote server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh -L 1143:imapserver.domain.com:143 -N -f user@sshserver.domain.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This same technique could be used to encrypt WebDAV traffic to a remote web server, other types of mail traffic (POP3 or SMTP, for example), RDP (for Remote Desktop), etc. Note that it doesn&amp;rsquo;t work well with HTTP traffic that requires the use of host headers.&lt;/p&gt;
+
+&lt;p&gt;There are a few graphical utilities on Mac OS X for managing SSH tunnels; these include &lt;a href=&#34;http://projects.tynsoe.org/en/stm/&#34;&gt;SSH Tunnel Manager&lt;/a&gt; and &lt;a href=&#34;http://www.leapingbytes.com/almostvpn&#34;&gt;AlmostVPN&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Not being a regular day-to-day Linux user (not on the desktop, at least), I don&amp;rsquo;t know of any SSH tunnel management applications, but I would be very surprised if they didn&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Creating Site-to-Site Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;Most of the examples so far have been using SSH and/or Stunnel to connect endpoints (i.e., a single laptop or desktop computer) to a remote resource via an application specific VPN. However, it&amp;rsquo;s also easily possible to create application specific site-to-site VPNs, whose purpose is to secure only a particular type of traffic between two locations.&lt;/p&gt;
+
+&lt;p&gt;Consider this example. CompanyA wants to send e-mail to CompanyB, but wants that e-mail to be secure. If both mail servers support TLS, then the organizations could use TLS to secure the SMTP traffic. If not, then the companies can use Stunnel to establish an SSL connection between two systems. HostA at CompanyA can use Stunnel as a client side application to listen for unencrypted connections and pass them as encrypted connections to HostB at CompanyB. HostB at CompanyB is using Stunnel to listen for encrypted connections and passes them unencrypted to the mail server at CompanyB. With a simple configuration, the mail servers at both companies can be configured to pass mail connections for other company through the Stunnel connection. With no additional cost and very little configuration, all e-mail traffic between the two organizations has now been secured. All this without the complexity of a typical B-to-B VPN and the associated access controls.&lt;/p&gt;
+
+&lt;p&gt;For more information, documents on &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-ssh.doc&#34;&gt;application specific VPNs with SSH&lt;/a&gt; and &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-stunnel.doc&#34;&gt;application specific VPNs with Stunnel&lt;/a&gt; are available.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Protecting OWA with Apache</title>
+          <link>http://lowescott.github.io/2005/12/03/protecting-owa-with-apache/</link>
+          <pubDate>Sat, 03 Dec 2005 00:21:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/03/protecting-owa-with-apache/</guid>
+          <description>&lt;p&gt;Outlook Web Access (OWA) is the web-based interface for accessing e-mail and other resources handled by &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Microsoft Exchange&lt;/a&gt;. Unfortunately, OWA&amp;rsquo;s popularity also makes it the target of numerous worms and security exploits. As a result, many organizations seek to deploy OWA behind a reverse proxy that can help shield OWA from web-based attacks and exploits. In this posting, I&amp;rsquo;m going to share information to help build a reverse proxy using &lt;a href=&#34;http://www.apache.org/httpd/&#34;&gt;Apache 2.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a skeleton of an &lt;code&gt;httpd.conf&lt;/code&gt; file to support Apache as a reverse proxy in front of OWA:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;NameVirtualHost 1.2.3.4:80  
+NameVirtualHost 1.2.3.4:443  
+ProxyRequests Off
+
+&amp;lt;VirtualHost 1.2.3.4:443&amp;gt;  
+ServerAdmin webmaster@domain.com  
+ServerName webmail.domain.com  
+DocumentRoot /var/www/webmail  
+RequestHeader set Front-End-Https &amp;quot;On&amp;quot;  
+ProxyRequests Off  
+ProxyPreserveHost On  
+
+SSLEngine On  
+SSLCertificateFile conf/webmail-ssl-cert.pem
+
+&amp;lt;Location /exchange&amp;gt;  
+ProxyPass http://mail.domain.com/exchange  
+ProxyPassReverse http://mail.domain.com/exchange  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;Location /exchweb&amp;gt;  
+ProxyPass http://mail.domain.com/exchweb  
+ProxyPassReverse http://mail.domain.com/exchweb  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;Location /public&amp;gt;  
+ProxyPass http://mail.domain.com/public  
+ProxyPassReverse http://mail.domain.com/public  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The key portions of this configuration are described below, along with some supporting information.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;NameVirtualHost:&lt;/em&gt; The NameVirtualHost directive enables Apache to use name-based virtual hosts on the specified IP addresses and ports. The parameter to the NameVirtualHost directive must match one of the VirtualHost definitions, as shown in the sample configuration, or else the content will be served from the default virtual host (the first virtual host listed in the configuration). Note that if the Apache reverse proxy will not be using name-based virtual hosts (instead using IP address-based virtual hosts or running only a single server instance), then this directive is not required.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;RequestHeader:&lt;/em&gt; This directive instructs Apache to add a header &amp;ldquo;Front-End-Https: On&amp;rdquo; to requests sent to the internal OWA server. This header is proprietary to OWA and forces OWA to build URLs using &amp;ldquo;https://&amp;rdquo; references instead of ordinary &amp;ldquo;http://&amp;rdquo; references. This directive is required in order to terminate the SSL tunnel at the reverse proxy and use clear-text HTTP between the reverse proxy and the internal OWA server. This directive requires the &lt;code&gt;mod_headers&lt;/code&gt; module.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;ProxyPreserveHost:&lt;/em&gt; This directive configures Apache to pass the original host header, supplied by the client, to the server to which the request is being proxied. (This is instead of the host name supplied in the ProxyPass directive.) Again, this facilitates the construction of URLs with the correct hostname when accessing resources inside OWA.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;SSLCertificateFile:&lt;/em&gt; Apache expects the web server&amp;rsquo;s SSL certificate to be in PEM format. If the certificate&amp;rsquo;s key is encrypted, Apache will prompt upon startup for the passphrase to the key (this prevents any form of automated startup). It is considered a security best practice to keep the key in a separate file (using the SSLCertificateKeyFile directive) in encrypted form and supply the password upon the startup of Apache.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With this configuration in place, the following benefits are realized:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Name-based virtual hosts are supported. This allows other URLs to also be proxied through this same reverse proxy server.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;SSL encryption is offloaded from the Exchange server to the reverse proxy server. Traffic from the reverse proxy server itself to the Exchange server is standard, unencrypted HTTP.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When used in conjunction with &lt;a href=&#34;http://www.modsecurity.org/&#34;&gt;mod_security&lt;/a&gt; (another Apache module), OWA is protected against a very significant majority of all web-based attacks.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Using Apache to serve as a reverse proxy for OWA is a cost-effective way to add another layer of security to an Exchange-based messaging infrastructure.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Certificate Conversion Using OpenSSL</title>
+          <link>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</link>
+          <pubDate>Fri, 02 Dec 2005 16:08:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</guid>
+          <description>&lt;p&gt;In my various adventures with replacing Windows-based servers with Linux servers, I have had need on several occasions to take an SSL certificate (generated using Microsoft Certificate Services) and make it available to a Linux-based server. In some cases, it was to be used by the SSL wrapper &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt;; in others, it was for &lt;a href=&#34;http://www.apache.org/httpd/&#34;&gt;Apache&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In either case, the certificate needed to be in the PEM (originally Privacy Enhanced Mail, now a standard for encoding certificates) format. Windows, on the other hand, typically uses the PFX (PKCS #12) format for storing certificates. To prepare certificates for use on Linux, the certificates must be converted to PEM format.&lt;/p&gt;
+
+&lt;p&gt;In the hopes that this information might be useful to others, here&amp;rsquo;s a process for converting from PFX to PEM using &lt;a href=&#34;http://www.openssl.org/&#34;&gt;OpenSSL&lt;/a&gt;. With the exception of only a few items, the process is identical on Linux, &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, and &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows &lt;sup&gt;2000&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2003&lt;/sub&gt;&lt;/a&gt;. These steps were confirmed using OpenSSL 0.9.7a on Red Hat Linux 9.0, using OpenSSL 0.9.6i on Mac OS X 10.2.8, and OpenSSL 0.9.7c on Windows Server 2003.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If the certificate is not already available in PFX format, use the Certificates MMC snap-in to export the certificate and the corresponding private key to a PFX file. Be sure to note the passphrase used to protect the PFX file; it will be needed later. If the certificate (and its corresponding private key) is already available in PFX format and the passphrase for the PFX file is known, proceed to step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At a terminal prompt, type &lt;code&gt;openssl pkcs12 -in _pfxfilename.pfx_ -out _tempfile.pem_&lt;/code&gt;. This will convert the PFX file to a PEM file. The OpenSSL toolkit will prompt for the import passphrase; this will be the passphrase specified in step 1. A PEM passphrase will also be needed; make note of the passphrase used here (it will be needed later).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using a text editor (such as vi on a Linux system, or Notepad on a Windows system), split the encrypted RSA private key and the certificate into two separate files. Remove all extra text, leaving only the text between the lines with the dashes. Make note of the filenames; they will be needed later.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The RSA key is currently encrypted; this will an automated launch for the application using the certificate. It will be necessary to decrypt the RSA private key. To decrypt the RSA private key, use the command &lt;code&gt;openssl rsa -in _encryptedkey_ -out _decryptedkey_&lt;/code&gt; (where &lt;em&gt;encryptedkey&lt;/em&gt; is the file containing the RSA private key, as separated in step 3, and &lt;em&gt;decryptedkey&lt;/em&gt; is the file that will contain the decrypted RSA private key). The OpenSSL toolkit will prompt for the RSA key passphrase; this will be the passphrase specified in step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Linux or Mac OS X: To concatenate the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;cat _decryptedkey certificatefile_ &amp;gt; _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Windows: To combine the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;copy /b _decryptedkey_+_certificatefile_ _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the concatenated file (finalfile.pem from step 5) with a text editor to add a blank line between the decrypted RSA private key and the certificate, and a blank line after the end of the certificate.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point, the certificate is ready for use. &lt;strong&gt;&lt;em&gt;Be sure&lt;/em&gt;&lt;/strong&gt; to guard the unencrypted private key with extreme caution; loss of this file can result in the compromise of your system. Note also that most applications require that the certificates be owned by root and readable only by root (&lt;code&gt;chown root:root&lt;/code&gt; to make them owned by root and &lt;code&gt;chmod 600&lt;/code&gt; to make them readable only by root).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>STARTTLS and IMAP in Mail.app</title>
+          <link>http://lowescott.github.io/2005/07/02/starttls-and-imap-in-mailapp/</link>
+          <pubDate>Sat, 02 Jul 2005 20:47:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/02/starttls-and-imap-in-mailapp/</guid>
+          <description>&lt;p&gt;I &lt;a href=&#34;http://blog.scottlowe.org/2005/05/14/nonstandard-implementations/&#34;&gt;blogged&lt;/a&gt; earlier about my frustration with the &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; Mail.app mail client and its apparent lack of STARTTLS support with IMAP4. Well, on a whim today I decided to take this issue back up again.&lt;/p&gt;
+
+&lt;p&gt;Since &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Microsoft Exchange&lt;/a&gt; does not support STARTTLS, I had to use &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt; as an IMAP proxy in front of Exchange. Earlier attempts to get Mail.app to do STARTTLS had failed (not sure why), but today I decided to try changing the IMAP port from 993 (the default when you check the &amp;ldquo;Use SSL&amp;rdquo; box) to 143 (the standard IMAP4 port). Oddly enough, it seemed to work!&lt;/p&gt;
+
+&lt;p&gt;Curious to find out for sure, I trotted out tcpdump on the mail gateway running Perdition to capture traffic to/from Mail.app and to/from the back end mail server. The traffic to/from the back end mail server was transmitted in the clear (I used plain text messages so that I could see the content), but the traffic to/from Mail.app was not readable. I also saw Mail.app issue a CAPABILITY command, then issue a STARTTLS command. Bingo!&lt;/p&gt;
+
+&lt;p&gt;So, it appears that Mail.app does indeed support STARTTLS for IMAP, but only if you set the port number back to 143 after checking the &amp;ldquo;Use SSL&amp;rdquo; checkbox.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Transparent RDP Tunneling, Part 2</title>
+          <link>http://lowescott.github.io/2005/07/01/transparent-rdp-tunneling-part-2/</link>
+          <pubDate>Fri, 01 Jul 2005 22:54:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/01/transparent-rdp-tunneling-part-2/</guid>
+          <description>&lt;p&gt;After some fiddling around with &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; on &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, I got the transparent RDP tunneling inside SSL working. I still need to run some network captures with Ethereal or similar to make sure that the traffic is encrypted, but I don&amp;rsquo;t see any reason why it won&amp;rsquo;t be. Overall, the process was a bit easier than I expected. Once I get it better documented, I&amp;rsquo;ll find an appropriate format in which to distribute the information for others to use in their own networks.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Transparent RDP Tunneling</title>
+          <link>http://lowescott.github.io/2005/06/29/transparent-rdp-tunneling/</link>
+          <pubDate>Wed, 29 Jun 2005 23:48:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/29/transparent-rdp-tunneling/</guid>
+          <description>&lt;p&gt;As part of my experimentation with &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; 3.7, I&amp;rsquo;m going to try to setup a way of transparently tunneling RDP (Remote Desktop Protocol, used by Windows Remote Desktop/Terminal Services) inside SSL. I&amp;rsquo;m thinking that I can use IP aliases and &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; to have &amp;ldquo;ordinary&amp;rdquo; RDP encapsulated in SSL by Stunnel and then passed off to another instance of Stunnel at the other end. Then, from the RDP client, I just connect to one of the IP aliases and the rest is handled transparently.&lt;/p&gt;
+
+&lt;p&gt;When I get it working, I&amp;rsquo;ll post more details here as well as on the &lt;a href=&#34;http://www.mercurionsystems.com/&#34;&gt;Mercurion Systems&lt;/a&gt; web site.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Perdition Working Now</title>
+          <link>http://lowescott.github.io/2005/05/15/perdition-working-now/</link>
+          <pubDate>Sun, 15 May 2005 16:31:02 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/05/15/perdition-working-now/</guid>
+          <description>&lt;p&gt;I finally managed to get &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt; working. Still unable to confirm if &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&amp;rsquo;s&lt;/a&gt; Mail.app supports STARTTLS (my experience thus far says No), I had to resort to using &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; to wrap IMAP inside an SSL tunnel, then forward the IMAP traffic to Perdition on the same host. The Perdition proxy then passes the traffic to the back-end mail server. It&amp;rsquo;s not the solution that I really wanted, but it will do for now. At least the &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange Server 2003&lt;/a&gt; IMAP server isn&amp;rsquo;t exposed directly to external networks.&lt;/p&gt;
+
+&lt;p&gt;On a slightly related note, the &lt;a href=&#34;http://www.slipstick.com/&#34;&gt;Slipstick Systems&lt;/a&gt; web site has a link to an IMAP proxy server that implements STARTTLS as a workaround for Exchange&amp;rsquo;s lack of native support for STARTTLS. The IMAP proxy can be found at &lt;a href=&#34;http://www.slipstick.com/files/imapproxysvc.zip&#34;&gt;http://www.slipstick.com/files/imapproxysvc.zip&lt;/a&gt;. So, if you have an IMAP4 client that supports STARTTLS and want to connect it to Exchange, you can use this IMAP proxy. At least, until &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; puts STARTTLS support into Exchange directly.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Nonstandard Implementations</title>
+          <link>http://lowescott.github.io/2005/05/14/nonstandard-implementations/</link>
+          <pubDate>Sat, 14 May 2005 22:24:04 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/05/14/nonstandard-implementations/</guid>
+          <description>&lt;p&gt;In my experiments with &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt;, I learned a couple of very interesting facts. First, the IMAP4 implementation on &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange Server 2003&lt;/a&gt; does not support the STARTTLS command, as described in &lt;a href=&#34;http://www.networksorcery.com/enp/rfc/rfc2595.txt&#34;&gt;RFC 2595&lt;/a&gt; and re-affirmed in &lt;a href=&#34;http://www.networksorcery.com/enp/rfc/rfc3501.txt&#34;&gt;RFC 3501&lt;/a&gt;. Instead, Exchange expects an SSL session to be established immediately, and then IMAP is spoken. This is similar to the &amp;ldquo;smtpd_tls_wrappermode&amp;rdquo; directive that &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt; supports.&lt;/p&gt;
+
+&lt;p&gt;Second, it appears that the &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; Mail application (commonly referred to as Mail.app) also uses this IMAP-over-SSL approach, since I&amp;rsquo;ve been using Mail.app to connect to Exchange using IMAP with SSL for quite some time. I&amp;rsquo;m trying to confirm that now, but having precious little luck finding any definitive information one way or the other. If anyone knows for certain, please let me know. I&amp;rsquo;m going to keep searching.&lt;/p&gt;
+
+&lt;p&gt;This is one of those things that just makes me crazy.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

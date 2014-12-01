@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Rootkit Technology in Sony DRM &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Rootkit Technology in Sony DRM</h1>
+  <span class="post-date">Nov 2, 2005 7:16 PM</span>
+  <p>A <a href="http://www.sysinternals.com/blog/2005/10/sony-rootkits-and-digital-rights.html">very in-depth article</a> by Mark Russinovich unveiled that DRM technology shipping with recent Sony BMG CDs actually installs <a href="http://en.wikipedia.org/wiki/Rootkit">rootkit</a> components onto your system. Now, I don&rsquo;t know about you, but I don&rsquo;t like the idea of a vendor <em>unknowingly</em> installing software on my computer(s) that contain rootkit components&ndash;especially when those rootkit components could be used by malicious software packages to hide themselves.</p>
+
+<p>I&rsquo;m glad to see that <em>eWeek</em> <a href="http://www.eweek.com/article2/0,1759,1880543,00.asp">picked up the story</a> as well. (Note that O&rsquo;Reilly&rsquo;s ONLamp.net is <a href="http://www.oreillynet.com/pub/wlg/8269?CMP=OTC-6YE827253101">mentioning it</a> as well.) Mark&rsquo;s research is fantastic (as always), but not many people will get exposed to this news through him alone. Computer geeks like myself would, of course, but the people that really need to know this are the non-geeks. Any reasonably computer-savvy user is likely to want to pick up your average CD (from any number of distribution channels, including <a href="http://www.amazon.com/">Amazon.com</a>) and copy the music off the CD. There are a number of very valid reasons for this&ndash;ease of access, personal backup copy (ever scratch a CD?), etc. Copy-protected CDs limit your ability to do this without also installing stealthy rootkit components onto your system.</p>
+
+<p>More links to other discussions on this topic can be found in section 8 of <a href="http://en.wikipedia.org/wiki/Rootkit">this Wikipedia rootkit article</a> (also linked above).</p>
+
+<p>In my opinion, this is just plain wrong. It&rsquo;s wrong to install this kind of software onto someone&rsquo;s system. I can understand their desire to want to protect their &ldquo;intellectual property,&rdquo; but there&rsquo;s got to be a better way than installing rootkits on your customers&rsquo; computers.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

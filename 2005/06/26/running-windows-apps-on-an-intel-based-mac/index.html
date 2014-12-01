@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Running Windows Apps on an Intel-Based Mac &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Running Windows Apps on an Intel-Based Mac</h1>
+  <span class="post-date">Jun 26, 2005 4:36 PM</span>
+  <p>Here&rsquo;s an interesting side effect of Apple&rsquo;s announcement to move the Macintosh platform to Intel-based CPUs: <a href="http://www.codeweavers.com/">CodeWeavers</a> has announced that they will expand their services and products to include the new Intel-based Macs (see <a href="http://business.newsforge.com/article.pl?sid=05/06/24/1530234&amp;from=rss">CodeWeavers sees Mactel move as an opportunity</a> on the <a href="http://www.newsforge.com/">NewsForge</a> site). More information is also available in the official CodeWeavers <a href="http://www.codeweavers.com/about/general/press/?id=20050622">press release</a>.</p>
+
+<p>This is a very good thing. If CodeWeavers is successful in making a version of <a href="http://www.codeweavers.com/products/cxoffice/">CrossOver Office</a> to run on the Intel-based Macs, it will make it easier to users to choose whatever platform best suits their needs, be it <a href="http://www.microsoft.com/windows/">Windows</a>, Linux, or <a href="http://www.apple.com/macosx/">Mac OS X</a>. They won&rsquo;t feel tied to a specific platform just because there&rsquo;s <em>one</em> application they need that only runs on <em>one</em> specific platform.</p>
+
+<p>Right now, I use Microsoft&rsquo;s <a href="http://www.microsoft.com/mac/products/virtualpc/virtualpc.aspx">Virtual PC for the Mac</a> to run any Windows-specific programs I need. This works reasonably well, but takes a performance hit because it has to emulate an Intel-compatible CPU. With Intel-based CPUs under the hood already, Virtual PC (or CrossOver Office, or <a href="http://www.vmware.com/">VMware</a>, or <a href="http://www.cl.cam.ac.uk/Research/SRG/netos/xen/">Xen</a>, or any other emulation software) will practically fly. This makes emulation a much more attractive option than it is right now. That, in turn, means more choice and more freedom for end users.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

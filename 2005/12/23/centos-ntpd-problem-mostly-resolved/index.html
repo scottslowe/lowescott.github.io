@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      CentOS NTPd Problem (Mostly) Resolved &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">CentOS NTPd Problem (Mostly) Resolved</h1>
+  <span class="post-date">Dec 23, 2005 2:50 PM</span>
+  <p>The NTPd problem that I <a href="http://blog.scottlowe.org/2005/08/16/strange-ntpd-problem-on-centos-41/">wrestled with in CentOS 4.1</a> and <a href="http://blog.scottlowe.org/2005/12/19/ntpd-on-centos-42/">again in CentOS 4.2</a> has finally been resolved. Mostly. I think. The specific steps I took to resolve the issue came from a number of sources, so read on for all the details.</p>
+
+<p>Since these servers are virtual servers running under <a href="http://www.vmware.com/">VMware</a>, I first consulted the VMware Knowledge Base and turned up this article on <a href="http://www.vmware.com/support/kb/enduser/std_adp.php?p_sid=Nuh3rAXh&amp;p_lva=&amp;p_faqid=1420&amp;p_created=1093994398&amp;p_sp=cF9zcmNoPTEmcF9ncmlkc29ydD0mcF9yb3dfY250PTc0MyZwX3NlYXJjaF90ZXh0PUxpbnV4IGd1ZXN0IGNsb2NrJnBfc2VhcmNoX3R5cGU9NyZwX3Byb2RfbHZsMT1_YW55fiZwX3Byb2RfbHZsMj1_YW55fiZwX3NvcnRfYnk9ZGZsdCZwX3BhZ2U9MQ**&amp;p_li=">slow and fast clocks for Linux guest VMs</a>. Based on that information, I added a few extra commands to the grub configuration:</p>
+
+<pre><code>noapic nosmp nolapic clock=pit
+</code></pre>
+
+<p>In addition, I found a number of forum postings in various sites (too many to list or link here) that referenced problems with NTP and ACPI. So, based on that information, I further edited the grub configuration to look like this:</p>
+
+<pre><code>noapic nosmp nolapic clock=pit acpi=no
+</code></pre>
+
+<p>Finally, based on information regarding NTP itself and the NTP configuration parameters, I added the &ldquo;burst iburst&rdquo; parameters to the server lines in my <code>ntp.conf</code> file, like this:</p>
+
+<pre><code>server W.X.Y.Z burst iburst
+</code></pre>
+
+<p>This helped, as at least now NTP would synchronize against something other than the local clock (which was more than it had done previously). For some reason, though, the <code>/var/log/messages</code> log file was filling up with messages about synchronizing against the local clock, then synchronizing against the server, then against the local clock, etc. (You get the picture.)</p>
+
+<p>Given that I was synchronizing against a <a href="http://www.microsoft.com/windowsserver2003/default.mspx">Windows Server 2003</a>-based computer, I thought perhaps that Microsoft&rsquo;s NTP implementation was simply broken. (This certainly wouldn&rsquo;t be the first time.) So I configured <a href="http://www.openntpd.org/">OpenNTPd</a> on an <a href="http://www.openbsd.org/">OpenBSD</a> server (running OpenBSD 3.8) and re-configured the CentOS server to synchronize against the OpenBSD NTP server.</p>
+
+<aside>OpenNTPd is ridiculously simple to configure and operate, and _just works._</aside>
+
+<p>The repetitive synchronization messages still appeared, but were appearing with far less frequency. And the time still isn&rsquo;t synchronized to the level I would like, but it does stay within a minute or so of the rest of the network (well within the 5 minute gap required in order for Kerberos authentication to work).</p>
+
+<p>So, it&rsquo;s still not working as cleanly as the older Red Hat Linux 9.0-based servers, but it <em>is</em> working. Given that I&rsquo;m still running these servers under an old version of VMware (which, technically, doesn&rsquo;t support Linux 2.6 kernels) I may try upgrading to a new version of VMware to see if that helps at all.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

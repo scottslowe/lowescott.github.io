@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/windows/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-29 21:47:21 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>WMF Flaw Exploit Grows Worse</title>
+          <link>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</link>
+          <pubDate>Thu, 29 Dec 2005 21:47:21 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</guid>
+          <description>&lt;p&gt;In an update to my previous article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/28/windows-metafile-flaw-already-being-exploited/&#34;&gt;Windows Metafile flaw&lt;/a&gt;, new reports are coming in of greater use of malicious WMF files that take advantage of the flaw, especially by adware companies. Numerous sites are reporting that malicious WMF files are being used in ad rotations on third-party sites. For more information, see one of the following articles:&lt;/p&gt;
+
+&lt;p&gt;Analysts Fret as Adware Makers Leverage WMF Flaw
+&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906915,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906915,00.asp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Critical Impact: Windows Metafile Flaw a &amp;lsquo;Zero-Day Exploit&amp;rsquo;
+&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906177,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906177,00.asp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In addition, there are details on just how easy it is to &lt;a href=&#34;http://www.oreillynet.com/pub/wlg/8879?CMP=OTC-6YE827253101&amp;amp;ATT=Exploiting+the+Windows+XP/2003+Picture+and+Fax+Viewer+Metafile+Overflow+Vulnerability&#34;&gt;take advantage of this vulnerability&lt;/a&gt; available as well.&lt;/p&gt;
+
+&lt;p&gt;The particularly bad part of this whole situation is that users don&amp;rsquo;t have to do a thing&amp;mdash;just visiting a web site with a malicious WMF file can affect your system. And this isn&amp;rsquo;t an Internet Explorer flaw, either, lest you think that using Firefox will keep you safe. No, this is a &lt;em&gt;Windows&lt;/em&gt; flaw, and Internet Explorer, Firefox, Opera, etc., are all affected.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s hope that a good workaround (not unregistering the shimgvw.dll file, which also disables previewing other image formats in Windows Explorer) emerges soon.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Windows Metafile Flaw Already Being Exploited</title>
+          <link>http://lowescott.github.io/2005/12/28/windows-metafile-flaw-already-being-exploited/</link>
+          <pubDate>Wed, 28 Dec 2005 16:33:13 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/28/windows-metafile-flaw-already-being-exploited/</guid>
+          <description>&lt;p&gt;Two separate reports (&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906177,00.asp&#34;&gt;this article from eWeek&lt;/a&gt; and &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,107375,00.html&#34;&gt;this article from ComputerWorld&lt;/a&gt;) have risen today regarding a &amp;ldquo;zero-day&amp;rdquo; exploit of a vulnerability in Windows&amp;rsquo; handling of WMF (Windows Metafile) images. According to the reports, simply viewing a WMF file (such as from a web site) can infect your computer. Sunbelt Software&amp;rsquo;s blog also offers &lt;a href=&#34;http://sunbeltblog.blogspot.com/2005/12/new-exploit-blows-by-fully-patched.html&#34;&gt;more details on the vulnerability&lt;/a&gt; as well. Here&amp;rsquo;s &lt;a href=&#34;http://www.securityfocus.com/bid/16074/info&#34;&gt;more information&lt;/a&gt; from SecurityFocus as well.&lt;/p&gt;
+
+&lt;p&gt;According to the reports, this newly discovered WMF vulnerability will allow crackers to run the code of their choice on the affected system(s). So far, the exploit has been limited to installing spyware, adware, and keyloggers, but there is little doubt in anyone&amp;rsquo;s mind that the attackers will grow much worse very quickly. The vulnerability can be exploited in a variety of ways, such as visiting hostile web sites (using either Internet Explorer, Opera, or Firefox); opening an affected WMF file in Windows Picture and Fax Viewer; or previewing an affected file in Windows Explorer. It&amp;rsquo;s important to note that this vulnerability affects even fully patched systems &lt;em&gt;with all available patches installed.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Apparently, the only workaround is to uninstall Windows from your computer and immediately install Linux. OK, just kidding. Seriously, though, the only known workaround at this time is to unregister the affected DLL using this command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;regsvr32 /u shimgvw.dll
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Click &amp;ldquo;OK&amp;rdquo; when prompted. This unregisters the affected DLL and eliminates the vulnerability; however, this may also affect the viewing and previewing of many other types of images.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s still early yet in the discovery process, so I fully anticipate that more workarounds and more information will emerge as the security researchers continue their work.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Complete Linux-AD Authentication Details</title>
+          <link>http://lowescott.github.io/2005/12/22/complete-linux-ad-authentication-details/</link>
+          <pubDate>Thu, 22 Dec 2005 11:26:46 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/22/complete-linux-ad-authentication-details/</guid>
+          <description>
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; These instructions are for Windows 2000 Server and Windows Server 2003 pre-R2. For the R2 release, please see &lt;a href=&#34;http://blog.scottlowe.org/2007/01/15/linux-ad-integration-version-4/&#34;&gt;these updated instructions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are several articles posted here that discuss, in general terms, how to authenticate Linux against Active Directory. For example, see this brief article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/07/13/linux-ad-integration-direction/&#34;&gt;broad direction&lt;/a&gt; of the integration, or this posting on &lt;a href=&#34;http://blog.scottlowe.org/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/&#34;&gt;using computer accounts&lt;/a&gt; for Linux servers (most how-to documents I&amp;rsquo;ve seen discuss the use of a user account for this purpose).&lt;/p&gt;
+
+&lt;p&gt;Over the last week or so, I&amp;rsquo;ve been having to rebuild one Linux server a number of times in an effort to fix a separate problem (see this article on &lt;a href=&#34;http://blog.scottlowe.org/2005/08/16/strange-ntpd-problem-on-centos-41/&#34;&gt;NTPd problems with CentOS 4.1&lt;/a&gt; and the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/19/ntpd-on-centos-42/&#34;&gt;recurrence of the problem&lt;/a&gt; with CentOS 4.2). As a result, I&amp;rsquo;ve had to go through the process of configuring this Linux server (and preparing Active Directory) for authentication several times, and I found that I kept having to go back to my scattered and dispersed notes to remember what had to be done. In the hopes of correcting that, I am collecting all the pertinent information I have here in this article.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Preparing Active Directory (One-Time)&lt;/h3&gt;
+
+&lt;p&gt;There is a one-time preparation of Active Directory that is required. In order to authenticate Linux logins against Active Directory, Active Directory&amp;rsquo;s schema must be extended to include Linux-specific attributes such as home directory, UID, GID, and default shell. There are a couple of different ways to do this; I chose to use Microsoft&amp;rsquo;s Services for Unix (SFU) to extend the schema. There are two reasons I chose SFU: 1) it&amp;rsquo;s free; and 2) the SFU schema is being included by default in Windows Server 2003 R2.&lt;/p&gt;
+
+&lt;p&gt;Once SFU has been installed and the schema has been extended, then the specific Active Directory accounts that are allowed to authenticate via Linux must be configured with a UID and other UNIX attributes. This is accomplished via the new &amp;ldquo;UNIX Attributes&amp;rdquo; tab on the properties dialog box of a user account.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll also need to create an account in Active Directory that will be used to bind to Active Directory for LDAP queries. This account does &lt;em&gt;not&lt;/em&gt; need any special privileges; in fact, making the account a member of Domain Guests and &lt;em&gt;not&lt;/em&gt; a member of Domain Users is perfectly fine.&lt;/p&gt;
+
+&lt;p&gt;After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Linux server that will enable the authentication.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Preparing Active Directory (Each Server)&lt;/h3&gt;
+
+&lt;p&gt;For each server that will be authenticating against Active Directory, follow the steps below.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Create a computer account in Active Directory. When creating the computer account, be sure to specify that this account may be used by a pre-Windows 2000-based computer.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use the following command at a command prompt to configure the new computer account:&lt;/p&gt;
+
+&lt;p&gt;ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$&lt;br /&gt;
+-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL&lt;br /&gt;
+-out filename&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Of course, you&amp;rsquo;ll need to substitute the appropriate values for &amp;ldquo;fqdn&amp;rdquo; (the fully-qualified domain name of the computer), &amp;ldquo;REALM&amp;rdquo; (the DNS name of your Active Directory domain in UPPERCASE), &amp;ldquo;DOMAIN&amp;rdquo; (the NetBIOS name of your Active Directory domain), &amp;ldquo;password&amp;rdquo; (the password that will be set for the new computer account), and &amp;ldquo;filename&amp;rdquo; (the keytab that will be generated and must be copied over to the Linux computer).&lt;/p&gt;
+
+&lt;p&gt;If you need to rebuild the Linux server for whatever reason, you&amp;rsquo;ll need to delete the computer account you created and repeat this process.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Preparing the Linux Server&lt;/h3&gt;
+
+&lt;p&gt;Follow the steps below to configure the Linux server for authentication against Active Directory.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Make sure that the appropriate Kerberos libraries, OpenLDAP, pam_krb5, and nss_ldap are installed. If they are not installed, install them.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Be sure that time is being properly synchronized between Active Directory and the Linux server in question. Kerberos requires time synchronization.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;krb5.conf&lt;/code&gt; file to look something like this, substituting your actual host names and domain names where appropriate:&lt;/p&gt;
+
+&lt;p&gt;[logging]&lt;br /&gt;
+ default = FILE:/var/log/krb5libs.log&lt;br /&gt;
+ kdc = FILE:/var/log/krb5kdc.log&lt;br /&gt;
+ admin_server = FILE:/var/log/kadmind.log&lt;/p&gt;
+
+&lt;p&gt;[libdefaults]&lt;br /&gt;
+ default_realm = EXAMPLE.COM&lt;br /&gt;
+ dns_lookup_realm = true&lt;br /&gt;
+ dns_lookup_kdc = true&lt;/p&gt;
+
+&lt;p&gt;[realms]&lt;br /&gt;
+ EXAMPLE.COM = {&lt;br /&gt;
+  kdc = host.example.com:88&lt;br /&gt;
+  admin_server = host.example.com:749&lt;br /&gt;
+  default_domain = example.com&lt;br /&gt;
+ }&lt;/p&gt;
+
+&lt;p&gt;[domain_realm]&lt;br /&gt;
+ .example.com = EXAMPLE.COM&lt;br /&gt;
+ example.com = EXAMPLE.COM&lt;/p&gt;
+
+&lt;p&gt;[kdc]&lt;br /&gt;
+ profile = /var/kerberos/krb5kdc/kdc.conf&lt;/p&gt;
+
+&lt;p&gt;[appdefaults]&lt;br /&gt;
+ pam = {&lt;br /&gt;
+   debug = false&lt;br /&gt;
+   ticket_lifetime = 36000&lt;br /&gt;
+   renew_lifetime = 36000&lt;br /&gt;
+   forwardable = true&lt;br /&gt;
+   krb4_convert = false&lt;br /&gt;
+ }&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;/etc/ldap.conf&lt;/code&gt; file to look something like this, substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate.&lt;/p&gt;
+
+&lt;p&gt;host 10.10.10.10
+base dc=example,dc=com
+binddn cn=ldap,cn=Users,dc=example,dc=com
+bindpw adldapbindpw
+scope sub
+ssl no
+nss_base_passwd dc=example,dc=com
+nss_base_shadow dc=example,dc=com
+nss_base_group dc=example,dc=com
+nss_map_objectclass posixAccount user
+nss_map_objectclass shadowAccount user
+nss_map_objectclass posixGroup group
+nss_map_attribute uid sAMAccountName
+nss_map_attribute uidNumber msSFU30UidNumber
+nss_map_attribute gidNumber msSFU30GidNumber
+nss_map_attribute loginShell msSFU30LoginShell
+nss_map_attribute gecos name
+nss_map_attribute userPassword msSFU30Password
+nss_map_attribute homeDirectory msSFU30HomeDirectory
+nss_map_attribute uniqueMember msSFU30PosixMember
+nss_map_attribute cn cn&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Securely copy the file created using the &lt;code&gt;ktpass.exe&lt;/code&gt; utility above to the Linux server in question, placing it in the &lt;code&gt;/etc&lt;/code&gt; directory as &lt;code&gt;krb5.keytab&lt;/code&gt;. (SFTP or SCP are excellent candidates for this.)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Configure PAM (this varies according to Linux distributions) to use pam_krb5 for authentication. Many modern distributions use a stacking mechanism whereby one file can be modified and those changes will applied to all the various PAM-aware services. For example, in Red Hat-based distributions, the system-auth file is referenced by most other PAM-aware services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;/etc/nsswitch.conf&lt;/code&gt; file to include &amp;ldquo;ldap&amp;rdquo; as a lookup source for passwd, shadow, and groups.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That should be it. Once you do that, you should be able to use &lt;code&gt;kinit&lt;/code&gt; from a Linux shell prompt (for example, &lt;code&gt;kinit aduser&lt;/code&gt;) and generate a valid Kerberos ticket for the specified Active Directory account.&lt;/p&gt;
+
+&lt;p&gt;At this point, any PAM-aware service that is configured to use the stacked system file (such as the system-auth configuration on Red Hat-based distributions) will use Active Directory for authentication. Note, however, that unless you also add the &lt;code&gt;pam_mkhomedir.so&lt;/code&gt; module in the PAM configuration, home directories will have to be created manually for any Active Directory account that may log on to that server. (I generally recommend the use of &lt;code&gt;pam_mkhomedir.so&lt;/code&gt; in this situation.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Mass Password Changes in Active Directory</title>
+          <link>http://lowescott.github.io/2005/12/08/mass-password-changes-in-active-directory/</link>
+          <pubDate>Thu, 08 Dec 2005 22:16:58 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/08/mass-password-changes-in-active-directory/</guid>
+          <description>&lt;p&gt;Earlier this year, I had a need in a project to set the password for a large number of Active Directory accounts simultaneously. Here&amp;rsquo;s the solution I came up with for this particular need.&lt;/p&gt;
+
+&lt;p&gt;To use this technique, you&amp;rsquo;ll need &lt;code&gt;ldifde&lt;/code&gt; (included with &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt;), &lt;code&gt;grep&lt;/code&gt; (included with &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; and most Linux distributions; Win32 versions available on the Internet), a text editor with search and replace functionality (advanced geeks are free to use &lt;code&gt;sed&lt;/code&gt;), and &lt;code&gt;dsmod&lt;/code&gt; (from the &lt;em&gt;Windows Server 2003 Resource Kit&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;First, export the list of user accounts out of Active Directory using ldifde. The command will look something like this (I&amp;rsquo;ve line wrapped here, as indicated by a backslash, but this should all be on one line):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ldifde -d &amp;quot;CN=Users,DC=company,DC=com&amp;quot; -r &amp;quot;(objectclass=user)&amp;quot; \  
+-f c:\export-1.ldif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This creates a file called &amp;ldquo;export-1.ldif&amp;rdquo;. Using &lt;code&gt;grep&lt;/code&gt;, filter this file down to only the full distinguished names of the users:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;less export-1.ldif | grep &#39;dn: &#39; &amp;gt; export-2.ldif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that you&amp;rsquo;ll need to use &lt;code&gt;type&lt;/code&gt; instead of &lt;code&gt;less&lt;/code&gt; on a Win32 system. Also, on a Win32 system you&amp;rsquo;ll need to use double quotes instead of single quotes in the &lt;code&gt;grep&lt;/code&gt; command. This creates a file called &amp;ldquo;export-2.ldif&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Load this file into the text editor and make the following changes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Remove all occurrences of &amp;ldquo;dn: &amp;ldquo; (there is a space after the colon)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Add a double quotation mark before CN= at the start of each line&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Add a double quotation mark after =com at the end of each line&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Save this modified file as &amp;ldquo;export-3.ldif&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Finally, pipe this file through to the &lt;code&gt;dsmod&lt;/code&gt; program to set passwords for all the users in the file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;type export-3.ldif | dsmod user -pwd newpass1 -mustchpwd yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Full help for the dsmod command line syntax is available using &lt;code&gt;dsmod /?&lt;/code&gt; or &lt;code&gt;dsmod user /?&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can add &lt;code&gt;&amp;gt; filename&lt;/code&gt; to the end of the above command to log the output of the &lt;code&gt;dsmod&lt;/code&gt; command to a file. You can then use &lt;code&gt;grep&lt;/code&gt; to parse this file to ensure that the command was successful for all users.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>WatchGuard Firebox VPN and Active Directory Integration</title>
+          <link>http://lowescott.github.io/2005/12/06/watchguard-firebox-vpn-and-active-directory-integration/</link>
+          <pubDate>Tue, 06 Dec 2005 17:38:24 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/06/watchguard-firebox-vpn-and-active-directory-integration/</guid>
+          <description>
+
+&lt;p&gt;A short while back, I posted an article on &lt;a href=&#34;http://blog.scottlowe.org/2005/11/22/cisco-pix-vpn-and-active-directory-integration/&#34;&gt;Cisco PIX VPN and Active Directory integration&lt;/a&gt;. Now, I&amp;rsquo;d like to follow that article up with a version looking at integration between Active Directory and &lt;a href=&#34;http://www.watchguard.com/&#34;&gt;WatchGuard&lt;/a&gt; Firebox VPNs.&lt;/p&gt;
+
+&lt;p&gt;As with the PIX-AD integration document, this article assumes that you have some basic knowledge of how to work with the WatchGuard Firebox series of firewalls. This article was written using version 6.2 of the WatchGuard Firebox System software and Windows Server 2003; other versions of either the firewall software or Windows should be similar.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Configuring the Firebox&lt;/h3&gt;
+
+&lt;p&gt;First, we&amp;rsquo;ll need to setup the Firebox. Use the Firebox software (Policy Manager, specifically) to perform the following configuration tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add the server that is running IAS (or will be running IAS; see below) as a RADIUS server in the Authentication Servers dialog box (found on the Setup menu). Here, you&amp;rsquo;ll need to specify the server&amp;rsquo;s IP address, port number (the default of 1645 will be fine), and the shared secret.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Instruct the firewall to use RADIUS by going to Setup &amp;gt; Firewall Authentication and selecting &amp;ldquo;RADIUS&amp;rdquo; as the authentication type.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Configure the firewall&amp;rsquo;s Remote User VPN (on the Network menu) to use RADIUS by checking the &amp;ldquo;Use RADIUS to authenticate remote users&amp;rdquo; check box.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once this is done, proceed with configuring PPTP-based remote user VPNs as usual. Be sure to add a rule allowing traffic to/from the pptp_users group; otherwise, VPN users will be subject to the same traffic restrictions as Internet users.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Configuring Internet Authentication Service&lt;/h3&gt;
+
+&lt;p&gt;Before doing anything else, create a new global security group in Active Directory. Call it &amp;ldquo;pptp_users&amp;rdquo;, just like the name of the group on the Firebox. This is an important part of the glue that will bind the Firebox together with Active Directory.&lt;/p&gt;
+
+&lt;p&gt;If IAS is not already installed, install IAS using the Add/Remove Programs icon in Control Panel.&lt;/p&gt;
+
+&lt;p&gt;Once it has been installed, launch it from the Administrative Tools folder on the Start Menu and we&amp;rsquo;ll proceed with configuring it for authenticating VPN connections to the Firebox.&lt;/p&gt;
+
+&lt;p&gt;First, we need to grant IAS permission to read dial-in properties from user accounts in Active Directory. To do this, right-click on the &amp;ldquo;Internet Authentication Service (Local)&amp;rdquo; and select &amp;ldquo;Register Server in Active Directory&amp;rdquo;. Select Yes (or OK) if prompted to confirm. Note that if IAS was already installed, it may have already been registered with Active Directory as well.&lt;/p&gt;
+
+&lt;p&gt;With that done, we can now configure the Firebox as a RADIUS client. Right-click on RADIUS Clients and select New RADIUS Client. In the wizard, specify the IP address (or DNS name) of the Firebox&amp;rsquo;s trusted interface and the shared secret. Note that this shared secret is the same secret key specified when configuring the RADIUS server in the Firebox previously. RADIUS clients use this to authenticate to RADIUS servers, so make it a reasonably strong password.&lt;/p&gt;
+
+&lt;p&gt;Now create a new remote access policy. Right-click on Remote Access Policies and select New Remote Access Policy. In the wizard, specify a name, select to create a custom policy, and then add the following conditions to the policy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;NAS-IP-Address: This will be the IP address of the Firebox&amp;rsquo;s trusted interface. This helps to ensure that this policy only applies to VPN requests from this firewall and not from any other RADIUS client.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Windows-Groups: This should be the &amp;ldquo;pptp_users&amp;rdquo; security group created earlier. Any user that should be allowed to authenticate on a VPN connection will need to be a member of this group.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, this policy should grant access. On the next screen, select &amp;ldquo;Edit Profile&amp;rdquo; to edit the remote access profile. This is important because we&amp;rsquo;ll need to verify that the RADIUS server is passing the correct information to the Firebox.&lt;/p&gt;
+
+&lt;p&gt;On the Advanced tab, remove all the attributes listed there (Service-Type and Framed-Protocol are there by default) and then add the Filter-Id attribute. To this attribute, add the string value &amp;ldquo;pptp_users&amp;rdquo;. Click OK to save these changes to the profile and then finish creating the policy.&lt;/p&gt;
+
+&lt;p&gt;Make this policy the first policy (using the Move Up/Move Down commands in the IAS console), add a user to the group created earlier, and then test your connection. Remote systems attempting to connect via PPTP should now be able to authenticate the VPN connection using their Active Directory usernames and passwords.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I&amp;rsquo;ve updated this entry to correct some errors pointed out in the comments. Thanks for the feedback!&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Certificate Conversion Using OpenSSL</title>
+          <link>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</link>
+          <pubDate>Fri, 02 Dec 2005 16:08:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</guid>
+          <description>&lt;p&gt;In my various adventures with replacing Windows-based servers with Linux servers, I have had need on several occasions to take an SSL certificate (generated using Microsoft Certificate Services) and make it available to a Linux-based server. In some cases, it was to be used by the SSL wrapper &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt;; in others, it was for &lt;a href=&#34;http://www.apache.org/httpd/&#34;&gt;Apache&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In either case, the certificate needed to be in the PEM (originally Privacy Enhanced Mail, now a standard for encoding certificates) format. Windows, on the other hand, typically uses the PFX (PKCS #12) format for storing certificates. To prepare certificates for use on Linux, the certificates must be converted to PEM format.&lt;/p&gt;
+
+&lt;p&gt;In the hopes that this information might be useful to others, here&amp;rsquo;s a process for converting from PFX to PEM using &lt;a href=&#34;http://www.openssl.org/&#34;&gt;OpenSSL&lt;/a&gt;. With the exception of only a few items, the process is identical on Linux, &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, and &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows &lt;sup&gt;2000&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2003&lt;/sub&gt;&lt;/a&gt;. These steps were confirmed using OpenSSL 0.9.7a on Red Hat Linux 9.0, using OpenSSL 0.9.6i on Mac OS X 10.2.8, and OpenSSL 0.9.7c on Windows Server 2003.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If the certificate is not already available in PFX format, use the Certificates MMC snap-in to export the certificate and the corresponding private key to a PFX file. Be sure to note the passphrase used to protect the PFX file; it will be needed later. If the certificate (and its corresponding private key) is already available in PFX format and the passphrase for the PFX file is known, proceed to step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At a terminal prompt, type &lt;code&gt;openssl pkcs12 -in _pfxfilename.pfx_ -out _tempfile.pem_&lt;/code&gt;. This will convert the PFX file to a PEM file. The OpenSSL toolkit will prompt for the import passphrase; this will be the passphrase specified in step 1. A PEM passphrase will also be needed; make note of the passphrase used here (it will be needed later).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using a text editor (such as vi on a Linux system, or Notepad on a Windows system), split the encrypted RSA private key and the certificate into two separate files. Remove all extra text, leaving only the text between the lines with the dashes. Make note of the filenames; they will be needed later.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The RSA key is currently encrypted; this will an automated launch for the application using the certificate. It will be necessary to decrypt the RSA private key. To decrypt the RSA private key, use the command &lt;code&gt;openssl rsa -in _encryptedkey_ -out _decryptedkey_&lt;/code&gt; (where &lt;em&gt;encryptedkey&lt;/em&gt; is the file containing the RSA private key, as separated in step 3, and &lt;em&gt;decryptedkey&lt;/em&gt; is the file that will contain the decrypted RSA private key). The OpenSSL toolkit will prompt for the RSA key passphrase; this will be the passphrase specified in step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Linux or Mac OS X: To concatenate the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;cat _decryptedkey certificatefile_ &amp;gt; _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Windows: To combine the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;copy /b _decryptedkey_+_certificatefile_ _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the concatenated file (finalfile.pem from step 5) with a text editor to add a blank line between the decrypted RSA private key and the certificate, and a blank line after the end of the certificate.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point, the certificate is ready for use. &lt;strong&gt;&lt;em&gt;Be sure&lt;/em&gt;&lt;/strong&gt; to guard the unencrypted private key with extreme caution; loss of this file can result in the compromise of your system. Note also that most applications require that the certificates be owned by root and readable only by root (&lt;code&gt;chown root:root&lt;/code&gt; to make them owned by root and &lt;code&gt;chmod 600&lt;/code&gt; to make them readable only by root).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>IE Exploit Moves from DoS to Remote Code Execution</title>
+          <link>http://lowescott.github.io/2005/11/29/ie-exploit-moves-from-dos-to-remote-code-execution/</link>
+          <pubDate>Tue, 29 Nov 2005 16:15:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/ie-exploit-moves-from-dos-to-remote-code-execution/</guid>
+          <description>&lt;p&gt;As a follow-up to my posting &lt;a href=&#34;http://blog.scottlowe.org/2005/11/21/zero-day-ie-exploit/&#34;&gt;Zero-Day IE Exploit&lt;/a&gt;, it has now been discovered that this exploit is no longer just a denial of service (DoS) flaw, but rather a flaw that can allow remote code execution (see &lt;a href=&#34;http://www.security.ithub.com/article/Unpatched+IE+Flaw+Is+Worse+Than+Expected/166164_1.aspx&#34;&gt;here&lt;/a&gt; for more information). As of this writing, there is no patch for this vulnerability and the only workaround is to disable Active Scripting in IE.&lt;/p&gt;
+
+&lt;p&gt;For your convenience, here&amp;rsquo;s a &lt;a href=&#34;http://support.microsoft.com/kb/q154036/&#34;&gt;link&lt;/a&gt; to a Microsoft KB article that describes how to disable Active Scripting.&lt;/p&gt;
+
+&lt;p&gt;Alternately, you can just switch to &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt; (which, by the way, is supposed to release Firefox 1.5 sometime today).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Cisco PIX VPN and Active Directory Integration</title>
+          <link>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</link>
+          <pubDate>Tue, 22 Nov 2005 19:01:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</guid>
+          <description>
+
+&lt;p&gt;Rather than publishing this information in PDF form on my business website, I&amp;rsquo;ve decided to try something new and post it here as a blog entry. So, here goes.&lt;/p&gt;
+
+&lt;p&gt;This information assumes that you have some experience with the Cisco PIX firewall (i.e., you know how to enter configuration commands and have a basic idea of what the configuration commands actually do) as well as some experience with Windows and Active Directory.&lt;/p&gt;
+
+&lt;p&gt;With that information in hand, let&amp;rsquo;s get started.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Configuring the Cisco PIX&lt;/h2&gt;
+
+&lt;p&gt;First, we&amp;rsquo;ll need to setup the PIX firewall. Use the commands below to configure the PIX for PPTP-based VPN connections that will authenticate against an Active Directory back-end.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ip local pool vpn-pool 10.10.10.1-10.10.10.254  
+aaa-server vpn-auth inside host 10.10.10.5 secretkey  
+aaa-server vpn-auth inside host 10.10.10.6 secretkey  
+aaa-server vpn-auth protocol radius  
+vpdn group vpn-pptp-group accept dialin pptp  
+vpdn group vpn-pptp-group ppp authentication mschap  
+vpdn group vpn-pptp-group ppp encryption mppe 128 required  
+vpdn group vpn-pptp-group client configuration \  
+address local vpn-pool  
+vpdn group vpn-pptp-group client configuration \  
+dns 10.10.10.5 10.10.10.6  
+vpdn group vpn-pptp-group client configuration \  
+wins 10.10.10.6 10.10.10.5  
+vpdn group vpn-pptp-group client authentication aaa vpn-auth  
+vpdn enable outside  
+sysopt connect permit-pptp  
+access-list acl-nat0 permit ip 10.10.1.0 255.255.255.0 \  
+10.10.10.0 255.255.255.0  
+nat (inside) 0 access-list acl-nat0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(Note that I have placed a backslash to indicate text that is wrapped onto two lines here but should be entered all on a single line in the PIX configuration.)&lt;/p&gt;
+
+&lt;p&gt;In this configuration, replace the IP addresses on lines 2 and 3 (the &lt;code&gt;aaa-server vpn-auth&lt;/code&gt; commands) with the IP addresses of the servers running Internet Authentication Service (IAS) on Windows. See the next section for more information on configuring IAS.&lt;/p&gt;
+
+&lt;p&gt;On those same lines, replace the text &lt;code&gt;secretkey&lt;/code&gt; with the RADIUS shared secret that will be used when configuring the RADIUS/IAS server in the next section.&lt;/p&gt;
+
+&lt;p&gt;Likewise, replace the IP addresses on lines 9 and 10 (the &lt;code&gt;vdpn group vpn-pptp-group client configuration&lt;/code&gt; lines that pass out the DNS and WINS servers to VPN clients) with the IP addresses of your DNS and WINS servers, respectively.&lt;/p&gt;
+
+&lt;p&gt;That should do it. Save the configuration to the PIX and then move on to configuring IAS.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Configuring Internet Authentication Service&lt;/h2&gt;
+
+&lt;p&gt;Before doing anything else, create a new global security group in Active Directory. Call it something like &amp;ldquo;VPN Users&amp;rdquo; or similar. We&amp;rsquo;ll use this group later as an additional security check in validating VPN connections.&lt;/p&gt;
+
+&lt;p&gt;Next, install IAS using the Add/Remove Programs icon in Control Panel. Once it has been installed, launch it from the Administrative Tools folder on the Start Menu and we&amp;rsquo;ll proceed with configuring it for authenticating VPN connections to the PIX firewall.&lt;/p&gt;
+
+&lt;p&gt;First, we need to grant IAS permission to read dial-in properties from user accounts in Active Directory. To do this, right-click on the &amp;ldquo;Internet Authentication Service (Local)&amp;rdquo; and select &amp;ldquo;Register Server in Active Directory&amp;rdquo;. Select Yes (or OK) if prompted to confirm.&lt;/p&gt;
+
+&lt;p&gt;With that done, we can now configure the PIX firewall as a RADIUS client. Right-click on RADIUS Clients and select New RADIUS Client. In the wizard, specify the IP address (or DNS name) of the PIX firewall&amp;rsquo;s internal IP address and the shared secret. Note that this shared secret is the same secret key specified in the PIX configuration above. RADIUS clients use this to authenticate to RADIUS servers, so make it a reasonably strong password.&lt;/p&gt;
+
+&lt;p&gt;Now create a remote access policy. Right-click on Remote Access Policies and select New Remote Access Policy. In the wizard, specify a name, select to create a custom policy, and then add the following conditions to the policy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;NAS-IP-Address: This will be the IP address of the PIX firewall&amp;rsquo;s internal interface. This helps to ensure that this policy only applies to VPN requests from this firewall and not from any other RADIUS client.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Windows-Groups: This should be the security group created earlier. Any user that should be allowed to authenticate on a VPN connection will need to be a member of this group.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The rest of the policy should be very straightforward. Make this policy the first policy (using the Move Up/Move Down commands in the IAS console), add a user to the group created earlier, and then test your connection. Remote systems attempting to connect via PPTP should now be able to authenticate the VPN connection using their Active Directory usernames and passwords.&lt;/p&gt;
+
+&lt;p&gt;Although this was written from the perspective of authenticating PPTP connections, the process should be very similar for IPSec VPN clients as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Sony Keeps Digging Itself Deeper</title>
+          <link>http://lowescott.github.io/2005/11/10/sony-keeps-digging-itself-deeper/</link>
+          <pubDate>Thu, 10 Nov 2005 19:00:21 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/10/sony-keeps-digging-itself-deeper/</guid>
+          <description>&lt;p&gt;The furor over the rootkit technology used by Sony in their DRM software continues to grow. After Mark Russinovich &lt;a href=&#34;http://www.sysinternals.com/blog/2005/10/sony-rootkits-and-digital-rights.html&#34;&gt;unveiled the truth&lt;/a&gt;, Sony released a patch that supposedly allows for the DRM technology to be uninstalled. Of course, Mark &lt;a href=&#34;http://www.sysinternals.com/blog/2005/11/more-on-sony-dangerous-decloaking.html&#34;&gt;reviewed the uninstallation&lt;/a&gt;, and he found it left a little bit to be desired (putting it mildly). Basically, it left you at risk of a blue screen of death. And Mark&amp;rsquo;s not the only one not satisfied&amp;ndash;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1883820,00.asp&#34;&gt;this article&lt;/a&gt; cites several other security experts as well who are not happy with this situation.&lt;/p&gt;
+
+&lt;p&gt;Then, First 4 Internet (the company behind the cloaking technology that Sony uses for their DRM software) &lt;a href=&#34;http://www.sysinternals.com/blog/2005/11/sonys-rootkit-first-4-internet.html&#34;&gt;responds&lt;/a&gt; to Mark&amp;rsquo;s posts and attempts to refute his findings. Finally, today, Mark posted more details on the &lt;a href=&#34;http://www.sysinternals.com/blog/2005/11/sony-you-dont-reeeeaaaally-want-to_09.html&#34;&gt;actual uninstallation process&lt;/a&gt; and what is required in order to make it work.&lt;/p&gt;
+
+&lt;p&gt;Sony just keeps digging itself deeper and deeper into this hole. It&amp;rsquo;s bad enough that the company uses stealth/cloaking technologies to hide their files. It&amp;rsquo;s bad enough by itself that the DRM software is communicating back to Sony whenever a CD is played. It&amp;rsquo;s bad enough that the uninstallation process requires so many steps and is so complicated.&lt;/p&gt;
+
+&lt;p&gt;Finally, to make matters worse&amp;hellip;check out &lt;a href=&#34;http://entmag.com/news/article.asp?editorialsid=7033&#34;&gt;this news&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Put it all together, and you get a mistake so massive that it could change Sony&amp;rsquo;s business fortunes. Don&amp;rsquo;t believe me? Are &lt;strong&gt;&lt;em&gt;you&lt;/em&gt;&lt;/strong&gt; going to buy any Sony CDs or software now, after everything that&amp;rsquo;s been disclosed? I&amp;rsquo;m not, that&amp;rsquo;s for sure. (Of course, I don&amp;rsquo;t really have to worry about it that much since I&amp;rsquo;m using a Mac and not Windows, but that&amp;rsquo;s a different story for a different day.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>It Was Bound to Happen</title>
+          <link>http://lowescott.github.io/2005/11/09/it-was-bound-to-happen/</link>
+          <pubDate>Wed, 09 Nov 2005 16:17:25 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/09/it-was-bound-to-happen/</guid>
+          <description>&lt;p&gt;To a certain extent, I agree with the belief that operating systems and applications that don&amp;rsquo;t have a significant market share like Windows, IIS, and Exchange won&amp;rsquo;t get targeted as frequently and therefore will have a &amp;ldquo;better&amp;rdquo; security track record. I don&amp;rsquo;t agree that this is the &lt;em&gt;only&lt;/em&gt; reason that Linux, Mac OS X, and others haven&amp;rsquo;t seen as many security vulnerabilities and the oh-so-fun network worms that invariably accompany them. But I will agree that as these alternatives gain in popularity, more hackers are going to target them.&lt;/p&gt;
+
+&lt;p&gt;As a result, it&amp;rsquo;s no surprise that a &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1882889,00.asp&#34;&gt;new Linux worm&lt;/a&gt; has recently emerged. I mean, it was bound to happen. Linux is surging in popularity, as Linus Torvalds and other developers continue to &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1881470,00.asp&#34;&gt;add features&lt;/a&gt; to the Linux kernel and more and more corporations deploy Linux. Of course the malware authors are going to try something like this. I doesn&amp;rsquo;t surprise me in the least. While this one is fairly low-tech, you can bet that future variants of this worm (as well as new worms) will be more complex and more dangerous.&lt;/p&gt;
+
+&lt;p&gt;I also fully expect that the anti-Linux crowd will shout that this is the end of the line for Linux, just like the anti-Microsoft crowd shouts &amp;ldquo;Down with Windows!&amp;rdquo; everytime Microsoft patches a critical security flaw that could be exploited by an automated worm (side note: new Microsoft critical security flaw &lt;a href=&#34;http://www.microsoft.com/technet/security/Bulletin/MS05-053.mspx&#34;&gt;patched yesterday&lt;/a&gt;, go have a look and make sure you are protected). This just isn&amp;rsquo;t the case. Neither Windows nor Linux are going to go away, and each of them has value for businesses today. The best bet for any organization is to use the product that best fits the need and then make sure that the product is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;properly &lt;em&gt;configured&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;properly &lt;em&gt;patched&lt;/em&gt;; and&lt;/li&gt;
+&lt;li&gt;properly &lt;em&gt;maintained&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Following these guidelines, businesses and consumers can safely deploy the products, technologies, and platforms that best meet their needs without falling prey to technology bigotry.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Rootkit Technology in Sony DRM</title>
+          <link>http://lowescott.github.io/2005/11/02/rootkit-technology-in-sony-drm/</link>
+          <pubDate>Wed, 02 Nov 2005 19:16:28 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/02/rootkit-technology-in-sony-drm/</guid>
+          <description>&lt;p&gt;A &lt;a href=&#34;http://www.sysinternals.com/blog/2005/10/sony-rootkits-and-digital-rights.html&#34;&gt;very in-depth article&lt;/a&gt; by Mark Russinovich unveiled that DRM technology shipping with recent Sony BMG CDs actually installs &lt;a href=&#34;http://en.wikipedia.org/wiki/Rootkit&#34;&gt;rootkit&lt;/a&gt; components onto your system. Now, I don&amp;rsquo;t know about you, but I don&amp;rsquo;t like the idea of a vendor &lt;em&gt;unknowingly&lt;/em&gt; installing software on my computer(s) that contain rootkit components&amp;ndash;especially when those rootkit components could be used by malicious software packages to hide themselves.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m glad to see that &lt;em&gt;eWeek&lt;/em&gt; &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1880543,00.asp&#34;&gt;picked up the story&lt;/a&gt; as well. (Note that O&amp;rsquo;Reilly&amp;rsquo;s ONLamp.net is &lt;a href=&#34;http://www.oreillynet.com/pub/wlg/8269?CMP=OTC-6YE827253101&#34;&gt;mentioning it&lt;/a&gt; as well.) Mark&amp;rsquo;s research is fantastic (as always), but not many people will get exposed to this news through him alone. Computer geeks like myself would, of course, but the people that really need to know this are the non-geeks. Any reasonably computer-savvy user is likely to want to pick up your average CD (from any number of distribution channels, including &lt;a href=&#34;http://www.amazon.com/&#34;&gt;Amazon.com&lt;/a&gt;) and copy the music off the CD. There are a number of very valid reasons for this&amp;ndash;ease of access, personal backup copy (ever scratch a CD?), etc. Copy-protected CDs limit your ability to do this without also installing stealthy rootkit components onto your system.&lt;/p&gt;
+
+&lt;p&gt;More links to other discussions on this topic can be found in section 8 of &lt;a href=&#34;http://en.wikipedia.org/wiki/Rootkit&#34;&gt;this Wikipedia rootkit article&lt;/a&gt; (also linked above).&lt;/p&gt;
+
+&lt;p&gt;In my opinion, this is just plain wrong. It&amp;rsquo;s wrong to install this kind of software onto someone&amp;rsquo;s system. I can understand their desire to want to protect their &amp;ldquo;intellectual property,&amp;rdquo; but there&amp;rsquo;s got to be a better way than installing rootkits on your customers&amp;rsquo; computers.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Error ID c10308a2 is Put to Rest</title>
+          <link>http://lowescott.github.io/2005/09/26/error-id-c10308a2-is-put-to-rest/</link>
+          <pubDate>Mon, 26 Sep 2005 13:45:18 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/09/26/error-id-c10308a2-is-put-to-rest/</guid>
+          <description>&lt;p&gt;As you may already know, I&amp;rsquo;ve been struggling with a bug in an environment running Exchange Server 2003 and Windows Server 2003 with SP1. The bug is manifested as an error that appears when users with the properly delegated permissions attempt to add or modify an e-mail address on an already mail-enabled or mailbox-enabled object. The error, listed as error ID c10308a2, contains text along the lines of being unable to determine if the Microsoft Exchange System Attendant service is running.&lt;/p&gt;
+
+&lt;p&gt;The underlying issue is a change that Windows Server 2003 SP1 makes to the security descriptors applied to the Service Control Manager. This change in security descriptors now makes it impossible for non-administrators to query service status; hence, the error message.&lt;/p&gt;
+
+&lt;p&gt;In trying to apply the fix suggested by Microsoft in KB905809 (the use of the SC.EXE command), the error was never resolved. It turns out that the workstation I was using the test environment was configured not to use the primary DNS suffix, but instead use a predetermined DNS suffix search list. This configuration resulted in the system&amp;rsquo;s AD domain name &lt;strong&gt;&lt;em&gt;not&lt;/em&gt;&lt;/strong&gt; being in the suffix search list. As a result, even though the fix from Microsoft was applied, errors still occurred.&lt;/p&gt;
+
+&lt;p&gt;This morning I double-checked everything on the test servers as well as the test workstations, corrected the problem described above, and reset the environment to match the production environment. Then, walking through the tests again, I confirmed that running the SC command to add permissions to the Authenticated Users group (see the KB article linked above for more details, then see &lt;a href=&#34;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/secauthz/security/security_descriptor_string_format.asp&#34;&gt;this explanation&lt;/a&gt; of SDDL syntax) &lt;strong&gt;&lt;em&gt;does&lt;/em&gt;&lt;/strong&gt; indeed resolve the issue.&lt;/p&gt;
+
+&lt;p&gt;So, finally, we can put this issue to rest. If you are running Exchange Server 2003 with Windows Server 2003 SP1 and finding that your non-administrative users can&amp;rsquo;t add or modify e-mail addresses using Active Directory Users &amp;amp; Computers, see KB905809 and run the SC command listed in there.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Have You Seen Error ID c10308a2?</title>
+          <link>http://lowescott.github.io/2005/09/22/have-you-seen-error-id-c10308a2/</link>
+          <pubDate>Thu, 22 Sep 2005 17:52:13 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/09/22/have-you-seen-error-id-c10308a2/</guid>
+          <description>&lt;p&gt;As the next-to-last article in a series of postings about the problem described in this &lt;a href=&#34;http://support.microsoft.com/default.aspx?scid=kb;en-us;905809&#34;&gt;KB article&lt;/a&gt;, it appears that Microsoft will not be producing a hotfix for this bug. In speaking with Microsoft earlier today, it appears that no hotfix will be produced for this, even though it is a confirmed bug. As of this afternoon, the only known fix for the problem is using &lt;strong&gt;both&lt;/strong&gt; methods outlined in the KB article. I hope to confirm that for sure on Monday.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m also going to confirm on Monday whether membership in the local Administrators group (on the actual Exchange servers) will also fix the issue.&lt;/p&gt;
+
+&lt;p&gt;The next posting about this problem will be the last one regarding this issue. Really.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Funky Active Directory Issue</title>
+          <link>http://lowescott.github.io/2005/08/16/funky-active-directory-issue/</link>
+          <pubDate>Tue, 16 Aug 2005 23:17:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/16/funky-active-directory-issue/</guid>
+          <description>&lt;p&gt;I came across a funky Active Directory issue today. User objects stored in an OU on which permissions had been assigned were &amp;ldquo;losing&amp;rdquo; their permissions and their inheritance from the parent OU. For example, if the group &amp;ldquo;Support Team&amp;rdquo; had been granted a set of permissions on the OU &amp;ldquo;Sales&amp;rdquo;, then the user object &amp;ldquo;Bob Jones&amp;rdquo; stored in that OU would lose those permissions regularly. Even when the permissions were reassigned, they would disappear again.&lt;/p&gt;
+
+&lt;p&gt;It turns out that if the user object is a member, directly or indirectly, of a &amp;ldquo;protected group&amp;rdquo; (such as Server Operators, Backup Operators, or Administrators), then Active Directory automatically removes any inherited permissions, resets those permissions to the default, and turns off inheritance for those objects. The idea is to prevent possible elevation of privileges. This behavior is described in &lt;a href=&#34;http://support.microsoft.com/default.aspx?scid=kb;en-us;817433&#34;&gt;this KB article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The fix? Well, you can muck around in Active Directory and play with the adminSDHolder object, or you can just not worry about delegations on those user objects, or you can remove those user objects from the protected group in question. In my particular case, the user objects needed to be taken out of the protected group anyway, so that was a natural fit.&lt;/p&gt;
+
+&lt;p&gt;Keep this in mind when planning AD delegations and the placement of accounts that will be members of a protected group.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Follow Up on Access-Based Enumeration</title>
+          <link>http://lowescott.github.io/2005/08/11/follow-up-on-access-based-enumeration/</link>
+          <pubDate>Thu, 11 Aug 2005 21:53:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/11/follow-up-on-access-based-enumeration/</guid>
+          <description>&lt;p&gt;As a follow-up to &lt;a href=&#34;http://blog.scottlowe.org/2005/07/08/access-based-enumeration/&#34;&gt;this posting&lt;/a&gt; on &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/techinfo/overview/abe.mspx&#34;&gt;access-based enumeration&lt;/a&gt;, I wanted to post information from some testing I performed earlier this week. I installed access-based enumeration (ABE) on a server running &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt; SP1 (the only version of Windows on which it is supported). It does what it advertises; when a non-administrative user connects to a shared folder on which ABE is enabled, they see only those folders to which he or she has permission.&lt;/p&gt;
+
+&lt;p&gt;There are some limitations. Administrative users are not affected in any way. ABE only works for network access; users accessing the filesystem locally are not affected. This makes ABE unsuitable for use on terminal servers. Additionally, ABE is enabled or disabled on a share-by-share basis, and while it is possible to turn ABE on or off for all shares at a time there is no provision for setting ABE on by default for new shares. Finally, ABE can negatively impact performance, especially for shared folders with large numbers of files.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m kind of split on this one. On the one hand, it&amp;rsquo;s really good functionality that will dramatically change the way system administrators approach Windows-based file servers. On the other hand, the potential performance drawbacks of ABE are concerning.&lt;/p&gt;
+
+&lt;p&gt;If you are running file servers on Windows Server 2003 with Service Pack 1 installed, you owe it to yourself to at least evaluate ABE. You may find that it doesn&amp;rsquo;t work for your network, but then again you may find that you don&amp;rsquo;t want to go on without the added functionality that ABE brings to the table.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Cisco IOS = Windows XP?</title>
+          <link>http://lowescott.github.io/2005/07/29/cisco-ios-windows-xp/</link>
+          <pubDate>Fri, 29 Jul 2005 15:43:00 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/29/cisco-ios-windows-xp/</guid>
+          <description>&lt;p&gt;Well, the &lt;a href=&#34;http://www.blackhat.com/main.html&#34;&gt;Black Hat&lt;/a&gt; conference in Las Vegas certainly generated a great deal of excitement this past week. A security presentation was going to be given about a first-ever exploit for &lt;a href=&#34;http://www.cisco.com&#34;&gt;Cisco&lt;/a&gt; routers. From what I&amp;rsquo;ve been able to decipher, Cisco had been working closely with &lt;a href=&#34;http://www.iss.net&#34;&gt;ISS&lt;/a&gt;, the company whose researcher (Michael Lynn) was supposed to give the presentation, and both companies apparently agreed that the presentation needed further review. Cisco and ISS &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1841232,00.asp&#34;&gt;jointly filed an injunction&lt;/a&gt; against Michael Lynn when he &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/holes/story/0,10801,103515,00.html&#34;&gt;quit his job at ISS to give the presentation&lt;/a&gt; anyway; this is after Cisco employees physically removed presentation pages from the books handed out at the conference and destroyed CDs containing information about the presentation.&lt;/p&gt;
+
+&lt;p&gt;It appeared as if Lynn was going to give a VoIP presentation instead, but then &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1841166,00.asp&#34;&gt;proceeded with the original presentation&lt;/a&gt; anyway, even though he knew it would likely result in lawsuits from Cisco and his former employer. In the presentation, he likened Cisco&amp;rsquo;s IOS (Internetwork Operating System) to Microsoft Windows XP, saying &amp;ldquo;IOS is the Windows XP of the Internet.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Finally, Thursday, a court order was issued and &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,103561,00.html&#34;&gt;all parties involved have agreed&lt;/a&gt; to the terms of the court order, which restrict them from further sharing or disseminating any information about the security flaw.&lt;/p&gt;
+
+&lt;p&gt;Both Cisco and ISS have taken a real hit from this whole situation, and I can understand why. Cisco looks like it&amp;rsquo;s trying to cover up security vulnerabilities; it was only after all of this that Cisco issued a &lt;a href=&#34;http://www.cisco.com/warp/public/707/cisco-sa-20050729-ipv6.shtml&#34;&gt;security advisory&lt;/a&gt; discussing the vulnerability. If Michael Lynn&amp;rsquo;s research was accurate, then it is appropriate for people to know so that our networks can be protected. Cisco network equipment running IOS does, indeed, power a large portion of the Internet. &lt;em&gt;At the same time&lt;/em&gt;, if he violated the law and the terms of his agreement with Cisco by reverse engineering IOS, then he should not have publicized that information. &lt;em&gt;But then again&lt;/em&gt;, it appears as if Cisco would not have released security information had Mr. Lynn not proceeded with the presentation, so&amp;hellip;you see that this issue is sensitive and there are reasonable and understandable concerns on all sides.&lt;/p&gt;
+
+&lt;p&gt;To be honest, I don&amp;rsquo;t know what I would have done if I were in the same situation. The only advice that comes to mind is, &amp;ldquo;If you do what is right, you can&amp;rsquo;t go wrong.&amp;rdquo; But what is &lt;em&gt;&amp;ldquo;right&amp;rdquo;&lt;/em&gt; in this situation?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Wrap-Up</title>
+          <link>http://lowescott.github.io/2005/07/22/linux-ad-integration-wrap-up/</link>
+          <pubDate>Fri, 22 Jul 2005 00:19:08 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/22/linux-ad-integration-wrap-up/</guid>
+          <description>&lt;p&gt;Well, my Linux-AD integration task is pretty much complete. I have three Linux servers authenticating via &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; to Active Directory, and using LDAP for name/group resolution. Only one Linux server remains; I need to do some research on how &lt;a href=&#34;http://asg.web.cmu.edu/sasl/&#34;&gt;SASL&lt;/a&gt; with interact with PAM before I can switch over that particular server. My &lt;a href=&#34;http://www.openbsd.org&#34;&gt;OpenBSD&lt;/a&gt; server I&amp;rsquo;m going to leave alone for now; perhaps later I&amp;rsquo;ll get it integrated as well.&lt;/p&gt;
+
+&lt;p&gt;Next, I think I&amp;rsquo;m going to see what is involved in using RADIUS to authenticate VPN tunnels on my hardware firewall.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Rootkit Prevention Coming to Windows</title>
+          <link>http://lowescott.github.io/2005/07/19/rootkit-prevention-coming-to-windows/</link>
+          <pubDate>Tue, 19 Jul 2005 15:17:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/19/rootkit-prevention-coming-to-windows/</guid>
+          <description>&lt;p&gt;I &lt;a href=&#34;http://blog.scottlowe.org/2005/06/21/dangerous-stuff/&#34;&gt;blogged&lt;/a&gt; a while back about concerns that &lt;a href=&#34;http://en.wikipedia.org/wiki/Spyware&#34;&gt;spyware&lt;/a&gt; makers were adding &lt;a href=&#34;http://en.wikipedia.org/wiki/Root_kit&#34;&gt;rootkit&lt;/a&gt; functionality to their products to make them harder to detect and harder to remove. It seems that trend has gotten the attention of &lt;a href=&#34;http://www.microsoft.com&#34;&gt;Microsoft&lt;/a&gt;. (About time, I say.)&lt;/p&gt;
+
+&lt;p&gt;Microsoft&amp;rsquo;s &lt;a href=&#34;http://www.microsoft.com/security/malwareremove/default.mspx&#34;&gt;Malicious Software Removal Tool&lt;/a&gt; has been enhanced with the ability to find and remove rootkit-like trojans and backdoor applications. In addition, Microsoft has indicated that it will likely &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1838294,00.asp&#34;&gt;incorporate anti-rootkit functionality&lt;/a&gt; into future versions of its &lt;a href=&#34;http://www.microsoft.com/athome/security/spyware/software/default.mspx&#34;&gt;AntiSpyware&lt;/a&gt; product, acquired with Giant Software and still in beta.&lt;/p&gt;
+
+&lt;p&gt;Rootkits have been reported on virtually all major operating systems, so we can&amp;rsquo;t really knock Microsoft for allowing rootkits to infect Windows. We can, however, insist that as long as Microsoft makes it possible for the operating system to be compromised in such a significant way through the use of a web browser, then such stuff as &lt;a href=&#34;http://research.microsoft.com/rootkit/&#34;&gt;Strider Ghostbuster&lt;/a&gt; (Microsoft&amp;rsquo;s anti-rootkit technology) should continue to be offered to Windows users at no charge.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Computer Accounts With ktpass.exe</title>
+          <link>http://lowescott.github.io/2005/07/19/computer-accounts-with-ktpassexe/</link>
+          <pubDate>Tue, 19 Jul 2005 13:08:06 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/19/computer-accounts-with-ktpassexe/</guid>
+          <description>&lt;p&gt;As a quick follow-up to my previous posting, testing with Kerberos authentication from a Linux server with pam_krb5 was successful. Instead of using a user account in Active Directory to generate the keytab, I was able to use a computer account and just had to modify the ktpass.exe command line syntax slightly (see my previous post).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Minor Linux-AD Hiccup Fixed (Hopefully)</title>
+          <link>http://lowescott.github.io/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/</link>
+          <pubDate>Mon, 18 Jul 2005 00:18:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/</guid>
+          <description>&lt;p&gt;I think I have resolved one minor Linux-AD integration hiccup. In setting up the Kerberos authentication, various instructions I had found (including some from Microsoft) indicated I needed to create a &lt;em&gt;user&lt;/em&gt; account for the Linux servers, then use &lt;code&gt;ktpass&lt;/code&gt; to generate the Kerberos keytab. This works, but being the stickler for detail that I am, I really wanted to use a computer account instead of a user account.&lt;/p&gt;
+
+&lt;p&gt;After fiddling with it for a while, I finally managed to make it work. The &lt;code&gt;ktpass&lt;/code&gt; command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$  
+-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL  
+-out filename
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The missing piece, for me, was specifying &lt;code&gt;DOMAIN\name$&lt;/code&gt; for the mapuser parameter. Without it, the command kept generating an error.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know for sure that this will work, but I will be testing this within the next day or so to see how it goes.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Success!</title>
+          <link>http://lowescott.github.io/2005/07/17/linux-ad-integration-success/</link>
+          <pubDate>Sun, 17 Jul 2005 22:31:52 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/17/linux-ad-integration-success/</guid>
+          <description>&lt;p&gt;Well, limited success, anyway. I have managed to get Linux authentication to occur via &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; against Active Directory. LDAP is used to lookup the user and group information. Using pam_krb5, authentication occurs via Kerberos to an Active Directory DC for any PAM-aware application. I&amp;rsquo;m sure that I&amp;rsquo;ll find some hiccups along the way, but so far things look good. I only have 1 server configured this way for now (a non-essential server), but after some additional testing I&amp;rsquo;ll expand this to the remainder of my Linux servers.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll post more details here and/or on the &lt;a href=&#34;http://www.mercurionsystems.com/index.html&#34;&gt;Mercurion Systems&lt;/a&gt; web site once all the bugs have been worked out. My thanks go out to the many, many individuals who posted information on using Kerberos and LDAP with Active Directory; this would not have been possible without their assistance.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>It&#39;s Patch Tuesday Again</title>
+          <link>http://lowescott.github.io/2005/07/13/its-patch-tuesday-again/</link>
+          <pubDate>Wed, 13 Jul 2005 16:03:42 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/its-patch-tuesday-again/</guid>
+          <description>&lt;p&gt;I suppose since I didn&amp;rsquo;t post this until Wednesday, the title isn&amp;rsquo;t exactly correct, is it?&lt;/p&gt;
+
+&lt;p&gt;In any event, &lt;a href=&#34;http://www.microsoft.com&#34;&gt;Microsoft&lt;/a&gt; has released the &lt;a href=&#34;http://www.microsoft.com/technet/security/bulletin/ms05-jul.mspx&#34;&gt;security bulletin&lt;/a&gt; for July, which contains 3 critical updates (updates rated &amp;ldquo;critical&amp;rdquo; are considered the most severe by Microsoft). These updates patch security vulnerabilities in Microsoft Word, Internet Explorer, and Windows (including Windows Server 2003 SP1 and Windows XP SP2).&lt;/p&gt;
+
+&lt;p&gt;Microsoft had previously released a &lt;a href=&#34;http://www.microsoft.com/technet/security/advisory/903144.mspx&#34;&gt;workaround&lt;/a&gt; for the Internet Explorer flaw (note that this page now directs users to the location of the update rather than the earlier workaround).&lt;/p&gt;
+
+&lt;p&gt;Additional information on the patches can be found &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1836227,00.asp&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>New Book on Linux-Windows Integration</title>
+          <link>http://lowescott.github.io/2005/07/09/new-book-on-linux-windows-integration/</link>
+          <pubDate>Sat, 09 Jul 2005 23:22:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/09/new-book-on-linux-windows-integration/</guid>
+          <description>&lt;p&gt;While searching for Linux-Windows integration articles to assist in my project to unify Linux authentication with Active Directory, I came across an entry in Robbie Allen&amp;rsquo;s &lt;a href=&#34;http://www.rallenhome.com/blog/adcookbook/&#34;&gt;Active Directory Cookbook blog&lt;/a&gt; that was talking about a new book titled &lt;em&gt;Linux in a Windows World&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Turns out that &lt;a href=&#34;http://www.oreilly.com/&#34;&gt;O&amp;rsquo;Reilly&lt;/a&gt; has indeed published &lt;em&gt;&lt;a href=&#34;http://www.oreilly.com/catalog/linuxwinworld/&#34;&gt;Linux in a Windows World&lt;/a&gt;&lt;/em&gt;. Looks to be a good book; I&amp;rsquo;ll have to pick up a copy soon.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>A New Effort</title>
+          <link>http://lowescott.github.io/2005/07/09/a-new-effort/</link>
+          <pubDate>Sat, 09 Jul 2005 23:09:53 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/09/a-new-effort/</guid>
+          <description>&lt;p&gt;I suppose I should be finishing one project before starting another, but I can&amp;rsquo;t help myself. I&amp;rsquo;m going to take on the project of integrating my Linux systems with Microsoft Active Directory, so that a single Active Directory account can be used to authenticate to both Windows-based systems as well as Linux-based systems on our network.&lt;/p&gt;
+
+&lt;p&gt;This new effort comes while I have yet to finish my &lt;a href=&#34;http://blog.scottlowe.org/2005/05/13/miscellaneous-projects/&#34;&gt;projects&lt;/a&gt; on Squid log analysis tools or an internal news server running INN. At least I did get &lt;a href=&#34;http://blog.scottlowe.org/2005/05/15/perdition-working-now/&#34;&gt;Perdition working&lt;/a&gt; as expected, and figured out how to get &lt;a href=&#34;http://blog.scottlowe.org/2005/07/02/starttls-and-imap-in-mailapp/&#34;&gt;Mail.app to use STARTTLS with IMAP4&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A couple of the resources I&amp;rsquo;m using for this effort are bookmarked in my &lt;a href=&#34;http://del.icio.us/slowe/&#34;&gt;del.icio.us&lt;/a&gt; bookmark list. I&amp;rsquo;ll be adding more there as I find them.&lt;/p&gt;
+
+&lt;p&gt;I also have yet to decide if I will use Samba/Winbind or LDAP to handle the cross-platform authentication. I&amp;rsquo;d love to hear any comments or feedback in this regard.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Access-Based Enumeration</title>
+          <link>http://lowescott.github.io/2005/07/08/access-based-enumeration/</link>
+          <pubDate>Fri, 08 Jul 2005 23:29:04 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/08/access-based-enumeration/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.microsoft.com/windowsserver2003/&#34;&gt;Windows Server 2003&lt;/a&gt; has finally caught up with &lt;a href=&#34;http://www.novell.com/netware/&#34;&gt;Novell NetWare&lt;/a&gt; in one key area, and that is in the enumeration of files and folders. With &lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=04A563D9-78D9-4342-A485-B030AC442084&amp;amp;displaylang=en&#34;&gt;access-based enumeration&lt;/a&gt;, Windows Server 2003 now will display only those files and folders to which the user has permission. If no permission is given, the file or folder is not displayed. This is, in my opinion, a &lt;em&gt;major&lt;/em&gt; improvement in Windows&amp;rsquo; security.&lt;/p&gt;
+
+&lt;p&gt;I plan to give this functionality a swing on my own servers within the next few days. I&amp;rsquo;ll post additional details here after my tests.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux Better Than Windows?</title>
+          <link>http://lowescott.github.io/2005/07/06/linux-better-than-windows/</link>
+          <pubDate>Wed, 06 Jul 2005 14:31:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/06/linux-better-than-windows/</guid>
+          <description>&lt;p&gt;A short while back &lt;a href=&#34;http://www.newsforge.com/&#34;&gt;NewsForge&lt;/a&gt; published an article comparing Windows to Linux. What&amp;rsquo;s so unusual about that, you may ask? This article, titled &amp;ldquo;&lt;a href=&#34;http://os.newsforge.com/article.pl?sid=05/05/18/2033216&#34;&gt;Windows rapidly approaching desktop usability&lt;/a&gt;,&amp;rdquo; takes a look at Windows as if &lt;em&gt;it&lt;/em&gt;, not Linux, were the upstart newcomer in the OS lineup. This is a viewpoint not often considered, and it is a valid viewpoint once you get over the &lt;strong&gt;presumption&lt;/strong&gt; that Windows should be the default OS on your computer.&lt;/p&gt;
+
+&lt;p&gt;There are a couple of valid points made in the article. To quote:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;Microsoft Windows XP, Home Edition, with Service Pack 2, is a tremendous improvement over previous Windows versions when it comes to stability and appearance, but it still has many glitches that keep it from being competitive with GNU/Linux for everyday users, including a tedious installation procedure, lack of productivity software included with the operating system, hardware compatibility problems, and a price so much higher than any of the Linux distributions&amp;hellip;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Don&amp;rsquo;t get me wrong; I&amp;rsquo;m not advocating that everyone out there should suddenly ditch &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; and migrate to Linux. Are there situations where Linux is a better fit than Windows? Of course. Likewise, there are situations where Windows is a better fit than Linux. And, of course, there&amp;rsquo;s always &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; to consider as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Running Windows Apps on an Intel-Based Mac</title>
+          <link>http://lowescott.github.io/2005/06/26/running-windows-apps-on-an-intel-based-mac/</link>
+          <pubDate>Sun, 26 Jun 2005 16:36:17 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/26/running-windows-apps-on-an-intel-based-mac/</guid>
+          <description>&lt;p&gt;Here&amp;rsquo;s an interesting side effect of Apple&amp;rsquo;s announcement to move the Macintosh platform to Intel-based CPUs: &lt;a href=&#34;http://www.codeweavers.com/&#34;&gt;CodeWeavers&lt;/a&gt; has announced that they will expand their services and products to include the new Intel-based Macs (see &lt;a href=&#34;http://business.newsforge.com/article.pl?sid=05/06/24/1530234&amp;amp;from=rss&#34;&gt;CodeWeavers sees Mactel move as an opportunity&lt;/a&gt; on the &lt;a href=&#34;http://www.newsforge.com/&#34;&gt;NewsForge&lt;/a&gt; site). More information is also available in the official CodeWeavers &lt;a href=&#34;http://www.codeweavers.com/about/general/press/?id=20050622&#34;&gt;press release&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is a very good thing. If CodeWeavers is successful in making a version of &lt;a href=&#34;http://www.codeweavers.com/products/cxoffice/&#34;&gt;CrossOver Office&lt;/a&gt; to run on the Intel-based Macs, it will make it easier to users to choose whatever platform best suits their needs, be it &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt;, Linux, or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;. They won&amp;rsquo;t feel tied to a specific platform just because there&amp;rsquo;s &lt;em&gt;one&lt;/em&gt; application they need that only runs on &lt;em&gt;one&lt;/em&gt; specific platform.&lt;/p&gt;
+
+&lt;p&gt;Right now, I use Microsoft&amp;rsquo;s &lt;a href=&#34;http://www.microsoft.com/mac/products/virtualpc/virtualpc.aspx&#34;&gt;Virtual PC for the Mac&lt;/a&gt; to run any Windows-specific programs I need. This works reasonably well, but takes a performance hit because it has to emulate an Intel-compatible CPU. With Intel-based CPUs under the hood already, Virtual PC (or CrossOver Office, or &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, or &lt;a href=&#34;http://www.cl.cam.ac.uk/Research/SRG/netos/xen/&#34;&gt;Xen&lt;/a&gt;, or any other emulation software) will practically fly. This makes emulation a much more attractive option than it is right now. That, in turn, means more choice and more freedom for end users.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>The Next Big Worm?</title>
+          <link>http://lowescott.github.io/2005/06/24/the-next-big-worm/</link>
+          <pubDate>Fri, 24 Jun 2005 22:29:09 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/24/the-next-big-worm/</guid>
+          <description>&lt;p&gt;Everyone remember Blaster? There are concerns that the next big Internet worm is about to surface, based upon a vulnerability revealed by Microsoft in the Windows implementation of Server Message Block, or SMB. Get the details on that patch &lt;a href=&#34;http://www.microsoft.com/technet/security/Bulletin/MS05-011.mspx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Several articles have been posted recently indicating that traffic patterns have been observed that might indicate an exploit of that vulnerability. &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,102747,00.html&#34;&gt;This article&lt;/a&gt; indicates that some experts believe the traffic patterns are indicative of a new exploit, but others are not concerned.&lt;/p&gt;
+
+&lt;p&gt;More recent than even that article is &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1831325,00.asp&#34;&gt;this posting&lt;/a&gt;, revealing that an exploit for MS05-011 has actually been discovered and made available on the Internet.&lt;/p&gt;
+
+&lt;p&gt;So is there anything you can do to protect yourself? Most firewalls (network-based and host-based) already block TCP port 445, the port used by SMB. If you know your organization allows SMB across the firewall, then you should be concerned. Make sure your systems are patched properly, and keep your anti-virus up to date. That&amp;rsquo;s about all you can do: just stay vigilant.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Dangerous Stuff</title>
+          <link>http://lowescott.github.io/2005/06/21/dangerous-stuff/</link>
+          <pubDate>Tue, 21 Jun 2005 13:47:22 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/21/dangerous-stuff/</guid>
+          <description>&lt;p&gt;The Internet grows more dangerous every day. Why? Well, have a look at this &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1829744,00.asp&#34;&gt;recent eWeek article&lt;/a&gt; and this &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1818369,00.asp&#34;&gt;slightly older eWeek article&lt;/a&gt; and you&amp;rsquo;ll see what I mean.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Spyware/&#34;&gt;Spyware&lt;/a&gt; acting like &lt;a href=&#34;http://en.wikipedia.org/wiki/Root_kit/&#34;&gt;root kits&lt;/a&gt;? &lt;a href=&#34;http://en.wikipedia.org/wiki/Computer_virus/&#34;&gt;Viruses&lt;/a&gt; taking on root kit features and able to hide their processes? This is scary stuff. When one of these malicious programs exploits a vulnerability in your web browser, you could get infected and not even know it. And if that application starts using I/O blocking to hide its processes and NTFS data streams to hide files inside other (legitimate) files, you&amp;rsquo;re really in trouble.&lt;/p&gt;
+
+&lt;p&gt;I know that &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; may only be more secure than &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Microsoft Windows&lt;/a&gt; because not as many people use it, but the end result is the same. If you use Windows, at least protect yourself&amp;ndash;don&amp;rsquo;t use Internet Explorer (use &lt;a href=&#34;www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt;), stay up to date on patches (visit Windows Update regularly), use an anti-virus application (and keep it updated as well), and use a good anti-spyware program (there are several, take your pick). You&amp;rsquo;ll be glad you did.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

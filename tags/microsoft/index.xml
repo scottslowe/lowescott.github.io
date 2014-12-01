@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/microsoft/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-22 11:26:46 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Complete Linux-AD Authentication Details</title>
+          <link>http://lowescott.github.io/2005/12/22/complete-linux-ad-authentication-details/</link>
+          <pubDate>Thu, 22 Dec 2005 11:26:46 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/22/complete-linux-ad-authentication-details/</guid>
+          <description>
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; These instructions are for Windows 2000 Server and Windows Server 2003 pre-R2. For the R2 release, please see &lt;a href=&#34;http://blog.scottlowe.org/2007/01/15/linux-ad-integration-version-4/&#34;&gt;these updated instructions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are several articles posted here that discuss, in general terms, how to authenticate Linux against Active Directory. For example, see this brief article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/07/13/linux-ad-integration-direction/&#34;&gt;broad direction&lt;/a&gt; of the integration, or this posting on &lt;a href=&#34;http://blog.scottlowe.org/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/&#34;&gt;using computer accounts&lt;/a&gt; for Linux servers (most how-to documents I&amp;rsquo;ve seen discuss the use of a user account for this purpose).&lt;/p&gt;
+
+&lt;p&gt;Over the last week or so, I&amp;rsquo;ve been having to rebuild one Linux server a number of times in an effort to fix a separate problem (see this article on &lt;a href=&#34;http://blog.scottlowe.org/2005/08/16/strange-ntpd-problem-on-centos-41/&#34;&gt;NTPd problems with CentOS 4.1&lt;/a&gt; and the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/19/ntpd-on-centos-42/&#34;&gt;recurrence of the problem&lt;/a&gt; with CentOS 4.2). As a result, I&amp;rsquo;ve had to go through the process of configuring this Linux server (and preparing Active Directory) for authentication several times, and I found that I kept having to go back to my scattered and dispersed notes to remember what had to be done. In the hopes of correcting that, I am collecting all the pertinent information I have here in this article.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Preparing Active Directory (One-Time)&lt;/h3&gt;
+
+&lt;p&gt;There is a one-time preparation of Active Directory that is required. In order to authenticate Linux logins against Active Directory, Active Directory&amp;rsquo;s schema must be extended to include Linux-specific attributes such as home directory, UID, GID, and default shell. There are a couple of different ways to do this; I chose to use Microsoft&amp;rsquo;s Services for Unix (SFU) to extend the schema. There are two reasons I chose SFU: 1) it&amp;rsquo;s free; and 2) the SFU schema is being included by default in Windows Server 2003 R2.&lt;/p&gt;
+
+&lt;p&gt;Once SFU has been installed and the schema has been extended, then the specific Active Directory accounts that are allowed to authenticate via Linux must be configured with a UID and other UNIX attributes. This is accomplished via the new &amp;ldquo;UNIX Attributes&amp;rdquo; tab on the properties dialog box of a user account.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll also need to create an account in Active Directory that will be used to bind to Active Directory for LDAP queries. This account does &lt;em&gt;not&lt;/em&gt; need any special privileges; in fact, making the account a member of Domain Guests and &lt;em&gt;not&lt;/em&gt; a member of Domain Users is perfectly fine.&lt;/p&gt;
+
+&lt;p&gt;After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Linux server that will enable the authentication.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Preparing Active Directory (Each Server)&lt;/h3&gt;
+
+&lt;p&gt;For each server that will be authenticating against Active Directory, follow the steps below.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Create a computer account in Active Directory. When creating the computer account, be sure to specify that this account may be used by a pre-Windows 2000-based computer.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use the following command at a command prompt to configure the new computer account:&lt;/p&gt;
+
+&lt;p&gt;ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$&lt;br /&gt;
+-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL&lt;br /&gt;
+-out filename&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Of course, you&amp;rsquo;ll need to substitute the appropriate values for &amp;ldquo;fqdn&amp;rdquo; (the fully-qualified domain name of the computer), &amp;ldquo;REALM&amp;rdquo; (the DNS name of your Active Directory domain in UPPERCASE), &amp;ldquo;DOMAIN&amp;rdquo; (the NetBIOS name of your Active Directory domain), &amp;ldquo;password&amp;rdquo; (the password that will be set for the new computer account), and &amp;ldquo;filename&amp;rdquo; (the keytab that will be generated and must be copied over to the Linux computer).&lt;/p&gt;
+
+&lt;p&gt;If you need to rebuild the Linux server for whatever reason, you&amp;rsquo;ll need to delete the computer account you created and repeat this process.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Preparing the Linux Server&lt;/h3&gt;
+
+&lt;p&gt;Follow the steps below to configure the Linux server for authentication against Active Directory.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Make sure that the appropriate Kerberos libraries, OpenLDAP, pam_krb5, and nss_ldap are installed. If they are not installed, install them.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Be sure that time is being properly synchronized between Active Directory and the Linux server in question. Kerberos requires time synchronization.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;krb5.conf&lt;/code&gt; file to look something like this, substituting your actual host names and domain names where appropriate:&lt;/p&gt;
+
+&lt;p&gt;[logging]&lt;br /&gt;
+ default = FILE:/var/log/krb5libs.log&lt;br /&gt;
+ kdc = FILE:/var/log/krb5kdc.log&lt;br /&gt;
+ admin_server = FILE:/var/log/kadmind.log&lt;/p&gt;
+
+&lt;p&gt;[libdefaults]&lt;br /&gt;
+ default_realm = EXAMPLE.COM&lt;br /&gt;
+ dns_lookup_realm = true&lt;br /&gt;
+ dns_lookup_kdc = true&lt;/p&gt;
+
+&lt;p&gt;[realms]&lt;br /&gt;
+ EXAMPLE.COM = {&lt;br /&gt;
+  kdc = host.example.com:88&lt;br /&gt;
+  admin_server = host.example.com:749&lt;br /&gt;
+  default_domain = example.com&lt;br /&gt;
+ }&lt;/p&gt;
+
+&lt;p&gt;[domain_realm]&lt;br /&gt;
+ .example.com = EXAMPLE.COM&lt;br /&gt;
+ example.com = EXAMPLE.COM&lt;/p&gt;
+
+&lt;p&gt;[kdc]&lt;br /&gt;
+ profile = /var/kerberos/krb5kdc/kdc.conf&lt;/p&gt;
+
+&lt;p&gt;[appdefaults]&lt;br /&gt;
+ pam = {&lt;br /&gt;
+   debug = false&lt;br /&gt;
+   ticket_lifetime = 36000&lt;br /&gt;
+   renew_lifetime = 36000&lt;br /&gt;
+   forwardable = true&lt;br /&gt;
+   krb4_convert = false&lt;br /&gt;
+ }&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;/etc/ldap.conf&lt;/code&gt; file to look something like this, substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate.&lt;/p&gt;
+
+&lt;p&gt;host 10.10.10.10
+base dc=example,dc=com
+binddn cn=ldap,cn=Users,dc=example,dc=com
+bindpw adldapbindpw
+scope sub
+ssl no
+nss_base_passwd dc=example,dc=com
+nss_base_shadow dc=example,dc=com
+nss_base_group dc=example,dc=com
+nss_map_objectclass posixAccount user
+nss_map_objectclass shadowAccount user
+nss_map_objectclass posixGroup group
+nss_map_attribute uid sAMAccountName
+nss_map_attribute uidNumber msSFU30UidNumber
+nss_map_attribute gidNumber msSFU30GidNumber
+nss_map_attribute loginShell msSFU30LoginShell
+nss_map_attribute gecos name
+nss_map_attribute userPassword msSFU30Password
+nss_map_attribute homeDirectory msSFU30HomeDirectory
+nss_map_attribute uniqueMember msSFU30PosixMember
+nss_map_attribute cn cn&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Securely copy the file created using the &lt;code&gt;ktpass.exe&lt;/code&gt; utility above to the Linux server in question, placing it in the &lt;code&gt;/etc&lt;/code&gt; directory as &lt;code&gt;krb5.keytab&lt;/code&gt;. (SFTP or SCP are excellent candidates for this.)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Configure PAM (this varies according to Linux distributions) to use pam_krb5 for authentication. Many modern distributions use a stacking mechanism whereby one file can be modified and those changes will applied to all the various PAM-aware services. For example, in Red Hat-based distributions, the system-auth file is referenced by most other PAM-aware services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;/etc/nsswitch.conf&lt;/code&gt; file to include &amp;ldquo;ldap&amp;rdquo; as a lookup source for passwd, shadow, and groups.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That should be it. Once you do that, you should be able to use &lt;code&gt;kinit&lt;/code&gt; from a Linux shell prompt (for example, &lt;code&gt;kinit aduser&lt;/code&gt;) and generate a valid Kerberos ticket for the specified Active Directory account.&lt;/p&gt;
+
+&lt;p&gt;At this point, any PAM-aware service that is configured to use the stacked system file (such as the system-auth configuration on Red Hat-based distributions) will use Active Directory for authentication. Note, however, that unless you also add the &lt;code&gt;pam_mkhomedir.so&lt;/code&gt; module in the PAM configuration, home directories will have to be created manually for any Active Directory account that may log on to that server. (I generally recommend the use of &lt;code&gt;pam_mkhomedir.so&lt;/code&gt; in this situation.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Open Enough for Massachusetts</title>
+          <link>http://lowescott.github.io/2005/11/29/open-enough-for-massachusetts/</link>
+          <pubDate>Tue, 29 Nov 2005 16:45:01 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/open-enough-for-massachusetts/</guid>
+          <description>&lt;p&gt;Not suprisingly, Microsoft&amp;rsquo;s moves to &amp;ldquo;open&amp;rdquo; up its XML-based file formats for current and future versions of Microsoft Office have swayed the State of Massachusetts back to its side again. Get the details &lt;a href=&#34;http://www.windowsitpro.com/windowspaulthurrott/Article/ArticleID/48590/windowspaulthurrott_48590.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Microsoft Promises Not to Sue</title>
+          <link>http://lowescott.github.io/2005/11/29/microsoft-promises-not-to-sue/</link>
+          <pubDate>Tue, 29 Nov 2005 16:24:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/microsoft-promises-not-to-sue/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; recently made a move to &amp;ldquo;open&amp;rdquo; up its XML-based file formats for Microsoft Office 2003 and the forthcoming Office 12. These file formats were offered to ECMA International for consideration as a formal open standard. However, the &amp;ldquo;license&amp;rdquo; for these file formats was merely a promise not to sue people violating its patents on the use of the file formats. &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1894039,00.asp&#34;&gt;Read more here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also see &lt;a href=&#34;http://www.eweek.com/article2/0,1895,1892757,00.asp&#34;&gt;these comments&lt;/a&gt; from a legal analyst regarding Microsoft&amp;rsquo;s &lt;a href=&#34;http://www.microsoft.com/office/xml/covenant.mspx&#34;&gt;Patent Protection Covenant&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Personally, a promise &amp;ldquo;not to sue&amp;rdquo; from any large corporation&amp;ndash;not just Microsoft&amp;ndash;wouldn&amp;rsquo;t be good enough for me were I a developer. Somehow, I don&amp;rsquo;t think that many developers are going to feel completely comfortable incorporating Office &lt;sup&gt;2003&lt;/sup&gt;&amp;frasl;&lt;sub&gt;12&lt;/sub&gt; XML-based file formats into their applications based solely on the Patent Protection Covenant. What happens when (not if) the covenant changes?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Microsoft&#39;s Counter-Move</title>
+          <link>http://lowescott.github.io/2005/11/21/microsofts-counter-move/</link>
+          <pubDate>Mon, 21 Nov 2005 23:16:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/21/microsofts-counter-move/</guid>
+          <description>&lt;p&gt;The rallying cry around OpenDocument prompted Microsoft to make its counter-move. As fully expected, Microsoft is trying to &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1891829,00.asp&#34;&gt;create a standard&lt;/a&gt; based on Microsoft&amp;rsquo;s own (until now) proprietary XML formats. Please tell me you saw this coming, right?&lt;/p&gt;
+
+&lt;p&gt;With companies from &lt;a href=&#34;http://www.novell.com/&#34;&gt;Novell&lt;/a&gt; to &lt;a href=&#34;http://www.corel.com/&#34;&gt;Corel&lt;/a&gt; &lt;a href=&#34;http://www.eweek.com/article2/0,1895,1877815,00.asp&#34;&gt;standing in support&lt;/a&gt; of the OpenDocument format, a new coalition forming in support of the format, and governments agencies such as the State of Massachusetts requiring the use of file formats such as PDF and OpenDocument, clearly Microsoft was worried. Otherwise, why try to create an alternate standard of your own creation? Why not just join the existing standards? Many are also saying that Microsoft&amp;rsquo;s decision to include PDF support in the next version of Office is another attempt to keep from being shut out. After all, Office is a major cash cow for Microsoft, so the company will do whatever it can to provent a loss of marketshare (and revenue as a result).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Zero-Day IE Exploit</title>
+          <link>http://lowescott.github.io/2005/11/21/zero-day-ie-exploit/</link>
+          <pubDate>Mon, 21 Nov 2005 23:02:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/21/zero-day-ie-exploit/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1891749,00.asp&#34;&gt;This article&lt;/a&gt; discusses a newly-discovered zero-day exploit for Internet Explorer, including IE on fully-patched Windows XP SP2 systems. (Apparently, only Windows Server 2003 with the Enhanced Security Configuration is immune.)&lt;/p&gt;
+
+&lt;p&gt;No patch has been released, and no security advisory had been posted at the time this was written. A Microsoft security advisory was expected at any moment.&lt;/p&gt;
+
+&lt;p&gt;In the meantime, switch to &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt;. No, really&amp;mdash;I&amp;rsquo;m serious.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; Microsoft has posted a &lt;a href=&#34;http://www.microsoft.com/technet/security/advisory/911302.mspx&#34;&gt;security advisory&lt;/a&gt; about this issue.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Funky Active Directory Issue</title>
+          <link>http://lowescott.github.io/2005/08/16/funky-active-directory-issue/</link>
+          <pubDate>Tue, 16 Aug 2005 23:17:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/16/funky-active-directory-issue/</guid>
+          <description>&lt;p&gt;I came across a funky Active Directory issue today. User objects stored in an OU on which permissions had been assigned were &amp;ldquo;losing&amp;rdquo; their permissions and their inheritance from the parent OU. For example, if the group &amp;ldquo;Support Team&amp;rdquo; had been granted a set of permissions on the OU &amp;ldquo;Sales&amp;rdquo;, then the user object &amp;ldquo;Bob Jones&amp;rdquo; stored in that OU would lose those permissions regularly. Even when the permissions were reassigned, they would disappear again.&lt;/p&gt;
+
+&lt;p&gt;It turns out that if the user object is a member, directly or indirectly, of a &amp;ldquo;protected group&amp;rdquo; (such as Server Operators, Backup Operators, or Administrators), then Active Directory automatically removes any inherited permissions, resets those permissions to the default, and turns off inheritance for those objects. The idea is to prevent possible elevation of privileges. This behavior is described in &lt;a href=&#34;http://support.microsoft.com/default.aspx?scid=kb;en-us;817433&#34;&gt;this KB article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The fix? Well, you can muck around in Active Directory and play with the adminSDHolder object, or you can just not worry about delegations on those user objects, or you can remove those user objects from the protected group in question. In my particular case, the user objects needed to be taken out of the protected group anyway, so that was a natural fit.&lt;/p&gt;
+
+&lt;p&gt;Keep this in mind when planning AD delegations and the placement of accounts that will be members of a protected group.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Follow Up on Access-Based Enumeration</title>
+          <link>http://lowescott.github.io/2005/08/11/follow-up-on-access-based-enumeration/</link>
+          <pubDate>Thu, 11 Aug 2005 21:53:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/11/follow-up-on-access-based-enumeration/</guid>
+          <description>&lt;p&gt;As a follow-up to &lt;a href=&#34;http://blog.scottlowe.org/2005/07/08/access-based-enumeration/&#34;&gt;this posting&lt;/a&gt; on &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/techinfo/overview/abe.mspx&#34;&gt;access-based enumeration&lt;/a&gt;, I wanted to post information from some testing I performed earlier this week. I installed access-based enumeration (ABE) on a server running &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt; SP1 (the only version of Windows on which it is supported). It does what it advertises; when a non-administrative user connects to a shared folder on which ABE is enabled, they see only those folders to which he or she has permission.&lt;/p&gt;
+
+&lt;p&gt;There are some limitations. Administrative users are not affected in any way. ABE only works for network access; users accessing the filesystem locally are not affected. This makes ABE unsuitable for use on terminal servers. Additionally, ABE is enabled or disabled on a share-by-share basis, and while it is possible to turn ABE on or off for all shares at a time there is no provision for setting ABE on by default for new shares. Finally, ABE can negatively impact performance, especially for shared folders with large numbers of files.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m kind of split on this one. On the one hand, it&amp;rsquo;s really good functionality that will dramatically change the way system administrators approach Windows-based file servers. On the other hand, the potential performance drawbacks of ABE are concerning.&lt;/p&gt;
+
+&lt;p&gt;If you are running file servers on Windows Server 2003 with Service Pack 1 installed, you owe it to yourself to at least evaluate ABE. You may find that it doesn&amp;rsquo;t work for your network, but then again you may find that you don&amp;rsquo;t want to go on without the added functionality that ABE brings to the table.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>VPN Integration Done</title>
+          <link>http://lowescott.github.io/2005/07/27/vpn-integration-done/</link>
+          <pubDate>Wed, 27 Jul 2005 00:23:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/27/vpn-integration-done/</guid>
+          <description>&lt;p&gt;That was easier than I expected. I managed to get my hardware firewall to authenticate VPN connections against Active Directory via &lt;a href=&#34;http://en.wikipedia.org/wiki/RADIUS&#34;&gt;RADIUS&lt;/a&gt; (using Internet Authentication Service, or IAS) without a great deal of effort. In fact, it was almost easy. If I ever get caught up on documentation, I&amp;rsquo;ll post some details on how to do it on the &lt;a href=&#34;http://www.mercurionsystems.com/index.html&#34;&gt;Mercurion Systems&lt;/a&gt; web site.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Next Integration Task(s)</title>
+          <link>http://lowescott.github.io/2005/07/24/next-integration-tasks/</link>
+          <pubDate>Sun, 24 Jul 2005 23:58:13 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/24/next-integration-tasks/</guid>
+          <description>&lt;p&gt;With the majority of my Linux servers now authenticating against Active Directory, I&amp;rsquo;m now able to broaden my integration focus and work on some related tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;SASL2/PAM:&lt;/em&gt; I still have one server, running SASL2, that has not been switched over to the standard Kerberos/LDAP configuration. I&amp;rsquo;ll need to research the interplay between SASL2 and PAM before I tackle this one.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;OpenBSD Authentication:&lt;/em&gt; I haven&amp;rsquo;t touched any of the OpenBSD servers yet for Kerberos/LDAP authentication.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;VPN Authentication via RADIUS:&lt;/em&gt; I&amp;rsquo;d like to use RADIUS to handle some VPN authentication against Active Directory as well. I don&amp;rsquo;t anticipate this should be too terribly difficult, but it is something that is rather new to me.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Apache Authentication via Kerberos to AD:&lt;/em&gt; One of the documents that helped me in getting the pam_krb5 stuff working was for &lt;a href=&#34;http://www.grolmsnet.de/kerbtut/&#34;&gt;using mod_auth_kerb with Apache&lt;/a&gt; (more information also posted &lt;a href=&#34;http://sl.mvps.org/docs/LinuxApacheKerberosAD.htm&#34;&gt;here&lt;/a&gt; as well). I&amp;rsquo;d like to deploy this for some select areas of our intranet and extranet sites, to add an additional layer of security on top of what is already present.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, this is in addition to trying to establish an internal news server running INNd (and then migrating content from Exchange Server 2003 into this news server) and working on Squid log analysis tools. I&amp;rsquo;ll probably start investigating Squid authentication options as well, since that would be very helpful to my customers (especially if I can get the authentication to be transparent, or very nearly so). On top of that I have duties in church, work as a manager overseeing employees, and things to do as a dad. Whew! I often wonder if I am just not efficient with managing my time, or if I just have too much to do.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Wrap-Up</title>
+          <link>http://lowescott.github.io/2005/07/22/linux-ad-integration-wrap-up/</link>
+          <pubDate>Fri, 22 Jul 2005 00:19:08 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/22/linux-ad-integration-wrap-up/</guid>
+          <description>&lt;p&gt;Well, my Linux-AD integration task is pretty much complete. I have three Linux servers authenticating via &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; to Active Directory, and using LDAP for name/group resolution. Only one Linux server remains; I need to do some research on how &lt;a href=&#34;http://asg.web.cmu.edu/sasl/&#34;&gt;SASL&lt;/a&gt; with interact with PAM before I can switch over that particular server. My &lt;a href=&#34;http://www.openbsd.org&#34;&gt;OpenBSD&lt;/a&gt; server I&amp;rsquo;m going to leave alone for now; perhaps later I&amp;rsquo;ll get it integrated as well.&lt;/p&gt;
+
+&lt;p&gt;Next, I think I&amp;rsquo;m going to see what is involved in using RADIUS to authenticate VPN tunnels on my hardware firewall.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Rootkit Prevention Coming to Windows</title>
+          <link>http://lowescott.github.io/2005/07/19/rootkit-prevention-coming-to-windows/</link>
+          <pubDate>Tue, 19 Jul 2005 15:17:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/19/rootkit-prevention-coming-to-windows/</guid>
+          <description>&lt;p&gt;I &lt;a href=&#34;http://blog.scottlowe.org/2005/06/21/dangerous-stuff/&#34;&gt;blogged&lt;/a&gt; a while back about concerns that &lt;a href=&#34;http://en.wikipedia.org/wiki/Spyware&#34;&gt;spyware&lt;/a&gt; makers were adding &lt;a href=&#34;http://en.wikipedia.org/wiki/Root_kit&#34;&gt;rootkit&lt;/a&gt; functionality to their products to make them harder to detect and harder to remove. It seems that trend has gotten the attention of &lt;a href=&#34;http://www.microsoft.com&#34;&gt;Microsoft&lt;/a&gt;. (About time, I say.)&lt;/p&gt;
+
+&lt;p&gt;Microsoft&amp;rsquo;s &lt;a href=&#34;http://www.microsoft.com/security/malwareremove/default.mspx&#34;&gt;Malicious Software Removal Tool&lt;/a&gt; has been enhanced with the ability to find and remove rootkit-like trojans and backdoor applications. In addition, Microsoft has indicated that it will likely &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1838294,00.asp&#34;&gt;incorporate anti-rootkit functionality&lt;/a&gt; into future versions of its &lt;a href=&#34;http://www.microsoft.com/athome/security/spyware/software/default.mspx&#34;&gt;AntiSpyware&lt;/a&gt; product, acquired with Giant Software and still in beta.&lt;/p&gt;
+
+&lt;p&gt;Rootkits have been reported on virtually all major operating systems, so we can&amp;rsquo;t really knock Microsoft for allowing rootkits to infect Windows. We can, however, insist that as long as Microsoft makes it possible for the operating system to be compromised in such a significant way through the use of a web browser, then such stuff as &lt;a href=&#34;http://research.microsoft.com/rootkit/&#34;&gt;Strider Ghostbuster&lt;/a&gt; (Microsoft&amp;rsquo;s anti-rootkit technology) should continue to be offered to Windows users at no charge.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Computer Accounts With ktpass.exe</title>
+          <link>http://lowescott.github.io/2005/07/19/computer-accounts-with-ktpassexe/</link>
+          <pubDate>Tue, 19 Jul 2005 13:08:06 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/19/computer-accounts-with-ktpassexe/</guid>
+          <description>&lt;p&gt;As a quick follow-up to my previous posting, testing with Kerberos authentication from a Linux server with pam_krb5 was successful. Instead of using a user account in Active Directory to generate the keytab, I was able to use a computer account and just had to modify the ktpass.exe command line syntax slightly (see my previous post).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Minor Linux-AD Hiccup Fixed (Hopefully)</title>
+          <link>http://lowescott.github.io/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/</link>
+          <pubDate>Mon, 18 Jul 2005 00:18:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/</guid>
+          <description>&lt;p&gt;I think I have resolved one minor Linux-AD integration hiccup. In setting up the Kerberos authentication, various instructions I had found (including some from Microsoft) indicated I needed to create a &lt;em&gt;user&lt;/em&gt; account for the Linux servers, then use &lt;code&gt;ktpass&lt;/code&gt; to generate the Kerberos keytab. This works, but being the stickler for detail that I am, I really wanted to use a computer account instead of a user account.&lt;/p&gt;
+
+&lt;p&gt;After fiddling with it for a while, I finally managed to make it work. The &lt;code&gt;ktpass&lt;/code&gt; command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$  
+-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL  
+-out filename
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The missing piece, for me, was specifying &lt;code&gt;DOMAIN\name$&lt;/code&gt; for the mapuser parameter. Without it, the command kept generating an error.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know for sure that this will work, but I will be testing this within the next day or so to see how it goes.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Success!</title>
+          <link>http://lowescott.github.io/2005/07/17/linux-ad-integration-success/</link>
+          <pubDate>Sun, 17 Jul 2005 22:31:52 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/17/linux-ad-integration-success/</guid>
+          <description>&lt;p&gt;Well, limited success, anyway. I have managed to get Linux authentication to occur via &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; against Active Directory. LDAP is used to lookup the user and group information. Using pam_krb5, authentication occurs via Kerberos to an Active Directory DC for any PAM-aware application. I&amp;rsquo;m sure that I&amp;rsquo;ll find some hiccups along the way, but so far things look good. I only have 1 server configured this way for now (a non-essential server), but after some additional testing I&amp;rsquo;ll expand this to the remainder of my Linux servers.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll post more details here and/or on the &lt;a href=&#34;http://www.mercurionsystems.com/index.html&#34;&gt;Mercurion Systems&lt;/a&gt; web site once all the bugs have been worked out. My thanks go out to the many, many individuals who posted information on using Kerberos and LDAP with Active Directory; this would not have been possible without their assistance.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Badmail and Exchange 2003</title>
+          <link>http://lowescott.github.io/2005/07/16/badmail-and-exchange-2003/</link>
+          <pubDate>Sat, 16 Jul 2005 21:34:22 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/16/badmail-and-exchange-2003/</guid>
+          <description>&lt;p&gt;If you are planning an in-place upgrade of your server running Exchange 2000 to Exchange Server 2003, beware of the Badmail folder. Apparently, during the Exchange Server 2003 setup process, the setup application tries to go back and stamp ACLs (access control lists) on all the objects in the installation directory. This, by default, includes the Badmail directory. If your Badmail directory contains lots of items (which, in an Exchange 2000 installation, it probably does), then this can cause the Setup process to appear to be hung. Microsoft has published &lt;a href=&#34;http://support.microsoft.com/default.aspx?scid=kb;en-us;822578&#34;&gt;this KB article&lt;/a&gt; discussing the issue and the resolution.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, in Exchange Server 2003 SP1, Microsoft has changed the behavior of Exchange to use the Badmail folder only if explicitly configured to do so (see &lt;a href=&#34;http://support.microsoft.com/default.aspx?scid=kb;en-us;884068&#34;&gt;this KB article&lt;/a&gt;). No more monitoring the Badmail folder!&lt;/p&gt;
+
+&lt;p&gt;In addition, for those networks that have not yet deployed Exchange Server 2003 SP1, Microsoft has released the &lt;a href=&#34;http://support.microsoft.com/default.aspx?scid=kb;en-us;867642&#34;&gt;BadMailAdmin tool&lt;/a&gt;. I&amp;rsquo;ve tested this, and it works as advertised.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Direction</title>
+          <link>http://lowescott.github.io/2005/07/13/linux-ad-integration-direction/</link>
+          <pubDate>Wed, 13 Jul 2005 17:09:06 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/linux-ad-integration-direction/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;ve spent some time over the last few days researching some of the various ways in which to allow users to login to Linux servers using their credentials from Active Directory. Along the way, I&amp;rsquo;ve found some useful articles; notably, &lt;a href=&#34;http://www.networkcomputing.com/1305/1305ws1.html&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;http://www.timkennedy.net/docs/Linux+Active_Directory.html&#34;&gt;here&lt;/a&gt;, and &lt;a href=&#34;http://www.newsforge.com/article.pl?sid=04/12/09/2258243&#34;&gt;here&lt;/a&gt;. These are also bookmarked in &lt;a href=&#34;http://del.icio.us/slowe&#34;&gt;my del.icio.us&lt;/a&gt; bookmark list under the &lt;a href=&#34;http://del.icio.us/slowe/Linux&#34;&gt;Linux&lt;/a&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;It looks as if the best solution involves the use of &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; for authentication and LDAP for user/group name resolution. As fate would have it, as soon as I decide to use Kerberos, some &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1836591,00.asp&#34;&gt;new security holes&lt;/a&gt; are discovered. At least these security holes don&amp;rsquo;t involve Microsoft&amp;rsquo;s implementation of Kerberos, but they will affect the Linux Kerberos clients. Hopefully, patches for the affected portions will be released reasonably quickly.&lt;/p&gt;
+
+&lt;p&gt;As this project evolves, I&amp;rsquo;ll continue to post more information here. A final &amp;ldquo;how to&amp;rdquo; will likely also be posted on the &lt;a href=&#34;http://www.mercurionsystems.com/&#34;&gt;Mercurion Systems web site&lt;/a&gt; as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>It&#39;s Patch Tuesday Again</title>
+          <link>http://lowescott.github.io/2005/07/13/its-patch-tuesday-again/</link>
+          <pubDate>Wed, 13 Jul 2005 16:03:42 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/its-patch-tuesday-again/</guid>
+          <description>&lt;p&gt;I suppose since I didn&amp;rsquo;t post this until Wednesday, the title isn&amp;rsquo;t exactly correct, is it?&lt;/p&gt;
+
+&lt;p&gt;In any event, &lt;a href=&#34;http://www.microsoft.com&#34;&gt;Microsoft&lt;/a&gt; has released the &lt;a href=&#34;http://www.microsoft.com/technet/security/bulletin/ms05-jul.mspx&#34;&gt;security bulletin&lt;/a&gt; for July, which contains 3 critical updates (updates rated &amp;ldquo;critical&amp;rdquo; are considered the most severe by Microsoft). These updates patch security vulnerabilities in Microsoft Word, Internet Explorer, and Windows (including Windows Server 2003 SP1 and Windows XP SP2).&lt;/p&gt;
+
+&lt;p&gt;Microsoft had previously released a &lt;a href=&#34;http://www.microsoft.com/technet/security/advisory/903144.mspx&#34;&gt;workaround&lt;/a&gt; for the Internet Explorer flaw (note that this page now directs users to the location of the update rather than the earlier workaround).&lt;/p&gt;
+
+&lt;p&gt;Additional information on the patches can be found &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1836227,00.asp&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Firefox Updates and Roadmap</title>
+          <link>http://lowescott.github.io/2005/07/13/firefox-updates-and-roadmap/</link>
+          <pubDate>Wed, 13 Jul 2005 15:51:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/firefox-updates-and-roadmap/</guid>
+          <description>&lt;p&gt;Mozilla released &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt; 1.0.5, which patches a number of security vulnerabilities. You can get more information on the release &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1836310,00.asp&#34;&gt;here&lt;/a&gt; or by visiting the &lt;a href=&#34;http://www.mozilla.org&#34;&gt;Mozilla.org&lt;/a&gt; web site.&lt;/p&gt;
+
+&lt;p&gt;In addition, &lt;a href=&#34;http://www.eweek.com/article2/0,1895,1821168,00.asp&#34;&gt;more information&lt;/a&gt; has been revealed about Firefox 1.1, the next version of the open source web browser. An alpha version of Firefox 1.1 could be ready within just a few days.&lt;/p&gt;
+
+&lt;p&gt;If Mozilla can continue to innovate with Firefox and address my two primary concerns&amp;ndash;ease of deployment and distributing security updates&amp;ndash;then they will continue to steal market share away from Internet Explorer. If nothing else, Mozilla will at least force Microsoft to be competitive again, and that is a success in and of itself.&lt;/p&gt;
+
+&lt;p&gt;Mozilla is also updating &lt;a href=&#34;http://www.mozilla.org/products/thunderbird&#34;&gt;Thunderbird&lt;/a&gt;, the companion e-mail client to Firefox, and that update is expected to be available soon as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>The Ongoing Microsoft-Claria Saga</title>
+          <link>http://lowescott.github.io/2005/07/11/the-ongoing-microsoft-claria-saga/</link>
+          <pubDate>Mon, 11 Jul 2005 23:12:08 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/11/the-ongoing-microsoft-claria-saga/</guid>
+          <description>&lt;p&gt;Apparently, Microsoft&amp;rsquo;s &lt;a href=&#34;http://www.microsoft.com/athome/security/spyware/software/claria_letter.mspx&#34;&gt;public statement&lt;/a&gt; regarding the downgrade of Claria software in their anti-spyware product (which now recommends that users ignore the Claria software instead of remove it) isn&amp;rsquo;t sitting well.&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1835770,00.asp&#34;&gt;this article&lt;/a&gt; at &lt;em&gt;eWeek&lt;/em&gt;, a number of spyware experts call Microsoft&amp;rsquo;s explanation less than satisfactory. &lt;a href=&#34;http://www.edbott.com/weblog/archives/000844.html&#34;&gt;Ed Bott&lt;/a&gt;, &lt;a href=&#34;http://www.benedelman.org/news/063005-1.html&#34;&gt;Ben Edelman&lt;/a&gt;, and others have all commented on Microsoft&amp;rsquo;s explanation. The overwhelming consensus is that users don&amp;rsquo;t trust Microsoft to be honest. And why should they? Unfortunately, Microsoft has placed itself in an unenviable position, and only by being completely squeaky clean and transparent will it be able to avoid a backlash over actions such as this.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>A New Effort</title>
+          <link>http://lowescott.github.io/2005/07/09/a-new-effort/</link>
+          <pubDate>Sat, 09 Jul 2005 23:09:53 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/09/a-new-effort/</guid>
+          <description>&lt;p&gt;I suppose I should be finishing one project before starting another, but I can&amp;rsquo;t help myself. I&amp;rsquo;m going to take on the project of integrating my Linux systems with Microsoft Active Directory, so that a single Active Directory account can be used to authenticate to both Windows-based systems as well as Linux-based systems on our network.&lt;/p&gt;
+
+&lt;p&gt;This new effort comes while I have yet to finish my &lt;a href=&#34;http://blog.scottlowe.org/2005/05/13/miscellaneous-projects/&#34;&gt;projects&lt;/a&gt; on Squid log analysis tools or an internal news server running INN. At least I did get &lt;a href=&#34;http://blog.scottlowe.org/2005/05/15/perdition-working-now/&#34;&gt;Perdition working&lt;/a&gt; as expected, and figured out how to get &lt;a href=&#34;http://blog.scottlowe.org/2005/07/02/starttls-and-imap-in-mailapp/&#34;&gt;Mail.app to use STARTTLS with IMAP4&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A couple of the resources I&amp;rsquo;m using for this effort are bookmarked in my &lt;a href=&#34;http://del.icio.us/slowe/&#34;&gt;del.icio.us&lt;/a&gt; bookmark list. I&amp;rsquo;ll be adding more there as I find them.&lt;/p&gt;
+
+&lt;p&gt;I also have yet to decide if I will use Samba/Winbind or LDAP to handle the cross-platform authentication. I&amp;rsquo;d love to hear any comments or feedback in this regard.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Access-Based Enumeration</title>
+          <link>http://lowescott.github.io/2005/07/08/access-based-enumeration/</link>
+          <pubDate>Fri, 08 Jul 2005 23:29:04 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/08/access-based-enumeration/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.microsoft.com/windowsserver2003/&#34;&gt;Windows Server 2003&lt;/a&gt; has finally caught up with &lt;a href=&#34;http://www.novell.com/netware/&#34;&gt;Novell NetWare&lt;/a&gt; in one key area, and that is in the enumeration of files and folders. With &lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=04A563D9-78D9-4342-A485-B030AC442084&amp;amp;displaylang=en&#34;&gt;access-based enumeration&lt;/a&gt;, Windows Server 2003 now will display only those files and folders to which the user has permission. If no permission is given, the file or folder is not displayed. This is, in my opinion, a &lt;em&gt;major&lt;/em&gt; improvement in Windows&amp;rsquo; security.&lt;/p&gt;
+
+&lt;p&gt;I plan to give this functionality a swing on my own servers within the next few days. I&amp;rsquo;ll post additional details here after my tests.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Enough Bundling Already!</title>
+          <link>http://lowescott.github.io/2005/07/07/enough-bundling-already/</link>
+          <pubDate>Thu, 07 Jul 2005 18:09:10 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/07/enough-bundling-already/</guid>
+          <description>&lt;p&gt;It&amp;rsquo;s bad enough that &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; bundles Internet Explorer and Windows Media Player with every copy of Windows, and then integrates them so deeply that a flaw in one of these applications can compromise the entire system. But bundling adware/spyware?&lt;/p&gt;
+
+&lt;p&gt;First, there was &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1833611,00.asp&#34;&gt;this rumor&lt;/a&gt; about Microsoft acquiring Claria, the company that distributes the Gator ad-serving software. It was just a rumor, and one that not very many people took seriously. But now, there&amp;rsquo;s &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1834607,00.asp&#34;&gt;this news&lt;/a&gt; that Microsoft&amp;rsquo;s anti-spyware program has lowered the rating on Claria&amp;rsquo;s software and changed the default action to &amp;ldquo;Ignore.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;So what does this mean? In reality, nothing. It may have been just an oversight, or it may be that Claria has reached some sort of monetary agreement with Microsoft. In the meantime, I would recommend (as I have in the past) using multiple anti-spyware applications to protect yourself.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Open Source Office Alternative</title>
+          <link>http://lowescott.github.io/2005/07/03/open-source-office-alternative/</link>
+          <pubDate>Sun, 03 Jul 2005 22:57:03 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/03/open-source-office-alternative/</guid>
+          <description>&lt;p&gt;Those individuals searching for an open source alternative to &lt;a href=&#34;http://www.microsoft.com/office/&#34;&gt;Microsoft Office&lt;/a&gt; (&lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; isn&amp;rsquo;t the only Microsoft monopoly, you know) on &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; should take note of NeoOffice/J 1.1, released a few weeks ago. &lt;a href=&#34;http://www.macnn.com/articles/05/06/21/neooffice.j.1.1.released/&#34;&gt;This article&lt;/a&gt; on &lt;a href=&#34;http://www.macnn.com/&#34;&gt;MacNN&lt;/a&gt; alerted me to the release a while ago, but I&amp;rsquo;ve only just now gotten around to mentioning it here.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve made no secret of the fact that I try not to be partial in any way with regards to technology solutions. If NeoOffice/J fits your needs, perfect. If not, use Microsoft Office. It&amp;rsquo;s just nice to see that we actually &lt;em&gt;have&lt;/em&gt; some choices, however limited they may be, when it comes to choosing office productivity software.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m also hoping that the approval of the XML-based OpenOffice 2.0 file formats by &lt;a href=&#34;http://www.oasis-open.org/&#34;&gt;OASIS&lt;/a&gt; (see &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1819239,00.asp?&#34;&gt;this article&lt;/a&gt;) will help further spur more interoperability between office productivity applications. Now, if we could just get Microsoft on board with this vendor-neutral format&amp;hellip;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>STARTTLS and IMAP in Mail.app</title>
+          <link>http://lowescott.github.io/2005/07/02/starttls-and-imap-in-mailapp/</link>
+          <pubDate>Sat, 02 Jul 2005 20:47:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/02/starttls-and-imap-in-mailapp/</guid>
+          <description>&lt;p&gt;I &lt;a href=&#34;http://blog.scottlowe.org/2005/05/14/nonstandard-implementations/&#34;&gt;blogged&lt;/a&gt; earlier about my frustration with the &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; Mail.app mail client and its apparent lack of STARTTLS support with IMAP4. Well, on a whim today I decided to take this issue back up again.&lt;/p&gt;
+
+&lt;p&gt;Since &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Microsoft Exchange&lt;/a&gt; does not support STARTTLS, I had to use &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt; as an IMAP proxy in front of Exchange. Earlier attempts to get Mail.app to do STARTTLS had failed (not sure why), but today I decided to try changing the IMAP port from 993 (the default when you check the &amp;ldquo;Use SSL&amp;rdquo; box) to 143 (the standard IMAP4 port). Oddly enough, it seemed to work!&lt;/p&gt;
+
+&lt;p&gt;Curious to find out for sure, I trotted out tcpdump on the mail gateway running Perdition to capture traffic to/from Mail.app and to/from the back end mail server. The traffic to/from the back end mail server was transmitted in the clear (I used plain text messages so that I could see the content), but the traffic to/from Mail.app was not readable. I also saw Mail.app issue a CAPABILITY command, then issue a STARTTLS command. Bingo!&lt;/p&gt;
+
+&lt;p&gt;So, it appears that Mail.app does indeed support STARTTLS for IMAP, but only if you set the port number back to 143 after checking the &amp;ldquo;Use SSL&amp;rdquo; checkbox.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Watch Out, IE Users</title>
+          <link>http://lowescott.github.io/2005/07/01/watch-out-ie-users/</link>
+          <pubDate>Fri, 01 Jul 2005 17:32:09 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/01/watch-out-ie-users/</guid>
+          <description>&lt;p&gt;A couple of articles are highlighting a recently uncovered security flaw in Microsoft Internet Explorer&amp;ndash;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1833697,00.asp&#34;&gt;this article&lt;/a&gt; from &lt;em&gt;eWeek&lt;/em&gt; and &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,102924,00.html&#34;&gt;this article&lt;/a&gt; from &lt;em&gt;ComputerWorld&lt;/em&gt;, both of which reference this &lt;a href=&#34;http://www.microsoft.com/technet/security/advisory/903144.mspx&#34;&gt;security advisory&lt;/a&gt; from &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The fix is to set the Security Level for the Internet Zone to High, which disables the functionality required for the exploit to work. Unfortunately, it also disables a lot of other things that non-malicious sites use, so this workaround will affect your ordinary browsing experience.&lt;/p&gt;
+
+&lt;p&gt;My recommendation is to switch to &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Mozilla Firefox&lt;/a&gt;. While Firefox was shown to be vulnerable to a &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1830025,00.asp&#34;&gt;recent spoofing flaw&lt;/a&gt; (this flaw also affected IE, Safari, Camino, etc.), it&amp;rsquo;s still better than IE&amp;rsquo;s security record. And, yes, for those of you out there who are yelling at your computer screens right now: I know that you probably believe that Firefox is only more secure because there are fewer people using it. Perhaps that&amp;rsquo;s true, but the end result is that it&amp;rsquo;s more secure. Isn&amp;rsquo;t that what we are seeking to achieve?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>The Next Big Worm?</title>
+          <link>http://lowescott.github.io/2005/06/24/the-next-big-worm/</link>
+          <pubDate>Fri, 24 Jun 2005 22:29:09 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/24/the-next-big-worm/</guid>
+          <description>&lt;p&gt;Everyone remember Blaster? There are concerns that the next big Internet worm is about to surface, based upon a vulnerability revealed by Microsoft in the Windows implementation of Server Message Block, or SMB. Get the details on that patch &lt;a href=&#34;http://www.microsoft.com/technet/security/Bulletin/MS05-011.mspx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Several articles have been posted recently indicating that traffic patterns have been observed that might indicate an exploit of that vulnerability. &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,102747,00.html&#34;&gt;This article&lt;/a&gt; indicates that some experts believe the traffic patterns are indicative of a new exploit, but others are not concerned.&lt;/p&gt;
+
+&lt;p&gt;More recent than even that article is &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1831325,00.asp&#34;&gt;this posting&lt;/a&gt;, revealing that an exploit for MS05-011 has actually been discovered and made available on the Internet.&lt;/p&gt;
+
+&lt;p&gt;So is there anything you can do to protect yourself? Most firewalls (network-based and host-based) already block TCP port 445, the port used by SMB. If you know your organization allows SMB across the firewall, then you should be concerned. Make sure your systems are patched properly, and keep your anti-virus up to date. That&amp;rsquo;s about all you can do: just stay vigilant.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Why I Use a Mac</title>
+          <link>http://lowescott.github.io/2005/06/20/why-i-use-a-mac/</link>
+          <pubDate>Mon, 20 Jun 2005 21:21:10 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/20/why-i-use-a-mac/</guid>
+          <description>&lt;p&gt;A fair number of people have asked me why I use an &lt;a href=&#34;http://www.apple.com/hardware/&#34;&gt;Apple Mac&lt;/a&gt; when my business centers primarily around &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; products such as &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/&#34;&gt;Windows Server 2003&lt;/a&gt;, Active Directory, and &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange&lt;/a&gt;? That&amp;rsquo;s a reasonable question.&lt;/p&gt;
+
+&lt;p&gt;My computer is simply a tool to get my job done. About two years ago, I started to evaluate the tasks that I tackle on a regular basis as part of supporting my customers&amp;rsquo; networks. In reviewing those tasks, it become evident to me that using Windows myself was not a prerequisite for designing, installing, and supporting Windows-based networks. I could run a different OS&amp;ndash;like Linux or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;&amp;ndash;and still be perfectly able to get my job done. In fact, given that I wanted to increase the amount of work that my company did with open source software such as Linux, &lt;a href=&#34;http://www.apache.org/&#34;&gt;Apache&lt;/a&gt;, &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt;, and SpamAssassin, something other than Windows might actually make that &lt;em&gt;easier&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I then set out to compare the alternatives. After comparing Linux and Mac OS X, I found that Mac OS X had the best fit for &lt;em&gt;my&lt;/em&gt; particular needs. I loved the mix of open source technologies (the BSD underpinnings and various other open source projects) and closed software (the ultrasmooth Aqua interface). I loved the hardware. And, most importantly, I found that there were applications available for Mac OS X to help me get my job done. (See my blog posting about &lt;a href=&#34;http://blog.scottlowe.org/2005/06/20/preferred-mac-os-x-applications/&#34;&gt;Preferred Mac OS X Applications&lt;/a&gt;.) The fact that many of the applications I needed for my job were open source applications was a bonus.&lt;/p&gt;
+
+&lt;p&gt;Is Mac OS X right for you? I don&amp;rsquo;t know; that depends upon what you do at your job. I believe that Mac OS X is a great fit for more people than Windows, but I also believe that people must use what is most ideally suited for their work. If that is Windows; so be it. If that is Linux, then great. And if, like me, it is Mac OS X, then fantastic. Each of these operating systems have their own strengths and weaknesses, and it is up to each user to determine which OS is right for them.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Perdition Working Now</title>
+          <link>http://lowescott.github.io/2005/05/15/perdition-working-now/</link>
+          <pubDate>Sun, 15 May 2005 16:31:02 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/05/15/perdition-working-now/</guid>
+          <description>&lt;p&gt;I finally managed to get &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt; working. Still unable to confirm if &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&amp;rsquo;s&lt;/a&gt; Mail.app supports STARTTLS (my experience thus far says No), I had to resort to using &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; to wrap IMAP inside an SSL tunnel, then forward the IMAP traffic to Perdition on the same host. The Perdition proxy then passes the traffic to the back-end mail server. It&amp;rsquo;s not the solution that I really wanted, but it will do for now. At least the &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange Server 2003&lt;/a&gt; IMAP server isn&amp;rsquo;t exposed directly to external networks.&lt;/p&gt;
+
+&lt;p&gt;On a slightly related note, the &lt;a href=&#34;http://www.slipstick.com/&#34;&gt;Slipstick Systems&lt;/a&gt; web site has a link to an IMAP proxy server that implements STARTTLS as a workaround for Exchange&amp;rsquo;s lack of native support for STARTTLS. The IMAP proxy can be found at &lt;a href=&#34;http://www.slipstick.com/files/imapproxysvc.zip&#34;&gt;http://www.slipstick.com/files/imapproxysvc.zip&lt;/a&gt;. So, if you have an IMAP4 client that supports STARTTLS and want to connect it to Exchange, you can use this IMAP proxy. At least, until &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; puts STARTTLS support into Exchange directly.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Nonstandard Implementations</title>
+          <link>http://lowescott.github.io/2005/05/14/nonstandard-implementations/</link>
+          <pubDate>Sat, 14 May 2005 22:24:04 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/05/14/nonstandard-implementations/</guid>
+          <description>&lt;p&gt;In my experiments with &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt;, I learned a couple of very interesting facts. First, the IMAP4 implementation on &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange Server 2003&lt;/a&gt; does not support the STARTTLS command, as described in &lt;a href=&#34;http://www.networksorcery.com/enp/rfc/rfc2595.txt&#34;&gt;RFC 2595&lt;/a&gt; and re-affirmed in &lt;a href=&#34;http://www.networksorcery.com/enp/rfc/rfc3501.txt&#34;&gt;RFC 3501&lt;/a&gt;. Instead, Exchange expects an SSL session to be established immediately, and then IMAP is spoken. This is similar to the &amp;ldquo;smtpd_tls_wrappermode&amp;rdquo; directive that &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt; supports.&lt;/p&gt;
+
+&lt;p&gt;Second, it appears that the &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; Mail application (commonly referred to as Mail.app) also uses this IMAP-over-SSL approach, since I&amp;rsquo;ve been using Mail.app to connect to Exchange using IMAP with SSL for quite some time. I&amp;rsquo;m trying to confirm that now, but having precious little luck finding any definitive information one way or the other. If anyone knows for certain, please let me know. I&amp;rsquo;m going to keep searching.&lt;/p&gt;
+
+&lt;p&gt;This is one of those things that just makes me crazy.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Miscellaneous Projects</title>
+          <link>http://lowescott.github.io/2005/05/13/miscellaneous-projects/</link>
+          <pubDate>Fri, 13 May 2005 22:22:53 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/05/13/miscellaneous-projects/</guid>
+          <description>&lt;p&gt;In my copious spare time (fellow parents out there know this is a joke), I&amp;rsquo;m working on a couple of miscellaneous technical projects:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Internal news server:&lt;/em&gt; I&amp;rsquo;m having so many problems with NNTP-based access from &lt;a href=&#34;http://www.panic.com/unison/&#34;&gt;Unison&lt;/a&gt; to &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange Server 2003&lt;/a&gt; that I&amp;rsquo;ve decided to setup an internal NNTP server using Linux and INNd. Linux I&amp;rsquo;m familiar with; INNd is completely new to me. Wish me luck.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;IMAP proxy:&lt;/em&gt; This would use &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt; to proxy IMAP4S requests to my mail server. I&amp;rsquo;ll probably have Perdition handle IMAP4S and then pass IMAP to the back-end server, offloading the SSL work to the proxy.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Squid log analysis:&lt;/em&gt; I&amp;rsquo;m looking for a way to parse down the logs from my &lt;a href=&#34;http://www.squid-cache.org/&#34;&gt;Squid&lt;/a&gt; web cache. Once I find a way to do this, then I can really begin offering Squid and &lt;a href=&#34;http://www.squidguard.org/&#34;&gt;SquidGuard&lt;/a&gt; as a content filtering solution to some of my customers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure this stuff is probably old hat to some of you out there. Feel free to contribute some helpful information or URLs. I&amp;rsquo;ll keep you posted on how things proceed with these and other projects as they develop.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

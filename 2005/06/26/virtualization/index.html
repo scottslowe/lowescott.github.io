@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Virtualization &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Virtualization</h1>
+  <span class="post-date">Jun 26, 2005 4:01 PM</span>
+  <p>I&rsquo;m a big fan of <a href="http://en.wikipedia.org/wiki/Virtualization/">virtualization</a>. I love the <a href="http://www.vmware.com/">VMware</a> products (<a href="http://www.vmware.com/products/desktop/ws_features.html">VMware Workstation</a>, <a href="http://www.vmware.com/products/server/gsx_features.html">GSX Server</a>, and <a href="http://www.vmware.com/products/server/esx_features.html">ESX Server</a>) and, as I have mentioned in previous posts, use Microsoft&rsquo;s <a href="http://www.microsoft.com/mac/products/virtualpc/virtualpc.aspx">Virtual PC</a> product currently (but only because VMware doesn&rsquo;t have a Mac version of VMware Workstation). I&rsquo;m looking forward to hardware-based virtualization technologies such as AMD&rsquo;s Pacifica (discussed briefly <a href="http://www.eweek.com/article2/0,1759,1780606,00.asp">here</a> and <a href="http://www.eweek.com/article2/0,1759,1820551,00.asp">here</a>) and Intel&rsquo;s <a href="http://www.intel.com/technology/computing/vptech/">Vanderpool</a> technology. I&rsquo;m very much hoping that <a href="http://www.apple.com/">Apple</a> will take the plunge and build in virtualization support in Mac OS X 10.5, aka &ldquo;Leopard&rdquo;.</p>
+
+<p>Virtualization is more than just running multiple operating systems on a single computer, though. Virtualization occurs in networking through the use of virtual LANs (VLANs) and virtual private networks (VPNs); both of these technologies are core technologies in today&rsquo;s flexible networks. Virtualization occurs in storage area networks (SANs) as virtual disks and virtual SANs (VSANs). Technologies such as load balancing via virtual servers (recently read an interesting <a href="http://software.newsforge.com/article.pl?sid=05/05/27/0612243">article on Linux virtual servers</a>) also employ a form of virtualization. Even mundane technologies such as network address translation (NAT) can be considered forms of virtualization, since they abstract a server&rsquo;s public IP address from its private (actual) IP address.</p>
+
+<p>As IT professionals, it behooves us to embrace new technologies like virtualization, in all its forms. If you haven&rsquo;t already taken the time to get used to these kinds of products and technologies, now might be a good time.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

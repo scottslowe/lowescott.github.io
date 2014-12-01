@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/categories/linux/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-27 17:52:19 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Initial Impressions of Debian GNU/Linux 3.1</title>
+          <link>http://lowescott.github.io/2005/12/27/initial-impressions-of-debian-gnulinux-31/</link>
+          <pubDate>Tue, 27 Dec 2005 17:52:19 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/27/initial-impressions-of-debian-gnulinux-31/</guid>
+          <description>&lt;p&gt;As I&amp;rsquo;ve mentioned in a couple of previous posts, I have several servers running Red Hat Linux 9.0 that I am looking to upgrade to a newer distribution. I&amp;rsquo;ve tried a couple of recent versions of CentOS (a clone version of Red Hat Enterprise Linux), but ran into &lt;a href=&#34;http://blog.scottlowe.org/2005/12/19/ntpd-on-centos-42/&#34;&gt;problems with ntpd&lt;/a&gt; (I may have &lt;a href=&#34;http://blog.scottlowe.org/2005/12/23/centos-ntpd-problem-mostly-resolved/&#34;&gt;finally resolved&lt;/a&gt; those). I&amp;rsquo;d heard good things about &lt;a href=&#34;http://www.debian.org/&#34;&gt;Debian GNU/Linux&lt;/a&gt;, so I decided to give that a try as well.&lt;/p&gt;
+
+&lt;p&gt;Prior &lt;a href=&#34;http://blog.scottlowe.org/2005/12/08/ubuntu-510/&#34;&gt;experience with Ubuntu&lt;/a&gt; (as well as &lt;a href=&#34;http://blog.scottlowe.org/2005/12/01/kubuntu-510/&#34;&gt;some time with Kubuntu&lt;/a&gt;) led me to believe that Debian would be equally polished. So, I downloaded two ISO&amp;rsquo;s for Debian 3.1 (&amp;ldquo;Sarge&amp;rdquo;), the latest stable release. Information I&amp;rsquo;d gained from some online research indicated by this release included a 2.6.8 version of the kernel, but upon installation I found I was running a patched 2.4 version instead. After a couple of attempts to upgrade the kernel via &lt;code&gt;apt-get&lt;/code&gt;, I finally managed to locate an appropriate package name in the stable distribution and installed it.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the 2.6.8 kernel cause the system to fail to boot, listing numerous segmentation faults and finally just halting partway into the boot process. I was extremely disappointed&amp;mdash;after having spent that time downloading the software and then installing it, it was now completely unusable.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure that Debian fans will point out that I surely did something incorrect and things normally don&amp;rsquo;t happen that way. Perhaps that is true; I will certainly be the first to admit that I may have done something incorrectly while using &lt;code&gt;apt-get&lt;/code&gt; to upgrade the kernel. I would be nice to know exactly &lt;em&gt;what&lt;/em&gt; it was that went wrong, though.&lt;/p&gt;
+
+&lt;p&gt;In the meantime, I&amp;rsquo;m going to shelve Debian GNU/Linux as a possible replacement OS and continue searching. At this point, &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; is starting to look really good&amp;hellip;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>CentOS NTPd Problem (Mostly) Resolved</title>
+          <link>http://lowescott.github.io/2005/12/23/centos-ntpd-problem-mostly-resolved/</link>
+          <pubDate>Fri, 23 Dec 2005 14:50:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/23/centos-ntpd-problem-mostly-resolved/</guid>
+          <description>&lt;p&gt;The NTPd problem that I &lt;a href=&#34;http://blog.scottlowe.org/2005/08/16/strange-ntpd-problem-on-centos-41/&#34;&gt;wrestled with in CentOS 4.1&lt;/a&gt; and &lt;a href=&#34;http://blog.scottlowe.org/2005/12/19/ntpd-on-centos-42/&#34;&gt;again in CentOS 4.2&lt;/a&gt; has finally been resolved. Mostly. I think. The specific steps I took to resolve the issue came from a number of sources, so read on for all the details.&lt;/p&gt;
+
+&lt;p&gt;Since these servers are virtual servers running under &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, I first consulted the VMware Knowledge Base and turned up this article on &lt;a href=&#34;http://www.vmware.com/support/kb/enduser/std_adp.php?p_sid=Nuh3rAXh&amp;amp;p_lva=&amp;amp;p_faqid=1420&amp;amp;p_created=1093994398&amp;amp;p_sp=cF9zcmNoPTEmcF9ncmlkc29ydD0mcF9yb3dfY250PTc0MyZwX3NlYXJjaF90ZXh0PUxpbnV4IGd1ZXN0IGNsb2NrJnBfc2VhcmNoX3R5cGU9NyZwX3Byb2RfbHZsMT1_YW55fiZwX3Byb2RfbHZsMj1_YW55fiZwX3NvcnRfYnk9ZGZsdCZwX3BhZ2U9MQ**&amp;amp;p_li=&#34;&gt;slow and fast clocks for Linux guest VMs&lt;/a&gt;. Based on that information, I added a few extra commands to the grub configuration:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;noapic nosmp nolapic clock=pit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In addition, I found a number of forum postings in various sites (too many to list or link here) that referenced problems with NTP and ACPI. So, based on that information, I further edited the grub configuration to look like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;noapic nosmp nolapic clock=pit acpi=no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, based on information regarding NTP itself and the NTP configuration parameters, I added the &amp;ldquo;burst iburst&amp;rdquo; parameters to the server lines in my &lt;code&gt;ntp.conf&lt;/code&gt; file, like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server W.X.Y.Z burst iburst
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This helped, as at least now NTP would synchronize against something other than the local clock (which was more than it had done previously). For some reason, though, the &lt;code&gt;/var/log/messages&lt;/code&gt; log file was filling up with messages about synchronizing against the local clock, then synchronizing against the server, then against the local clock, etc. (You get the picture.)&lt;/p&gt;
+
+&lt;p&gt;Given that I was synchronizing against a &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt;-based computer, I thought perhaps that Microsoft&amp;rsquo;s NTP implementation was simply broken. (This certainly wouldn&amp;rsquo;t be the first time.) So I configured &lt;a href=&#34;http://www.openntpd.org/&#34;&gt;OpenNTPd&lt;/a&gt; on an &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; server (running OpenBSD 3.8) and re-configured the CentOS server to synchronize against the OpenBSD NTP server.&lt;/p&gt;
+
+&lt;aside&gt;OpenNTPd is ridiculously simple to configure and operate, and _just works._&lt;/aside&gt;
+
+&lt;p&gt;The repetitive synchronization messages still appeared, but were appearing with far less frequency. And the time still isn&amp;rsquo;t synchronized to the level I would like, but it does stay within a minute or so of the rest of the network (well within the 5 minute gap required in order for Kerberos authentication to work).&lt;/p&gt;
+
+&lt;p&gt;So, it&amp;rsquo;s still not working as cleanly as the older Red Hat Linux 9.0-based servers, but it &lt;em&gt;is&lt;/em&gt; working. Given that I&amp;rsquo;m still running these servers under an old version of VMware (which, technically, doesn&amp;rsquo;t support Linux 2.6 kernels) I may try upgrading to a new version of VMware to see if that helps at all.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Complete Linux-AD Authentication Details</title>
+          <link>http://lowescott.github.io/2005/12/22/complete-linux-ad-authentication-details/</link>
+          <pubDate>Thu, 22 Dec 2005 11:26:46 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/22/complete-linux-ad-authentication-details/</guid>
+          <description>
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; These instructions are for Windows 2000 Server and Windows Server 2003 pre-R2. For the R2 release, please see &lt;a href=&#34;http://blog.scottlowe.org/2007/01/15/linux-ad-integration-version-4/&#34;&gt;these updated instructions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are several articles posted here that discuss, in general terms, how to authenticate Linux against Active Directory. For example, see this brief article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/07/13/linux-ad-integration-direction/&#34;&gt;broad direction&lt;/a&gt; of the integration, or this posting on &lt;a href=&#34;http://blog.scottlowe.org/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/&#34;&gt;using computer accounts&lt;/a&gt; for Linux servers (most how-to documents I&amp;rsquo;ve seen discuss the use of a user account for this purpose).&lt;/p&gt;
+
+&lt;p&gt;Over the last week or so, I&amp;rsquo;ve been having to rebuild one Linux server a number of times in an effort to fix a separate problem (see this article on &lt;a href=&#34;http://blog.scottlowe.org/2005/08/16/strange-ntpd-problem-on-centos-41/&#34;&gt;NTPd problems with CentOS 4.1&lt;/a&gt; and the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/19/ntpd-on-centos-42/&#34;&gt;recurrence of the problem&lt;/a&gt; with CentOS 4.2). As a result, I&amp;rsquo;ve had to go through the process of configuring this Linux server (and preparing Active Directory) for authentication several times, and I found that I kept having to go back to my scattered and dispersed notes to remember what had to be done. In the hopes of correcting that, I am collecting all the pertinent information I have here in this article.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Preparing Active Directory (One-Time)&lt;/h3&gt;
+
+&lt;p&gt;There is a one-time preparation of Active Directory that is required. In order to authenticate Linux logins against Active Directory, Active Directory&amp;rsquo;s schema must be extended to include Linux-specific attributes such as home directory, UID, GID, and default shell. There are a couple of different ways to do this; I chose to use Microsoft&amp;rsquo;s Services for Unix (SFU) to extend the schema. There are two reasons I chose SFU: 1) it&amp;rsquo;s free; and 2) the SFU schema is being included by default in Windows Server 2003 R2.&lt;/p&gt;
+
+&lt;p&gt;Once SFU has been installed and the schema has been extended, then the specific Active Directory accounts that are allowed to authenticate via Linux must be configured with a UID and other UNIX attributes. This is accomplished via the new &amp;ldquo;UNIX Attributes&amp;rdquo; tab on the properties dialog box of a user account.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll also need to create an account in Active Directory that will be used to bind to Active Directory for LDAP queries. This account does &lt;em&gt;not&lt;/em&gt; need any special privileges; in fact, making the account a member of Domain Guests and &lt;em&gt;not&lt;/em&gt; a member of Domain Users is perfectly fine.&lt;/p&gt;
+
+&lt;p&gt;After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Linux server that will enable the authentication.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Preparing Active Directory (Each Server)&lt;/h3&gt;
+
+&lt;p&gt;For each server that will be authenticating against Active Directory, follow the steps below.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Create a computer account in Active Directory. When creating the computer account, be sure to specify that this account may be used by a pre-Windows 2000-based computer.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use the following command at a command prompt to configure the new computer account:&lt;/p&gt;
+
+&lt;p&gt;ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$&lt;br /&gt;
+-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL&lt;br /&gt;
+-out filename&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Of course, you&amp;rsquo;ll need to substitute the appropriate values for &amp;ldquo;fqdn&amp;rdquo; (the fully-qualified domain name of the computer), &amp;ldquo;REALM&amp;rdquo; (the DNS name of your Active Directory domain in UPPERCASE), &amp;ldquo;DOMAIN&amp;rdquo; (the NetBIOS name of your Active Directory domain), &amp;ldquo;password&amp;rdquo; (the password that will be set for the new computer account), and &amp;ldquo;filename&amp;rdquo; (the keytab that will be generated and must be copied over to the Linux computer).&lt;/p&gt;
+
+&lt;p&gt;If you need to rebuild the Linux server for whatever reason, you&amp;rsquo;ll need to delete the computer account you created and repeat this process.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Preparing the Linux Server&lt;/h3&gt;
+
+&lt;p&gt;Follow the steps below to configure the Linux server for authentication against Active Directory.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Make sure that the appropriate Kerberos libraries, OpenLDAP, pam_krb5, and nss_ldap are installed. If they are not installed, install them.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Be sure that time is being properly synchronized between Active Directory and the Linux server in question. Kerberos requires time synchronization.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;krb5.conf&lt;/code&gt; file to look something like this, substituting your actual host names and domain names where appropriate:&lt;/p&gt;
+
+&lt;p&gt;[logging]&lt;br /&gt;
+ default = FILE:/var/log/krb5libs.log&lt;br /&gt;
+ kdc = FILE:/var/log/krb5kdc.log&lt;br /&gt;
+ admin_server = FILE:/var/log/kadmind.log&lt;/p&gt;
+
+&lt;p&gt;[libdefaults]&lt;br /&gt;
+ default_realm = EXAMPLE.COM&lt;br /&gt;
+ dns_lookup_realm = true&lt;br /&gt;
+ dns_lookup_kdc = true&lt;/p&gt;
+
+&lt;p&gt;[realms]&lt;br /&gt;
+ EXAMPLE.COM = {&lt;br /&gt;
+  kdc = host.example.com:88&lt;br /&gt;
+  admin_server = host.example.com:749&lt;br /&gt;
+  default_domain = example.com&lt;br /&gt;
+ }&lt;/p&gt;
+
+&lt;p&gt;[domain_realm]&lt;br /&gt;
+ .example.com = EXAMPLE.COM&lt;br /&gt;
+ example.com = EXAMPLE.COM&lt;/p&gt;
+
+&lt;p&gt;[kdc]&lt;br /&gt;
+ profile = /var/kerberos/krb5kdc/kdc.conf&lt;/p&gt;
+
+&lt;p&gt;[appdefaults]&lt;br /&gt;
+ pam = {&lt;br /&gt;
+   debug = false&lt;br /&gt;
+   ticket_lifetime = 36000&lt;br /&gt;
+   renew_lifetime = 36000&lt;br /&gt;
+   forwardable = true&lt;br /&gt;
+   krb4_convert = false&lt;br /&gt;
+ }&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;/etc/ldap.conf&lt;/code&gt; file to look something like this, substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate.&lt;/p&gt;
+
+&lt;p&gt;host 10.10.10.10
+base dc=example,dc=com
+binddn cn=ldap,cn=Users,dc=example,dc=com
+bindpw adldapbindpw
+scope sub
+ssl no
+nss_base_passwd dc=example,dc=com
+nss_base_shadow dc=example,dc=com
+nss_base_group dc=example,dc=com
+nss_map_objectclass posixAccount user
+nss_map_objectclass shadowAccount user
+nss_map_objectclass posixGroup group
+nss_map_attribute uid sAMAccountName
+nss_map_attribute uidNumber msSFU30UidNumber
+nss_map_attribute gidNumber msSFU30GidNumber
+nss_map_attribute loginShell msSFU30LoginShell
+nss_map_attribute gecos name
+nss_map_attribute userPassword msSFU30Password
+nss_map_attribute homeDirectory msSFU30HomeDirectory
+nss_map_attribute uniqueMember msSFU30PosixMember
+nss_map_attribute cn cn&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Securely copy the file created using the &lt;code&gt;ktpass.exe&lt;/code&gt; utility above to the Linux server in question, placing it in the &lt;code&gt;/etc&lt;/code&gt; directory as &lt;code&gt;krb5.keytab&lt;/code&gt;. (SFTP or SCP are excellent candidates for this.)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Configure PAM (this varies according to Linux distributions) to use pam_krb5 for authentication. Many modern distributions use a stacking mechanism whereby one file can be modified and those changes will applied to all the various PAM-aware services. For example, in Red Hat-based distributions, the system-auth file is referenced by most other PAM-aware services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;/etc/nsswitch.conf&lt;/code&gt; file to include &amp;ldquo;ldap&amp;rdquo; as a lookup source for passwd, shadow, and groups.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That should be it. Once you do that, you should be able to use &lt;code&gt;kinit&lt;/code&gt; from a Linux shell prompt (for example, &lt;code&gt;kinit aduser&lt;/code&gt;) and generate a valid Kerberos ticket for the specified Active Directory account.&lt;/p&gt;
+
+&lt;p&gt;At this point, any PAM-aware service that is configured to use the stacked system file (such as the system-auth configuration on Red Hat-based distributions) will use Active Directory for authentication. Note, however, that unless you also add the &lt;code&gt;pam_mkhomedir.so&lt;/code&gt; module in the PAM configuration, home directories will have to be created manually for any Active Directory account that may log on to that server. (I generally recommend the use of &lt;code&gt;pam_mkhomedir.so&lt;/code&gt; in this situation.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>NTPd on CentOS 4.2</title>
+          <link>http://lowescott.github.io/2005/12/19/ntpd-on-centos-42/</link>
+          <pubDate>Mon, 19 Dec 2005 16:08:20 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/19/ntpd-on-centos-42/</guid>
+          <description>&lt;p&gt;A while back, I started working with &lt;a href=&#34;http://www.centos.org/&#34;&gt;CentOS&lt;/a&gt; (version 4.1 at the time, see my &lt;a href=&#34;http://blog.scottlowe.org/2005/08/08/brief-impressions-of-centos-41/&#34;&gt;impressions&lt;/a&gt; here) as a candidate replacement for the Red Hat Linux 9.0-based servers still in service on the network. Although I was (and still am) very comfortable with Red Hat Linux 9.0, it&amp;rsquo;s getting a bit long in the tooth and I wanted to update the servers to a more modern software base.&lt;/p&gt;
+
+&lt;p&gt;The problem is, I kept running into &lt;a href=&#34;http://blog.scottlowe.org/2005/08/16/strange-ntpd-problem-on-centos-41/&#34;&gt;issues with time synchronization&lt;/a&gt; on the CentOS server. This time synchronization issue did &lt;em&gt;not&lt;/em&gt; appear on the Red Hat Linux servers. I tried to resolve the issue, but never did find the solution. Instead, I just used ntpdate in a cron job. That seemed to work well enough, but I really wanted it to work PROPERLY.&lt;/p&gt;
+
+&lt;p&gt;So I started working with CentOS 4.2 earlier this week, hoping that whatever had plagued me with the previous version wouldn&amp;rsquo;t afflict me this time. Unfortunately, the exact same problem has cropped up again, and I am at a loss trying to figure out why it doesn&amp;rsquo;t work. The output from &lt;code&gt;ntpq -p&lt;/code&gt; indicates that communication is occurring with the desired time servers, but the NTP daemon still keeps choosing to synchronize with the local clock. SELinux is disabled, so it can&amp;rsquo;t be interfering with NTP (I think that was the problem with the earlier CentOS 4.1 installation), &lt;code&gt;iptables&lt;/code&gt; is not running (so it can&amp;rsquo;t be a firewall issue), file permissions and ownership look OK&amp;mdash;what could I be missing? If anyone has any ideas, please let me know.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Installing Linux on an iPaq H3765</title>
+          <link>http://lowescott.github.io/2005/12/13/installing-linux-on-an-ipaq-h3765/</link>
+          <pubDate>Tue, 13 Dec 2005 23:27:07 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/13/installing-linux-on-an-ipaq-h3765/</guid>
+          <description>&lt;p&gt;Before I switched to &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, I was a heavy duty &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; user. I had Windows XP on my laptop, Windows 2000 on my servers, and used a Windows CE-based Compaq iPaq H3765. Since that time, I (of course) switched to Mac OS X on my laptop (a 15&amp;rdquo; &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt; G4 with SuperDrive); a mix of Linux, &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, and Windows on my servers; and a Palm OS-based handheld (currently a Treo 650, previously a Tungsten T3). As a result, I still had this iPaq sitting around doing nothing. So, on a whim, I decided to install Linux on my old iPaq.&lt;/p&gt;
+
+&lt;p&gt;Using the &lt;a href=&#34;http://familiar.handhelds.org/releases/v0.8.2/install/&#34;&gt;installation instructions&lt;/a&gt; at familiar.handhelds.org, I downloaded an &lt;a href=&#34;http://opie.handhelds.org/&#34;&gt;Opie&lt;/a&gt; image, installed the bootloader, and reflashed the iPaq from a spare 128MB CF card (I had a CF sleeve with external battery for the iPaq). After only a few minutes (the entire process was really quite painless), I was up and running with Linux on my iPaq.&lt;/p&gt;
+
+&lt;p&gt;Having Linux running on the iPaq is great, but now I have to figure out what to &lt;strong&gt;&lt;em&gt;do&lt;/em&gt;&lt;/strong&gt; with this Linux-based PDA. Suggestions, anyone?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Ubuntu 5.10</title>
+          <link>http://lowescott.github.io/2005/12/08/ubuntu-510/</link>
+          <pubDate>Thu, 08 Dec 2005 22:46:37 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/08/ubuntu-510/</guid>
+          <description>&lt;p&gt;A few days ago I mentioned &lt;a href=&#34;http://blog.scottlowe.org/2005/12/01/kubuntu-510/&#34;&gt;Kubuntu 5.10&lt;/a&gt;. &lt;a href=&#34;http://kubuntu.org/&#34;&gt;Kubuntu&lt;/a&gt; is the &lt;a href=&#34;http://www.kde.org/&#34;&gt;KDE&lt;/a&gt;-based variant of &lt;a href=&#34;http://www.ubuntulinux.org/&#34;&gt;Ubuntu&lt;/a&gt;. After having installed and used Kubuntu, I decided to try Ubuntu, the &lt;a href=&#34;http://www.gnome.org/&#34;&gt;GNOME&lt;/a&gt;-based cousin. I downloaded the ISO image of the install CD last night and installed it today while reviewing HSRP configurations for an upcoming Cisco installation.&lt;/p&gt;
+
+&lt;p&gt;I am equally as pleased with Ubuntu as with Kubuntu. I find that version 2.12 of GNOME, which ships with Ubuntu, is much better than the older versions of GNOME that I had used. In addition, the overall fit and finish of the distribution is very good, and I continue to enjoy using apt-get to update and upgrade packages on the system. As a matter of fact, the only downside to either distribution so far is that Kubuntu doesn&amp;rsquo;t include &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt; by default (note that Firefox is included with Ubuntu).&lt;/p&gt;
+
+&lt;p&gt;So, I currently have two older Compaq Armada E500 laptops that I&amp;rsquo;ve loaded with Linux&amp;mdash;one is running Kubuntu, and the other is running Ubuntu. Both work flawlessly, including full interoperability with my wireless network.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Updating Kubuntu to KDE 3.5</title>
+          <link>http://lowescott.github.io/2005/12/01/updating-kubuntu-to-kde-35/</link>
+          <pubDate>Thu, 01 Dec 2005 21:52:39 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/01/updating-kubuntu-to-kde-35/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://kubuntu.org/&#34;&gt;Kubuntu&lt;/a&gt; 5.10, the &lt;a href=&#34;http://www.kde.org/&#34;&gt;KDE&lt;/a&gt;-based variant of &lt;a href=&#34;http://www.ubuntulinux.org/&#34;&gt;Ubuntu&lt;/a&gt;, normally comes with KDE 3.4.3. With KDE 3.5.0 just recently released, however, I wanted to update Kubuntu to use the latest version of KDE. Here&amp;rsquo;s what I had to do to make it work.&lt;/p&gt;
+
+&lt;p&gt;First, from &lt;a href=&#34;http://kubuntu.org/announcements/kde-35.php&#34;&gt;this page&lt;/a&gt;, I downloaded and added the appropriate GPG key. Once that was done, I used &amp;ldquo;apt-get update&amp;rdquo; to download the latest package information and &amp;ldquo;apt-get upgrade&amp;rdquo; to upgrade packages. That upgraded most of KDE, but there were a few packages that still refused to upgrade (they were reported by apt-get as &amp;ldquo;held back&amp;rdquo;).&lt;/p&gt;
+
+&lt;p&gt;After poking around with apt-get for a while, I discovered that there was one missing file&amp;mdash;libgnokii2&amp;mdash;that couldn&amp;rsquo;t be found in the apt-get sources. I manually reviewed the apt-get sources and finally found this package in the universe section of the main Ubuntu apt-get source. I edited /etc/apt/sources.list to enable the other sections, then manually installed the missing file with these commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get clean  
+apt-get update  
+apt-get install libgnokii2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then edited &lt;code&gt;/etc/apt/sources.list&lt;/code&gt; again to disable the other sources and upgraded the remainder of the KDE packages:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get clean  
+apt-get update  
+apt-get upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This last round of apt-get removed a few obsolete packages and then updated the remainder of the KDE packages.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know if this is the &amp;ldquo;correct&amp;rdquo; way of doing things, but it seemed to be the only way to make it work as anticipated. If anyone has a better way, please let me know.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>HTTP Proxies and Command-Line Utilities</title>
+          <link>http://lowescott.github.io/2005/12/01/http-proxies-and-command-line-utilities/</link>
+          <pubDate>Thu, 01 Dec 2005 20:14:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/01/http-proxies-and-command-line-utilities/</guid>
+          <description>&lt;p&gt;A few weeks ago, I locked down outbound HTTP traffic from my network. All outbound HTTP traffic must now pass through a caching HTTP proxy. (The proxy also performs some content filtering so that the kids don&amp;rsquo;t access stuff they shouldn&amp;rsquo;t.)&lt;/p&gt;
+
+&lt;p&gt;In my recent experiments with &lt;a href=&#34;http://kubuntu.org/&#34;&gt;Kubuntu&lt;/a&gt;, I needed to download some small files using wget, but couldn&amp;rsquo;t because of the proxy. As it turns out, there is a really simple fix.&lt;/p&gt;
+
+&lt;p&gt;Simply set an environment variable called http_proxy to the correct URL of the outbound proxy server, e.g., &amp;ldquo;&lt;a href=&#34;http://proxy.company.com:8080&amp;quot;&#34;&gt;http://proxy.company.com:8080&amp;quot;&lt;/a&gt; or whatever. In the bash shell, this can be easily accomplished with this command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;export http_proxy=&amp;quot;http://proxy.domain.com:8080&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once this environment variable was set properly (I messed up a couple of times trying to set it, getting my bash syntax confused with my tcsh syntax), wget and apt-get worked like a charm. I haven&amp;rsquo;t yet tried this with yum on Fedora Core 3, but I anticipate that it will work there as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Kubuntu 5.10</title>
+          <link>http://lowescott.github.io/2005/12/01/kubuntu-510/</link>
+          <pubDate>Thu, 01 Dec 2005 17:24:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/01/kubuntu-510/</guid>
+          <description>&lt;p&gt;After wrestling with installing, configuring, and supporting Fedora Core 3 on an older Compaq Armada E500 laptop, I decided to break with my Red Hat/Fedora legacy and try &lt;a href=&#34;http://kubuntu.org/&#34;&gt;Kubuntu&lt;/a&gt;, the &lt;a href=&#34;http://www.kde.org/&#34;&gt;KDE&lt;/a&gt;-based &lt;a href=&#34;http://www.ubuntulinux.org/&#34;&gt;Ubuntu&lt;/a&gt; variation. Ubuntu itself is a relative newcomer to the Linux distribution arena, based on (as I understand it) &lt;a href=&#34;http://www.debian.org/&#34;&gt;Debian&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In previous stints using Linux as my desktop OS, I&amp;rsquo;d always been partial to KDE instead of &lt;a href=&#34;http://www.gnome.org/&#34;&gt;GNOME&lt;/a&gt;. Some would say that it&amp;rsquo;s because KDE has traditionally been more &amp;ldquo;Windows-like&amp;rdquo; than the other Linux graphical environments; perhaps that&amp;rsquo;s the case. I&amp;rsquo;ve typically found KDE easier to work with, and since this laptop would eventually be used by the kids I felt like ease of use was important.&lt;/p&gt;
+
+&lt;p&gt;The install went very quickly and very smoothly. When the install was done, I then proceeded to update KDE to version 3.5.0 (which had just been released a few days before). Along the way, I learned a handy piece of information about HTTP proxies and command-line utilities (I&amp;rsquo;ll soon post information on that as well). Eventually, I managed to get apt-get to download and install the updated KDE 3.5 packages. I rebooted the system and found that I was now running the updated version of KDE. (Side note: There are still some KDE packages that won&amp;rsquo;t upgrade for some reason; I&amp;rsquo;m currently working on resolving that issue.)&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s still too early to tell for certain, but I may just have found a new desktop Linux version.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Secure Remote Filesystem</title>
+          <link>http://lowescott.github.io/2005/11/29/secure-remote-filesystem/</link>
+          <pubDate>Tue, 29 Nov 2005 16:57:00 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/secure-remote-filesystem/</guid>
+          <description>&lt;p&gt;This is something that only a computer junkie could enjoy. In conjunction with the &lt;a href=&#34;http://fuse.sourceforge.net/&#34;&gt;FUSE&lt;/a&gt; project (now an official part of the Linux kernel as of version 2.6.14), an SSH-wrapped remote filesystems&amp;ndash;called &lt;a href=&#34;http://fuse.sourceforge.net/sshfs.html&#34;&gt;sshfs&lt;/a&gt;&amp;ndash;has been created.&lt;/p&gt;
+
+&lt;p&gt;This &lt;a href=&#34;http://www.linux.com/article.pl?sid=05/11/11/176206&#34;&gt;recent article&lt;/a&gt; describes sshfs in a bit more detail and provides some additional information.&lt;/p&gt;
+
+&lt;p&gt;So what does this mean? It means that for any remote system you can reach via SSH, you can mount that remote system&amp;rsquo;s filesystem inside an SSH tunnel. I can think of numerous possibilities, not the least of which involves easily updating a web site hosted on a remote web server without having to FTP (or SFTP) the files back and forth.&lt;/p&gt;
+
+&lt;p&gt;Now, if only there was a &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; version of sshfs&amp;hellip;it&amp;rsquo;s currently only available for Linux and &lt;a href=&#34;http://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Can Somebody Help Me With MapFS?</title>
+          <link>http://lowescott.github.io/2005/11/09/can-somebody-help-me-with-mapfs/</link>
+          <pubDate>Wed, 09 Nov 2005 16:23:20 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/09/can-somebody-help-me-with-mapfs/</guid>
+          <description>&lt;p&gt;A pair of recent articles (&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1880142,00.asp&#34;&gt;this article&lt;/a&gt; at &lt;em&gt;eWeek&lt;/em&gt; and &lt;a href=&#34;http://trends.newsforge.com/article.pl?sid=05/11/03/2255215&#34;&gt;this article&lt;/a&gt; at NewsForge) have me a bit perplexed. What&amp;rsquo;s the real value of MapFS? I know I have to be missing something here. Somebody send me an e-mail and explain it to me, or give me an example (other than the Live CD example mentioned in one of the articles above) of how this could be used effectively.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>It Was Bound to Happen</title>
+          <link>http://lowescott.github.io/2005/11/09/it-was-bound-to-happen/</link>
+          <pubDate>Wed, 09 Nov 2005 16:17:25 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/09/it-was-bound-to-happen/</guid>
+          <description>&lt;p&gt;To a certain extent, I agree with the belief that operating systems and applications that don&amp;rsquo;t have a significant market share like Windows, IIS, and Exchange won&amp;rsquo;t get targeted as frequently and therefore will have a &amp;ldquo;better&amp;rdquo; security track record. I don&amp;rsquo;t agree that this is the &lt;em&gt;only&lt;/em&gt; reason that Linux, Mac OS X, and others haven&amp;rsquo;t seen as many security vulnerabilities and the oh-so-fun network worms that invariably accompany them. But I will agree that as these alternatives gain in popularity, more hackers are going to target them.&lt;/p&gt;
+
+&lt;p&gt;As a result, it&amp;rsquo;s no surprise that a &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1882889,00.asp&#34;&gt;new Linux worm&lt;/a&gt; has recently emerged. I mean, it was bound to happen. Linux is surging in popularity, as Linus Torvalds and other developers continue to &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1881470,00.asp&#34;&gt;add features&lt;/a&gt; to the Linux kernel and more and more corporations deploy Linux. Of course the malware authors are going to try something like this. I doesn&amp;rsquo;t surprise me in the least. While this one is fairly low-tech, you can bet that future variants of this worm (as well as new worms) will be more complex and more dangerous.&lt;/p&gt;
+
+&lt;p&gt;I also fully expect that the anti-Linux crowd will shout that this is the end of the line for Linux, just like the anti-Microsoft crowd shouts &amp;ldquo;Down with Windows!&amp;rdquo; everytime Microsoft patches a critical security flaw that could be exploited by an automated worm (side note: new Microsoft critical security flaw &lt;a href=&#34;http://www.microsoft.com/technet/security/Bulletin/MS05-053.mspx&#34;&gt;patched yesterday&lt;/a&gt;, go have a look and make sure you are protected). This just isn&amp;rsquo;t the case. Neither Windows nor Linux are going to go away, and each of them has value for businesses today. The best bet for any organization is to use the product that best fits the need and then make sure that the product is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;properly &lt;em&gt;configured&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;properly &lt;em&gt;patched&lt;/em&gt;; and&lt;/li&gt;
+&lt;li&gt;properly &lt;em&gt;maintained&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Following these guidelines, businesses and consumers can safely deploy the products, technologies, and platforms that best meet their needs without falling prey to technology bigotry.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>LSB Recognized by ISO</title>
+          <link>http://lowescott.github.io/2005/11/01/lsb-recognized-by-iso/</link>
+          <pubDate>Tue, 01 Nov 2005 19:12:19 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/01/lsb-recognized-by-iso/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1880214,00.asp&#34;&gt;News surfaced today&lt;/a&gt; that the &lt;a href=&#34;http://www.iso.org/iso/en/ISOOnline.frontpage&#34;&gt;International Organization for Standardization&lt;/a&gt; (ISO) has approved the Linux Standards Base (LSB) as an international standard. The LSB 2.0.1 core specification has been accepted by the ISO and will be published as &lt;a href=&#34;http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=41481&amp;amp;scopelist=PROGRAMME&#34;&gt;International Standard 23360&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In my eyes, this is a big indicator of Linux&amp;rsquo;s maturity. Does Linux still need growth in some areas to be more competitive with &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Microsoft Windows&lt;/a&gt;, &lt;a href=&#34;http://www.novell.com/netware/&#34;&gt;Novell NetWare&lt;/a&gt;, &lt;a href=&#34;http://www.sun.com/software/solaris/&#34;&gt;Solaris&lt;/a&gt;, or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;? Yes, certainly. And yet, at the same time, Linux has strengths all its own as well. This recognition by the ISO of the Linux Standards Base serves to further legitimize Linux as a viable and worthy competitor to the proprietary operating systems listed above.&lt;/p&gt;
+
+&lt;p&gt;(By the way, you&amp;rsquo;ll note that I did not include Novell&amp;rsquo;s &lt;a href=&#34;http://www.novell.com/products/openenterpriseserver/&#34;&gt;Open Enterprise Server&lt;/a&gt; in the list of operating systems above because it is, of course, based on Linux.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux on Laptops</title>
+          <link>http://lowescott.github.io/2005/10/01/linux-on-laptops/</link>
+          <pubDate>Sat, 01 Oct 2005 20:36:15 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/01/linux-on-laptops/</guid>
+          <description>&lt;p&gt;Over the past few months, I&amp;rsquo;ve had the opportunity to install Fedora Core 3 (FC3) on three different laptops from three different manufacturers. So far, FC3 has installed and performed without a hitch. The install went flawlessly on all three systems, the video cards and laptop screens were detected and configured correctly, and an old 802.11b PC Card I had laying around was detected without any problem.&lt;/p&gt;
+
+&lt;p&gt;Perhaps the experts are right; perhaps Linux isn&amp;rsquo;t ready to take on &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Microsoft Windows&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;. If so, it won&amp;rsquo;t be for long. If the open source community continues to drive innovation with solutions like &lt;a href=&#34;http://fedora.redhat.com/&#34;&gt;Fedora Linux&lt;/a&gt;, &lt;a href=&#34;http://www.samba.org/&#34;&gt;Samba&lt;/a&gt;, &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt;, &lt;a href=&#34;http://www.gnome.org/projects/evolution/&#34;&gt;Evolution&lt;/a&gt;, &lt;a href=&#34;http://www.gnome.org/&#34;&gt;GNOME&lt;/a&gt;, &lt;a href=&#34;http://www.kde.org/&#34;&gt;KDE&lt;/a&gt;, and &lt;a href=&#34;http://www.openoffice.org/&#34;&gt;OpenOffice&lt;/a&gt;, Linux will continue to become more and more competitive with more popular operating systems.&lt;/p&gt;
+
+&lt;p&gt;The real key, in my opinion, is in winning the next generation over to the possibility of running something other than Windows. This is where Linux and &lt;a href=&#34;http://www.apple.com/&#34;&gt;Apple&lt;/a&gt; are really having some success; I can&amp;rsquo;t tell you how many reports I&amp;rsquo;ve read about Linux and Mac OS X usage on college campuses. Once you can get people to actually understand that you don&amp;rsquo;t &lt;strong&gt;have&lt;/strong&gt; to run Windows on your computer, then the alternatives start to have a future.&lt;/p&gt;
+
+&lt;p&gt;But alas, I digress. This post is supposed to be about Linux on laptops. Next time you pull out that older laptop that used to run Windows 98 and wonder what you are going to do with it, try installing Linux on it. You may find that old laptop still has some life left in it.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Strange NTPd Problem on CentOS 4.1</title>
+          <link>http://lowescott.github.io/2005/08/16/strange-ntpd-problem-on-centos-41/</link>
+          <pubDate>Tue, 16 Aug 2005 23:58:48 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/16/strange-ntpd-problem-on-centos-41/</guid>
+          <description>&lt;p&gt;So I&amp;rsquo;ve been working with &lt;a href=&#34;http://www.centos.org/&#34;&gt;CentOS&lt;/a&gt;, the &amp;ldquo;free as in free beer&amp;rdquo; equivalent of Red Hat Enterprise Linux, and for the most part I like it. (See &lt;a href=&#34;http://blog.scottlowe.org/2005/08/08/brief-impressions-of-centos-41/&#34;&gt;here&lt;/a&gt; for some additional comments about CentOS 4.1.) However, I&amp;rsquo;ve run into this strange problem with NTPd.&lt;/p&gt;
+
+&lt;p&gt;The problem is it doesn&amp;rsquo;t work. Yes, I&amp;rsquo;ve added the appropriate rules in iptables. Yes, the NTPd daemon is running. Yes, I&amp;rsquo;ve checked connectivity to the time server with which I am trying to synchronize. The &lt;code&gt;ntpdate&lt;/code&gt; utility works like a champ, but NTPd just won&amp;rsquo;t keep the server&amp;rsquo;s time synchronized. OK, am I missing something here? I have &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; and Red Hat Linux 9.0 servers that synchronize just fine, but not this server.&lt;/p&gt;
+
+&lt;p&gt;Finally, fed up with the problems, I just scheduled an hourly cron job with &lt;code&gt;ntpdate&lt;/code&gt;. It&amp;rsquo;s not ideal, but it works.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>OpenSuSE Now Up and Running</title>
+          <link>http://lowescott.github.io/2005/08/11/opensuse-now-up-and-running/</link>
+          <pubDate>Thu, 11 Aug 2005 18:21:21 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/11/opensuse-now-up-and-running/</guid>
+          <description>&lt;p&gt;Mentioned earlier in &lt;a href=&#34;http://blog.scottlowe.org/2005/08/03/novell-to-broaden-suses-reach/&#34;&gt;this posting&lt;/a&gt;, Novell&amp;rsquo;s &lt;a href=&#34;http://www.opensuse.org/&#34;&gt;OpenSuSE&lt;/a&gt; site is now up and running, offering free downloads of SuSE 9.3 and beta versions of SuSE 10.0. I hope that &lt;a href=&#34;http://www.novell.com/&#34;&gt;Novell&lt;/a&gt; is as successful with OpenSuSE as &lt;a href=&#34;http://www.redhat.com/&#34;&gt;Red Hat&lt;/a&gt; was with Fedora. I may just give SuSE 9.3 a try to see if I like it.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Brief Impressions of CentOS 4.1</title>
+          <link>http://lowescott.github.io/2005/08/08/brief-impressions-of-centos-41/</link>
+          <pubDate>Mon, 08 Aug 2005 20:44:32 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/08/brief-impressions-of-centos-41/</guid>
+          <description>&lt;p&gt;As I mentioned in an &lt;a href=&#34;http://blog.scottlowe.org/2005/07/13/trying-a-new-linux-distribution/&#34;&gt;earlier entry&lt;/a&gt;, I&amp;rsquo;m trying out the &lt;a href=&#34;http://www.centos.org/&#34;&gt;CentOS&lt;/a&gt; distribution, a &amp;ldquo;clone&amp;rdquo; of Red Hat Enterprise Linux. So far, I&amp;rsquo;ve been pretty impressed with it. Granted, I was coming from Red Hat Linux 9.0 (RH9), a (now) old distribution using the 2.4 kernel. So, many of the changes I&amp;rsquo;m seeing with CentOS 4.1 may be more due to the fact that it is running the 2.6.x kernel, has SELinux installed, etc., rather than anything else. It seems to boot more slowly than RH9, but is otherwise reasonably equivalent with regards to performance and memory utilization. I&amp;rsquo;m already using a mix of RH9 and Fedora Core packages on the existing servers, so there isn&amp;rsquo;t that much new (with regards to packages) with CentOS 4.1 that I don&amp;rsquo;t already use.&lt;/p&gt;
+
+&lt;p&gt;Barring some unforeseen problem that I have not yet encountered, I will probably migrate the majority of the Linux servers I currently maintain over to CentOS 4.1 over the next few months.&lt;/p&gt;
+
+&lt;p&gt;By the way, it doesn&amp;rsquo;t hurt that &lt;a href=&#34;http://asteriskathome.sourceforge.net/&#34;&gt;Asterisk@Home&lt;/a&gt; (the &amp;ldquo;pre-packaged&amp;rdquo; VoIP PBX installation) also runs on CentOS.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Novell to Broaden SuSE&#39;s Reach</title>
+          <link>http://lowescott.github.io/2005/08/03/novell-to-broaden-suses-reach/</link>
+          <pubDate>Wed, 03 Aug 2005 18:09:19 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/03/novell-to-broaden-suses-reach/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;ve always heard good things about SuSE, but have never had the opportunity to work with it in greater depth. Now, &lt;a href=&#34;http://www.novell.com&#34;&gt;Novell&lt;/a&gt; has &lt;a href=&#34;http://www.eweek.com/article2/0,1895,1843097,00.asp&#34;&gt;detailed its plans&lt;/a&gt; to open SuSE to community development in a manner similar to the approach used by &lt;a href=&#34;http://www.redhat.com&#34;&gt;Red Hat&lt;/a&gt; with its &lt;a href=&#34;http://www.fedora.redhat.com&#34;&gt;Fedora Project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I think it&amp;rsquo;s a good thing. Anything that Novell can do to broaden the reach and influence of SuSE will certainly help both Novell and the SuSE Linux distribution itself. As it gains more attention, people will be more likely to develop &lt;em&gt;on&lt;/em&gt; and &lt;em&gt;for&lt;/em&gt; SuSE.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Wrap-Up</title>
+          <link>http://lowescott.github.io/2005/07/22/linux-ad-integration-wrap-up/</link>
+          <pubDate>Fri, 22 Jul 2005 00:19:08 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/22/linux-ad-integration-wrap-up/</guid>
+          <description>&lt;p&gt;Well, my Linux-AD integration task is pretty much complete. I have three Linux servers authenticating via &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; to Active Directory, and using LDAP for name/group resolution. Only one Linux server remains; I need to do some research on how &lt;a href=&#34;http://asg.web.cmu.edu/sasl/&#34;&gt;SASL&lt;/a&gt; with interact with PAM before I can switch over that particular server. My &lt;a href=&#34;http://www.openbsd.org&#34;&gt;OpenBSD&lt;/a&gt; server I&amp;rsquo;m going to leave alone for now; perhaps later I&amp;rsquo;ll get it integrated as well.&lt;/p&gt;
+
+&lt;p&gt;Next, I think I&amp;rsquo;m going to see what is involved in using RADIUS to authenticate VPN tunnels on my hardware firewall.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Minor Linux-AD Hiccup Fixed (Hopefully)</title>
+          <link>http://lowescott.github.io/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/</link>
+          <pubDate>Mon, 18 Jul 2005 00:18:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/</guid>
+          <description>&lt;p&gt;I think I have resolved one minor Linux-AD integration hiccup. In setting up the Kerberos authentication, various instructions I had found (including some from Microsoft) indicated I needed to create a &lt;em&gt;user&lt;/em&gt; account for the Linux servers, then use &lt;code&gt;ktpass&lt;/code&gt; to generate the Kerberos keytab. This works, but being the stickler for detail that I am, I really wanted to use a computer account instead of a user account.&lt;/p&gt;
+
+&lt;p&gt;After fiddling with it for a while, I finally managed to make it work. The &lt;code&gt;ktpass&lt;/code&gt; command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$  
+-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL  
+-out filename
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The missing piece, for me, was specifying &lt;code&gt;DOMAIN\name$&lt;/code&gt; for the mapuser parameter. Without it, the command kept generating an error.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know for sure that this will work, but I will be testing this within the next day or so to see how it goes.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Success!</title>
+          <link>http://lowescott.github.io/2005/07/17/linux-ad-integration-success/</link>
+          <pubDate>Sun, 17 Jul 2005 22:31:52 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/17/linux-ad-integration-success/</guid>
+          <description>&lt;p&gt;Well, limited success, anyway. I have managed to get Linux authentication to occur via &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; against Active Directory. LDAP is used to lookup the user and group information. Using pam_krb5, authentication occurs via Kerberos to an Active Directory DC for any PAM-aware application. I&amp;rsquo;m sure that I&amp;rsquo;ll find some hiccups along the way, but so far things look good. I only have 1 server configured this way for now (a non-essential server), but after some additional testing I&amp;rsquo;ll expand this to the remainder of my Linux servers.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll post more details here and/or on the &lt;a href=&#34;http://www.mercurionsystems.com/index.html&#34;&gt;Mercurion Systems&lt;/a&gt; web site once all the bugs have been worked out. My thanks go out to the many, many individuals who posted information on using Kerberos and LDAP with Active Directory; this would not have been possible without their assistance.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Trying a New Linux Distribution</title>
+          <link>http://lowescott.github.io/2005/07/13/trying-a-new-linux-distribution/</link>
+          <pubDate>Wed, 13 Jul 2005 22:57:06 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/trying-a-new-linux-distribution/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;m not a Linux expert, so I haven&amp;rsquo;t really spent a great deal of time wandering the various Linux distributions to see which one(s) I really like. I have been primarily using Red Hat Linux 9.0 (RH9), even though it&amp;rsquo;s an older distribution with an older kernel that is no longer supported. I tried the Fedora Core distributions, but just kept coming back to trusty old RH9.&lt;/p&gt;
+
+&lt;p&gt;Rather than continue to try to shoehorn RPMs built for one of the various Fedora Core versions onto RH9, I&amp;rsquo;ve decided I&amp;rsquo;m going to try a new distribution. But before you congratulate me for venturing into the brave new world of Linux distributions, you should wait to hear what I&amp;rsquo;m going to try next. I&amp;rsquo;m going to try &lt;a href=&#34;http://www.centos.org/&#34;&gt;CentOS&lt;/a&gt;, a free redistribution of the source RPMs that comprise RHEL. Basically, it&amp;rsquo;s Red Hat Enterprise Linux, but with all references, branding, artwork, etc., for Red Hat removed from the source RPMs and then recompiled. I&amp;rsquo;m downloading the ISO images for CentOS 4.1 right now from an FTP mirror at &lt;a href=&#34;http://www.ncsu.edu&#34;&gt;North Carolina State University&lt;/a&gt; (Go Wolfpack!). I&amp;rsquo;ll post my impressions of CentOS 4.1 once I get it installed and running. (That&amp;rsquo;s assuming I can make it work under &lt;a href=&#34;http://www.vmware.com&#34;&gt;VMware&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;In the meantime, I am continuing to explore more uses for &lt;a href=&#34;http://www.openbsd.org&#34;&gt;OpenBSD&lt;/a&gt;, which I find that I really enjoy working with.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux Better Than Windows?</title>
+          <link>http://lowescott.github.io/2005/07/06/linux-better-than-windows/</link>
+          <pubDate>Wed, 06 Jul 2005 14:31:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/06/linux-better-than-windows/</guid>
+          <description>&lt;p&gt;A short while back &lt;a href=&#34;http://www.newsforge.com/&#34;&gt;NewsForge&lt;/a&gt; published an article comparing Windows to Linux. What&amp;rsquo;s so unusual about that, you may ask? This article, titled &amp;ldquo;&lt;a href=&#34;http://os.newsforge.com/article.pl?sid=05/05/18/2033216&#34;&gt;Windows rapidly approaching desktop usability&lt;/a&gt;,&amp;rdquo; takes a look at Windows as if &lt;em&gt;it&lt;/em&gt;, not Linux, were the upstart newcomer in the OS lineup. This is a viewpoint not often considered, and it is a valid viewpoint once you get over the &lt;strong&gt;presumption&lt;/strong&gt; that Windows should be the default OS on your computer.&lt;/p&gt;
+
+&lt;p&gt;There are a couple of valid points made in the article. To quote:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;Microsoft Windows XP, Home Edition, with Service Pack 2, is a tremendous improvement over previous Windows versions when it comes to stability and appearance, but it still has many glitches that keep it from being competitive with GNU/Linux for everyday users, including a tedious installation procedure, lack of productivity software included with the operating system, hardware compatibility problems, and a price so much higher than any of the Linux distributions&amp;hellip;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Don&amp;rsquo;t get me wrong; I&amp;rsquo;m not advocating that everyone out there should suddenly ditch &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; and migrate to Linux. Are there situations where Linux is a better fit than Windows? Of course. Likewise, there are situations where Windows is a better fit than Linux. And, of course, there&amp;rsquo;s always &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; to consider as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Not the Same</title>
+          <link>http://lowescott.github.io/2005/06/25/not-the-same/</link>
+          <pubDate>Sat, 25 Jun 2005 22:58:42 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/25/not-the-same/</guid>
+          <description>&lt;p&gt;I just finished installing the latest version (3.7) of &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, and I was reminded of just how different OpenBSD and Linux really are. Those on the &amp;ldquo;outside&amp;rdquo; just see them as Unix-like operating systems, but they really are much more different than you might expect. I&amp;rsquo;m no expert in either (I just dabble), but the differences are even evident to me. I haven&amp;rsquo;t yet had the opportunity to experiment with &lt;a href=&#34;http://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt; or &lt;a href=&#34;http://www.netbsd.org/&#34;&gt;NetBSD&lt;/a&gt;, so I don&amp;rsquo;t know if these differences are particular to OpenBSD or to all BSDs when compared to Linux.&lt;/p&gt;
+
+&lt;p&gt;In any case, I find that I really like OpenBSD. I think that the more that I use OpenBSD, the more ways I will find that I &lt;em&gt;can&lt;/em&gt; use OpenBSD. It won&amp;rsquo;t replace Linux in my environment, but it is a very worthy addition to the network.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

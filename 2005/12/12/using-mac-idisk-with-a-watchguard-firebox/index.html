@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Using .Mac iDisk with a WatchGuard Firebox &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Using .Mac iDisk with a WatchGuard Firebox</h1>
+  <span class="post-date">Dec 12, 2005 12:37 AM</span>
+  <p>One of the strengths of the <a href="http://www.watchguard.com/">WatchGuard</a> <a href="http://www.watchguard.com/products/appliances.asp">Firebox</a> series of firewalls is the inclusion of application-layer proxies for protocols such as SMTP, FTP, and HTTP. Whereas ordinary packet filtering firewalls and stateful inspection firewalls only control traffic based on IP address or TCP/UDP port number, application-layer proxies like those included in the Firebox look deeper into the packet to make decisions on information such as URL or MIME content type (for an HTTP proxy, for example).</p>
+
+<p>However, this advantage also becomes a disadvantage as many application-layer proxies may not understand or be compatible with protocol-specific extensions. In this particular case, it&rsquo;s the iDisk service provided by Apple&rsquo;s <a href="http://www.mac.com/">.Mac</a> subscription service. The iDisk service uses <a href="http://www.webdav.org/">WebDAV</a>, an extension of the HTTP/1.1 protocol specification. It appears that, in general, most WebDAV services operate properly through the Fireboxs HTTP proxy (although some issues with Microsoft Exchange&rsquo;s Outlook Web Access were reported with earlier versions of the WatchGuard Firebox System software).</p>
+
+<p>The iDisk service, though, apparently uses some non-RFC-compliant headers (note that this was <em>not</em> confirmed with a packet capture). As a result, the Proxied-HTTP service (which employs, as the name suggests, an application-layer HTTP proxy) prevents these headers from being passed and therefore prevents iDisk from working.</p>
+
+<p>To make iDisk work from behind a WatchGuard Firebox firewall, one of several steps must be taken:</p>
+
+<ul>
+<li><p>Use the Filtered-HTTP service, which does not employ an application-layer HTTP proxy and therefore would not interfere with iDisk or other WebDAV-based applications or services.</p></li>
+
+<li><p>Modify the default properties of the Proxied-HTTP service to allow unknown headers.</p></li>
+</ul>
+
+<p>Since the Proxied-HTTP service also provides for content filtering and reporting, it is generally preferred to use the HTTP proxy instead of an ordinary HTTP packet filter. The first option is therefore not the ideal solution.</p>
+
+<p>Fortunately, the behavior of the Proxied-HTTP service is somewhat configurable. In order to make iDisk work with the HTTP proxy, the &ldquo;Remove unknown headers&rdquo; option must be unchecked in the configuration for the HTTP proxy. By unchecking the &ldquo;Remove unknown headers&rdquo; option, the Firebox will allow non-RFC-compliant HTTP headers to pass through the firewall, and iDisk will work correctly.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

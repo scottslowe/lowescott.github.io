@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/kde/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-01 21:52:39 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Updating Kubuntu to KDE 3.5</title>
+          <link>http://lowescott.github.io/2005/12/01/updating-kubuntu-to-kde-35/</link>
+          <pubDate>Thu, 01 Dec 2005 21:52:39 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/01/updating-kubuntu-to-kde-35/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://kubuntu.org/&#34;&gt;Kubuntu&lt;/a&gt; 5.10, the &lt;a href=&#34;http://www.kde.org/&#34;&gt;KDE&lt;/a&gt;-based variant of &lt;a href=&#34;http://www.ubuntulinux.org/&#34;&gt;Ubuntu&lt;/a&gt;, normally comes with KDE 3.4.3. With KDE 3.5.0 just recently released, however, I wanted to update Kubuntu to use the latest version of KDE. Here&amp;rsquo;s what I had to do to make it work.&lt;/p&gt;
+
+&lt;p&gt;First, from &lt;a href=&#34;http://kubuntu.org/announcements/kde-35.php&#34;&gt;this page&lt;/a&gt;, I downloaded and added the appropriate GPG key. Once that was done, I used &amp;ldquo;apt-get update&amp;rdquo; to download the latest package information and &amp;ldquo;apt-get upgrade&amp;rdquo; to upgrade packages. That upgraded most of KDE, but there were a few packages that still refused to upgrade (they were reported by apt-get as &amp;ldquo;held back&amp;rdquo;).&lt;/p&gt;
+
+&lt;p&gt;After poking around with apt-get for a while, I discovered that there was one missing file&amp;mdash;libgnokii2&amp;mdash;that couldn&amp;rsquo;t be found in the apt-get sources. I manually reviewed the apt-get sources and finally found this package in the universe section of the main Ubuntu apt-get source. I edited /etc/apt/sources.list to enable the other sections, then manually installed the missing file with these commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get clean  
+apt-get update  
+apt-get install libgnokii2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then edited &lt;code&gt;/etc/apt/sources.list&lt;/code&gt; again to disable the other sources and upgraded the remainder of the KDE packages:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get clean  
+apt-get update  
+apt-get upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This last round of apt-get removed a few obsolete packages and then updated the remainder of the KDE packages.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know if this is the &amp;ldquo;correct&amp;rdquo; way of doing things, but it seemed to be the only way to make it work as anticipated. If anyone has a better way, please let me know.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Kubuntu 5.10</title>
+          <link>http://lowescott.github.io/2005/12/01/kubuntu-510/</link>
+          <pubDate>Thu, 01 Dec 2005 17:24:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/01/kubuntu-510/</guid>
+          <description>&lt;p&gt;After wrestling with installing, configuring, and supporting Fedora Core 3 on an older Compaq Armada E500 laptop, I decided to break with my Red Hat/Fedora legacy and try &lt;a href=&#34;http://kubuntu.org/&#34;&gt;Kubuntu&lt;/a&gt;, the &lt;a href=&#34;http://www.kde.org/&#34;&gt;KDE&lt;/a&gt;-based &lt;a href=&#34;http://www.ubuntulinux.org/&#34;&gt;Ubuntu&lt;/a&gt; variation. Ubuntu itself is a relative newcomer to the Linux distribution arena, based on (as I understand it) &lt;a href=&#34;http://www.debian.org/&#34;&gt;Debian&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In previous stints using Linux as my desktop OS, I&amp;rsquo;d always been partial to KDE instead of &lt;a href=&#34;http://www.gnome.org/&#34;&gt;GNOME&lt;/a&gt;. Some would say that it&amp;rsquo;s because KDE has traditionally been more &amp;ldquo;Windows-like&amp;rdquo; than the other Linux graphical environments; perhaps that&amp;rsquo;s the case. I&amp;rsquo;ve typically found KDE easier to work with, and since this laptop would eventually be used by the kids I felt like ease of use was important.&lt;/p&gt;
+
+&lt;p&gt;The install went very quickly and very smoothly. When the install was done, I then proceeded to update KDE to version 3.5.0 (which had just been released a few days before). Along the way, I learned a handy piece of information about HTTP proxies and command-line utilities (I&amp;rsquo;ll soon post information on that as well). Eventually, I managed to get apt-get to download and install the updated KDE 3.5 packages. I rebooted the system and found that I was now running the updated version of KDE. (Side note: There are still some KDE packages that won&amp;rsquo;t upgrade for some reason; I&amp;rsquo;m currently working on resolving that issue.)&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s still too early to tell for certain, but I may just have found a new desktop Linux version.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

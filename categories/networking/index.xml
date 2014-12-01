@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/categories/networking/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-13 11:18:37 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Application-Specific VPNs</title>
+          <link>http://lowescott.github.io/2005/12/13/application-specific-vpns/</link>
+          <pubDate>Tue, 13 Dec 2005 11:18:37 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/13/application-specific-vpns/</guid>
+          <description>
+
+&lt;p&gt;I coined the term &amp;ldquo;application specific VPNs&amp;rdquo; as I began exploring the many uses of tools such as SSH (the &lt;a href=&#34;http://www.openssh.org/&#34;&gt;OpenSSH&lt;/a&gt; implementation, in particular) and &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; (the open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Secure_Sockets_Layer&#34;&gt;SSL&lt;/a&gt; wrapper). An &amp;ldquo;application specific VPN&amp;rdquo; is a technique for employing encrypted communication with a particular remote application that does not affect the operation of other applications (local or remote) on the system.&lt;/p&gt;
+
+&lt;p&gt;In general, most VPNs employ technology such as &lt;a href=&#34;http://en.wikipedia.org/wiki/PPTP&#34;&gt;PPTP&lt;/a&gt; or &lt;a href=&#34;http://en.wikipedia.org/wiki/Ipsec&#34;&gt;IPSec&lt;/a&gt;. These protocols usually affect &lt;em&gt;all&lt;/em&gt; traffic originating from that system (unless we use split tunneling). With an application specific VPN, only particular types of traffic are affected, and these particular types of traffic are wrapped in an encrypted SSH or SSL tunnel using either OpenSSH or Stunnel, respectively. Other types of traffic are unaffected.&lt;/p&gt;
+
+&lt;p&gt;While this may seem old hat to long-time Linux, Unix, or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; users, this is a relatively new concept to other platforms. Being a (fairly) new convert to Mac OS X myself, I found myself enjoying the tremendous flexibility offered by application specific VPNs. However, this functionality is certainly not limited to these platforms, and it is possible for &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; users to utilize this functionality as well.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Some Examples&lt;/h3&gt;
+
+&lt;p&gt;Here are a few examples of how you can use application specific VPNs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=PROHOME_Main&#34;&gt;Citrix Presentation Server&lt;/a&gt;: Users can wrap Citrix ICA traffic in SSL using Stunnel; this avoids the need to pay for commercial solutions (although, quite honestly, the commercial solutions are typically easier to deploy and manage).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;E-Mail: Lots of people talk about securing e-mail, but not usually in the context of securing client-to-server traffic. With Stunnel, you can add SSL support for IMAP, POP, and/or SMTP even if the server doesn&amp;rsquo;t support SSL natively. In fact, you can add Stunnel to &lt;a href=&#34;http://www.microsoft.com/exchange/default.mspx&#34;&gt;Microsoft Exchange&lt;/a&gt; to help bolster that product&amp;rsquo;s built-in support for SSL (such as using SMTPS instead of STARTTLS for encrypting SMTP traffic).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Remote Desktop: This is a great technique for sysadmins. Need to use Remote Desktop to manage a Windows-based server remotely, but don&amp;rsquo;t want to run into security problems? Use Stunnel or OpenSSH to encrypt the RDP traffic. Stunnel, in my opinion, is particularly good here, since it&amp;rsquo;s incredibly easy to use the Windows port of Stunnel to establish an SSL listener on an arbitrary high port for this very purpose.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Using Stunnel for SSL-based Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;On Windows, there is no graphical user interface (GUI) for configuring Stunnel; all configuration must be done with the &lt;code&gt;stunnel.conf&lt;/code&gt; configuration file. A sample &lt;code&gt;stunnel.conf&lt;/code&gt; file is found below; this file listens on TCP port 1494 and forwards traffic to TCP port 3389 on the same system. (Note that this would be a sample &lt;code&gt;stunnel.conf&lt;/code&gt; file for a server-side configuration.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CApath = c:\windows\system32\stunnel  
+cert = c:\windows\system32\stunnel\stunnel.pem  
+client = no  
+service = SSLTunnel  
+[rdp]  
+accept = 1494  
+connect = 3389
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once Stunnel has been configured, running &lt;code&gt;stunnel --install&lt;/code&gt; will install it as a system service; this service can then be stopped and started through the Services MMC console just like any other background service.&lt;/p&gt;
+
+&lt;p&gt;Of course, this is only half the work; you&amp;rsquo;ll also need an equivalent Stunnel configuration on the client side, since the Microsoft RDP client (the &lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=80111f21-d48d-426e-96c2-08aa2bd23a49&amp;amp;DisplayLang=en&#34;&gt;Windows version&lt;/a&gt; or the &lt;a href=&#34;http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient&#34;&gt;Mac OS X&lt;/a&gt; version) does not support SSL. Also, note that the SSL certificate used by Stunnel needs to be in PEM format (which is a nice lead-in to my article discussing the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/02/certificate-conversion-using-openssl/&#34;&gt;conversion of certificates&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, there is a graphical utility for managing Stunnel called SSL Enabler. (Note that I was not able to find a home page for this utility; downloads can be found at various sites.)&lt;/p&gt;
+
+&lt;p&gt;On Linux, the configuration again involves editing the &lt;code&gt;stunnel.conf&lt;/code&gt; file and launching stunnel (either in the foreground or as a daemon). I&amp;rsquo;m not aware of any GUI utilities for configuring Stunnel on Linux, but that certainly doesn&amp;rsquo;t mean they don&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Using SSH for Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;As with Stunnel, it&amp;rsquo;s also possible to use SSH to create application specific VPNs. Mac OS X comes with OpenSSH, as do most distributions of Linux and various flavors of BSD. Windows users can also find various ports of OpenSSH and utilities such as &lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/putty/&#34;&gt;PuTTY&lt;/a&gt; that make it possible to use SSH for application specific VPNs as well.&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, the following command in Terminal will create an application specific VPN to encrypt IMAP traffic to a remote server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh -L 1143:imapserver.domain.com:143 -N -f user@sshserver.domain.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This same technique could be used to encrypt WebDAV traffic to a remote web server, other types of mail traffic (POP3 or SMTP, for example), RDP (for Remote Desktop), etc. Note that it doesn&amp;rsquo;t work well with HTTP traffic that requires the use of host headers.&lt;/p&gt;
+
+&lt;p&gt;There are a few graphical utilities on Mac OS X for managing SSH tunnels; these include &lt;a href=&#34;http://projects.tynsoe.org/en/stm/&#34;&gt;SSH Tunnel Manager&lt;/a&gt; and &lt;a href=&#34;http://www.leapingbytes.com/almostvpn&#34;&gt;AlmostVPN&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Not being a regular day-to-day Linux user (not on the desktop, at least), I don&amp;rsquo;t know of any SSH tunnel management applications, but I would be very surprised if they didn&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Creating Site-to-Site Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;Most of the examples so far have been using SSH and/or Stunnel to connect endpoints (i.e., a single laptop or desktop computer) to a remote resource via an application specific VPN. However, it&amp;rsquo;s also easily possible to create application specific site-to-site VPNs, whose purpose is to secure only a particular type of traffic between two locations.&lt;/p&gt;
+
+&lt;p&gt;Consider this example. CompanyA wants to send e-mail to CompanyB, but wants that e-mail to be secure. If both mail servers support TLS, then the organizations could use TLS to secure the SMTP traffic. If not, then the companies can use Stunnel to establish an SSL connection between two systems. HostA at CompanyA can use Stunnel as a client side application to listen for unencrypted connections and pass them as encrypted connections to HostB at CompanyB. HostB at CompanyB is using Stunnel to listen for encrypted connections and passes them unencrypted to the mail server at CompanyB. With a simple configuration, the mail servers at both companies can be configured to pass mail connections for other company through the Stunnel connection. With no additional cost and very little configuration, all e-mail traffic between the two organizations has now been secured. All this without the complexity of a typical B-to-B VPN and the associated access controls.&lt;/p&gt;
+
+&lt;p&gt;For more information, documents on &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-ssh.doc&#34;&gt;application specific VPNs with SSH&lt;/a&gt; and &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-stunnel.doc&#34;&gt;application specific VPNs with Stunnel&lt;/a&gt; are available.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Using .Mac iDisk with a WatchGuard Firebox</title>
+          <link>http://lowescott.github.io/2005/12/12/using-mac-idisk-with-a-watchguard-firebox/</link>
+          <pubDate>Mon, 12 Dec 2005 00:37:38 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/12/using-mac-idisk-with-a-watchguard-firebox/</guid>
+          <description>&lt;p&gt;One of the strengths of the &lt;a href=&#34;http://www.watchguard.com/&#34;&gt;WatchGuard&lt;/a&gt; &lt;a href=&#34;http://www.watchguard.com/products/appliances.asp&#34;&gt;Firebox&lt;/a&gt; series of firewalls is the inclusion of application-layer proxies for protocols such as SMTP, FTP, and HTTP. Whereas ordinary packet filtering firewalls and stateful inspection firewalls only control traffic based on IP address or TCP/UDP port number, application-layer proxies like those included in the Firebox look deeper into the packet to make decisions on information such as URL or MIME content type (for an HTTP proxy, for example).&lt;/p&gt;
+
+&lt;p&gt;However, this advantage also becomes a disadvantage as many application-layer proxies may not understand or be compatible with protocol-specific extensions. In this particular case, it&amp;rsquo;s the iDisk service provided by Apple&amp;rsquo;s &lt;a href=&#34;http://www.mac.com/&#34;&gt;.Mac&lt;/a&gt; subscription service. The iDisk service uses &lt;a href=&#34;http://www.webdav.org/&#34;&gt;WebDAV&lt;/a&gt;, an extension of the HTTP/1.1 protocol specification. It appears that, in general, most WebDAV services operate properly through the Fireboxs HTTP proxy (although some issues with Microsoft Exchange&amp;rsquo;s Outlook Web Access were reported with earlier versions of the WatchGuard Firebox System software).&lt;/p&gt;
+
+&lt;p&gt;The iDisk service, though, apparently uses some non-RFC-compliant headers (note that this was &lt;em&gt;not&lt;/em&gt; confirmed with a packet capture). As a result, the Proxied-HTTP service (which employs, as the name suggests, an application-layer HTTP proxy) prevents these headers from being passed and therefore prevents iDisk from working.&lt;/p&gt;
+
+&lt;p&gt;To make iDisk work from behind a WatchGuard Firebox firewall, one of several steps must be taken:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Use the Filtered-HTTP service, which does not employ an application-layer HTTP proxy and therefore would not interfere with iDisk or other WebDAV-based applications or services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Modify the default properties of the Proxied-HTTP service to allow unknown headers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since the Proxied-HTTP service also provides for content filtering and reporting, it is generally preferred to use the HTTP proxy instead of an ordinary HTTP packet filter. The first option is therefore not the ideal solution.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, the behavior of the Proxied-HTTP service is somewhat configurable. In order to make iDisk work with the HTTP proxy, the &amp;ldquo;Remove unknown headers&amp;rdquo; option must be unchecked in the configuration for the HTTP proxy. By unchecking the &amp;ldquo;Remove unknown headers&amp;rdquo; option, the Firebox will allow non-RFC-compliant HTTP headers to pass through the firewall, and iDisk will work correctly.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Cisco PIX VPN and Active Directory Integration</title>
+          <link>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</link>
+          <pubDate>Tue, 22 Nov 2005 19:01:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</guid>
+          <description>
+
+&lt;p&gt;Rather than publishing this information in PDF form on my business website, I&amp;rsquo;ve decided to try something new and post it here as a blog entry. So, here goes.&lt;/p&gt;
+
+&lt;p&gt;This information assumes that you have some experience with the Cisco PIX firewall (i.e., you know how to enter configuration commands and have a basic idea of what the configuration commands actually do) as well as some experience with Windows and Active Directory.&lt;/p&gt;
+
+&lt;p&gt;With that information in hand, let&amp;rsquo;s get started.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Configuring the Cisco PIX&lt;/h2&gt;
+
+&lt;p&gt;First, we&amp;rsquo;ll need to setup the PIX firewall. Use the commands below to configure the PIX for PPTP-based VPN connections that will authenticate against an Active Directory back-end.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ip local pool vpn-pool 10.10.10.1-10.10.10.254  
+aaa-server vpn-auth inside host 10.10.10.5 secretkey  
+aaa-server vpn-auth inside host 10.10.10.6 secretkey  
+aaa-server vpn-auth protocol radius  
+vpdn group vpn-pptp-group accept dialin pptp  
+vpdn group vpn-pptp-group ppp authentication mschap  
+vpdn group vpn-pptp-group ppp encryption mppe 128 required  
+vpdn group vpn-pptp-group client configuration \  
+address local vpn-pool  
+vpdn group vpn-pptp-group client configuration \  
+dns 10.10.10.5 10.10.10.6  
+vpdn group vpn-pptp-group client configuration \  
+wins 10.10.10.6 10.10.10.5  
+vpdn group vpn-pptp-group client authentication aaa vpn-auth  
+vpdn enable outside  
+sysopt connect permit-pptp  
+access-list acl-nat0 permit ip 10.10.1.0 255.255.255.0 \  
+10.10.10.0 255.255.255.0  
+nat (inside) 0 access-list acl-nat0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(Note that I have placed a backslash to indicate text that is wrapped onto two lines here but should be entered all on a single line in the PIX configuration.)&lt;/p&gt;
+
+&lt;p&gt;In this configuration, replace the IP addresses on lines 2 and 3 (the &lt;code&gt;aaa-server vpn-auth&lt;/code&gt; commands) with the IP addresses of the servers running Internet Authentication Service (IAS) on Windows. See the next section for more information on configuring IAS.&lt;/p&gt;
+
+&lt;p&gt;On those same lines, replace the text &lt;code&gt;secretkey&lt;/code&gt; with the RADIUS shared secret that will be used when configuring the RADIUS/IAS server in the next section.&lt;/p&gt;
+
+&lt;p&gt;Likewise, replace the IP addresses on lines 9 and 10 (the &lt;code&gt;vdpn group vpn-pptp-group client configuration&lt;/code&gt; lines that pass out the DNS and WINS servers to VPN clients) with the IP addresses of your DNS and WINS servers, respectively.&lt;/p&gt;
+
+&lt;p&gt;That should do it. Save the configuration to the PIX and then move on to configuring IAS.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Configuring Internet Authentication Service&lt;/h2&gt;
+
+&lt;p&gt;Before doing anything else, create a new global security group in Active Directory. Call it something like &amp;ldquo;VPN Users&amp;rdquo; or similar. We&amp;rsquo;ll use this group later as an additional security check in validating VPN connections.&lt;/p&gt;
+
+&lt;p&gt;Next, install IAS using the Add/Remove Programs icon in Control Panel. Once it has been installed, launch it from the Administrative Tools folder on the Start Menu and we&amp;rsquo;ll proceed with configuring it for authenticating VPN connections to the PIX firewall.&lt;/p&gt;
+
+&lt;p&gt;First, we need to grant IAS permission to read dial-in properties from user accounts in Active Directory. To do this, right-click on the &amp;ldquo;Internet Authentication Service (Local)&amp;rdquo; and select &amp;ldquo;Register Server in Active Directory&amp;rdquo;. Select Yes (or OK) if prompted to confirm.&lt;/p&gt;
+
+&lt;p&gt;With that done, we can now configure the PIX firewall as a RADIUS client. Right-click on RADIUS Clients and select New RADIUS Client. In the wizard, specify the IP address (or DNS name) of the PIX firewall&amp;rsquo;s internal IP address and the shared secret. Note that this shared secret is the same secret key specified in the PIX configuration above. RADIUS clients use this to authenticate to RADIUS servers, so make it a reasonably strong password.&lt;/p&gt;
+
+&lt;p&gt;Now create a remote access policy. Right-click on Remote Access Policies and select New Remote Access Policy. In the wizard, specify a name, select to create a custom policy, and then add the following conditions to the policy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;NAS-IP-Address: This will be the IP address of the PIX firewall&amp;rsquo;s internal interface. This helps to ensure that this policy only applies to VPN requests from this firewall and not from any other RADIUS client.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Windows-Groups: This should be the security group created earlier. Any user that should be allowed to authenticate on a VPN connection will need to be a member of this group.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The rest of the policy should be very straightforward. Make this policy the first policy (using the Move Up/Move Down commands in the IAS console), add a user to the group created earlier, and then test your connection. Remote systems attempting to connect via PPTP should now be able to authenticate the VPN connection using their Active Directory usernames and passwords.&lt;/p&gt;
+
+&lt;p&gt;Although this was written from the perspective of authenticating PPTP connections, the process should be very similar for IPSec VPN clients as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>OpenBSD pcn0 Driver Issue Resolved</title>
+          <link>http://lowescott.github.io/2005/11/04/openbsd-pcn0-driver-issue-resolved/</link>
+          <pubDate>Fri, 04 Nov 2005 08:48:20 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/04/openbsd-pcn0-driver-issue-resolved/</guid>
+          <description>&lt;p&gt;Well, sort of resolved. I was never able to make the &lt;code&gt;pcn&lt;/code&gt; driver (from &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; 3.8) actually work under &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, but I did find information on how to disable the &lt;code&gt;pcn&lt;/code&gt; driver and revert to the older &lt;code&gt;le&lt;/code&gt; driver.&lt;/p&gt;
+
+&lt;p&gt;This &lt;a href=&#34;http://archives.neohapsis.com/archives/openbsd/2005-08/1314.html&#34;&gt;archived Neohapsis discussion&lt;/a&gt;, followed by a quick e-mail exchange with the author of the thread (who, thankfully, was very responsive and very helpful) led me to the solution. Some of it I had to improvise on the fly, but here&amp;rsquo;s the overall process:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Boot from the OpenBSD 3.8 boot CD image (I pointed the virtual CD-ROM drive in the VM directly to the corresponding ISO image).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At the OpenBSD &amp;ldquo;boot&amp;gt;&amp;rdquo; prompt, type &amp;ldquo;-c&amp;rdquo; and press Enter. This takes you into User Kernel Config, or UKC.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At the UKC prompt, type &amp;ldquo;disable pcn&amp;rdquo; to disable the &lt;code&gt;pcn&lt;/code&gt; driver.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Type &amp;ldquo;quit&amp;rdquo; at the next UKC prompt to exit the kernel config and proceed with the boot process. If you watch the boot process, you will see OpenBSD load the &lt;code&gt;le&lt;/code&gt; driver and identify the virtual NIC as &lt;code&gt;le1&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That&amp;rsquo;s all well and good, but how do you make the changes stick between reboots? Here&amp;rsquo;s how.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Once you&amp;rsquo;ve gotten OpenBSD fully installed and are rebooting for the first time after installation, follow the steps above to use the &lt;code&gt;le&lt;/code&gt; driver for the next reboot.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use the &amp;ldquo;config -e -o nbsd bsd&amp;rdquo; command (see the relevant &lt;a href=&#34;http://www.openbsd.org/cgi-bin/man.cgi?query=config&amp;amp;apropos=0&amp;amp;sektion=0&amp;amp;manpath=OpenBSD+3.8&amp;amp;arch=i386&amp;amp;format=html&#34;&gt;man page&lt;/a&gt; for details) to modify the kernel again, only this time saving the changes to the file named &amp;ldquo;nbsd&amp;rdquo;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Upon the next reboot after using the config command to create a new kernel file, specify the name of that new kernel file (&amp;ldquo;nbsd&amp;rdquo; in our example here) at the OpenBSD &amp;ldquo;boot&amp;gt;&amp;rdquo; prompt.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Assuming that everything works OK (it did for me), rename the original kernel to &amp;ldquo;bsd.original&amp;rdquo; and rename your new kernel to just &amp;ldquo;bsd&amp;rdquo;. Then, upon the next reboot, the &lt;code&gt;pcn&lt;/code&gt; driver should be disabled and everything should work just fine.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Using this process, I now have two OpenBSD 3.8 VMs running and haven&amp;rsquo;t experienced any issues. Now, on to installing &lt;a href=&#34;http://www.clamav.net/&#34;&gt;ClamAV&lt;/a&gt; on OpenBSD&amp;hellip;.&lt;em&gt;(more details soon)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; The &lt;code&gt;pcn0&lt;/code&gt; network driver from OpenBSD 3.9 works perfectly under VMware (at least, on ESX Server). I have posted more information &lt;a href=&#34;http://blog.scottlowe.org/2006/05/18/openbsd-39-on-esx-server/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Small OpenBSD 3.8 Speed Bump</title>
+          <link>http://lowescott.github.io/2005/11/02/small-openbsd-38-speed-bump/</link>
+          <pubDate>Wed, 02 Nov 2005 19:09:00 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/02/small-openbsd-38-speed-bump/</guid>
+          <description>&lt;p&gt;My attempts to deploy the latest version of &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, version 3.8 (released yesterday), have run into what I hope is only a small speed bump.&lt;/p&gt;
+
+&lt;p&gt;In previous versions of OpenBSD (I first started using OpenBSD only a couple of versions ago, with the release of OpenBSD 3.6), the AMD PCnet adapter that &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt; presents to virtual machines was detected using the &lt;code&gt;le&lt;/code&gt; driver. So, the virtual network adapter in a VM running OpenBSD 3.&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt;.7 (and earlier versions, presumably) would be &lt;code&gt;le1&lt;/code&gt;. With the release of OpenBSD 3.8, the driver has changed to &lt;code&gt;pcn&lt;/code&gt; (making the virtual network adapter &lt;code&gt;pcn0&lt;/code&gt;), and this doesn&amp;rsquo;t seem to work&amp;mdash;at all. Several attempts last night failed miserably.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, there is hope on the horizon. A &lt;a href=&#34;http://www.google.com/&#34;&gt;Google&lt;/a&gt; search turned up an &lt;a href=&#34;http://archives.neohapsis.com/archives/openbsd/2005-08/1314.html&#34;&gt;archived Neohapsis discussion&lt;/a&gt; that raises the possibility of disabling the &lt;code&gt;pcn&lt;/code&gt; driver and using &lt;code&gt;le&lt;/code&gt; instead. I hope to try that in the next couple of days to see how it works, and I&amp;rsquo;ll post the results here.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Shelob (or Ungoliant)</title>
+          <link>http://lowescott.github.io/2005/10/28/shelob-or-ungoliant/</link>
+          <pubDate>Fri, 28 Oct 2005 21:23:50 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/28/shelob-or-ungoliant/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,105623,00.html&#34;&gt;This story&lt;/a&gt; about the University of Indianapolis and their home-grown system for quarantining PCs infected by spyware or viruses is really interesting. Named &lt;a href=&#34;http://en.wikipedia.org/wiki/Shelob&#34;&gt;Shelob&lt;/a&gt; (and soon to be renamed &lt;a href=&#34;http://en.wikipedia.org/wiki/Ungoliant&#34;&gt;Ungoliant&lt;/a&gt; to prevent a conflict with another open source project), this system &lt;strong&gt;&lt;em&gt;really&lt;/em&gt;&lt;/strong&gt; works. Today. How is it, then, that a group of IT staffers at a university can come up with a system for network access control, but multi-million dollar companies like &lt;a href=&#34;http://www.cisco.com/&#34;&gt;Cisco&lt;/a&gt; and &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; can&amp;rsquo;t? I could say that this is a testament to the value of open source software, upon which the solution is built, but that seems fairly obvious.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Technology Convergence</title>
+          <link>http://lowescott.github.io/2005/10/19/technology-convergence/</link>
+          <pubDate>Wed, 19 Oct 2005 15:37:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/19/technology-convergence/</guid>
+          <description>&lt;p&gt;It&amp;rsquo;s about time. I&amp;rsquo;ve been waiting for someone to take revolutionary (in my opinion, at least) technologies such as virtualization, blade servers (or any alternative server form factors), and thin-client access and combine them. And that&amp;rsquo;s exactly what &lt;a href=&#34;http://www.ibm.com/&#34;&gt;IBM&lt;/a&gt;, &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, and &lt;a href=&#34;http://www.citrix.com/&#34;&gt;Citrix&lt;/a&gt; are doing, as discussed &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1873113,00.asp&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Leveraging their individual strengths (IBM&amp;rsquo;s hardware, VMware&amp;rsquo;s virtualization, and Citrix&amp;rsquo;s access technologies), the group is rolling out a hosted client infrastructure that will compete directly with so-called &amp;ldquo;blade PCs&amp;rdquo; (from companies such as &lt;a href=&#34;http://www.clearcube.com/controller/home.php&#34;&gt;ClearCube&lt;/a&gt;) and traditional thin clients (from companies such as &lt;a href=&#34;http://www.wyse.com/index.htm&#34;&gt;Wyse&lt;/a&gt; and &lt;a href=&#34;http://www.neoware.com/&#34;&gt;Neoware&lt;/a&gt;). The nice thing about this solution is that it works equally well with full PCs and thin client devices.&lt;/p&gt;
+
+&lt;p&gt;This is good stuff. IBM&amp;rsquo;s blade servers are well-respected, and IBM&amp;rsquo;s integration of their blades with technologies from Cisco Systems (such as their Cisco Systems Intelligent Gigabit Ethernet Switch Module for the IBM eServer BladeCenter, more information available &lt;a href=&#34;http://www-132.ibm.com/webapp/wcs/stores/servlet/ProductDisplay?productId=8712463&amp;amp;storeId=1&amp;amp;langId=-1&amp;amp;catalogId=-840&#34;&gt;here&lt;/a&gt;) gives them a leg up on the competitors. As for virtualization&amp;hellip;well, VMware invented the market, and while &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; may be offering a virtualization product of its own they have a long way to go to catch up. VMware&amp;rsquo;s latest version of &lt;a href=&#34;http://www.vmware.com/products/esx/&#34;&gt;ESX Server&lt;/a&gt;  offers much-improved resource utilization and scheduling functionality, particularly when used in combination with the latest version of &lt;a href=&#34;http://www.vmware.com/products/vc/&#34;&gt;VirtualCenter&lt;/a&gt;. Likewise, Citrix pioneered multi-user Windows and the ICA protocol, and they continue to innovate in recent versions of &lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=hp_nav_US&#34;&gt;Presentation Manager&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Combining these technologies to create a dynamic environment where users are seamlessly connected to virtual servers hosted on and across multiple blade servers is a natural evolution for each of these technologies. (I would guess that I don&amp;rsquo;t need to point out how full circle this brings enterprise computing environments.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Bluetooth Interfering with GPRS on my Treo 650</title>
+          <link>http://lowescott.github.io/2005/10/08/bluetooth-interfering-with-gprs-on-my-treo-650/</link>
+          <pubDate>Sat, 08 Oct 2005 23:13:40 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/08/bluetooth-interfering-with-gprs-on-my-treo-650/</guid>
+          <description>&lt;p&gt;Some time ago, I noticed while using my &lt;a href=&#34;http://www.palm.com/us/products/smartphones/treo650/&#34;&gt;Treo 650&lt;/a&gt; that I could not perform a HotSync operation via &lt;a href=&#34;http://en.wikipedia.org/wiki/Bluetooth&#34;&gt;Bluetooth&lt;/a&gt; while I had a &lt;a href=&#34;http://en.wikipedia.org/wiki/GPRS&#34;&gt;GPRS&lt;/a&gt; connection active. As if that wasn&amp;rsquo;t enough, I&amp;rsquo;ve discovered what appears to be a further incompatibility between these two wireless technologies.&lt;/p&gt;
+
+&lt;p&gt;It appears as if anytime I use Bluetooth on the Treo 650 for anything other than communicating with my wireless headset (a &lt;a href=&#34;http://motorola.digitalriver.com/DRHM/servlet/ControllerServlet?Action=DisplayProductDetailsPage&amp;amp;SiteID=motostor&amp;amp;Locale=en_US&amp;amp;Env=BASE&amp;amp;productID=36061500&#34;&gt;Motorola HS850&lt;/a&gt;), I am unable to establish a GPRS connection. I get an error (the exact text varies) whenever I try to establish the GPRS connection.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve reviewed all the various settings on the Treo, but I don&amp;rsquo;t see anything that needs to be changed to fix this. This is terribly irritating, since I&amp;rsquo;d really like to be able to wirelessly HotSync my Treo to my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt; while I am away from the office without having to give up my data access via GPRS.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>My review of &#39;Linux in a Windows World&#39;</title>
+          <link>http://lowescott.github.io/2005/09/17/my-review-of-linux-in-a-windows-world/</link>
+          <pubDate>Sat, 17 Sep 2005 15:33:25 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/09/17/my-review-of-linux-in-a-windows-world/</guid>
+          <description>&lt;p&gt;A while back, I posted a &lt;a href=&#34;http://blog.scottlowe.org/2005/07/09/new-book-on-linux-windows-integration/&#34;&gt;blog entry&lt;/a&gt; mentioning a new &lt;a href=&#34;http://www.oreilly.com/&#34;&gt;O&amp;rsquo;Reilly&lt;/a&gt; book titled &lt;a href=&#34;http://www.oreilly.com/catalog/linuxwinworld/&#34;&gt;&lt;em&gt;Linux in a Windows World&lt;/em&gt;&lt;/a&gt;. While preparing for my trip to Sweden a few weeks ago, I purchased a copy of the book as reading material for the long transatlantic flights.&lt;/p&gt;
+
+&lt;p&gt;I still haven&amp;rsquo;t finished reading the entire book, but the parts that I have read have been informative. I&amp;rsquo;ve been focusing on the sections regarding centralized authentication, mostly to see if there are things that I need to do to streamline my own centralized authentication scheme (see my post entitled &lt;a href=&#34;http://blog.scottlowe.org/2005/07/13/linux-ad-integration-direction/&#34;&gt;Linux-AD Integration Direction&lt;/a&gt; for more information on the approach I took for centralized authentication). Although I didn&amp;rsquo;t find anything earth-shattering, I was able to glean a few helpful details that I will soon be putting into place on my own Linux servers.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m looking forward to going over the &lt;a href=&#34;http://www.samba.org/&#34;&gt;Samba&lt;/a&gt; section of the book, as I&amp;rsquo;ve often thought of moving my own file/print services to Linux instead of using &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows&lt;/a&gt;. I know this sounds strange, but I have to wonder if SMB interoperability would be better between &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; and Linux instead of between Mac OS X and Windows. Should the opportunity arise for me to test that, I&amp;rsquo;ll post results here.&lt;/p&gt;
+
+&lt;p&gt;My only complaint (albeit a very minor one) is that the author tends to gloss over details in some places. That&amp;rsquo;s understandable, to a point, since the intent of the book is not to explain how to implement all the ideas presented. Otherwise, the book would be unmanageable and unwieldy due to the amount of content. To the author&amp;rsquo;s credit, he does point readers to sources of additional information where they can find the details they need for a real-world implementation.&lt;/p&gt;
+
+&lt;p&gt;If you are looking for a relatively high-level overview of some of the various ways in which you can improve Linux-Windows integration on your network, you could do much worse than this book. On the flip side, though, be prepared to dig into some other resources when you need additional detail.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>WordPress Weblog Now Up</title>
+          <link>http://lowescott.github.io/2005/08/26/wordpress-weblog-now-up/</link>
+          <pubDate>Fri, 26 Aug 2005 23:52:05 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/26/wordpress-weblog-now-up/</guid>
+          <description>&lt;p&gt;As attested by the fact that you are reading this, my new weblog server running &lt;a href=&#34;http://www.wordpress.org/&#34;&gt;WordPress 1.5.2&lt;/a&gt; is now up and running. WordPress will give me more functionality than I had at &lt;a href=&#34;http://www.blogger.com/&#34;&gt;Blogger&lt;/a&gt;, and the freedom to customize my weblog more deeply than I could before.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Follow Up on Access-Based Enumeration</title>
+          <link>http://lowescott.github.io/2005/08/11/follow-up-on-access-based-enumeration/</link>
+          <pubDate>Thu, 11 Aug 2005 21:53:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/11/follow-up-on-access-based-enumeration/</guid>
+          <description>&lt;p&gt;As a follow-up to &lt;a href=&#34;http://blog.scottlowe.org/2005/07/08/access-based-enumeration/&#34;&gt;this posting&lt;/a&gt; on &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/techinfo/overview/abe.mspx&#34;&gt;access-based enumeration&lt;/a&gt;, I wanted to post information from some testing I performed earlier this week. I installed access-based enumeration (ABE) on a server running &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt; SP1 (the only version of Windows on which it is supported). It does what it advertises; when a non-administrative user connects to a shared folder on which ABE is enabled, they see only those folders to which he or she has permission.&lt;/p&gt;
+
+&lt;p&gt;There are some limitations. Administrative users are not affected in any way. ABE only works for network access; users accessing the filesystem locally are not affected. This makes ABE unsuitable for use on terminal servers. Additionally, ABE is enabled or disabled on a share-by-share basis, and while it is possible to turn ABE on or off for all shares at a time there is no provision for setting ABE on by default for new shares. Finally, ABE can negatively impact performance, especially for shared folders with large numbers of files.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m kind of split on this one. On the one hand, it&amp;rsquo;s really good functionality that will dramatically change the way system administrators approach Windows-based file servers. On the other hand, the potential performance drawbacks of ABE are concerning.&lt;/p&gt;
+
+&lt;p&gt;If you are running file servers on Windows Server 2003 with Service Pack 1 installed, you owe it to yourself to at least evaluate ABE. You may find that it doesn&amp;rsquo;t work for your network, but then again you may find that you don&amp;rsquo;t want to go on without the added functionality that ABE brings to the table.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>IPSec, Mac OS X, and Windows Server 2003</title>
+          <link>http://lowescott.github.io/2005/08/05/ipsec-mac-os-x-and-windows-server-2003/</link>
+          <pubDate>Fri, 05 Aug 2005 00:55:13 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/05/ipsec-mac-os-x-and-windows-server-2003/</guid>
+          <description>&lt;p&gt;For quite some time now, a minor task I&amp;rsquo;ve been experimenting with is establishing transport mode IPSec security associations between &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; and &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt;. I&amp;rsquo;ve been using a freeware IPSec client called &lt;a href=&#34;http://www.lobotomo.com/products/IPSecuritas/&#34;&gt;IPSecuritas&lt;/a&gt;. Up until just a few days ago, I could never get anything to work. After working on getting a PPTP-based VPN working from my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt;, I realized that just as I had to modify my ipfw rules (using BrickHouse) to allow the PPTP traffic, I&amp;rsquo;d have to modify the rules to allow IPSec traffic as well. Duh!&lt;/p&gt;
+
+&lt;p&gt;After making the changes to allow ISAKMP (UDP port 500), ESP (IP protocol 50), and AH (IP protocol 51), I created a quick-and-dirty IP Security policy on the Windows box. Lo and behold, it looked as if an SA was established. However, within just a few seconds after IPSecuritas&amp;rsquo; log showed the SA established, then it appeared as if racoon (the back-end for IPSec on Mac OS X) crashed. I have not yet figured out why.&lt;/p&gt;
+
+&lt;p&gt;Even with the apparent racoon crash, it looked like the SA was still valid. I was not able to verify encryption by sniffing the traffic, but it certainly seemed like everything was working.&lt;/p&gt;
+
+&lt;p&gt;Despite the problems thus far, this is still good news to me. Here&amp;rsquo;s hoping I can figure the rest of the problem out.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Squid-PIX Integration</title>
+          <link>http://lowescott.github.io/2005/08/03/squid-pix-integration/</link>
+          <pubDate>Wed, 03 Aug 2005 17:45:28 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/03/squid-pix-integration/</guid>
+          <description>&lt;p&gt;I have been searching for the last few days on some techniques to integrate a &lt;a href=&#34;http://www.squid-cache.org/&#34;&gt;Squid web cache&lt;/a&gt; with a PIX firewall in a transparent fashion. Most of the information I am finding involves using the Squid web cache as the default gateway along with an iptables firewall that transparently redirects outbound TCP port 80 traffic to port 3128 (the Squid web cache port). The web cache then talks to the PIX, which takes it from there. Certainly, this works, but it is not what I was hoping to find. I&amp;rsquo;d really like a way to have the PIX redirect the traffic, but it appears that the PIX OS does not support that functionality. How can this be? The &lt;code&gt;pf&lt;/code&gt; firewall in &lt;a href=&#34;http://www.openbsd.org&#34;&gt;OpenBSD&lt;/a&gt; supports redirection, if I&amp;rsquo;m not mistaken. The &lt;code&gt;iptables&lt;/code&gt; firewall in Linux supports redirection. But not Cisco&amp;rsquo;s PIX OS? Is it just me, or does anyone else see a problem with this?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>This Will Be Something to Watch</title>
+          <link>http://lowescott.github.io/2005/08/03/this-will-be-something-to-watch/</link>
+          <pubDate>Wed, 03 Aug 2005 02:25:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/03/this-will-be-something-to-watch/</guid>
+          <description>&lt;p&gt;Phil Zimmerman, the creator of PGP (Pretty Good Privacy), is back, this time working to &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1841509,00.asp&#34;&gt;provide secure VoIP&lt;/a&gt;. Apparently, Phil resurrected PGPfone, updated it with modern protocols, and has created Zfone, a prototype application that will provide encryption for voice-over-IP calls.&lt;/p&gt;
+
+&lt;p&gt;This will be something to watch. I agree with Phil that nobody is really paying any attention to the security of VoIP traffic moving across the Internet, and it&amp;rsquo;s about time somebody thought about it.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>VPN Integration Done</title>
+          <link>http://lowescott.github.io/2005/07/27/vpn-integration-done/</link>
+          <pubDate>Wed, 27 Jul 2005 00:23:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/27/vpn-integration-done/</guid>
+          <description>&lt;p&gt;That was easier than I expected. I managed to get my hardware firewall to authenticate VPN connections against Active Directory via &lt;a href=&#34;http://en.wikipedia.org/wiki/RADIUS&#34;&gt;RADIUS&lt;/a&gt; (using Internet Authentication Service, or IAS) without a great deal of effort. In fact, it was almost easy. If I ever get caught up on documentation, I&amp;rsquo;ll post some details on how to do it on the &lt;a href=&#34;http://www.mercurionsystems.com/index.html&#34;&gt;Mercurion Systems&lt;/a&gt; web site.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Firefox Updates and Roadmap</title>
+          <link>http://lowescott.github.io/2005/07/13/firefox-updates-and-roadmap/</link>
+          <pubDate>Wed, 13 Jul 2005 15:51:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/firefox-updates-and-roadmap/</guid>
+          <description>&lt;p&gt;Mozilla released &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt; 1.0.5, which patches a number of security vulnerabilities. You can get more information on the release &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1836310,00.asp&#34;&gt;here&lt;/a&gt; or by visiting the &lt;a href=&#34;http://www.mozilla.org&#34;&gt;Mozilla.org&lt;/a&gt; web site.&lt;/p&gt;
+
+&lt;p&gt;In addition, &lt;a href=&#34;http://www.eweek.com/article2/0,1895,1821168,00.asp&#34;&gt;more information&lt;/a&gt; has been revealed about Firefox 1.1, the next version of the open source web browser. An alpha version of Firefox 1.1 could be ready within just a few days.&lt;/p&gt;
+
+&lt;p&gt;If Mozilla can continue to innovate with Firefox and address my two primary concerns&amp;ndash;ease of deployment and distributing security updates&amp;ndash;then they will continue to steal market share away from Internet Explorer. If nothing else, Mozilla will at least force Microsoft to be competitive again, and that is a success in and of itself.&lt;/p&gt;
+
+&lt;p&gt;Mozilla is also updating &lt;a href=&#34;http://www.mozilla.org/products/thunderbird&#34;&gt;Thunderbird&lt;/a&gt;, the companion e-mail client to Firefox, and that update is expected to be available soon as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Access-Based Enumeration</title>
+          <link>http://lowescott.github.io/2005/07/08/access-based-enumeration/</link>
+          <pubDate>Fri, 08 Jul 2005 23:29:04 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/08/access-based-enumeration/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.microsoft.com/windowsserver2003/&#34;&gt;Windows Server 2003&lt;/a&gt; has finally caught up with &lt;a href=&#34;http://www.novell.com/netware/&#34;&gt;Novell NetWare&lt;/a&gt; in one key area, and that is in the enumeration of files and folders. With &lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=04A563D9-78D9-4342-A485-B030AC442084&amp;amp;displaylang=en&#34;&gt;access-based enumeration&lt;/a&gt;, Windows Server 2003 now will display only those files and folders to which the user has permission. If no permission is given, the file or folder is not displayed. This is, in my opinion, a &lt;em&gt;major&lt;/em&gt; improvement in Windows&amp;rsquo; security.&lt;/p&gt;
+
+&lt;p&gt;I plan to give this functionality a swing on my own servers within the next few days. I&amp;rsquo;ll post additional details here after my tests.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Transparent RDP Tunneling, Part 2</title>
+          <link>http://lowescott.github.io/2005/07/01/transparent-rdp-tunneling-part-2/</link>
+          <pubDate>Fri, 01 Jul 2005 22:54:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/01/transparent-rdp-tunneling-part-2/</guid>
+          <description>&lt;p&gt;After some fiddling around with &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; on &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, I got the transparent RDP tunneling inside SSL working. I still need to run some network captures with Ethereal or similar to make sure that the traffic is encrypted, but I don&amp;rsquo;t see any reason why it won&amp;rsquo;t be. Overall, the process was a bit easier than I expected. Once I get it better documented, I&amp;rsquo;ll find an appropriate format in which to distribute the information for others to use in their own networks.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Transparent RDP Tunneling</title>
+          <link>http://lowescott.github.io/2005/06/29/transparent-rdp-tunneling/</link>
+          <pubDate>Wed, 29 Jun 2005 23:48:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/29/transparent-rdp-tunneling/</guid>
+          <description>&lt;p&gt;As part of my experimentation with &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; 3.7, I&amp;rsquo;m going to try to setup a way of transparently tunneling RDP (Remote Desktop Protocol, used by Windows Remote Desktop/Terminal Services) inside SSL. I&amp;rsquo;m thinking that I can use IP aliases and &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; to have &amp;ldquo;ordinary&amp;rdquo; RDP encapsulated in SSL by Stunnel and then passed off to another instance of Stunnel at the other end. Then, from the RDP client, I just connect to one of the IP aliases and the rest is handled transparently.&lt;/p&gt;
+
+&lt;p&gt;When I get it working, I&amp;rsquo;ll post more details here as well as on the &lt;a href=&#34;http://www.mercurionsystems.com/&#34;&gt;Mercurion Systems&lt;/a&gt; web site.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>A Good Article for Those New to LDAP</title>
+          <link>http://lowescott.github.io/2005/06/22/a-good-article-for-those-new-to-ldap/</link>
+          <pubDate>Wed, 22 Jun 2005 12:46:10 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/22/a-good-article-for-those-new-to-ldap/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.novell.com/&#34;&gt;Novell&lt;/a&gt; recently posted the article &lt;a href=&#34;http://www.novell.com/coolsolutions/d3.php?s=feature.15359.coolsolutions.xml&#34;&gt;An Introduction to LDAP: Part 1&amp;ndash;LDAP Primer&lt;/a&gt; on their Cool Solutions web site. It&amp;rsquo;s a good article for those that are new to LDAP. I&amp;rsquo;m neither new to LDAP nor an expert, but this article was helpful in solidifying some basics.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Some Cool Networking Stuff</title>
+          <link>http://lowescott.github.io/2005/06/17/some-cool-networking-stuff/</link>
+          <pubDate>Fri, 17 Jun 2005 00:19:21 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/17/some-cool-networking-stuff/</guid>
+          <description>&lt;p&gt;I setup some cool networking stuff today with some &lt;a href=&#34;http://www.hp.com/&#34;&gt;HP&lt;/a&gt; ProCurve switches. A customer of mine was converting from a T-1 based WAN to an Ethernet MAN. The carrier brought in a separate Ethernet drop for each location, and I configured a separate port-based VLAN for each drop and then set up routing between them. All in all, it took about an hour to convert all the locations from the old WAN to the new MAN, and 50 minutes of that was spent driving from location to location (everything is in the same city).&lt;/p&gt;
+
+&lt;p&gt;I know it&amp;rsquo;s nothing unusual (I&amp;rsquo;m sure there are those of you out there that do this stuff everyday), but I was particularly pleased at how smoothly we managed to make the conversion for all 12 locations. Plus, I&amp;rsquo;d done this before many times with &lt;a href=&#34;http://www.cisco.com/&#34;&gt;Cisco&lt;/a&gt; equipment, but this was only the second time using HP equipment.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll probably do a write-up of this on my &lt;a href=&#34;http://www.mercurionsystems.com/&#34;&gt;company web site&lt;/a&gt;. If you are interested in more details, look there soon.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Miscellaneous Projects</title>
+          <link>http://lowescott.github.io/2005/05/13/miscellaneous-projects/</link>
+          <pubDate>Fri, 13 May 2005 22:22:53 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/05/13/miscellaneous-projects/</guid>
+          <description>&lt;p&gt;In my copious spare time (fellow parents out there know this is a joke), I&amp;rsquo;m working on a couple of miscellaneous technical projects:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Internal news server:&lt;/em&gt; I&amp;rsquo;m having so many problems with NNTP-based access from &lt;a href=&#34;http://www.panic.com/unison/&#34;&gt;Unison&lt;/a&gt; to &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange Server 2003&lt;/a&gt; that I&amp;rsquo;ve decided to setup an internal NNTP server using Linux and INNd. Linux I&amp;rsquo;m familiar with; INNd is completely new to me. Wish me luck.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;IMAP proxy:&lt;/em&gt; This would use &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt; to proxy IMAP4S requests to my mail server. I&amp;rsquo;ll probably have Perdition handle IMAP4S and then pass IMAP to the back-end server, offloading the SSL work to the proxy.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Squid log analysis:&lt;/em&gt; I&amp;rsquo;m looking for a way to parse down the logs from my &lt;a href=&#34;http://www.squid-cache.org/&#34;&gt;Squid&lt;/a&gt; web cache. Once I find a way to do this, then I can really begin offering Squid and &lt;a href=&#34;http://www.squidguard.org/&#34;&gt;SquidGuard&lt;/a&gt; as a content filtering solution to some of my customers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure this stuff is probably old hat to some of you out there. Feel free to contribute some helpful information or URLs. I&amp;rsquo;ll keep you posted on how things proceed with these and other projects as they develop.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

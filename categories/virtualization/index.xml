@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/categories/virtualization/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-26 21:45:32 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Security Flaw Found in VMware</title>
+          <link>http://lowescott.github.io/2005/12/26/security-flaw-found-in-vmware/</link>
+          <pubDate>Mon, 26 Dec 2005 21:45:32 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/26/security-flaw-found-in-vmware/</guid>
+          <description>&lt;p&gt;Just so the Windows flaws don&amp;rsquo;t get all the attention, here&amp;rsquo;s a reasonably new one: a flaw in &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, the machine virtualization software that is tremendously popular, especially among security professionals. Fortunately, it&amp;rsquo;s reasonably easy to work around the flaw, and VMware has already released a patch.&lt;/p&gt;
+
+&lt;p&gt;This link offers more details on the &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1904647,00.asp&#34;&gt;VMware security flaw&lt;/a&gt;, which apparently affects almost all of the VMware products, with the notable exception of ESX Server. VMware&amp;rsquo;s &lt;a href=&#34;http://www.vmware.com/support/kb/enduser/std_adp.php?p_faqid=2000&#34;&gt;security advisory&lt;/a&gt; also provides complete details and information on how to protect against it, plus a link to download the patch.&lt;/p&gt;
+
+&lt;p&gt;VMware users can sidestep the security issue by not using NAT networking for their virtual machines, as pointed out in the security advisory.&lt;/p&gt;
+
+&lt;p&gt;While security flaws in Microsoft&amp;rsquo;s Windows operating system and Internet Explorer web browser get most of the attention these days, all products have them. Users of Linux or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; like to proclaim their immunity, but no one is immune. This recent vulnerability merely highlights the fact that we must all be vigilant and watchful in order to maintain the security and integrity of our networks and systems.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Virtualization</title>
+          <link>http://lowescott.github.io/2005/06/26/virtualization/</link>
+          <pubDate>Sun, 26 Jun 2005 16:01:32 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/26/virtualization/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;m a big fan of &lt;a href=&#34;http://en.wikipedia.org/wiki/Virtualization/&#34;&gt;virtualization&lt;/a&gt;. I love the &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt; products (&lt;a href=&#34;http://www.vmware.com/products/desktop/ws_features.html&#34;&gt;VMware Workstation&lt;/a&gt;, &lt;a href=&#34;http://www.vmware.com/products/server/gsx_features.html&#34;&gt;GSX Server&lt;/a&gt;, and &lt;a href=&#34;http://www.vmware.com/products/server/esx_features.html&#34;&gt;ESX Server&lt;/a&gt;) and, as I have mentioned in previous posts, use Microsoft&amp;rsquo;s &lt;a href=&#34;http://www.microsoft.com/mac/products/virtualpc/virtualpc.aspx&#34;&gt;Virtual PC&lt;/a&gt; product currently (but only because VMware doesn&amp;rsquo;t have a Mac version of VMware Workstation). I&amp;rsquo;m looking forward to hardware-based virtualization technologies such as AMD&amp;rsquo;s Pacifica (discussed briefly &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1780606,00.asp&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1820551,00.asp&#34;&gt;here&lt;/a&gt;) and Intel&amp;rsquo;s &lt;a href=&#34;http://www.intel.com/technology/computing/vptech/&#34;&gt;Vanderpool&lt;/a&gt; technology. I&amp;rsquo;m very much hoping that &lt;a href=&#34;http://www.apple.com/&#34;&gt;Apple&lt;/a&gt; will take the plunge and build in virtualization support in Mac OS X 10.5, aka &amp;ldquo;Leopard&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Virtualization is more than just running multiple operating systems on a single computer, though. Virtualization occurs in networking through the use of virtual LANs (VLANs) and virtual private networks (VPNs); both of these technologies are core technologies in today&amp;rsquo;s flexible networks. Virtualization occurs in storage area networks (SANs) as virtual disks and virtual SANs (VSANs). Technologies such as load balancing via virtual servers (recently read an interesting &lt;a href=&#34;http://software.newsforge.com/article.pl?sid=05/05/27/0612243&#34;&gt;article on Linux virtual servers&lt;/a&gt;) also employ a form of virtualization. Even mundane technologies such as network address translation (NAT) can be considered forms of virtualization, since they abstract a server&amp;rsquo;s public IP address from its private (actual) IP address.&lt;/p&gt;
+
+&lt;p&gt;As IT professionals, it behooves us to embrace new technologies like virtualization, in all its forms. If you haven&amp;rsquo;t already taken the time to get used to these kinds of products and technologies, now might be a good time.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

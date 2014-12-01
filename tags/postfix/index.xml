@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/postfix/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-11-06 14:19:15 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Current Tech Projects</title>
+          <link>http://lowescott.github.io/2005/11/06/current-tech-projects/</link>
+          <pubDate>Sun, 06 Nov 2005 14:19:15 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/06/current-tech-projects/</guid>
+          <description>&lt;p&gt;Every now and then, I like to post out here a list of my current &amp;ldquo;tech projects.&amp;rdquo; These are the things that I&amp;rsquo;m working on for my own network, things that I may or may not start recommending to or supporting for customers.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s my current list:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;InterNetNews (INN): I had an installation of INN up and running a short while back, but had to resort to an ugly hack with stunnel in order to make SSL work from a newsreader. To get a clean build, I&amp;rsquo;ve decided I&amp;rsquo;ll just start from scratch with a clean installation. I&amp;rsquo;ll be using &lt;a href=&#34;http://www.centos.org/&#34;&gt;CentOS&lt;/a&gt; 4.1 again as I work on transitioning all my Linux-based servers to a newer Linux distribution, and I&amp;rsquo;ll be compiling INN from source instead of using a package.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;-based antispam gateway: I&amp;rsquo;ve got an antispam gateway running right now (uses Red Hat Linux, &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt; 2.1, SpamAssassin, Postgrey, Razor, DCC, and ClamAV), but I want to try building one using OpenBSD 3.8 (just recently released) and newer builds of Postfix, SpamAssassin, and Amavisd-New. In particular, I&amp;rsquo;m interested in the advanced integration of newer versions of Postfix and Amavisd-New.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;XC Connect: I&amp;rsquo;ve also mentioned XC Connect before as well, but a previous installation proved to be unstable, and the Apache integration was less than stellar. In fact, the integration was nonexistent. I&amp;rsquo;m going to try a clean build of CentOS 4.1 and XC Connect to see if that will correct the stability and integration problems.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also need to wrap up the documentation for a few completed items, such as the Cisco VPN integration with Active Directory. Mac OS X integration with Active Directory is also on the &amp;ldquo;to do&amp;rdquo; list, but it will have to wait a little while&amp;mdash;I&amp;rsquo;ll need to find another Mac to &amp;ldquo;experiment&amp;rdquo; with instead of using my own PowerBook.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Why I Use a Mac</title>
+          <link>http://lowescott.github.io/2005/06/20/why-i-use-a-mac/</link>
+          <pubDate>Mon, 20 Jun 2005 21:21:10 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/20/why-i-use-a-mac/</guid>
+          <description>&lt;p&gt;A fair number of people have asked me why I use an &lt;a href=&#34;http://www.apple.com/hardware/&#34;&gt;Apple Mac&lt;/a&gt; when my business centers primarily around &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; products such as &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/&#34;&gt;Windows Server 2003&lt;/a&gt;, Active Directory, and &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange&lt;/a&gt;? That&amp;rsquo;s a reasonable question.&lt;/p&gt;
+
+&lt;p&gt;My computer is simply a tool to get my job done. About two years ago, I started to evaluate the tasks that I tackle on a regular basis as part of supporting my customers&amp;rsquo; networks. In reviewing those tasks, it become evident to me that using Windows myself was not a prerequisite for designing, installing, and supporting Windows-based networks. I could run a different OS&amp;ndash;like Linux or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;&amp;ndash;and still be perfectly able to get my job done. In fact, given that I wanted to increase the amount of work that my company did with open source software such as Linux, &lt;a href=&#34;http://www.apache.org/&#34;&gt;Apache&lt;/a&gt;, &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt;, and SpamAssassin, something other than Windows might actually make that &lt;em&gt;easier&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I then set out to compare the alternatives. After comparing Linux and Mac OS X, I found that Mac OS X had the best fit for &lt;em&gt;my&lt;/em&gt; particular needs. I loved the mix of open source technologies (the BSD underpinnings and various other open source projects) and closed software (the ultrasmooth Aqua interface). I loved the hardware. And, most importantly, I found that there were applications available for Mac OS X to help me get my job done. (See my blog posting about &lt;a href=&#34;http://blog.scottlowe.org/2005/06/20/preferred-mac-os-x-applications/&#34;&gt;Preferred Mac OS X Applications&lt;/a&gt;.) The fact that many of the applications I needed for my job were open source applications was a bonus.&lt;/p&gt;
+
+&lt;p&gt;Is Mac OS X right for you? I don&amp;rsquo;t know; that depends upon what you do at your job. I believe that Mac OS X is a great fit for more people than Windows, but I also believe that people must use what is most ideally suited for their work. If that is Windows; so be it. If that is Linux, then great. And if, like me, it is Mac OS X, then fantastic. Each of these operating systems have their own strengths and weaknesses, and it is up to each user to determine which OS is right for them.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Split E-Mail Routing</title>
+          <link>http://lowescott.github.io/2005/05/19/split-e-mail-routing/</link>
+          <pubDate>Thu, 19 May 2005 23:59:39 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/05/19/split-e-mail-routing/</guid>
+          <description>&lt;p&gt;Now that I have &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt; up and running (although not in the way I really wanted; see my post titled &amp;ldquo;Perdition Working Now&amp;rdquo;), I&amp;rsquo;m moving on to setting up an internal news server.&lt;/p&gt;
+
+&lt;p&gt;Before I can get the internal news server up and running, though, I must first address the issue of e-mail submissions to these newsgroups. See, right now I can send an e-mail to &lt;em&gt;newsgroupname@domain.com&lt;/em&gt; (this is obviously an invalid address) and that message will be posted to the newsgroup. This works well because the mailboxes and the newsgroups live on the same server and the mail gateway can route all messages to this server.&lt;/p&gt;
+
+&lt;p&gt;If I setup a separate news server, however, I&amp;rsquo;ll need some e-mail addresses to be directed to the mail server, but other e-mail addresses (the e-mail addresses for the newsgroups) to a different server altogether. I think that &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt; can do this, but I don&amp;rsquo;t know that for certain yet. I suspect that the answer lies somewhere in the mystery of virtual&lt;em&gt;alias_maps, but I just can&amp;rsquo;t wrap my head around it right now. Of course, it _&lt;strong&gt;is&lt;/strong&gt;&lt;/em&gt; getting late here so that may explain it.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/apache/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-03 00:21:54 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Protecting OWA with Apache</title>
+          <link>http://lowescott.github.io/2005/12/03/protecting-owa-with-apache/</link>
+          <pubDate>Sat, 03 Dec 2005 00:21:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/03/protecting-owa-with-apache/</guid>
+          <description>&lt;p&gt;Outlook Web Access (OWA) is the web-based interface for accessing e-mail and other resources handled by &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Microsoft Exchange&lt;/a&gt;. Unfortunately, OWA&amp;rsquo;s popularity also makes it the target of numerous worms and security exploits. As a result, many organizations seek to deploy OWA behind a reverse proxy that can help shield OWA from web-based attacks and exploits. In this posting, I&amp;rsquo;m going to share information to help build a reverse proxy using &lt;a href=&#34;http://www.apache.org/httpd/&#34;&gt;Apache 2.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a skeleton of an &lt;code&gt;httpd.conf&lt;/code&gt; file to support Apache as a reverse proxy in front of OWA:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;NameVirtualHost 1.2.3.4:80  
+NameVirtualHost 1.2.3.4:443  
+ProxyRequests Off
+
+&amp;lt;VirtualHost 1.2.3.4:443&amp;gt;  
+ServerAdmin webmaster@domain.com  
+ServerName webmail.domain.com  
+DocumentRoot /var/www/webmail  
+RequestHeader set Front-End-Https &amp;quot;On&amp;quot;  
+ProxyRequests Off  
+ProxyPreserveHost On  
+
+SSLEngine On  
+SSLCertificateFile conf/webmail-ssl-cert.pem
+
+&amp;lt;Location /exchange&amp;gt;  
+ProxyPass http://mail.domain.com/exchange  
+ProxyPassReverse http://mail.domain.com/exchange  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;Location /exchweb&amp;gt;  
+ProxyPass http://mail.domain.com/exchweb  
+ProxyPassReverse http://mail.domain.com/exchweb  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;Location /public&amp;gt;  
+ProxyPass http://mail.domain.com/public  
+ProxyPassReverse http://mail.domain.com/public  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The key portions of this configuration are described below, along with some supporting information.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;NameVirtualHost:&lt;/em&gt; The NameVirtualHost directive enables Apache to use name-based virtual hosts on the specified IP addresses and ports. The parameter to the NameVirtualHost directive must match one of the VirtualHost definitions, as shown in the sample configuration, or else the content will be served from the default virtual host (the first virtual host listed in the configuration). Note that if the Apache reverse proxy will not be using name-based virtual hosts (instead using IP address-based virtual hosts or running only a single server instance), then this directive is not required.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;RequestHeader:&lt;/em&gt; This directive instructs Apache to add a header &amp;ldquo;Front-End-Https: On&amp;rdquo; to requests sent to the internal OWA server. This header is proprietary to OWA and forces OWA to build URLs using &amp;ldquo;https://&amp;rdquo; references instead of ordinary &amp;ldquo;http://&amp;rdquo; references. This directive is required in order to terminate the SSL tunnel at the reverse proxy and use clear-text HTTP between the reverse proxy and the internal OWA server. This directive requires the &lt;code&gt;mod_headers&lt;/code&gt; module.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;ProxyPreserveHost:&lt;/em&gt; This directive configures Apache to pass the original host header, supplied by the client, to the server to which the request is being proxied. (This is instead of the host name supplied in the ProxyPass directive.) Again, this facilitates the construction of URLs with the correct hostname when accessing resources inside OWA.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;SSLCertificateFile:&lt;/em&gt; Apache expects the web server&amp;rsquo;s SSL certificate to be in PEM format. If the certificate&amp;rsquo;s key is encrypted, Apache will prompt upon startup for the passphrase to the key (this prevents any form of automated startup). It is considered a security best practice to keep the key in a separate file (using the SSLCertificateKeyFile directive) in encrypted form and supply the password upon the startup of Apache.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With this configuration in place, the following benefits are realized:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Name-based virtual hosts are supported. This allows other URLs to also be proxied through this same reverse proxy server.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;SSL encryption is offloaded from the Exchange server to the reverse proxy server. Traffic from the reverse proxy server itself to the Exchange server is standard, unencrypted HTTP.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When used in conjunction with &lt;a href=&#34;http://www.modsecurity.org/&#34;&gt;mod_security&lt;/a&gt; (another Apache module), OWA is protected against a very significant majority of all web-based attacks.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Using Apache to serve as a reverse proxy for OWA is a cost-effective way to add another layer of security to an Exchange-based messaging infrastructure.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Next Integration Task(s)</title>
+          <link>http://lowescott.github.io/2005/07/24/next-integration-tasks/</link>
+          <pubDate>Sun, 24 Jul 2005 23:58:13 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/24/next-integration-tasks/</guid>
+          <description>&lt;p&gt;With the majority of my Linux servers now authenticating against Active Directory, I&amp;rsquo;m now able to broaden my integration focus and work on some related tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;SASL2/PAM:&lt;/em&gt; I still have one server, running SASL2, that has not been switched over to the standard Kerberos/LDAP configuration. I&amp;rsquo;ll need to research the interplay between SASL2 and PAM before I tackle this one.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;OpenBSD Authentication:&lt;/em&gt; I haven&amp;rsquo;t touched any of the OpenBSD servers yet for Kerberos/LDAP authentication.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;VPN Authentication via RADIUS:&lt;/em&gt; I&amp;rsquo;d like to use RADIUS to handle some VPN authentication against Active Directory as well. I don&amp;rsquo;t anticipate this should be too terribly difficult, but it is something that is rather new to me.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Apache Authentication via Kerberos to AD:&lt;/em&gt; One of the documents that helped me in getting the pam_krb5 stuff working was for &lt;a href=&#34;http://www.grolmsnet.de/kerbtut/&#34;&gt;using mod_auth_kerb with Apache&lt;/a&gt; (more information also posted &lt;a href=&#34;http://sl.mvps.org/docs/LinuxApacheKerberosAD.htm&#34;&gt;here&lt;/a&gt; as well). I&amp;rsquo;d like to deploy this for some select areas of our intranet and extranet sites, to add an additional layer of security on top of what is already present.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, this is in addition to trying to establish an internal news server running INNd (and then migrating content from Exchange Server 2003 into this news server) and working on Squid log analysis tools. I&amp;rsquo;ll probably start investigating Squid authentication options as well, since that would be very helpful to my customers (especially if I can get the authentication to be transparent, or very nearly so). On top of that I have duties in church, work as a manager overseeing employees, and things to do as a dad. Whew! I often wonder if I am just not efficient with managing my time, or if I just have too much to do.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Why I Use a Mac</title>
+          <link>http://lowescott.github.io/2005/06/20/why-i-use-a-mac/</link>
+          <pubDate>Mon, 20 Jun 2005 21:21:10 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/20/why-i-use-a-mac/</guid>
+          <description>&lt;p&gt;A fair number of people have asked me why I use an &lt;a href=&#34;http://www.apple.com/hardware/&#34;&gt;Apple Mac&lt;/a&gt; when my business centers primarily around &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; products such as &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/&#34;&gt;Windows Server 2003&lt;/a&gt;, Active Directory, and &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange&lt;/a&gt;? That&amp;rsquo;s a reasonable question.&lt;/p&gt;
+
+&lt;p&gt;My computer is simply a tool to get my job done. About two years ago, I started to evaluate the tasks that I tackle on a regular basis as part of supporting my customers&amp;rsquo; networks. In reviewing those tasks, it become evident to me that using Windows myself was not a prerequisite for designing, installing, and supporting Windows-based networks. I could run a different OS&amp;ndash;like Linux or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;&amp;ndash;and still be perfectly able to get my job done. In fact, given that I wanted to increase the amount of work that my company did with open source software such as Linux, &lt;a href=&#34;http://www.apache.org/&#34;&gt;Apache&lt;/a&gt;, &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt;, and SpamAssassin, something other than Windows might actually make that &lt;em&gt;easier&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I then set out to compare the alternatives. After comparing Linux and Mac OS X, I found that Mac OS X had the best fit for &lt;em&gt;my&lt;/em&gt; particular needs. I loved the mix of open source technologies (the BSD underpinnings and various other open source projects) and closed software (the ultrasmooth Aqua interface). I loved the hardware. And, most importantly, I found that there were applications available for Mac OS X to help me get my job done. (See my blog posting about &lt;a href=&#34;http://blog.scottlowe.org/2005/06/20/preferred-mac-os-x-applications/&#34;&gt;Preferred Mac OS X Applications&lt;/a&gt;.) The fact that many of the applications I needed for my job were open source applications was a bonus.&lt;/p&gt;
+
+&lt;p&gt;Is Mac OS X right for you? I don&amp;rsquo;t know; that depends upon what you do at your job. I believe that Mac OS X is a great fit for more people than Windows, but I also believe that people must use what is most ideally suited for their work. If that is Windows; so be it. If that is Linux, then great. And if, like me, it is Mac OS X, then fantastic. Each of these operating systems have their own strengths and weaknesses, and it is up to each user to determine which OS is right for them.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>New del.icio.us Links</title>
+          <link>http://lowescott.github.io/2005/06/14/new-delicious-links/</link>
+          <pubDate>Tue, 14 Jun 2005 00:42:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/14/new-delicious-links/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;ve added a couple new links to &lt;a href=&#34;http://del.icio.us/slowe/&#34;&gt;my del.icio.us&lt;/a&gt; bookmarks. Most notably, I&amp;rsquo;ve added an entry for a recent article on &lt;a href=&#34;http://www.onlamp.com/&#34;&gt;ONLamp.com&lt;/a&gt;, a site hosted by the &lt;a href=&#34;http://www.oreillynet.com/&#34;&gt;O&amp;rsquo;Reilly Network&lt;/a&gt;, on &lt;a href=&#34;http://www.modsecurity.org/&#34;&gt;mod_security&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The article, &lt;a href=&#34;http://www.onlamp.com/pub/a/onlamp/2005/06/09/wss_security.html?page=1&#34;&gt;Securing Web Services with mod_security&lt;/a&gt;, is a great introduction to an &lt;a href=&#34;http://httpd.apache.org/&#34;&gt;Apache&lt;/a&gt; module that I&amp;rsquo;ve known about and used for a while now. Similar to &lt;a href=&#34;http://www.microsoft.com/technet/security/tools/urlscan.mspx&#34;&gt;URLScan&lt;/a&gt; for IIS 5.0, mod_security serves to block malicious URLs and invalid requests, even within encrypted HTTPS sessions. As such, it acts as the perfect complement to firewalls and intrusion detection/prevention systems (both network-based and host-based), which typically operate at lower layers of the networking stack.&lt;/p&gt;
+
+&lt;p&gt;If you use Apache, I urge you to evaluate and deploy mod_security to enhance your web server&amp;rsquo;s security.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

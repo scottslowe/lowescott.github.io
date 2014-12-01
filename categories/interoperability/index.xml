@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/categories/interoperability/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-22 11:26:46 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Complete Linux-AD Authentication Details</title>
+          <link>http://lowescott.github.io/2005/12/22/complete-linux-ad-authentication-details/</link>
+          <pubDate>Thu, 22 Dec 2005 11:26:46 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/22/complete-linux-ad-authentication-details/</guid>
+          <description>
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; These instructions are for Windows 2000 Server and Windows Server 2003 pre-R2. For the R2 release, please see &lt;a href=&#34;http://blog.scottlowe.org/2007/01/15/linux-ad-integration-version-4/&#34;&gt;these updated instructions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are several articles posted here that discuss, in general terms, how to authenticate Linux against Active Directory. For example, see this brief article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/07/13/linux-ad-integration-direction/&#34;&gt;broad direction&lt;/a&gt; of the integration, or this posting on &lt;a href=&#34;http://blog.scottlowe.org/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/&#34;&gt;using computer accounts&lt;/a&gt; for Linux servers (most how-to documents I&amp;rsquo;ve seen discuss the use of a user account for this purpose).&lt;/p&gt;
+
+&lt;p&gt;Over the last week or so, I&amp;rsquo;ve been having to rebuild one Linux server a number of times in an effort to fix a separate problem (see this article on &lt;a href=&#34;http://blog.scottlowe.org/2005/08/16/strange-ntpd-problem-on-centos-41/&#34;&gt;NTPd problems with CentOS 4.1&lt;/a&gt; and the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/19/ntpd-on-centos-42/&#34;&gt;recurrence of the problem&lt;/a&gt; with CentOS 4.2). As a result, I&amp;rsquo;ve had to go through the process of configuring this Linux server (and preparing Active Directory) for authentication several times, and I found that I kept having to go back to my scattered and dispersed notes to remember what had to be done. In the hopes of correcting that, I am collecting all the pertinent information I have here in this article.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Preparing Active Directory (One-Time)&lt;/h3&gt;
+
+&lt;p&gt;There is a one-time preparation of Active Directory that is required. In order to authenticate Linux logins against Active Directory, Active Directory&amp;rsquo;s schema must be extended to include Linux-specific attributes such as home directory, UID, GID, and default shell. There are a couple of different ways to do this; I chose to use Microsoft&amp;rsquo;s Services for Unix (SFU) to extend the schema. There are two reasons I chose SFU: 1) it&amp;rsquo;s free; and 2) the SFU schema is being included by default in Windows Server 2003 R2.&lt;/p&gt;
+
+&lt;p&gt;Once SFU has been installed and the schema has been extended, then the specific Active Directory accounts that are allowed to authenticate via Linux must be configured with a UID and other UNIX attributes. This is accomplished via the new &amp;ldquo;UNIX Attributes&amp;rdquo; tab on the properties dialog box of a user account.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll also need to create an account in Active Directory that will be used to bind to Active Directory for LDAP queries. This account does &lt;em&gt;not&lt;/em&gt; need any special privileges; in fact, making the account a member of Domain Guests and &lt;em&gt;not&lt;/em&gt; a member of Domain Users is perfectly fine.&lt;/p&gt;
+
+&lt;p&gt;After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Linux server that will enable the authentication.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Preparing Active Directory (Each Server)&lt;/h3&gt;
+
+&lt;p&gt;For each server that will be authenticating against Active Directory, follow the steps below.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Create a computer account in Active Directory. When creating the computer account, be sure to specify that this account may be used by a pre-Windows 2000-based computer.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use the following command at a command prompt to configure the new computer account:&lt;/p&gt;
+
+&lt;p&gt;ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$&lt;br /&gt;
+-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL&lt;br /&gt;
+-out filename&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Of course, you&amp;rsquo;ll need to substitute the appropriate values for &amp;ldquo;fqdn&amp;rdquo; (the fully-qualified domain name of the computer), &amp;ldquo;REALM&amp;rdquo; (the DNS name of your Active Directory domain in UPPERCASE), &amp;ldquo;DOMAIN&amp;rdquo; (the NetBIOS name of your Active Directory domain), &amp;ldquo;password&amp;rdquo; (the password that will be set for the new computer account), and &amp;ldquo;filename&amp;rdquo; (the keytab that will be generated and must be copied over to the Linux computer).&lt;/p&gt;
+
+&lt;p&gt;If you need to rebuild the Linux server for whatever reason, you&amp;rsquo;ll need to delete the computer account you created and repeat this process.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Preparing the Linux Server&lt;/h3&gt;
+
+&lt;p&gt;Follow the steps below to configure the Linux server for authentication against Active Directory.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Make sure that the appropriate Kerberos libraries, OpenLDAP, pam_krb5, and nss_ldap are installed. If they are not installed, install them.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Be sure that time is being properly synchronized between Active Directory and the Linux server in question. Kerberos requires time synchronization.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;krb5.conf&lt;/code&gt; file to look something like this, substituting your actual host names and domain names where appropriate:&lt;/p&gt;
+
+&lt;p&gt;[logging]&lt;br /&gt;
+ default = FILE:/var/log/krb5libs.log&lt;br /&gt;
+ kdc = FILE:/var/log/krb5kdc.log&lt;br /&gt;
+ admin_server = FILE:/var/log/kadmind.log&lt;/p&gt;
+
+&lt;p&gt;[libdefaults]&lt;br /&gt;
+ default_realm = EXAMPLE.COM&lt;br /&gt;
+ dns_lookup_realm = true&lt;br /&gt;
+ dns_lookup_kdc = true&lt;/p&gt;
+
+&lt;p&gt;[realms]&lt;br /&gt;
+ EXAMPLE.COM = {&lt;br /&gt;
+  kdc = host.example.com:88&lt;br /&gt;
+  admin_server = host.example.com:749&lt;br /&gt;
+  default_domain = example.com&lt;br /&gt;
+ }&lt;/p&gt;
+
+&lt;p&gt;[domain_realm]&lt;br /&gt;
+ .example.com = EXAMPLE.COM&lt;br /&gt;
+ example.com = EXAMPLE.COM&lt;/p&gt;
+
+&lt;p&gt;[kdc]&lt;br /&gt;
+ profile = /var/kerberos/krb5kdc/kdc.conf&lt;/p&gt;
+
+&lt;p&gt;[appdefaults]&lt;br /&gt;
+ pam = {&lt;br /&gt;
+   debug = false&lt;br /&gt;
+   ticket_lifetime = 36000&lt;br /&gt;
+   renew_lifetime = 36000&lt;br /&gt;
+   forwardable = true&lt;br /&gt;
+   krb4_convert = false&lt;br /&gt;
+ }&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;/etc/ldap.conf&lt;/code&gt; file to look something like this, substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate.&lt;/p&gt;
+
+&lt;p&gt;host 10.10.10.10
+base dc=example,dc=com
+binddn cn=ldap,cn=Users,dc=example,dc=com
+bindpw adldapbindpw
+scope sub
+ssl no
+nss_base_passwd dc=example,dc=com
+nss_base_shadow dc=example,dc=com
+nss_base_group dc=example,dc=com
+nss_map_objectclass posixAccount user
+nss_map_objectclass shadowAccount user
+nss_map_objectclass posixGroup group
+nss_map_attribute uid sAMAccountName
+nss_map_attribute uidNumber msSFU30UidNumber
+nss_map_attribute gidNumber msSFU30GidNumber
+nss_map_attribute loginShell msSFU30LoginShell
+nss_map_attribute gecos name
+nss_map_attribute userPassword msSFU30Password
+nss_map_attribute homeDirectory msSFU30HomeDirectory
+nss_map_attribute uniqueMember msSFU30PosixMember
+nss_map_attribute cn cn&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Securely copy the file created using the &lt;code&gt;ktpass.exe&lt;/code&gt; utility above to the Linux server in question, placing it in the &lt;code&gt;/etc&lt;/code&gt; directory as &lt;code&gt;krb5.keytab&lt;/code&gt;. (SFTP or SCP are excellent candidates for this.)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Configure PAM (this varies according to Linux distributions) to use pam_krb5 for authentication. Many modern distributions use a stacking mechanism whereby one file can be modified and those changes will applied to all the various PAM-aware services. For example, in Red Hat-based distributions, the system-auth file is referenced by most other PAM-aware services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the &lt;code&gt;/etc/nsswitch.conf&lt;/code&gt; file to include &amp;ldquo;ldap&amp;rdquo; as a lookup source for passwd, shadow, and groups.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That should be it. Once you do that, you should be able to use &lt;code&gt;kinit&lt;/code&gt; from a Linux shell prompt (for example, &lt;code&gt;kinit aduser&lt;/code&gt;) and generate a valid Kerberos ticket for the specified Active Directory account.&lt;/p&gt;
+
+&lt;p&gt;At this point, any PAM-aware service that is configured to use the stacked system file (such as the system-auth configuration on Red Hat-based distributions) will use Active Directory for authentication. Note, however, that unless you also add the &lt;code&gt;pam_mkhomedir.so&lt;/code&gt; module in the PAM configuration, home directories will have to be created manually for any Active Directory account that may log on to that server. (I generally recommend the use of &lt;code&gt;pam_mkhomedir.so&lt;/code&gt; in this situation.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Using .Mac iDisk with a WatchGuard Firebox</title>
+          <link>http://lowescott.github.io/2005/12/12/using-mac-idisk-with-a-watchguard-firebox/</link>
+          <pubDate>Mon, 12 Dec 2005 00:37:38 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/12/using-mac-idisk-with-a-watchguard-firebox/</guid>
+          <description>&lt;p&gt;One of the strengths of the &lt;a href=&#34;http://www.watchguard.com/&#34;&gt;WatchGuard&lt;/a&gt; &lt;a href=&#34;http://www.watchguard.com/products/appliances.asp&#34;&gt;Firebox&lt;/a&gt; series of firewalls is the inclusion of application-layer proxies for protocols such as SMTP, FTP, and HTTP. Whereas ordinary packet filtering firewalls and stateful inspection firewalls only control traffic based on IP address or TCP/UDP port number, application-layer proxies like those included in the Firebox look deeper into the packet to make decisions on information such as URL or MIME content type (for an HTTP proxy, for example).&lt;/p&gt;
+
+&lt;p&gt;However, this advantage also becomes a disadvantage as many application-layer proxies may not understand or be compatible with protocol-specific extensions. In this particular case, it&amp;rsquo;s the iDisk service provided by Apple&amp;rsquo;s &lt;a href=&#34;http://www.mac.com/&#34;&gt;.Mac&lt;/a&gt; subscription service. The iDisk service uses &lt;a href=&#34;http://www.webdav.org/&#34;&gt;WebDAV&lt;/a&gt;, an extension of the HTTP/1.1 protocol specification. It appears that, in general, most WebDAV services operate properly through the Fireboxs HTTP proxy (although some issues with Microsoft Exchange&amp;rsquo;s Outlook Web Access were reported with earlier versions of the WatchGuard Firebox System software).&lt;/p&gt;
+
+&lt;p&gt;The iDisk service, though, apparently uses some non-RFC-compliant headers (note that this was &lt;em&gt;not&lt;/em&gt; confirmed with a packet capture). As a result, the Proxied-HTTP service (which employs, as the name suggests, an application-layer HTTP proxy) prevents these headers from being passed and therefore prevents iDisk from working.&lt;/p&gt;
+
+&lt;p&gt;To make iDisk work from behind a WatchGuard Firebox firewall, one of several steps must be taken:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Use the Filtered-HTTP service, which does not employ an application-layer HTTP proxy and therefore would not interfere with iDisk or other WebDAV-based applications or services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Modify the default properties of the Proxied-HTTP service to allow unknown headers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since the Proxied-HTTP service also provides for content filtering and reporting, it is generally preferred to use the HTTP proxy instead of an ordinary HTTP packet filter. The first option is therefore not the ideal solution.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, the behavior of the Proxied-HTTP service is somewhat configurable. In order to make iDisk work with the HTTP proxy, the &amp;ldquo;Remove unknown headers&amp;rdquo; option must be unchecked in the configuration for the HTTP proxy. By unchecking the &amp;ldquo;Remove unknown headers&amp;rdquo; option, the Firebox will allow non-RFC-compliant HTTP headers to pass through the firewall, and iDisk will work correctly.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>WatchGuard Firebox VPN and Active Directory Integration</title>
+          <link>http://lowescott.github.io/2005/12/06/watchguard-firebox-vpn-and-active-directory-integration/</link>
+          <pubDate>Tue, 06 Dec 2005 17:38:24 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/06/watchguard-firebox-vpn-and-active-directory-integration/</guid>
+          <description>
+
+&lt;p&gt;A short while back, I posted an article on &lt;a href=&#34;http://blog.scottlowe.org/2005/11/22/cisco-pix-vpn-and-active-directory-integration/&#34;&gt;Cisco PIX VPN and Active Directory integration&lt;/a&gt;. Now, I&amp;rsquo;d like to follow that article up with a version looking at integration between Active Directory and &lt;a href=&#34;http://www.watchguard.com/&#34;&gt;WatchGuard&lt;/a&gt; Firebox VPNs.&lt;/p&gt;
+
+&lt;p&gt;As with the PIX-AD integration document, this article assumes that you have some basic knowledge of how to work with the WatchGuard Firebox series of firewalls. This article was written using version 6.2 of the WatchGuard Firebox System software and Windows Server 2003; other versions of either the firewall software or Windows should be similar.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Configuring the Firebox&lt;/h3&gt;
+
+&lt;p&gt;First, we&amp;rsquo;ll need to setup the Firebox. Use the Firebox software (Policy Manager, specifically) to perform the following configuration tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add the server that is running IAS (or will be running IAS; see below) as a RADIUS server in the Authentication Servers dialog box (found on the Setup menu). Here, you&amp;rsquo;ll need to specify the server&amp;rsquo;s IP address, port number (the default of 1645 will be fine), and the shared secret.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Instruct the firewall to use RADIUS by going to Setup &amp;gt; Firewall Authentication and selecting &amp;ldquo;RADIUS&amp;rdquo; as the authentication type.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Configure the firewall&amp;rsquo;s Remote User VPN (on the Network menu) to use RADIUS by checking the &amp;ldquo;Use RADIUS to authenticate remote users&amp;rdquo; check box.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once this is done, proceed with configuring PPTP-based remote user VPNs as usual. Be sure to add a rule allowing traffic to/from the pptp_users group; otherwise, VPN users will be subject to the same traffic restrictions as Internet users.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Configuring Internet Authentication Service&lt;/h3&gt;
+
+&lt;p&gt;Before doing anything else, create a new global security group in Active Directory. Call it &amp;ldquo;pptp_users&amp;rdquo;, just like the name of the group on the Firebox. This is an important part of the glue that will bind the Firebox together with Active Directory.&lt;/p&gt;
+
+&lt;p&gt;If IAS is not already installed, install IAS using the Add/Remove Programs icon in Control Panel.&lt;/p&gt;
+
+&lt;p&gt;Once it has been installed, launch it from the Administrative Tools folder on the Start Menu and we&amp;rsquo;ll proceed with configuring it for authenticating VPN connections to the Firebox.&lt;/p&gt;
+
+&lt;p&gt;First, we need to grant IAS permission to read dial-in properties from user accounts in Active Directory. To do this, right-click on the &amp;ldquo;Internet Authentication Service (Local)&amp;rdquo; and select &amp;ldquo;Register Server in Active Directory&amp;rdquo;. Select Yes (or OK) if prompted to confirm. Note that if IAS was already installed, it may have already been registered with Active Directory as well.&lt;/p&gt;
+
+&lt;p&gt;With that done, we can now configure the Firebox as a RADIUS client. Right-click on RADIUS Clients and select New RADIUS Client. In the wizard, specify the IP address (or DNS name) of the Firebox&amp;rsquo;s trusted interface and the shared secret. Note that this shared secret is the same secret key specified when configuring the RADIUS server in the Firebox previously. RADIUS clients use this to authenticate to RADIUS servers, so make it a reasonably strong password.&lt;/p&gt;
+
+&lt;p&gt;Now create a new remote access policy. Right-click on Remote Access Policies and select New Remote Access Policy. In the wizard, specify a name, select to create a custom policy, and then add the following conditions to the policy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;NAS-IP-Address: This will be the IP address of the Firebox&amp;rsquo;s trusted interface. This helps to ensure that this policy only applies to VPN requests from this firewall and not from any other RADIUS client.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Windows-Groups: This should be the &amp;ldquo;pptp_users&amp;rdquo; security group created earlier. Any user that should be allowed to authenticate on a VPN connection will need to be a member of this group.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, this policy should grant access. On the next screen, select &amp;ldquo;Edit Profile&amp;rdquo; to edit the remote access profile. This is important because we&amp;rsquo;ll need to verify that the RADIUS server is passing the correct information to the Firebox.&lt;/p&gt;
+
+&lt;p&gt;On the Advanced tab, remove all the attributes listed there (Service-Type and Framed-Protocol are there by default) and then add the Filter-Id attribute. To this attribute, add the string value &amp;ldquo;pptp_users&amp;rdquo;. Click OK to save these changes to the profile and then finish creating the policy.&lt;/p&gt;
+
+&lt;p&gt;Make this policy the first policy (using the Move Up/Move Down commands in the IAS console), add a user to the group created earlier, and then test your connection. Remote systems attempting to connect via PPTP should now be able to authenticate the VPN connection using their Active Directory usernames and passwords.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I&amp;rsquo;ve updated this entry to correct some errors pointed out in the comments. Thanks for the feedback!&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Protecting OWA with Apache</title>
+          <link>http://lowescott.github.io/2005/12/03/protecting-owa-with-apache/</link>
+          <pubDate>Sat, 03 Dec 2005 00:21:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/03/protecting-owa-with-apache/</guid>
+          <description>&lt;p&gt;Outlook Web Access (OWA) is the web-based interface for accessing e-mail and other resources handled by &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Microsoft Exchange&lt;/a&gt;. Unfortunately, OWA&amp;rsquo;s popularity also makes it the target of numerous worms and security exploits. As a result, many organizations seek to deploy OWA behind a reverse proxy that can help shield OWA from web-based attacks and exploits. In this posting, I&amp;rsquo;m going to share information to help build a reverse proxy using &lt;a href=&#34;http://www.apache.org/httpd/&#34;&gt;Apache 2.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a skeleton of an &lt;code&gt;httpd.conf&lt;/code&gt; file to support Apache as a reverse proxy in front of OWA:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;NameVirtualHost 1.2.3.4:80  
+NameVirtualHost 1.2.3.4:443  
+ProxyRequests Off
+
+&amp;lt;VirtualHost 1.2.3.4:443&amp;gt;  
+ServerAdmin webmaster@domain.com  
+ServerName webmail.domain.com  
+DocumentRoot /var/www/webmail  
+RequestHeader set Front-End-Https &amp;quot;On&amp;quot;  
+ProxyRequests Off  
+ProxyPreserveHost On  
+
+SSLEngine On  
+SSLCertificateFile conf/webmail-ssl-cert.pem
+
+&amp;lt;Location /exchange&amp;gt;  
+ProxyPass http://mail.domain.com/exchange  
+ProxyPassReverse http://mail.domain.com/exchange  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;Location /exchweb&amp;gt;  
+ProxyPass http://mail.domain.com/exchweb  
+ProxyPassReverse http://mail.domain.com/exchweb  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;Location /public&amp;gt;  
+ProxyPass http://mail.domain.com/public  
+ProxyPassReverse http://mail.domain.com/public  
+SSLRequireSSL  
+&amp;lt;/Location&amp;gt;
+
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The key portions of this configuration are described below, along with some supporting information.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;NameVirtualHost:&lt;/em&gt; The NameVirtualHost directive enables Apache to use name-based virtual hosts on the specified IP addresses and ports. The parameter to the NameVirtualHost directive must match one of the VirtualHost definitions, as shown in the sample configuration, or else the content will be served from the default virtual host (the first virtual host listed in the configuration). Note that if the Apache reverse proxy will not be using name-based virtual hosts (instead using IP address-based virtual hosts or running only a single server instance), then this directive is not required.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;RequestHeader:&lt;/em&gt; This directive instructs Apache to add a header &amp;ldquo;Front-End-Https: On&amp;rdquo; to requests sent to the internal OWA server. This header is proprietary to OWA and forces OWA to build URLs using &amp;ldquo;https://&amp;rdquo; references instead of ordinary &amp;ldquo;http://&amp;rdquo; references. This directive is required in order to terminate the SSL tunnel at the reverse proxy and use clear-text HTTP between the reverse proxy and the internal OWA server. This directive requires the &lt;code&gt;mod_headers&lt;/code&gt; module.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;ProxyPreserveHost:&lt;/em&gt; This directive configures Apache to pass the original host header, supplied by the client, to the server to which the request is being proxied. (This is instead of the host name supplied in the ProxyPass directive.) Again, this facilitates the construction of URLs with the correct hostname when accessing resources inside OWA.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;SSLCertificateFile:&lt;/em&gt; Apache expects the web server&amp;rsquo;s SSL certificate to be in PEM format. If the certificate&amp;rsquo;s key is encrypted, Apache will prompt upon startup for the passphrase to the key (this prevents any form of automated startup). It is considered a security best practice to keep the key in a separate file (using the SSLCertificateKeyFile directive) in encrypted form and supply the password upon the startup of Apache.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With this configuration in place, the following benefits are realized:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Name-based virtual hosts are supported. This allows other URLs to also be proxied through this same reverse proxy server.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;SSL encryption is offloaded from the Exchange server to the reverse proxy server. Traffic from the reverse proxy server itself to the Exchange server is standard, unencrypted HTTP.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When used in conjunction with &lt;a href=&#34;http://www.modsecurity.org/&#34;&gt;mod_security&lt;/a&gt; (another Apache module), OWA is protected against a very significant majority of all web-based attacks.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Using Apache to serve as a reverse proxy for OWA is a cost-effective way to add another layer of security to an Exchange-based messaging infrastructure.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Certificate Conversion Using OpenSSL</title>
+          <link>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</link>
+          <pubDate>Fri, 02 Dec 2005 16:08:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</guid>
+          <description>&lt;p&gt;In my various adventures with replacing Windows-based servers with Linux servers, I have had need on several occasions to take an SSL certificate (generated using Microsoft Certificate Services) and make it available to a Linux-based server. In some cases, it was to be used by the SSL wrapper &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt;; in others, it was for &lt;a href=&#34;http://www.apache.org/httpd/&#34;&gt;Apache&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In either case, the certificate needed to be in the PEM (originally Privacy Enhanced Mail, now a standard for encoding certificates) format. Windows, on the other hand, typically uses the PFX (PKCS #12) format for storing certificates. To prepare certificates for use on Linux, the certificates must be converted to PEM format.&lt;/p&gt;
+
+&lt;p&gt;In the hopes that this information might be useful to others, here&amp;rsquo;s a process for converting from PFX to PEM using &lt;a href=&#34;http://www.openssl.org/&#34;&gt;OpenSSL&lt;/a&gt;. With the exception of only a few items, the process is identical on Linux, &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, and &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows &lt;sup&gt;2000&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2003&lt;/sub&gt;&lt;/a&gt;. These steps were confirmed using OpenSSL 0.9.7a on Red Hat Linux 9.0, using OpenSSL 0.9.6i on Mac OS X 10.2.8, and OpenSSL 0.9.7c on Windows Server 2003.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If the certificate is not already available in PFX format, use the Certificates MMC snap-in to export the certificate and the corresponding private key to a PFX file. Be sure to note the passphrase used to protect the PFX file; it will be needed later. If the certificate (and its corresponding private key) is already available in PFX format and the passphrase for the PFX file is known, proceed to step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At a terminal prompt, type &lt;code&gt;openssl pkcs12 -in _pfxfilename.pfx_ -out _tempfile.pem_&lt;/code&gt;. This will convert the PFX file to a PEM file. The OpenSSL toolkit will prompt for the import passphrase; this will be the passphrase specified in step 1. A PEM passphrase will also be needed; make note of the passphrase used here (it will be needed later).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using a text editor (such as vi on a Linux system, or Notepad on a Windows system), split the encrypted RSA private key and the certificate into two separate files. Remove all extra text, leaving only the text between the lines with the dashes. Make note of the filenames; they will be needed later.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The RSA key is currently encrypted; this will an automated launch for the application using the certificate. It will be necessary to decrypt the RSA private key. To decrypt the RSA private key, use the command &lt;code&gt;openssl rsa -in _encryptedkey_ -out _decryptedkey_&lt;/code&gt; (where &lt;em&gt;encryptedkey&lt;/em&gt; is the file containing the RSA private key, as separated in step 3, and &lt;em&gt;decryptedkey&lt;/em&gt; is the file that will contain the decrypted RSA private key). The OpenSSL toolkit will prompt for the RSA key passphrase; this will be the passphrase specified in step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Linux or Mac OS X: To concatenate the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;cat _decryptedkey certificatefile_ &amp;gt; _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Windows: To combine the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;copy /b _decryptedkey_+_certificatefile_ _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the concatenated file (finalfile.pem from step 5) with a text editor to add a blank line between the decrypted RSA private key and the certificate, and a blank line after the end of the certificate.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point, the certificate is ready for use. &lt;strong&gt;&lt;em&gt;Be sure&lt;/em&gt;&lt;/strong&gt; to guard the unencrypted private key with extreme caution; loss of this file can result in the compromise of your system. Note also that most applications require that the certificates be owned by root and readable only by root (&lt;code&gt;chown root:root&lt;/code&gt; to make them owned by root and &lt;code&gt;chmod 600&lt;/code&gt; to make them readable only by root).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Cisco PIX VPN and Active Directory Integration</title>
+          <link>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</link>
+          <pubDate>Tue, 22 Nov 2005 19:01:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</guid>
+          <description>
+
+&lt;p&gt;Rather than publishing this information in PDF form on my business website, I&amp;rsquo;ve decided to try something new and post it here as a blog entry. So, here goes.&lt;/p&gt;
+
+&lt;p&gt;This information assumes that you have some experience with the Cisco PIX firewall (i.e., you know how to enter configuration commands and have a basic idea of what the configuration commands actually do) as well as some experience with Windows and Active Directory.&lt;/p&gt;
+
+&lt;p&gt;With that information in hand, let&amp;rsquo;s get started.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Configuring the Cisco PIX&lt;/h2&gt;
+
+&lt;p&gt;First, we&amp;rsquo;ll need to setup the PIX firewall. Use the commands below to configure the PIX for PPTP-based VPN connections that will authenticate against an Active Directory back-end.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ip local pool vpn-pool 10.10.10.1-10.10.10.254  
+aaa-server vpn-auth inside host 10.10.10.5 secretkey  
+aaa-server vpn-auth inside host 10.10.10.6 secretkey  
+aaa-server vpn-auth protocol radius  
+vpdn group vpn-pptp-group accept dialin pptp  
+vpdn group vpn-pptp-group ppp authentication mschap  
+vpdn group vpn-pptp-group ppp encryption mppe 128 required  
+vpdn group vpn-pptp-group client configuration \  
+address local vpn-pool  
+vpdn group vpn-pptp-group client configuration \  
+dns 10.10.10.5 10.10.10.6  
+vpdn group vpn-pptp-group client configuration \  
+wins 10.10.10.6 10.10.10.5  
+vpdn group vpn-pptp-group client authentication aaa vpn-auth  
+vpdn enable outside  
+sysopt connect permit-pptp  
+access-list acl-nat0 permit ip 10.10.1.0 255.255.255.0 \  
+10.10.10.0 255.255.255.0  
+nat (inside) 0 access-list acl-nat0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(Note that I have placed a backslash to indicate text that is wrapped onto two lines here but should be entered all on a single line in the PIX configuration.)&lt;/p&gt;
+
+&lt;p&gt;In this configuration, replace the IP addresses on lines 2 and 3 (the &lt;code&gt;aaa-server vpn-auth&lt;/code&gt; commands) with the IP addresses of the servers running Internet Authentication Service (IAS) on Windows. See the next section for more information on configuring IAS.&lt;/p&gt;
+
+&lt;p&gt;On those same lines, replace the text &lt;code&gt;secretkey&lt;/code&gt; with the RADIUS shared secret that will be used when configuring the RADIUS/IAS server in the next section.&lt;/p&gt;
+
+&lt;p&gt;Likewise, replace the IP addresses on lines 9 and 10 (the &lt;code&gt;vdpn group vpn-pptp-group client configuration&lt;/code&gt; lines that pass out the DNS and WINS servers to VPN clients) with the IP addresses of your DNS and WINS servers, respectively.&lt;/p&gt;
+
+&lt;p&gt;That should do it. Save the configuration to the PIX and then move on to configuring IAS.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Configuring Internet Authentication Service&lt;/h2&gt;
+
+&lt;p&gt;Before doing anything else, create a new global security group in Active Directory. Call it something like &amp;ldquo;VPN Users&amp;rdquo; or similar. We&amp;rsquo;ll use this group later as an additional security check in validating VPN connections.&lt;/p&gt;
+
+&lt;p&gt;Next, install IAS using the Add/Remove Programs icon in Control Panel. Once it has been installed, launch it from the Administrative Tools folder on the Start Menu and we&amp;rsquo;ll proceed with configuring it for authenticating VPN connections to the PIX firewall.&lt;/p&gt;
+
+&lt;p&gt;First, we need to grant IAS permission to read dial-in properties from user accounts in Active Directory. To do this, right-click on the &amp;ldquo;Internet Authentication Service (Local)&amp;rdquo; and select &amp;ldquo;Register Server in Active Directory&amp;rdquo;. Select Yes (or OK) if prompted to confirm.&lt;/p&gt;
+
+&lt;p&gt;With that done, we can now configure the PIX firewall as a RADIUS client. Right-click on RADIUS Clients and select New RADIUS Client. In the wizard, specify the IP address (or DNS name) of the PIX firewall&amp;rsquo;s internal IP address and the shared secret. Note that this shared secret is the same secret key specified in the PIX configuration above. RADIUS clients use this to authenticate to RADIUS servers, so make it a reasonably strong password.&lt;/p&gt;
+
+&lt;p&gt;Now create a remote access policy. Right-click on Remote Access Policies and select New Remote Access Policy. In the wizard, specify a name, select to create a custom policy, and then add the following conditions to the policy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;NAS-IP-Address: This will be the IP address of the PIX firewall&amp;rsquo;s internal interface. This helps to ensure that this policy only applies to VPN requests from this firewall and not from any other RADIUS client.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Windows-Groups: This should be the security group created earlier. Any user that should be allowed to authenticate on a VPN connection will need to be a member of this group.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The rest of the policy should be very straightforward. Make this policy the first policy (using the Move Up/Move Down commands in the IAS console), add a user to the group created earlier, and then test your connection. Remote systems attempting to connect via PPTP should now be able to authenticate the VPN connection using their Active Directory usernames and passwords.&lt;/p&gt;
+
+&lt;p&gt;Although this was written from the perspective of authenticating PPTP connections, the process should be very similar for IPSec VPN clients as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Microsoft&#39;s Counter-Move</title>
+          <link>http://lowescott.github.io/2005/11/21/microsofts-counter-move/</link>
+          <pubDate>Mon, 21 Nov 2005 23:16:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/21/microsofts-counter-move/</guid>
+          <description>&lt;p&gt;The rallying cry around OpenDocument prompted Microsoft to make its counter-move. As fully expected, Microsoft is trying to &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1891829,00.asp&#34;&gt;create a standard&lt;/a&gt; based on Microsoft&amp;rsquo;s own (until now) proprietary XML formats. Please tell me you saw this coming, right?&lt;/p&gt;
+
+&lt;p&gt;With companies from &lt;a href=&#34;http://www.novell.com/&#34;&gt;Novell&lt;/a&gt; to &lt;a href=&#34;http://www.corel.com/&#34;&gt;Corel&lt;/a&gt; &lt;a href=&#34;http://www.eweek.com/article2/0,1895,1877815,00.asp&#34;&gt;standing in support&lt;/a&gt; of the OpenDocument format, a new coalition forming in support of the format, and governments agencies such as the State of Massachusetts requiring the use of file formats such as PDF and OpenDocument, clearly Microsoft was worried. Otherwise, why try to create an alternate standard of your own creation? Why not just join the existing standards? Many are also saying that Microsoft&amp;rsquo;s decision to include PDF support in the next version of Office is another attempt to keep from being shut out. After all, Office is a major cash cow for Microsoft, so the company will do whatever it can to provent a loss of marketshare (and revenue as a result).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Technology Convergence</title>
+          <link>http://lowescott.github.io/2005/10/19/technology-convergence/</link>
+          <pubDate>Wed, 19 Oct 2005 15:37:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/19/technology-convergence/</guid>
+          <description>&lt;p&gt;It&amp;rsquo;s about time. I&amp;rsquo;ve been waiting for someone to take revolutionary (in my opinion, at least) technologies such as virtualization, blade servers (or any alternative server form factors), and thin-client access and combine them. And that&amp;rsquo;s exactly what &lt;a href=&#34;http://www.ibm.com/&#34;&gt;IBM&lt;/a&gt;, &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, and &lt;a href=&#34;http://www.citrix.com/&#34;&gt;Citrix&lt;/a&gt; are doing, as discussed &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1873113,00.asp&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Leveraging their individual strengths (IBM&amp;rsquo;s hardware, VMware&amp;rsquo;s virtualization, and Citrix&amp;rsquo;s access technologies), the group is rolling out a hosted client infrastructure that will compete directly with so-called &amp;ldquo;blade PCs&amp;rdquo; (from companies such as &lt;a href=&#34;http://www.clearcube.com/controller/home.php&#34;&gt;ClearCube&lt;/a&gt;) and traditional thin clients (from companies such as &lt;a href=&#34;http://www.wyse.com/index.htm&#34;&gt;Wyse&lt;/a&gt; and &lt;a href=&#34;http://www.neoware.com/&#34;&gt;Neoware&lt;/a&gt;). The nice thing about this solution is that it works equally well with full PCs and thin client devices.&lt;/p&gt;
+
+&lt;p&gt;This is good stuff. IBM&amp;rsquo;s blade servers are well-respected, and IBM&amp;rsquo;s integration of their blades with technologies from Cisco Systems (such as their Cisco Systems Intelligent Gigabit Ethernet Switch Module for the IBM eServer BladeCenter, more information available &lt;a href=&#34;http://www-132.ibm.com/webapp/wcs/stores/servlet/ProductDisplay?productId=8712463&amp;amp;storeId=1&amp;amp;langId=-1&amp;amp;catalogId=-840&#34;&gt;here&lt;/a&gt;) gives them a leg up on the competitors. As for virtualization&amp;hellip;well, VMware invented the market, and while &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; may be offering a virtualization product of its own they have a long way to go to catch up. VMware&amp;rsquo;s latest version of &lt;a href=&#34;http://www.vmware.com/products/esx/&#34;&gt;ESX Server&lt;/a&gt;  offers much-improved resource utilization and scheduling functionality, particularly when used in combination with the latest version of &lt;a href=&#34;http://www.vmware.com/products/vc/&#34;&gt;VirtualCenter&lt;/a&gt;. Likewise, Citrix pioneered multi-user Windows and the ICA protocol, and they continue to innovate in recent versions of &lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=hp_nav_US&#34;&gt;Presentation Manager&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Combining these technologies to create a dynamic environment where users are seamlessly connected to virtual servers hosted on and across multiple blade servers is a natural evolution for each of these technologies. (I would guess that I don&amp;rsquo;t need to point out how full circle this brings enterprise computing environments.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>GPRS vs. Bluetooth</title>
+          <link>http://lowescott.github.io/2005/09/22/gprs-vs-bluetooth/</link>
+          <pubDate>Thu, 22 Sep 2005 08:03:33 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/09/22/gprs-vs-bluetooth/</guid>
+          <description>&lt;p&gt;As I&amp;rsquo;ve continued using my &lt;a href=&#34;http://www.palm.com/us/products/smartphones/treo650/&#34;&gt;Treo 650&lt;/a&gt;, I&amp;rsquo;ve run into an apparent conflict between the Treo&amp;rsquo;s GPRS functionality and Bluetooth HotSync support.&lt;/p&gt;
+
+&lt;p&gt;Yesterday, I was trying to HotSync my Treo back to my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt; so that I could install &lt;a href=&#34;http://www.chatopus.com/&#34;&gt;Chatopus&lt;/a&gt;, an IM client for the Treo. (BTW, Chatopus is pretty cool; it&amp;rsquo;s an XMPP/Jabber IM client.) However, every time I tried to HotSync via Bluetooth, I&amp;rsquo;d get the &amp;ldquo;Port is in use by another application&amp;rdquo; error. Reviews of the HotSync log on the laptop showed nothing, which indicated to me that the problem was on the Treo. Just on a whim, I dropped the GPRS connection I was using to retrieve mail in VersaMail and tried again. It worked!&lt;/p&gt;
+
+&lt;p&gt;The only conclusion that I can draw is that having a GPRS connection prevents using Bluetooth to HotSync. Note that it doesn&amp;rsquo;t prevent Bluetooth use in general, since I can use my Bluetooth headset without any problems. It just seems to prevent the use of Bluetooth for a HotSync operation.&lt;/p&gt;
+
+&lt;p&gt;This does not appear to be a limitation of Palm&amp;rsquo;s HotSync software on the laptop, so I don&amp;rsquo;t think that using something like &lt;a href=&#34;http://www.missingsync.com/missingsync_palmos.php&#34;&gt;The Missing Sync&lt;/a&gt; (from Mark/Space) will help matters. (I am looking into switching to that software, though.)&lt;/p&gt;
+
+&lt;p&gt;If anyone has any additional information on this conflict, please post more information in the comments.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>IMAP, VersaMail, and Mail.app</title>
+          <link>http://lowescott.github.io/2005/09/15/imap-versamail-and-mailapp/</link>
+          <pubDate>Thu, 15 Sep 2005 23:50:27 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/09/15/imap-versamail-and-mailapp/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;m continuing to experiment with &lt;a href=&#34;http://www.palm.com/us/products/smartphones/treo650/versamail.epl&#34;&gt;VersaMail&lt;/a&gt;, the e-mail application running on my &lt;a href=&#34;http://www.palm.com/us/products/smartphones/treo650/&#34;&gt;palmOne Treo 650 smartphone&lt;/a&gt;. GPRS quibbles aside, my only complaint is related to the interactions between VersaMail and &lt;a href=&#34;http://www.apple.com/macosx/features/mail/&#34;&gt;Mail.app&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Specifically, when I delete a message in VersaMail (and tell VersaMail to delete the message on the server), it doesn&amp;rsquo;t always disappear in Mail.app. Likewise, when I delete a message in Mail.app, it remains in the Treo&amp;rsquo;s Inbox. Even using the Treo&amp;rsquo;s &amp;ldquo;Sync server folders&amp;rdquo; command in VersaMail doesn&amp;rsquo;t seem to correct the problem.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure that this is all just the result of slightly differing IMAP implementations. After all, I have seen firsthand how deleting an e-mail message in Mail.app doesn&amp;rsquo;t &amp;ldquo;take effect&amp;rdquo; in Outlook until you switch folders in Mail.app. Sometimes you have to use the &amp;ldquo;Empty Trash&amp;rdquo; command as well in order for changes to take effect.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s certainly not a showstopper, so I&amp;rsquo;m not terribly concerned about it. But, if someone has some information on how I might be able to work around this, that would be greatly appreciated.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Treo 650 Notes</title>
+          <link>http://lowescott.github.io/2005/09/14/treo-650-notes/</link>
+          <pubDate>Wed, 14 Sep 2005 23:20:37 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/09/14/treo-650-notes/</guid>
+          <description>&lt;p&gt;I picked up a &lt;a href=&#34;http://www.palm.com/us/products/smartphones/treo650/&#34;&gt;Treo 650&lt;/a&gt; over the weekend from &lt;a href=&#34;http://www.cingular.com/&#34;&gt;Cingular Wireless&lt;/a&gt;, my current wireless provider, and so far I have to say I am happy with the Treo. As a Palm OS-based organizer, the screen is smaller than what I had grown accustomed to on my &lt;a href=&#34;http://www.palm.com/us/products/handhelds/tungsten-t3/&#34;&gt;Tungsten T3&lt;/a&gt;, but the resolution seems higher, and I think the color depth is greater as well. As a phone, it seems to work pretty well. The Cingular Wireless GPRS service leaves a bit to be desired, but otherwise works as expected.&lt;/p&gt;
+
+&lt;p&gt;I like the Bluetooth functionality, so I can now use the wireless Bluetooth headset I&amp;rsquo;ve wanted for a while. The Bluetooth support seems better on the Treo as well; I found it much easier to get a HotSync working over Bluetooth with the Treo than with the Tungsten.&lt;/p&gt;
+
+&lt;p&gt;I also like VersaMail, the Palm OS mail application. Using VersaMail, IMAP/SSL, and SMTP/SSL, I&amp;rsquo;m able to check and respond to e-mail messages wherever I have a decent GPRS signal strength. I was particularly pleased at the SSL support. It didn&amp;rsquo;t take me long to get the Treo downloading e-mail from my Exchange server using IMAP/SSL.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m still exploring options on the Treo, so don&amp;rsquo;t be surprised if I post back here in a few days talking about the Treo again.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Additional Information Coming Soon</title>
+          <link>http://lowescott.github.io/2005/08/18/additional-information-coming-soon/</link>
+          <pubDate>Thu, 18 Aug 2005 00:40:32 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/18/additional-information-coming-soon/</guid>
+          <description>&lt;p&gt;It looks like things will work out next week that I&amp;rsquo;ll be able to post some additional information on some technologies I&amp;rsquo;ve mentioned recently.&lt;/p&gt;
+
+&lt;p&gt;First up will be access-based enumeration. One of my customers is planning on using this technology and we need to make sure that the potential performance impacts mentioned by &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; aren&amp;rsquo;t going to be a deal-breaker. So, once I have some additional information, I&amp;rsquo;ll post it here.&lt;/p&gt;
+
+&lt;p&gt;Next will be the &lt;a href=&#34;http://www.xcnetwork.com/xcconnect.jsp&#34;&gt;XC Connect&lt;/a&gt; software I mentioned a few posts back. I just finished downloading the Linux version of the XC Connect server software, and hope to have that installed on a &lt;a href=&#34;http://www.centos.org/&#34;&gt;CentOS&lt;/a&gt; system soon for testing. Again, after some testing with the product, I&amp;rsquo;ll post more information here.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>XC Connect</title>
+          <link>http://lowescott.github.io/2005/08/17/xc-connect/</link>
+          <pubDate>Wed, 17 Aug 2005 00:08:14 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/17/xc-connect/</guid>
+          <description>&lt;p&gt;While browsing the &lt;a href=&#34;http://www.apple.com/&#34;&gt;Apple&lt;/a&gt; site for some birthday gift ideas (my birthday is coming up soon and my wife needs some gift ideas; she says I&amp;rsquo;m impossible to shop for), I came across a link to a product called &lt;a href=&#34;http://www.xcnetwork.com/xcconnect.jsp&#34;&gt;XC Connect&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I was curious, so I followed the link and found a piece of software that, if it works as well as it claims, could be an incredible help. At my office, we use a proprietary messaging system that doesn&amp;rsquo;t play so well with my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;. I&amp;rsquo;ve managed to do reasonably well so far, using third-party tools to push my iCal and Address Book data into this back-end system. XC Connect promises to change all that. Using a Java application deployed on a server (Linux, Windows, or Mac OS X) along with a small client application, XCConnect promises to enable sharing of data between Windows/Outlook, Mac OS X/iCal/Address Book/Entourage, and Linux/Evolution. And it will do this with an encrypted connection between client and server.&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s a free evaluation copy available from the web site, and I can create a Linux server to test it on. Why not? If the application bombs, then I&amp;rsquo;ve only lost some time; if the application rocks, then I&amp;rsquo;ve found a whole new way of sharing data with my co-workers. I&amp;rsquo;ll let you know what the verdict is.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Funky Active Directory Issue</title>
+          <link>http://lowescott.github.io/2005/08/16/funky-active-directory-issue/</link>
+          <pubDate>Tue, 16 Aug 2005 23:17:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/16/funky-active-directory-issue/</guid>
+          <description>&lt;p&gt;I came across a funky Active Directory issue today. User objects stored in an OU on which permissions had been assigned were &amp;ldquo;losing&amp;rdquo; their permissions and their inheritance from the parent OU. For example, if the group &amp;ldquo;Support Team&amp;rdquo; had been granted a set of permissions on the OU &amp;ldquo;Sales&amp;rdquo;, then the user object &amp;ldquo;Bob Jones&amp;rdquo; stored in that OU would lose those permissions regularly. Even when the permissions were reassigned, they would disappear again.&lt;/p&gt;
+
+&lt;p&gt;It turns out that if the user object is a member, directly or indirectly, of a &amp;ldquo;protected group&amp;rdquo; (such as Server Operators, Backup Operators, or Administrators), then Active Directory automatically removes any inherited permissions, resets those permissions to the default, and turns off inheritance for those objects. The idea is to prevent possible elevation of privileges. This behavior is described in &lt;a href=&#34;http://support.microsoft.com/default.aspx?scid=kb;en-us;817433&#34;&gt;this KB article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The fix? Well, you can muck around in Active Directory and play with the adminSDHolder object, or you can just not worry about delegations on those user objects, or you can remove those user objects from the protected group in question. In my particular case, the user objects needed to be taken out of the protected group anyway, so that was a natural fit.&lt;/p&gt;
+
+&lt;p&gt;Keep this in mind when planning AD delegations and the placement of accounts that will be members of a protected group.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Technical Document Posted</title>
+          <link>http://lowescott.github.io/2005/08/13/technical-document-posted/</link>
+          <pubDate>Sat, 13 Aug 2005 22:16:18 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/13/technical-document-posted/</guid>
+          <description>&lt;p&gt;I posted a write-up of my Active Directory-Linux integration as a technical document on the &lt;a href=&#34;http://www.mercurionsystems.com/&#34;&gt;Mercurion Systems&lt;/a&gt; web site. You can find the document in the &lt;a href=&#34;http://www.mercurionsystems.com/downloads/index.html&#34;&gt;Downloads&lt;/a&gt; area. I hope it proves useful to someone.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>IPSec, Mac OS X, and Windows Server 2003</title>
+          <link>http://lowescott.github.io/2005/08/05/ipsec-mac-os-x-and-windows-server-2003/</link>
+          <pubDate>Fri, 05 Aug 2005 00:55:13 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/05/ipsec-mac-os-x-and-windows-server-2003/</guid>
+          <description>&lt;p&gt;For quite some time now, a minor task I&amp;rsquo;ve been experimenting with is establishing transport mode IPSec security associations between &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; and &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt;. I&amp;rsquo;ve been using a freeware IPSec client called &lt;a href=&#34;http://www.lobotomo.com/products/IPSecuritas/&#34;&gt;IPSecuritas&lt;/a&gt;. Up until just a few days ago, I could never get anything to work. After working on getting a PPTP-based VPN working from my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt;, I realized that just as I had to modify my ipfw rules (using BrickHouse) to allow the PPTP traffic, I&amp;rsquo;d have to modify the rules to allow IPSec traffic as well. Duh!&lt;/p&gt;
+
+&lt;p&gt;After making the changes to allow ISAKMP (UDP port 500), ESP (IP protocol 50), and AH (IP protocol 51), I created a quick-and-dirty IP Security policy on the Windows box. Lo and behold, it looked as if an SA was established. However, within just a few seconds after IPSecuritas&amp;rsquo; log showed the SA established, then it appeared as if racoon (the back-end for IPSec on Mac OS X) crashed. I have not yet figured out why.&lt;/p&gt;
+
+&lt;p&gt;Even with the apparent racoon crash, it looked like the SA was still valid. I was not able to verify encryption by sniffing the traffic, but it certainly seemed like everything was working.&lt;/p&gt;
+
+&lt;p&gt;Despite the problems thus far, this is still good news to me. Here&amp;rsquo;s hoping I can figure the rest of the problem out.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Squid-PIX Integration</title>
+          <link>http://lowescott.github.io/2005/08/03/squid-pix-integration/</link>
+          <pubDate>Wed, 03 Aug 2005 17:45:28 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/03/squid-pix-integration/</guid>
+          <description>&lt;p&gt;I have been searching for the last few days on some techniques to integrate a &lt;a href=&#34;http://www.squid-cache.org/&#34;&gt;Squid web cache&lt;/a&gt; with a PIX firewall in a transparent fashion. Most of the information I am finding involves using the Squid web cache as the default gateway along with an iptables firewall that transparently redirects outbound TCP port 80 traffic to port 3128 (the Squid web cache port). The web cache then talks to the PIX, which takes it from there. Certainly, this works, but it is not what I was hoping to find. I&amp;rsquo;d really like a way to have the PIX redirect the traffic, but it appears that the PIX OS does not support that functionality. How can this be? The &lt;code&gt;pf&lt;/code&gt; firewall in &lt;a href=&#34;http://www.openbsd.org&#34;&gt;OpenBSD&lt;/a&gt; supports redirection, if I&amp;rsquo;m not mistaken. The &lt;code&gt;iptables&lt;/code&gt; firewall in Linux supports redirection. But not Cisco&amp;rsquo;s PIX OS? Is it just me, or does anyone else see a problem with this?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>VPN Integration Done</title>
+          <link>http://lowescott.github.io/2005/07/27/vpn-integration-done/</link>
+          <pubDate>Wed, 27 Jul 2005 00:23:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/27/vpn-integration-done/</guid>
+          <description>&lt;p&gt;That was easier than I expected. I managed to get my hardware firewall to authenticate VPN connections against Active Directory via &lt;a href=&#34;http://en.wikipedia.org/wiki/RADIUS&#34;&gt;RADIUS&lt;/a&gt; (using Internet Authentication Service, or IAS) without a great deal of effort. In fact, it was almost easy. If I ever get caught up on documentation, I&amp;rsquo;ll post some details on how to do it on the &lt;a href=&#34;http://www.mercurionsystems.com/index.html&#34;&gt;Mercurion Systems&lt;/a&gt; web site.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Next Integration Task(s)</title>
+          <link>http://lowescott.github.io/2005/07/24/next-integration-tasks/</link>
+          <pubDate>Sun, 24 Jul 2005 23:58:13 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/24/next-integration-tasks/</guid>
+          <description>&lt;p&gt;With the majority of my Linux servers now authenticating against Active Directory, I&amp;rsquo;m now able to broaden my integration focus and work on some related tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;SASL2/PAM:&lt;/em&gt; I still have one server, running SASL2, that has not been switched over to the standard Kerberos/LDAP configuration. I&amp;rsquo;ll need to research the interplay between SASL2 and PAM before I tackle this one.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;OpenBSD Authentication:&lt;/em&gt; I haven&amp;rsquo;t touched any of the OpenBSD servers yet for Kerberos/LDAP authentication.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;VPN Authentication via RADIUS:&lt;/em&gt; I&amp;rsquo;d like to use RADIUS to handle some VPN authentication against Active Directory as well. I don&amp;rsquo;t anticipate this should be too terribly difficult, but it is something that is rather new to me.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Apache Authentication via Kerberos to AD:&lt;/em&gt; One of the documents that helped me in getting the pam_krb5 stuff working was for &lt;a href=&#34;http://www.grolmsnet.de/kerbtut/&#34;&gt;using mod_auth_kerb with Apache&lt;/a&gt; (more information also posted &lt;a href=&#34;http://sl.mvps.org/docs/LinuxApacheKerberosAD.htm&#34;&gt;here&lt;/a&gt; as well). I&amp;rsquo;d like to deploy this for some select areas of our intranet and extranet sites, to add an additional layer of security on top of what is already present.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, this is in addition to trying to establish an internal news server running INNd (and then migrating content from Exchange Server 2003 into this news server) and working on Squid log analysis tools. I&amp;rsquo;ll probably start investigating Squid authentication options as well, since that would be very helpful to my customers (especially if I can get the authentication to be transparent, or very nearly so). On top of that I have duties in church, work as a manager overseeing employees, and things to do as a dad. Whew! I often wonder if I am just not efficient with managing my time, or if I just have too much to do.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Wrap-Up</title>
+          <link>http://lowescott.github.io/2005/07/22/linux-ad-integration-wrap-up/</link>
+          <pubDate>Fri, 22 Jul 2005 00:19:08 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/22/linux-ad-integration-wrap-up/</guid>
+          <description>&lt;p&gt;Well, my Linux-AD integration task is pretty much complete. I have three Linux servers authenticating via &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; to Active Directory, and using LDAP for name/group resolution. Only one Linux server remains; I need to do some research on how &lt;a href=&#34;http://asg.web.cmu.edu/sasl/&#34;&gt;SASL&lt;/a&gt; with interact with PAM before I can switch over that particular server. My &lt;a href=&#34;http://www.openbsd.org&#34;&gt;OpenBSD&lt;/a&gt; server I&amp;rsquo;m going to leave alone for now; perhaps later I&amp;rsquo;ll get it integrated as well.&lt;/p&gt;
+
+&lt;p&gt;Next, I think I&amp;rsquo;m going to see what is involved in using RADIUS to authenticate VPN tunnels on my hardware firewall.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Computer Accounts With ktpass.exe</title>
+          <link>http://lowescott.github.io/2005/07/19/computer-accounts-with-ktpassexe/</link>
+          <pubDate>Tue, 19 Jul 2005 13:08:06 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/19/computer-accounts-with-ktpassexe/</guid>
+          <description>&lt;p&gt;As a quick follow-up to my previous posting, testing with Kerberos authentication from a Linux server with pam_krb5 was successful. Instead of using a user account in Active Directory to generate the keytab, I was able to use a computer account and just had to modify the ktpass.exe command line syntax slightly (see my previous post).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Minor Linux-AD Hiccup Fixed (Hopefully)</title>
+          <link>http://lowescott.github.io/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/</link>
+          <pubDate>Mon, 18 Jul 2005 00:18:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/18/minor-linux-ad-hiccup-fixed-hopefully/</guid>
+          <description>&lt;p&gt;I think I have resolved one minor Linux-AD integration hiccup. In setting up the Kerberos authentication, various instructions I had found (including some from Microsoft) indicated I needed to create a &lt;em&gt;user&lt;/em&gt; account for the Linux servers, then use &lt;code&gt;ktpass&lt;/code&gt; to generate the Kerberos keytab. This works, but being the stickler for detail that I am, I really wanted to use a computer account instead of a user account.&lt;/p&gt;
+
+&lt;p&gt;After fiddling with it for a while, I finally managed to make it work. The &lt;code&gt;ktpass&lt;/code&gt; command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$  
+-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL  
+-out filename
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The missing piece, for me, was specifying &lt;code&gt;DOMAIN\name$&lt;/code&gt; for the mapuser parameter. Without it, the command kept generating an error.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know for sure that this will work, but I will be testing this within the next day or so to see how it goes.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Success!</title>
+          <link>http://lowescott.github.io/2005/07/17/linux-ad-integration-success/</link>
+          <pubDate>Sun, 17 Jul 2005 22:31:52 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/17/linux-ad-integration-success/</guid>
+          <description>&lt;p&gt;Well, limited success, anyway. I have managed to get Linux authentication to occur via &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; against Active Directory. LDAP is used to lookup the user and group information. Using pam_krb5, authentication occurs via Kerberos to an Active Directory DC for any PAM-aware application. I&amp;rsquo;m sure that I&amp;rsquo;ll find some hiccups along the way, but so far things look good. I only have 1 server configured this way for now (a non-essential server), but after some additional testing I&amp;rsquo;ll expand this to the remainder of my Linux servers.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll post more details here and/or on the &lt;a href=&#34;http://www.mercurionsystems.com/index.html&#34;&gt;Mercurion Systems&lt;/a&gt; web site once all the bugs have been worked out. My thanks go out to the many, many individuals who posted information on using Kerberos and LDAP with Active Directory; this would not have been possible without their assistance.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux-AD Integration Direction</title>
+          <link>http://lowescott.github.io/2005/07/13/linux-ad-integration-direction/</link>
+          <pubDate>Wed, 13 Jul 2005 17:09:06 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/linux-ad-integration-direction/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;ve spent some time over the last few days researching some of the various ways in which to allow users to login to Linux servers using their credentials from Active Directory. Along the way, I&amp;rsquo;ve found some useful articles; notably, &lt;a href=&#34;http://www.networkcomputing.com/1305/1305ws1.html&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;http://www.timkennedy.net/docs/Linux+Active_Directory.html&#34;&gt;here&lt;/a&gt;, and &lt;a href=&#34;http://www.newsforge.com/article.pl?sid=04/12/09/2258243&#34;&gt;here&lt;/a&gt;. These are also bookmarked in &lt;a href=&#34;http://del.icio.us/slowe&#34;&gt;my del.icio.us&lt;/a&gt; bookmark list under the &lt;a href=&#34;http://del.icio.us/slowe/Linux&#34;&gt;Linux&lt;/a&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;It looks as if the best solution involves the use of &lt;a href=&#34;http://web.mit.edu/kerberos/www&#34;&gt;Kerberos&lt;/a&gt; for authentication and LDAP for user/group name resolution. As fate would have it, as soon as I decide to use Kerberos, some &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1836591,00.asp&#34;&gt;new security holes&lt;/a&gt; are discovered. At least these security holes don&amp;rsquo;t involve Microsoft&amp;rsquo;s implementation of Kerberos, but they will affect the Linux Kerberos clients. Hopefully, patches for the affected portions will be released reasonably quickly.&lt;/p&gt;
+
+&lt;p&gt;As this project evolves, I&amp;rsquo;ll continue to post more information here. A final &amp;ldquo;how to&amp;rdquo; will likely also be posted on the &lt;a href=&#34;http://www.mercurionsystems.com/&#34;&gt;Mercurion Systems web site&lt;/a&gt; as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>New Book on Linux-Windows Integration</title>
+          <link>http://lowescott.github.io/2005/07/09/new-book-on-linux-windows-integration/</link>
+          <pubDate>Sat, 09 Jul 2005 23:22:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/09/new-book-on-linux-windows-integration/</guid>
+          <description>&lt;p&gt;While searching for Linux-Windows integration articles to assist in my project to unify Linux authentication with Active Directory, I came across an entry in Robbie Allen&amp;rsquo;s &lt;a href=&#34;http://www.rallenhome.com/blog/adcookbook/&#34;&gt;Active Directory Cookbook blog&lt;/a&gt; that was talking about a new book titled &lt;em&gt;Linux in a Windows World&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Turns out that &lt;a href=&#34;http://www.oreilly.com/&#34;&gt;O&amp;rsquo;Reilly&lt;/a&gt; has indeed published &lt;em&gt;&lt;a href=&#34;http://www.oreilly.com/catalog/linuxwinworld/&#34;&gt;Linux in a Windows World&lt;/a&gt;&lt;/em&gt;. Looks to be a good book; I&amp;rsquo;ll have to pick up a copy soon.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>A New Effort</title>
+          <link>http://lowescott.github.io/2005/07/09/a-new-effort/</link>
+          <pubDate>Sat, 09 Jul 2005 23:09:53 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/09/a-new-effort/</guid>
+          <description>&lt;p&gt;I suppose I should be finishing one project before starting another, but I can&amp;rsquo;t help myself. I&amp;rsquo;m going to take on the project of integrating my Linux systems with Microsoft Active Directory, so that a single Active Directory account can be used to authenticate to both Windows-based systems as well as Linux-based systems on our network.&lt;/p&gt;
+
+&lt;p&gt;This new effort comes while I have yet to finish my &lt;a href=&#34;http://blog.scottlowe.org/2005/05/13/miscellaneous-projects/&#34;&gt;projects&lt;/a&gt; on Squid log analysis tools or an internal news server running INN. At least I did get &lt;a href=&#34;http://blog.scottlowe.org/2005/05/15/perdition-working-now/&#34;&gt;Perdition working&lt;/a&gt; as expected, and figured out how to get &lt;a href=&#34;http://blog.scottlowe.org/2005/07/02/starttls-and-imap-in-mailapp/&#34;&gt;Mail.app to use STARTTLS with IMAP4&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A couple of the resources I&amp;rsquo;m using for this effort are bookmarked in my &lt;a href=&#34;http://del.icio.us/slowe/&#34;&gt;del.icio.us&lt;/a&gt; bookmark list. I&amp;rsquo;ll be adding more there as I find them.&lt;/p&gt;
+
+&lt;p&gt;I also have yet to decide if I will use Samba/Winbind or LDAP to handle the cross-platform authentication. I&amp;rsquo;d love to hear any comments or feedback in this regard.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Open Source Office Alternative</title>
+          <link>http://lowescott.github.io/2005/07/03/open-source-office-alternative/</link>
+          <pubDate>Sun, 03 Jul 2005 22:57:03 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/03/open-source-office-alternative/</guid>
+          <description>&lt;p&gt;Those individuals searching for an open source alternative to &lt;a href=&#34;http://www.microsoft.com/office/&#34;&gt;Microsoft Office&lt;/a&gt; (&lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; isn&amp;rsquo;t the only Microsoft monopoly, you know) on &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; should take note of NeoOffice/J 1.1, released a few weeks ago. &lt;a href=&#34;http://www.macnn.com/articles/05/06/21/neooffice.j.1.1.released/&#34;&gt;This article&lt;/a&gt; on &lt;a href=&#34;http://www.macnn.com/&#34;&gt;MacNN&lt;/a&gt; alerted me to the release a while ago, but I&amp;rsquo;ve only just now gotten around to mentioning it here.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve made no secret of the fact that I try not to be partial in any way with regards to technology solutions. If NeoOffice/J fits your needs, perfect. If not, use Microsoft Office. It&amp;rsquo;s just nice to see that we actually &lt;em&gt;have&lt;/em&gt; some choices, however limited they may be, when it comes to choosing office productivity software.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m also hoping that the approval of the XML-based OpenOffice 2.0 file formats by &lt;a href=&#34;http://www.oasis-open.org/&#34;&gt;OASIS&lt;/a&gt; (see &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1819239,00.asp?&#34;&gt;this article&lt;/a&gt;) will help further spur more interoperability between office productivity applications. Now, if we could just get Microsoft on board with this vendor-neutral format&amp;hellip;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Nonstandard Implementations</title>
+          <link>http://lowescott.github.io/2005/05/14/nonstandard-implementations/</link>
+          <pubDate>Sat, 14 May 2005 22:24:04 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/05/14/nonstandard-implementations/</guid>
+          <description>&lt;p&gt;In my experiments with &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt;, I learned a couple of very interesting facts. First, the IMAP4 implementation on &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange Server 2003&lt;/a&gt; does not support the STARTTLS command, as described in &lt;a href=&#34;http://www.networksorcery.com/enp/rfc/rfc2595.txt&#34;&gt;RFC 2595&lt;/a&gt; and re-affirmed in &lt;a href=&#34;http://www.networksorcery.com/enp/rfc/rfc3501.txt&#34;&gt;RFC 3501&lt;/a&gt;. Instead, Exchange expects an SSL session to be established immediately, and then IMAP is spoken. This is similar to the &amp;ldquo;smtpd_tls_wrappermode&amp;rdquo; directive that &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt; supports.&lt;/p&gt;
+
+&lt;p&gt;Second, it appears that the &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; Mail application (commonly referred to as Mail.app) also uses this IMAP-over-SSL approach, since I&amp;rsquo;ve been using Mail.app to connect to Exchange using IMAP with SSL for quite some time. I&amp;rsquo;m trying to confirm that now, but having precious little luck finding any definitive information one way or the other. If anyone knows for certain, please let me know. I&amp;rsquo;m going to keep searching.&lt;/p&gt;
+
+&lt;p&gt;This is one of those things that just makes me crazy.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

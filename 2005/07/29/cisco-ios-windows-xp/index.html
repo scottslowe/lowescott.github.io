@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Cisco IOS = Windows XP? &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Cisco IOS = Windows XP?</h1>
+  <span class="post-date">Jul 29, 2005 3:43 PM</span>
+  <p>Well, the <a href="http://www.blackhat.com/main.html">Black Hat</a> conference in Las Vegas certainly generated a great deal of excitement this past week. A security presentation was going to be given about a first-ever exploit for <a href="http://www.cisco.com">Cisco</a> routers. From what I&rsquo;ve been able to decipher, Cisco had been working closely with <a href="http://www.iss.net">ISS</a>, the company whose researcher (Michael Lynn) was supposed to give the presentation, and both companies apparently agreed that the presentation needed further review. Cisco and ISS <a href="http://www.eweek.com/article2/0,1759,1841232,00.asp">jointly filed an injunction</a> against Michael Lynn when he <a href="http://www.computerworld.com/securitytopics/security/holes/story/0,10801,103515,00.html">quit his job at ISS to give the presentation</a> anyway; this is after Cisco employees physically removed presentation pages from the books handed out at the conference and destroyed CDs containing information about the presentation.</p>
+
+<p>It appeared as if Lynn was going to give a VoIP presentation instead, but then <a href="http://www.eweek.com/article2/0,1759,1841166,00.asp">proceeded with the original presentation</a> anyway, even though he knew it would likely result in lawsuits from Cisco and his former employer. In the presentation, he likened Cisco&rsquo;s IOS (Internetwork Operating System) to Microsoft Windows XP, saying &ldquo;IOS is the Windows XP of the Internet.&rdquo;</p>
+
+<p>Finally, Thursday, a court order was issued and <a href="http://www.computerworld.com/securitytopics/security/story/0,10801,103561,00.html">all parties involved have agreed</a> to the terms of the court order, which restrict them from further sharing or disseminating any information about the security flaw.</p>
+
+<p>Both Cisco and ISS have taken a real hit from this whole situation, and I can understand why. Cisco looks like it&rsquo;s trying to cover up security vulnerabilities; it was only after all of this that Cisco issued a <a href="http://www.cisco.com/warp/public/707/cisco-sa-20050729-ipv6.shtml">security advisory</a> discussing the vulnerability. If Michael Lynn&rsquo;s research was accurate, then it is appropriate for people to know so that our networks can be protected. Cisco network equipment running IOS does, indeed, power a large portion of the Internet. <em>At the same time</em>, if he violated the law and the terms of his agreement with Cisco by reverse engineering IOS, then he should not have publicized that information. <em>But then again</em>, it appears as if Cisco would not have released security information had Mr. Lynn not proceeded with the presentation, so&hellip;you see that this issue is sensitive and there are reasonable and understandable concerns on all sides.</p>
+
+<p>To be honest, I don&rsquo;t know what I would have done if I were in the same situation. The only advice that comes to mind is, &ldquo;If you do what is right, you can&rsquo;t go wrong.&rdquo; But what is <em>&ldquo;right&rdquo;</em> in this situation?</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/categories/security/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-29 21:47:21 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>WMF Flaw Exploit Grows Worse</title>
+          <link>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</link>
+          <pubDate>Thu, 29 Dec 2005 21:47:21 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</guid>
+          <description>&lt;p&gt;In an update to my previous article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/28/windows-metafile-flaw-already-being-exploited/&#34;&gt;Windows Metafile flaw&lt;/a&gt;, new reports are coming in of greater use of malicious WMF files that take advantage of the flaw, especially by adware companies. Numerous sites are reporting that malicious WMF files are being used in ad rotations on third-party sites. For more information, see one of the following articles:&lt;/p&gt;
+
+&lt;p&gt;Analysts Fret as Adware Makers Leverage WMF Flaw
+&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906915,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906915,00.asp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Critical Impact: Windows Metafile Flaw a &amp;lsquo;Zero-Day Exploit&amp;rsquo;
+&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906177,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906177,00.asp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In addition, there are details on just how easy it is to &lt;a href=&#34;http://www.oreillynet.com/pub/wlg/8879?CMP=OTC-6YE827253101&amp;amp;ATT=Exploiting+the+Windows+XP/2003+Picture+and+Fax+Viewer+Metafile+Overflow+Vulnerability&#34;&gt;take advantage of this vulnerability&lt;/a&gt; available as well.&lt;/p&gt;
+
+&lt;p&gt;The particularly bad part of this whole situation is that users don&amp;rsquo;t have to do a thing&amp;mdash;just visiting a web site with a malicious WMF file can affect your system. And this isn&amp;rsquo;t an Internet Explorer flaw, either, lest you think that using Firefox will keep you safe. No, this is a &lt;em&gt;Windows&lt;/em&gt; flaw, and Internet Explorer, Firefox, Opera, etc., are all affected.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s hope that a good workaround (not unregistering the shimgvw.dll file, which also disables previewing other image formats in Windows Explorer) emerges soon.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Windows Metafile Flaw Already Being Exploited</title>
+          <link>http://lowescott.github.io/2005/12/28/windows-metafile-flaw-already-being-exploited/</link>
+          <pubDate>Wed, 28 Dec 2005 16:33:13 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/28/windows-metafile-flaw-already-being-exploited/</guid>
+          <description>&lt;p&gt;Two separate reports (&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906177,00.asp&#34;&gt;this article from eWeek&lt;/a&gt; and &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,107375,00.html&#34;&gt;this article from ComputerWorld&lt;/a&gt;) have risen today regarding a &amp;ldquo;zero-day&amp;rdquo; exploit of a vulnerability in Windows&amp;rsquo; handling of WMF (Windows Metafile) images. According to the reports, simply viewing a WMF file (such as from a web site) can infect your computer. Sunbelt Software&amp;rsquo;s blog also offers &lt;a href=&#34;http://sunbeltblog.blogspot.com/2005/12/new-exploit-blows-by-fully-patched.html&#34;&gt;more details on the vulnerability&lt;/a&gt; as well. Here&amp;rsquo;s &lt;a href=&#34;http://www.securityfocus.com/bid/16074/info&#34;&gt;more information&lt;/a&gt; from SecurityFocus as well.&lt;/p&gt;
+
+&lt;p&gt;According to the reports, this newly discovered WMF vulnerability will allow crackers to run the code of their choice on the affected system(s). So far, the exploit has been limited to installing spyware, adware, and keyloggers, but there is little doubt in anyone&amp;rsquo;s mind that the attackers will grow much worse very quickly. The vulnerability can be exploited in a variety of ways, such as visiting hostile web sites (using either Internet Explorer, Opera, or Firefox); opening an affected WMF file in Windows Picture and Fax Viewer; or previewing an affected file in Windows Explorer. It&amp;rsquo;s important to note that this vulnerability affects even fully patched systems &lt;em&gt;with all available patches installed.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Apparently, the only workaround is to uninstall Windows from your computer and immediately install Linux. OK, just kidding. Seriously, though, the only known workaround at this time is to unregister the affected DLL using this command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;regsvr32 /u shimgvw.dll
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Click &amp;ldquo;OK&amp;rdquo; when prompted. This unregisters the affected DLL and eliminates the vulnerability; however, this may also affect the viewing and previewing of many other types of images.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s still early yet in the discovery process, so I fully anticipate that more workarounds and more information will emerge as the security researchers continue their work.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Security Flaw Found in VMware</title>
+          <link>http://lowescott.github.io/2005/12/26/security-flaw-found-in-vmware/</link>
+          <pubDate>Mon, 26 Dec 2005 21:45:32 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/26/security-flaw-found-in-vmware/</guid>
+          <description>&lt;p&gt;Just so the Windows flaws don&amp;rsquo;t get all the attention, here&amp;rsquo;s a reasonably new one: a flaw in &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, the machine virtualization software that is tremendously popular, especially among security professionals. Fortunately, it&amp;rsquo;s reasonably easy to work around the flaw, and VMware has already released a patch.&lt;/p&gt;
+
+&lt;p&gt;This link offers more details on the &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1904647,00.asp&#34;&gt;VMware security flaw&lt;/a&gt;, which apparently affects almost all of the VMware products, with the notable exception of ESX Server. VMware&amp;rsquo;s &lt;a href=&#34;http://www.vmware.com/support/kb/enduser/std_adp.php?p_faqid=2000&#34;&gt;security advisory&lt;/a&gt; also provides complete details and information on how to protect against it, plus a link to download the patch.&lt;/p&gt;
+
+&lt;p&gt;VMware users can sidestep the security issue by not using NAT networking for their virtual machines, as pointed out in the security advisory.&lt;/p&gt;
+
+&lt;p&gt;While security flaws in Microsoft&amp;rsquo;s Windows operating system and Internet Explorer web browser get most of the attention these days, all products have them. Users of Linux or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; like to proclaim their immunity, but no one is immune. This recent vulnerability merely highlights the fact that we must all be vigilant and watchful in order to maintain the security and integrity of our networks and systems.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Certificate Conversion Using OpenSSL</title>
+          <link>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</link>
+          <pubDate>Fri, 02 Dec 2005 16:08:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</guid>
+          <description>&lt;p&gt;In my various adventures with replacing Windows-based servers with Linux servers, I have had need on several occasions to take an SSL certificate (generated using Microsoft Certificate Services) and make it available to a Linux-based server. In some cases, it was to be used by the SSL wrapper &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt;; in others, it was for &lt;a href=&#34;http://www.apache.org/httpd/&#34;&gt;Apache&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In either case, the certificate needed to be in the PEM (originally Privacy Enhanced Mail, now a standard for encoding certificates) format. Windows, on the other hand, typically uses the PFX (PKCS #12) format for storing certificates. To prepare certificates for use on Linux, the certificates must be converted to PEM format.&lt;/p&gt;
+
+&lt;p&gt;In the hopes that this information might be useful to others, here&amp;rsquo;s a process for converting from PFX to PEM using &lt;a href=&#34;http://www.openssl.org/&#34;&gt;OpenSSL&lt;/a&gt;. With the exception of only a few items, the process is identical on Linux, &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, and &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows &lt;sup&gt;2000&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2003&lt;/sub&gt;&lt;/a&gt;. These steps were confirmed using OpenSSL 0.9.7a on Red Hat Linux 9.0, using OpenSSL 0.9.6i on Mac OS X 10.2.8, and OpenSSL 0.9.7c on Windows Server 2003.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If the certificate is not already available in PFX format, use the Certificates MMC snap-in to export the certificate and the corresponding private key to a PFX file. Be sure to note the passphrase used to protect the PFX file; it will be needed later. If the certificate (and its corresponding private key) is already available in PFX format and the passphrase for the PFX file is known, proceed to step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At a terminal prompt, type &lt;code&gt;openssl pkcs12 -in _pfxfilename.pfx_ -out _tempfile.pem_&lt;/code&gt;. This will convert the PFX file to a PEM file. The OpenSSL toolkit will prompt for the import passphrase; this will be the passphrase specified in step 1. A PEM passphrase will also be needed; make note of the passphrase used here (it will be needed later).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using a text editor (such as vi on a Linux system, or Notepad on a Windows system), split the encrypted RSA private key and the certificate into two separate files. Remove all extra text, leaving only the text between the lines with the dashes. Make note of the filenames; they will be needed later.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The RSA key is currently encrypted; this will an automated launch for the application using the certificate. It will be necessary to decrypt the RSA private key. To decrypt the RSA private key, use the command &lt;code&gt;openssl rsa -in _encryptedkey_ -out _decryptedkey_&lt;/code&gt; (where &lt;em&gt;encryptedkey&lt;/em&gt; is the file containing the RSA private key, as separated in step 3, and &lt;em&gt;decryptedkey&lt;/em&gt; is the file that will contain the decrypted RSA private key). The OpenSSL toolkit will prompt for the RSA key passphrase; this will be the passphrase specified in step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Linux or Mac OS X: To concatenate the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;cat _decryptedkey certificatefile_ &amp;gt; _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Windows: To combine the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;copy /b _decryptedkey_+_certificatefile_ _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the concatenated file (finalfile.pem from step 5) with a text editor to add a blank line between the decrypted RSA private key and the certificate, and a blank line after the end of the certificate.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point, the certificate is ready for use. &lt;strong&gt;&lt;em&gt;Be sure&lt;/em&gt;&lt;/strong&gt; to guard the unencrypted private key with extreme caution; loss of this file can result in the compromise of your system. Note also that most applications require that the certificates be owned by root and readable only by root (&lt;code&gt;chown root:root&lt;/code&gt; to make them owned by root and &lt;code&gt;chmod 600&lt;/code&gt; to make them readable only by root).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>IE Exploit Moves from DoS to Remote Code Execution</title>
+          <link>http://lowescott.github.io/2005/11/29/ie-exploit-moves-from-dos-to-remote-code-execution/</link>
+          <pubDate>Tue, 29 Nov 2005 16:15:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/ie-exploit-moves-from-dos-to-remote-code-execution/</guid>
+          <description>&lt;p&gt;As a follow-up to my posting &lt;a href=&#34;http://blog.scottlowe.org/2005/11/21/zero-day-ie-exploit/&#34;&gt;Zero-Day IE Exploit&lt;/a&gt;, it has now been discovered that this exploit is no longer just a denial of service (DoS) flaw, but rather a flaw that can allow remote code execution (see &lt;a href=&#34;http://www.security.ithub.com/article/Unpatched+IE+Flaw+Is+Worse+Than+Expected/166164_1.aspx&#34;&gt;here&lt;/a&gt; for more information). As of this writing, there is no patch for this vulnerability and the only workaround is to disable Active Scripting in IE.&lt;/p&gt;
+
+&lt;p&gt;For your convenience, here&amp;rsquo;s a &lt;a href=&#34;http://support.microsoft.com/kb/q154036/&#34;&gt;link&lt;/a&gt; to a Microsoft KB article that describes how to disable Active Scripting.&lt;/p&gt;
+
+&lt;p&gt;Alternately, you can just switch to &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt; (which, by the way, is supposed to release Firefox 1.5 sometime today).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Cisco PIX VPN and Active Directory Integration</title>
+          <link>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</link>
+          <pubDate>Tue, 22 Nov 2005 19:01:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</guid>
+          <description>
+
+&lt;p&gt;Rather than publishing this information in PDF form on my business website, I&amp;rsquo;ve decided to try something new and post it here as a blog entry. So, here goes.&lt;/p&gt;
+
+&lt;p&gt;This information assumes that you have some experience with the Cisco PIX firewall (i.e., you know how to enter configuration commands and have a basic idea of what the configuration commands actually do) as well as some experience with Windows and Active Directory.&lt;/p&gt;
+
+&lt;p&gt;With that information in hand, let&amp;rsquo;s get started.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Configuring the Cisco PIX&lt;/h2&gt;
+
+&lt;p&gt;First, we&amp;rsquo;ll need to setup the PIX firewall. Use the commands below to configure the PIX for PPTP-based VPN connections that will authenticate against an Active Directory back-end.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ip local pool vpn-pool 10.10.10.1-10.10.10.254  
+aaa-server vpn-auth inside host 10.10.10.5 secretkey  
+aaa-server vpn-auth inside host 10.10.10.6 secretkey  
+aaa-server vpn-auth protocol radius  
+vpdn group vpn-pptp-group accept dialin pptp  
+vpdn group vpn-pptp-group ppp authentication mschap  
+vpdn group vpn-pptp-group ppp encryption mppe 128 required  
+vpdn group vpn-pptp-group client configuration \  
+address local vpn-pool  
+vpdn group vpn-pptp-group client configuration \  
+dns 10.10.10.5 10.10.10.6  
+vpdn group vpn-pptp-group client configuration \  
+wins 10.10.10.6 10.10.10.5  
+vpdn group vpn-pptp-group client authentication aaa vpn-auth  
+vpdn enable outside  
+sysopt connect permit-pptp  
+access-list acl-nat0 permit ip 10.10.1.0 255.255.255.0 \  
+10.10.10.0 255.255.255.0  
+nat (inside) 0 access-list acl-nat0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(Note that I have placed a backslash to indicate text that is wrapped onto two lines here but should be entered all on a single line in the PIX configuration.)&lt;/p&gt;
+
+&lt;p&gt;In this configuration, replace the IP addresses on lines 2 and 3 (the &lt;code&gt;aaa-server vpn-auth&lt;/code&gt; commands) with the IP addresses of the servers running Internet Authentication Service (IAS) on Windows. See the next section for more information on configuring IAS.&lt;/p&gt;
+
+&lt;p&gt;On those same lines, replace the text &lt;code&gt;secretkey&lt;/code&gt; with the RADIUS shared secret that will be used when configuring the RADIUS/IAS server in the next section.&lt;/p&gt;
+
+&lt;p&gt;Likewise, replace the IP addresses on lines 9 and 10 (the &lt;code&gt;vdpn group vpn-pptp-group client configuration&lt;/code&gt; lines that pass out the DNS and WINS servers to VPN clients) with the IP addresses of your DNS and WINS servers, respectively.&lt;/p&gt;
+
+&lt;p&gt;That should do it. Save the configuration to the PIX and then move on to configuring IAS.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Configuring Internet Authentication Service&lt;/h2&gt;
+
+&lt;p&gt;Before doing anything else, create a new global security group in Active Directory. Call it something like &amp;ldquo;VPN Users&amp;rdquo; or similar. We&amp;rsquo;ll use this group later as an additional security check in validating VPN connections.&lt;/p&gt;
+
+&lt;p&gt;Next, install IAS using the Add/Remove Programs icon in Control Panel. Once it has been installed, launch it from the Administrative Tools folder on the Start Menu and we&amp;rsquo;ll proceed with configuring it for authenticating VPN connections to the PIX firewall.&lt;/p&gt;
+
+&lt;p&gt;First, we need to grant IAS permission to read dial-in properties from user accounts in Active Directory. To do this, right-click on the &amp;ldquo;Internet Authentication Service (Local)&amp;rdquo; and select &amp;ldquo;Register Server in Active Directory&amp;rdquo;. Select Yes (or OK) if prompted to confirm.&lt;/p&gt;
+
+&lt;p&gt;With that done, we can now configure the PIX firewall as a RADIUS client. Right-click on RADIUS Clients and select New RADIUS Client. In the wizard, specify the IP address (or DNS name) of the PIX firewall&amp;rsquo;s internal IP address and the shared secret. Note that this shared secret is the same secret key specified in the PIX configuration above. RADIUS clients use this to authenticate to RADIUS servers, so make it a reasonably strong password.&lt;/p&gt;
+
+&lt;p&gt;Now create a remote access policy. Right-click on Remote Access Policies and select New Remote Access Policy. In the wizard, specify a name, select to create a custom policy, and then add the following conditions to the policy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;NAS-IP-Address: This will be the IP address of the PIX firewall&amp;rsquo;s internal interface. This helps to ensure that this policy only applies to VPN requests from this firewall and not from any other RADIUS client.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Windows-Groups: This should be the security group created earlier. Any user that should be allowed to authenticate on a VPN connection will need to be a member of this group.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The rest of the policy should be very straightforward. Make this policy the first policy (using the Move Up/Move Down commands in the IAS console), add a user to the group created earlier, and then test your connection. Remote systems attempting to connect via PPTP should now be able to authenticate the VPN connection using their Active Directory usernames and passwords.&lt;/p&gt;
+
+&lt;p&gt;Although this was written from the perspective of authenticating PPTP connections, the process should be very similar for IPSec VPN clients as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Zero-Day IE Exploit</title>
+          <link>http://lowescott.github.io/2005/11/21/zero-day-ie-exploit/</link>
+          <pubDate>Mon, 21 Nov 2005 23:02:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/21/zero-day-ie-exploit/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1891749,00.asp&#34;&gt;This article&lt;/a&gt; discusses a newly-discovered zero-day exploit for Internet Explorer, including IE on fully-patched Windows XP SP2 systems. (Apparently, only Windows Server 2003 with the Enhanced Security Configuration is immune.)&lt;/p&gt;
+
+&lt;p&gt;No patch has been released, and no security advisory had been posted at the time this was written. A Microsoft security advisory was expected at any moment.&lt;/p&gt;
+
+&lt;p&gt;In the meantime, switch to &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt;. No, really&amp;mdash;I&amp;rsquo;m serious.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; Microsoft has posted a &lt;a href=&#34;http://www.microsoft.com/technet/security/advisory/911302.mspx&#34;&gt;security advisory&lt;/a&gt; about this issue.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Sony Keeps Digging Itself Deeper</title>
+          <link>http://lowescott.github.io/2005/11/10/sony-keeps-digging-itself-deeper/</link>
+          <pubDate>Thu, 10 Nov 2005 19:00:21 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/10/sony-keeps-digging-itself-deeper/</guid>
+          <description>&lt;p&gt;The furor over the rootkit technology used by Sony in their DRM software continues to grow. After Mark Russinovich &lt;a href=&#34;http://www.sysinternals.com/blog/2005/10/sony-rootkits-and-digital-rights.html&#34;&gt;unveiled the truth&lt;/a&gt;, Sony released a patch that supposedly allows for the DRM technology to be uninstalled. Of course, Mark &lt;a href=&#34;http://www.sysinternals.com/blog/2005/11/more-on-sony-dangerous-decloaking.html&#34;&gt;reviewed the uninstallation&lt;/a&gt;, and he found it left a little bit to be desired (putting it mildly). Basically, it left you at risk of a blue screen of death. And Mark&amp;rsquo;s not the only one not satisfied&amp;ndash;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1883820,00.asp&#34;&gt;this article&lt;/a&gt; cites several other security experts as well who are not happy with this situation.&lt;/p&gt;
+
+&lt;p&gt;Then, First 4 Internet (the company behind the cloaking technology that Sony uses for their DRM software) &lt;a href=&#34;http://www.sysinternals.com/blog/2005/11/sonys-rootkit-first-4-internet.html&#34;&gt;responds&lt;/a&gt; to Mark&amp;rsquo;s posts and attempts to refute his findings. Finally, today, Mark posted more details on the &lt;a href=&#34;http://www.sysinternals.com/blog/2005/11/sony-you-dont-reeeeaaaally-want-to_09.html&#34;&gt;actual uninstallation process&lt;/a&gt; and what is required in order to make it work.&lt;/p&gt;
+
+&lt;p&gt;Sony just keeps digging itself deeper and deeper into this hole. It&amp;rsquo;s bad enough that the company uses stealth/cloaking technologies to hide their files. It&amp;rsquo;s bad enough by itself that the DRM software is communicating back to Sony whenever a CD is played. It&amp;rsquo;s bad enough that the uninstallation process requires so many steps and is so complicated.&lt;/p&gt;
+
+&lt;p&gt;Finally, to make matters worse&amp;hellip;check out &lt;a href=&#34;http://entmag.com/news/article.asp?editorialsid=7033&#34;&gt;this news&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Put it all together, and you get a mistake so massive that it could change Sony&amp;rsquo;s business fortunes. Don&amp;rsquo;t believe me? Are &lt;strong&gt;&lt;em&gt;you&lt;/em&gt;&lt;/strong&gt; going to buy any Sony CDs or software now, after everything that&amp;rsquo;s been disclosed? I&amp;rsquo;m not, that&amp;rsquo;s for sure. (Of course, I don&amp;rsquo;t really have to worry about it that much since I&amp;rsquo;m using a Mac and not Windows, but that&amp;rsquo;s a different story for a different day.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>It Was Bound to Happen</title>
+          <link>http://lowescott.github.io/2005/11/09/it-was-bound-to-happen/</link>
+          <pubDate>Wed, 09 Nov 2005 16:17:25 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/09/it-was-bound-to-happen/</guid>
+          <description>&lt;p&gt;To a certain extent, I agree with the belief that operating systems and applications that don&amp;rsquo;t have a significant market share like Windows, IIS, and Exchange won&amp;rsquo;t get targeted as frequently and therefore will have a &amp;ldquo;better&amp;rdquo; security track record. I don&amp;rsquo;t agree that this is the &lt;em&gt;only&lt;/em&gt; reason that Linux, Mac OS X, and others haven&amp;rsquo;t seen as many security vulnerabilities and the oh-so-fun network worms that invariably accompany them. But I will agree that as these alternatives gain in popularity, more hackers are going to target them.&lt;/p&gt;
+
+&lt;p&gt;As a result, it&amp;rsquo;s no surprise that a &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1882889,00.asp&#34;&gt;new Linux worm&lt;/a&gt; has recently emerged. I mean, it was bound to happen. Linux is surging in popularity, as Linus Torvalds and other developers continue to &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1881470,00.asp&#34;&gt;add features&lt;/a&gt; to the Linux kernel and more and more corporations deploy Linux. Of course the malware authors are going to try something like this. I doesn&amp;rsquo;t surprise me in the least. While this one is fairly low-tech, you can bet that future variants of this worm (as well as new worms) will be more complex and more dangerous.&lt;/p&gt;
+
+&lt;p&gt;I also fully expect that the anti-Linux crowd will shout that this is the end of the line for Linux, just like the anti-Microsoft crowd shouts &amp;ldquo;Down with Windows!&amp;rdquo; everytime Microsoft patches a critical security flaw that could be exploited by an automated worm (side note: new Microsoft critical security flaw &lt;a href=&#34;http://www.microsoft.com/technet/security/Bulletin/MS05-053.mspx&#34;&gt;patched yesterday&lt;/a&gt;, go have a look and make sure you are protected). This just isn&amp;rsquo;t the case. Neither Windows nor Linux are going to go away, and each of them has value for businesses today. The best bet for any organization is to use the product that best fits the need and then make sure that the product is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;properly &lt;em&gt;configured&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;properly &lt;em&gt;patched&lt;/em&gt;; and&lt;/li&gt;
+&lt;li&gt;properly &lt;em&gt;maintained&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Following these guidelines, businesses and consumers can safely deploy the products, technologies, and platforms that best meet their needs without falling prey to technology bigotry.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Rootkit Technology in Sony DRM</title>
+          <link>http://lowescott.github.io/2005/11/02/rootkit-technology-in-sony-drm/</link>
+          <pubDate>Wed, 02 Nov 2005 19:16:28 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/02/rootkit-technology-in-sony-drm/</guid>
+          <description>&lt;p&gt;A &lt;a href=&#34;http://www.sysinternals.com/blog/2005/10/sony-rootkits-and-digital-rights.html&#34;&gt;very in-depth article&lt;/a&gt; by Mark Russinovich unveiled that DRM technology shipping with recent Sony BMG CDs actually installs &lt;a href=&#34;http://en.wikipedia.org/wiki/Rootkit&#34;&gt;rootkit&lt;/a&gt; components onto your system. Now, I don&amp;rsquo;t know about you, but I don&amp;rsquo;t like the idea of a vendor &lt;em&gt;unknowingly&lt;/em&gt; installing software on my computer(s) that contain rootkit components&amp;ndash;especially when those rootkit components could be used by malicious software packages to hide themselves.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m glad to see that &lt;em&gt;eWeek&lt;/em&gt; &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1880543,00.asp&#34;&gt;picked up the story&lt;/a&gt; as well. (Note that O&amp;rsquo;Reilly&amp;rsquo;s ONLamp.net is &lt;a href=&#34;http://www.oreillynet.com/pub/wlg/8269?CMP=OTC-6YE827253101&#34;&gt;mentioning it&lt;/a&gt; as well.) Mark&amp;rsquo;s research is fantastic (as always), but not many people will get exposed to this news through him alone. Computer geeks like myself would, of course, but the people that really need to know this are the non-geeks. Any reasonably computer-savvy user is likely to want to pick up your average CD (from any number of distribution channels, including &lt;a href=&#34;http://www.amazon.com/&#34;&gt;Amazon.com&lt;/a&gt;) and copy the music off the CD. There are a number of very valid reasons for this&amp;ndash;ease of access, personal backup copy (ever scratch a CD?), etc. Copy-protected CDs limit your ability to do this without also installing stealthy rootkit components onto your system.&lt;/p&gt;
+
+&lt;p&gt;More links to other discussions on this topic can be found in section 8 of &lt;a href=&#34;http://en.wikipedia.org/wiki/Rootkit&#34;&gt;this Wikipedia rootkit article&lt;/a&gt; (also linked above).&lt;/p&gt;
+
+&lt;p&gt;In my opinion, this is just plain wrong. It&amp;rsquo;s wrong to install this kind of software onto someone&amp;rsquo;s system. I can understand their desire to want to protect their &amp;ldquo;intellectual property,&amp;rdquo; but there&amp;rsquo;s got to be a better way than installing rootkits on your customers&amp;rsquo; computers.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Shelob (or Ungoliant)</title>
+          <link>http://lowescott.github.io/2005/10/28/shelob-or-ungoliant/</link>
+          <pubDate>Fri, 28 Oct 2005 21:23:50 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/28/shelob-or-ungoliant/</guid>
+          <description>&lt;p&gt;&lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,105623,00.html&#34;&gt;This story&lt;/a&gt; about the University of Indianapolis and their home-grown system for quarantining PCs infected by spyware or viruses is really interesting. Named &lt;a href=&#34;http://en.wikipedia.org/wiki/Shelob&#34;&gt;Shelob&lt;/a&gt; (and soon to be renamed &lt;a href=&#34;http://en.wikipedia.org/wiki/Ungoliant&#34;&gt;Ungoliant&lt;/a&gt; to prevent a conflict with another open source project), this system &lt;strong&gt;&lt;em&gt;really&lt;/em&gt;&lt;/strong&gt; works. Today. How is it, then, that a group of IT staffers at a university can come up with a system for network access control, but multi-million dollar companies like &lt;a href=&#34;http://www.cisco.com/&#34;&gt;Cisco&lt;/a&gt; and &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; can&amp;rsquo;t? I could say that this is a testament to the value of open source software, upon which the solution is built, but that seems fairly obvious.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Protecting Against OpenSSL SSLv2 Flaw</title>
+          <link>http://lowescott.github.io/2005/10/18/protecting-against-openssl-sslv2-flaw/</link>
+          <pubDate>Tue, 18 Oct 2005 14:42:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/18/protecting-against-openssl-sslv2-flaw/</guid>
+          <description>&lt;p&gt;The &lt;a href=&#34;http://www.openssl.org/news/secadv_20051011.txt&#34;&gt;recent flaw&lt;/a&gt; in &lt;a href=&#34;http://www.openssl.org/&#34;&gt;OpenSSL&lt;/a&gt; (versions prior to 0.9.7h and 0.9.8a) highlights the fact that SSL is not a security panacea. (You can get more information about this flaw from the link above, from &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1870003,00.asp&#34;&gt;this &lt;em&gt;eWeek&lt;/em&gt; article&lt;/a&gt;, or from &lt;a href=&#34;http://news.netcraft.com/archives/2005/10/11/openssl_patches_security_hole.html&#34;&gt;this Netcraft post&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;Disabling the SSL v2 protocol entirely is another way to protect against this flaw. Since OpenSSL is a set of libraries that other applications use to add SSL/TLS functionality, though, that configuration occurs within the specific applications, not within OpenSSL itself. Here&amp;rsquo;s how to protect &lt;a href=&#34;http://httpd.apache.org/&#34;&gt;Apache&lt;/a&gt; by disabling SSL v2.&lt;/p&gt;
+
+&lt;p&gt;To disable SSL v2 support within Apache 2.0 with mod_ssl, use the following directive in the Apache configuration:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SSLProtocol +All -SSLv2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This enables SSLv3 and TLSv1, but disables SSLv2. (Also see this Apache httpd &lt;a href=&#34;http://httpd.apache.org/docs/2.0/mod/mod_ssl.html#sslprotocol&#34;&gt;documentation&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;I searched for but couldn&amp;rsquo;t find a similar workaround for &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt;. The smtpd_tls_cipherlist and smtp_tls_cipherlist directives allow you to specify the supported ciphers and refer you to the OpenSSL documentation. However, the OpenSSL documentation didn&amp;rsquo;t seem to indicate a clear way of disabling only SSL v2. There did appear to be some discussion of adding this functionality in Postfix 2.3. If anyone knows of the particular keywords to specify with the smtpd_tls_cipherlist and smtp_tls_cipherlist commands for Postfix (or knows of any other way to disable SSL v2 support in Postfix), please let me know.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>From PGP to S/MIME</title>
+          <link>http://lowescott.github.io/2005/09/26/from-pgp-to-smime/</link>
+          <pubDate>Mon, 26 Sep 2005 16:40:32 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/09/26/from-pgp-to-smime/</guid>
+          <description>&lt;p&gt;Not long after switching to &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, I also started using &lt;a href=&#34;http://www.pgp.com/&#34;&gt;PGP&lt;/a&gt; to provide a digital signature to all my business-related electronic communications. Given the increasing frequency of e-mail messages with spoofed source addresses, I felt that it was only prudent to start providing customers with a way of proving that messages which stated they were from me were actually from me. Besides, that might also cause some customers to ask, &amp;ldquo;Is this something I should be considering as well?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Since that time, I&amp;rsquo;ve been reasonably pleased with PGP. However, I recently started looking at a possible upgrade to the latest version of Mac OS X (&amp;ldquo;Tiger&amp;rdquo;), and noticed that PGP 8.x is not compatible. In fact, PGP stated rather clearly that PGP 8.x is not and would not be compatible with Tiger or future releases of Mac OS X. (This statement was located on the &lt;a href=&#34;http://www.pgpsupport.com/&#34;&gt;PGP Support&lt;/a&gt; web site.)&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve researched PGP 9.x and read some reviews, and I&amp;rsquo;m not terribly excited about the new architecture. I&amp;rsquo;d much rather leave my existing SSL/TLS configuration in place and &lt;strong&gt;&lt;em&gt;know&lt;/em&gt;&lt;/strong&gt; that my messages are encrypted when going to/from my server, rather than relying on a PGP &amp;ldquo;proxy&amp;rdquo; to enforce policies. I suppose it&amp;rsquo;s a good way of handling things, but when it comes down to it I just don&amp;rsquo;t like it.&lt;/p&gt;
+
+&lt;p&gt;That being said, in order to proceed with an upgrade to Tiger I&amp;rsquo;ll have to a) upgrade to PGP 9.x; b) switch to an open source implementation of PGP, such as &lt;a href=&#34;http://www.gnupg.org/&#34;&gt;GPG&lt;/a&gt;; c) switch to an alternate form of digital signatures, such as &lt;a href=&#34;http://en.wikipedia.org/wiki/S/MIME&#34;&gt;S/MIME&lt;/a&gt;; or d) stop using any form of digital signing whatsoever. Having purchased PGP in order to not use GPG, I&amp;rsquo;d say that option is out. Not having any signatures whatsoever isn&amp;rsquo;t really acceptable to me either, so that leaves S/MIME.&lt;/p&gt;
+
+&lt;p&gt;S/MIME is fine by me, anyway, since &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; has done a reasonably good job of incorporating S/MIME support into recent versions of &lt;a href=&#34;http://www.microsoft.com/office/outlook/&#34;&gt;Outlook&lt;/a&gt;. Since a significant portion of my customers and colleagues use Outlook, then it begins to make sense to use S/MIME.&lt;/p&gt;
+
+&lt;p&gt;Over the next few weeks, I&amp;rsquo;m going to be researching which certificate authority (CA) I&amp;rsquo;ll use to issue my S/MIME certificates. I&amp;rsquo;ve registered with &lt;a href=&#34;http://www.cacert.org/&#34;&gt;CAcert.org&lt;/a&gt;, in the event that I decide to use them. My preference would be to use a CA that can offer me a certificate with my actual name on it. On the other hand, I&amp;rsquo;m cheap (rather, I&amp;rsquo;m frugal) and I don&amp;rsquo;t feel like paying $20/yr just to maintain a certificate. It may be that in order to get my actual name on the certificate I&amp;rsquo;ll have to pay for it.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve already located a number of resources in using S/MIME with Mac OS X 10.3 (&amp;ldquo;Panther&amp;rdquo;), my current version, and those have been added to &lt;a href=&#34;http://del.icio.us/slowe&#34;&gt;my del.icio.us&lt;/a&gt; bookmark list (usually with the &lt;a href=&#34;http://del.icio.us/slowe/Encryption&#34;&gt;Encryption&lt;/a&gt; or &lt;a href=&#34;http://del.icio.us/slowe/Security&#34;&gt;Security&lt;/a&gt; tags). If anyone has any other resources that may be helpful, feel free to let me know.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>First Windows Vista viruses unleashed</title>
+          <link>http://lowescott.github.io/2005/08/08/first-windows-vista-viruses-unleashed/</link>
+          <pubDate>Mon, 08 Aug 2005 19:28:44 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/08/first-windows-vista-viruses-unleashed/</guid>
+          <description>&lt;p&gt;Among many other online appearances, the article &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,103682,00.html&#34;&gt;First Windows Vista viruses unleashed&lt;/a&gt; from &lt;a href=&#34;http://www.computerworld.com&#34;&gt;ComputerWorld&lt;/a&gt; describes the first family of viruses (virii?) that appear to be targeted specifically at the new Windows Vista operating system.&lt;/p&gt;
+
+&lt;p&gt;I would be ridiculously easy to make a joke here, but let me take a different tack. First, this is beta (some would say pre-beta) code, so of course there are going to be &amp;ldquo;security holes&amp;rdquo; (I use this term loosely) that have not yet been closed. Microsoft, take this as a signal that you need to continue to focus on security and making sure that any new functionality you are add to Windows Vista gets properly secured.&lt;/p&gt;
+
+&lt;p&gt;Second, the target of this virus is not Windows Vista &lt;em&gt;per se&lt;/em&gt;, but rather the &amp;ldquo;Monad&amp;rdquo; object-oriented scripting environment. According to what I&amp;rsquo;ve seen, this environment is not slated to be included by default with Windows Vista. Included by default or not, Microsoft, let&amp;rsquo;s make sure that you don&amp;rsquo;t turn &amp;ldquo;Monad&amp;rdquo; into a virus-writer&amp;rsquo;s delight. Make it work, make it work well, and make it secure.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>&#39;Car Whisperer&#39; puts hackers in the driver&#39;s seat</title>
+          <link>http://lowescott.github.io/2005/08/08/car-whisperer-puts-hackers-in-the-drivers-seat/</link>
+          <pubDate>Mon, 08 Aug 2005 19:28:11 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/08/car-whisperer-puts-hackers-in-the-drivers-seat/</guid>
+          <description>&lt;p&gt;I was thinking about getting a car with built-in Bluetooth at some point in the future (like when I win the lottery), but now I&amp;rsquo;m not so sure. Here&amp;rsquo;s why: &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,103656,00.html?source=x73&#34;&gt;&amp;lsquo;Car Whisperer&amp;rsquo; puts hackers in the driver&amp;rsquo;s seat&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>This Will Be Something to Watch</title>
+          <link>http://lowescott.github.io/2005/08/03/this-will-be-something-to-watch/</link>
+          <pubDate>Wed, 03 Aug 2005 02:25:54 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/03/this-will-be-something-to-watch/</guid>
+          <description>&lt;p&gt;Phil Zimmerman, the creator of PGP (Pretty Good Privacy), is back, this time working to &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1841509,00.asp&#34;&gt;provide secure VoIP&lt;/a&gt;. Apparently, Phil resurrected PGPfone, updated it with modern protocols, and has created Zfone, a prototype application that will provide encryption for voice-over-IP calls.&lt;/p&gt;
+
+&lt;p&gt;This will be something to watch. I agree with Phil that nobody is really paying any attention to the security of VoIP traffic moving across the Internet, and it&amp;rsquo;s about time somebody thought about it.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Hackers at Defcon race to expose Cisco Internet flaw</title>
+          <link>http://lowescott.github.io/2005/08/03/hackers-at-defcon-race-to-expose-cisco-internet-flaw/</link>
+          <pubDate>Wed, 03 Aug 2005 02:16:28 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/08/03/hackers-at-defcon-race-to-expose-cisco-internet-flaw/</guid>
+          <description>&lt;p&gt;A recent article from &lt;em&gt;Computerworld&lt;/em&gt;, &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,103607,00.html&#34;&gt;Hackers at Defcon race to expose Cisco Internet flaw&lt;/a&gt;, states: &amp;ldquo;Computer hackers at this weekend&amp;rsquo;s Defcon 13 hacker event worked to expose a flaw publicized last week that could allow an attacker to take control of Cisco Systems Inc. routers.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;This is exactly the kind of thing that I suspected would rise out of the whole Cisco-ISS-Black Hat snafu. Particularly perturbing is the comment made by one attendee, who stated &amp;ldquo;&amp;hellip;we&amp;rsquo;re doing this&amp;hellip;because someone said you can&amp;rsquo;t.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m very much in favor of full disclosure, as I feel it brings a measure of accountability to the vendors that might otherwise not be present. But there is a limit. Full disclosure needs to be handled responsibly and in context, taking into account the bigger picture (so to speak). I think Larry Seltzer&amp;rsquo;s recent article at &lt;em&gt;eWeek&lt;/em&gt;, &lt;a href=&#34;http://www.eweek.com/article2/0,1895,1842310,00.asp&#34;&gt;Where Does Truth Lie in Lynn/Cisco Case?&lt;/a&gt;, said it best when he said, &amp;ldquo;&amp;hellip;flaws in Cisco&amp;rsquo;s IOS needed to be disclosed at some point, but when and where was not [Lynn&amp;rsquo;s] to say.&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>There&#39;s Got to be a Better Way</title>
+          <link>http://lowescott.github.io/2005/07/29/theres-got-to-be-a-better-way/</link>
+          <pubDate>Fri, 29 Jul 2005 23:27:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/29/theres-got-to-be-a-better-way/</guid>
+          <description>&lt;p&gt;After reading this article about &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1841266,00.asp&#34;&gt;fourth-generation rootkits&lt;/a&gt;, I can&amp;rsquo;t help but think that there has to be a better way to get information out about these kinds of threats. Are we warning about pending threats, or are we creating the new threats ourselves? Do these kinds of presentations help us protect our computers and our networks, or do they give the other side the ammunition they need?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Cisco IOS = Windows XP?</title>
+          <link>http://lowescott.github.io/2005/07/29/cisco-ios-windows-xp/</link>
+          <pubDate>Fri, 29 Jul 2005 15:43:00 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/29/cisco-ios-windows-xp/</guid>
+          <description>&lt;p&gt;Well, the &lt;a href=&#34;http://www.blackhat.com/main.html&#34;&gt;Black Hat&lt;/a&gt; conference in Las Vegas certainly generated a great deal of excitement this past week. A security presentation was going to be given about a first-ever exploit for &lt;a href=&#34;http://www.cisco.com&#34;&gt;Cisco&lt;/a&gt; routers. From what I&amp;rsquo;ve been able to decipher, Cisco had been working closely with &lt;a href=&#34;http://www.iss.net&#34;&gt;ISS&lt;/a&gt;, the company whose researcher (Michael Lynn) was supposed to give the presentation, and both companies apparently agreed that the presentation needed further review. Cisco and ISS &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1841232,00.asp&#34;&gt;jointly filed an injunction&lt;/a&gt; against Michael Lynn when he &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/holes/story/0,10801,103515,00.html&#34;&gt;quit his job at ISS to give the presentation&lt;/a&gt; anyway; this is after Cisco employees physically removed presentation pages from the books handed out at the conference and destroyed CDs containing information about the presentation.&lt;/p&gt;
+
+&lt;p&gt;It appeared as if Lynn was going to give a VoIP presentation instead, but then &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1841166,00.asp&#34;&gt;proceeded with the original presentation&lt;/a&gt; anyway, even though he knew it would likely result in lawsuits from Cisco and his former employer. In the presentation, he likened Cisco&amp;rsquo;s IOS (Internetwork Operating System) to Microsoft Windows XP, saying &amp;ldquo;IOS is the Windows XP of the Internet.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Finally, Thursday, a court order was issued and &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,103561,00.html&#34;&gt;all parties involved have agreed&lt;/a&gt; to the terms of the court order, which restrict them from further sharing or disseminating any information about the security flaw.&lt;/p&gt;
+
+&lt;p&gt;Both Cisco and ISS have taken a real hit from this whole situation, and I can understand why. Cisco looks like it&amp;rsquo;s trying to cover up security vulnerabilities; it was only after all of this that Cisco issued a &lt;a href=&#34;http://www.cisco.com/warp/public/707/cisco-sa-20050729-ipv6.shtml&#34;&gt;security advisory&lt;/a&gt; discussing the vulnerability. If Michael Lynn&amp;rsquo;s research was accurate, then it is appropriate for people to know so that our networks can be protected. Cisco network equipment running IOS does, indeed, power a large portion of the Internet. &lt;em&gt;At the same time&lt;/em&gt;, if he violated the law and the terms of his agreement with Cisco by reverse engineering IOS, then he should not have publicized that information. &lt;em&gt;But then again&lt;/em&gt;, it appears as if Cisco would not have released security information had Mr. Lynn not proceeded with the presentation, so&amp;hellip;you see that this issue is sensitive and there are reasonable and understandable concerns on all sides.&lt;/p&gt;
+
+&lt;p&gt;To be honest, I don&amp;rsquo;t know what I would have done if I were in the same situation. The only advice that comes to mind is, &amp;ldquo;If you do what is right, you can&amp;rsquo;t go wrong.&amp;rdquo; But what is &lt;em&gt;&amp;ldquo;right&amp;rdquo;&lt;/em&gt; in this situation?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>It&#39;s Patch Tuesday Again</title>
+          <link>http://lowescott.github.io/2005/07/13/its-patch-tuesday-again/</link>
+          <pubDate>Wed, 13 Jul 2005 16:03:42 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/its-patch-tuesday-again/</guid>
+          <description>&lt;p&gt;I suppose since I didn&amp;rsquo;t post this until Wednesday, the title isn&amp;rsquo;t exactly correct, is it?&lt;/p&gt;
+
+&lt;p&gt;In any event, &lt;a href=&#34;http://www.microsoft.com&#34;&gt;Microsoft&lt;/a&gt; has released the &lt;a href=&#34;http://www.microsoft.com/technet/security/bulletin/ms05-jul.mspx&#34;&gt;security bulletin&lt;/a&gt; for July, which contains 3 critical updates (updates rated &amp;ldquo;critical&amp;rdquo; are considered the most severe by Microsoft). These updates patch security vulnerabilities in Microsoft Word, Internet Explorer, and Windows (including Windows Server 2003 SP1 and Windows XP SP2).&lt;/p&gt;
+
+&lt;p&gt;Microsoft had previously released a &lt;a href=&#34;http://www.microsoft.com/technet/security/advisory/903144.mspx&#34;&gt;workaround&lt;/a&gt; for the Internet Explorer flaw (note that this page now directs users to the location of the update rather than the earlier workaround).&lt;/p&gt;
+
+&lt;p&gt;Additional information on the patches can be found &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1836227,00.asp&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Equal Opportunity Security Flaw</title>
+          <link>http://lowescott.github.io/2005/07/07/equal-opportunity-security-flaw/</link>
+          <pubDate>Thu, 07 Jul 2005 18:24:19 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/07/equal-opportunity-security-flaw/</guid>
+          <description>&lt;p&gt;At least it can&amp;rsquo;t be said that I only identify and write about Microsoft-related security flaws. (I&amp;rsquo;d like to not have to write about security flaws at all, but that doesn&amp;rsquo;t look like it&amp;rsquo;s going to happen.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1834632,00.asp&#34;&gt;This Zlib flaw&lt;/a&gt; affects Linux, BSD, and even some Microsoft products. It&amp;rsquo;s an equal opportunity security flaw.&lt;/p&gt;
+
+&lt;p&gt;As described in the linked article above, patches have already been released for a number of products affected by the Zlib flaw.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Enough Bundling Already!</title>
+          <link>http://lowescott.github.io/2005/07/07/enough-bundling-already/</link>
+          <pubDate>Thu, 07 Jul 2005 18:09:10 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/07/enough-bundling-already/</guid>
+          <description>&lt;p&gt;It&amp;rsquo;s bad enough that &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; bundles Internet Explorer and Windows Media Player with every copy of Windows, and then integrates them so deeply that a flaw in one of these applications can compromise the entire system. But bundling adware/spyware?&lt;/p&gt;
+
+&lt;p&gt;First, there was &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1833611,00.asp&#34;&gt;this rumor&lt;/a&gt; about Microsoft acquiring Claria, the company that distributes the Gator ad-serving software. It was just a rumor, and one that not very many people took seriously. But now, there&amp;rsquo;s &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1834607,00.asp&#34;&gt;this news&lt;/a&gt; that Microsoft&amp;rsquo;s anti-spyware program has lowered the rating on Claria&amp;rsquo;s software and changed the default action to &amp;ldquo;Ignore.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;So what does this mean? In reality, nothing. It may have been just an oversight, or it may be that Claria has reached some sort of monetary agreement with Microsoft. In the meantime, I would recommend (as I have in the past) using multiple anti-spyware applications to protect yourself.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Watch Out, IE Users</title>
+          <link>http://lowescott.github.io/2005/07/01/watch-out-ie-users/</link>
+          <pubDate>Fri, 01 Jul 2005 17:32:09 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/01/watch-out-ie-users/</guid>
+          <description>&lt;p&gt;A couple of articles are highlighting a recently uncovered security flaw in Microsoft Internet Explorer&amp;ndash;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1833697,00.asp&#34;&gt;this article&lt;/a&gt; from &lt;em&gt;eWeek&lt;/em&gt; and &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,102924,00.html&#34;&gt;this article&lt;/a&gt; from &lt;em&gt;ComputerWorld&lt;/em&gt;, both of which reference this &lt;a href=&#34;http://www.microsoft.com/technet/security/advisory/903144.mspx&#34;&gt;security advisory&lt;/a&gt; from &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The fix is to set the Security Level for the Internet Zone to High, which disables the functionality required for the exploit to work. Unfortunately, it also disables a lot of other things that non-malicious sites use, so this workaround will affect your ordinary browsing experience.&lt;/p&gt;
+
+&lt;p&gt;My recommendation is to switch to &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Mozilla Firefox&lt;/a&gt;. While Firefox was shown to be vulnerable to a &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1830025,00.asp&#34;&gt;recent spoofing flaw&lt;/a&gt; (this flaw also affected IE, Safari, Camino, etc.), it&amp;rsquo;s still better than IE&amp;rsquo;s security record. And, yes, for those of you out there who are yelling at your computer screens right now: I know that you probably believe that Firefox is only more secure because there are fewer people using it. Perhaps that&amp;rsquo;s true, but the end result is that it&amp;rsquo;s more secure. Isn&amp;rsquo;t that what we are seeking to achieve?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>The Next Big Worm?</title>
+          <link>http://lowescott.github.io/2005/06/24/the-next-big-worm/</link>
+          <pubDate>Fri, 24 Jun 2005 22:29:09 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/24/the-next-big-worm/</guid>
+          <description>&lt;p&gt;Everyone remember Blaster? There are concerns that the next big Internet worm is about to surface, based upon a vulnerability revealed by Microsoft in the Windows implementation of Server Message Block, or SMB. Get the details on that patch &lt;a href=&#34;http://www.microsoft.com/technet/security/Bulletin/MS05-011.mspx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Several articles have been posted recently indicating that traffic patterns have been observed that might indicate an exploit of that vulnerability. &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,102747,00.html&#34;&gt;This article&lt;/a&gt; indicates that some experts believe the traffic patterns are indicative of a new exploit, but others are not concerned.&lt;/p&gt;
+
+&lt;p&gt;More recent than even that article is &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1831325,00.asp&#34;&gt;this posting&lt;/a&gt;, revealing that an exploit for MS05-011 has actually been discovered and made available on the Internet.&lt;/p&gt;
+
+&lt;p&gt;So is there anything you can do to protect yourself? Most firewalls (network-based and host-based) already block TCP port 445, the port used by SMB. If you know your organization allows SMB across the firewall, then you should be concerned. Make sure your systems are patched properly, and keep your anti-virus up to date. That&amp;rsquo;s about all you can do: just stay vigilant.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Dangerous Stuff</title>
+          <link>http://lowescott.github.io/2005/06/21/dangerous-stuff/</link>
+          <pubDate>Tue, 21 Jun 2005 13:47:22 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/21/dangerous-stuff/</guid>
+          <description>&lt;p&gt;The Internet grows more dangerous every day. Why? Well, have a look at this &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1829744,00.asp&#34;&gt;recent eWeek article&lt;/a&gt; and this &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1818369,00.asp&#34;&gt;slightly older eWeek article&lt;/a&gt; and you&amp;rsquo;ll see what I mean.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Spyware/&#34;&gt;Spyware&lt;/a&gt; acting like &lt;a href=&#34;http://en.wikipedia.org/wiki/Root_kit/&#34;&gt;root kits&lt;/a&gt;? &lt;a href=&#34;http://en.wikipedia.org/wiki/Computer_virus/&#34;&gt;Viruses&lt;/a&gt; taking on root kit features and able to hide their processes? This is scary stuff. When one of these malicious programs exploits a vulnerability in your web browser, you could get infected and not even know it. And if that application starts using I/O blocking to hide its processes and NTFS data streams to hide files inside other (legitimate) files, you&amp;rsquo;re really in trouble.&lt;/p&gt;
+
+&lt;p&gt;I know that &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; may only be more secure than &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Microsoft Windows&lt;/a&gt; because not as many people use it, but the end result is the same. If you use Windows, at least protect yourself&amp;ndash;don&amp;rsquo;t use Internet Explorer (use &lt;a href=&#34;www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt;), stay up to date on patches (visit Windows Update regularly), use an anti-virus application (and keep it updated as well), and use a good anti-spyware program (there are several, take your pick). You&amp;rsquo;ll be glad you did.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>New del.icio.us Links</title>
+          <link>http://lowescott.github.io/2005/06/14/new-delicious-links/</link>
+          <pubDate>Tue, 14 Jun 2005 00:42:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/14/new-delicious-links/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;ve added a couple new links to &lt;a href=&#34;http://del.icio.us/slowe/&#34;&gt;my del.icio.us&lt;/a&gt; bookmarks. Most notably, I&amp;rsquo;ve added an entry for a recent article on &lt;a href=&#34;http://www.onlamp.com/&#34;&gt;ONLamp.com&lt;/a&gt;, a site hosted by the &lt;a href=&#34;http://www.oreillynet.com/&#34;&gt;O&amp;rsquo;Reilly Network&lt;/a&gt;, on &lt;a href=&#34;http://www.modsecurity.org/&#34;&gt;mod_security&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The article, &lt;a href=&#34;http://www.onlamp.com/pub/a/onlamp/2005/06/09/wss_security.html?page=1&#34;&gt;Securing Web Services with mod_security&lt;/a&gt;, is a great introduction to an &lt;a href=&#34;http://httpd.apache.org/&#34;&gt;Apache&lt;/a&gt; module that I&amp;rsquo;ve known about and used for a while now. Similar to &lt;a href=&#34;http://www.microsoft.com/technet/security/tools/urlscan.mspx&#34;&gt;URLScan&lt;/a&gt; for IIS 5.0, mod_security serves to block malicious URLs and invalid requests, even within encrypted HTTPS sessions. As such, it acts as the perfect complement to firewalls and intrusion detection/prevention systems (both network-based and host-based), which typically operate at lower layers of the networking stack.&lt;/p&gt;
+
+&lt;p&gt;If you use Apache, I urge you to evaluate and deploy mod_security to enhance your web server&amp;rsquo;s security.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

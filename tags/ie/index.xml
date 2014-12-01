@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/ie/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-07-01 17:32:09 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Watch Out, IE Users</title>
+          <link>http://lowescott.github.io/2005/07/01/watch-out-ie-users/</link>
+          <pubDate>Fri, 01 Jul 2005 17:32:09 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/01/watch-out-ie-users/</guid>
+          <description>&lt;p&gt;A couple of articles are highlighting a recently uncovered security flaw in Microsoft Internet Explorer&amp;ndash;&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1833697,00.asp&#34;&gt;this article&lt;/a&gt; from &lt;em&gt;eWeek&lt;/em&gt; and &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,102924,00.html&#34;&gt;this article&lt;/a&gt; from &lt;em&gt;ComputerWorld&lt;/em&gt;, both of which reference this &lt;a href=&#34;http://www.microsoft.com/technet/security/advisory/903144.mspx&#34;&gt;security advisory&lt;/a&gt; from &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The fix is to set the Security Level for the Internet Zone to High, which disables the functionality required for the exploit to work. Unfortunately, it also disables a lot of other things that non-malicious sites use, so this workaround will affect your ordinary browsing experience.&lt;/p&gt;
+
+&lt;p&gt;My recommendation is to switch to &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Mozilla Firefox&lt;/a&gt;. While Firefox was shown to be vulnerable to a &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1830025,00.asp&#34;&gt;recent spoofing flaw&lt;/a&gt; (this flaw also affected IE, Safari, Camino, etc.), it&amp;rsquo;s still better than IE&amp;rsquo;s security record. And, yes, for those of you out there who are yelling at your computer screens right now: I know that you probably believe that Firefox is only more secure because there are fewer people using it. Perhaps that&amp;rsquo;s true, but the end result is that it&amp;rsquo;s more secure. Isn&amp;rsquo;t that what we are seeking to achieve?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

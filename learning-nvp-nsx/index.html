@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Learning NVP/NSX &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item  active " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="page">
+  <h1 class="page-title">Learning NVP/NSX</h1>
+  <p>For ease of reference, here are links to all of the entries in the &ldquo;Learning NVP/NSX&rdquo; blog series.</p>
+
+<p><a href="http://blog.scottlowe.org/2013/05/21/learning-nvp-part-1-high-level-architecture/">Part 1: High-Level Architecture</a>: This post provides an overview of NVP/NSX and the core components. <em>(published 2013-05-21)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2013/08/16/learning-nvp-part-2-nvp-controllers/">Part 2: NVP Controllers</a>: In part 2, you learn how to install and configure a cluster of NVP/NSX controllers. <em>(published 2013-08-16)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2013/08/19/learning-nvp-part-3-nvp-manager/">Part 3: NVP Manager</a>: Part 3 shows you how to install and configure NVP/NSX Manager, a web-based GUI that you use to configure certain aspects of NVP/NSX. <em>(published 2013-08-19)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2013/08/22/learning-nvp-part-4-adding-hypervisors-to-nvp/">Part 4: Adding Hypervisors to NVP</a>: This post walks through the process for adding hypervisors (the example provided is KVM) to NVP/NSX. <em>(published 2013-08-22)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2013/09/06/learning-nvp-part-5-creating-a-logical-network/">Part 5: Creating a Logical Network</a>: This part shows you how to create a logical network that can be used to connect VMs independently of the underlying physical network topology. <em>(published 2013-09-06)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2013/10/28/learning-nvp-part-6-adding-an-nvp-gateway/">Part 6: Adding an NVP Gateway</a>: To provide L2/L3 connectivity to logical networks in an NVP/NSX environment, you&rsquo;ll need a gateway appliance. This post shows how to set up a gateway appliance and add it to NVP/NSX. <em>(published 2013-10-28)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2013/11/01/learning-nvp-part-7-handling-the-nvp-to-nsx-transition/">Part 7: Handling the NVP to NSX Transition</a>: This post discusses the planned approach for transitioning from NVP to NSX. <em>(published 2013-11-01)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2013/12/05/learning-nvp-part-8-an-update-on-the-nvp-to-nsx-transition/">Part 8: An Update on the NVP to NSX Transition</a>: This post provides an overview of the NVP-to-NSX upgrade process, and completes the transition of the series to focus on NSX. <em>(published 2013-12-05)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/02/26/learning-nsx-part-9-adding-a-gateway-service/">Part 9: Adding a Gateway Service</a>: Part 9 leverages the gateway appliance added in part 6 to create a L3 gateway service that provides routed connectivity in and out of NSX-hosted logical networks. <em>(published 2014-02-26)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/02/27/learning-nsx-part-10-adding-a-service-node/">Part 10: Adding a Service Node</a>: In this part, I show you how to add a service node to your NSX installation. <em>(published 2014-02-27)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/03/12/learning-nsx-part-11-reviewing-openstack-integration-basics/">Part 11: Reviewing OpenStack Integration Basics</a>: This part introduces some concepts related to VMware NSX integration with OpenStack, and provides some basic information on how the integration works. <em>(published 2014-03-12)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/04/25/learning-nsx-part-12-integrating-vmware-nsx-with-openstack/">Part 12: Integrating VMware NSX with OpenStack</a>: Part 12 builds on Part 11 by providing specific details on how to configure OpenStack Neutron to work with VMware NSX. <em>(published 2014-04-25)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/04/28/learning-nsx-part-13-revisiting-logical-networking/">Part 13: Revisiting Logical Networking:</a> Part 13 revisits the idea of logical switches and logical switch ports in the context of using VMware NSX in an OpenStack environment. <em>(published 2014-04-28)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/06/20/learning-nsx-part-14-using-logical-routing/">Part 14: Using Logical Routing:</a> Part 14 discusses NSX&rsquo;s logical routing functionality, including distributed logical routing, and discusses logical routing in an OpenStack context. <em>(published 2014-06-20)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/07/16/learning-nsx-part-15-nsx-gateways-gateway-services-and-logical-routers/">Part 15: NSX Gateways, Gateway Services, and Logical Routers:</a> Part 15 dives a bit deeper into the core components of NSX&rsquo;s logical routing functionality, and explores the relationships between the different components. <em>(published 2014-07-16)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/10/13/learning-nsx-part-16-routing-to-multiple-external-vlans/">Part 16: Routing to Multiple External VLANs:</a> Part 16 describes how to configure the NSX gateway appliances and OpenStack to support multiple external networks on different VLANs. <em>(published 2014-10-13)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/10/27/learning-nsx-part-17-adding-external-l2-connectivity/">Part 17: Adding External L2 Connectivity:</a> Part 17 describes the use of NSX gateway appliances and L2 gateway services with OpenStack to add external L2 connectivity to logical networks. <em>(published 2014-10-27)</em></p>
+
+<p><a href="http://blog.scottlowe.org/2014/11/03/learning-nsx-part-18-routing-without-network-address-translation/">Part 18: Routing Without Network Address Translation:</a> Part 18 describes the use of logical routers in NSX that do not perform network address translation (NAT). <em>(published 2014-11-03)</em></p>
+
+<p>As additional entries are published, I&rsquo;ll update this page accordingly. Enjoy!</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

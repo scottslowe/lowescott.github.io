@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Virtual Desktops on Mac OS X &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Virtual Desktops on Mac OS X</h1>
+  <span class="post-date">Sep 30, 2005 10:15 PM</span>
+  <p>Almost from the moment I switched to <a href="http://www.apple.com/macosx/">Mac OS X</a>, I started looking for an application to provide the functionality of <a href="http://en.wikipedia.org/wiki/Virtual_desktop">virtual desktops</a>. I suppose my days of dabbling with Linux and the X Window System had ingrained me to believe that a *nix-based system just wasn&rsquo;t the same without virtual desktops.</p>
+
+<p>My virtual desktop journey started with <a href="http://www.codetek.com/ctvd/">CodeTek Virtual Desktop</a>, a commercial product that&rsquo;s very capable. The idea of the desktop pager was very natural, and the ability to automatically switch desktops when switching applications was very handy. I could simply Alt-Tab to the application I needed and CodeTek would automatically switch the appropriate desktop. I could also specify that new windows for a particular application should always be created on a particular desktop.</p>
+
+<p>After a while, I started looking into a new crop of open source virtual desktop managers. <a href="http://space.sourceforge.net/">Space.app</a> was one, but was (granted, this was quite some time ago) still a bit too rough around the edges. I was then turned on to <a href="http://desktopmanager.berlios.de/">Desktop Manager</a>, which I used for long time.</p>
+
+<p>Desktop Manager wasn&rsquo;t as full-featured in some aspects as CTVD, but I really liked the desktop transitions (great way to show off Mac OS X&rsquo;s graphics functionality). The ability to support CTVD pager skins was a nice feature as well, and I really like the overlay of the desktop name on the desktop. One feature that I particularly enjoyed using was the Mac equivalent of the Run dialog box, invoked by Option-Cmd-R. This made it easy to launch an application without having to navigate to the desktop where the Applications folder was found.</p>
+
+<p>Just within the last day or so, I started using <a href="http://virtuedesktops.sourceforge.net/">Virtue</a>. Virtue&rsquo;s &ldquo;claim to fame&rdquo; is that it doesn&rsquo;t use a desktop pager to switch virtual desktops; instead, it uses a translucent pop-up window similar to that used by <a href="http://quicksilver.blacktree.com/">Quicksilver</a>. I&rsquo;m having a bit of a problem getting used to the lack of a desktop pager, but the pop-up bezel is kind of cool, and it looks as if Virtue supports different wallpapers for different desktops. Virtue also appears to be more advanced with regards to applying desktop overlays (like the desktop name, for example). All in all, it looks like a great application. I don&rsquo;t know if I&rsquo;ll stay with it or not; if I do switch back to Desktop Manager, it will be simply because I am too ingrained to use the desktop pager and because I miss my &ldquo;Run&hellip;&rdquo; keyboard shortcut. In the meantime, I&rsquo;m going to give it an honest try.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

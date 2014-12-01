@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/macintosh/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-13 11:18:37 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Application-Specific VPNs</title>
+          <link>http://lowescott.github.io/2005/12/13/application-specific-vpns/</link>
+          <pubDate>Tue, 13 Dec 2005 11:18:37 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/13/application-specific-vpns/</guid>
+          <description>
+
+&lt;p&gt;I coined the term &amp;ldquo;application specific VPNs&amp;rdquo; as I began exploring the many uses of tools such as SSH (the &lt;a href=&#34;http://www.openssh.org/&#34;&gt;OpenSSH&lt;/a&gt; implementation, in particular) and &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; (the open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Secure_Sockets_Layer&#34;&gt;SSL&lt;/a&gt; wrapper). An &amp;ldquo;application specific VPN&amp;rdquo; is a technique for employing encrypted communication with a particular remote application that does not affect the operation of other applications (local or remote) on the system.&lt;/p&gt;
+
+&lt;p&gt;In general, most VPNs employ technology such as &lt;a href=&#34;http://en.wikipedia.org/wiki/PPTP&#34;&gt;PPTP&lt;/a&gt; or &lt;a href=&#34;http://en.wikipedia.org/wiki/Ipsec&#34;&gt;IPSec&lt;/a&gt;. These protocols usually affect &lt;em&gt;all&lt;/em&gt; traffic originating from that system (unless we use split tunneling). With an application specific VPN, only particular types of traffic are affected, and these particular types of traffic are wrapped in an encrypted SSH or SSL tunnel using either OpenSSH or Stunnel, respectively. Other types of traffic are unaffected.&lt;/p&gt;
+
+&lt;p&gt;While this may seem old hat to long-time Linux, Unix, or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; users, this is a relatively new concept to other platforms. Being a (fairly) new convert to Mac OS X myself, I found myself enjoying the tremendous flexibility offered by application specific VPNs. However, this functionality is certainly not limited to these platforms, and it is possible for &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; users to utilize this functionality as well.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Some Examples&lt;/h3&gt;
+
+&lt;p&gt;Here are a few examples of how you can use application specific VPNs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=PROHOME_Main&#34;&gt;Citrix Presentation Server&lt;/a&gt;: Users can wrap Citrix ICA traffic in SSL using Stunnel; this avoids the need to pay for commercial solutions (although, quite honestly, the commercial solutions are typically easier to deploy and manage).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;E-Mail: Lots of people talk about securing e-mail, but not usually in the context of securing client-to-server traffic. With Stunnel, you can add SSL support for IMAP, POP, and/or SMTP even if the server doesn&amp;rsquo;t support SSL natively. In fact, you can add Stunnel to &lt;a href=&#34;http://www.microsoft.com/exchange/default.mspx&#34;&gt;Microsoft Exchange&lt;/a&gt; to help bolster that product&amp;rsquo;s built-in support for SSL (such as using SMTPS instead of STARTTLS for encrypting SMTP traffic).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Remote Desktop: This is a great technique for sysadmins. Need to use Remote Desktop to manage a Windows-based server remotely, but don&amp;rsquo;t want to run into security problems? Use Stunnel or OpenSSH to encrypt the RDP traffic. Stunnel, in my opinion, is particularly good here, since it&amp;rsquo;s incredibly easy to use the Windows port of Stunnel to establish an SSL listener on an arbitrary high port for this very purpose.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Using Stunnel for SSL-based Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;On Windows, there is no graphical user interface (GUI) for configuring Stunnel; all configuration must be done with the &lt;code&gt;stunnel.conf&lt;/code&gt; configuration file. A sample &lt;code&gt;stunnel.conf&lt;/code&gt; file is found below; this file listens on TCP port 1494 and forwards traffic to TCP port 3389 on the same system. (Note that this would be a sample &lt;code&gt;stunnel.conf&lt;/code&gt; file for a server-side configuration.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CApath = c:\windows\system32\stunnel  
+cert = c:\windows\system32\stunnel\stunnel.pem  
+client = no  
+service = SSLTunnel  
+[rdp]  
+accept = 1494  
+connect = 3389
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once Stunnel has been configured, running &lt;code&gt;stunnel --install&lt;/code&gt; will install it as a system service; this service can then be stopped and started through the Services MMC console just like any other background service.&lt;/p&gt;
+
+&lt;p&gt;Of course, this is only half the work; you&amp;rsquo;ll also need an equivalent Stunnel configuration on the client side, since the Microsoft RDP client (the &lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=80111f21-d48d-426e-96c2-08aa2bd23a49&amp;amp;DisplayLang=en&#34;&gt;Windows version&lt;/a&gt; or the &lt;a href=&#34;http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient&#34;&gt;Mac OS X&lt;/a&gt; version) does not support SSL. Also, note that the SSL certificate used by Stunnel needs to be in PEM format (which is a nice lead-in to my article discussing the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/02/certificate-conversion-using-openssl/&#34;&gt;conversion of certificates&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, there is a graphical utility for managing Stunnel called SSL Enabler. (Note that I was not able to find a home page for this utility; downloads can be found at various sites.)&lt;/p&gt;
+
+&lt;p&gt;On Linux, the configuration again involves editing the &lt;code&gt;stunnel.conf&lt;/code&gt; file and launching stunnel (either in the foreground or as a daemon). I&amp;rsquo;m not aware of any GUI utilities for configuring Stunnel on Linux, but that certainly doesn&amp;rsquo;t mean they don&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Using SSH for Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;As with Stunnel, it&amp;rsquo;s also possible to use SSH to create application specific VPNs. Mac OS X comes with OpenSSH, as do most distributions of Linux and various flavors of BSD. Windows users can also find various ports of OpenSSH and utilities such as &lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/putty/&#34;&gt;PuTTY&lt;/a&gt; that make it possible to use SSH for application specific VPNs as well.&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, the following command in Terminal will create an application specific VPN to encrypt IMAP traffic to a remote server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh -L 1143:imapserver.domain.com:143 -N -f user@sshserver.domain.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This same technique could be used to encrypt WebDAV traffic to a remote web server, other types of mail traffic (POP3 or SMTP, for example), RDP (for Remote Desktop), etc. Note that it doesn&amp;rsquo;t work well with HTTP traffic that requires the use of host headers.&lt;/p&gt;
+
+&lt;p&gt;There are a few graphical utilities on Mac OS X for managing SSH tunnels; these include &lt;a href=&#34;http://projects.tynsoe.org/en/stm/&#34;&gt;SSH Tunnel Manager&lt;/a&gt; and &lt;a href=&#34;http://www.leapingbytes.com/almostvpn&#34;&gt;AlmostVPN&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Not being a regular day-to-day Linux user (not on the desktop, at least), I don&amp;rsquo;t know of any SSH tunnel management applications, but I would be very surprised if they didn&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Creating Site-to-Site Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;Most of the examples so far have been using SSH and/or Stunnel to connect endpoints (i.e., a single laptop or desktop computer) to a remote resource via an application specific VPN. However, it&amp;rsquo;s also easily possible to create application specific site-to-site VPNs, whose purpose is to secure only a particular type of traffic between two locations.&lt;/p&gt;
+
+&lt;p&gt;Consider this example. CompanyA wants to send e-mail to CompanyB, but wants that e-mail to be secure. If both mail servers support TLS, then the organizations could use TLS to secure the SMTP traffic. If not, then the companies can use Stunnel to establish an SSL connection between two systems. HostA at CompanyA can use Stunnel as a client side application to listen for unencrypted connections and pass them as encrypted connections to HostB at CompanyB. HostB at CompanyB is using Stunnel to listen for encrypted connections and passes them unencrypted to the mail server at CompanyB. With a simple configuration, the mail servers at both companies can be configured to pass mail connections for other company through the Stunnel connection. With no additional cost and very little configuration, all e-mail traffic between the two organizations has now been secured. All this without the complexity of a typical B-to-B VPN and the associated access controls.&lt;/p&gt;
+
+&lt;p&gt;For more information, documents on &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-ssh.doc&#34;&gt;application specific VPNs with SSH&lt;/a&gt; and &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-stunnel.doc&#34;&gt;application specific VPNs with Stunnel&lt;/a&gt; are available.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Using .Mac iDisk with a WatchGuard Firebox</title>
+          <link>http://lowescott.github.io/2005/12/12/using-mac-idisk-with-a-watchguard-firebox/</link>
+          <pubDate>Mon, 12 Dec 2005 00:37:38 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/12/using-mac-idisk-with-a-watchguard-firebox/</guid>
+          <description>&lt;p&gt;One of the strengths of the &lt;a href=&#34;http://www.watchguard.com/&#34;&gt;WatchGuard&lt;/a&gt; &lt;a href=&#34;http://www.watchguard.com/products/appliances.asp&#34;&gt;Firebox&lt;/a&gt; series of firewalls is the inclusion of application-layer proxies for protocols such as SMTP, FTP, and HTTP. Whereas ordinary packet filtering firewalls and stateful inspection firewalls only control traffic based on IP address or TCP/UDP port number, application-layer proxies like those included in the Firebox look deeper into the packet to make decisions on information such as URL or MIME content type (for an HTTP proxy, for example).&lt;/p&gt;
+
+&lt;p&gt;However, this advantage also becomes a disadvantage as many application-layer proxies may not understand or be compatible with protocol-specific extensions. In this particular case, it&amp;rsquo;s the iDisk service provided by Apple&amp;rsquo;s &lt;a href=&#34;http://www.mac.com/&#34;&gt;.Mac&lt;/a&gt; subscription service. The iDisk service uses &lt;a href=&#34;http://www.webdav.org/&#34;&gt;WebDAV&lt;/a&gt;, an extension of the HTTP/1.1 protocol specification. It appears that, in general, most WebDAV services operate properly through the Fireboxs HTTP proxy (although some issues with Microsoft Exchange&amp;rsquo;s Outlook Web Access were reported with earlier versions of the WatchGuard Firebox System software).&lt;/p&gt;
+
+&lt;p&gt;The iDisk service, though, apparently uses some non-RFC-compliant headers (note that this was &lt;em&gt;not&lt;/em&gt; confirmed with a packet capture). As a result, the Proxied-HTTP service (which employs, as the name suggests, an application-layer HTTP proxy) prevents these headers from being passed and therefore prevents iDisk from working.&lt;/p&gt;
+
+&lt;p&gt;To make iDisk work from behind a WatchGuard Firebox firewall, one of several steps must be taken:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Use the Filtered-HTTP service, which does not employ an application-layer HTTP proxy and therefore would not interfere with iDisk or other WebDAV-based applications or services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Modify the default properties of the Proxied-HTTP service to allow unknown headers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since the Proxied-HTTP service also provides for content filtering and reporting, it is generally preferred to use the HTTP proxy instead of an ordinary HTTP packet filter. The first option is therefore not the ideal solution.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, the behavior of the Proxied-HTTP service is somewhat configurable. In order to make iDisk work with the HTTP proxy, the &amp;ldquo;Remove unknown headers&amp;rdquo; option must be unchecked in the configuration for the HTTP proxy. By unchecking the &amp;ldquo;Remove unknown headers&amp;rdquo; option, the Firebox will allow non-RFC-compliant HTTP headers to pass through the firewall, and iDisk will work correctly.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Certificate Conversion Using OpenSSL</title>
+          <link>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</link>
+          <pubDate>Fri, 02 Dec 2005 16:08:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/02/certificate-conversion-using-openssl/</guid>
+          <description>&lt;p&gt;In my various adventures with replacing Windows-based servers with Linux servers, I have had need on several occasions to take an SSL certificate (generated using Microsoft Certificate Services) and make it available to a Linux-based server. In some cases, it was to be used by the SSL wrapper &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt;; in others, it was for &lt;a href=&#34;http://www.apache.org/httpd/&#34;&gt;Apache&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In either case, the certificate needed to be in the PEM (originally Privacy Enhanced Mail, now a standard for encoding certificates) format. Windows, on the other hand, typically uses the PFX (PKCS #12) format for storing certificates. To prepare certificates for use on Linux, the certificates must be converted to PEM format.&lt;/p&gt;
+
+&lt;p&gt;In the hopes that this information might be useful to others, here&amp;rsquo;s a process for converting from PFX to PEM using &lt;a href=&#34;http://www.openssl.org/&#34;&gt;OpenSSL&lt;/a&gt;. With the exception of only a few items, the process is identical on Linux, &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, and &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows &lt;sup&gt;2000&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2003&lt;/sub&gt;&lt;/a&gt;. These steps were confirmed using OpenSSL 0.9.7a on Red Hat Linux 9.0, using OpenSSL 0.9.6i on Mac OS X 10.2.8, and OpenSSL 0.9.7c on Windows Server 2003.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If the certificate is not already available in PFX format, use the Certificates MMC snap-in to export the certificate and the corresponding private key to a PFX file. Be sure to note the passphrase used to protect the PFX file; it will be needed later. If the certificate (and its corresponding private key) is already available in PFX format and the passphrase for the PFX file is known, proceed to step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At a terminal prompt, type &lt;code&gt;openssl pkcs12 -in _pfxfilename.pfx_ -out _tempfile.pem_&lt;/code&gt;. This will convert the PFX file to a PEM file. The OpenSSL toolkit will prompt for the import passphrase; this will be the passphrase specified in step 1. A PEM passphrase will also be needed; make note of the passphrase used here (it will be needed later).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using a text editor (such as vi on a Linux system, or Notepad on a Windows system), split the encrypted RSA private key and the certificate into two separate files. Remove all extra text, leaving only the text between the lines with the dashes. Make note of the filenames; they will be needed later.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The RSA key is currently encrypted; this will an automated launch for the application using the certificate. It will be necessary to decrypt the RSA private key. To decrypt the RSA private key, use the command &lt;code&gt;openssl rsa -in _encryptedkey_ -out _decryptedkey_&lt;/code&gt; (where &lt;em&gt;encryptedkey&lt;/em&gt; is the file containing the RSA private key, as separated in step 3, and &lt;em&gt;decryptedkey&lt;/em&gt; is the file that will contain the decrypted RSA private key). The OpenSSL toolkit will prompt for the RSA key passphrase; this will be the passphrase specified in step 2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Linux or Mac OS X: To concatenate the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;cat _decryptedkey certificatefile_ &amp;gt; _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Windows: To combine the decrypted RSA private key and the certificate into a single file, use the command &lt;code&gt;copy /b _decryptedkey_+_certificatefile_ _finalfile.pem_&lt;/code&gt; (where &lt;em&gt;decryptedkey&lt;/em&gt; is the decrypted RSA key produced in step 4 and &lt;em&gt;certificatefile&lt;/em&gt; is the file containing only the certificate, as produced in step 3).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Edit the concatenated file (finalfile.pem from step 5) with a text editor to add a blank line between the decrypted RSA private key and the certificate, and a blank line after the end of the certificate.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point, the certificate is ready for use. &lt;strong&gt;&lt;em&gt;Be sure&lt;/em&gt;&lt;/strong&gt; to guard the unencrypted private key with extreme caution; loss of this file can result in the compromise of your system. Note also that most applications require that the certificates be owned by root and readable only by root (&lt;code&gt;chown root:root&lt;/code&gt; to make them owned by root and &lt;code&gt;chmod 600&lt;/code&gt; to make them readable only by root).&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Market-speak</title>
+          <link>http://lowescott.github.io/2005/11/29/market-speak/</link>
+          <pubDate>Tue, 29 Nov 2005 17:38:01 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/market-speak/</guid>
+          <description>&lt;p&gt;I found &lt;a href=&#34;http://ideastorm.com/blog/2005/11/29/market-speak/&#34;&gt;this little post&lt;/a&gt; while searching over at &lt;a href=&#34;http://www.technorati.com/&#34;&gt;Technorati&lt;/a&gt;. How true!&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>ipfw Rules for Bonjour</title>
+          <link>http://lowescott.github.io/2005/11/28/ipfw-rules-for-bonjour/</link>
+          <pubDate>Mon, 28 Nov 2005 16:11:38 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/28/ipfw-rules-for-bonjour/</guid>
+          <description>&lt;p&gt;I originally published this information on my business website, but thought I&amp;rsquo;d reproduce it here in the event someone needs it.&lt;/p&gt;
+
+&lt;p&gt;Apple&amp;rsquo;s &lt;a href=&#34;http://www.apple.com/macosx/features/bonjour/&#34;&gt;Bonjour&lt;/a&gt; (formerly Rendezvous) auto-discovery service is used in a number of Apple-branded products as well as a growing number of third-party applications (for example, my HP Color LaserJet 2550N supports Bonjour). It&amp;rsquo;s used to advertise and discover &lt;a href=&#34;http://www.apple.com/itunes/&#34;&gt;iTunes&lt;/a&gt; music libraries, and Apple&amp;rsquo;s Airport Admin Utility also uses Bonjour to discover &lt;a href=&#34;http://www.apple.com/airportextreme/&#34;&gt;Airport Extreme&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/airportexpress/&#34;&gt;Airport Express&lt;/a&gt; wireless base stations for configuration.&lt;/p&gt;
+
+&lt;p&gt;Bonjour uses &lt;a href=&#34;http://www.multicastdns.org/&#34;&gt;multicast DNS&lt;/a&gt; (known as mDNS), part of the IETF standard known as &lt;a href=&#34;http://www.zeroconf.org/&#34;&gt;Zeroconf&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;All that is well and good, but if you are using the built-in firewall you most likely are preventing Bonjour from working correctly. I grew frustrated trying to utilize Bonjour-related services while also keeping my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt; protected against unwanted network traffic. Using a packet sniffer and Brian Hill&amp;rsquo;s &lt;a href=&#34;http://personalpages.tds.net/~brian_hill/brickhouse.html&#34;&gt;Brickhouse&lt;/a&gt; application, I observed Bonjour traffic and created a set of ipfw rules that can be used to allow this traffic.&lt;/p&gt;
+
+&lt;p&gt;Multicast DNS operates over UDP (IP protocol 17) with a destination port 5353 and a source port above 1024. The destination address is, of course, a multicast address (in the 224.0.0.0 range). Responses to mDNS multicasts originate from UDP port 5353, but are bound for a random high port above 1024. Simply defining a rule that allows traffic to and from UDP port 5353 wont work, because while outbound traffic will be correctly matched the responses to those outbound requests wont be matched and will be dropped (assuming the default action is to deny traffic). So, a sample rule to be added to ipfw might look something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;add 2008 allow udp from 10.1.1.0/24 5353 to any 1024-65535 in via en0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(This should be entered all on a single line.)&lt;/p&gt;
+
+&lt;p&gt;This rule allows traffic from the source network 10.1.1.0 (the &amp;ldquo;/24&amp;rdquo; indicating a 24-bit mask, i.e., a subnet mask of 255.255.255.0) from UDP source port 5353 to any port above 1024 on any destination address inbound via the en0 interface. The en0 interface is typically the built-in Ethernet interface on most &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;-based systems. (Likewise, en1 is typically the built-in AirPort/AirPort Extreme wireless interface.)&lt;/p&gt;
+
+&lt;p&gt;If you are tightly restricting outbound traffic as well, you&amp;rsquo;ll need a matching outbound rule (of course).&lt;/p&gt;
+
+&lt;p&gt;My own experience has shown that adding this rule to my ipfw ruleset has allowed Bonjour to work as expected without sacrificing the security of my system.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Making Backup DVD Copies</title>
+          <link>http://lowescott.github.io/2005/11/27/making-backup-dvd-copies/</link>
+          <pubDate>Sun, 27 Nov 2005 20:23:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/27/making-backup-dvd-copies/</guid>
+          <description>&lt;p&gt;I love DVDs. Ever since I bought my surround sound system around Christmas of 2000, I have preferred DVDs over VHS for any new movies that we purchase. The big problem, though, is that DVDs aren&amp;rsquo;t nearly as durable as videotapes, and in a family with kids that&amp;rsquo;s a big deal. I have younger kids, and it doesn&amp;rsquo;t take much for a kid to scratch a DVD when putting it into or taking it out of the DVD player. All it takes is one scratch and that&amp;rsquo;s pretty much the end of that movie.&lt;/p&gt;
+
+&lt;p&gt;Even before I switched to &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, I have been making digital copies of every CD that I purchase, so that I can quickly and easily make another copy in the event that the original CD gets damaged in any way. The introduction of &lt;a href=&#34;http://www.apple.com/itunes/&#34;&gt;iTunes&lt;/a&gt; and my &lt;a href=&#34;http://www.apple.com/ipod/&#34;&gt;iPod&lt;/a&gt; have made this easier. I hadn&amp;rsquo;t considered, even with the introduction of the 5th generation iPod with video capabilities, that I could do the same with my DVDs until just the other day.&lt;/p&gt;
+
+&lt;p&gt;So I set out to see if it was possible to do the same with my DVDs. I&amp;rsquo;d researched this a little bit earlier, so I already knew about &lt;a href=&#34;http://www.losprimates.net/mtr/&#34;&gt;MacTheRipper&lt;/a&gt; (MTR), a program for extracting the digital video from a DVD. I used MTR to extract the video for &lt;em&gt;I, Robot&lt;/em&gt; to an external FireWire hard drive attached to my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt;. That process went well, didn&amp;rsquo;t take too terribly long, and the resulting VIDEO_TS folder created by MTR worked flawlessly using &lt;a href=&#34;http://www.videolan.org/vlc/&#34;&gt;VLC&lt;/a&gt;. I then turned to a program called &lt;a href=&#34;http://lonestar.utsa.edu/llee/applescript/dvdimager.html&#34;&gt;DVD Imager&lt;/a&gt;, which is designed to turn a VIDEO_TS folder into a DVD image that can be burned to a DVD. The problem, however, was that the VIDEO_TS folder and the resulting DVD image were 6.87GB in size. As a result, I was not able to burn the image back to a standard DVD-R using my PowerBook&amp;rsquo;s SuperDrive.&lt;/p&gt;
+
+&lt;p&gt;I tried another DVD (&lt;em&gt;Robots&lt;/em&gt; this time) and ended up with 4.62GB of data. OK, I thought, a single-layer DVD holds 4.7GB of data so I should be fine. Wrong! That didn&amp;rsquo;t work, either.&lt;/p&gt;
+
+&lt;p&gt;That means I&amp;rsquo;m currently stumped as to the next step. A number of online searches have turned up recommendations for &lt;a href=&#34;http://www.roxio.com/en/products/popcorn/&#34;&gt;Popcorn&lt;/a&gt; (from &lt;a href=&#34;http://www.roxio.com/&#34;&gt;Roxio&lt;/a&gt;), but I&amp;rsquo;m trying to see if I can avoid having to purchase software and instead make do with freeware and/or open source applications.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Open Source on Mac OS X</title>
+          <link>http://lowescott.github.io/2005/10/06/open-source-on-mac-os-x/</link>
+          <pubDate>Thu, 06 Oct 2005 12:04:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/06/open-source-on-mac-os-x/</guid>
+          <description>&lt;p&gt;Most people automatically equate &amp;ldquo;open source&amp;rdquo; with Linux or &lt;a href=&#34;http://www.apache.org/&#34;&gt;Apache&lt;/a&gt;. But there&amp;rsquo;s more to open source than that. There are a wide variety of open source projects that are also targeted at (gasp) &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Microsoft Windows&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Being a Mac user myself, I was particularly interested in &lt;a href=&#34;http://software.newsforge.com/article.pl?sid=05/09/20/166254&#34;&gt;this article&lt;/a&gt; recently posted at &lt;a href=&#34;http://www.newsforge.com/&#34;&gt;NewsForge&lt;/a&gt;. Some of the projects listed there were new to me; for example, I had never heard of or used &lt;a href=&#34;http://www.opencommunity.co.uk/vienna2.html&#34;&gt;Vienna&lt;/a&gt;. Given that I don&amp;rsquo;t like brushed metal interfaces (can&amp;rsquo;t stand them) and that I already use a commercial RSS reader, Vienna won&amp;rsquo;t do me much good.&lt;/p&gt;
+
+&lt;p&gt;Many of the projects listed there, though, I was familiar with and actually using currently. For example, &lt;a href=&#34;http://www.adiumx.com/&#34;&gt;Adium X&lt;/a&gt; is my default IM client (I use it to stay connected to MSN, AIM, and Google Talk), &lt;a href=&#34;http://cyberduck.ch/&#34;&gt;Cyberduck&lt;/a&gt; is my FTP/SFTP client, and &lt;a href=&#34;http://growl.info/&#34;&gt;Growl&lt;/a&gt; helps keep me informed about what is happening with all the various applications I have running. I&amp;rsquo;ve never used &lt;a href=&#34;http://seashore.sourceforge.net/&#34;&gt;Seashore&lt;/a&gt;, but I&amp;rsquo;ll probably have a look at it soon (I&amp;rsquo;ve been looking for a good image editor).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.nothickmanuals.info/doku.php?id=opensourcemac&#34;&gt;This link&lt;/a&gt; (also referenced in the NewsForge article) lists an even larger variety of open source Mac applications. Again, some I recognize (and use), a lot that I don&amp;rsquo;t. If you are a Mac user, I encourage you to take another look at some of the many high-quality open source projects available.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Moving Back to Desktop Manager</title>
+          <link>http://lowescott.github.io/2005/10/04/moving-back-to-desktop-manager/</link>
+          <pubDate>Tue, 04 Oct 2005 09:00:32 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/04/moving-back-to-desktop-manager/</guid>
+          <description>&lt;p&gt;Over the last few days or so, I have been experimenting with &lt;a href=&#34;http://virtuedesktops.sourceforge.net/&#34;&gt;Virtue&lt;/a&gt;, a virtual desktop application. I&amp;rsquo;ve used various virtual desktop applications since switching to &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; (see &lt;a href=&#34;http://blog.scottlowe.org/2005/09/30/virtual-desktops-on-mac-os-x/&#34;&gt;this blog posting&lt;/a&gt;). After getting used to the lack of a desktop pager, I was really beginning to like Virtue and it&amp;rsquo;s functionality, even though it seemed as though the Virtue project had slowed and/or stopped development. Finally, after searching around for some way of re-instating the &amp;ldquo;Run Application&amp;rdquo; feature in &lt;a href=&#34;http://desktopmanager.berlios.de/&#34;&gt;Desktop Manager&lt;/a&gt;, I found that Virtue was incompatible with Mac OS X 10.4, aka &amp;ldquo;Tiger.&amp;rdquo; Since I&amp;rsquo;ve been researching the possibility of an upgrade to Tiger, I decided I&amp;rsquo;d better switch back to an application that was supposed to run under Tiger (which, based on what I&amp;rsquo;ve been able to find, Desktop Manager does).&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a real shame, too. Virtue has a great feature set (I love the idea of the &amp;ldquo;primitives,&amp;rdquo; which are text and/or colors that can be applied to individual desktops). I didn&amp;rsquo;t use the per-desktop wallpaper functionality or the per-desktop icons, but I know a few people whose desktop-centric filing system would have really loved those features.&lt;/p&gt;
+
+&lt;p&gt;If I were a programmer, I&amp;rsquo;d probably pick up the code myself and run with it. But I&amp;rsquo;m not, so there you go.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Virtual Desktops on Mac OS X</title>
+          <link>http://lowescott.github.io/2005/09/30/virtual-desktops-on-mac-os-x/</link>
+          <pubDate>Fri, 30 Sep 2005 22:15:00 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/09/30/virtual-desktops-on-mac-os-x/</guid>
+          <description>&lt;p&gt;Almost from the moment I switched to &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, I started looking for an application to provide the functionality of &lt;a href=&#34;http://en.wikipedia.org/wiki/Virtual_desktop&#34;&gt;virtual desktops&lt;/a&gt;. I suppose my days of dabbling with Linux and the X Window System had ingrained me to believe that a *nix-based system just wasn&amp;rsquo;t the same without virtual desktops.&lt;/p&gt;
+
+&lt;p&gt;My virtual desktop journey started with &lt;a href=&#34;http://www.codetek.com/ctvd/&#34;&gt;CodeTek Virtual Desktop&lt;/a&gt;, a commercial product that&amp;rsquo;s very capable. The idea of the desktop pager was very natural, and the ability to automatically switch desktops when switching applications was very handy. I could simply Alt-Tab to the application I needed and CodeTek would automatically switch the appropriate desktop. I could also specify that new windows for a particular application should always be created on a particular desktop.&lt;/p&gt;
+
+&lt;p&gt;After a while, I started looking into a new crop of open source virtual desktop managers. &lt;a href=&#34;http://space.sourceforge.net/&#34;&gt;Space.app&lt;/a&gt; was one, but was (granted, this was quite some time ago) still a bit too rough around the edges. I was then turned on to &lt;a href=&#34;http://desktopmanager.berlios.de/&#34;&gt;Desktop Manager&lt;/a&gt;, which I used for long time.&lt;/p&gt;
+
+&lt;p&gt;Desktop Manager wasn&amp;rsquo;t as full-featured in some aspects as CTVD, but I really liked the desktop transitions (great way to show off Mac OS X&amp;rsquo;s graphics functionality). The ability to support CTVD pager skins was a nice feature as well, and I really like the overlay of the desktop name on the desktop. One feature that I particularly enjoyed using was the Mac equivalent of the Run dialog box, invoked by Option-Cmd-R. This made it easy to launch an application without having to navigate to the desktop where the Applications folder was found.&lt;/p&gt;
+
+&lt;p&gt;Just within the last day or so, I started using &lt;a href=&#34;http://virtuedesktops.sourceforge.net/&#34;&gt;Virtue&lt;/a&gt;. Virtue&amp;rsquo;s &amp;ldquo;claim to fame&amp;rdquo; is that it doesn&amp;rsquo;t use a desktop pager to switch virtual desktops; instead, it uses a translucent pop-up window similar to that used by &lt;a href=&#34;http://quicksilver.blacktree.com/&#34;&gt;Quicksilver&lt;/a&gt;. I&amp;rsquo;m having a bit of a problem getting used to the lack of a desktop pager, but the pop-up bezel is kind of cool, and it looks as if Virtue supports different wallpapers for different desktops. Virtue also appears to be more advanced with regards to applying desktop overlays (like the desktop name, for example). All in all, it looks like a great application. I don&amp;rsquo;t know if I&amp;rsquo;ll stay with it or not; if I do switch back to Desktop Manager, it will be simply because I am too ingrained to use the desktop pager and because I miss my &amp;ldquo;Run&amp;hellip;&amp;rdquo; keyboard shortcut. In the meantime, I&amp;rsquo;m going to give it an honest try.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Modifying Camino&#39;s Exceptions List for Cookies</title>
+          <link>http://lowescott.github.io/2005/07/13/modifying-caminos-exceptions-list-for-cookies/</link>
+          <pubDate>Wed, 13 Jul 2005 22:36:41 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/13/modifying-caminos-exceptions-list-for-cookies/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;m a stickler about cookies. No, not the kind you eat&amp;hellip;the kind that web servers place on your computer when you visit a web site. I understand that cookies are sometimes necessary to maintain state as a user navigates through a web site; HTTP is, after all, a stateless protocol. But a cookie for every site no matter what? That just gets on my nerves.&lt;/p&gt;
+
+&lt;p&gt;Up until now, I had &lt;a href=&#34;http://www.caminobrowser.org/&#34;&gt;Camino&lt;/a&gt; configured to ask if I wanted to allow a cookie or not. This got time-consuming when I was visiting a site I had never visited before and all the ad servers wanted to place a cookie to track me. I wanted a way to tell Camino, &amp;ldquo;Block all cookies unless I say otherwise.&amp;rdquo; Finally, in Camino 0.9a1, I can set all cookies to be denied and then view the exception list, but there was still no way to edit the exception list.&lt;/p&gt;
+
+&lt;p&gt;Being the determined (read: stubborn) person that I am, I was determined to find a way to edit this exceptions list. (As a side note to the Camino developers, please write a UI for editing the exception list.) After not too much searching, I found that the &lt;code&gt;hostperm.1&lt;/code&gt; file in &lt;code&gt;~/Library/Application Support/Camino&lt;/code&gt; is an ordinary text file that contains the exceptions list. To add a site to this list, simply follow the same format as one of the existing lines, specifying 1 to allow cookies or 2 to deny cookies. Of course, any editing to this file should be done while Camino is not running.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Bonjour (The Technology, Not the Greeting)</title>
+          <link>http://lowescott.github.io/2005/07/11/bonjour-the-technology-not-the-greeting/</link>
+          <pubDate>Mon, 11 Jul 2005 23:39:46 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/11/bonjour-the-technology-not-the-greeting/</guid>
+          <description>&lt;p&gt;One of the RSS feeds from &lt;a href=&#34;http://www.macosxhints.com&#34;&gt;Mac OS X Hints&lt;/a&gt; today pointed me to a website on &lt;a href=&#34;http://www.dns-sd.org/&#34;&gt;DNS Service Discovery (DNS-SD)&lt;/a&gt;. DNS-SD is part of the magic behind &lt;a href=&#34;http://www.apple.com/macosx/features/bonjour/&#34;&gt;Bonjour&lt;/a&gt; (formerly named Rendezvous), the way in which &lt;a href=&#34;http://www.apple.com/macosx&#34;&gt;Mac OS X&lt;/a&gt; is able to automatically locate services across the network. Bonjour is used, for example, in locating an &lt;a href=&#34;http://www.apple.com/airportextreme/&#34;&gt;Airport Extreme&lt;/a&gt; base station, or used by &lt;a href=&#34;http://www.caminobrowser.org&#34;&gt;Camino&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/macosx/features/safari/&#34;&gt;Safari&lt;/a&gt; to find web servers on your network. Personally, I like Bonjour, and it&amp;rsquo;s good to see that it is finally being extended beyond single-segment implementations. And, with &lt;a href=&#34;http://a1408.g.akamai.net/7/1408/9955/20050505/akamai.info.apple.com/Bonjour/061-1768.20050505.BJWdw/BonjourSetup.exe&#34;&gt;Bonjour for Windows&lt;/a&gt; available from &lt;a href=&#34;http://www.apple.com&#34;&gt;Apple&lt;/a&gt;, it&amp;rsquo;s starting to look like a viable cross-platform solution for finding and connecting to network services automatically.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Camino&#39;s Latest Iteration</title>
+          <link>http://lowescott.github.io/2005/07/11/caminos-latest-iteration/</link>
+          <pubDate>Mon, 11 Jul 2005 23:24:29 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/11/caminos-latest-iteration/</guid>
+          <description>&lt;p&gt;I&amp;rsquo;ve been using &lt;a href=&#34;http://www.caminobrowser.org&#34;&gt;Camino 0.9a1&lt;/a&gt;, the latest version of the native &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; browser, for the last few days. I have to say that I am impressed. I like the new features on the Go menu that shows the most recently visited websites; this makes it easier to flip back to a site than having to switch to the &amp;ldquo;Bookmarks&amp;rdquo; view. The new tab bar is much better as well; I couldn&amp;rsquo;t stand the old one.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://www.nada.de/mac/camitools/&#34;&gt;CamiTools&lt;/a&gt; add-ons for Camino 0.9a1 are also excellent; I&amp;rsquo;m using both CamiOptions as well as CamiFlash.&lt;/p&gt;
+
+&lt;p&gt;If you are using Camino now, you should give this new version a spin. You&amp;rsquo;ll be glad you did.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Stupid Tricks With The Mac OS X Firewall</title>
+          <link>http://lowescott.github.io/2005/07/07/stupid-tricks-with-the-mac-os-x-firewall/</link>
+          <pubDate>Thu, 07 Jul 2005 22:54:40 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/07/stupid-tricks-with-the-mac-os-x-firewall/</guid>
+          <description>&lt;p&gt;Here&amp;rsquo;s an interesting way to block access to your &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; system. Simply modify your ipfw script to block traffic to or from the 127.0.0.0/8 network. When you do this, your Mac will simply fail to log you in, instead presenting you with an endless spinning disk.&lt;/p&gt;
+
+&lt;p&gt;The only workaround is to hold down the Shift key while booting (to initiate a Safe Boot), then disable the StartupItem that launches and configures the firewall.&lt;/p&gt;
+
+&lt;p&gt;Of course, I speak from personal experience, having added the aforementioned rules in an effort to block spoofed traffic from accessing the loopback interface. Apparently, Mac OS X is different enough from &lt;a href=&#34;http://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt; that this advice (advocated on a couple of FreeBSD-related sites I found while searching for ipfw information) is &lt;em&gt;not&lt;/em&gt; recommended.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Linux Better Than Windows?</title>
+          <link>http://lowescott.github.io/2005/07/06/linux-better-than-windows/</link>
+          <pubDate>Wed, 06 Jul 2005 14:31:35 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/06/linux-better-than-windows/</guid>
+          <description>&lt;p&gt;A short while back &lt;a href=&#34;http://www.newsforge.com/&#34;&gt;NewsForge&lt;/a&gt; published an article comparing Windows to Linux. What&amp;rsquo;s so unusual about that, you may ask? This article, titled &amp;ldquo;&lt;a href=&#34;http://os.newsforge.com/article.pl?sid=05/05/18/2033216&#34;&gt;Windows rapidly approaching desktop usability&lt;/a&gt;,&amp;rdquo; takes a look at Windows as if &lt;em&gt;it&lt;/em&gt;, not Linux, were the upstart newcomer in the OS lineup. This is a viewpoint not often considered, and it is a valid viewpoint once you get over the &lt;strong&gt;presumption&lt;/strong&gt; that Windows should be the default OS on your computer.&lt;/p&gt;
+
+&lt;p&gt;There are a couple of valid points made in the article. To quote:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;Microsoft Windows XP, Home Edition, with Service Pack 2, is a tremendous improvement over previous Windows versions when it comes to stability and appearance, but it still has many glitches that keep it from being competitive with GNU/Linux for everyday users, including a tedious installation procedure, lack of productivity software included with the operating system, hardware compatibility problems, and a price so much higher than any of the Linux distributions&amp;hellip;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Don&amp;rsquo;t get me wrong; I&amp;rsquo;m not advocating that everyone out there should suddenly ditch &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; and migrate to Linux. Are there situations where Linux is a better fit than Windows? Of course. Likewise, there are situations where Windows is a better fit than Linux. And, of course, there&amp;rsquo;s always &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; to consider as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>YAMB (Yet Another Mac Browser)</title>
+          <link>http://lowescott.github.io/2005/07/05/yamb-yet-another-mac-browser/</link>
+          <pubDate>Tue, 05 Jul 2005 16:33:03 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/05/yamb-yet-another-mac-browser/</guid>
+          <description>&lt;p&gt;Although the title may indicate otherwise, I&amp;rsquo;m actually glad to see more browsers popping up for &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;. Choice is good.&lt;/p&gt;
+
+&lt;p&gt;The new kid on the block this time is &lt;a href=&#34;http://hmdt-web.net/shiira/index-e.html&#34;&gt;Shiira&lt;/a&gt;, a WebKit-based browser that offers some pretty useful features. These features include Tab Expose, which is Expose for browser tabs (activated via F8); &lt;a href=&#34;http://www.growl.info/&#34;&gt;Growl&lt;/a&gt; integration; integration with Safari Bookmarks; and a clean, native Aqua interface. Because it uses Apple&amp;rsquo;s WebKit (now open sourced and available &lt;a href=&#34;http://webkit.opendarwin.org/&#34;&gt;here&lt;/a&gt;), it renders pages the same way as Safari.&lt;/p&gt;
+
+&lt;p&gt;I like some features about Shiira (especially the Growl integration and the tabbed browsing implementation), but still find myself going back to &lt;a href=&#34;http://www.caminobrowser.org/&#34;&gt;Camino&lt;/a&gt;. A new alpha version of Camino 0.9 has been released, although I haven&amp;rsquo;t brought myself to use it yet. If Camino had a way to provide notifications via Growl (I&amp;rsquo;d really like for my browser to notify me when a download is complete), I would be just absolutely thrilled.&lt;/p&gt;
+
+&lt;p&gt;Oh, and Shiira is an open source project, released under a BSD style license.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>STARTTLS and IMAP in Mail.app</title>
+          <link>http://lowescott.github.io/2005/07/02/starttls-and-imap-in-mailapp/</link>
+          <pubDate>Sat, 02 Jul 2005 20:47:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/02/starttls-and-imap-in-mailapp/</guid>
+          <description>&lt;p&gt;I &lt;a href=&#34;http://blog.scottlowe.org/2005/05/14/nonstandard-implementations/&#34;&gt;blogged&lt;/a&gt; earlier about my frustration with the &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; Mail.app mail client and its apparent lack of STARTTLS support with IMAP4. Well, on a whim today I decided to take this issue back up again.&lt;/p&gt;
+
+&lt;p&gt;Since &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Microsoft Exchange&lt;/a&gt; does not support STARTTLS, I had to use &lt;a href=&#34;http://www.vergenet.net/linux/perdition/&#34;&gt;Perdition&lt;/a&gt; as an IMAP proxy in front of Exchange. Earlier attempts to get Mail.app to do STARTTLS had failed (not sure why), but today I decided to try changing the IMAP port from 993 (the default when you check the &amp;ldquo;Use SSL&amp;rdquo; box) to 143 (the standard IMAP4 port). Oddly enough, it seemed to work!&lt;/p&gt;
+
+&lt;p&gt;Curious to find out for sure, I trotted out tcpdump on the mail gateway running Perdition to capture traffic to/from Mail.app and to/from the back end mail server. The traffic to/from the back end mail server was transmitted in the clear (I used plain text messages so that I could see the content), but the traffic to/from Mail.app was not readable. I also saw Mail.app issue a CAPABILITY command, then issue a STARTTLS command. Bingo!&lt;/p&gt;
+
+&lt;p&gt;So, it appears that Mail.app does indeed support STARTTLS for IMAP, but only if you set the port number back to 143 after checking the &amp;ldquo;Use SSL&amp;rdquo; checkbox.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>The Practicality Perspective</title>
+          <link>http://lowescott.github.io/2005/06/30/the-practicality-perspective/</link>
+          <pubDate>Thu, 30 Jun 2005 21:16:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/30/the-practicality-perspective/</guid>
+          <description>&lt;p&gt;A recent opinion article from &lt;a href=&#34;http://www.eweek.com/&#34;&gt;&lt;em&gt;eWeek&lt;/em&gt;&lt;/a&gt; titled &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1826033,00.asp&#34;&gt;&amp;ldquo;Hot Ideas Don&amp;rsquo;t Always Win the Race&amp;rdquo;&lt;/a&gt; (or &amp;ldquo;Just too hot an idea,&amp;rdquo; in the print version of &lt;em&gt;eWeek&lt;/em&gt;) takes a very practical view of Apple&amp;rsquo;s move to the Intel platform. Basically, while the PowerPC is technologically superior to x86 CPUs, the best technology doesn&amp;rsquo;t always win. We saw this with OS/2 (far superior to Windows 95) and the MCA bus architecture, among others.&lt;/p&gt;
+
+&lt;p&gt;I agree with him. As technical people, we need to be sure to take a step back from the &amp;ldquo;this technology is better&amp;rdquo; argument and look at the choice from a practicality perspective. And that goes not only for assessing this specific incident, but for the rest of our technical decisions as well. Sure, Linux may be superior to &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; from a technology perspective (I&amp;rsquo;m not saying it is or it isn&amp;rsquo;t), but is it the most practical decision? Sure, &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; may be far superior to Linux (again, I&amp;rsquo;m not saying it is or it isn&amp;rsquo;t), but is it the most practical decision? Does it make the most sense not only from a technical viewpoint, but also from a business perspective? From a cost perspective?&lt;/p&gt;
+
+&lt;p&gt;To be successful in our IT careers, we must look at these kinds of things from all perspectives, including the practicality perspective.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Running Windows Apps on an Intel-Based Mac</title>
+          <link>http://lowescott.github.io/2005/06/26/running-windows-apps-on-an-intel-based-mac/</link>
+          <pubDate>Sun, 26 Jun 2005 16:36:17 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/26/running-windows-apps-on-an-intel-based-mac/</guid>
+          <description>&lt;p&gt;Here&amp;rsquo;s an interesting side effect of Apple&amp;rsquo;s announcement to move the Macintosh platform to Intel-based CPUs: &lt;a href=&#34;http://www.codeweavers.com/&#34;&gt;CodeWeavers&lt;/a&gt; has announced that they will expand their services and products to include the new Intel-based Macs (see &lt;a href=&#34;http://business.newsforge.com/article.pl?sid=05/06/24/1530234&amp;amp;from=rss&#34;&gt;CodeWeavers sees Mactel move as an opportunity&lt;/a&gt; on the &lt;a href=&#34;http://www.newsforge.com/&#34;&gt;NewsForge&lt;/a&gt; site). More information is also available in the official CodeWeavers &lt;a href=&#34;http://www.codeweavers.com/about/general/press/?id=20050622&#34;&gt;press release&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is a very good thing. If CodeWeavers is successful in making a version of &lt;a href=&#34;http://www.codeweavers.com/products/cxoffice/&#34;&gt;CrossOver Office&lt;/a&gt; to run on the Intel-based Macs, it will make it easier to users to choose whatever platform best suits their needs, be it &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt;, Linux, or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;. They won&amp;rsquo;t feel tied to a specific platform just because there&amp;rsquo;s &lt;em&gt;one&lt;/em&gt; application they need that only runs on &lt;em&gt;one&lt;/em&gt; specific platform.&lt;/p&gt;
+
+&lt;p&gt;Right now, I use Microsoft&amp;rsquo;s &lt;a href=&#34;http://www.microsoft.com/mac/products/virtualpc/virtualpc.aspx&#34;&gt;Virtual PC for the Mac&lt;/a&gt; to run any Windows-specific programs I need. This works reasonably well, but takes a performance hit because it has to emulate an Intel-compatible CPU. With Intel-based CPUs under the hood already, Virtual PC (or CrossOver Office, or &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, or &lt;a href=&#34;http://www.cl.cam.ac.uk/Research/SRG/netos/xen/&#34;&gt;Xen&lt;/a&gt;, or any other emulation software) will practically fly. This makes emulation a much more attractive option than it is right now. That, in turn, means more choice and more freedom for end users.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Dangerous Stuff</title>
+          <link>http://lowescott.github.io/2005/06/21/dangerous-stuff/</link>
+          <pubDate>Tue, 21 Jun 2005 13:47:22 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/21/dangerous-stuff/</guid>
+          <description>&lt;p&gt;The Internet grows more dangerous every day. Why? Well, have a look at this &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1829744,00.asp&#34;&gt;recent eWeek article&lt;/a&gt; and this &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1818369,00.asp&#34;&gt;slightly older eWeek article&lt;/a&gt; and you&amp;rsquo;ll see what I mean.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Spyware/&#34;&gt;Spyware&lt;/a&gt; acting like &lt;a href=&#34;http://en.wikipedia.org/wiki/Root_kit/&#34;&gt;root kits&lt;/a&gt;? &lt;a href=&#34;http://en.wikipedia.org/wiki/Computer_virus/&#34;&gt;Viruses&lt;/a&gt; taking on root kit features and able to hide their processes? This is scary stuff. When one of these malicious programs exploits a vulnerability in your web browser, you could get infected and not even know it. And if that application starts using I/O blocking to hide its processes and NTFS data streams to hide files inside other (legitimate) files, you&amp;rsquo;re really in trouble.&lt;/p&gt;
+
+&lt;p&gt;I know that &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; may only be more secure than &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Microsoft Windows&lt;/a&gt; because not as many people use it, but the end result is the same. If you use Windows, at least protect yourself&amp;ndash;don&amp;rsquo;t use Internet Explorer (use &lt;a href=&#34;www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt;), stay up to date on patches (visit Windows Update regularly), use an anti-virus application (and keep it updated as well), and use a good anti-spyware program (there are several, take your pick). You&amp;rsquo;ll be glad you did.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Why I Use a Mac</title>
+          <link>http://lowescott.github.io/2005/06/20/why-i-use-a-mac/</link>
+          <pubDate>Mon, 20 Jun 2005 21:21:10 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/20/why-i-use-a-mac/</guid>
+          <description>&lt;p&gt;A fair number of people have asked me why I use an &lt;a href=&#34;http://www.apple.com/hardware/&#34;&gt;Apple Mac&lt;/a&gt; when my business centers primarily around &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; products such as &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/&#34;&gt;Windows Server 2003&lt;/a&gt;, Active Directory, and &lt;a href=&#34;http://www.microsoft.com/exchange/&#34;&gt;Exchange&lt;/a&gt;? That&amp;rsquo;s a reasonable question.&lt;/p&gt;
+
+&lt;p&gt;My computer is simply a tool to get my job done. About two years ago, I started to evaluate the tasks that I tackle on a regular basis as part of supporting my customers&amp;rsquo; networks. In reviewing those tasks, it become evident to me that using Windows myself was not a prerequisite for designing, installing, and supporting Windows-based networks. I could run a different OS&amp;ndash;like Linux or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;&amp;ndash;and still be perfectly able to get my job done. In fact, given that I wanted to increase the amount of work that my company did with open source software such as Linux, &lt;a href=&#34;http://www.apache.org/&#34;&gt;Apache&lt;/a&gt;, &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt;, and SpamAssassin, something other than Windows might actually make that &lt;em&gt;easier&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I then set out to compare the alternatives. After comparing Linux and Mac OS X, I found that Mac OS X had the best fit for &lt;em&gt;my&lt;/em&gt; particular needs. I loved the mix of open source technologies (the BSD underpinnings and various other open source projects) and closed software (the ultrasmooth Aqua interface). I loved the hardware. And, most importantly, I found that there were applications available for Mac OS X to help me get my job done. (See my blog posting about &lt;a href=&#34;http://blog.scottlowe.org/2005/06/20/preferred-mac-os-x-applications/&#34;&gt;Preferred Mac OS X Applications&lt;/a&gt;.) The fact that many of the applications I needed for my job were open source applications was a bonus.&lt;/p&gt;
+
+&lt;p&gt;Is Mac OS X right for you? I don&amp;rsquo;t know; that depends upon what you do at your job. I believe that Mac OS X is a great fit for more people than Windows, but I also believe that people must use what is most ideally suited for their work. If that is Windows; so be it. If that is Linux, then great. And if, like me, it is Mac OS X, then fantastic. Each of these operating systems have their own strengths and weaknesses, and it is up to each user to determine which OS is right for them.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Preferred Mac OS X Applications</title>
+          <link>http://lowescott.github.io/2005/06/20/preferred-mac-os-x-applications/</link>
+          <pubDate>Mon, 20 Jun 2005 00:36:34 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/20/preferred-mac-os-x-applications/</guid>
+          <description>&lt;p&gt;I suppose I should go ahead and post the obligatory list of preferred &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; applications. So, without further ado, here goes.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;SFTP Client:&lt;/em&gt; I used to use &lt;a href=&#34;http://rsug.itd.umich.edu/software/fugu/&#34;&gt;Fugu&lt;/a&gt;, but switched not too long ago to &lt;a href=&#34;http://cyberduck.ch/&#34;&gt;Cyberduck&lt;/a&gt;. I like Cyberduck&amp;rsquo;s Synchronize feature (to keep local and remote directories synchronized) and the built-in &lt;a href=&#34;http://www.growl.info/&#34;&gt;Growl&lt;/a&gt; support. I still keep Fugu around, but don&amp;rsquo;t use it nearly as much as I did.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Web Browser:&lt;/em&gt; I primarily use &lt;a href=&#34;http://www.caminobrowser.org/&#34;&gt;Camino&lt;/a&gt;, although I will use Safari from time to time. I know that &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt; is available in a Mac OS X version, but I just prefer Camino.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Usenet Client:&lt;/em&gt; I tried a couple of open source applications, but finally settled on &lt;a href=&#34;http://www.panic.com/unison/&#34;&gt;Unison&lt;/a&gt;. My only complaint with Unison is that I can&amp;rsquo;t post a message to a newsgroup and send a copy of the message to someone&amp;rsquo;s e-mail address at the same time.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;RSS Reader:&lt;/em&gt; Again, I tried a couple different applications (like &lt;a href=&#34;http://ranchero.com/netnewswire/&#34;&gt;NetNewsWire Lite&lt;/a&gt;) but was most satisfied with &lt;a href=&#34;http://freshsqueeze.com/products/pulpfiction/&#34;&gt;PulpFiction&lt;/a&gt;. The Mail.app-like interface and built-in Growl support fit my work habits well.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Instant Messaging:&lt;/em&gt; The open source &lt;a href=&#34;http://www.adiumx.com/index.php&#34;&gt;Adium&lt;/a&gt; client won my heart, although &lt;a href=&#34;http://fire.sourceforge.net/&#34;&gt;Fire&lt;/a&gt; was a very close second.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Organization:&lt;/em&gt; &lt;a href=&#34;http://www.omnigroup.com/applications/omnioutliner/&#34;&gt;OmniOutliner&lt;/a&gt; is a great application, very versatile and very flexible. I&amp;rsquo;ve found numerous uses for it so far, and expect that I&amp;rsquo;ll continue to find more and more ways to use this application.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Miscellaneous Applications:&lt;/em&gt; These applications defy any sort of categorization. The &lt;a href=&#34;http://www.growl.info/&#34;&gt;Growl&lt;/a&gt; notification system, the &lt;a href=&#34;http://ecto.kung-foo.tv/&#34;&gt;ecto&lt;/a&gt; blogging client, &lt;a href=&#34;http://desktopmanager.berlios.de/&#34;&gt;Desktop Manager&lt;/a&gt; virtual desktop application, and the &lt;a href=&#34;http://www.scifihifi.com/cocoalicious/&#34;&gt;Cocoalicious&lt;/a&gt; del.icio.us client all have a home on my PowerBook.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, I can&amp;rsquo;t live without &lt;a href=&#34;http://www.microsoft.com/mac/&#34;&gt;Microsoft Office&lt;/a&gt;, &lt;a href=&#34;http://www.apple.com/ical/&#34;&gt;iCal&lt;/a&gt;, &lt;a href=&#34;http://www.apple.com/isync/&#34;&gt;iSync&lt;/a&gt;, &lt;a href=&#34;http://www.omnigroup.com/applications/omnigraffle/&#34;&gt;OmniGraffle&lt;/a&gt;, and others. This list should at least get things started.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>del.icio.us Client</title>
+          <link>http://lowescott.github.io/2005/06/13/delicious-client/</link>
+          <pubDate>Mon, 13 Jun 2005 13:49:37 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/13/delicious-client/</guid>
+          <description>&lt;p&gt;Many of you probably use &lt;a href=&#34;http://del.icio.us/&#34;&gt;del.icio.us&lt;/a&gt;, or have at least heard of it. You may not have heard of a native &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; client for del.icio.us called &lt;a href=&#34;http://www.scifihifi.com/cocoalicious/&#34;&gt;Cocoalicious&lt;/a&gt;. If you use del.icio.us and Mac OS X, you should give this application a try.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Apple on Intel</title>
+          <link>http://lowescott.github.io/2005/06/13/apple-on-intel/</link>
+          <pubDate>Mon, 13 Jun 2005 13:41:02 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/13/apple-on-intel/</guid>
+          <description>&lt;p&gt;While I was away in Florida on vacation, &lt;a href=&#34;http://www.apple.com/&#34;&gt;Apple&lt;/a&gt; announced at WWDC 2005 that they will transition to &lt;a href=&#34;http://www.intel.com/&#34;&gt;Intel&lt;/a&gt; CPUs over the next couple of years. I won&amp;rsquo;t try to predict what this will mean, or whether Apple will go away, or anything deep like that. It makes perfect sense from a hardware perspective; Apple needs faster CPUs because the whole theme of &amp;ldquo;processor speed doesn&amp;rsquo;t matter&amp;rdquo; just isn&amp;rsquo;t cutting it with the masses. The ordinary John and Jane Doe out there don&amp;rsquo;t know that a 2.5GHz G5 is as equally powerful as a 3.6GHz Pentium 4. They just know that the Pentium 4 is faster, and that means the system is better, right?&lt;/p&gt;
+
+&lt;p&gt;I bought a &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt; for &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, not for the PowerPC CPU inside. Did the PowerPC G4 processor add an era of mystique, of uniqueness? Sure. In the end, however, I bought a PowerBook because I liked Mac OS X and because I could get the applications I needed to get my work done on a Mac. If I can do that with an Intel-powered Mac that is just as fast or faster, then so be it.&lt;/p&gt;
+
+&lt;p&gt;(Truth be told, I do worry about Apple&amp;rsquo;s hardware business, though, and what this will mean for them. Time will tell.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

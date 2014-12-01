@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/entertainment/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-11-27 20:23:16 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Making Backup DVD Copies</title>
+          <link>http://lowescott.github.io/2005/11/27/making-backup-dvd-copies/</link>
+          <pubDate>Sun, 27 Nov 2005 20:23:16 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/27/making-backup-dvd-copies/</guid>
+          <description>&lt;p&gt;I love DVDs. Ever since I bought my surround sound system around Christmas of 2000, I have preferred DVDs over VHS for any new movies that we purchase. The big problem, though, is that DVDs aren&amp;rsquo;t nearly as durable as videotapes, and in a family with kids that&amp;rsquo;s a big deal. I have younger kids, and it doesn&amp;rsquo;t take much for a kid to scratch a DVD when putting it into or taking it out of the DVD player. All it takes is one scratch and that&amp;rsquo;s pretty much the end of that movie.&lt;/p&gt;
+
+&lt;p&gt;Even before I switched to &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, I have been making digital copies of every CD that I purchase, so that I can quickly and easily make another copy in the event that the original CD gets damaged in any way. The introduction of &lt;a href=&#34;http://www.apple.com/itunes/&#34;&gt;iTunes&lt;/a&gt; and my &lt;a href=&#34;http://www.apple.com/ipod/&#34;&gt;iPod&lt;/a&gt; have made this easier. I hadn&amp;rsquo;t considered, even with the introduction of the 5th generation iPod with video capabilities, that I could do the same with my DVDs until just the other day.&lt;/p&gt;
+
+&lt;p&gt;So I set out to see if it was possible to do the same with my DVDs. I&amp;rsquo;d researched this a little bit earlier, so I already knew about &lt;a href=&#34;http://www.losprimates.net/mtr/&#34;&gt;MacTheRipper&lt;/a&gt; (MTR), a program for extracting the digital video from a DVD. I used MTR to extract the video for &lt;em&gt;I, Robot&lt;/em&gt; to an external FireWire hard drive attached to my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt;. That process went well, didn&amp;rsquo;t take too terribly long, and the resulting VIDEO_TS folder created by MTR worked flawlessly using &lt;a href=&#34;http://www.videolan.org/vlc/&#34;&gt;VLC&lt;/a&gt;. I then turned to a program called &lt;a href=&#34;http://lonestar.utsa.edu/llee/applescript/dvdimager.html&#34;&gt;DVD Imager&lt;/a&gt;, which is designed to turn a VIDEO_TS folder into a DVD image that can be burned to a DVD. The problem, however, was that the VIDEO_TS folder and the resulting DVD image were 6.87GB in size. As a result, I was not able to burn the image back to a standard DVD-R using my PowerBook&amp;rsquo;s SuperDrive.&lt;/p&gt;
+
+&lt;p&gt;I tried another DVD (&lt;em&gt;Robots&lt;/em&gt; this time) and ended up with 4.62GB of data. OK, I thought, a single-layer DVD holds 4.7GB of data so I should be fine. Wrong! That didn&amp;rsquo;t work, either.&lt;/p&gt;
+
+&lt;p&gt;That means I&amp;rsquo;m currently stumped as to the next step. A number of online searches have turned up recommendations for &lt;a href=&#34;http://www.roxio.com/en/products/popcorn/&#34;&gt;Popcorn&lt;/a&gt; (from &lt;a href=&#34;http://www.roxio.com/&#34;&gt;Roxio&lt;/a&gt;), but I&amp;rsquo;m trying to see if I can avoid having to purchase software and instead make do with freeware and/or open source applications.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/unix/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-11-02 19:09:00 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>Small OpenBSD 3.8 Speed Bump</title>
+          <link>http://lowescott.github.io/2005/11/02/small-openbsd-38-speed-bump/</link>
+          <pubDate>Wed, 02 Nov 2005 19:09:00 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/02/small-openbsd-38-speed-bump/</guid>
+          <description>&lt;p&gt;My attempts to deploy the latest version of &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, version 3.8 (released yesterday), have run into what I hope is only a small speed bump.&lt;/p&gt;
+
+&lt;p&gt;In previous versions of OpenBSD (I first started using OpenBSD only a couple of versions ago, with the release of OpenBSD 3.6), the AMD PCnet adapter that &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt; presents to virtual machines was detected using the &lt;code&gt;le&lt;/code&gt; driver. So, the virtual network adapter in a VM running OpenBSD 3.&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt;.7 (and earlier versions, presumably) would be &lt;code&gt;le1&lt;/code&gt;. With the release of OpenBSD 3.8, the driver has changed to &lt;code&gt;pcn&lt;/code&gt; (making the virtual network adapter &lt;code&gt;pcn0&lt;/code&gt;), and this doesn&amp;rsquo;t seem to work&amp;mdash;at all. Several attempts last night failed miserably.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, there is hope on the horizon. A &lt;a href=&#34;http://www.google.com/&#34;&gt;Google&lt;/a&gt; search turned up an &lt;a href=&#34;http://archives.neohapsis.com/archives/openbsd/2005-08/1314.html&#34;&gt;archived Neohapsis discussion&lt;/a&gt; that raises the possibility of disabling the &lt;code&gt;pcn&lt;/code&gt; driver and using &lt;code&gt;le&lt;/code&gt; instead. I hope to try that in the next couple of days to see how it works, and I&amp;rsquo;ll post the results here.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>OpenBSD 3.8</title>
+          <link>http://lowescott.github.io/2005/10/28/openbsd-38/</link>
+          <pubDate>Fri, 28 Oct 2005 21:40:39 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/28/openbsd-38/</guid>
+          <description>&lt;p&gt;It&amp;rsquo;s hard to believe that I&amp;rsquo;ve been posting articles here for this long, but it&amp;rsquo;s time for another release of &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;. As I&amp;rsquo;ve mentioned here before, I do use OpenBSD for a few purposes on my network, and I&amp;rsquo;m confident that OpenBSD 3.8, due November 1, will find its way onto the network as well. (It&amp;rsquo;s fairly likely it will quickly replace OpenBSD 3.7.)&lt;/p&gt;
+
+&lt;p&gt;You know you are a true geek when you start measuring time in OpenBSD releases (&amp;ldquo;I&amp;rsquo;ve had this for over 8 OpenBSD releases!&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;As usual, the OpenBSD web site has more information on ordering CD-ROMs or T-shirts to help support the project.&lt;/p&gt;
+
+&lt;p&gt;If you like using Unix-like operating systems (like Linux), then you should try OpenBSD.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Not the Same</title>
+          <link>http://lowescott.github.io/2005/06/25/not-the-same/</link>
+          <pubDate>Sat, 25 Jun 2005 22:58:42 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/25/not-the-same/</guid>
+          <description>&lt;p&gt;I just finished installing the latest version (3.7) of &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, and I was reminded of just how different OpenBSD and Linux really are. Those on the &amp;ldquo;outside&amp;rdquo; just see them as Unix-like operating systems, but they really are much more different than you might expect. I&amp;rsquo;m no expert in either (I just dabble), but the differences are even evident to me. I haven&amp;rsquo;t yet had the opportunity to experiment with &lt;a href=&#34;http://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt; or &lt;a href=&#34;http://www.netbsd.org/&#34;&gt;NetBSD&lt;/a&gt;, so I don&amp;rsquo;t know if these differences are particular to OpenBSD or to all BSDs when compared to Linux.&lt;/p&gt;
+
+&lt;p&gt;In any case, I find that I really like OpenBSD. I think that the more that I use OpenBSD, the more ways I will find that I &lt;em&gt;can&lt;/em&gt; use OpenBSD. It won&amp;rsquo;t replace Linux in my environment, but it is a very worthy addition to the network.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Pipes and Filters</title>
+          <link>http://lowescott.github.io/2005/06/22/pipes-and-filters/</link>
+          <pubDate>Wed, 22 Jun 2005 12:56:43 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/22/pipes-and-filters/</guid>
+          <description>&lt;p&gt;It&amp;rsquo;s articles like this one from NewsForge entitled &lt;a href=&#34;http://technology.newsforge.com/article.pl?sid=05/06/14/1632224&amp;amp;from=rss&#34;&gt;Pipes and Filters&lt;/a&gt; that demonstrate why I like Linux and other Unix-like operating systems (such as &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;). This kind of command-line wizardry isn&amp;rsquo;t nearly as possible on &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt;. At least, not as far as I know.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>

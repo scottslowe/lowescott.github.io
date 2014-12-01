@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Mass Password Changes in Active Directory &middot; Scott&#39;s Weblog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a>
+
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/about/">About</a>
+      
+    
+      
+        <a class="sidebar-nav-item " href="http://lowescott.github.io/learning-nvp-nsx/">Learning NVP/NSX</a>
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/lowescott.zip">My GitHub</a>
+    <a class="sidebar-nav-item" href="https://twitter.com/scott_lowe">My Twitter</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014. Unless otherwise noted, all content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+    
+    <p><img alt="Creative Commons License" src="/assets/cc-by-sa.png" /></p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Scott&#39;s Weblog</a>
+            <small>The weblog of an IT pro specializing in virtualization, networking, cloud computing, &amp; Macs</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Mass Password Changes in Active Directory</h1>
+  <span class="post-date">Dec 8, 2005 10:16 PM</span>
+  <p>Earlier this year, I had a need in a project to set the password for a large number of Active Directory accounts simultaneously. Here&rsquo;s the solution I came up with for this particular need.</p>
+
+<p>To use this technique, you&rsquo;ll need <code>ldifde</code> (included with <a href="http://www.microsoft.com/windowsserver2003/default.mspx">Windows Server 2003</a>), <code>grep</code> (included with <a href="http://www.apple.com/macosx/">Mac OS X</a> and most Linux distributions; Win32 versions available on the Internet), a text editor with search and replace functionality (advanced geeks are free to use <code>sed</code>), and <code>dsmod</code> (from the <em>Windows Server 2003 Resource Kit</em>).</p>
+
+<p>First, export the list of user accounts out of Active Directory using ldifde. The command will look something like this (I&rsquo;ve line wrapped here, as indicated by a backslash, but this should all be on one line):</p>
+
+<pre><code>ldifde -d &quot;CN=Users,DC=company,DC=com&quot; -r &quot;(objectclass=user)&quot; \  
+-f c:\export-1.ldif
+</code></pre>
+
+<p>This creates a file called &ldquo;export-1.ldif&rdquo;. Using <code>grep</code>, filter this file down to only the full distinguished names of the users:</p>
+
+<pre><code>less export-1.ldif | grep 'dn: ' &gt; export-2.ldif
+</code></pre>
+
+<p>Note that you&rsquo;ll need to use <code>type</code> instead of <code>less</code> on a Win32 system. Also, on a Win32 system you&rsquo;ll need to use double quotes instead of single quotes in the <code>grep</code> command. This creates a file called &ldquo;export-2.ldif&rdquo;.</p>
+
+<p>Load this file into the text editor and make the following changes:</p>
+
+<ul>
+<li><p>Remove all occurrences of &ldquo;dn: &ldquo; (there is a space after the colon)</p></li>
+
+<li><p>Add a double quotation mark before CN= at the start of each line</p></li>
+
+<li><p>Add a double quotation mark after =com at the end of each line</p></li>
+</ul>
+
+<p>Save this modified file as &ldquo;export-3.ldif&rdquo;.</p>
+
+<p>Finally, pipe this file through to the <code>dsmod</code> program to set passwords for all the users in the file:</p>
+
+<pre><code>type export-3.ldif | dsmod user -pwd newpass1 -mustchpwd yes
+</code></pre>
+
+<p>Full help for the dsmod command line syntax is available using <code>dsmod /?</code> or <code>dsmod user /?</code>.</p>
+
+<p>You can add <code>&gt; filename</code> to the end of the above command to log the output of the <code>dsmod</code> command to a file. You can then use <code>grep</code> to parse this file to ensure that the command was successful for all users.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

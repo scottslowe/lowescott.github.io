@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scott&#39;s Weblog </title>
+    <link>http://lowescott.github.io/tags/bsd/index.xml/</link>
+    <language>en-us</language>
+    <author>Scott Lowe</author>
+    <rights>(C) 2005</rights>
+    <updated>2005-12-23 14:50:45 &#43;0000 &#43;0000</updated>
+
+    
+      
+        <item>
+          <title>CentOS NTPd Problem (Mostly) Resolved</title>
+          <link>http://lowescott.github.io/2005/12/23/centos-ntpd-problem-mostly-resolved/</link>
+          <pubDate>Fri, 23 Dec 2005 14:50:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/23/centos-ntpd-problem-mostly-resolved/</guid>
+          <description>&lt;p&gt;The NTPd problem that I &lt;a href=&#34;http://blog.scottlowe.org/2005/08/16/strange-ntpd-problem-on-centos-41/&#34;&gt;wrestled with in CentOS 4.1&lt;/a&gt; and &lt;a href=&#34;http://blog.scottlowe.org/2005/12/19/ntpd-on-centos-42/&#34;&gt;again in CentOS 4.2&lt;/a&gt; has finally been resolved. Mostly. I think. The specific steps I took to resolve the issue came from a number of sources, so read on for all the details.&lt;/p&gt;
+
+&lt;p&gt;Since these servers are virtual servers running under &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, I first consulted the VMware Knowledge Base and turned up this article on &lt;a href=&#34;http://www.vmware.com/support/kb/enduser/std_adp.php?p_sid=Nuh3rAXh&amp;amp;p_lva=&amp;amp;p_faqid=1420&amp;amp;p_created=1093994398&amp;amp;p_sp=cF9zcmNoPTEmcF9ncmlkc29ydD0mcF9yb3dfY250PTc0MyZwX3NlYXJjaF90ZXh0PUxpbnV4IGd1ZXN0IGNsb2NrJnBfc2VhcmNoX3R5cGU9NyZwX3Byb2RfbHZsMT1_YW55fiZwX3Byb2RfbHZsMj1_YW55fiZwX3NvcnRfYnk9ZGZsdCZwX3BhZ2U9MQ**&amp;amp;p_li=&#34;&gt;slow and fast clocks for Linux guest VMs&lt;/a&gt;. Based on that information, I added a few extra commands to the grub configuration:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;noapic nosmp nolapic clock=pit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In addition, I found a number of forum postings in various sites (too many to list or link here) that referenced problems with NTP and ACPI. So, based on that information, I further edited the grub configuration to look like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;noapic nosmp nolapic clock=pit acpi=no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, based on information regarding NTP itself and the NTP configuration parameters, I added the &amp;ldquo;burst iburst&amp;rdquo; parameters to the server lines in my &lt;code&gt;ntp.conf&lt;/code&gt; file, like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server W.X.Y.Z burst iburst
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This helped, as at least now NTP would synchronize against something other than the local clock (which was more than it had done previously). For some reason, though, the &lt;code&gt;/var/log/messages&lt;/code&gt; log file was filling up with messages about synchronizing against the local clock, then synchronizing against the server, then against the local clock, etc. (You get the picture.)&lt;/p&gt;
+
+&lt;p&gt;Given that I was synchronizing against a &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt;-based computer, I thought perhaps that Microsoft&amp;rsquo;s NTP implementation was simply broken. (This certainly wouldn&amp;rsquo;t be the first time.) So I configured &lt;a href=&#34;http://www.openntpd.org/&#34;&gt;OpenNTPd&lt;/a&gt; on an &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; server (running OpenBSD 3.8) and re-configured the CentOS server to synchronize against the OpenBSD NTP server.&lt;/p&gt;
+
+&lt;aside&gt;OpenNTPd is ridiculously simple to configure and operate, and _just works._&lt;/aside&gt;
+
+&lt;p&gt;The repetitive synchronization messages still appeared, but were appearing with far less frequency. And the time still isn&amp;rsquo;t synchronized to the level I would like, but it does stay within a minute or so of the rest of the network (well within the 5 minute gap required in order for Kerberos authentication to work).&lt;/p&gt;
+
+&lt;p&gt;So, it&amp;rsquo;s still not working as cleanly as the older Red Hat Linux 9.0-based servers, but it &lt;em&gt;is&lt;/em&gt; working. Given that I&amp;rsquo;m still running these servers under an old version of VMware (which, technically, doesn&amp;rsquo;t support Linux 2.6 kernels) I may try upgrading to a new version of VMware to see if that helps at all.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Secure Remote Filesystem</title>
+          <link>http://lowescott.github.io/2005/11/29/secure-remote-filesystem/</link>
+          <pubDate>Tue, 29 Nov 2005 16:57:00 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/secure-remote-filesystem/</guid>
+          <description>&lt;p&gt;This is something that only a computer junkie could enjoy. In conjunction with the &lt;a href=&#34;http://fuse.sourceforge.net/&#34;&gt;FUSE&lt;/a&gt; project (now an official part of the Linux kernel as of version 2.6.14), an SSH-wrapped remote filesystems&amp;ndash;called &lt;a href=&#34;http://fuse.sourceforge.net/sshfs.html&#34;&gt;sshfs&lt;/a&gt;&amp;ndash;has been created.&lt;/p&gt;
+
+&lt;p&gt;This &lt;a href=&#34;http://www.linux.com/article.pl?sid=05/11/11/176206&#34;&gt;recent article&lt;/a&gt; describes sshfs in a bit more detail and provides some additional information.&lt;/p&gt;
+
+&lt;p&gt;So what does this mean? It means that for any remote system you can reach via SSH, you can mount that remote system&amp;rsquo;s filesystem inside an SSH tunnel. I can think of numerous possibilities, not the least of which involves easily updating a web site hosted on a remote web server without having to FTP (or SFTP) the files back and forth.&lt;/p&gt;
+
+&lt;p&gt;Now, if only there was a &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; version of sshfs&amp;hellip;it&amp;rsquo;s currently only available for Linux and &lt;a href=&#34;http://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Current Tech Projects</title>
+          <link>http://lowescott.github.io/2005/11/06/current-tech-projects/</link>
+          <pubDate>Sun, 06 Nov 2005 14:19:15 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/06/current-tech-projects/</guid>
+          <description>&lt;p&gt;Every now and then, I like to post out here a list of my current &amp;ldquo;tech projects.&amp;rdquo; These are the things that I&amp;rsquo;m working on for my own network, things that I may or may not start recommending to or supporting for customers.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s my current list:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;InterNetNews (INN): I had an installation of INN up and running a short while back, but had to resort to an ugly hack with stunnel in order to make SSL work from a newsreader. To get a clean build, I&amp;rsquo;ve decided I&amp;rsquo;ll just start from scratch with a clean installation. I&amp;rsquo;ll be using &lt;a href=&#34;http://www.centos.org/&#34;&gt;CentOS&lt;/a&gt; 4.1 again as I work on transitioning all my Linux-based servers to a newer Linux distribution, and I&amp;rsquo;ll be compiling INN from source instead of using a package.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;-based antispam gateway: I&amp;rsquo;ve got an antispam gateway running right now (uses Red Hat Linux, &lt;a href=&#34;http://www.postfix.org/&#34;&gt;Postfix&lt;/a&gt; 2.1, SpamAssassin, Postgrey, Razor, DCC, and ClamAV), but I want to try building one using OpenBSD 3.8 (just recently released) and newer builds of Postfix, SpamAssassin, and Amavisd-New. In particular, I&amp;rsquo;m interested in the advanced integration of newer versions of Postfix and Amavisd-New.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;XC Connect: I&amp;rsquo;ve also mentioned XC Connect before as well, but a previous installation proved to be unstable, and the Apache integration was less than stellar. In fact, the integration was nonexistent. I&amp;rsquo;m going to try a clean build of CentOS 4.1 and XC Connect to see if that will correct the stability and integration problems.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also need to wrap up the documentation for a few completed items, such as the Cisco VPN integration with Active Directory. Mac OS X integration with Active Directory is also on the &amp;ldquo;to do&amp;rdquo; list, but it will have to wait a little while&amp;mdash;I&amp;rsquo;ll need to find another Mac to &amp;ldquo;experiment&amp;rdquo; with instead of using my own PowerBook.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>OpenBSD pcn0 Driver Issue Resolved</title>
+          <link>http://lowescott.github.io/2005/11/04/openbsd-pcn0-driver-issue-resolved/</link>
+          <pubDate>Fri, 04 Nov 2005 08:48:20 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/04/openbsd-pcn0-driver-issue-resolved/</guid>
+          <description>&lt;p&gt;Well, sort of resolved. I was never able to make the &lt;code&gt;pcn&lt;/code&gt; driver (from &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; 3.8) actually work under &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, but I did find information on how to disable the &lt;code&gt;pcn&lt;/code&gt; driver and revert to the older &lt;code&gt;le&lt;/code&gt; driver.&lt;/p&gt;
+
+&lt;p&gt;This &lt;a href=&#34;http://archives.neohapsis.com/archives/openbsd/2005-08/1314.html&#34;&gt;archived Neohapsis discussion&lt;/a&gt;, followed by a quick e-mail exchange with the author of the thread (who, thankfully, was very responsive and very helpful) led me to the solution. Some of it I had to improvise on the fly, but here&amp;rsquo;s the overall process:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Boot from the OpenBSD 3.8 boot CD image (I pointed the virtual CD-ROM drive in the VM directly to the corresponding ISO image).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At the OpenBSD &amp;ldquo;boot&amp;gt;&amp;rdquo; prompt, type &amp;ldquo;-c&amp;rdquo; and press Enter. This takes you into User Kernel Config, or UKC.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;At the UKC prompt, type &amp;ldquo;disable pcn&amp;rdquo; to disable the &lt;code&gt;pcn&lt;/code&gt; driver.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Type &amp;ldquo;quit&amp;rdquo; at the next UKC prompt to exit the kernel config and proceed with the boot process. If you watch the boot process, you will see OpenBSD load the &lt;code&gt;le&lt;/code&gt; driver and identify the virtual NIC as &lt;code&gt;le1&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That&amp;rsquo;s all well and good, but how do you make the changes stick between reboots? Here&amp;rsquo;s how.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Once you&amp;rsquo;ve gotten OpenBSD fully installed and are rebooting for the first time after installation, follow the steps above to use the &lt;code&gt;le&lt;/code&gt; driver for the next reboot.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use the &amp;ldquo;config -e -o nbsd bsd&amp;rdquo; command (see the relevant &lt;a href=&#34;http://www.openbsd.org/cgi-bin/man.cgi?query=config&amp;amp;apropos=0&amp;amp;sektion=0&amp;amp;manpath=OpenBSD+3.8&amp;amp;arch=i386&amp;amp;format=html&#34;&gt;man page&lt;/a&gt; for details) to modify the kernel again, only this time saving the changes to the file named &amp;ldquo;nbsd&amp;rdquo;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Upon the next reboot after using the config command to create a new kernel file, specify the name of that new kernel file (&amp;ldquo;nbsd&amp;rdquo; in our example here) at the OpenBSD &amp;ldquo;boot&amp;gt;&amp;rdquo; prompt.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Assuming that everything works OK (it did for me), rename the original kernel to &amp;ldquo;bsd.original&amp;rdquo; and rename your new kernel to just &amp;ldquo;bsd&amp;rdquo;. Then, upon the next reboot, the &lt;code&gt;pcn&lt;/code&gt; driver should be disabled and everything should work just fine.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Using this process, I now have two OpenBSD 3.8 VMs running and haven&amp;rsquo;t experienced any issues. Now, on to installing &lt;a href=&#34;http://www.clamav.net/&#34;&gt;ClamAV&lt;/a&gt; on OpenBSD&amp;hellip;.&lt;em&gt;(more details soon)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; The &lt;code&gt;pcn0&lt;/code&gt; network driver from OpenBSD 3.9 works perfectly under VMware (at least, on ESX Server). I have posted more information &lt;a href=&#34;http://blog.scottlowe.org/2006/05/18/openbsd-39-on-esx-server/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Small OpenBSD 3.8 Speed Bump</title>
+          <link>http://lowescott.github.io/2005/11/02/small-openbsd-38-speed-bump/</link>
+          <pubDate>Wed, 02 Nov 2005 19:09:00 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/02/small-openbsd-38-speed-bump/</guid>
+          <description>&lt;p&gt;My attempts to deploy the latest version of &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, version 3.8 (released yesterday), have run into what I hope is only a small speed bump.&lt;/p&gt;
+
+&lt;p&gt;In previous versions of OpenBSD (I first started using OpenBSD only a couple of versions ago, with the release of OpenBSD 3.6), the AMD PCnet adapter that &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt; presents to virtual machines was detected using the &lt;code&gt;le&lt;/code&gt; driver. So, the virtual network adapter in a VM running OpenBSD 3.&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt;.7 (and earlier versions, presumably) would be &lt;code&gt;le1&lt;/code&gt;. With the release of OpenBSD 3.8, the driver has changed to &lt;code&gt;pcn&lt;/code&gt; (making the virtual network adapter &lt;code&gt;pcn0&lt;/code&gt;), and this doesn&amp;rsquo;t seem to work&amp;mdash;at all. Several attempts last night failed miserably.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, there is hope on the horizon. A &lt;a href=&#34;http://www.google.com/&#34;&gt;Google&lt;/a&gt; search turned up an &lt;a href=&#34;http://archives.neohapsis.com/archives/openbsd/2005-08/1314.html&#34;&gt;archived Neohapsis discussion&lt;/a&gt; that raises the possibility of disabling the &lt;code&gt;pcn&lt;/code&gt; driver and using &lt;code&gt;le&lt;/code&gt; instead. I hope to try that in the next couple of days to see how it works, and I&amp;rsquo;ll post the results here.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>OpenBSD 3.8</title>
+          <link>http://lowescott.github.io/2005/10/28/openbsd-38/</link>
+          <pubDate>Fri, 28 Oct 2005 21:40:39 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/10/28/openbsd-38/</guid>
+          <description>&lt;p&gt;It&amp;rsquo;s hard to believe that I&amp;rsquo;ve been posting articles here for this long, but it&amp;rsquo;s time for another release of &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;. As I&amp;rsquo;ve mentioned here before, I do use OpenBSD for a few purposes on my network, and I&amp;rsquo;m confident that OpenBSD 3.8, due November 1, will find its way onto the network as well. (It&amp;rsquo;s fairly likely it will quickly replace OpenBSD 3.7.)&lt;/p&gt;
+
+&lt;p&gt;You know you are a true geek when you start measuring time in OpenBSD releases (&amp;ldquo;I&amp;rsquo;ve had this for over 8 OpenBSD releases!&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;As usual, the OpenBSD web site has more information on ordering CD-ROMs or T-shirts to help support the project.&lt;/p&gt;
+
+&lt;p&gt;If you like using Unix-like operating systems (like Linux), then you should try OpenBSD.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Stupid Tricks With The Mac OS X Firewall</title>
+          <link>http://lowescott.github.io/2005/07/07/stupid-tricks-with-the-mac-os-x-firewall/</link>
+          <pubDate>Thu, 07 Jul 2005 22:54:40 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/07/07/stupid-tricks-with-the-mac-os-x-firewall/</guid>
+          <description>&lt;p&gt;Here&amp;rsquo;s an interesting way to block access to your &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; system. Simply modify your ipfw script to block traffic to or from the 127.0.0.0/8 network. When you do this, your Mac will simply fail to log you in, instead presenting you with an endless spinning disk.&lt;/p&gt;
+
+&lt;p&gt;The only workaround is to hold down the Shift key while booting (to initiate a Safe Boot), then disable the StartupItem that launches and configures the firewall.&lt;/p&gt;
+
+&lt;p&gt;Of course, I speak from personal experience, having added the aforementioned rules in an effort to block spoofed traffic from accessing the loopback interface. Apparently, Mac OS X is different enough from &lt;a href=&#34;http://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt; that this advice (advocated on a couple of FreeBSD-related sites I found while searching for ipfw information) is &lt;em&gt;not&lt;/em&gt; recommended.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Transparent RDP Tunneling</title>
+          <link>http://lowescott.github.io/2005/06/29/transparent-rdp-tunneling/</link>
+          <pubDate>Wed, 29 Jun 2005 23:48:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/29/transparent-rdp-tunneling/</guid>
+          <description>&lt;p&gt;As part of my experimentation with &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; 3.7, I&amp;rsquo;m going to try to setup a way of transparently tunneling RDP (Remote Desktop Protocol, used by Windows Remote Desktop/Terminal Services) inside SSL. I&amp;rsquo;m thinking that I can use IP aliases and &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; to have &amp;ldquo;ordinary&amp;rdquo; RDP encapsulated in SSL by Stunnel and then passed off to another instance of Stunnel at the other end. Then, from the RDP client, I just connect to one of the IP aliases and the rest is handled transparently.&lt;/p&gt;
+
+&lt;p&gt;When I get it working, I&amp;rsquo;ll post more details here as well as on the &lt;a href=&#34;http://www.mercurionsystems.com/&#34;&gt;Mercurion Systems&lt;/a&gt; web site.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Not the Same</title>
+          <link>http://lowescott.github.io/2005/06/25/not-the-same/</link>
+          <pubDate>Sat, 25 Jun 2005 22:58:42 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/06/25/not-the-same/</guid>
+          <description>&lt;p&gt;I just finished installing the latest version (3.7) of &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, and I was reminded of just how different OpenBSD and Linux really are. Those on the &amp;ldquo;outside&amp;rdquo; just see them as Unix-like operating systems, but they really are much more different than you might expect. I&amp;rsquo;m no expert in either (I just dabble), but the differences are even evident to me. I haven&amp;rsquo;t yet had the opportunity to experiment with &lt;a href=&#34;http://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt; or &lt;a href=&#34;http://www.netbsd.org/&#34;&gt;NetBSD&lt;/a&gt;, so I don&amp;rsquo;t know if these differences are particular to OpenBSD or to all BSDs when compared to Linux.&lt;/p&gt;
+
+&lt;p&gt;In any case, I find that I really like OpenBSD. I think that the more that I use OpenBSD, the more ways I will find that I &lt;em&gt;can&lt;/em&gt; use OpenBSD. It won&amp;rsquo;t replace Linux in my environment, but it is a very worthy addition to the network.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>
