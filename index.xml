@@ -6,77 +6,28 @@
     <language>en-us</language>
     <author>Scott Lowe</author>
     <rights>(C) 2005</rights>
-    <updated>2005-12-29 21:47:21 &#43;0000 &#43;0000</updated>
+    <updated>2005-12-28 16:33:13 &#43;0000 &#43;0000</updated>
 
     
       
         <item>
-          <title>WMF Flaw Exploit Grows Worse</title>
-          <link>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</link>
-          <pubDate>Thu, 29 Dec 2005 21:47:21 &#43;0000</pubDate>
+          <title>Windows Metafile Flaw Already Being Exploited</title>
+          <link>http://lowescott.github.io/2005/12/28/windows-metafile-flaw-already-being-exploited/</link>
+          <pubDate>Wed, 28 Dec 2005 16:33:13 &#43;0000</pubDate>
           <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</guid>
-          <description>&lt;p&gt;In an update to my previous article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/28/windows-metafile-flaw-already-being-exploited/&#34;&gt;Windows Metafile flaw&lt;/a&gt;, new reports are coming in of greater use of malicious WMF files that take advantage of the flaw, especially by adware companies. Numerous sites are reporting that malicious WMF files are being used in ad rotations on third-party sites. For more information, see one of the following articles:&lt;/p&gt;
+          <guid>http://lowescott.github.io/2005/12/28/windows-metafile-flaw-already-being-exploited/</guid>
+          <description>&lt;p&gt;Two separate reports (&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906177,00.asp&#34;&gt;this article from eWeek&lt;/a&gt; and &lt;a href=&#34;http://www.computerworld.com/securitytopics/security/story/0,10801,107375,00.html&#34;&gt;this article from ComputerWorld&lt;/a&gt;) have risen today regarding a &amp;ldquo;zero-day&amp;rdquo; exploit of a vulnerability in Windows&amp;rsquo; handling of WMF (Windows Metafile) images. According to the reports, simply viewing a WMF file (such as from a web site) can infect your computer. Sunbelt Software&amp;rsquo;s blog also offers &lt;a href=&#34;http://sunbeltblog.blogspot.com/2005/12/new-exploit-blows-by-fully-patched.html&#34;&gt;more details on the vulnerability&lt;/a&gt; as well. Here&amp;rsquo;s &lt;a href=&#34;http://www.securityfocus.com/bid/16074/info&#34;&gt;more information&lt;/a&gt; from SecurityFocus as well.&lt;/p&gt;
 
-&lt;p&gt;Analysts Fret as Adware Makers Leverage WMF Flaw
-&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906915,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906915,00.asp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;According to the reports, this newly discovered WMF vulnerability will allow crackers to run the code of their choice on the affected system(s). So far, the exploit has been limited to installing spyware, adware, and keyloggers, but there is little doubt in anyone&amp;rsquo;s mind that the attackers will grow much worse very quickly. The vulnerability can be exploited in a variety of ways, such as visiting hostile web sites (using either Internet Explorer, Opera, or Firefox); opening an affected WMF file in Windows Picture and Fax Viewer; or previewing an affected file in Windows Explorer. It&amp;rsquo;s important to note that this vulnerability affects even fully patched systems &lt;em&gt;with all available patches installed.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Critical Impact: Windows Metafile Flaw a &amp;lsquo;Zero-Day Exploit&amp;rsquo;
-&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906177,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906177,00.asp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Apparently, the only workaround is to uninstall Windows from your computer and immediately install Linux. OK, just kidding. Seriously, though, the only known workaround at this time is to unregister the affected DLL using this command:&lt;/p&gt;
 
-&lt;p&gt;In addition, there are details on just how easy it is to &lt;a href=&#34;http://www.oreillynet.com/pub/wlg/8879?CMP=OTC-6YE827253101&amp;amp;ATT=Exploiting+the+Windows+XP/2003+Picture+and+Fax+Viewer+Metafile+Overflow+Vulnerability&#34;&gt;take advantage of this vulnerability&lt;/a&gt; available as well.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;regsvr32 /u shimgvw.dll
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The particularly bad part of this whole situation is that users don&amp;rsquo;t have to do a thing&amp;mdash;just visiting a web site with a malicious WMF file can affect your system. And this isn&amp;rsquo;t an Internet Explorer flaw, either, lest you think that using Firefox will keep you safe. No, this is a &lt;em&gt;Windows&lt;/em&gt; flaw, and Internet Explorer, Firefox, Opera, etc., are all affected.&lt;/p&gt;
+&lt;p&gt;Click &amp;ldquo;OK&amp;rdquo; when prompted. This unregisters the affected DLL and eliminates the vulnerability; however, this may also affect the viewing and previewing of many other types of images.&lt;/p&gt;
 
-&lt;p&gt;Let&amp;rsquo;s hope that a good workaround (not unregistering the shimgvw.dll file, which also disables previewing other image formats in Windows Explorer) emerges soon.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>WMF Flaw Exploit Grows Worse</title>
-          <link>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</link>
-          <pubDate>Thu, 29 Dec 2005 21:47:21 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</guid>
-          <description>&lt;p&gt;In an update to my previous article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/28/windows-metafile-flaw-already-being-exploited/&#34;&gt;Windows Metafile flaw&lt;/a&gt;, new reports are coming in of greater use of malicious WMF files that take advantage of the flaw, especially by adware companies. Numerous sites are reporting that malicious WMF files are being used in ad rotations on third-party sites. For more information, see one of the following articles:&lt;/p&gt;
-
-&lt;p&gt;Analysts Fret as Adware Makers Leverage WMF Flaw
-&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906915,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906915,00.asp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Critical Impact: Windows Metafile Flaw a &amp;lsquo;Zero-Day Exploit&amp;rsquo;
-&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906177,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906177,00.asp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;In addition, there are details on just how easy it is to &lt;a href=&#34;http://www.oreillynet.com/pub/wlg/8879?CMP=OTC-6YE827253101&amp;amp;ATT=Exploiting+the+Windows+XP/2003+Picture+and+Fax+Viewer+Metafile+Overflow+Vulnerability&#34;&gt;take advantage of this vulnerability&lt;/a&gt; available as well.&lt;/p&gt;
-
-&lt;p&gt;The particularly bad part of this whole situation is that users don&amp;rsquo;t have to do a thing&amp;mdash;just visiting a web site with a malicious WMF file can affect your system. And this isn&amp;rsquo;t an Internet Explorer flaw, either, lest you think that using Firefox will keep you safe. No, this is a &lt;em&gt;Windows&lt;/em&gt; flaw, and Internet Explorer, Firefox, Opera, etc., are all affected.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s hope that a good workaround (not unregistering the shimgvw.dll file, which also disables previewing other image formats in Windows Explorer) emerges soon.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>WMF Flaw Exploit Grows Worse</title>
-          <link>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</link>
-          <pubDate>Thu, 29 Dec 2005 21:47:21 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/12/29/wmf-flaw-exploit-grows-worse/</guid>
-          <description>&lt;p&gt;In an update to my previous article on the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/28/windows-metafile-flaw-already-being-exploited/&#34;&gt;Windows Metafile flaw&lt;/a&gt;, new reports are coming in of greater use of malicious WMF files that take advantage of the flaw, especially by adware companies. Numerous sites are reporting that malicious WMF files are being used in ad rotations on third-party sites. For more information, see one of the following articles:&lt;/p&gt;
-
-&lt;p&gt;Analysts Fret as Adware Makers Leverage WMF Flaw
-&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906915,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906915,00.asp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Critical Impact: Windows Metafile Flaw a &amp;lsquo;Zero-Day Exploit&amp;rsquo;
-&lt;a href=&#34;http://www.eweek.com/article2/0,1759,1906177,00.asp&#34;&gt;http://www.eweek.com/article2/0,1759,1906177,00.asp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;In addition, there are details on just how easy it is to &lt;a href=&#34;http://www.oreillynet.com/pub/wlg/8879?CMP=OTC-6YE827253101&amp;amp;ATT=Exploiting+the+Windows+XP/2003+Picture+and+Fax+Viewer+Metafile+Overflow+Vulnerability&#34;&gt;take advantage of this vulnerability&lt;/a&gt; available as well.&lt;/p&gt;
-
-&lt;p&gt;The particularly bad part of this whole situation is that users don&amp;rsquo;t have to do a thing&amp;mdash;just visiting a web site with a malicious WMF file can affect your system. And this isn&amp;rsquo;t an Internet Explorer flaw, either, lest you think that using Firefox will keep you safe. No, this is a &lt;em&gt;Windows&lt;/em&gt; flaw, and Internet Explorer, Firefox, Opera, etc., are all affected.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s hope that a good workaround (not unregistering the shimgvw.dll file, which also disables previewing other image formats in Windows Explorer) emerges soon.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s still early yet in the discovery process, so I fully anticipate that more workarounds and more information will emerge as the security researchers continue their work.&lt;/p&gt;
 </description>
         </item>
       
@@ -97,42 +48,6 @@
 &lt;p&gt;I&amp;rsquo;m sure that Debian fans will point out that I surely did something incorrect and things normally don&amp;rsquo;t happen that way. Perhaps that is true; I will certainly be the first to admit that I may have done something incorrectly while using &lt;code&gt;apt-get&lt;/code&gt; to upgrade the kernel. I would be nice to know exactly &lt;em&gt;what&lt;/em&gt; it was that went wrong, though.&lt;/p&gt;
 
 &lt;p&gt;In the meantime, I&amp;rsquo;m going to shelve Debian GNU/Linux as a possible replacement OS and continue searching. At this point, &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt; is starting to look really good&amp;hellip;&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>Merry Christmas!</title>
-          <link>http://lowescott.github.io/2005/12/24/merry-christmas/</link>
-          <pubDate>Sat, 24 Dec 2005 19:26:11 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/12/24/merry-christmas/</guid>
-          <description>&lt;p&gt;I&amp;rsquo;d like to take a moment to wish everyone a very Merry Christmas and a Happy New Year! I hope that the Lord blesses each of you very richly in the coming year. Let us be sure not to forget the true reason for this season&amp;mdash;the birth of Jesus Christ, our Lord and Savior.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>Merry Christmas!</title>
-          <link>http://lowescott.github.io/2005/12/24/merry-christmas/</link>
-          <pubDate>Sat, 24 Dec 2005 19:26:11 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/12/24/merry-christmas/</guid>
-          <description>&lt;p&gt;I&amp;rsquo;d like to take a moment to wish everyone a very Merry Christmas and a Happy New Year! I hope that the Lord blesses each of you very richly in the coming year. Let us be sure not to forget the true reason for this season&amp;mdash;the birth of Jesus Christ, our Lord and Savior.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>Merry Christmas!</title>
-          <link>http://lowescott.github.io/2005/12/24/merry-christmas/</link>
-          <pubDate>Sat, 24 Dec 2005 19:26:11 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/12/24/merry-christmas/</guid>
-          <description>&lt;p&gt;I&amp;rsquo;d like to take a moment to wish everyone a very Merry Christmas and a Happy New Year! I hope that the Lord blesses each of you very richly in the coming year. Let us be sure not to forget the true reason for this season&amp;mdash;the birth of Jesus Christ, our Lord and Savior.&lt;/p&gt;
 </description>
         </item>
       
@@ -329,6 +244,198 @@ nss_map_attribute cn cn&lt;/p&gt;&lt;/li&gt;
     
       
         <item>
+          <title>Installing Linux on an iPaq H3765</title>
+          <link>http://lowescott.github.io/2005/12/13/installing-linux-on-an-ipaq-h3765/</link>
+          <pubDate>Tue, 13 Dec 2005 23:27:07 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/13/installing-linux-on-an-ipaq-h3765/</guid>
+          <description>&lt;p&gt;Before I switched to &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, I was a heavy duty &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; user. I had Windows XP on my laptop, Windows 2000 on my servers, and used a Windows CE-based Compaq iPaq H3765. Since that time, I (of course) switched to Mac OS X on my laptop (a 15&amp;rdquo; &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt; G4 with SuperDrive); a mix of Linux, &lt;a href=&#34;http://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;, and Windows on my servers; and a Palm OS-based handheld (currently a Treo 650, previously a Tungsten T3). As a result, I still had this iPaq sitting around doing nothing. So, on a whim, I decided to install Linux on my old iPaq.&lt;/p&gt;
+
+&lt;p&gt;Using the &lt;a href=&#34;http://familiar.handhelds.org/releases/v0.8.2/install/&#34;&gt;installation instructions&lt;/a&gt; at familiar.handhelds.org, I downloaded an &lt;a href=&#34;http://opie.handhelds.org/&#34;&gt;Opie&lt;/a&gt; image, installed the bootloader, and reflashed the iPaq from a spare 128MB CF card (I had a CF sleeve with external battery for the iPaq). After only a few minutes (the entire process was really quite painless), I was up and running with Linux on my iPaq.&lt;/p&gt;
+
+&lt;p&gt;Having Linux running on the iPaq is great, but now I have to figure out what to &lt;strong&gt;&lt;em&gt;do&lt;/em&gt;&lt;/strong&gt; with this Linux-based PDA. Suggestions, anyone?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Application-Specific VPNs</title>
+          <link>http://lowescott.github.io/2005/12/13/application-specific-vpns/</link>
+          <pubDate>Tue, 13 Dec 2005 11:18:37 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/13/application-specific-vpns/</guid>
+          <description>
+
+&lt;p&gt;I coined the term &amp;ldquo;application specific VPNs&amp;rdquo; as I began exploring the many uses of tools such as SSH (the &lt;a href=&#34;http://www.openssh.org/&#34;&gt;OpenSSH&lt;/a&gt; implementation, in particular) and &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; (the open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Secure_Sockets_Layer&#34;&gt;SSL&lt;/a&gt; wrapper). An &amp;ldquo;application specific VPN&amp;rdquo; is a technique for employing encrypted communication with a particular remote application that does not affect the operation of other applications (local or remote) on the system.&lt;/p&gt;
+
+&lt;p&gt;In general, most VPNs employ technology such as &lt;a href=&#34;http://en.wikipedia.org/wiki/PPTP&#34;&gt;PPTP&lt;/a&gt; or &lt;a href=&#34;http://en.wikipedia.org/wiki/Ipsec&#34;&gt;IPSec&lt;/a&gt;. These protocols usually affect &lt;em&gt;all&lt;/em&gt; traffic originating from that system (unless we use split tunneling). With an application specific VPN, only particular types of traffic are affected, and these particular types of traffic are wrapped in an encrypted SSH or SSL tunnel using either OpenSSH or Stunnel, respectively. Other types of traffic are unaffected.&lt;/p&gt;
+
+&lt;p&gt;While this may seem old hat to long-time Linux, Unix, or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; users, this is a relatively new concept to other platforms. Being a (fairly) new convert to Mac OS X myself, I found myself enjoying the tremendous flexibility offered by application specific VPNs. However, this functionality is certainly not limited to these platforms, and it is possible for &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; users to utilize this functionality as well.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Some Examples&lt;/h3&gt;
+
+&lt;p&gt;Here are a few examples of how you can use application specific VPNs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=PROHOME_Main&#34;&gt;Citrix Presentation Server&lt;/a&gt;: Users can wrap Citrix ICA traffic in SSL using Stunnel; this avoids the need to pay for commercial solutions (although, quite honestly, the commercial solutions are typically easier to deploy and manage).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;E-Mail: Lots of people talk about securing e-mail, but not usually in the context of securing client-to-server traffic. With Stunnel, you can add SSL support for IMAP, POP, and/or SMTP even if the server doesn&amp;rsquo;t support SSL natively. In fact, you can add Stunnel to &lt;a href=&#34;http://www.microsoft.com/exchange/default.mspx&#34;&gt;Microsoft Exchange&lt;/a&gt; to help bolster that product&amp;rsquo;s built-in support for SSL (such as using SMTPS instead of STARTTLS for encrypting SMTP traffic).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Remote Desktop: This is a great technique for sysadmins. Need to use Remote Desktop to manage a Windows-based server remotely, but don&amp;rsquo;t want to run into security problems? Use Stunnel or OpenSSH to encrypt the RDP traffic. Stunnel, in my opinion, is particularly good here, since it&amp;rsquo;s incredibly easy to use the Windows port of Stunnel to establish an SSL listener on an arbitrary high port for this very purpose.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Using Stunnel for SSL-based Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;On Windows, there is no graphical user interface (GUI) for configuring Stunnel; all configuration must be done with the &lt;code&gt;stunnel.conf&lt;/code&gt; configuration file. A sample &lt;code&gt;stunnel.conf&lt;/code&gt; file is found below; this file listens on TCP port 1494 and forwards traffic to TCP port 3389 on the same system. (Note that this would be a sample &lt;code&gt;stunnel.conf&lt;/code&gt; file for a server-side configuration.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CApath = c:\windows\system32\stunnel  
+cert = c:\windows\system32\stunnel\stunnel.pem  
+client = no  
+service = SSLTunnel  
+[rdp]  
+accept = 1494  
+connect = 3389
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once Stunnel has been configured, running &lt;code&gt;stunnel --install&lt;/code&gt; will install it as a system service; this service can then be stopped and started through the Services MMC console just like any other background service.&lt;/p&gt;
+
+&lt;p&gt;Of course, this is only half the work; you&amp;rsquo;ll also need an equivalent Stunnel configuration on the client side, since the Microsoft RDP client (the &lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=80111f21-d48d-426e-96c2-08aa2bd23a49&amp;amp;DisplayLang=en&#34;&gt;Windows version&lt;/a&gt; or the &lt;a href=&#34;http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient&#34;&gt;Mac OS X&lt;/a&gt; version) does not support SSL. Also, note that the SSL certificate used by Stunnel needs to be in PEM format (which is a nice lead-in to my article discussing the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/02/certificate-conversion-using-openssl/&#34;&gt;conversion of certificates&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, there is a graphical utility for managing Stunnel called SSL Enabler. (Note that I was not able to find a home page for this utility; downloads can be found at various sites.)&lt;/p&gt;
+
+&lt;p&gt;On Linux, the configuration again involves editing the &lt;code&gt;stunnel.conf&lt;/code&gt; file and launching stunnel (either in the foreground or as a daemon). I&amp;rsquo;m not aware of any GUI utilities for configuring Stunnel on Linux, but that certainly doesn&amp;rsquo;t mean they don&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Using SSH for Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;As with Stunnel, it&amp;rsquo;s also possible to use SSH to create application specific VPNs. Mac OS X comes with OpenSSH, as do most distributions of Linux and various flavors of BSD. Windows users can also find various ports of OpenSSH and utilities such as &lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/putty/&#34;&gt;PuTTY&lt;/a&gt; that make it possible to use SSH for application specific VPNs as well.&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, the following command in Terminal will create an application specific VPN to encrypt IMAP traffic to a remote server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh -L 1143:imapserver.domain.com:143 -N -f user@sshserver.domain.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This same technique could be used to encrypt WebDAV traffic to a remote web server, other types of mail traffic (POP3 or SMTP, for example), RDP (for Remote Desktop), etc. Note that it doesn&amp;rsquo;t work well with HTTP traffic that requires the use of host headers.&lt;/p&gt;
+
+&lt;p&gt;There are a few graphical utilities on Mac OS X for managing SSH tunnels; these include &lt;a href=&#34;http://projects.tynsoe.org/en/stm/&#34;&gt;SSH Tunnel Manager&lt;/a&gt; and &lt;a href=&#34;http://www.leapingbytes.com/almostvpn&#34;&gt;AlmostVPN&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Not being a regular day-to-day Linux user (not on the desktop, at least), I don&amp;rsquo;t know of any SSH tunnel management applications, but I would be very surprised if they didn&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Creating Site-to-Site Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;Most of the examples so far have been using SSH and/or Stunnel to connect endpoints (i.e., a single laptop or desktop computer) to a remote resource via an application specific VPN. However, it&amp;rsquo;s also easily possible to create application specific site-to-site VPNs, whose purpose is to secure only a particular type of traffic between two locations.&lt;/p&gt;
+
+&lt;p&gt;Consider this example. CompanyA wants to send e-mail to CompanyB, but wants that e-mail to be secure. If both mail servers support TLS, then the organizations could use TLS to secure the SMTP traffic. If not, then the companies can use Stunnel to establish an SSL connection between two systems. HostA at CompanyA can use Stunnel as a client side application to listen for unencrypted connections and pass them as encrypted connections to HostB at CompanyB. HostB at CompanyB is using Stunnel to listen for encrypted connections and passes them unencrypted to the mail server at CompanyB. With a simple configuration, the mail servers at both companies can be configured to pass mail connections for other company through the Stunnel connection. With no additional cost and very little configuration, all e-mail traffic between the two organizations has now been secured. All this without the complexity of a typical B-to-B VPN and the associated access controls.&lt;/p&gt;
+
+&lt;p&gt;For more information, documents on &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-ssh.doc&#34;&gt;application specific VPNs with SSH&lt;/a&gt; and &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-stunnel.doc&#34;&gt;application specific VPNs with Stunnel&lt;/a&gt; are available.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Application-Specific VPNs</title>
+          <link>http://lowescott.github.io/2005/12/13/application-specific-vpns/</link>
+          <pubDate>Tue, 13 Dec 2005 11:18:37 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/13/application-specific-vpns/</guid>
+          <description>
+
+&lt;p&gt;I coined the term &amp;ldquo;application specific VPNs&amp;rdquo; as I began exploring the many uses of tools such as SSH (the &lt;a href=&#34;http://www.openssh.org/&#34;&gt;OpenSSH&lt;/a&gt; implementation, in particular) and &lt;a href=&#34;http://stunnel.mirt.net/index.html&#34;&gt;Stunnel&lt;/a&gt; (the open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Secure_Sockets_Layer&#34;&gt;SSL&lt;/a&gt; wrapper). An &amp;ldquo;application specific VPN&amp;rdquo; is a technique for employing encrypted communication with a particular remote application that does not affect the operation of other applications (local or remote) on the system.&lt;/p&gt;
+
+&lt;p&gt;In general, most VPNs employ technology such as &lt;a href=&#34;http://en.wikipedia.org/wiki/PPTP&#34;&gt;PPTP&lt;/a&gt; or &lt;a href=&#34;http://en.wikipedia.org/wiki/Ipsec&#34;&gt;IPSec&lt;/a&gt;. These protocols usually affect &lt;em&gt;all&lt;/em&gt; traffic originating from that system (unless we use split tunneling). With an application specific VPN, only particular types of traffic are affected, and these particular types of traffic are wrapped in an encrypted SSH or SSL tunnel using either OpenSSH or Stunnel, respectively. Other types of traffic are unaffected.&lt;/p&gt;
+
+&lt;p&gt;While this may seem old hat to long-time Linux, Unix, or &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; users, this is a relatively new concept to other platforms. Being a (fairly) new convert to Mac OS X myself, I found myself enjoying the tremendous flexibility offered by application specific VPNs. However, this functionality is certainly not limited to these platforms, and it is possible for &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Windows&lt;/a&gt; users to utilize this functionality as well.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Some Examples&lt;/h3&gt;
+
+&lt;p&gt;Here are a few examples of how you can use application specific VPNs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=PROHOME_Main&#34;&gt;Citrix Presentation Server&lt;/a&gt;: Users can wrap Citrix ICA traffic in SSL using Stunnel; this avoids the need to pay for commercial solutions (although, quite honestly, the commercial solutions are typically easier to deploy and manage).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;E-Mail: Lots of people talk about securing e-mail, but not usually in the context of securing client-to-server traffic. With Stunnel, you can add SSL support for IMAP, POP, and/or SMTP even if the server doesn&amp;rsquo;t support SSL natively. In fact, you can add Stunnel to &lt;a href=&#34;http://www.microsoft.com/exchange/default.mspx&#34;&gt;Microsoft Exchange&lt;/a&gt; to help bolster that product&amp;rsquo;s built-in support for SSL (such as using SMTPS instead of STARTTLS for encrypting SMTP traffic).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Remote Desktop: This is a great technique for sysadmins. Need to use Remote Desktop to manage a Windows-based server remotely, but don&amp;rsquo;t want to run into security problems? Use Stunnel or OpenSSH to encrypt the RDP traffic. Stunnel, in my opinion, is particularly good here, since it&amp;rsquo;s incredibly easy to use the Windows port of Stunnel to establish an SSL listener on an arbitrary high port for this very purpose.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Using Stunnel for SSL-based Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;On Windows, there is no graphical user interface (GUI) for configuring Stunnel; all configuration must be done with the &lt;code&gt;stunnel.conf&lt;/code&gt; configuration file. A sample &lt;code&gt;stunnel.conf&lt;/code&gt; file is found below; this file listens on TCP port 1494 and forwards traffic to TCP port 3389 on the same system. (Note that this would be a sample &lt;code&gt;stunnel.conf&lt;/code&gt; file for a server-side configuration.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CApath = c:\windows\system32\stunnel  
+cert = c:\windows\system32\stunnel\stunnel.pem  
+client = no  
+service = SSLTunnel  
+[rdp]  
+accept = 1494  
+connect = 3389
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once Stunnel has been configured, running &lt;code&gt;stunnel --install&lt;/code&gt; will install it as a system service; this service can then be stopped and started through the Services MMC console just like any other background service.&lt;/p&gt;
+
+&lt;p&gt;Of course, this is only half the work; you&amp;rsquo;ll also need an equivalent Stunnel configuration on the client side, since the Microsoft RDP client (the &lt;a href=&#34;http://www.microsoft.com/downloads/details.aspx?FamilyID=80111f21-d48d-426e-96c2-08aa2bd23a49&amp;amp;DisplayLang=en&#34;&gt;Windows version&lt;/a&gt; or the &lt;a href=&#34;http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient&#34;&gt;Mac OS X&lt;/a&gt; version) does not support SSL. Also, note that the SSL certificate used by Stunnel needs to be in PEM format (which is a nice lead-in to my article discussing the &lt;a href=&#34;http://blog.scottlowe.org/2005/12/02/certificate-conversion-using-openssl/&#34;&gt;conversion of certificates&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, there is a graphical utility for managing Stunnel called SSL Enabler. (Note that I was not able to find a home page for this utility; downloads can be found at various sites.)&lt;/p&gt;
+
+&lt;p&gt;On Linux, the configuration again involves editing the &lt;code&gt;stunnel.conf&lt;/code&gt; file and launching stunnel (either in the foreground or as a daemon). I&amp;rsquo;m not aware of any GUI utilities for configuring Stunnel on Linux, but that certainly doesn&amp;rsquo;t mean they don&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Using SSH for Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;As with Stunnel, it&amp;rsquo;s also possible to use SSH to create application specific VPNs. Mac OS X comes with OpenSSH, as do most distributions of Linux and various flavors of BSD. Windows users can also find various ports of OpenSSH and utilities such as &lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/putty/&#34;&gt;PuTTY&lt;/a&gt; that make it possible to use SSH for application specific VPNs as well.&lt;/p&gt;
+
+&lt;p&gt;On Mac OS X, the following command in Terminal will create an application specific VPN to encrypt IMAP traffic to a remote server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh -L 1143:imapserver.domain.com:143 -N -f user@sshserver.domain.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This same technique could be used to encrypt WebDAV traffic to a remote web server, other types of mail traffic (POP3 or SMTP, for example), RDP (for Remote Desktop), etc. Note that it doesn&amp;rsquo;t work well with HTTP traffic that requires the use of host headers.&lt;/p&gt;
+
+&lt;p&gt;There are a few graphical utilities on Mac OS X for managing SSH tunnels; these include &lt;a href=&#34;http://projects.tynsoe.org/en/stm/&#34;&gt;SSH Tunnel Manager&lt;/a&gt; and &lt;a href=&#34;http://www.leapingbytes.com/almostvpn&#34;&gt;AlmostVPN&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Not being a regular day-to-day Linux user (not on the desktop, at least), I don&amp;rsquo;t know of any SSH tunnel management applications, but I would be very surprised if they didn&amp;rsquo;t exist.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Creating Site-to-Site Application Specific VPNs&lt;/h3&gt;
+
+&lt;p&gt;Most of the examples so far have been using SSH and/or Stunnel to connect endpoints (i.e., a single laptop or desktop computer) to a remote resource via an application specific VPN. However, it&amp;rsquo;s also easily possible to create application specific site-to-site VPNs, whose purpose is to secure only a particular type of traffic between two locations.&lt;/p&gt;
+
+&lt;p&gt;Consider this example. CompanyA wants to send e-mail to CompanyB, but wants that e-mail to be secure. If both mail servers support TLS, then the organizations could use TLS to secure the SMTP traffic. If not, then the companies can use Stunnel to establish an SSL connection between two systems. HostA at CompanyA can use Stunnel as a client side application to listen for unencrypted connections and pass them as encrypted connections to HostB at CompanyB. HostB at CompanyB is using Stunnel to listen for encrypted connections and passes them unencrypted to the mail server at CompanyB. With a simple configuration, the mail servers at both companies can be configured to pass mail connections for other company through the Stunnel connection. With no additional cost and very little configuration, all e-mail traffic between the two organizations has now been secured. All this without the complexity of a typical B-to-B VPN and the associated access controls.&lt;/p&gt;
+
+&lt;p&gt;For more information, documents on &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-ssh.doc&#34;&gt;application specific VPNs with SSH&lt;/a&gt; and &lt;a href=&#34;http://blog.scottlowe.org/downloads/ptd-asvpn-stunnel.doc&#34;&gt;application specific VPNs with Stunnel&lt;/a&gt; are available.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Using .Mac iDisk with a WatchGuard Firebox</title>
+          <link>http://lowescott.github.io/2005/12/12/using-mac-idisk-with-a-watchguard-firebox/</link>
+          <pubDate>Mon, 12 Dec 2005 00:37:38 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/12/using-mac-idisk-with-a-watchguard-firebox/</guid>
+          <description>&lt;p&gt;One of the strengths of the &lt;a href=&#34;http://www.watchguard.com/&#34;&gt;WatchGuard&lt;/a&gt; &lt;a href=&#34;http://www.watchguard.com/products/appliances.asp&#34;&gt;Firebox&lt;/a&gt; series of firewalls is the inclusion of application-layer proxies for protocols such as SMTP, FTP, and HTTP. Whereas ordinary packet filtering firewalls and stateful inspection firewalls only control traffic based on IP address or TCP/UDP port number, application-layer proxies like those included in the Firebox look deeper into the packet to make decisions on information such as URL or MIME content type (for an HTTP proxy, for example).&lt;/p&gt;
+
+&lt;p&gt;However, this advantage also becomes a disadvantage as many application-layer proxies may not understand or be compatible with protocol-specific extensions. In this particular case, it&amp;rsquo;s the iDisk service provided by Apple&amp;rsquo;s &lt;a href=&#34;http://www.mac.com/&#34;&gt;.Mac&lt;/a&gt; subscription service. The iDisk service uses &lt;a href=&#34;http://www.webdav.org/&#34;&gt;WebDAV&lt;/a&gt;, an extension of the HTTP/1.1 protocol specification. It appears that, in general, most WebDAV services operate properly through the Fireboxs HTTP proxy (although some issues with Microsoft Exchange&amp;rsquo;s Outlook Web Access were reported with earlier versions of the WatchGuard Firebox System software).&lt;/p&gt;
+
+&lt;p&gt;The iDisk service, though, apparently uses some non-RFC-compliant headers (note that this was &lt;em&gt;not&lt;/em&gt; confirmed with a packet capture). As a result, the Proxied-HTTP service (which employs, as the name suggests, an application-layer HTTP proxy) prevents these headers from being passed and therefore prevents iDisk from working.&lt;/p&gt;
+
+&lt;p&gt;To make iDisk work from behind a WatchGuard Firebox firewall, one of several steps must be taken:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Use the Filtered-HTTP service, which does not employ an application-layer HTTP proxy and therefore would not interfere with iDisk or other WebDAV-based applications or services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Modify the default properties of the Proxied-HTTP service to allow unknown headers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since the Proxied-HTTP service also provides for content filtering and reporting, it is generally preferred to use the HTTP proxy instead of an ordinary HTTP packet filter. The first option is therefore not the ideal solution.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, the behavior of the Proxied-HTTP service is somewhat configurable. In order to make iDisk work with the HTTP proxy, the &amp;ldquo;Remove unknown headers&amp;rdquo; option must be unchecked in the configuration for the HTTP proxy. By unchecking the &amp;ldquo;Remove unknown headers&amp;rdquo; option, the Firebox will allow non-RFC-compliant HTTP headers to pass through the firewall, and iDisk will work correctly.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>Ubuntu 5.10</title>
           <link>http://lowescott.github.io/2005/12/08/ubuntu-510/</link>
           <pubDate>Thu, 08 Dec 2005 22:46:37 &#43;0000</pubDate>
@@ -393,48 +500,76 @@ nss_map_attribute cn cn&lt;/p&gt;&lt;/li&gt;
     
       
         <item>
-          <title>Mass Password Changes in Active Directory</title>
-          <link>http://lowescott.github.io/2005/12/08/mass-password-changes-in-active-directory/</link>
-          <pubDate>Thu, 08 Dec 2005 22:16:58 &#43;0000</pubDate>
+          <title>WatchGuard Firebox VPN and Active Directory Integration</title>
+          <link>http://lowescott.github.io/2005/12/06/watchguard-firebox-vpn-and-active-directory-integration/</link>
+          <pubDate>Tue, 06 Dec 2005 17:38:24 &#43;0000</pubDate>
           <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/12/08/mass-password-changes-in-active-directory/</guid>
-          <description>&lt;p&gt;Earlier this year, I had a need in a project to set the password for a large number of Active Directory accounts simultaneously. Here&amp;rsquo;s the solution I came up with for this particular need.&lt;/p&gt;
+          <guid>http://lowescott.github.io/2005/12/06/watchguard-firebox-vpn-and-active-directory-integration/</guid>
+          <description>
 
-&lt;p&gt;To use this technique, you&amp;rsquo;ll need &lt;code&gt;ldifde&lt;/code&gt; (included with &lt;a href=&#34;http://www.microsoft.com/windowsserver2003/default.mspx&#34;&gt;Windows Server 2003&lt;/a&gt;), &lt;code&gt;grep&lt;/code&gt; (included with &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt; and most Linux distributions; Win32 versions available on the Internet), a text editor with search and replace functionality (advanced geeks are free to use &lt;code&gt;sed&lt;/code&gt;), and &lt;code&gt;dsmod&lt;/code&gt; (from the &lt;em&gt;Windows Server 2003 Resource Kit&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;A short while back, I posted an article on &lt;a href=&#34;http://blog.scottlowe.org/2005/11/22/cisco-pix-vpn-and-active-directory-integration/&#34;&gt;Cisco PIX VPN and Active Directory integration&lt;/a&gt;. Now, I&amp;rsquo;d like to follow that article up with a version looking at integration between Active Directory and &lt;a href=&#34;http://www.watchguard.com/&#34;&gt;WatchGuard&lt;/a&gt; Firebox VPNs.&lt;/p&gt;
 
-&lt;p&gt;First, export the list of user accounts out of Active Directory using ldifde. The command will look something like this (I&amp;rsquo;ve line wrapped here, as indicated by a backslash, but this should all be on one line):&lt;/p&gt;
+&lt;p&gt;As with the PIX-AD integration document, this article assumes that you have some basic knowledge of how to work with the WatchGuard Firebox series of firewalls. This article was written using version 6.2 of the WatchGuard Firebox System software and Windows Server 2003; other versions of either the firewall software or Windows should be similar.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ldifde -d &amp;quot;CN=Users,DC=company,DC=com&amp;quot; -r &amp;quot;(objectclass=user)&amp;quot; \  
--f c:\export-1.ldif
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;toc_0&#34;&gt;Configuring the Firebox&lt;/h3&gt;
 
-&lt;p&gt;This creates a file called &amp;ldquo;export-1.ldif&amp;rdquo;. Using &lt;code&gt;grep&lt;/code&gt;, filter this file down to only the full distinguished names of the users:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;less export-1.ldif | grep &#39;dn: &#39; &amp;gt; export-2.ldif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that you&amp;rsquo;ll need to use &lt;code&gt;type&lt;/code&gt; instead of &lt;code&gt;less&lt;/code&gt; on a Win32 system. Also, on a Win32 system you&amp;rsquo;ll need to use double quotes instead of single quotes in the &lt;code&gt;grep&lt;/code&gt; command. This creates a file called &amp;ldquo;export-2.ldif&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Load this file into the text editor and make the following changes:&lt;/p&gt;
+&lt;p&gt;First, we&amp;rsquo;ll need to setup the Firebox. Use the Firebox software (Policy Manager, specifically) to perform the following configuration tasks:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Remove all occurrences of &amp;ldquo;dn: &amp;ldquo; (there is a space after the colon)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add the server that is running IAS (or will be running IAS; see below) as a RADIUS server in the Authentication Servers dialog box (found on the Setup menu). Here, you&amp;rsquo;ll need to specify the server&amp;rsquo;s IP address, port number (the default of 1645 will be fine), and the shared secret.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Add a double quotation mark before CN= at the start of each line&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Instruct the firewall to use RADIUS by going to Setup &amp;gt; Firewall Authentication and selecting &amp;ldquo;RADIUS&amp;rdquo; as the authentication type.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Add a double quotation mark after =com at the end of each line&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Configure the firewall&amp;rsquo;s Remote User VPN (on the Network menu) to use RADIUS by checking the &amp;ldquo;Use RADIUS to authenticate remote users&amp;rdquo; check box.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Save this modified file as &amp;ldquo;export-3.ldif&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Once this is done, proceed with configuring PPTP-based remote user VPNs as usual. Be sure to add a rule allowing traffic to/from the pptp_users group; otherwise, VPN users will be subject to the same traffic restrictions as Internet users.&lt;/p&gt;
 
-&lt;p&gt;Finally, pipe this file through to the &lt;code&gt;dsmod&lt;/code&gt; program to set passwords for all the users in the file:&lt;/p&gt;
+&lt;h3 id=&#34;toc_1&#34;&gt;Configuring Internet Authentication Service&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;type export-3.ldif | dsmod user -pwd newpass1 -mustchpwd yes
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Before doing anything else, create a new global security group in Active Directory. Call it &amp;ldquo;pptp_users&amp;rdquo;, just like the name of the group on the Firebox. This is an important part of the glue that will bind the Firebox together with Active Directory.&lt;/p&gt;
 
-&lt;p&gt;Full help for the dsmod command line syntax is available using &lt;code&gt;dsmod /?&lt;/code&gt; or &lt;code&gt;dsmod user /?&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If IAS is not already installed, install IAS using the Add/Remove Programs icon in Control Panel.&lt;/p&gt;
 
-&lt;p&gt;You can add &lt;code&gt;&amp;gt; filename&lt;/code&gt; to the end of the above command to log the output of the &lt;code&gt;dsmod&lt;/code&gt; command to a file. You can then use &lt;code&gt;grep&lt;/code&gt; to parse this file to ensure that the command was successful for all users.&lt;/p&gt;
+&lt;p&gt;Once it has been installed, launch it from the Administrative Tools folder on the Start Menu and we&amp;rsquo;ll proceed with configuring it for authenticating VPN connections to the Firebox.&lt;/p&gt;
+
+&lt;p&gt;First, we need to grant IAS permission to read dial-in properties from user accounts in Active Directory. To do this, right-click on the &amp;ldquo;Internet Authentication Service (Local)&amp;rdquo; and select &amp;ldquo;Register Server in Active Directory&amp;rdquo;. Select Yes (or OK) if prompted to confirm. Note that if IAS was already installed, it may have already been registered with Active Directory as well.&lt;/p&gt;
+
+&lt;p&gt;With that done, we can now configure the Firebox as a RADIUS client. Right-click on RADIUS Clients and select New RADIUS Client. In the wizard, specify the IP address (or DNS name) of the Firebox&amp;rsquo;s trusted interface and the shared secret. Note that this shared secret is the same secret key specified when configuring the RADIUS server in the Firebox previously. RADIUS clients use this to authenticate to RADIUS servers, so make it a reasonably strong password.&lt;/p&gt;
+
+&lt;p&gt;Now create a new remote access policy. Right-click on Remote Access Policies and select New Remote Access Policy. In the wizard, specify a name, select to create a custom policy, and then add the following conditions to the policy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;NAS-IP-Address: This will be the IP address of the Firebox&amp;rsquo;s trusted interface. This helps to ensure that this policy only applies to VPN requests from this firewall and not from any other RADIUS client.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Windows-Groups: This should be the &amp;ldquo;pptp_users&amp;rdquo; security group created earlier. Any user that should be allowed to authenticate on a VPN connection will need to be a member of this group.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, this policy should grant access. On the next screen, select &amp;ldquo;Edit Profile&amp;rdquo; to edit the remote access profile. This is important because we&amp;rsquo;ll need to verify that the RADIUS server is passing the correct information to the Firebox.&lt;/p&gt;
+
+&lt;p&gt;On the Advanced tab, remove all the attributes listed there (Service-Type and Framed-Protocol are there by default) and then add the Filter-Id attribute. To this attribute, add the string value &amp;ldquo;pptp_users&amp;rdquo;. Click OK to save these changes to the profile and then finish creating the policy.&lt;/p&gt;
+
+&lt;p&gt;Make this policy the first policy (using the Move Up/Move Down commands in the IAS console), add a user to the group created earlier, and then test your connection. Remote systems attempting to connect via PPTP should now be able to authenticate the VPN connection using their Active Directory usernames and passwords.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I&amp;rsquo;ve updated this entry to correct some errors pointed out in the comments. Thanks for the feedback!&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>Some Weblog Updates</title>
+          <link>http://lowescott.github.io/2005/12/04/some-weblog-updates/</link>
+          <pubDate>Sun, 04 Dec 2005 22:58:28 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/04/some-weblog-updates/</guid>
+          <description>&lt;p&gt;There&amp;rsquo;s been a few updates to this weblog over the last few days. Nothing major, just a few minor changes here and there.&lt;/p&gt;
+
+&lt;p&gt;First, I&amp;rsquo;ve moved to showing excerpts only on the index page. Of course, the archives pages (both category archives as well as monthly archives) were already showing excerpts only. Note that RSS feeds are still showing the full content.&lt;/p&gt;
+
+&lt;p&gt;The full entry page (the &amp;ldquo;single page,&amp;rdquo; in WordPress parlance) now shows the sidebar as well. It seems to me that this makes navigation through the weblog a bit easier.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve already mentioned the link to automatically post an entry&amp;rsquo;s URL to &lt;a href=&#34;http://del.icio.us/&#34;&gt;del.icio.us&lt;/a&gt;; this link only shows up when reading the full post.&lt;/p&gt;
 </description>
         </item>
       
@@ -601,6 +736,26 @@ apt-get upgrade
     
       
         <item>
+          <title>HTTP Proxies and Command-Line Utilities</title>
+          <link>http://lowescott.github.io/2005/12/01/http-proxies-and-command-line-utilities/</link>
+          <pubDate>Thu, 01 Dec 2005 20:14:12 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/12/01/http-proxies-and-command-line-utilities/</guid>
+          <description>&lt;p&gt;A few weeks ago, I locked down outbound HTTP traffic from my network. All outbound HTTP traffic must now pass through a caching HTTP proxy. (The proxy also performs some content filtering so that the kids don&amp;rsquo;t access stuff they shouldn&amp;rsquo;t.)&lt;/p&gt;
+
+&lt;p&gt;In my recent experiments with &lt;a href=&#34;http://kubuntu.org/&#34;&gt;Kubuntu&lt;/a&gt;, I needed to download some small files using wget, but couldn&amp;rsquo;t because of the proxy. As it turns out, there is a really simple fix.&lt;/p&gt;
+
+&lt;p&gt;Simply set an environment variable called http_proxy to the correct URL of the outbound proxy server, e.g., &amp;ldquo;&lt;a href=&#34;http://proxy.company.com:8080&amp;quot;&#34;&gt;http://proxy.company.com:8080&amp;quot;&lt;/a&gt; or whatever. In the bash shell, this can be easily accomplished with this command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;export http_proxy=&amp;quot;http://proxy.domain.com:8080&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once this environment variable was set properly (I messed up a couple of times trying to set it, getting my bash syntax confused with my tcsh syntax), wget and apt-get worked like a charm. I haven&amp;rsquo;t yet tried this with yum on Fedora Core 3, but I anticipate that it will work there as well.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>Kubuntu 5.10</title>
           <link>http://lowescott.github.io/2005/12/01/kubuntu-510/</link>
           <pubDate>Thu, 01 Dec 2005 17:24:12 &#43;0000</pubDate>
@@ -697,6 +852,18 @@ apt-get upgrade
     
       
         <item>
+          <title>Open Enough for Massachusetts</title>
+          <link>http://lowescott.github.io/2005/11/29/open-enough-for-massachusetts/</link>
+          <pubDate>Tue, 29 Nov 2005 16:45:01 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/open-enough-for-massachusetts/</guid>
+          <description>&lt;p&gt;Not suprisingly, Microsoft&amp;rsquo;s moves to &amp;ldquo;open&amp;rdquo; up its XML-based file formats for current and future versions of Microsoft Office have swayed the State of Massachusetts back to its side again. Get the details &lt;a href=&#34;http://www.windowsitpro.com/windowspaulthurrott/Article/ArticleID/48590/windowspaulthurrott_48590.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>Microsoft Promises Not to Sue</title>
           <link>http://lowescott.github.io/2005/11/29/microsoft-promises-not-to-sue/</link>
           <pubDate>Tue, 29 Nov 2005 16:24:54 &#43;0000</pubDate>
@@ -707,6 +874,22 @@ apt-get upgrade
 &lt;p&gt;Also see &lt;a href=&#34;http://www.eweek.com/article2/0,1895,1892757,00.asp&#34;&gt;these comments&lt;/a&gt; from a legal analyst regarding Microsoft&amp;rsquo;s &lt;a href=&#34;http://www.microsoft.com/office/xml/covenant.mspx&#34;&gt;Patent Protection Covenant&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Personally, a promise &amp;ldquo;not to sue&amp;rdquo; from any large corporation&amp;ndash;not just Microsoft&amp;ndash;wouldn&amp;rsquo;t be good enough for me were I a developer. Somehow, I don&amp;rsquo;t think that many developers are going to feel completely comfortable incorporating Office &lt;sup&gt;2003&lt;/sup&gt;&amp;frasl;&lt;sub&gt;12&lt;/sub&gt; XML-based file formats into their applications based solely on the Patent Protection Covenant. What happens when (not if) the covenant changes?&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>IE Exploit Moves from DoS to Remote Code Execution</title>
+          <link>http://lowescott.github.io/2005/11/29/ie-exploit-moves-from-dos-to-remote-code-execution/</link>
+          <pubDate>Tue, 29 Nov 2005 16:15:45 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/29/ie-exploit-moves-from-dos-to-remote-code-execution/</guid>
+          <description>&lt;p&gt;As a follow-up to my posting &lt;a href=&#34;http://blog.scottlowe.org/2005/11/21/zero-day-ie-exploit/&#34;&gt;Zero-Day IE Exploit&lt;/a&gt;, it has now been discovered that this exploit is no longer just a denial of service (DoS) flaw, but rather a flaw that can allow remote code execution (see &lt;a href=&#34;http://www.security.ithub.com/article/Unpatched+IE+Flaw+Is+Worse+Than+Expected/166164_1.aspx&#34;&gt;here&lt;/a&gt; for more information). As of this writing, there is no patch for this vulnerability and the only workaround is to disable Active Scripting in IE.&lt;/p&gt;
+
+&lt;p&gt;For your convenience, here&amp;rsquo;s a &lt;a href=&#34;http://support.microsoft.com/kb/q154036/&#34;&gt;link&lt;/a&gt; to a Microsoft KB article that describes how to disable Active Scripting.&lt;/p&gt;
+
+&lt;p&gt;Alternately, you can just switch to &lt;a href=&#34;http://www.mozilla.org/products/firefox/&#34;&gt;Firefox&lt;/a&gt; (which, by the way, is supposed to release Firefox 1.5 sometime today).&lt;/p&gt;
 </description>
         </item>
       
@@ -763,107 +946,12 @@ apt-get upgrade
     
       
         <item>
-          <title>Making Backup DVD Copies</title>
-          <link>http://lowescott.github.io/2005/11/27/making-backup-dvd-copies/</link>
-          <pubDate>Sun, 27 Nov 2005 20:23:16 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/11/27/making-backup-dvd-copies/</guid>
-          <description>&lt;p&gt;I love DVDs. Ever since I bought my surround sound system around Christmas of 2000, I have preferred DVDs over VHS for any new movies that we purchase. The big problem, though, is that DVDs aren&amp;rsquo;t nearly as durable as videotapes, and in a family with kids that&amp;rsquo;s a big deal. I have younger kids, and it doesn&amp;rsquo;t take much for a kid to scratch a DVD when putting it into or taking it out of the DVD player. All it takes is one scratch and that&amp;rsquo;s pretty much the end of that movie.&lt;/p&gt;
-
-&lt;p&gt;Even before I switched to &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;, I have been making digital copies of every CD that I purchase, so that I can quickly and easily make another copy in the event that the original CD gets damaged in any way. The introduction of &lt;a href=&#34;http://www.apple.com/itunes/&#34;&gt;iTunes&lt;/a&gt; and my &lt;a href=&#34;http://www.apple.com/ipod/&#34;&gt;iPod&lt;/a&gt; have made this easier. I hadn&amp;rsquo;t considered, even with the introduction of the 5th generation iPod with video capabilities, that I could do the same with my DVDs until just the other day.&lt;/p&gt;
-
-&lt;p&gt;So I set out to see if it was possible to do the same with my DVDs. I&amp;rsquo;d researched this a little bit earlier, so I already knew about &lt;a href=&#34;http://www.losprimates.net/mtr/&#34;&gt;MacTheRipper&lt;/a&gt; (MTR), a program for extracting the digital video from a DVD. I used MTR to extract the video for &lt;em&gt;I, Robot&lt;/em&gt; to an external FireWire hard drive attached to my &lt;a href=&#34;http://www.apple.com/powerbook/&#34;&gt;PowerBook&lt;/a&gt;. That process went well, didn&amp;rsquo;t take too terribly long, and the resulting VIDEO_TS folder created by MTR worked flawlessly using &lt;a href=&#34;http://www.videolan.org/vlc/&#34;&gt;VLC&lt;/a&gt;. I then turned to a program called &lt;a href=&#34;http://lonestar.utsa.edu/llee/applescript/dvdimager.html&#34;&gt;DVD Imager&lt;/a&gt;, which is designed to turn a VIDEO_TS folder into a DVD image that can be burned to a DVD. The problem, however, was that the VIDEO_TS folder and the resulting DVD image were 6.87GB in size. As a result, I was not able to burn the image back to a standard DVD-R using my PowerBook&amp;rsquo;s SuperDrive.&lt;/p&gt;
-
-&lt;p&gt;I tried another DVD (&lt;em&gt;Robots&lt;/em&gt; this time) and ended up with 4.62GB of data. OK, I thought, a single-layer DVD holds 4.7GB of data so I should be fine. Wrong! That didn&amp;rsquo;t work, either.&lt;/p&gt;
-
-&lt;p&gt;That means I&amp;rsquo;m currently stumped as to the next step. A number of online searches have turned up recommendations for &lt;a href=&#34;http://www.roxio.com/en/products/popcorn/&#34;&gt;Popcorn&lt;/a&gt; (from &lt;a href=&#34;http://www.roxio.com/&#34;&gt;Roxio&lt;/a&gt;), but I&amp;rsquo;m trying to see if I can avoid having to purchase software and instead make do with freeware and/or open source applications.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
           <title>Happy Thanksgiving!</title>
           <link>http://lowescott.github.io/2005/11/24/happy-thanksgiving/</link>
           <pubDate>Thu, 24 Nov 2005 20:30:07 &#43;0000</pubDate>
           <author>Scott Lowe</author>
           <guid>http://lowescott.github.io/2005/11/24/happy-thanksgiving/</guid>
           <description>&lt;p&gt;For those of you that celebrate the holiday, I&amp;rsquo;d like to wish you a very happy Thanksgiving. May the Lord richly bless you in the coming year!&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>Cisco PIX VPN and Active Directory Integration</title>
-          <link>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</link>
-          <pubDate>Tue, 22 Nov 2005 19:01:54 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/11/22/cisco-pix-vpn-and-active-directory-integration/</guid>
-          <description>
-
-&lt;p&gt;Rather than publishing this information in PDF form on my business website, I&amp;rsquo;ve decided to try something new and post it here as a blog entry. So, here goes.&lt;/p&gt;
-
-&lt;p&gt;This information assumes that you have some experience with the Cisco PIX firewall (i.e., you know how to enter configuration commands and have a basic idea of what the configuration commands actually do) as well as some experience with Windows and Active Directory.&lt;/p&gt;
-
-&lt;p&gt;With that information in hand, let&amp;rsquo;s get started.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Configuring the Cisco PIX&lt;/h2&gt;
-
-&lt;p&gt;First, we&amp;rsquo;ll need to setup the PIX firewall. Use the commands below to configure the PIX for PPTP-based VPN connections that will authenticate against an Active Directory back-end.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ip local pool vpn-pool 10.10.10.1-10.10.10.254  
-aaa-server vpn-auth inside host 10.10.10.5 secretkey  
-aaa-server vpn-auth inside host 10.10.10.6 secretkey  
-aaa-server vpn-auth protocol radius  
-vpdn group vpn-pptp-group accept dialin pptp  
-vpdn group vpn-pptp-group ppp authentication mschap  
-vpdn group vpn-pptp-group ppp encryption mppe 128 required  
-vpdn group vpn-pptp-group client configuration \  
-address local vpn-pool  
-vpdn group vpn-pptp-group client configuration \  
-dns 10.10.10.5 10.10.10.6  
-vpdn group vpn-pptp-group client configuration \  
-wins 10.10.10.6 10.10.10.5  
-vpdn group vpn-pptp-group client authentication aaa vpn-auth  
-vpdn enable outside  
-sysopt connect permit-pptp  
-access-list acl-nat0 permit ip 10.10.1.0 255.255.255.0 \  
-10.10.10.0 255.255.255.0  
-nat (inside) 0 access-list acl-nat0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(Note that I have placed a backslash to indicate text that is wrapped onto two lines here but should be entered all on a single line in the PIX configuration.)&lt;/p&gt;
-
-&lt;p&gt;In this configuration, replace the IP addresses on lines 2 and 3 (the &lt;code&gt;aaa-server vpn-auth&lt;/code&gt; commands) with the IP addresses of the servers running Internet Authentication Service (IAS) on Windows. See the next section for more information on configuring IAS.&lt;/p&gt;
-
-&lt;p&gt;On those same lines, replace the text &lt;code&gt;secretkey&lt;/code&gt; with the RADIUS shared secret that will be used when configuring the RADIUS/IAS server in the next section.&lt;/p&gt;
-
-&lt;p&gt;Likewise, replace the IP addresses on lines 9 and 10 (the &lt;code&gt;vdpn group vpn-pptp-group client configuration&lt;/code&gt; lines that pass out the DNS and WINS servers to VPN clients) with the IP addresses of your DNS and WINS servers, respectively.&lt;/p&gt;
-
-&lt;p&gt;That should do it. Save the configuration to the PIX and then move on to configuring IAS.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;Configuring Internet Authentication Service&lt;/h2&gt;
-
-&lt;p&gt;Before doing anything else, create a new global security group in Active Directory. Call it something like &amp;ldquo;VPN Users&amp;rdquo; or similar. We&amp;rsquo;ll use this group later as an additional security check in validating VPN connections.&lt;/p&gt;
-
-&lt;p&gt;Next, install IAS using the Add/Remove Programs icon in Control Panel. Once it has been installed, launch it from the Administrative Tools folder on the Start Menu and we&amp;rsquo;ll proceed with configuring it for authenticating VPN connections to the PIX firewall.&lt;/p&gt;
-
-&lt;p&gt;First, we need to grant IAS permission to read dial-in properties from user accounts in Active Directory. To do this, right-click on the &amp;ldquo;Internet Authentication Service (Local)&amp;rdquo; and select &amp;ldquo;Register Server in Active Directory&amp;rdquo;. Select Yes (or OK) if prompted to confirm.&lt;/p&gt;
-
-&lt;p&gt;With that done, we can now configure the PIX firewall as a RADIUS client. Right-click on RADIUS Clients and select New RADIUS Client. In the wizard, specify the IP address (or DNS name) of the PIX firewall&amp;rsquo;s internal IP address and the shared secret. Note that this shared secret is the same secret key specified in the PIX configuration above. RADIUS clients use this to authenticate to RADIUS servers, so make it a reasonably strong password.&lt;/p&gt;
-
-&lt;p&gt;Now create a remote access policy. Right-click on Remote Access Policies and select New Remote Access Policy. In the wizard, specify a name, select to create a custom policy, and then add the following conditions to the policy:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;NAS-IP-Address: This will be the IP address of the PIX firewall&amp;rsquo;s internal interface. This helps to ensure that this policy only applies to VPN requests from this firewall and not from any other RADIUS client.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Windows-Groups: This should be the security group created earlier. Any user that should be allowed to authenticate on a VPN connection will need to be a member of this group.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The rest of the policy should be very straightforward. Make this policy the first policy (using the Move Up/Move Down commands in the IAS console), add a user to the group created earlier, and then test your connection. Remote systems attempting to connect via PPTP should now be able to authenticate the VPN connection using their Active Directory usernames and passwords.&lt;/p&gt;
-
-&lt;p&gt;Although this was written from the perspective of authenticating PPTP connections, the process should be very similar for IPSec VPN clients as well.&lt;/p&gt;
 </description>
         </item>
       
@@ -940,6 +1028,22 @@ nat (inside) 0 access-list acl-nat0
     
       
         <item>
+          <title>Just About Ready</title>
+          <link>http://lowescott.github.io/2005/11/19/just-about-ready/</link>
+          <pubDate>Sat, 19 Nov 2005 23:30:46 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/19/just-about-ready/</guid>
+          <description>&lt;p&gt;This new blog is just about ready for public consumption. I just finished configuring the permalink structure so that all posts have a static URL, using a pretty common structure that includes the date of the post in the URL. (This seems to be a reasonably well-accepted practice.)&lt;/p&gt;
+
+&lt;p&gt;With the static URLs for permalinks also come static URLs for category archives and feeds. Unfortunately, it looks like I&amp;rsquo;ll have to go back and rework any internal links I created in my own posts.&lt;/p&gt;
+
+&lt;p&gt;In addition, I reworked the template to include a hyperlink for adding a post&amp;rsquo;s URL to your &lt;a href=&#34;http://del.icio.us/&#34;&gt;del.icio.us&lt;/a&gt; bookmarks. Now you can add an entry to your bookmark list with ease!&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>Sony Keeps Digging Itself Deeper</title>
           <link>http://lowescott.github.io/2005/11/10/sony-keeps-digging-itself-deeper/</link>
           <pubDate>Thu, 10 Nov 2005 19:00:21 &#43;0000</pubDate>
@@ -954,6 +1058,30 @@ nat (inside) 0 access-list acl-nat0
 &lt;p&gt;Finally, to make matters worse&amp;hellip;check out &lt;a href=&#34;http://entmag.com/news/article.asp?editorialsid=7033&#34;&gt;this news&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Put it all together, and you get a mistake so massive that it could change Sony&amp;rsquo;s business fortunes. Don&amp;rsquo;t believe me? Are &lt;strong&gt;&lt;em&gt;you&lt;/em&gt;&lt;/strong&gt; going to buy any Sony CDs or software now, after everything that&amp;rsquo;s been disclosed? I&amp;rsquo;m not, that&amp;rsquo;s for sure. (Of course, I don&amp;rsquo;t really have to worry about it that much since I&amp;rsquo;m using a Mac and not Windows, but that&amp;rsquo;s a different story for a different day.)&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>It Was Bound to Happen</title>
+          <link>http://lowescott.github.io/2005/11/09/it-was-bound-to-happen/</link>
+          <pubDate>Wed, 09 Nov 2005 16:17:25 &#43;0000</pubDate>
+          <author>Scott Lowe</author>
+          <guid>http://lowescott.github.io/2005/11/09/it-was-bound-to-happen/</guid>
+          <description>&lt;p&gt;To a certain extent, I agree with the belief that operating systems and applications that don&amp;rsquo;t have a significant market share like Windows, IIS, and Exchange won&amp;rsquo;t get targeted as frequently and therefore will have a &amp;ldquo;better&amp;rdquo; security track record. I don&amp;rsquo;t agree that this is the &lt;em&gt;only&lt;/em&gt; reason that Linux, Mac OS X, and others haven&amp;rsquo;t seen as many security vulnerabilities and the oh-so-fun network worms that invariably accompany them. But I will agree that as these alternatives gain in popularity, more hackers are going to target them.&lt;/p&gt;
+
+&lt;p&gt;As a result, it&amp;rsquo;s no surprise that a &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1882889,00.asp&#34;&gt;new Linux worm&lt;/a&gt; has recently emerged. I mean, it was bound to happen. Linux is surging in popularity, as Linus Torvalds and other developers continue to &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1881470,00.asp&#34;&gt;add features&lt;/a&gt; to the Linux kernel and more and more corporations deploy Linux. Of course the malware authors are going to try something like this. I doesn&amp;rsquo;t surprise me in the least. While this one is fairly low-tech, you can bet that future variants of this worm (as well as new worms) will be more complex and more dangerous.&lt;/p&gt;
+
+&lt;p&gt;I also fully expect that the anti-Linux crowd will shout that this is the end of the line for Linux, just like the anti-Microsoft crowd shouts &amp;ldquo;Down with Windows!&amp;rdquo; everytime Microsoft patches a critical security flaw that could be exploited by an automated worm (side note: new Microsoft critical security flaw &lt;a href=&#34;http://www.microsoft.com/technet/security/Bulletin/MS05-053.mspx&#34;&gt;patched yesterday&lt;/a&gt;, go have a look and make sure you are protected). This just isn&amp;rsquo;t the case. Neither Windows nor Linux are going to go away, and each of them has value for businesses today. The best bet for any organization is to use the product that best fits the need and then make sure that the product is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;properly &lt;em&gt;configured&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;properly &lt;em&gt;patched&lt;/em&gt;; and&lt;/li&gt;
+&lt;li&gt;properly &lt;em&gt;maintained&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Following these guidelines, businesses and consumers can safely deploy the products, technologies, and platforms that best meet their needs without falling prey to technology bigotry.&lt;/p&gt;
 </description>
         </item>
       
@@ -1140,24 +1268,6 @@ nat (inside) 0 access-list acl-nat0
     
       
         <item>
-          <title>Technology Convergence</title>
-          <link>http://lowescott.github.io/2005/10/19/technology-convergence/</link>
-          <pubDate>Wed, 19 Oct 2005 15:37:16 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/10/19/technology-convergence/</guid>
-          <description>&lt;p&gt;It&amp;rsquo;s about time. I&amp;rsquo;ve been waiting for someone to take revolutionary (in my opinion, at least) technologies such as virtualization, blade servers (or any alternative server form factors), and thin-client access and combine them. And that&amp;rsquo;s exactly what &lt;a href=&#34;http://www.ibm.com/&#34;&gt;IBM&lt;/a&gt;, &lt;a href=&#34;http://www.vmware.com/&#34;&gt;VMware&lt;/a&gt;, and &lt;a href=&#34;http://www.citrix.com/&#34;&gt;Citrix&lt;/a&gt; are doing, as discussed &lt;a href=&#34;http://www.eweek.com/article2/0,1759,1873113,00.asp&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Leveraging their individual strengths (IBM&amp;rsquo;s hardware, VMware&amp;rsquo;s virtualization, and Citrix&amp;rsquo;s access technologies), the group is rolling out a hosted client infrastructure that will compete directly with so-called &amp;ldquo;blade PCs&amp;rdquo; (from companies such as &lt;a href=&#34;http://www.clearcube.com/controller/home.php&#34;&gt;ClearCube&lt;/a&gt;) and traditional thin clients (from companies such as &lt;a href=&#34;http://www.wyse.com/index.htm&#34;&gt;Wyse&lt;/a&gt; and &lt;a href=&#34;http://www.neoware.com/&#34;&gt;Neoware&lt;/a&gt;). The nice thing about this solution is that it works equally well with full PCs and thin client devices.&lt;/p&gt;
-
-&lt;p&gt;This is good stuff. IBM&amp;rsquo;s blade servers are well-respected, and IBM&amp;rsquo;s integration of their blades with technologies from Cisco Systems (such as their Cisco Systems Intelligent Gigabit Ethernet Switch Module for the IBM eServer BladeCenter, more information available &lt;a href=&#34;http://www-132.ibm.com/webapp/wcs/stores/servlet/ProductDisplay?productId=8712463&amp;amp;storeId=1&amp;amp;langId=-1&amp;amp;catalogId=-840&#34;&gt;here&lt;/a&gt;) gives them a leg up on the competitors. As for virtualization&amp;hellip;well, VMware invented the market, and while &lt;a href=&#34;http://www.microsoft.com/&#34;&gt;Microsoft&lt;/a&gt; may be offering a virtualization product of its own they have a long way to go to catch up. VMware&amp;rsquo;s latest version of &lt;a href=&#34;http://www.vmware.com/products/esx/&#34;&gt;ESX Server&lt;/a&gt;  offers much-improved resource utilization and scheduling functionality, particularly when used in combination with the latest version of &lt;a href=&#34;http://www.vmware.com/products/vc/&#34;&gt;VirtualCenter&lt;/a&gt;. Likewise, Citrix pioneered multi-user Windows and the ICA protocol, and they continue to innovate in recent versions of &lt;a href=&#34;http://www.citrix.com/English/ps2/products/product.asp?contentID=186&amp;amp;ntref=hp_nav_US&#34;&gt;Presentation Manager&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Combining these technologies to create a dynamic environment where users are seamlessly connected to virtual servers hosted on and across multiple blade servers is a natural evolution for each of these technologies. (I would guess that I don&amp;rsquo;t need to point out how full circle this brings enterprise computing environments.)&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
           <title>Protecting Against OpenSSL SSLv2 Flaw</title>
           <link>http://lowescott.github.io/2005/10/18/protecting-against-openssl-sslv2-flaw/</link>
           <pubDate>Tue, 18 Oct 2005 14:42:43 &#43;0000</pubDate>
@@ -1231,42 +1341,6 @@ nat (inside) 0 access-list acl-nat0
 &lt;/ol&gt;
 
 &lt;p&gt;The real question, in my mind, is this: why isn&amp;rsquo;t Microsoft going to fix this bug? We may never know the answer to that question.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>An Interesting Viewpoint</title>
-          <link>http://lowescott.github.io/2005/10/06/an-interesting-viewpoint/</link>
-          <pubDate>Thu, 06 Oct 2005 12:27:44 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/10/06/an-interesting-viewpoint/</guid>
-          <description>&lt;p&gt;I don&amp;rsquo;t know that I necessarily agree with his viewpoint, but in &lt;a href=&#34;http://www.oreillynet.com/pub/wlg/7977?CMP=OTC-13IV03560550&#34;&gt;&amp;ldquo;A fake freedom&amp;rdquo;&lt;/a&gt;, the question is raised: Do we really own our data?&lt;/p&gt;
-
-&lt;p&gt;Are the pictures uploaded to &lt;a href=&#34;http://www.flickr.com/&#34;&gt;Flickr&lt;/a&gt; still yours? What about the bookmarks you&amp;rsquo;ve posted on &lt;a href=&#34;http://del.icio.us/&#34;&gt;del.icio.us&lt;/a&gt;? Or the weblog entries on a free weblog service such as &lt;a href=&#34;http://www.blogger.com/&#34;&gt;Blogger&lt;/a&gt;? You think so? Says who?&lt;/p&gt;
-
-&lt;p&gt;Truly paranoid people could be worried that these services might maintain copies of their information, even after the user has requested that they be deleted. Of course, if you are really worried about copies of stuff, you may want to think about the &lt;a href=&#34;http://www.google.com/&#34;&gt;Google&lt;/a&gt; cache&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;At the very least, it would probably be a good idea to keep copies of this kind of information somewhere other than these &amp;ldquo;free&amp;rdquo; services. Otherwise, you just never know when a site may suddenly go dark, so to speak, for any number of reasons.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>Open Source on Mac OS X</title>
-          <link>http://lowescott.github.io/2005/10/06/open-source-on-mac-os-x/</link>
-          <pubDate>Thu, 06 Oct 2005 12:04:41 &#43;0000</pubDate>
-          <author>Scott Lowe</author>
-          <guid>http://lowescott.github.io/2005/10/06/open-source-on-mac-os-x/</guid>
-          <description>&lt;p&gt;Most people automatically equate &amp;ldquo;open source&amp;rdquo; with Linux or &lt;a href=&#34;http://www.apache.org/&#34;&gt;Apache&lt;/a&gt;. But there&amp;rsquo;s more to open source than that. There are a wide variety of open source projects that are also targeted at (gasp) &lt;a href=&#34;http://www.microsoft.com/windows/&#34;&gt;Microsoft Windows&lt;/a&gt; and &lt;a href=&#34;http://www.apple.com/macosx/&#34;&gt;Mac OS X&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Being a Mac user myself, I was particularly interested in &lt;a href=&#34;http://software.newsforge.com/article.pl?sid=05/09/20/166254&#34;&gt;this article&lt;/a&gt; recently posted at &lt;a href=&#34;http://www.newsforge.com/&#34;&gt;NewsForge&lt;/a&gt;. Some of the projects listed there were new to me; for example, I had never heard of or used &lt;a href=&#34;http://www.opencommunity.co.uk/vienna2.html&#34;&gt;Vienna&lt;/a&gt;. Given that I don&amp;rsquo;t like brushed metal interfaces (can&amp;rsquo;t stand them) and that I already use a commercial RSS reader, Vienna won&amp;rsquo;t do me much good.&lt;/p&gt;
-
-&lt;p&gt;Many of the projects listed there, though, I was familiar with and actually using currently. For example, &lt;a href=&#34;http://www.adiumx.com/&#34;&gt;Adium X&lt;/a&gt; is my default IM client (I use it to stay connected to MSN, AIM, and Google Talk), &lt;a href=&#34;http://cyberduck.ch/&#34;&gt;Cyberduck&lt;/a&gt; is my FTP/SFTP client, and &lt;a href=&#34;http://growl.info/&#34;&gt;Growl&lt;/a&gt; helps keep me informed about what is happening with all the various applications I have running. I&amp;rsquo;ve never used &lt;a href=&#34;http://seashore.sourceforge.net/&#34;&gt;Seashore&lt;/a&gt;, but I&amp;rsquo;ll probably have a look at it soon (I&amp;rsquo;ve been looking for a good image editor).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.nothickmanuals.info/doku.php?id=opensourcemac&#34;&gt;This link&lt;/a&gt; (also referenced in the NewsForge article) lists an even larger variety of open source Mac applications. Again, some I recognize (and use), a lot that I don&amp;rsquo;t. If you are a Mac user, I encourage you to take another look at some of the many high-quality open source projects available.&lt;/p&gt;
 </description>
         </item>
       
