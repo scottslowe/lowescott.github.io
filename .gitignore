@@ -3,3 +3,7 @@
 ._*
 .Spotlight-V100
 .Trashes
+.bundle/
+vendor/
+bin/
+Gemfile.lock
