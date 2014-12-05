@@ -1,0 +1,29 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               "Scott's Weblog"
+tagline:             "The weblog of an IT pro specializing in networking, virtualization, and cloud computing"
+description:         "A collection of technical articles with the occasional personal post, this is has been Scott's home on the web since 2005"
+url:                 http://lowescott.github.io
+baseurl:             /
+paginate:            5
+
+# About/contact
+author:
+  name:              Scott Lowe
+  url:               https://twitter.com/scott_lowe
+  email:             scott.lowe@scottlowe.org
+
+# Custom vars
+version:             1.0.0
+
+# Exclude Ruby gem stuff
+exclude:             ["vendor"]
