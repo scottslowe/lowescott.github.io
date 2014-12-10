@@ -2,18 +2,19 @@
 title: About
 author: slowe
 layout: page
+permalink: /about/
 ---
 <img src="http://blog.scottlowe.org/wp-content/uploads/2008/09/slowe-inside-small-02-150x150.png" alt="" title="Scott Lowe" width="150" height="150" class="alignleft size-thumbnail wp-image-882" />Thanks for visiting my site! My name is Scott Lowe, and this is my weblog about various technical subjects and the occasional personal topic.
 
 ### Personal Information
 
-I live with my wife, Crystal, and our kids in the Denver, CO area. When I&#8217;m not working or spending time with my family, I&#8217;m enjoying the outdoor life or working in our church.
+I live with my wife, Crystal, and our kids in the Denver, CO area. When I'm not working or spending time with my family, I'm enjoying the outdoor life or working in our church.
 
 ### Professional Information
 
-I&#8217;ve been in the Information Technology field for 20 years, starting out with desktop support. Along the way, I worked as an instructor, a technical trainer and Microsoft Certified Trainer (MCT), systems administrator, IT manager, systems engineer, consultant, Chief Technology Officer (CTO) for a small start-up, and practice lead for a national VAR&#8217;s VMware practice. Most recently, I worked as a forward-looking technologist for a large enterprise storage vendor based in the northeast US. Currently, I work as an engineering architect for VMware, focusing on network virtualization and software-defined networking (SDN).
+I've been in the Information Technology field for 20 years, starting out with desktop support. Along the way, I worked as an instructor, a technical trainer and Microsoft Certified Trainer (MCT), systems administrator, IT manager, systems engineer, consultant, Chief Technology Officer (CTO) for a small start-up, and practice lead for a national VAR's VMware practice. Most recently, I worked as a forward-looking technologist for a large enterprise storage vendor based in the northeast US. Currently, I work as an engineering architect for VMware, focusing on network virtualization and software-defined networking (SDN).
 
-In addition, I am a former contributor to [SearchVMware.com][1], a VMware-focused website with technical articles, how-to&#8217;s, tips, and news. I also had some articles published on [SearchServerVirtualization.com][2] and I am a former columnist for [Virtualization Review][3] magazine.
+In addition, I am a former contributor to [SearchVMware.com][1], a VMware-focused website with technical articles, how-to's, tips, and news. I also had some articles published on [SearchServerVirtualization.com][2] and I am a former columnist for [Virtualization Review][3] magazine.
 
 I currently have six published books to my credit, all published by Wiley/Sybex:
 
@@ -30,11 +31,11 @@ My LinkedIn profile is available [here][4].
 
 ### Disclaimer
 
-Any views or opinions expressed here are strictly my own. While I am a blogger who works for VMware, blogging is not my job for that vendor; it&#8217;s my personal passion. As this is a personal blog, not a corporate blog, I am solely responsible for all content published here. Content published here is not read, reviewed, or approved in advance by my employer and does not necessarily represent or reflect the views or opinions of my employer or any of its divisions, subsidiaries, or business partners.
+Any views or opinions expressed here are strictly my own. While I am a blogger who works for VMware, blogging is not my job for that vendor; it's my personal passion. As this is a personal blog, not a corporate blog, I am solely responsible for all content published here. Content published here is not read, reviewed, or approved in advance by my employer and does not necessarily represent or reflect the views or opinions of my employer or any of its divisions, subsidiaries, or business partners.
 
 ### Contact Me
 
-If you&#8217;d like to send me an e-mail, you can reach me at scott dot lowe at scottlowe dot org.
+If you'd like to send me an e-mail, you can reach me at scott dot lowe at scottlowe dot org.
 
  [1]: http://searchvmware.techtarget.com
  [2]: http://searchservervirtualization.techtarget.com
