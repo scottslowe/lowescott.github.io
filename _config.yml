@@ -12,8 +12,8 @@ relative_permalinks: true
 title:               "Scott's Weblog"
 tagline:             "The weblog of an IT pro specializing in networking, virtualization, and cloud computing"
 description:         "A collection of technical articles with the occasional personal post, this is has been Scott's home on the web since 2005"
-url:                 http://lowescott.github.io/
-baseurl:             http://lowescott.github.io/
+url:                 http://lowescott.github.io
+baseurl:             /
 paginate:            5
 
 # About/contact
