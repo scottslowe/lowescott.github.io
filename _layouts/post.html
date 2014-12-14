@@ -6,7 +6,7 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
-  <span class="post-date"><a href="{{ site.url }}/tags/">Tags:</a> {{ page.tags | join: ', ' }}</span>
+  <span class="post-date"><a href="{{ site.url }}/tags/">Tags:</a> {{ page.tags | sort | join: ', ' }}</span>
 </div>
 
 <div class="related">
