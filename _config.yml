@@ -11,7 +11,7 @@ relative_permalinks: true
 # Setup
 title:               "Scott's Weblog"
 tagline:             "The weblog of an IT pro specializing in networking, virtualization, and cloud computing"
-description:         "A collection of technical articles with the occasional personal post, this is has been Scott's home on the web since 2005"
+description:         "Since 2005, offering technical posts and how-to articles from an IT pro specializing in networking, virtualization, cloud computing, and Macs"
 url:                 http://lowescott.github.io
 baseurl:             /
 paginate:            5
@@ -28,4 +28,4 @@ author:
 version:             1.0.0
 
 # Exclude Ruby gem stuff
-exclude:             ["vendor"]
+exclude:             [vendor, Gemfile, Gemfile.lock]
