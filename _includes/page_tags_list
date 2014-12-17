@@ -1,0 +1,17 @@
+{% comment %}<!--
+The page_tags_list include lists the tags for a given page, with hyperlinks back to the list of all site tags. It expects an array, like page.tags, not a hash, like site.tags.
+Usage:
+  1) assign the 'page_tags' variable to a valid array of tags.
+  2) include page_tags_list
+  example:
+  	  {% assign page_tags = page.tags %}  
+  	  {% include page_tags_list %}
+-->{% endcomment %}
+
+{% for tag in page_tags %}
+  <a href="{{ site.url }}/tags/#{{ tag }}">{{ tag }}</a>
+  {% unless forloop.last %}
+    &middot;
+  {% endunless %}
+{% endfor %}
+{% assign page_tags = nil %}
