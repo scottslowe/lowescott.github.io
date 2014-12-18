@@ -10,6 +10,15 @@ layout: default
     {% assign page_tags = page.tags | sort %}
     {% include page_tags_list %}
   </span>
+  {% if page.previous %}
+    <span class="post-date">
+    &larr; Previous Post: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></span>
+  {% endif %}
+  {% if page.next %}
+    <span class="post-date">
+    Next Post: <a href="{{ page.next.url }}">{{ page.next.title }}</a> &rarr;</span>
+  {% endif %}
+  
 </div>
 
 <div class="related">
