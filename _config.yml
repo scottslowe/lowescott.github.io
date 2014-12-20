@@ -28,4 +28,4 @@ author:
 version:             1.0.0
 
 # Exclude Ruby gem stuff
-exclude:             [vendor, Gemfile, Gemfile.lock]
+exclude:             ["vendor"]
