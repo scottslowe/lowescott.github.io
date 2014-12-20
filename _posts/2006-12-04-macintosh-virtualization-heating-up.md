@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2006-12-04 00:35:19+00:00
+date: 2006-12-04 08:35:19+00:00
 layout: post
 slug: macintosh-virtualization-heating-up
 title: Macintosh Virtualization Heating Up
