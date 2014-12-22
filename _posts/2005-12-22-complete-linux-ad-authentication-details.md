@@ -80,7 +80,7 @@ That should be it. Once you do that, you should be able to use `kinit` from a Li
 
 At this point, any PAM-aware service that is configured to use the stacked system file (such as the system-auth configuration on Red Hat-based distributions) will use Active Directory for authentication. Note, however, that unless you also add the pam\_mkhomedir.so module in the PAM configuration, home directories will have to be created manually for any Active Directory account that may log on to that server. (I generally recommend the use of pam\_mkhomedir.so in this situation.)
 
-[1]: http://blog.scottlowe.org/2007/01/15/linux-ad-integration-version-4/
+[1]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
 [2]: {% post_url 2005-07-13-linux-ad-integration-direction %}
 [3]: {% post_url 2005-07-18-minor-linux-ad-hiccup-fixed-hopefully %}
 [4]: {% post_url 2005-08-16-strange-ntpd-problem-on-centos-41 %}

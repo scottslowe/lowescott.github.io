@@ -19,7 +19,7 @@ tags:
 - Windows
 ---
 
-**UPDATE:** A revised version of these instructions is available [here](http://blog.scottlowe.org/2007/01/15/linux-ad-integration-version-4/).
+**UPDATE:** A revised version of these instructions is available [here][5].
 
 The integration of (what was formerly called) Services for UNIX into [Windows Server 2003 R2](http://www.microsoft.com/windowsserver2003/) also brought some other changes; most notably, a change in the schema. To accommodate those changes, I've updated my Linux-AD integration instructions (the [previous instructions are here][1] for pre-R2 versions of Windows). If you need to integrate Linux systems for authentication into Active Directory with Windows Server 2003 R2, these instructions should get you there. (Note that a [previous version][2] of these instructions is also available.)
 
@@ -113,3 +113,4 @@ If anyone finds any errors, discrepancies, or inaccuracies in this article, plea
 [2]: {% post_url 2006-04-27-linux-ad-integration-with-windows-server-2003-r2 %}
 [3]: {% post_url 2006-07-28-active-directory-and-vas %}
 [4]: {% post_url 2006-05-16-follow-up-on-esx-server-integration %}
+[5]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
