@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-08-17 00:08:14+00:00
+date: 2005-08-17 11:08:14+00:00
 layout: post
 slug: xc-connect
 title: XC Connect

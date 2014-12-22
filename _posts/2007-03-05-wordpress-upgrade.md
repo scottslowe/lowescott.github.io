@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2007-03-05 06:04:10+00:00
+date: 2007-03-05 12:04:10+00:00
 layout: post
 slug: wordpress-upgrade
 title: WordPress Upgrade

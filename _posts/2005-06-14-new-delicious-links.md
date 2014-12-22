@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-06-14 00:42:41+00:00
+date: 2005-06-14 10:42:41+00:00
 layout: post
 slug: new-delicious-links
 title: New del.icio.us Links

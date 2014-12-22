@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-08-03 02:16:28+00:00
+date: 2005-08-03 12:16:28+00:00
 layout: post
 slug: hackers-at-defcon-race-to-expose-cisco-internet-flaw
 title: Hackers at Defcon race to expose Cisco Internet flaw

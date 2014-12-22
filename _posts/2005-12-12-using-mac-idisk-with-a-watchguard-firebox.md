@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-12-12 00:37:38+00:00
+date: 2005-12-12 09:37:38+00:00
 layout: post
 slug: using-mac-idisk-with-a-watchguard-firebox
 title: Using .Mac iDisk with a WatchGuard Firebox

@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-11-04 08:48:20+00:00
+date: 2005-11-04 09:48:20+00:00
 layout: post
 slug: openbsd-pcn0-driver-issue-resolved
 title: OpenBSD pcn0 Driver Issue Resolved

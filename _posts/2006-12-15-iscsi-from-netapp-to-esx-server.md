@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2006-12-15 00:47:31+00:00
+date: 2006-12-15 10:47:31+00:00
 layout: post
 slug: iscsi-from-netapp-to-esx-server
 title: iSCSI from NetApp to ESX Server

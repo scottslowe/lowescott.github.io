@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-08-18 00:40:32+00:00
+date: 2005-08-18 12:40:32+00:00
 layout: post
 slug: additional-information-coming-soon
 title: Additional Information Coming Soon

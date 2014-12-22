@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-08-03 02:25:54+00:00
+date: 2005-08-03 12:25:54+00:00
 layout: post
 slug: this-will-be-something-to-watch
 title: This Will Be Something to Watch

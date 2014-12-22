@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-07-22 00:19:08+00:00
+date: 2005-07-22 11:19:08+00:00
 layout: post
 slug: linux-ad-integration-wrap-up
 title: Linux-AD Integration Wrap-Up

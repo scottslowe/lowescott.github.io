@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-12-03 08:21:54+00:00
+date: 2005-12-03 09:21:54+00:00
 layout: post
 slug: protecting-owa-with-apache
 title: Protecting OWA with Apache

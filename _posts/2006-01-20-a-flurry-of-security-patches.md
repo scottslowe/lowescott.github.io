@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2006-01-20 08:25:37+00:00
+date: 2006-01-20 09:25:37+00:00
 layout: post
 slug: a-flurry-of-security-patches
 title: A Flurry of Security Patches

@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2006-07-23 00:03:58+00:00
+date: 2006-07-23 10:03:58+00:00
 layout: post
 slug: josh-bates
 title: Josh Bates

@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-08-09 00:42:26+00:00
+date: 2005-08-09 10:42:26+00:00
 layout: post
 slug: authentication-and-ssl-easier-than-expected
 title: Authentication and SSL Easier Than Expected

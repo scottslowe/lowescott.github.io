@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2006-08-29 08:25:39+00:00
+date: 2006-08-29 11:25:39+00:00
 layout: post
 slug: follow-ups-on-solaris-native-kerberos-authentication
 title: Follow Ups on Solaris, Native Kerberos Authentication

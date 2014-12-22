@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-09-22 08:03:33+00:00
+date: 2005-09-22 11:03:33+00:00
 layout: post
 slug: gprs-vs-bluetooth
 title: GPRS vs. Bluetooth

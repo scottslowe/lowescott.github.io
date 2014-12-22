@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2006-02-25 08:30:43+00:00
+date: 2006-02-25 12:30:43+00:00
 layout: post
 slug: staying-open
 title: Staying Open

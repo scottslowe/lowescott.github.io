@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2006-01-14 08:55:46+00:00
+date: 2006-01-14 11:55:46+00:00
 layout: post
 slug: cisco-nat-issue
 title: Cisco NAT Issue

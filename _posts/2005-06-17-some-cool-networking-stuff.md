@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-06-17 00:19:21+00:00
+date: 2005-06-17 10:19:21+00:00
 layout: post
 slug: some-cool-networking-stuff
 title: Some Cool Networking Stuff

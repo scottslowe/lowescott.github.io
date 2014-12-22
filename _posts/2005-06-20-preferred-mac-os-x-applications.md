@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-06-20 08:36:34+00:00
+date: 2005-06-20 09:36:34+00:00
 layout: post
 slug: preferred-mac-os-x-applications
 title: Preferred Mac OS X Applications

@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2006-12-05 07:54:47+00:00
+date: 2006-12-05 11:54:47+00:00
 layout: post
 slug: the-future-of-the-os
 title: The Future of the OS

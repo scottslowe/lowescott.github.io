@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-07-18 08:18:41+00:00
+date: 2005-07-18 09:18:41+00:00
 layout: post
 slug: minor-linux-ad-hiccup-fixed-hopefully
 title: Minor Linux-AD Hiccup Fixed (Hopefully)

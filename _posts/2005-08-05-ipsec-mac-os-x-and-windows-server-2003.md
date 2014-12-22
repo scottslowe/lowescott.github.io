@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-08-05 00:55:13+00:00
+date: 2005-08-05 10:55:13+00:00
 layout: post
 slug: ipsec-mac-os-x-and-windows-server-2003
 title: IPSec, Mac OS X, and Windows Server 2003

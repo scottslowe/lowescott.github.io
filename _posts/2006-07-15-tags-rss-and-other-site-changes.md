@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2006-07-15 00:31:53+00:00
+date: 2006-07-15 12:31:53+00:00
 layout: post
 slug: tags-rss-and-other-site-changes
 title: Tags, RSS, and Other Site Changes

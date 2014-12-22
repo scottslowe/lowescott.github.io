@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: false
-date: 2005-07-18 00:03:21+00:00
+date: 2005-07-18 12:03:21+00:00
 layout: post
 slug: matthew-wests-new-album
 title: Matthew West's New Album

@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2006-12-22 08:41:32+00:00
+date: 2006-12-22 11:41:32+00:00
 layout: post
 slug: vmware-fusion-public-beta
 title: VMware Fusion Public Beta
