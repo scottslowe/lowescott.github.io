@@ -25,7 +25,7 @@ And **that**, my friends, is the heart of what I described ages ago (OK, perhaps
 
 My hat is off to the Fusion developers. Well done! A lot of people were predicting that [Parallels](http://www.parallels.com/) had too much of a lead in Mac virtualization, but all of you have definitely proved them wrong. Keep up the good work!
 
-<aside>Boring technical question to any VMware developers, Fusion team members, etc: Is Unity debuting on OS X because of some advantage within Mac OS X itself, or simply because of the timing and the competition? I _am_ a Mac fan, after all, and was curious if my favorite OS had a leg up on the competitors that made it easier to create Unity.</aside>
+&lt;aside&gt;Boring technical question to any VMware developers, Fusion team members, etc: Is Unity debuting on OS X because of some advantage within Mac OS X itself, or simply because of the timing and the competition? I _am_ a Mac fan, after all, and was curious if my favorite OS had a leg up on the competitors that made it easier to create Unity.&lt;/aside&gt;
 
 [1]: {% post_url 2007-06-06-unity-real-or-rumor %}
 [2]: {% post_url 2006-12-26-application-agnosticism %}
