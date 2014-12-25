@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2007-07-09 04:13:03+00:00
+date: 2007-07-09 12:13:03+00:00
 layout: post
 slug: linux-ad-integration-with-windows-server-2008
 title: Linux-AD Integration with Windows Server 2008
