@@ -28,7 +28,7 @@ So, by example, the command I used to create a VLAN interface for VLAN ID 3 look
 
 	ifconfig vlan3 vlan 3 vlandev pcn0
 
-I did find that I couldn't name the VLAN interface ("vlan3", in this case) anything other than vlan_X_, where X was a number. I don't know if this is an OpenBSD limitation, or just an error on my part. The latter is certainly a distinct possibility.
+I did find that I couldn't name the VLAN interface ("vlan3", in this case) anything other than vlanX, where _X_ was a number. I don't know if this is an OpenBSD limitation, or just an error on my part. The latter is certainly a distinct possibility.
 
 Once the VLAN interface, is created, then I just followed the standard OpenBSD way of provisioning an interface---create `/etc/hostname.ifname` (where _ifname_ is the name of the VLAN interface) for each VLAN interface and that should be that.
 
