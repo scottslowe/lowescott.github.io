@@ -48,15 +48,15 @@ If you see something on this list you'd like to see sooner rather than later, pl
 
 * The updated Linux-AD integration instructions that incorporate the use of Samba are found in [Linux-AD Integration, Version 4][4]
 
-* The updated Solaris-AD integration instructions that reference Solaris 10 11/06 (Update 3) and incorporate the use of Samba are found in [Solaris 10-AD Integration, Version 3](http://blog.scottlowe.org/2007/04/25/solaris-10-ad-integration-version-3/)
+* The updated Solaris-AD integration instructions that reference Solaris 10 11/06 (Update 3) and incorporate the use of Samba are found in [Solaris 10-AD Integration, Version 3][5]
 
 * The use of Data ONTAP functionality, such as FlexClones, to enhance VMware quick provisioning functionality is discussed in three different articles:  
 
-[How to Provision VMs Using NetApp FlexClones](http://blog.scottlowe.org/2007/05/11/how-to-provision-vms-using-netapp-flexclones/)  
+[How to Provision VMs Using NetApp FlexClones][6]  
 
-[NetApp FlexClones with VMware, Part 1](http://blog.scottlowe.org/2007/05/15/netapp-flexclones-with-vmware-part-1/)  
+[NetApp FlexClones with VMware, Part 1][7]  
 
-[NetApp FlexClones with VMware, Part 2](http://blog.scottlowe.org/2007/05/17/netapp-flexclones-with-vmware-part-2/)
+[NetApp FlexClones with VMware, Part 2][8]
 
 Enjoy!
 
@@ -64,3 +64,7 @@ Enjoy!
 [2]: {% post_url 2006-05-01-esx-server-integration-with-active-directory %}
 [3]: {% post_url 2006-11-21-greater-ad-integration-via-nfs-and-automounts %}
 [4]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
+[5]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
+[6]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
+[7]: {% post_url 2007-05-15-netapp-flexclones-with-vmware-part-1 %}
+[8]: {% post_url 2007-05-17-netapp-flexclones-with-vmware-part-2 %}

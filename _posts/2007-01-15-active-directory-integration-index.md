@@ -33,17 +33,17 @@ I've grouped the integration articles according to product below.
 
 ## Linux
 
-[Latest version for Windows Server 2008 ("Longhorn")](http://blog.scottlowe.org/2007/07/09/linux-ad-integration-with-windows-server-2008/)
+[Latest version for Windows Server 2008 ("Longhorn")][8]
 
 [Latest version for Windows Server 2003 R2][7]
 
 [Latest version for Windows 2000 Server and Windows Server 2003 (pre-R2)][1]
 
-[SuSE Linux Enterprise Desktop (SLED)-specific version](http://blog.scottlowe.org/2007/03/22/sled-integration-into-active-directory/)
+[SuSE Linux Enterprise Desktop (SLED)-specific version][9]
 
 ## Solaris 10
 
-[Latest version for Solaris 10 x86](http://blog.scottlowe.org/2007/04/25/solaris-10-ad-integration-version-3/)
+[Latest version for Solaris 10 x86][10]
 
 ## Firewalls
 
@@ -55,7 +55,7 @@ I've grouped the integration articles according to product below.
 
 [Latest version for ESX Server 2.5.x][4]
 
-[Latest version for ESX Server 3.0.x](http://blog.scottlowe.org/2007/07/10/esx-server-ad-integration/)
+[Latest version for ESX Server 3.0.x][11]
 
 ## OpenBSD
 
@@ -65,7 +65,7 @@ I've grouped the integration articles according to product below.
 
 [Latest version for 802.1x][6]
 
-[Latest version for Cisco IOS](http://blog.scottlowe.org/2007/07/02/authenticating-to-cisco-ios-via-active-directory/)
+[Latest version for Cisco IOS][12]
 
 As new articles are published or existing articles are revised with new versions, I'll update this post accordingly.
 
@@ -76,3 +76,8 @@ As new articles are published or existing articles are revised with new versions
 [5]: {% post_url 2006-10-16-no-broad-openbsd-ad-integration %}
 [6]: {% post_url 2006-12-07-8021x-integration-with-active-directory %}
 [7]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
+[8]: {% post_url 2007-07-09-linux-ad-integration-with-windows-server-2008 %}
+[9]: {% post_url 2007-03-22-sled-integration-into-active-directory %}
+[10]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
+[11]: {% post_url 2007-07-10-esx-server-ad-integration %}
+[12]: {% post_url 2007-07-02-authenticating-to-cisco-ios-via-active-directory %}
