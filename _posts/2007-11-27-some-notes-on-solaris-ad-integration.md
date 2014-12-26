@@ -23,7 +23,7 @@ This afternoon, I walked back through my own [instructions for integrating Solar
 
 So, without further ado, here are the notes I collected in no particular order:
 
-* The Blastwave Samba package does _not_ create it's own `smb.conf` file in `/opt/csw/etc/samba`. This is correctly pointed out in the latest integration instructions, but I wanted to mention it again here. You'll need to manually create the `/opt/csw/etc/samba/smb.conf` file before attempting to join the Solaris server to Active Directory via the `net ads join` command.
+* The Blastwave Samba package does _not_ create its own `smb.conf` file in `/opt/csw/etc/samba`. This is correctly pointed out in the latest integration instructions, but I wanted to mention it again here. You'll need to manually create the `/opt/csw/etc/samba/smb.conf` file before attempting to join the Solaris server to Active Directory via the `net ads join` command.
 
 * The defaultServerList portion of the `ldapclient manual` command only supports IP addresses. The LDAP client service kept going into maintenance mode when using hostnames. On a hunch, I substituted IP addresses for hostnames, and it worked. Go figure.
 

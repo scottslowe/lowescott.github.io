@@ -22,7 +22,7 @@ Apparently, [this image](http://blogs.technet.com/blogfiles/doxley/WindowsLiveWr
 
 OK, done now? Good. Let's take a closer look at the information presented in this article:
 
-* On the line listed "Migration," there's a checkmark in the column for the Microsoft solution. Since Microsoft's solution---today in the form of Virtual Server, late next year in the form of Hyper-V--[lacks any form of live migration][1] (and you [can't count "Quick Migration"][2]), this table must be referring to cold migrations. That being the case, then you don't need the extra charges listed in the first column.
+* On the line listed "Migration," there's a checkmark in the column for the Microsoft solution. Since Microsoft's solution---today in the form of Virtual Server, late next year in the form of Hyper-V---[lacks any form of live migration][1] (and you [can't count "Quick Migration"][2]), this table must be referring to cold migrations. That being the case, then you don't need the extra charges listed in the first column.
 
 * If that is not the case and we _are_ referring to live migration functionality, then the checkmark needs to be removed from Microsoft's column. And, I would ask you this question: how much is it worth to be able to move a workload from one physical host to another physical host during the midst of the workday with no interruption in service?
 
