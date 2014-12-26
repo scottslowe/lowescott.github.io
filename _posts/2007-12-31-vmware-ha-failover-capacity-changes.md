@@ -20,8 +20,8 @@ Continuing the discussion regarding VMware HA failover capacity started [in this
 Alerted to [this VMware KB article](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1002080&sliceId=2&docTypeID=DT_KB_1_1&dialogID=38398839&stateId=0%200%2038394611) by Duncan Epping of Yellow Bricks in [this posting](http://www.yellow-bricks.com/2007/12/30/new-version-of-best-practices-and-advanced-features-for-vmware-ha-pdf/) on his site, there's a reference in the PDF from VMware that discusses a new option for setting the default "slot size". To quote from Duncan's site:
 
 >If no VM reservations are set in a cluster VMware HA assumes cluster-wide average CPU and memory reservation sizes of 256 Mhz and 256 MB to use in admission control calculations. Alternative values can be specified instead...  
-
->Add the das.vmMemoryMinMB = <value> and das.vmCpuMinMHz = <value> option/value pairs to the cluster's settings where <value> represents the desired values in terms of MB and MHz. Higher values will reserve more space for failovers.
+>
+>Add the `das.vmMemoryMinMB = <value>` and `das.vmCpuMinMHz = <value>` option/value pairs to the cluster's settings where `<value>` represents the desired values in terms of MB and MHz. Higher values will reserve more space for failovers.
 
 So this _looks_ like it's allowing us to specify how VMware HA should calculate the default slot size, but as in so many areas of VMware HA there is precious little documentation. I like VMware HA; I really do. But VMware needs to get somebody on the ball to document the exact configuration and operation of VMware HA so that this solution becomes less of the "black box" that it is today. As it stands currently, many customers are forgoing the benefits of VMware HA because it can't be reliably and consistently configured and debugged.
 
