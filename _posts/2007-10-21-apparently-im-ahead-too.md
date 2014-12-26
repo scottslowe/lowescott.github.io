@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2007-10-21 03:52:22+00:00
+date: 2007-10-21 11:52:22+00:00
 layout: post
 slug: apparently-im-ahead-too
 title: Apparently, I'm Ahead Too

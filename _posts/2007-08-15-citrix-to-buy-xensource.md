@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2007-08-15 00:30:40+00:00
+date: 2007-08-15 10:30:40+00:00
 layout: post
 slug: citrix-to-buy-xensource
 title: Citrix to buy XenSource

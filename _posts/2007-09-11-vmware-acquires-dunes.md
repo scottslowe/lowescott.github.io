@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2007-09-11 08:47:48+00:00
+date: 2007-09-11 10:47:48+00:00
 layout: post
 slug: vmware-acquires-dunes
 title: VMware Acquires Dunes

@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2007-08-07 00:01:21+00:00
+date: 2007-08-07 10:01:21+00:00
 layout: post
 slug: a-few-more-quick-thoughts-on-fusion
 title: A Few More Quick Thoughts on Fusion

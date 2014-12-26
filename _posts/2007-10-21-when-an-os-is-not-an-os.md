@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2007-10-21 03:42:16+00:00
+date: 2007-10-21 12:42:16+00:00
 layout: post
 slug: when-an-os-is-not-an-os
 title: When an OS is not an OS

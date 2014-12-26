@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2007-09-13 08:29:52+00:00
+date: 2007-09-13 11:29:52+00:00
 layout: post
 slug: vmworld-2007-day-3-keynote-liveblog
 title: VMworld 2007 Day 3 Keynote Liveblog
