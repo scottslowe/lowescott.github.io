@@ -34,9 +34,7 @@ To reconfigure the host to change the heartbeat delay, follow the steps below:
 
 3. Using a text editor such as nano or vi, edit the file `/etc/vmware/hostd/config.xml` and set the value of heartbeatDelayInSecs to 0, like this:
 
-	&lt;vmsvc&gt;  
-	&lt;heartbeatDelayInSecs&gt;0&lt;/heartbeatDelayInSecs&gt;  
-	&lt;/vmsvc&gt;
+	{% gist lowescott/f3c09143b70fcbcf0b25 %}
 
 4. Restart the management agents on the VMware ESX server.
 
