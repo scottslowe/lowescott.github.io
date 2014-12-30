@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2008-10-16 02:26:40+00:00
+date: 2008-10-16 14:26:40+00:00
 layout: post
 slug: a-couple-of-product-announcements
 title: A Couple of Product Announcements
