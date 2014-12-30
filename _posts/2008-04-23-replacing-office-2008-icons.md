@@ -21,7 +21,7 @@ So, I did what any enterprising Mac user would do. I replaced them with a new se
 
 Here's what the new icons look like:
 
-![New Office 2008 icons](http://blog.scottlowe.org/wp-content/uploads/2008/04/new-office-icons.jpg)
+![New Office 2008 icons]({{ site.url }}/public/img/new-office-icons.jpg)
 
 I found the replacement icons [here](http://www.deskmodr.com/?s=Office); look for the set titled "HLD V2 by Henri Liriani". The icons are well designed and come in a variety of sizes. Upon unpacking the downloaded file, I simply took the .ICNS files in the package and replaced the original files in the application bundles.
 
