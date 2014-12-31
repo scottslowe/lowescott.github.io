@@ -24,7 +24,7 @@ Other sites reporting on Fusion's release:
 
 [VMware Releases Fusion](http://www.pcworld.com/article/id,135394-pg,1/article.html)
 
-[News: VMWare Fusion set for Monday release](http://feeds.macworld.com/~r/macworld/all/~3/139964787/index.php)
+[News: VMware Fusion set for Monday release](http://feeds.macworld.com/~r/macworld/all/~3/139964787/index.php)
 
 [VMware Fusion set for August 6th release](http://www.tuaw.com/2007/08/02/vmware-fusion-set-for-august-6th-release/)
 

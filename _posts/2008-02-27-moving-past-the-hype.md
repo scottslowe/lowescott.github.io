@@ -26,9 +26,9 @@ The latest volley comes from a "one-two" punch over the past couple of weeks. Fi
 
 Fortunately, some level of clarity has started to prevail about this flaw:
 
-* [VMWare Security Crumbling: Not Really](http://secauditor.wordpress.com/2008/02/26/vmware-security-crumbling-not-really/)
+* [VMware Security Crumbling: Not Really](http://secauditor.wordpress.com/2008/02/26/vmware-security-crumbling-not-really/)
 
-* [VMWare getting a lot of bad press](http://techdulla.wordpress.com/2008/02/26/vmware-getting-a-lot-of-bad-press/)
+* [VMware getting a lot of bad press](http://techdulla.wordpress.com/2008/02/26/vmware-getting-a-lot-of-bad-press/)
 
 The other "flaw" that's gotten a fair amount of attention---and hype---is the exploit that can affect VMs during a live migration. Of course, this assumes that necessary steps weren't taken to protect and isolate the live migration network, as [recommended by VMware](http://blogs.vmware.com/security/2008/02/keeping-your-vm.html). I won't spend a great deal of time on this, since [Chris Hoff already said](http://rationalsecurity.typepad.com/blog/2008/02/news-flash-if-y.html) pretty much everything that needs to be said.
 

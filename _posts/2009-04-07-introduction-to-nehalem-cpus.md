@@ -15,7 +15,7 @@ tags:
 excerpt: "This post provides an introduction to some of the technical details surrounding Intel's new Nehalem CPUs."
 ---
 
-By [Aaron Delp](http://blog.aarondelp.com/)
+By [Aaron Delp](http://blog.aarondelp.com/)  
 Twitter: [aarondelp](http://twitter.com/aarondelp)
 
 Hello everyone! Its Aaron again. Im sorry for falling off the radar for a bit. A new generation of Intel processors is upon us and I felt the need to come out of seclusion to share some recent findings regarding the new architecture. Todays article will explore the new processor offerings. I will be following this up with one (or more depending on the length) about the memory architecture and interconnects.

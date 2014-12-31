@@ -34,7 +34,7 @@ There are a couple of important things to note:
 
 We're not the only ones who have seen this behavior, either:
 
-[VMWare and NFS on NetApp Filers](http://thezendiary.blogspot.com/2008/08/vmware-and-nfs-on-netapp-filers.html)  
+[VMware and NFS on NetApp Filers](http://thezendiary.blogspot.com/2008/08/vmware-and-nfs-on-netapp-filers.html)  
 
 [NFS Datastores and what was their BIG issue...](http://vmwaretips.com/wp/?p=48)
 
