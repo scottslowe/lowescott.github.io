@@ -24,4 +24,6 @@ Personally, I very much wished they had selected one of the other names they wer
 
 Anyway, that's why VMware doesn't pay me to think. In fact, they don't pay me at all! Time will tell whether this was a brilliant marketing move or the beginning of the end. Feel free to tell me what you think in the comments.
 
-**UPDATE:** I'm writing a book on vSphere! [Check out the details here.](http://blog.scottlowe.org/2008/12/19/get-used-to-vsphere/)
+**UPDATE:** I'm writing a book on vSphere! [Check out the details here.][1]
+
+[1]: {% post_url 2009-04-21-mastering-vmware-vsphere-40 %}
