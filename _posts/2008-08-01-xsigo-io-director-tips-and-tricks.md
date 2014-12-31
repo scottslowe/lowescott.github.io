@@ -40,7 +40,7 @@ It's perfectly OK to combine these two commands into a single step:
 
 	set ethernet-port 13/6 -mode=trunk -mtu=9000
 
-While you're in there setting properties for the Ethernet ports, you may also want to consider whether you want the VP780 to tag native VLANs. I'll refer you back to [this blog entry][1] and [this blog entry][2] for more information on VLANs and the native VLAN with ESX. Alternatively, you could just use the URL [http://blog.scottlowe.org/tags/#VLAN][3] to see all VLAN-related articles.
+While you're in there setting properties for the Ethernet ports, you may also want to consider whether you want the VP780 to tag native VLANs. I'll refer you back to [this blog entry][1] and [this blog entry][2] for more information on VLANs and the native VLAN with ESX. Alternatively, you could just use [this link][3] to see all VLAN-related articles.
 
 ## Using esxtop with the VP780
 
