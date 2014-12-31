@@ -14,7 +14,7 @@ tagline:             "The weblog of an IT pro specializing in networking, virtua
 description:         "Since 2005, offering technical posts and how-to articles from an IT pro specializing in networking, virtualization, cloud computing, and Macs"
 #url:                 http://lowescott.github.io
 baseurl:             /
-paginate:            5
+paginate:            10
 
 # About/contact
 author:
