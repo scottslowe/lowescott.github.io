@@ -22,7 +22,7 @@ All in all, it's a pretty simple process, but the one thing that might trip you 
 
 When you are running in a VPLEX Local configuration, changing the IP address of the management server is a single-step process. From the Vplexcli, a single command is all you need:
 
-	management-server set-ip -i _<IP address:Netmask>_ -g _<Gateway IP address>_ -p eth3
+	management-server set-ip -i <IP address:Netmask> -g <Gateway IP address> -p eth3
 
 This command changes the IP address on the management server and you're done.
 

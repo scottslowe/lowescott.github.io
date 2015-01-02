@@ -43,7 +43,7 @@ The second thing I noted was the statement in the Microsoft blog (see Figure 1) 
 
 Although the Microsoft author appears to ding VMware for making a statement about achievable ratios in an article discussing maximum supported ratios, later in the same article the author does the same thing (the emphasis is mine):
 
->You can see that even with an 8:1 VP to LP ratio (or 16:1 VP: Core, if you prefer), Hyper-V supports very dense VM configurations. Even on a server with two physical processors, Hyper-V supports a staggering number of virtual machines (up to 256). The limiting factor wont be Hyper-V. **_It will be how much memory youve populated the server with and how well the storage subsystem performs._**
+>You can see that even with an 8:1 VP to LP ratio (or 16:1 VP: Core, if you prefer), Hyper-V supports very dense VM configurations. Even on a server with two physical processors, Hyper-V supports a staggering number of virtual machines (up to 256). The limiting factor won't be Hyper-V. **_It will be how much memory you've populated the server with and how well the storage subsystem performs._**
 
 Sounds to me like Microsoft is saying that they have a maximum ratio of virtual CPUs to logical CPUs, but that the actual ratio can you achieve (the _achievable_ ratio?) might be less than that. How is that any different from the statement in VMware's configuration maximums document? How is Microsoft's "approach" with regard to ratios any different, better, or clearer for the customer? Yes, VMware's documentation is inconsistent. But when it comes to maximum ratios vs. achievable ratios, it seems to me that the pot is calling the kettle black.
 
