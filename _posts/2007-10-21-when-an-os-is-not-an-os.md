@@ -34,7 +34,7 @@ Further complicating the matter is the announcement of [ESX Server  3i](http://w
 
 I suppose this all sounds like a pretty trivial discussion, but at a deeper level this goes back to some thoughts I had (along with others) about [the future of the OS][1]. In that article, I stated (sorry I'm quoting myself here):
 
->If youre an operating system guy, youll say that the OS has a bright future, and point to developments such as built-in paravirtualization and bundled hypervisors to prove your point. If youre a virtualization guy, youll say that the OS is dead, and youll point to developments such as third-party paravirtualization and independent hypervisors to prove your point.
+>If you're an operating system guy, you'll say that the OS has a bright future, and point to developments such as built-in paravirtualization and bundled hypervisors to prove your point. If you're a virtualization guy, you'll say that the OS is dead, and you'll point to developments such as third-party paravirtualization and independent hypervisors to prove your point.
 
 See, Microsoft _has_ to make the claim that ESX Server is an operating system, so that it can level the playing field---at least with regards to perception---between VMware's virtualization solution and Microsoft's own virtualization solution. After all, if you're VMware and you're saying that your solution runs "on the bare metal, beneath the OS," then this sounds somehow _better_ than Microsoft's hypervisor, which is "bundled with the OS." See the difference? If Microsoft allows the perception that ESX Server is not an OS to grow, then it undermines their solution.
 
