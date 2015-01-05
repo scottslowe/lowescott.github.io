@@ -22,10 +22,10 @@ If you're not familiar with SR-IOV, I suggest you read [this quick SR-IOV tutori
 
 Here are the links to John's SR-IOV in Hyper-V posts:
 
-[Everything you wanted to know about SR-IOV in Hyper-V, part 1](http://blogs.technet.com/b/jhoward/archive/2012/03/12/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-1.aspx)
-[Everything you wanted to know about SR-IOV in Hyper-V, part 2](http://blogs.technet.com/b/jhoward/archive/2012/03/13/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-2.aspx)
-[Everything you wanted to know about SR-IOV in Hyper-V, part 3](http://blogs.technet.com/b/jhoward/archive/2012/03/14/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-3.aspx)
-[Everything you wanted to know about SR-IOV in Hyper-V, part 4](http://blogs.technet.com/b/jhoward/archive/2012/03/15/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-4.aspx)
+[Everything you wanted to know about SR-IOV in Hyper-V, part 1](http://blogs.technet.com/b/jhoward/archive/2012/03/12/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-1.aspx)  
+[Everything you wanted to know about SR-IOV in Hyper-V, part 2](http://blogs.technet.com/b/jhoward/archive/2012/03/13/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-2.aspx)  
+[Everything you wanted to know about SR-IOV in Hyper-V, part 3](http://blogs.technet.com/b/jhoward/archive/2012/03/14/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-3.aspx)  
+[Everything you wanted to know about SR-IOV in Hyper-V, part 4](http://blogs.technet.com/b/jhoward/archive/2012/03/15/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-4.aspx)  
 [Everything you wanted to know about SR-IOV in Hyper-V, part 5](http://blogs.technet.com/b/jhoward/archive/2012/03/16/everything-you-wanted-to-know-about-sr-iov-in-hyper-v-part-5.aspx)
 
 It's great to see Microsoft adding SR-IOV support to Hyper-V; this brings SR-IOV out of the niche Linux market and into a broader, more mainstream market. This also applies some competitive pressure against market leader VMware, who now has to respond in some fashion---either by adding SR-IOV support to their ESXi hypervisor, or by explaining why SR-IOV support isn't necessary. Personally, I hope that VMware does the former and not the latter.

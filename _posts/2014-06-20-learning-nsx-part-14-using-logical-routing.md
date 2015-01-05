@@ -60,7 +60,7 @@ All of these components and settings are accessible via the NSX API, and since N
 
 One key component of NSX's logical routing functionality that you _can't_ see in NSX Manager is how the routing is actually implemented in the data plane. As with most features in NSX, the actual data plane implementation is handled via Open vSwitch (OVS) and a set of flow rules pushed down by the NSX controllers. These flow rules control the flow of traffic within and between logical networks (logical switches in NSX). You can see some of the flow rules in OVS using the `ovs-dpctl dump-flows` command, which will produce output something like what's shown in this screenshot (note that the addresses are highlighted because I used `grep` to show only the flows matching a certain IP address):
 
-[![List of flows in OVS]({{ site.url }}/public/img/part-14-ovs-flow-list-small.png)]{{ site.url }}/public/img/part-14-ovs-flow-list.png)
+[![List of flows in OVS]({{ site.url }}/public/img/part-14-ovs-flow-list-small.png)]({{ site.url }}/public/img/part-14-ovs-flow-list.png)
 
 _(Click the image above for a larger version.)_
 

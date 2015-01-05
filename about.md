@@ -4,7 +4,8 @@ author: slowe
 layout: page
 permalink: /about/
 ---
-<img src="http://blog.scottlowe.org/wp-content/uploads/2008/09/slowe-inside-small-02-150x150.png" alt="" title="Scott Lowe" width="150" height="150" class="alignleft size-thumbnail wp-image-882" />Thanks for visiting my site! My name is Scott Lowe, and this is my weblog about various technical subjects and the occasional personal topic.
+
+<img src="/public/img/slowe-inside-small-02-150x150.png" alt="" title="Scott Lowe" width="150" height="150" />Thanks for visiting my site! My name is Scott Lowe, and this is my weblog about various technical subjects and the occasional personal topic.
 
 ### Personal Information
 

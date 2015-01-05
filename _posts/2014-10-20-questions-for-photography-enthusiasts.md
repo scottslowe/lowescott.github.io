@@ -13,7 +13,7 @@ tags:
 - Personal
 ---
 
-It's no secret that I'm something of a photography enthusiast. To me, photography is a relaxing puzzle of how to assemble all the various pieces---setting, lighting, exposure, composition, etc.--to create just the right image. I'm not an expert, but that's OK; I just do this for fun and to relax. If you'd like to see a small sampling of some of the photos I've taken, I publish some of them [here on 500px.com](https://500px.com/slowe).
+It's no secret that I'm something of a photography enthusiast. To me, photography is a relaxing puzzle of how to assemble all the various pieces---setting, lighting, exposure, composition, etc.---to create just the right image. I'm not an expert, but that's OK; I just do this for fun and to relax. If you'd like to see a small sampling of some of the photos I've taken, I publish some of them [here on 500px.com](https://500px.com/slowe).
 
 I know that a fair number of folks in the IT industry are also photo enthusiasts, and so I was curious to hear some feedback from fellow enthusiasts about their photography workflows. In particular, I'm curious to know about how others answer these questions:
 
