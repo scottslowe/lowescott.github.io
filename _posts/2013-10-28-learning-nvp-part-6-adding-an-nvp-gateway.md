@@ -29,7 +29,7 @@ Welcome to part 6 of the Learning NVP blog series. In this part, I'm going to sh
 
   * In part 5, I showed you how to [create a logical network][5] that could be used to connect VMs to each other independent of the underlying physical network topology.
 
-In this part, I'm going to walk you through setting up an NVP gateway appliance. If you'll recall from our [introductory high-level architecture overview][1], the role of the gateway is to provide L2 (switched/bridged) and L3 (routed) connectivity between logical networks and physical networks. So, adding a gateway would then enable you to extend the [logical network you created in part 4][4] to include either L2 or L3 connectivity to the outside world.
+In this part, I'm going to walk you through setting up an NVP gateway appliance. If you'll recall from our [introductory high-level architecture overview][1], the role of the gateway is to provide L2 (switched/bridged) and L3 (routed) connectivity between logical networks and physical networks. So, adding a gateway would then enable you to extend the [logical network you created in part 5][5] to include either L2 or L3 connectivity to the outside world.
 
 &lt;aside&gt;Many of you have probably seen some of the announcements from VMworld about NSX integrations from various networking suppliers (Arista, Brocade, Dell, and Juniper, for example). These announcements will allow NSX---which I've said before will leverage a great deal of NVP's architecture---to use these hardware devices as L2 gateways, providing bridged/switched connectivity between logical networks and physical networks.&lt;/aside&gt;
 
@@ -110,7 +110,7 @@ To add the new gateway appliance to NVP, you'll use NVP Manager (I showed you ho
 
 7. On the final screen, you'll need to establish connectivity to a transport zone. You'll want to select the appropriate interface (in my example environment, it was `breth2`) and the appropriate encapsulation protocol (STT is generally recommended for connectivity back to hypervisors). Then select the appropriate transport zone from the drop-down list. In the end, you'll have a screen that looks something like this (note that your interfaces, IP addresses, and transport zone information will likely be different):
 
-[![Adding a gateway to NVP]({{ site.url }}/public/img/add-nvp-gateway-small.png)]({{ site.url }}/public/img/add-nvp-gateway-fullsize.png)
+	[![Adding a gateway to NVP]({{ site.url }}/public/img/add-nvp-gateway-small.png)]({{ site.url }}/public/img/add-nvp-gateway-fullsize.png)
 
 8. Click Save to finish the process. The number of gateways listed in the Summary of Transport Components box should increment by 1 in the Registered column. However, the Active column will remain unchanged---that's because there's one more step needed.
 
