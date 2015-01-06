@@ -25,7 +25,7 @@ A couple of weeks have passed since the announcement of Cisco's Unified Computin
 
 I'll start with Robin Harris aka StorageMojo and his [initial take on UCS](http://storagemojo.com/2009/03/16/ciscos-unified-computing-system/). The one thing that jumped out at me about his article was this statement:
 
->If IBM, HP and Sun arent meeting today to plot a radical, Cisco margin destroying open-source router & low-cost switch counterattack - like Seagate, HP and IBM performed on Quantums DLT - theyre idiots.
+>If IBM, HP and Sun aren't meeting today to plot a radical, Cisco margin destroying open-source router & low-cost switch counterattack - like Seagate, HP and IBM performed on Quantums DLT - they're idiots.
 
 This seems to validate the [strategy outlined by Sun][1] and sheds new light---for me, at least---on the potential motivations for IBM to acquire Sun and, thus, Sun's intellectual property. Is Big Blue's move to acquire Sun a precursor to a strike against the heart of Cisco's routing and switching business? And how would Cisco respond to just such a move?
 

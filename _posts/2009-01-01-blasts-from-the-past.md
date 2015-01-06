@@ -23,19 +23,19 @@ tags:
 
 I was visiting [Unclutterer](http://unclutterer.com/) and saw them sharing older content from the site in a similar fashion. So, I thought I might try it here. Enjoy some of these "blasts from the past"!
 
-## One Year Ago on blog.scottlowe.org
+## One Year Ago
 
 [LACP with Cisco Switches and NetApp VIFs][1]  
 [Hyper-V Architectural Issue][2]  
 [Latest VDI Article Published][3]
 
-## Two Years Ago on blog.scottlowe.org
+## Two Years Ago
 
 [Bookmark Spam?][4]  
 [Personal Computing as a Collection of VMs?][5]  
 [Application Agnosticism][6]
 
-## Three Years Ago on blog.scottlowe.org
+## Three Years Ago
 
 [Mac OS X and .local Domains][7]  
 [WMF Flaw Exploit Grows Worse][8]  

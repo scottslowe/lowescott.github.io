@@ -55,7 +55,7 @@ I'd collected a long list of vSphere 4.1-related links as part of the process of
 
 [Krystaltek: DRS/Fault Tolerance Placement Restrictions](http://gregmul.blogspot.com/2010/08/drsfault-tolerance-placement.html)  
 
-[Dont add resource pools for fun, theyre dangerous - NTPRO.NL - Eric Sloof](http://www.ntpro.nl/blog/archives/1512-Dont-add-resource-pools-for-fun,-theyre-dangerous.html)  
+[Dont add resource pools for fun, they're dangerous - NTPRO.NL - Eric Sloof](http://www.ntpro.nl/blog/archives/1512-Dont-add-resource-pools-for-fun,-theyre-dangerous.html)  
 
 [How to use vMA 4.1 installation, configuration  GeekSilver's Blog](http://geeksilver.wordpress.com/2010/07/22/how-to-use-vma-4-1-installation-configuration/)  
 

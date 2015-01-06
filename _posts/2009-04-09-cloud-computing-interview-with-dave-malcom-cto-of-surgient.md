@@ -17,7 +17,7 @@ I recently had the pleasure of conducting an e-mail interview with Surgient's Ch
 
 ## The Interview
 
-**_blog.scottlowe.org (BSL): The term "cloud computing" is used in a variety of different ways to describe a variety of different things. How would you define cloud computing?_**
+**_Scott Lowe (SL): The term "cloud computing" is used in a variety of different ways to describe a variety of different things. How would you define cloud computing?_**
 
 Dave Malcolm (DM): I believe cloud computing is defined as a pool of abstracted, highly scalable, and managed computing infrastructure capable of running end customer applications and is billed or charged by consumption. Therefore I think it has five primary attributes:
 
@@ -39,7 +39,7 @@ Dave Malcolm (DM): I believe cloud computing is defined as a pool of abstracted,
 
 5. _Consumption Based Charging or Billing -_ Finally, cloud computing is usage-driven. Consumers pay for only what resources they use and therefore are charged or billed on a consumption-based model. Cloud computing platforms must provide mechanisms to capture usage information that enables chargeback reporting and/or integration with billing systems.
 
-**_BSL: Based on your definition of cloud computing above, what would you say are the top three challenges to organizations seeking to embrace the cloud computing model?_**
+**_SL: Based on your definition of cloud computing above, what would you say are the top three challenges to organizations seeking to embrace the cloud computing model?_**
 
 DM: The top challenges are that most organizations face when organizations seek to embrace the cloud computing model is the lack of expertise, tools, and processes to implement, operate, and maintain a cloud computing infrastructure.
 
@@ -49,13 +49,13 @@ _Expertise_ - Most organizations do not have deep expertise in understanding the
 
 _Processes and best Practices_ - Most IT processes and best practices have been built around static physical infrastructures and the business services that have been implemented on them. Many of these processes breakdown when business services are instantiated, recovered, moved, and re-instantiated on the same resources within the cloud infrastructure. These processes were not designed to work in such a high change environment.
 
-**_BSL: Some industry experts have stated that interoperability and well-defined standards are the key to broad adoption of cloud computing. Do you agree or disagree? If you disagree, why?_**
+**_SL: Some industry experts have stated that interoperability and well-defined standards are the key to broad adoption of cloud computing. Do you agree or disagree? If you disagree, why?_**
 
 DM: I don't really agree. I think that typically most disruptive technologies are adopted organically by innovators and early adopters. These risk takers try to solve real business problems with the technology and help it gain a level of maturity so that others, less risk oriented, can adopt the technology as well as enable it to gain mainstream market adoption. Cloud computing isn't any different. I believe via this organic adoption that _de facto_ standards emerge from those technology leaders and can become successful solutions. I don't see many examples of broad industry standards driving technology adoption from the tops down.
 
 However, I do believe standards play a role. Once the technology has reached a level of mainstream adoption, there are usually several market leading vendors that emerge and have significant market penetration, but are likely not interoperable. This is where standards can provide the most value in bringing interoperability to solutions that have been successfully implemented and are delivering value. Trying to introduce standards too early in the market maturation process rarely gains any traction.
 
-**_BSL: What would you identify as the most promising developments around cloud computing today? You are welcome to include your own companys products, solutions, or technologies, but try to include other companies as well._**
+**_SL: What would you identify as the most promising developments around cloud computing today? You are welcome to include your own companys products, solutions, or technologies, but try to include other companies as well._**
 
 DM: First off, I don't think we would be having this cloud computing discussion without the invention of x86 server virtualization pioneered by VMware. This is the key to the whole cloud computing dynamic infrastructure. Microsoft and Xen have followed with alternative hypervisors, so server virtualization is key.
 

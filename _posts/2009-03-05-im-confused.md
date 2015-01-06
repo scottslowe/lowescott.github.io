@@ -19,6 +19,6 @@ So I did a little bit of digging and found [this article](http://blogs.zdnet.com
 
 Here's the great part. Check out this quote from that same ZDnet article:
 
->"(I)n retrospect I should just say its called (Windows Server 2008 SP1) so you dont have to wait for SP1 for it to be right like people have before."
+>"(I)n retrospect I should just say its called (Windows Server 2008 SP1) so you don't have to wait for SP1 for it to be right like people have before."
 
 Huh? Microsoft is now tagging RTM builds as SP1, and then telling customers that just because it's marked SP1 it's ready? What's next? Are we going to start tagging beta builds as GA code? Good Lord, people...can we get back to some sort of product naming convention that makes sense and that we're willing to actually _follow_?
