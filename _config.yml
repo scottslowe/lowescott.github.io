@@ -29,3 +29,8 @@ version:             1.0.0
 
 # Exclude Ruby gem stuff
 exclude:             ["vendor"]
+
+# Gems
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
