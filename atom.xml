@@ -1,6 +1,5 @@
 ---
-layout: null
-redirect_from: "/feed/"
+layout: none
 ---
 
 <?xml version="1.0" encoding="utf-8"?>

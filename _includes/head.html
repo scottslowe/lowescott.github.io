@@ -16,11 +16,27 @@
 
   <!-- Metadata -->
   <meta name="author" content="{{ site.author.name }}">
-  {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+  {% if page.tags %}
+  <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+  {% else %}
+  <meta name="keywords" content="Virtualization, Networking, Cloud">
+  {% endif %}
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% else %}
+  <meta name="description" content="{{ site.description }}">
+  {% endif %}
+  {% if page.title %}
+  <meta property="og:title" content="{{ page.title }} - {{ site.title }} - {{ site.tagline }}">
+  {% else %}
+  <meta property="og:title" content="{{ site.title - {{ site.tagline }}">
+  {% endif %}
   <meta property="og:type" content="article">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.description %}
+  <meta property="og:description" content="{{ page.description }}">
+  {% else %}
+  <meta property="og:description" content="{{ site.description }}">
+  {% endif %}
   <meta property="og:site_name" content="{{ site.title }}">
 
   <!-- CSS -->
@@ -34,5 +50,5 @@
   <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}feed.xml">
 </head>
