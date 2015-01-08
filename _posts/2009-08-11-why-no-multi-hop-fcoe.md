@@ -7,7 +7,6 @@ slug: why-no-multi-hop-fcoe
 title: Why No Multi-Hop FCoE?
 wordpress_id: 1513
 categories:
-- Gestalt
 - Networking
 - Storage
 tags:

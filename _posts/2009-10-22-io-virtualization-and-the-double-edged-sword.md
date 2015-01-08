@@ -7,7 +7,6 @@ slug: io-virtualization-and-the-double-edged-sword
 title: I/O Virtualization and the Double-Edged Sword
 wordpress_id: 1698
 categories:
-- Gestalt
 - Networking
 - Virtualization
 tags:

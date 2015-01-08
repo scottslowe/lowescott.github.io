@@ -7,7 +7,6 @@ slug: no-such-thing-as-an-end-to-end-fcoe-solution
 title: No Such Thing as an End-to-End FCoE Solution
 wordpress_id: 1495
 categories:
-- Gestalt
 - Storage
 tags:
 - Cisco

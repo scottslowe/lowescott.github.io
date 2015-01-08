@@ -7,7 +7,6 @@ slug: potential-ucs-issue-northbound-fcoe-connectivity
 title: 'Potential UCS Issue: Northbound FCoE Connectivity'
 wordpress_id: 1483
 categories:
-- Gestalt
 - Networking
 - Virtualization
 tags:

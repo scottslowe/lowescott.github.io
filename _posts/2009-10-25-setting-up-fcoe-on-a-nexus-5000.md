@@ -7,7 +7,6 @@ slug: setting-up-fcoe-on-a-nexus-5000
 title: Setting Up FCoE on a Nexus 5000
 wordpress_id: 1706
 categories:
-- Gestalt
 - Networking
 - Storage
 tags:

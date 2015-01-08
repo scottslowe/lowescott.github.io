@@ -7,7 +7,6 @@ slug: is-unified-fabric-an-inevitability
 title: Is Unified Fabric an Inevitability?
 wordpress_id: 1206
 categories:
-- Gestalt
 - Storage
 tags:
 - FCoE

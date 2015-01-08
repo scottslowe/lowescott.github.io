@@ -7,7 +7,6 @@ slug: a-few-quick-thoughts-on-the-vce-coalition-announcement
 title: A Few Quick Thoughts on the VCE Coalition Announcement
 wordpress_id: 1724
 categories:
-- Gestalt
 - Networking
 - Storage
 - Virtualization

@@ -7,7 +7,6 @@ slug: vsphere-virtual-machine-upgrade-process
 title: vSphere Virtual Machine Upgrade Process
 wordpress_id: 1382
 categories:
-- Gestalt
 - Microsoft
 - Virtualization
 tags:

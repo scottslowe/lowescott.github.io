@@ -7,7 +7,6 @@ slug: gre-tunnels-on-a-cisco-router
 title: GRE Tunnels on a Cisco Router
 wordpress_id: 167
 categories:
-- Gestalt
 - Networking
 tags:
 - Cisco

@@ -7,12 +7,12 @@ slug: enabling-jumbo-frames-on-a-nexus-5000
 title: Enabling Jumbo Frames on a Nexus 5000
 wordpress_id: 1732
 categories:
-- Gestalt
 - Networking
 tags:
 - Cisco
 - Networking
 - Nexus
+- CLI
 ---
 
 I've been doing a pretty fair amount of work recently with the Cisco Nexus 5000 series of switches, as evidenced by the flurry of Nexus-related articles:

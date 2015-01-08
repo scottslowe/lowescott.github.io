@@ -7,7 +7,6 @@ slug: xeon-5500-cpus-and-evc-in-vsphere
 title: Xeon 5500 CPUs and EVC in vSphere
 wordpress_id: 1392
 categories:
-- Gestalt
 - Virtualization
 tags:
 - Hardware

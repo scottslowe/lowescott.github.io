@@ -7,7 +7,6 @@ slug: understanding-npiv-and-npv
 title: Understanding NPIV and NPV
 wordpress_id: 1746
 categories:
-- Gestalt
 - Networking
 - Storage
 tags:

@@ -7,7 +7,6 @@ slug: understanding-network-interface-virtualization
 title: Understanding Network Interface Virtualization
 wordpress_id: 1862
 categories:
-- Gestalt
 - Networking
 - Virtualization
 tags:
