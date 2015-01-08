@@ -7,12 +7,7 @@ slug: technology-short-take-42
 title: 'Technology Short Take #42'
 wordpress_id: 3460
 categories:
-- Linux
-- Microsoft
-- Networking
-- Security
-- Storage
-- Virtualization
+- Informational
 tags:
 - Automation
 - Fusion
@@ -30,6 +25,11 @@ tags:
 - Storage
 - UCS
 - VMware
+- Virtualization
+- Cisco
+- UCS
+- vSphere
+- Macintosh
 ---
 
 Welcome to Technology Short Take #42, another installation in my ongoing series of irregularly published collections of news, items, thoughts, rants, raves, and tidbits from around the Internet, with a focus on data center-related technologies. Here's hoping you find something useful!

@@ -7,11 +7,7 @@ slug: technology-short-take-46
 title: 'Technology Short Take #46'
 wordpress_id: 3560
 categories:
-- Linux
-- Networking
-- Security
-- Storage
-- Virtualization
+- Informational
 tags:
 - Docker
 - Hardware
@@ -23,6 +19,7 @@ tags:
 - Storage
 - Virtualization
 - VMware
+- Macintosh
 ---
 
 Welcome to Technology Short Take #46. That's right, it's time for yet another collection of links and articles from around the Internet on various data center-related technologies, products, projects, and efforts. As always, there is no rhyme or reason to my collection; this is just a glimpse into what I've seen over the past few weeks. I hope you are able to glean something useful.

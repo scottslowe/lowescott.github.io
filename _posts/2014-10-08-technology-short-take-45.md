@@ -7,11 +7,7 @@ slug: technology-short-take-45
 title: 'Technology Short Take #45'
 wordpress_id: 3540
 categories:
-- Linux
-- Networking
-- Security
-- Storage
-- Virtualization
+- Informational
 tags:
 - Docker
 - Hardware
@@ -27,6 +23,8 @@ tags:
 - Virtualization
 - vSphere
 - VXLAN
+- Certification
+- SSL
 ---
 
 Welcome to Technology Short Take #45. As usual, I've gathered a collection of links to various articles pertaining to data center-related technologies for your enjoyment. Here's hoping you find something useful!
@@ -75,7 +73,7 @@ Welcome to Technology Short Take #45. As usual, I've gathered a collection of li
 
 * Single-process containers or multi-process containers? [This site](http://phusion.github.io/baseimage-docker/) presents a convincing argument for multi-process containers; have a look.
 
-* Tired of hearing about containers yet? Oh, come on, you know you love them! You love them so much you want to run them on your OS X laptop. Wellread [this post](http://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide) for all the gory details.
+* Tired of hearing about containers yet? Oh, come on, you know you love them! You love them so much you want to run them on your OS X laptop. Well, read [this post](http://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide) for all the gory details.
 
 ## Storage
 

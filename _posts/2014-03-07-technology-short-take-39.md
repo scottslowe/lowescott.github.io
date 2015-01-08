@@ -7,11 +7,7 @@ slug: technology-short-take-39
 title: 'Technology Short Take #39'
 wordpress_id: 3416
 categories:
-- Microsoft
-- Networking
-- Security
-- Storage
-- Virtualization
+- Informational
 tags:
 - Hardware
 - Intel
@@ -26,6 +22,9 @@ tags:
 - Virtualization
 - VSAN
 - Windows
+- Microsoft
+- Automation
+- HyperV
 ---
 
 Welcome to Technology Short Take #39, in which I share a random assortment of links, articles, and thoughts from around the world of data center-related technologies. I hope you find something useful---or at least something interesting!

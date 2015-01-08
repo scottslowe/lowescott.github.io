@@ -7,11 +7,7 @@ slug: technology-short-take-40
 title: 'Technology Short Take #40'
 wordpress_id: 3428
 categories:
-- Microsoft
-- Networking
-- Security
-- Storage
-- Virtualization
+- Informational
 tags:
 - Hardware
 - HyperV
@@ -25,6 +21,10 @@ tags:
 - VPLEX
 - vSphere
 - Windows
+- Microsoft
+- VPN
+- OpenFlow
+- SSL
 ---
 
 Welcome to Technology Short Take #40. The content is a bit light this time around; I thought I'd give you, my readers, a little break. Hopefully there's still some useful and interesting stuff here. Enjoy!

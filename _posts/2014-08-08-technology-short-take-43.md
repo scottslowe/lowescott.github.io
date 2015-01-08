@@ -7,10 +7,7 @@ slug: technology-short-take-43
 title: 'Technology Short Take #43'
 wordpress_id: 3484
 categories:
-- Linux
-- Networking
-- Security
-- Virtualization
+- Informational
 tags:
 - Automation
 - BSD
@@ -24,6 +21,10 @@ tags:
 - OpenStack
 - OVS
 - Puppet
+- Security
+- Virtualization
+- VMware
+- vSphere
 ---
 
 Welcome to Technology Short Take #43, another episode in my irregularly-published series of articles, links, and thoughts from around the web, focusing on data center technologies like networking, virtualization, storage, and cloud computing. Here's hoping you find something useful.

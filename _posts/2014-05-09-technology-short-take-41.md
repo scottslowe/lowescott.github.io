@@ -7,10 +7,7 @@ slug: technology-short-take-41
 title: 'Technology Short Take #41'
 wordpress_id: 3452
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Informational
 tags:
 - Hardware
 - HP
@@ -18,6 +15,7 @@ tags:
 - NSX
 - OpenFlow
 - OpenStack
+- KVM
 - OVS
 - Puppet
 - Security
@@ -26,6 +24,8 @@ tags:
 - VMotion
 - VMware
 - vSphere
+- Virtualization
+- HyperV
 ---
 
 Welcome to Technology Short Take #41, the latest in my series of random thoughts, articles, and links from around the Internet. Here's hoping you find something useful!
