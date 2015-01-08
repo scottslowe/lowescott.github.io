@@ -7,13 +7,14 @@ slug: another-reason-not-to-use-pvscsi-or-vmxnet3
 title: Another Reason Not to Use PVSCSI or VMXNET3
 wordpress_id: 1440
 categories:
-- PASS
 - Virtualization
 tags:
 - Virtualization
 - VMware
 - VMwareFT
 - vSphere
+- Networking
+- Storage
 ---
 
 You might have read the article I wrote here titled [vSphere Virtual Machine Upgrade Process][1], in which I described a process whereby you could upgrade your VMs to VM hardware version 7 (the version used with vSphere) as well as use the latest paravirtualized network and SCSI drivers (VMXNET3 and PVSCSI). Both PVSCSI and VMXNET3 offer greater performance with the same CPU utilization.

@@ -7,9 +7,7 @@ slug: new-user-networking-config-guide
 title: New User's Guide to Configuring VMware ESX Networking via CLI
 wordpress_id: 1411
 categories:
-- Gestalt
 - Networking
-- PASS
 - Virtualization
 tags:
 - CLI

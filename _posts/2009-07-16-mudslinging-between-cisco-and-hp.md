@@ -9,7 +9,6 @@ wordpress_id: 1463
 categories:
 - General
 - Networking
-- PASS
 tags:
 - Cisco
 - Hardware

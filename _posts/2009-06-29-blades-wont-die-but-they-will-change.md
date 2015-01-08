@@ -8,7 +8,6 @@ title: Blades Won't Die, But They Will Change
 wordpress_id: 1429
 categories:
 - Networking
-- PASS
 - Virtualization
 tags:
 - Cisco

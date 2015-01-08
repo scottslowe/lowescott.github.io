@@ -8,7 +8,6 @@ title: 'Virtualization Short Take #29'
 wordpress_id: 1569
 categories:
 - Networking
-- PASS
 - Storage
 - Virtualization
 tags:
@@ -20,6 +19,7 @@ tags:
 - Virtualization
 - VMware
 - vSphere
+- Networking
 ---
 
 I wanted to go ahead and get another issue of Virtualization Short Takes out the door before VMworld, as I suspect that I'll be covered up both during and for some time after VMworld. So, here's my latest collection of links and articles about virtualization, storage, and anything else I find interesting.
