@@ -7,9 +7,10 @@ title: 'Looking Ahead: My 2015 Projects'
 categories:
 - Personal
 tags:
-- <#tag1#>
-- <#tag2#>
-- <#tag3#>
+- OpenStack
+- OSS
+- OVS
+- Personal
 ---
 
 In this post, I'm going to discuss some projects that I've set out for myself in the upcoming year. I've done this in years past, and the feedback that I've gotten from readers is that they found these posts to be quite helpful.
