@@ -12,11 +12,11 @@ layout: default
   </span>
   {% if page.previous %}
     <span class="post-date">
-    &larr; Previous Post: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></span>
+    <i class="fa fa-arrow-circle-left"></i> Previous Post: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></span>
   {% endif %}
   {% if page.next %}
     <span class="post-date">
-    Next Post: <a href="{{ page.next.url }}">{{ page.next.title }}</a> &rarr;</span>
+    Next Post: <a href="{{ page.next.url }}">{{ page.next.title }}</a> <i class="fa fa-arrow-circle-right"></i></span>
   {% endif %}
   
 </div>
