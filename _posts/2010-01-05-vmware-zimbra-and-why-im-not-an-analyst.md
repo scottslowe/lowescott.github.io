@@ -7,9 +7,7 @@ slug: vmware-zimbra-and-why-im-not-an-analyst
 title: VMware, Zimbra, and Why I'm Not an Analyst
 wordpress_id: 1782
 categories:
-- Collaboration
-- Messaging
-- Virtualization
+- Musing
 tags:
 - Collaboration
 - Exchange

@@ -7,15 +7,16 @@ slug: an-introduction-to-openstack-heat
 title: An Introduction to OpenStack Heat
 wordpress_id: 3446
 categories:
-- Interoperability
-- Networking
-- Virtualization
+- Educational
 tags:
 - Automation
 - JSON
 - Linux
 - OpenStack
 - OSS
+- Interoperability
+- Networking
+- Virtualization
 ---
 
 In this post, I'm going to provide a quick introduction to OpenStack Heat, the orchestration service that allows you to spin up multiple instances, logical networks, and other cloud services in an automated fashion. Note that this is only an introductory post---I'm not an expert on Heat, but I did want to share at least some basic information to help others get started as well.

@@ -7,8 +7,7 @@ slug: a-quick-introduction-to-docker
 title: A Quick Introduction to Docker
 wordpress_id: 3418
 categories:
-- Linux
-- Virtualization
+- Educational
 tags:
 - Docker
 - Linux

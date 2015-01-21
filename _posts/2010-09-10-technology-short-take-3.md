@@ -7,16 +7,17 @@ slug: technology-short-take-3
 title: 'Technology Short Take #3'
 wordpress_id: 2099
 categories:
-- Microsoft
-- Networking
-- Storage
-- Virtualization
+- Informational
 tags:
 - FCoE
 - HyperV
 - Microsoft
 - Networking
 - Virtualization
+- Storage
+- vSphere
+- Cisco
+- UCS
 ---
 
 Welcome to Technology Short Take #3, a collection of links about key data center technologies like virtualization, networking, and storage. I'm still striving to broaden the scope of these posts to include even more storage and networking posts, so I'd love to hear feedback from readers on how well I'm doing and what other sources I should consider for inclusion here.

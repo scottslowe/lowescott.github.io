@@ -7,8 +7,7 @@ slug: a-brief-introduction-to-linux-containers-with-lxc
 title: A Brief Introduction to Linux Containers with LXC
 wordpress_id: 3336
 categories:
-- Linux
-- Virtualization
+- Educational
 tags:
 - CLI
 - Linux

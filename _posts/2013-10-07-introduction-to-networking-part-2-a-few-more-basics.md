@@ -7,10 +7,11 @@ slug: introduction-to-networking-part-2-a-few-more-basics
 title: 'Introduction to Networking: Part 2, A Few More Basics'
 wordpress_id: 3305
 categories:
-- Networking
+- Educational
 tags:
 - Networking
 - VLAN
+- LACP
 ---
 
 In [part 1][1] of this series, I covered some networking basics (OSI and DoD models; layer 2 vs. layer 3; bridging, switching, and routing; Spanning Tree Protocol; and ARP and flooding). In this part, I'm going to build on those basic concepts to introduce a few more fundamental building blocks. As the series progresses, I'll continue to build on concepts and technologies introduced in earlier sections.
@@ -31,7 +32,7 @@ Recall that in [part 1][1] I defined a _broadcast domain_ as all the devices and
 
 VLANs work by leveraging a 12-bit identifier in the Ethernet frame format (see [here](https://en.wikipedia.org/wiki/IEEE_802.1Q) for more details). This 12-bit identifier, often referred to as the VLAN tag, allows for up to 4,094 VLANs (212 = 4,096, with all zeroes [0x000 hexadecimal] and all ones [0xFFF hexadecimal] reserved). Not all switches from all vendors support using all 4,094 VLANs; some switches might support fewer than that.
 
-<aside>As a side note, you might note that 802.1Q doesn't actually _encapsulate_ the original Ethernet frame. In other words, it doesn't wrap its own headers before and after the original Ethernet frame; rather, it injects the 12-bit VLAN tag into the frame just after the source MAC header.</aside>
+&lt;aside&gt;As a side note, you might note that 802.1Q doesn't actually _encapsulate_ the original Ethernet frame. In other words, it doesn't wrap its own headers before and after the original Ethernet frame; rather, it injects the 12-bit VLAN tag into the frame just after the source MAC header.&lt;/aside&gt;
 
 Although adding support for VLANs to a switch allows that switch to support multiple broadcast domains, it doesn't change certain layer 2 switching behaviors. In particular, the switch may still need to use flooding (described in part 1) to learn which MAC addresses are associated with which switch ports. The key difference is that flooding will only occur _within_ a VLAN, since flooding is limited to a broadcast domain.
 

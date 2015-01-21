@@ -7,10 +7,10 @@ slug: comparemyvm
 title: CompareMyVM
 wordpress_id: 1026
 categories:
-- Collaboration
-- Virtualization
+- News
 tags:
 - Virtualization
+- Collaboration
 ---
 
 VKernel, whose SearchMyVM search-based management product [I wrote about][1] back at the beginning of September, is launching a community site called [CompareMyVM](http://www.comparemyvm.com/). The site is expected to formally launch in early December.

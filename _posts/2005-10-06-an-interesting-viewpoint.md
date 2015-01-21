@@ -7,7 +7,10 @@ slug: an-interesting-viewpoint
 title: An Interesting Viewpoint
 wordpress_id: 101
 categories:
-- General
+- Musing
+tags:
+- Collaboration
+- Privacy
 ---
 
 I don't know that I necessarily agree with his viewpoint, but in ["A fake freedom"](http://www.oreillynet.com/pub/wlg/7977?CMP=OTC-13IV03560550), the question is raised: Do we really own our data?

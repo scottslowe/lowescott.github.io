@@ -7,7 +7,7 @@ slug: introduction-to-networking-part-1-the-basics
 title: 'Introduction to Networking: Part 1, The Basics'
 wordpress_id: 3233
 categories:
-- Networking
+- Educational
 tags:
 - Networking
 ---

@@ -7,7 +7,7 @@ slug: synergies
 title: Synergies
 wordpress_id: 203
 categories:
-- General
+- Musing
 tags:
 - Citrix
 - Networking

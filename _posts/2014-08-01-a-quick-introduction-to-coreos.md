@@ -7,7 +7,7 @@ slug: a-quick-introduction-to-coreos
 title: A Quick Introduction to CoreOS
 wordpress_id: 3482
 categories:
-- Linux
+- Educational
 tags:
 - Docker
 - Linux

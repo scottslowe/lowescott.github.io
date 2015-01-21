@@ -7,13 +7,13 @@ slug: technology-short-take-1
 title: 'Technology Short Take #1'
 wordpress_id: 2015
 categories:
-- Networking
-- Storage
-- Virtualization
+- Informational
 tags:
 - Networking
 - Storage
 - Virtualization
+- vSphere
+- VMware
 ---
 
 I've decided to discontinue the Virtualization Short Takes series and replace it with a new series that incorporates items from the networking and storage realms as well. In truth, I was already doing a little bit of that anyway, but this will expand and formalize the coverage a bit. I'd love to hear your feedback on this new series, to help me ensure that I'm providing useful and pertinent information and to help me ensure that I'm presenting it in the most efficient way. So, please speak up in the comments if you have any suggestions for improvement. Thanks!

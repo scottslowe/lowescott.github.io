@@ -7,10 +7,7 @@ slug: technology-short-take-2
 title: 'Technology Short Take #2'
 wordpress_id: 2053
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Informational
 tags:
 - Cisco
 - EMC
@@ -22,6 +19,7 @@ tags:
 - UCS
 - Virtualization
 - VMware
+- Networking
 ---
 
 Welcome to Technology Short Take #2, a collection of links, thoughts, ideas, and items pertaining to data center technologies---virtualization, networking, storage, and security. I hope you find something useful or interesting!

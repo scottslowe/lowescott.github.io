@@ -7,9 +7,7 @@ slug: technology-short-take-5
 title: 'Technology Short Take #5'
 wordpress_id: 2131
 categories:
-- Networking
-- Storage
-- Virtualization
+- Informational
 tags:
 - Cisco
 - EMC
@@ -18,6 +16,7 @@ tags:
 - vCloud
 - Virtualization
 - VMware
+- vSphere
 ---
 
 Welcome to Technology Short Take #5, the latest collection of data center technology-related links, articles, blog posts, thoughts, and ideas. Some of this might be useful, some of it might not be helpful, but hopefully it will prove handy to someone out there. Enjoy!

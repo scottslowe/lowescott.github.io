@@ -7,11 +7,11 @@ slug: content-creation-and-mind-mapping
 title: Content Creation and Mind Mapping
 wordpress_id: 2436
 categories:
-- Collaboration
-- Macintosh
+- Informational
 tags:
 - Macintosh
 - Productivity
+- Collaboration
 ---
 
 In conjunction with my shift to more "open" file formats such as [Markdown](http://daringfireball.net/projects/markdown/syntax) ([MultiMarkdown](http://fletcherpenney.net/multimarkdown/), to be specific), RTF, and OPML---a shift described a little bit [here][1]---I've also had two other shifts in my content creation process that I think are worth mentioning.
