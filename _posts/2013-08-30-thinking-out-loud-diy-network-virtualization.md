@@ -7,14 +7,16 @@ slug: thinking-out-loud-diy-network-virtualization
 title: 'Thinking Out Loud: DIY Network Virtualization?'
 wordpress_id: 3262
 categories:
-- Networking
-- Virtualization
+- Musing
 tags:
 - IPSec
 - Linux
 - Networking
 - Virtualization
 - VPN
+- OVS
+- OSS
+- ToL
 ---
 
 Following on the heels of this week's VMware NSX announcement at VMworld 2013, I had someone contact me about a statement this person had heard. The statement claimed NSX was nothing more than a collection of tools, and that it was possible to get the equivalent of NSX using completely free (as in speech and as in beer) open source tools---specifically, [IPTables](http://www.netfilter.org), [StrongSwan](https://www.strongswan.org), [OpenVPN](http://openvpn.net/index.php/open-source.html), and [Open vSwitch](http://openvswitch.org) (OVS). Basically, the statement was that it was possible to create do-it-yourself network virtualization.

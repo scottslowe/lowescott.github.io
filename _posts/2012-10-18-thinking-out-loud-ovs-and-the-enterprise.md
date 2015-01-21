@@ -7,14 +7,14 @@ slug: thinking-out-loud-ovs-and-the-enterprise
 title: 'Thinking Out Loud: OVS and the Enterprise'
 wordpress_id: 2889
 categories:
-- Linux
-- Networking
+- Musing
 tags:
 - Linux
 - Networking
 - OSS
 - OVS
 - RedHat
+- ToL
 ---
 
 Over the last few days, I've been unsuccessfully trying to get Open vSwitch (OVS) running on Red Hat Enterprise Linux (RHEL) 6.3 (as well as CentOS 6.3). The rationale behind this is that RHEL/CentOS are the sort of battle-tested, well-supported Linux distributions that enterprises will (and do) deploy in their data centers. OVS, of course, is central to the strategy and functionality of several network virtualization players and projects:

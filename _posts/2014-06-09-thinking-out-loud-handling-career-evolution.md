@@ -7,10 +7,11 @@ slug: thinking-out-loud-handling-career-evolution
 title: 'Thinking Out Loud: Handling Career Evolution'
 wordpress_id: 3458
 categories:
-- General
+- Musing
 tags:
 - General
 - Personal
+- ToL
 ---
 
 As IT pros at the "cutting edge" of technology and industry change, I think sometimes we forget that not everyone has the same mindset toward learning, growth, and career evolution. That's especially true, I think, for those of us who are bloggers, because it's our passion for the technology that not only drives us to write about it but also drives us to constantly explore new trends, new areas, and new concepts. It is that passion that drives us to seek out new ways the technology could be applied to our jobs. That passion sustained us over the years, as we progressed from Windows admins to VMware admins and now to virtualization and cloud architects. That passion led us to "bring our work home" and build home labs. We've had years of actively seeking out new layers of knowledge to build on top of what we already knew.

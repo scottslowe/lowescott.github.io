@@ -7,8 +7,7 @@ slug: thinking-out-loud-its-not-just-the-technology
 title: "Thinking Out Loud: It's Not Just the Technology"
 wordpress_id: 1798
 categories:
-- Collaboration
-- Virtualization
+- Musing
 tags:
 - Collaboration
 - ToL

@@ -7,11 +7,11 @@ slug: thinking-out-loud-logical-link-multiplexing-sort-of
 title: 'Thinking Out Loud: Logical Link Multiplexing (Sort Of)'
 wordpress_id: 2370
 categories:
-- Networking
-- Virtualization
+- Musing
 tags:
 - Networking
 - Virtualization
+- ToL
 ---
 
 Over the last few days I've been listening to some episodes of the excellent Packet Pushers Podcast, trying to learn about such things as Shortest Path Bridging (SPB) and 802.1Qbg. It's this second item--802.1Qbg---that this blog post is about (indirectly).

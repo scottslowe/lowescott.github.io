@@ -7,12 +7,13 @@ slug: thinking-out-loud-why-not-mpls-in-ip
 title: 'Thinking Out Loud: Why Not MPLS-in-IP?'
 wordpress_id: 2648
 categories:
-- Networking
-- Virtualization
+- Musing
 tags:
 - Networking
 - Virtualization
 - VXLAN
+- MPLS
+- ToL
 ---
 
 As I was reviewing my list of actions in OmniFocus this morning, I saw an action I'd added a while back to review [RFC 4023](http://datatracker.ietf.org/doc/rfc4023/?include_text=1). RFC 4023 is the RFC that defines MPLS-in-IP and MPLS-in-GRE encapsulations, and was written in 2005. I thought, "Let me just read this real quick." So I did.

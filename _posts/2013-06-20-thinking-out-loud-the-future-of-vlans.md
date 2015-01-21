@@ -7,12 +7,13 @@ slug: thinking-out-loud-the-future-of-vlans
 title: 'Thinking Out Loud: The Future of VLANs'
 wordpress_id: 3219
 categories:
-- Networking
-- Virtualization
+- Musing
 tags:
 - Networking
 - Virtualization
 - VLAN
+- SDN
+- ToL
 ---
 
 It's interesting to me how much the idea of a VLAN has invaded the consciousness of data center IT professionals. Data center folks primarily tasked with managing compute workloads are nearly as familiar with VLANs as their colleagues primarily tasked with managing network connectivity. However, as networking undergoes a transformation at the hands of SDN, NFV, and network virtualization, what will happen to the VLAN?

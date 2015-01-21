@@ -7,8 +7,7 @@ slug: thinking-out-loud-why-deploy-fcoe
 title: 'Thinking Out Loud: Why Deploy FCoE?'
 wordpress_id: 1431
 categories:
-- Networking
-- Storage
+- Musing
 tags:
 - Cisco
 - FCoE

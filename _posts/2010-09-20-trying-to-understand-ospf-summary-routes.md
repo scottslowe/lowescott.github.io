@@ -3,14 +3,15 @@ author: slowe
 comments: true
 date: 2010-09-20 20:56:53+00:00
 layout: post
-slug: thinking-out-loud-ospf-summary-routes
-title: 'Thinking Out Loud: OSPF Summary Routes'
+slug: trying-to-understand-ospf-summary-routes
+title: Trying to Understand OSPF Summary Routes
 wordpress_id: 2107
 categories:
 - Networking
 tags:
 - Cisco
 - Networking
+redirect_from: /thinking-out-loud-ospf-summary-routes/
 ---
 
 While working through some OSPF configurations in preparation for my CCNA exam next week, I noticed something I thought was odd, and I don't really understand why it's behaving in this manner. I thought perhaps a networking expert can enlighten me.

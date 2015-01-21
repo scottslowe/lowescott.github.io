@@ -7,13 +7,14 @@ slug: thinking-out-loud-is-a-dvfabric-closer-than-we-think
 title: 'Thinking Out Loud: Is A dvFabric Closer Than We Think?'
 wordpress_id: 2533
 categories:
-- Storage
-- Virtualization
+- Musing
 tags:
 - FCoE
 - FibreChannel
 - Storage
 - Virtualization
+- Networking
+- ToL
 ---
 
 This is a short post, but one that I hope will stir some discussion.

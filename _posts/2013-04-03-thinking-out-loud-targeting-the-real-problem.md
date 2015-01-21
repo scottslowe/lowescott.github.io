@@ -7,12 +7,13 @@ slug: thinking-out-loud-targeting-the-real-problem
 title: 'Thinking Out Loud: Targeting the Real Problem'
 wordpress_id: 3125
 categories:
-- Networking
-- Virtualization
+- Musing
 tags:
 - Networking
 - OpenFlow
 - SDN
+- Virtualization
+- ToL
 ---
 
 Two (relatively) independent thought streams collided late last week, and this post is the result.

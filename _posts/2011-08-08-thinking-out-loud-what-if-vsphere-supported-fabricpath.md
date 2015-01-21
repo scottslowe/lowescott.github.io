@@ -7,14 +7,14 @@ slug: thinking-out-loud-what-if-vsphere-supported-fabricpath
 title: 'Thinking Out Loud: What if vSphere Supported FabricPath?'
 wordpress_id: 2366
 categories:
-- Networking
-- Virtualization
+- Musing
 tags:
 - Cisco
 - Networking
 - Virtualization
 - VMware
 - vSphere
+- ToL
 ---
 
 Since attending Cisco Live 2011 in Las Vegas earlier this year (see my [summary list of blog posts][1]), my mind has been swirling with ideas about how various technologies might work (or not work) together. In the first of a series of "Thinking Out Loud" posts in which I'll attempt to explore---and spur discussion regarding---how certain networking technologies might integrate with virtualization technologies, I'd like to explore this question: "What if vSphere had FabricPath support?"
