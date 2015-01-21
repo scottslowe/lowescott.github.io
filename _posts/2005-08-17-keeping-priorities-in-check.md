@@ -7,7 +7,10 @@ slug: keeping-priorities-in-check
 title: Keeping Priorities in Check
 wordpress_id: 79
 categories:
+- Rant
+tags:
 - Personal
+- Christianity
 ---
 
 As technical people, we often immerse ourselves in our work to a far greater extent than people in other fields do. Why? I would imagine that most people, like myself, find this field to be as much of a hobby as it is a career. Sometimes, that's fine, as it gives us the necessary technical edge to excel in a highly competitive arena.

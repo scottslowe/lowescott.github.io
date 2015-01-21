@@ -7,8 +7,7 @@ slug: enough-bundling-already
 title: Enough Bundling Already!
 wordpress_id: 35
 categories:
-- Microsoft
-- Security
+- Rant
 tags:
 - Microsoft
 - Security

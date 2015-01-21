@@ -7,8 +7,7 @@ slug: sanbolic-brings-snapshots-to-melio-fs
 title: Sanbolic Brings Snapshots to Melio FS
 wordpress_id: 1318
 categories:
-- Microsoft
-- Storage
+- News
 tags:
 - Microsoft
 - SAN

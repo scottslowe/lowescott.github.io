@@ -7,9 +7,7 @@ slug: new-version-of-uimp
 title: New Version of UIM/P
 wordpress_id: 2459
 categories:
-- Networking
-- Storage
-- Virtualization
+- News
 tags:
 - Networking
 - Storage

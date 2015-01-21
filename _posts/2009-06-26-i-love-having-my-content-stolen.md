@@ -7,11 +7,11 @@ slug: i-love-having-my-content-stolen
 title: I Love Having My Content Stolen
 wordpress_id: 1425
 categories:
-- General
-- Virtualization
+- Rant
 tags:
 - Blogging
 - Writing
+- Virtualization
 ---
 
 You know, it's really irritating when you pour your heart and soul into something, only to find someone else riding your coattails and leeching off your efforts. It would appear that NetworkVirtualization.com is one such leech.

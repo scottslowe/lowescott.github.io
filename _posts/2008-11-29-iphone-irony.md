@@ -7,7 +7,7 @@ slug: iphone-irony
 title: iPhone Irony
 wordpress_id: 1048
 categories:
-- General
+- Rant
 tags:
 - Apple
 - General

@@ -7,8 +7,7 @@ slug: youve-got-to-be-kidding-me
 title: You've Got to be Kidding Me
 wordpress_id: 1096
 categories:
-- Microsoft
-- Virtualization
+- Rant
 tags:
 - ESX
 - Hardware

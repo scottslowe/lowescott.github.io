@@ -7,8 +7,7 @@ slug: crossing-the-threshold
 title: Crossing the Threshold
 wordpress_id: 3430
 categories:
-- General
-- Personal
+- Musing
 tags:
 - General
 - Linux

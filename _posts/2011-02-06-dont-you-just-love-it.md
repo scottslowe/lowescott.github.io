@@ -7,7 +7,7 @@ slug: dont-you-just-love-it
 title: Don't You Just Love It?
 wordpress_id: 2238
 categories:
-- General
+- Rant
 tags:
 - Hardware
 - Networking

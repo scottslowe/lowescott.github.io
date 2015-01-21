@@ -7,12 +7,12 @@ slug: cisco-investing-in-file-virtualization
 title: Cisco Investing in File Virtualization
 wordpress_id: 228
 categories:
-- Networking
-- Virtualization
+- News
 tags:
 - Cisco
 - Networking
 - Virtualization
+- Storage
 ---
 
 Virtualization isn't just about partitioning server hardware so that multiple operating systems (or multiple instances of a single operating system) can run on a piece of hardware. Virtualization is about adding abstraction; that abstraction, in turn, offers flexibility. Case in point: Reports indicate that networking giant [Cisco Systems will be investing in NeoPath Networks](http://searchstorage.techtarget.com/originalContent/0,289142,sid5_gci1180479,00.html).

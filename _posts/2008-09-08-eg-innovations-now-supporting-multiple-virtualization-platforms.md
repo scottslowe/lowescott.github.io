@@ -7,8 +7,7 @@ slug: eg-innovations-now-supporting-multiple-virtualization-platforms
 title: eG Innovations Now Supporting Multiple Virtualization Platforms
 wordpress_id: 874
 categories:
-- Microsoft
-- Virtualization
+- News
 tags:
 - HyperV
 - Microsoft

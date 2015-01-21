@@ -7,7 +7,7 @@ slug: the-new-microsoft-seinfeld-ads
 title: The New Microsoft-Seinfeld Ads...
 wordpress_id: 857
 categories:
-- Microsoft
+- Rant
 tags:
 - Microsoft
 - Windows

@@ -7,8 +7,7 @@ slug: nonstandard-implementations
 title: Nonstandard Implementations
 wordpress_id: 5
 categories:
-- Interoperability
-- Messaging
+- Rant
 tags:
 - Encryption
 - Exchange
@@ -18,6 +17,7 @@ tags:
 - Security
 - SSL
 - Standards
+- Interoperability
 ---
 
 In my experiments with [Perdition](http://www.vergenet.net/linux/perdition/), I learned a couple of very interesting facts. First, the IMAP4 implementation on [Exchange Server 2003](http://www.microsoft.com/exchange/) does not support the STARTTLS command, as described in [RFC 2595](http://www.networksorcery.com/enp/rfc/rfc2595.txt) and re-affirmed in [RFC 3501](http://www.networksorcery.com/enp/rfc/rfc3501.txt). Instead, Exchange expects an SSL session to be established immediately, and then IMAP is spoken. This is similar to the `smtpd_tls_wrappermode` directive that [Postfix](http://www.postfix.org/) supports.

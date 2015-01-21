@@ -7,7 +7,7 @@ slug: who-didnt-see-this-coming
 title: Who Didn't See This Coming?
 wordpress_id: 454
 categories:
-- Microsoft
+- Rant
 tags:
 - Linux
 - Microsoft

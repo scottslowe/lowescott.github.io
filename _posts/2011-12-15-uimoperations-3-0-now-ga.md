@@ -7,9 +7,7 @@ slug: uimoperations-3-0-now-ga
 title: UIM/Operations 3.0 Now GA
 wordpress_id: 2502
 categories:
-- Networking
-- Storage
-- Virtualization
+- News
 tags:
 - Networking
 - Storage

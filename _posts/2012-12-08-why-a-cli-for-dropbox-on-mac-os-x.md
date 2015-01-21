@@ -7,7 +7,7 @@ slug: why-a-cli-for-dropbox-on-mac-os-x
 title: Why a CLI for Dropbox on Mac OS X
 wordpress_id: 3003
 categories:
-- Macintosh
+- Rant
 tags:
 - Automation
 - CLI

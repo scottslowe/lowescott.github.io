@@ -7,12 +7,11 @@ slug: blogging-for-the-right-reasons
 title: Blogging for the Right Reasons
 wordpress_id: 1970
 categories:
-- Collaboration
-- General
-- Personal
+- Rant
 tags:
 - Blogging
 - Personal
+- Collaboration
 ---
 
 This will be a very quick blog post just to address a growing trend I've noticed. It started with the wave of prominent bloggers getting hired by EMC for the vSpecialist team. With the [recent VMware vExpert 2010 awards][1], this trend has gotten even bigger. What is the trend? The trend I'm seeing is people starting blogs just to get attention in the industry.

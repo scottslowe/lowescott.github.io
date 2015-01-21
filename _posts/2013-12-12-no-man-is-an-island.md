@@ -7,9 +7,7 @@ slug: no-man-is-an-island
 title: No Man is an Island
 wordpress_id: 3382
 categories:
-- Collaboration
-- General
-- Personal
+- Rant
 tags:
 - Collaboration
 - General

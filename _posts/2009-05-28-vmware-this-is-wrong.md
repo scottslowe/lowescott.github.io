@@ -7,8 +7,7 @@ slug: vmware-this-is-wrong
 title: VMware, This is Wrong
 wordpress_id: 1377
 categories:
-- Microsoft
-- Virtualization
+- Rant
 tags:
 - Cisco
 - EMC

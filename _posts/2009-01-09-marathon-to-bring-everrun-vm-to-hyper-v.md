@@ -7,8 +7,7 @@ slug: marathon-to-bring-everrun-vm-to-hyper-v
 title: Marathon to Bring EverRun VM to Hyper-V
 wordpress_id: 1130
 categories:
-- Microsoft
-- Virtualization
+- News
 tags:
 - Citrix
 - HyperV

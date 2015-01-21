@@ -7,8 +7,7 @@ slug: a-quick-note-to-vmware
 title: A Quick Note to VMware
 wordpress_id: 829
 categories:
-- Microsoft
-- Virtualization
+- Rant
 tags:
 - HyperV
 - Microsoft

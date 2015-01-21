@@ -7,7 +7,7 @@ slug: information-overload
 title: Information Overload
 wordpress_id: 184
 categories:
-- General
+- Rant
 tags:
 - Blogging
 - Networking
