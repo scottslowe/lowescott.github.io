@@ -324,6 +324,16 @@ a.sidebar-nav-item:focus {
   font-size: .75em; /* 12px */
 }
 
+/* Social sharing links */
+.post-sharing {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: -.5rem;
+  color: #9a9a9a;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
 /* Related posts */
 .related {
   padding-top: 2rem;
