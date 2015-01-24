@@ -7,12 +7,7 @@ slug: technology-short-take-23
 title: 'Technology Short Take #23'
 wordpress_id: 2633
 categories:
-- Linux
-- Microsoft
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Citrix
 - FCoE

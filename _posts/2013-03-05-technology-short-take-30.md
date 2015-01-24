@@ -7,7 +7,7 @@ slug: technology-short-take-30
 title: 'Technology Short Take #30'
 wordpress_id: 3107
 categories:
-- General
+- Information
 tags:
 - KVM
 - Linux

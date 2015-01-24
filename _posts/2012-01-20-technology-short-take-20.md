@@ -7,13 +7,21 @@ slug: technology-short-take-20
 title: 'Technology Short Take #20'
 wordpress_id: 2525
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Networking
 - Storage
 - Virtualization
+- VXLAN
+- Cisco
+- Nexus
+- OpenStack
+- CLI
+- EMC
+- FibreChannel
+- FCoE
+- Linux
+- HyperV
 ---
 
 Welcome to Technology Short Take #20, the latest collection of various data center-related links, articles, and thoughts. I hope you find something useful here.

@@ -7,7 +7,7 @@ slug: technology-short-take-38
 title: 'Technology Short Take #38'
 wordpress_id: 3400
 categories:
-- Informational
+- Information
 tags:
 - Cisco
 - CLI

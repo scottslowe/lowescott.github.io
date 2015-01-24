@@ -7,10 +7,7 @@ slug: technology-short-take-29
 title: 'Technology Short Take #29'
 wordpress_id: 3082
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Automation
 - Cisco
@@ -24,6 +21,7 @@ tags:
 - Networking
 - OpenStack
 - Puppet
+- Security
 - Storage
 - UCS
 - Virtualization

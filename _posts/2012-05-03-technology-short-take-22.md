@@ -7,10 +7,7 @@ slug: technology-short-take-22
 title: 'Technology Short Take #22'
 wordpress_id: 2617
 categories:
-- Microsoft
-- Networking
-- Security
-- Virtualization
+- Information
 tags:
 - Hardware
 - Microsoft
@@ -21,6 +18,11 @@ tags:
 - VMware
 - vSphere
 - Windows
+- MPLS
+- Cisco
+- UCS
+- HyperV
+- CLI
 ---
 
 Welcome to Technology Short Take #22! Once again, I find myself without too many articles to share with you this time around. I guess that will make things a bit easier for you, the reader, but it does make me question whether or not I'm "listening" to the right communities. If any readers have suggestions on sources of information to which I should be subscribing or I should be following, I'd love to hear your suggestions.

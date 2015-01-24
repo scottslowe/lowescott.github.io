@@ -7,7 +7,7 @@ slug: technology-short-take-41
 title: 'Technology Short Take #41'
 wordpress_id: 3452
 categories:
-- Informational
+- Information
 tags:
 - Hardware
 - HP

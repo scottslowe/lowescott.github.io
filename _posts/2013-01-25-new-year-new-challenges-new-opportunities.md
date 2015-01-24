@@ -7,9 +7,7 @@ slug: new-year-new-challenges-new-opportunities
 title: New Year, New Challenges, New Opportunities
 wordpress_id: 3074
 categories:
-- General
-- Networking
-- Virtualization
+- Personal
 tags:
 - Networking
 - Nicira

@@ -7,9 +7,7 @@ slug: technology-short-take-10
 title: 'Technology Short Take #10'
 wordpress_id: 2228
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Cisco
 - EMC

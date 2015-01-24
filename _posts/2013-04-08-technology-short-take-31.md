@@ -7,11 +7,7 @@ slug: technology-short-take-31
 title: 'Technology Short Take #31'
 wordpress_id: 3129
 categories:
-- Macintosh
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Automation
 - iSCSI
@@ -21,6 +17,7 @@ tags:
 - OpenStack
 - Puppet
 - SDN
+- Security
 - Storage
 - Virtualization
 - VMware

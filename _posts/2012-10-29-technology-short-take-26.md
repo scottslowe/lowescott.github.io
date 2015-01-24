@@ -7,12 +7,7 @@ slug: technology-short-take-26
 title: 'Technology Short Take #26'
 wordpress_id: 2910
 categories:
-- Linux
-- Macintosh
-- Networking
-- Storage
-- UNIX
-- Virtualization
+- Information
 tags:
 - Automation
 - KVM

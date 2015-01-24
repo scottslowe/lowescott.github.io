@@ -7,7 +7,7 @@ slug: technology-short-take-12-storage-edition
 title: 'Technology Short Take #12: Storage Edition'
 wordpress_id: 2291
 categories:
-- Storage
+- Information
 tags:
 - CLARiiON
 - EMC
@@ -20,9 +20,9 @@ I'm so far behind in my technology reading that I have this massive list of blog
 
 Here's the "Storage Edition" of Technology Short Take #12!
 
-* When planning storage details for your vSphere implementation, be sure to keep block size in mind. Duncan Epping's post on [the  performance impact of the different datamovers](http://www.yellow-bricks.com/2011/02/24/storage-vmotion-performance-difference/) in a Storage vMotion operation should bring to light why this is an important storage detail to remember. (And read [this post](http://www.yellow-bricks.com/2011/02/18/blocksize-impact/) if you need more info on the different datamovers.)
+* When planning storage details for your vSphere implementation, be sure to keep block size in mind. Duncan Epping's post on [the performance impact of the different datamovers](http://www.yellow-bricks.com/2011/02/24/storage-vmotion-performance-difference/) in a Storage vMotion operation should bring to light why this is an important storage detail to remember. (And read [this post](http://www.yellow-bricks.com/2011/02/18/blocksize-impact/) if you need more info on the different datamovers.)
 
-* Richard Anderson of EMC (aka [@storagesavvy](http://twitter.com/storagesavvy)) posted a  "what if" about [using cloud storage as a buffer with thin provisioning and FAST VP](http://storagesavvy.com/2011/02/24/auto-tiering-cloud-storage-and-risk-free-thin-pools/). It's an interesting idea, and one that will probably see greater attention moving forward.
+* Richard Anderson of EMC (aka [@storagesavvy](http://twitter.com/storagesavvy)) posted a "what if" about [using cloud storage as a buffer with thin provisioning and FAST VP](http://storagesavvy.com/2011/02/24/auto-tiering-cloud-storage-and-risk-free-thin-pools/). It's an interesting idea, and one that will probably see greater attention moving forward.
 
 * Richard also shared some [real-world results](http://storagesavvy.com/2011/03/26/real-world-emc-fastvp-and-fastcache-results/) on the benefits of using FAST Cache and FAST VP on a NS-480 array.
 

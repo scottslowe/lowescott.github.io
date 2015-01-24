@@ -7,10 +7,7 @@ slug: technology-short-take-25
 title: 'Technology Short Take #25'
 wordpress_id: 2875
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Automation
 - KVM

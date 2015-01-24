@@ -7,7 +7,7 @@ slug: the-symbiosis-between-automation-and-engineering
 title: The Symbiosis Between Automation and Engineering
 wordpress_id: 3211
 categories:
-- General
+- Musing
 tags:
 - Automation
 - Puppet

@@ -7,9 +7,7 @@ slug: technology-short-take-16
 title: 'Technology Short Take #16'
 wordpress_id: 2455
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - HyperV
 - Microsoft
@@ -19,6 +17,9 @@ tags:
 - Virtualization
 - VMware
 - vSphere
+- OVS
+- VXLAN
+- FCoE
 ---
 
 Welcome to Technology Short Take #16. It's been quite a while since my last Technology Short Take (a month!), and I don't know if that's a good thing (so readers didn't have to listen to my rambling) or a bad thing (readers missing out on what I hope are useful or interesting links). In any case, here's my latest collection of various data center-related links, articles, and thoughts. Thanks for reading!

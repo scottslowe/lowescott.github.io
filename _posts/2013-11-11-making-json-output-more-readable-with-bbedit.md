@@ -7,11 +7,8 @@ slug: making-json-output-more-readable-with-bbedit
 title: Making JSON Output More Readable with BBEdit
 wordpress_id: 3328
 categories:
-- General
-- Linux
-- Macintosh
+- Tutorial
 tags:
-- General
 - JSON
 - Linux
 - Macintosh

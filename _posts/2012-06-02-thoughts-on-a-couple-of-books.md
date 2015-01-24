@@ -7,12 +7,11 @@ slug: thoughts-on-a-couple-of-books
 title: Thoughts on a Couple of Books
 wordpress_id: 2629
 categories:
-- Linux
-- Networking
-- Virtualization
+- Review
 tags:
 - Linux
 - Virtualization
+- Networking
 - VMware
 - VPN
 ---

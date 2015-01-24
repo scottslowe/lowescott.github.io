@@ -7,9 +7,6 @@ slug: looking-back-2013-project-report-card
 title: 'Looking Back: 2013 Project Report Card'
 wordpress_id: 3393
 categories:
-- General
-- Linux
-- Networking
 - Personal
 tags:
 - Automation

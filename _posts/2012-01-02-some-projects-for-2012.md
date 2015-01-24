@@ -7,9 +7,7 @@ slug: some-projects-for-2012
 title: Some Projects for 2012
 wordpress_id: 2509
 categories:
-- General
-- Networking
-- Virtualization
+- Personal
 tags:
 - Certification
 - Cisco

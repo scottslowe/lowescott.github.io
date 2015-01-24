@@ -7,9 +7,7 @@ slug: technology-short-take-7
 title: 'Technology Short Take #7'
 wordpress_id: 2163
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Cisco
 - FCoE
@@ -20,6 +18,8 @@ tags:
 - Storage
 - Virtualization
 - vSphere
+- Linux
+- VMware
 ---
 
 Welcome to Technology Short Take #7! This time around I have a collection of links from networking, servers, storage, and virtualization. Our hot topics in this issue include Fibre Channel over Ethernet (FCoE) and its need---or lack thereof---for congestion management, Ubuntu on Hyper-V, the benefits of VAAI, and more!

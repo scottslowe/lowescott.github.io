@@ -7,10 +7,7 @@ slug: technology-short-take-32
 title: 'Technology Short Take #32'
 wordpress_id: 3171
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Hardware
 - iSCSI
@@ -25,6 +22,7 @@ tags:
 - VMware
 - vSphere
 - VXLAN
+- Security
 ---
 
 Welcome to Technology Short Take #32, the latest installment in my irregularly-published series of link collections, thoughts, rants, raves, and miscellaneous information. I try to keep the information linked to data center technologies like networking, storage, virtualization, and the like, but occasionally other items slip through. I hope you find something useful.

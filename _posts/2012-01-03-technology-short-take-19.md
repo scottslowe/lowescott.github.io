@@ -7,9 +7,7 @@ slug: technology-short-take-19
 title: 'Technology Short Take #19'
 wordpress_id: 2512
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Cisco
 - EMC
@@ -23,6 +21,10 @@ tags:
 - Virtualization
 - VMware
 - VXLAN
+- UCS
+- OpenFlow
+- EMC
+- vSphere
 ---
 
 Welcome to Technology Short Take #19, the first Technology Short Take for 2012. Here's this year's first collection of links, articles, and thoughts regarding virtualization, storage, networking, and other data center technology-related topics. I hope you find something useful!

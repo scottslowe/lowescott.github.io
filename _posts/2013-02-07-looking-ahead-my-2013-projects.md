@@ -7,9 +7,6 @@ slug: looking-ahead-my-2013-projects
 title: 'Looking Ahead: My 2013 Projects'
 wordpress_id: 3085
 categories:
-- General
-- Linux
-- Networking
 - Personal
 tags:
 - Automation

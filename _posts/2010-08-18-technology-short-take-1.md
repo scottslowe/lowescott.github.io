@@ -7,7 +7,7 @@ slug: technology-short-take-1
 title: 'Technology Short Take #1'
 wordpress_id: 2015
 categories:
-- Informational
+- Information
 tags:
 - Networking
 - Storage

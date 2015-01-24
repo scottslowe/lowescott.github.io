@@ -7,7 +7,7 @@ slug: technology-short-take-44
 title: 'Technology Short Take #44'
 wordpress_id: 3509
 categories:
-- Informational
+- Information
 tags:
 - Automation
 - Docker

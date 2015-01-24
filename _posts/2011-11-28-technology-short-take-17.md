@@ -7,18 +7,14 @@ slug: technology-short-take-17
 title: 'Technology Short Take #17'
 wordpress_id: 2474
 categories:
-- Linux
-- Macintosh
-- Microsoft
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Citrix
 - EMC
 - FCoE
 - Fusion
 - Linux
+- Macintosh
 - Microsoft
 - Networking
 - Storage

@@ -7,10 +7,7 @@ slug: technology-short-take-33
 title: 'Technology Short Take #33'
 wordpress_id: 3204
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Automation
 - Hardware
@@ -27,6 +24,8 @@ tags:
 - vSphere
 - VXLAN
 - Writing
+- Security
+- Storage
 ---
 
 Welcome to Technology Short Take #33, the latest in my irregularly-published series of articles discussing various data center technology-related links, articles, rants, thoughts, and questions. I hope that you find something useful here. Enjoy!

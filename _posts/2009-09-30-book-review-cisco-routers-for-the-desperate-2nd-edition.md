@@ -7,8 +7,7 @@ slug: book-review-cisco-routers-for-the-desperate-2nd-edition
 title: 'Book Review: Cisco Routers for the Desperate, 2nd Edition'
 wordpress_id: 1674
 categories:
-- General
-- Networking
+- Review
 tags:
 - Cisco
 - Networking

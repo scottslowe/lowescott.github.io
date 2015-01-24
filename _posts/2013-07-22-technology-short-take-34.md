@@ -7,9 +7,7 @@ slug: technology-short-take-34
 title: 'Technology Short Take #34'
 wordpress_id: 3227
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Automation
 - HyperV

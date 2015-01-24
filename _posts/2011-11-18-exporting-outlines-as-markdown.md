@@ -7,8 +7,7 @@ slug: exporting-outlines-as-markdown
 title: Exporting Outlines as Markdown
 wordpress_id: 2470
 categories:
-- Collaboration
-- Macintosh
+- Tutorial
 tags:
 - Collaboration
 - Macintosh

@@ -7,9 +7,7 @@ slug: technology-short-take-18
 title: 'Technology Short Take #18'
 wordpress_id: 2500
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - HyperV
 - Macintosh
@@ -20,6 +18,8 @@ tags:
 - VDI
 - Virtualization
 - vSphere
+- OpenFlow
+- VLAN
 ---
 
 Welcome to Technology Short Take #18! I hope you find something useful in this collection of networking, OS, storage, and virtualization links. Enjoy!

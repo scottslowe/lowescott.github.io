@@ -7,11 +7,14 @@ slug: book-review-vmware-esx-server-in-the-enterprise
 title: 'Book Review: VMware ESX Server in the Enterprise'
 wordpress_id: 694
 categories:
-- Virtualization
+- Review
 tags:
 - ESX
 - Virtualization
 - VMware
+- ESX
+- Security
+- Writing
 ---
 
 _VMware ESX Server in the Enterprise: Planning and Securing Virtualization Servers_, by Edward Haletky, is a book I've been working on reviewing for quite a while now. It's a fairly hefty tome, weighing in at just over 550 pages, and is chock full of technical details on both ESX Server 2.5.x and ESX 3.0.x. Throughout the book, the author faithfully covers information for both versions---where applicable, of course---and highlights differences and similarities.

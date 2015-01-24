@@ -7,13 +7,19 @@ slug: technology-short-take-6
 title: 'Technology Short Take #6'
 wordpress_id: 2159
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Networking
 - Storage
 - Virtualization
+- Cisco
+- CLI
+- FCoE
+- VMware
+- vSphere
+- UCS
+- HyperV
+- EMC
 ---
 
 Welcome to Technology Short Take #6, the latest collection of links, articles, and thoughts on virtualization, networking, storage, and the intersection of the three. I'm going to try a slightly new format for this post in my Technology Short Take series; I'm interested in knowing what you think about the format.

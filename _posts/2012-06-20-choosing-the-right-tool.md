@@ -7,8 +7,7 @@ slug: choosing-the-right-tool
 title: Choosing the Right Tool
 wordpress_id: 2637
 categories:
-- General
-- Macintosh
+- Musing
 tags:
 - General
 - Macintosh

@@ -7,7 +7,7 @@ slug: technology-short-take-45
 title: 'Technology Short Take #45'
 wordpress_id: 3540
 categories:
-- Informational
+- Information
 tags:
 - Docker
 - Hardware

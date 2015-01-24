@@ -7,10 +7,7 @@ slug: technology-short-take-36
 title: 'Technology Short Take #36'
 wordpress_id: 3315
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Automation
 - CLI

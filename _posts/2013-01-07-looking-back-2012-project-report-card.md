@@ -7,10 +7,7 @@ slug: looking-back-2012-project-report-card
 title: 'Looking Back: 2012 Project Report Card'
 wordpress_id: 3043
 categories:
-- General
-- Linux
-- Networking
-- Virtualization
+- Personal
 tags:
 - Certification
 - Cisco
@@ -20,6 +17,7 @@ tags:
 - OVS
 - Virtualization
 - Xen
+- Linux
 ---
 
 About a year ago, I posted a look at [my planned projects for 2012][1]. Now, a year later, it's time to review my progress (or lack thereof) and measure myself on how well I did (or didn't) do on those projects.

@@ -7,7 +7,7 @@ slug: technology-short-take-40
 title: 'Technology Short Take #40'
 wordpress_id: 3428
 categories:
-- Informational
+- Information
 tags:
 - Hardware
 - HyperV

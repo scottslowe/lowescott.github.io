@@ -7,10 +7,7 @@ slug: technology-short-take-27
 title: 'Technology Short Take #27'
 wordpress_id: 2998
 categories:
-- Linux
-- Networking
-- Security
-- Virtualization
+- Information
 tags:
 - Automation
 - CentOS
@@ -21,6 +18,7 @@ tags:
 - OpenStack
 - Puppet
 - RedHat
+- Security
 - Storage
 - Virtualization
 - VMware

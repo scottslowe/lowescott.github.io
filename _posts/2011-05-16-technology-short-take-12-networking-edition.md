@@ -7,13 +7,15 @@ slug: technology-short-take-12-networking-edition
 title: 'Technology Short Take #12: Networking Edition'
 wordpress_id: 2299
 categories:
-- Networking
+- Information
 tags:
 - Cisco
 - FCoE
 - Networking
 - UCS
 - vCloud
+- OTV
+- OpenFlow
 ---
 
 Now that I've published the Storage Edition of Technology Short Take #12, it's time for the Networking Edition. Enjoy, and I hope you find something useful!

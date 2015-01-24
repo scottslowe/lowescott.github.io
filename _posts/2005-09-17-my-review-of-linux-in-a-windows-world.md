@@ -7,7 +7,12 @@ slug: my-review-of-linux-in-a-windows-world
 title: 'My review of "Linux in a Windows World"'
 wordpress_id: 87
 categories:
-- Networking
+- Review
+tags:
+- Windows
+- Linux
+- Interoperability
+- Writing
 ---
 
 A while back, I posted a [blog entry]({% post_url 2005-07-09-new-book-on-linux-windows-integration %}) mentioning a new [O'Reilly](http://www.oreilly.com/) book titled [_Linux in a Windows World_](http://www.oreilly.com/catalog/linuxwinworld/). While preparing for my trip to Sweden a few weeks ago, I purchased a copy of the book as reading material for the long transatlantic flights.

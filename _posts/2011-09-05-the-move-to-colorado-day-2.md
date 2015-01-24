@@ -7,7 +7,7 @@ slug: the-move-to-colorado-day-2
 title: 'The Move to Colorado: Day 2'
 wordpress_id: 2397
 categories:
-- General
+- Personal
 tags:
 - Personal
 ---

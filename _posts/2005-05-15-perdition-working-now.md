@@ -7,7 +7,7 @@ slug: perdition-working-now
 title: Perdition Working Now
 wordpress_id: 6
 categories:
-- Messaging
+- Information
 tags:
 - Encryption
 - Exchange

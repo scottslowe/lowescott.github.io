@@ -7,13 +7,20 @@ slug: technology-short-take-13
 title: 'Technology Short Take #13'
 wordpress_id: 2375
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Networking
 - Storage
 - Virtualization
+- Personal
+- VMware
+- vSphere
+- OTV
+- UCS
+- FibreChannel
+- FCoE
+- Security
+- HyperV
 ---
 
 Welcome to Technology Short Take #13. It's been a while since my last Technology Short Take, and much has happened ([vSphere 5 was announced][1], [HP discontinued the TouchPad and webOS](http://www.engadget.com/2011/08/18/hp-will-discontinue-operations-for-webos-devices/), and [I announced my move to Denver][2]). Here are a few data center technology-related links that stood out to me over the last few weeks. I hope you find something useful!

@@ -7,12 +7,9 @@ slug: technology-short-take-37
 title: 'Technology Short Take #37'
 wordpress_id: 3371
 categories:
-- Linux
-- Macintosh
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
+- Macintosh
 - ESXi
 - Linux
 - Networking

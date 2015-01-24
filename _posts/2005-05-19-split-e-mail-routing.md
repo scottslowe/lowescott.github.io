@@ -7,10 +7,11 @@ slug: split-e-mail-routing
 title: Split E-Mail Routing
 wordpress_id: 8
 categories:
-- Messaging
+- Information
 tags:
 - Messaging
 - Postfix
+- Newsgroups
 ---
 
 Now that I have [Perdition](http://www.vergenet.net/linux/perdition/) up and running (although not in the way I really wanted; see my post titled "Perdition Working Now"), I'm moving on to setting up an internal news server.

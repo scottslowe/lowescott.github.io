@@ -7,16 +7,16 @@ slug: technology-short-take-21
 title: 'Technology Short Take #21'
 wordpress_id: 2587
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Networking
 - Security
 - Storage
 - Virtualization
 - VMware
+- Macintosh
+- vSphere
+- SSL
 ---
 
 It's been a while since I published my last Technology Short Take (found [here][1]), and in browsing my list of saved links I find that I don't really have that many to share. Which then leads to me to ask the question, "Why?" I think it's because I've been sharing lots of stuff via [my Twitter account](http://twitter.com/scott_lowe).

@@ -7,7 +7,6 @@ slug: so-long-status-quo-again
 title: So Long, Status Quo (Again)
 wordpress_id: 2718
 categories:
-- General
 - Personal
 tags:
 - EMC

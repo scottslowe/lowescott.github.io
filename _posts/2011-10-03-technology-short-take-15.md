@@ -7,9 +7,7 @@ slug: technology-short-take-15
 title: 'Technology Short Take #15'
 wordpress_id: 2434
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - FCoE
 - LISP

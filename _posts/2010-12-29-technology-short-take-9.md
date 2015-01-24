@@ -7,9 +7,7 @@ slug: technology-short-take-9
 title: 'Technology Short Take #9'
 wordpress_id: 2196
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - Cisco
 - Citrix

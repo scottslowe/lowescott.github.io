@@ -7,9 +7,7 @@ slug: mid-year-project-update
 title: Mid-Year Project Update
 wordpress_id: 2643
 categories:
-- General
-- Networking
-- Virtualization
+- Personal
 tags:
 - Certification
 - Cisco

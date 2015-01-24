@@ -7,9 +7,7 @@ slug: the-end-of-the-infrastructure-engineer
 title: The End of the Infrastructure Engineer?
 wordpress_id: 2419
 categories:
-- Networking
-- Storage
-- Virtualization
+- Musing
 tags:
 - Networking
 - Storage

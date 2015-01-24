@@ -7,7 +7,7 @@ slug: technology-short-take-42
 title: 'Technology Short Take #42'
 wordpress_id: 3460
 categories:
-- Informational
+- Information
 tags:
 - Automation
 - Fusion

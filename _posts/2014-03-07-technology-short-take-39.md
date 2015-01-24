@@ -7,7 +7,7 @@ slug: technology-short-take-39
 title: 'Technology Short Take #39'
 wordpress_id: 3416
 categories:
-- Informational
+- Information
 tags:
 - Hardware
 - Intel

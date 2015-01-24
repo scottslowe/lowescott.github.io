@@ -7,9 +7,7 @@ slug: technology-short-take-14
 title: 'Technology Short Take #14'
 wordpress_id: 2415
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
 - FCoE
 - Networking
@@ -17,6 +15,10 @@ tags:
 - Vblock
 - vCloud
 - Virtualization
+- VLAN
+- VXLAN
+- Encryption
+- Hardware
 ---
 
 Welcome to Technology Short Take #14, another collection of links and tidbits of information I've gathered over the last few weeks. Let's dive right in!

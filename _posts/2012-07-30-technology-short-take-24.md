@@ -7,10 +7,7 @@ slug: technology-short-take-24
 title: 'Technology Short Take #24'
 wordpress_id: 2704
 categories:
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Networking
 - Security
@@ -19,6 +16,10 @@ tags:
 - VMware
 - vSphere
 - Xen
+- SDN
+- FibreChannel
+- Citrix
+- Solaris
 ---
 
 Welcome to Technology Short Take #24, another instance of my irregularly-published collection of links, thoughts, and rants on various data center technologies like networking, operating systems, security, hardware, virtualization, and cloud computing. This is a slightly shorter version of my Technology Short Takes; I'm trying to pare down since some readers have indicated the previous Short Takes weren't short enough. Anyway, I hope you find something useful.

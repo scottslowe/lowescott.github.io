@@ -7,12 +7,7 @@ slug: technology-short-take-28
 title: 'Technology Short Take #28'
 wordpress_id: 3047
 categories:
-- Macintosh
-- Microsoft
-- Networking
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Automation
 - HyperV

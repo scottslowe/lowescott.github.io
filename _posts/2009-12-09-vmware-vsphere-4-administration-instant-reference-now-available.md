@@ -7,12 +7,13 @@ slug: vmware-vsphere-4-administration-instant-reference-now-available
 title: VMware vSphere 4 Administration Instant Reference Now Available
 wordpress_id: 1764
 categories:
-- Collaboration
-- Virtualization
+- News
 tags:
 - Virtualization
 - VMware
 - vSphere
+- Writing
+- Collaboration
 ---
 
 This afternoon UPS delivered to my door a box full of copies of my latest book, written in partnership with Jase McCarty and Matthew Johnson. _VMware vSphere 4 Administration Instant Reference_ is a hands-on how-to guide for vSphere administrators. The book will be especially helpful for newer administrators who are still learning their way around VMware vSphere and the vSphere Client, but I think even experienced administrators will still find some useful information tucked away here and there. Jase, Matthew, and I worked very hard on this book, and we hope that you find it useful.

@@ -7,12 +7,12 @@ slug: book-review-xen-virtualization
 title: 'Book Review: Xen Virtualization'
 wordpress_id: 617
 categories:
-- Linux
-- Virtualization
+- Review
 tags:
 - Linux
 - Virtualization
 - Xen
+- Writing
 ---
 
 I just finished reading the book titled _Xen Virtualization: From Technologies to Solutions_, published by Packt Publishing and written by Prabhakar Chaganti. Overall, the book was helpful in getting up to speed with Xen, although it appears that English was not the native language for either Mr. Chaganti, his editor, or both.

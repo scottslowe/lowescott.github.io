@@ -7,7 +7,6 @@ slug: so-long-status-quo
 title: So Long Status Quo
 wordpress_id: 1776
 categories:
-- General
 - Personal
 tags:
 - Cisco
