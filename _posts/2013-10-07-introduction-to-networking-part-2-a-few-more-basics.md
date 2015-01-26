@@ -7,7 +7,7 @@ slug: introduction-to-networking-part-2-a-few-more-basics
 title: 'Introduction to Networking: Part 2, A Few More Basics'
 wordpress_id: 3305
 categories:
-- Educational
+- Education
 tags:
 - Networking
 - VLAN

@@ -7,7 +7,7 @@ slug: a-quick-introduction-to-linux-policy-routing
 title: A Quick Introduction to Linux Policy Routing
 wordpress_id: 3193
 categories:
-- Educational
+- Education
 tags:
 - CLI
 - Linux

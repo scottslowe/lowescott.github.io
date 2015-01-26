@@ -5,7 +5,7 @@ date: 2015-01-14 09:10:00-0800
 layout: post
 title: A Non-Programmer's Introduction to Git
 categories:
-- Educational
+- Education
 tags:
 - CLI
 - Linux

@@ -7,7 +7,7 @@ slug: a-non-programmers-introduction-to-json
 title: A Non-Programmer's Introduction to JSON
 wordpress_id: 3326
 categories:
-- Educational
+- Education
 tags:
 - General
 - JSON
