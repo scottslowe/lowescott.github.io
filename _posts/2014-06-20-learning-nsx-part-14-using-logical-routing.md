@@ -92,11 +92,11 @@ When using the web-based Dashboard user interface, you can only create centraliz
 
 On a system with the `neutron` CLI client installed, you can create a logical router like this:
 
-    neutron router-create <em><router name></em>
+    neutron router-create <router name>
 
 This creates a centralized logical router. If you want to create a distributed logical router, it's as simple as this:
 
-    neutron router-create <em><router name></em> --distributed True
+    neutron router-create <router name> --distributed True
 
 The `neutron router-show` command will return output about the specified logical router; that output will tell you if it is a distributed logical router.
 
