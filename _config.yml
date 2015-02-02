@@ -10,8 +10,8 @@ relative_permalinks: true
 
 # Setup
 title:               "Scott's Weblog"
-tagline:             "The weblog of an IT pro specializing in networking, virtualization, and cloud computing"
-description:         "Offering technical posts and how-to articles from an IT pro specializing in networking, virtualization, & cloud computing"
+tagline:             "The weblog of an IT pro specializing in virtualization, networking, open source, and cloud computing"
+description:         "Offering technical posts and how-to articles from an IT pro specializing in virtualization, networking, open source, & cloud computing"
 url:                 http://blog.scottlowe.org
 baseurl:             /
 paginate:            10
