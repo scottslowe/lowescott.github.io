@@ -12,6 +12,7 @@ tags:
 - CLI
 - Linux
 - Virtualization
+- Vagrant
 ---
 
 This post will provide a quick introduction to a tool called [Vagrant](http://www.vagrantup.com). Unless you've been hiding under a rock---or, more likely, been too busy doing real work in your data center to pay attention---you've probably heard of Vagrant. Maybe, like me, you had some ideas about what Vagrant is (or isn't) and what it does (or doesn't) do. Hopefully I can clear up some of the confusion in this post.

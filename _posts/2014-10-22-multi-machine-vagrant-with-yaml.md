@@ -7,12 +7,12 @@ slug: multi-machine-vagrant-with-yaml
 title: Multi-Machine Vagrant with YAML
 wordpress_id: 3551
 categories:
-- Linux
-- Virtualization
+- Explanation
 tags:
 - Automation
 - Linux
 - Virtualization
+- Vagrant
 ---
 
 In this post, I'll describe a technique I found for simplifying the use of multi-machine Vagrantfiles by extracting configuration data into a separate YAML file. This technique is by no means something that I invented or created, so I can't take any credit whatsoever; this is an idea I first saw [here](http://liquidat.wordpress.com/2014/03/03/howto-vagrant-libvirt-multi-multi-machine-ansible-and-puppet/). I wanted to share it here in the hopes that it might prove useful to a larger audience.
