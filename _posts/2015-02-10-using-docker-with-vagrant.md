@@ -42,7 +42,7 @@ The Docker provider is installed when you install Vagrant (any release since 1.6
 
 ### Specifying the Linux Instance for Docker
 
-I mentioned earlier that Mitchell Hashimoto, the creator of Vagrant, took the boot2docker VM and created a Vagrant box from it. You can add that Vagrant box to your system by simply running `vagrant box add mitchellh/boot2odocker`. Vagrant will prompt for the provider, and then download the appropriate version of the box for the selected provider. Then, unless you tell it otherwise, Vagrant will spin up an instance of this boot2docker box anytime it needs to perform Docker provider operations. If you haven't already added the Vagrant box (using the command above) the first time you use the Docker provider, it will download the box automatically.
+I mentioned earlier that Mitchell Hashimoto, the creator of Vagrant, took the boot2docker VM and created a Vagrant box from it. You can add that Vagrant box to your system by simply running `vagrant box add mitchellh/boot2docker`. Vagrant will prompt for the provider, and then download the appropriate version of the box for the selected provider. Then, unless you tell it otherwise, Vagrant will spin up an instance of this boot2docker box anytime it needs to perform Docker provider operations. If you haven't already added the Vagrant box (using the command above) the first time you use the Docker provider, it will download the box automatically.
 
 But what if you _don't want_ to use boot2docker? What if you'd rather use Ubuntu or CentOS, so that what you do in Vagrant more closely matches what you might do in the data center?
 
