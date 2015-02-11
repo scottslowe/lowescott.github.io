@@ -33,9 +33,22 @@ With that in mind, it seems to me that the most beneficial uses of Vagrant are t
 
 OK, enough of the high-level theory. Let's take a look at a _very_ simple example of a `Vagrantfile`:
 
-{% gist lowescott/0f82601987bf1f39c941 %}
+{% highlight ruby %}
+VAGRANTFILE_API_VERSION = "2"
+ 
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+ 
+  # Box
+  config.vm.box = "ubuntu/precise64"
+  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
+ 
+  # Shared folders
+  config.vm.synced_folder ".", "/vagrant"
+ 
+end
+{% endhighlight %}
 
-(Click [here](https://gist.github.com/lowescott/0f82601987bf1f39c941) if you can't see the code block above.)
+(Click [here](https://gist.github.com/lowescott/0f82601987bf1f39c941) for a downloadable GitHub Gist with this code.)
 
 This `Vagrantfile` sets the box ("ubuntu/precise64"), the box URL (retrieves from Canonical's repository of cloud images), and then sets the "/vagrant" directory in the VM to be shared/synced with the current (".") directory on the host---in this case, the current directory is the directory where the `Vagrantfile` itself is stored.
 
