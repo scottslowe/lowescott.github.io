@@ -147,5 +147,5 @@ As I mentioned earlier, sample `Vagrantfiles` and supporting documentation to re
 [link-1]: https://github.com/lowescott/learning-tools
 [link-2]: http://www.vmware.com/products/fusion/
 [link-3]: http://www.virtualbox.org/
-[xref-1]: {% post_url 2015-02-10-using-docker-with-vagrant %}
+[xref-1]: http://blog.scottlowe.org/2015/02/11/using-docker-with-vagrant/
 [xref-2]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
