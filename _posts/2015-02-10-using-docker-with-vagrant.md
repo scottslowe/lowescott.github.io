@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2015-02-10 17:25:00-0700
+date: 2015-02-10 14:25:00-0700
 layout: post
 title: Using Docker with Vagrant
 categories:
@@ -12,6 +12,7 @@ tags:
 - Linux
 - CLI
 - Fusion
+redirect_from: /2015/02/11/using-docker-with-vagrant/
 ---
 
 As part of my ongoing effort to create tools to assist others in learning some of the new technologies out there, I spent a bit of time today working through the use of [Docker][link-1] with [Vagrant][link-2]. Neither of these technologies should be new to my readers; I've already provided quick introductory posts to both (see [here][xref-1] and [here][xref-2]). However, using these two together may provide a real benefit for users who are new to either technology, so I'd like to take a bit and show you how to use Docker with Vagrant.
