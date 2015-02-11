@@ -11,7 +11,7 @@ categories:
 tags:
 - Cisco
 - Networking
-redirect_from: /thinking-out-loud-ospf-summary-routes/
+redirect_from: /2010/09/20/thinking-out-loud-ospf-summary-routes/
 ---
 
 While working through some OSPF configurations in preparation for my CCNA exam next week, I noticed something I thought was odd, and I don't really understand why it's behaving in this manner. I thought perhaps a networking expert can enlighten me.
