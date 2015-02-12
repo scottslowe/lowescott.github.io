@@ -51,9 +51,100 @@ All of these components would typically be installed on an OpenStack "controller
 
 Now that you have an idea about Heat's architecture, I'll walk you through an example template that I created and tested on my own OpenStack implementation (running OpenStack Havana on Ubuntu 12.04 with KVM and VMware NSX). Here's the full template:
 
-{% gist lowescott/485fa69644d646052149 %}
+{% highlight json %}
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Sample Heat template that spins up multiple instances and a private network (JSON)",
+  "Resources" : {
+    "heat_network_01" : {
+      "Type" : "OS::Neutron::Net",
+      "Properties" : {
+        "name" : "heat-network-01"
+      }
+    },
+ 
+    "heat_subnet_01" : {
+      "Type" : "OS::Neutron::Subnet",
+      "Properties" : {
+        "name" : "heat-subnet-01",
+        "cidr" : "10.10.10.0/24",
+        "dns_nameservers" : ["172.16.1.11", "172.16.1.6"],
+        "enable_dhcp" : "True",
+        "gateway_ip" : "10.10.10.254",
+        "network_id" : { "Ref" : "heat_network_01" }
+      }
+    },
+ 
+    "heat_router_01" : {
+      "Type" : "OS::Neutron::Router",
+      "Properties" : {
+        "admin_state_up" : "True",
+        "name" : "heat-router-01"
+      }
+    },
+ 
+    "heat_router_01_gw" : {
+      "Type" : "OS::Neutron::RouterGateway",
+      "Properties" : {
+        "network_id" : "604146b3-2e0c-4399-826e-a18cbc18362b",
+        "router_id" : { "Ref" : "heat_router_01" }
+      }
+    },
+ 
+    "heat_router_int0" : {
+      "Type" : "OS::Neutron::RouterInterface",
+      "Properties" : {
+        "router_id" : { "Ref" : "heat_router_01" },
+        "subnet_id" : { "Ref" : "heat_subnet_01" }
+      }
+    },
+ 
+    "instance0_port0" : {
+      "Type" : "OS::Neutron::Port",
+      "Properties" : {
+        "admin_state_up" : "True",
+        "network_id" : { "Ref" : "heat_network_01" },
+        "security_groups" : ["b0ab35c3-63f0-48d2-8a6b-08364a026b9c"]
+      }
+    },
+ 
+    "instance1_port0" : {
+      "Type" : "OS::Neutron::Port",
+      "Properties" : {
+        "admin_state_up" : "True",
+        "network_id" : { "Ref" : "heat_network_01" },
+        "security_groups" : ["b0ab35c3-63f0-48d2-8a6b-08364a026b9c"]
+      }
+    },
+ 
+    "instance0" : {
+      "Type" : "OS::Nova::Server",
+      "Properties" : {
+        "name" : "heat-instance-01",
+        "image" : "73669ac0-8677-498d-9d97-76af287bcf32",
+        "flavor": "m1.xsmall",
+        "networks" : [{
+          "port" : { "Ref" : "instance0_port0" }
+        }]
+      }
+    },
+ 
+    "instance1" : {
+      "Type" : "OS::Nova::Server",
+      "Properties" : {
+        "name" : "heat-instance-02",
+        "image" : "73669ac0-8677-498d-9d97-76af287bcf32",
+        "flavor": "m1.xsmall",
+        "networks" : [{
+          "port" : { "Ref" : "instance1_port0" }
+        }]
+      }
+    }
+  }
+}
+{% endhighlight %}
 
-(Can't see the code above? Click [here](https://gist.github.com/lowescott/485fa69644d646052149).)
+(Want a downloadable version of the code above? Click [here](https://gist.github.com/lowescott/485fa69644d646052149) to see it as a GitHub Gist.)
 
 Let's walk through this template real quick:
 
