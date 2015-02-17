@@ -7,8 +7,7 @@ slug: vmware-fusion-update-released
 title: VMware Fusion Update Released
 wordpress_id: 572
 categories:
-- Macintosh
-- Virtualization
+- News
 tags:
 - Fusion
 - Macintosh

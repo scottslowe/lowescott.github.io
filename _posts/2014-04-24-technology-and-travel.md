@@ -7,8 +7,7 @@ slug: technology-and-travel
 title: Technology and Travel
 wordpress_id: 3435
 categories:
-- Macintosh
-- Security
+- Information
 tags:
 - Hardware
 - Macintosh

@@ -7,8 +7,7 @@ slug: designing-vmware-infrastructure-video-training-available
 title: Designing VMware Infrastructure Video Training Available
 wordpress_id: 2701
 categories:
-- Collaboration
-- Virtualization
+- News
 tags:
 - Virtualization
 - VMware

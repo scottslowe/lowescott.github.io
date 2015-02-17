@@ -7,11 +7,11 @@ slug: puppetconf-2013-ticket-giveaway
 title: PuppetConf 2013 Ticket Giveaway
 wordpress_id: 3223
 categories:
-- General
-- Linux
+- News
 tags:
 - Automation
 - Puppet
+- Linux
 ---
 
 What is [PuppetConf 2013](http://puppetconf.com)? PuppetConf is the annual operations conference hosted by [Puppet Labs](http://www.puppetlabs.com). This year the conference is in San Francisco on August 22 and 23, and will be focusing on the themes of cloud automation, DevOps, and continuous delivery. All in all, it looks to be quite an interesting event.

@@ -7,8 +7,7 @@ slug: partner-exchange-schedule
 title: Partner Exchange Schedule
 wordpress_id: 1262
 categories:
-- Collaboration
-- Virtualization
+- Information
 tags:
 - Virtualization
 - VMware

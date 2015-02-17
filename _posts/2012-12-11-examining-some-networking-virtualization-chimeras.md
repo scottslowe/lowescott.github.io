@@ -7,9 +7,7 @@ slug: examining-some-networking-virtualization-chimeras
 title: Examining Some Networking-Virtualization Chimeras
 wordpress_id: 3020
 categories:
-- Interoperability
-- Networking
-- Virtualization
+- Musing
 tags:
 - Cisco
 - Interoperability

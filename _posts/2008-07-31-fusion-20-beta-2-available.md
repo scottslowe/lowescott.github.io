@@ -7,8 +7,7 @@ slug: fusion-20-beta-2-available
 title: Fusion 2.0 Beta 2 Available
 wordpress_id: 772
 categories:
-- Macintosh
-- Virtualization
+- News
 tags:
 - Fusion
 - Macintosh

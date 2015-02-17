@@ -7,8 +7,7 @@ slug: vmware-fusion-public-beta
 title: VMware Fusion Public Beta
 wordpress_id: 390
 categories:
-- Macintosh
-- Virtualization
+- News
 tags:
 - Fusion
 - Macintosh

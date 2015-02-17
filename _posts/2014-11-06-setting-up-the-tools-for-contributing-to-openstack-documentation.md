@@ -7,8 +7,7 @@ slug: setting-up-the-tools-for-contributing-to-openstack-documentation
 title: Setting up the Tools for Contributing to OpenStack Documentation
 wordpress_id: 3558
 categories:
-- Collaboration
-- Linux
+- Tutorial
 tags:
 - CLI
 - Collaboration
@@ -16,6 +15,7 @@ tags:
 - OpenStack
 - OSS
 - Writing
+- Git
 ---
 
 For non-programmers, making a meaningful contribution to an open source project can be difficult; this is as true for OpenStack as for other open source projects. Documentation is a way to contribute, but in the case of OpenStack there is a non-trivial setup required in order to be able to contribute to the OpenStack documentation. In this post, I'm going to share how to set up the tools to contribute to OpenStack documentation in the hopes that it will help others get past the "barrier to entry" that currently exists.

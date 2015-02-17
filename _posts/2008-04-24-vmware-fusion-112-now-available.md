@@ -7,8 +7,7 @@ slug: vmware-fusion-112-now-available
 title: VMware Fusion 1.1.2 Now Available
 wordpress_id: 693
 categories:
-- Macintosh
-- Virtualization
+- News
 tags:
 - Fusion
 - Macintosh

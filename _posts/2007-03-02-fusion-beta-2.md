@@ -7,8 +7,7 @@ slug: fusion-beta-2
 title: Fusion Beta 2
 wordpress_id: 422
 categories:
-- Macintosh
-- Virtualization
+- News
 tags:
 - Fusion
 - Macintosh

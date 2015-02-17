@@ -7,8 +7,7 @@ slug: announcing-vmware-vsphere-design
 title: Announcing VMware vSphere Design
 wordpress_id: 2233
 categories:
-- Collaboration
-- Virtualization
+- News
 tags:
 - Virtualization
 - VMware

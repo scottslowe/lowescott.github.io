@@ -7,8 +7,7 @@ slug: fusion-released
 title: Fusion Released
 wordpress_id: 500
 categories:
-- Macintosh
-- Virtualization
+- News
 tags:
 - Fusion
 - Macintosh

@@ -7,13 +7,13 @@ slug: cloud-hosted-cloud-management-via-platform9
 title: Cloud-Hosted Cloud Management via Platform9
 wordpress_id: 3493
 categories:
-- Interoperability
-- Virtualization
+- News
 tags:
 - Docker
 - KVM
 - OpenStack
 - vSphere
+- Virtualization
 ---
 
 A new startup emerged from stealth today, a company called [Platform9](http://www.platform9.com/). Platform9 was launched by former VMware veterans with the goal of making it easy for companies to consume their existing infrastructure in an agile, cloud-like fashion. Platform9 seeks to accomplish this by offering a cloud management platform that is itself provided as a cloud-based service---hence the name of this post, "cloud-hosted cloud management."

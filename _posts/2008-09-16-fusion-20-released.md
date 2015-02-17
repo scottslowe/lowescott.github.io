@@ -7,8 +7,7 @@ slug: fusion-20-released
 title: Fusion 2.0 Released
 wordpress_id: 901
 categories:
-- Macintosh
-- Virtualization
+- News
 tags:
 - Fusion
 - Macintosh
