@@ -7,15 +7,15 @@ slug: using-curl-to-interact-with-a-restful-api
 title: Using Curl to Interact with a RESTful API
 wordpress_id: 3404
 categories:
-- Interoperability
-- Linux
-- Networking
+- Education
 tags:
 - CLI
 - Linux
 - NSX
 - OpenStack
 - Web
+- Interoperability
+- Networking
 ---
 
 It seems as if APIs are popping up everywhere these days. While this isn't a bad thing, it does mean that IT professionals need to have a better understanding of how to interact with these APIs. In this post, I'm going to discuss how to use the popular command line utility `curl` to interact with a couple of RESTful APIs---specifically, the OpenStack APIs and the VMware NSX API.

@@ -7,8 +7,7 @@ slug: managing-your-e-mail-inbox
 title: Managing Your E-mail Inbox
 wordpress_id: 2881
 categories:
-- Collaboration
-- General
+- Explanation
 tags:
 - Collaboration
 - Macintosh

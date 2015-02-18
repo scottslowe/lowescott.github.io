@@ -7,7 +7,7 @@ slug: timbuk2-commute-messenger-bag-two-months-later
 title: Timbuk2 Commute Messenger Bag, Two Months Later
 wordpress_id: 3324
 categories:
-- General
+- Information
 tags:
 - General
 - Travel

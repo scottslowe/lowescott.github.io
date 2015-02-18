@@ -7,9 +7,7 @@ slug: compiling-libvirt-1-0-0-on-ubuntu-12-04-and-12-10
 title: Compiling libvirt 1.0.0 on Ubuntu 12.04 and 12.10
 wordpress_id: 2924
 categories:
-- Interoperability
-- Linux
-- Virtualization
+- Tutorial
 tags:
 - Interoperability
 - Libvirt

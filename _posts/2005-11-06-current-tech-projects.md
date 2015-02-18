@@ -7,9 +7,7 @@ slug: current-tech-projects
 title: Current Tech Projects
 wordpress_id: 113
 categories:
-- Collaboration
-- Messaging
-- UNIX
+- Information
 tags:
 - BSD
 - Exchange
@@ -17,6 +15,8 @@ tags:
 - Newsgroups
 - Postfix
 - SpamAssassin
+- Collaboration
+- Messaging
 ---
 
 Every now and then, I like to post out here a list of my current "tech projects." These are the things that I'm working on for my own network, things that I may or may not start recommending to or supporting for customers.

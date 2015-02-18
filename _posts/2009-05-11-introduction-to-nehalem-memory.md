@@ -7,10 +7,11 @@ slug: introduction-to-nehalem-memory
 title: Introduction to Nehalem Memory
 wordpress_id: 1339
 categories:
-- General
+- Education
 tags:
 - Hardware
-- nehalem
+- Nehalem
+- Intel
 excerpt: "I wanted to follow up on my previous article on the Intel Nehalem CPUs with some additional information on memory configurations."
 ---
 

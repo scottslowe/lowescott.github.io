@@ -7,7 +7,7 @@ slug: tagging-tactics
 title: Tagging Tactics
 wordpress_id: 160
 categories:
-- Collaboration
+- General
 tags:
 - Blogging
 - Tagging

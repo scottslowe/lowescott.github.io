@@ -7,7 +7,6 @@ slug: follow-me-on-twitter
 title: Follow Me on Twitter
 wordpress_id: 891
 categories:
-- Collaboration
 - General
 tags:
 - Blogging

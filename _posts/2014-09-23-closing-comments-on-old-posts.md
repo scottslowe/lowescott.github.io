@@ -7,12 +7,11 @@ slug: closing-comments-on-old-posts
 title: Closing Comments on Old Posts
 wordpress_id: 3538
 categories:
-- Collaboration
 - General
 tags:
 - Collaboration
-- General
 - Writing
+- Blogging
 ---
 
 One of the great things about this site is the interaction I enjoy with readers. It's always great to get comments from readers about how an article was informative, answered a question, or helped solve a problem. Knowing that what I've written here is helpful to others is a _very_ large part of why I've been writing here for over 9 years.

@@ -7,8 +7,7 @@ slug: presentation-from-portland-vmug
 title: Presentation from Portland VMUG
 wordpress_id: 2974
 categories:
-- Collaboration
-- Virtualization
+- Information
 tags:
 - Collaboration
 - OpenStack

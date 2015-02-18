@@ -7,12 +7,12 @@ slug: vsphere-design-guide-giveaway
 title: vSphere Design Guide Giveaway
 wordpress_id: 3120
 categories:
-- General
-- Virtualization
+- News
 tags:
 - VMware
 - vSphere
 - Writing
+- Virtualization
 ---
 
 You might have seen that [the second edition of _VMware vSphere Design_ was recently released][1]. How would you like to win a free copy?
