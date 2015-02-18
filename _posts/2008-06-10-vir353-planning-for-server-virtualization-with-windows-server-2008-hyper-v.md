@@ -7,8 +7,7 @@ slug: vir353-planning-for-server-virtualization-with-windows-server-2008-hyper-v
 title: 'VIR353: Planning for Server Virtualization with Windows Server 2008 Hyper-V'
 wordpress_id: 729
 categories:
-- Microsoft
-- Virtualization
+- Liveblog
 tags:
 - HyperV
 - Microsoft

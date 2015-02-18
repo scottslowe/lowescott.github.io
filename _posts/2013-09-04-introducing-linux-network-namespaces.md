@@ -7,8 +7,7 @@ slug: introducing-linux-network-namespaces
 title: Introducing Linux Network Namespaces
 wordpress_id: 3267
 categories:
-- Linux
-- Networking
+- Education
 tags:
 - CLI
 - Linux

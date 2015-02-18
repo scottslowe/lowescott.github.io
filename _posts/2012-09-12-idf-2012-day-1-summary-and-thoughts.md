@@ -7,7 +7,7 @@ slug: idf-2012-day-1-summary-and-thoughts
 title: IDF 2012 Day 1 Summary and Thoughts
 wordpress_id: 2850
 categories:
-- Networking
+- General
 tags:
 - Hardware
 - IDF2012

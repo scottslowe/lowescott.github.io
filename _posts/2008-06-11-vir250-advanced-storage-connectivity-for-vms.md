@@ -7,9 +7,7 @@ slug: vir250-advanced-storage-connectivity-for-vms
 title: 'VIR250: Advanced Storage Connectivity for VMs'
 wordpress_id: 734
 categories:
-- Microsoft
-- Storage
-- Virtualization
+- Liveblog
 tags:
 - HyperV
 - Microsoft

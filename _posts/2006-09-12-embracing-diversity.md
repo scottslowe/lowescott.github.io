@@ -7,7 +7,7 @@ slug: embracing-diversity
 title: Embracing Diversity
 wordpress_id: 334
 categories:
-- Interoperability
+- Musing
 tags:
 - CentOS
 - ESX
@@ -16,6 +16,7 @@ tags:
 - Solaris
 - UNIX
 - Windows
+- Interoperability
 ---
 
 Hopefully it's no secret that I enjoy working with a variety of operating systems---VMware [ESX Server](http://www.vmware.com/products/vi/esx/) (OK, so maybe not "technically" a full operating system, but I'll include it anyway), Windows, [Mac OS X](http://www.apple.com/macosx/), various flavors of Linux (mostly [CentOS](http://www.centos.org/) and [Ubuntu](http://www.ubuntu.com/)), [OpenBSD](http://www.openbsd.org/), and (more recently) [Solaris](http://www.sun.com/software/solaris/) on x86 (haven't had the opportunity to do Solaris on Sparc yet). All this while I work full-time as a primarily "Microsoft engineer" specializing in Active Directory. Yet I find value in the diversity of my knowledge.

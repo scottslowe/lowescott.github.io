@@ -7,13 +7,13 @@ slug: brkcom-3002-network-redundancy-and-load-balancing-designs-for-ucs-blade-se
 title: 'BRKCOM-3002: Network Redundancy and Load Balancing Designs for UCS Blade Servers'
 wordpress_id: 2334
 categories:
-- Networking
-- Virtualization
+- Liveblog
 tags:
 - Cisco
 - CiscoLive2011
 - Networking
 - UCS
+- Virtualization
 ---
 
 This is BRKCOM-3002, Network Redundancy and Load Balancing Designs for UCS Blade Servers, presented by none other than M. Sean McGee (available as [@mseanmcgee](http://twitter.com/mseanmcgee) on Twitter; I highly recommend you follow him on Twitter if you are interested in UCS). I was really looking forward to this presentation, as I've spoken with Sean before and I know that he is a super-sharp UCS guru. Sean also blogs [here](http://www.mseanmcgee.com/).

@@ -7,8 +7,7 @@ slug: presentation-from-south-florida-vmug
 title: Presentation from South Florida VMUG
 wordpress_id: 2660
 categories:
-- Networking
-- Virtualization
+- Information
 tags:
 - Networking
 - OTV

@@ -7,8 +7,7 @@ slug: vir361-introducing-map-for-windows-server-2008-hyper-v
 title: 'VIR361: Introducing MAP for Windows Server 2008 Hyper-V'
 wordpress_id: 735
 categories:
-- Microsoft
-- Virtualization
+- Liveblog
 tags:
 - HyperV
 - Microsoft

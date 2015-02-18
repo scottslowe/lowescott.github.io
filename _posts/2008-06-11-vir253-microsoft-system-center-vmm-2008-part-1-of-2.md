@@ -7,8 +7,7 @@ slug: vir253-microsoft-system-center-vmm-2008-part-1-of-2
 title: 'VIR253: Microsoft System Center VMM 2008, Part 1 of 2'
 wordpress_id: 731
 categories:
-- Microsoft
-- Virtualization
+- Liveblog
 tags:
 - HyperV
 - Microsoft

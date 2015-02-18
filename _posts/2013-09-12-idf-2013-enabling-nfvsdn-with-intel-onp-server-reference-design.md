@@ -7,8 +7,7 @@ slug: idf-2013-enabling-nfvsdn-with-intel-onp-server-reference-design
 title: 'IDF 2013: Enabling NFV/SDN with Intel ONP Server Reference Design'
 wordpress_id: 3295
 categories:
-- General
-- Networking
+- Liveblog
 tags:
 - Hardware
 - IDF2013

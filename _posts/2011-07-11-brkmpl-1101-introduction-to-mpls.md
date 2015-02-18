@@ -7,7 +7,7 @@ slug: brkmpl-1101-introduction-to-mpls
 title: 'BRKMPL-1101: Introduction to MPLS'
 wordpress_id: 2328
 categories:
-- Networking
+- Liveblog
 tags:
 - Cisco
 - CiscoLive2011

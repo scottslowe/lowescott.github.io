@@ -7,8 +7,7 @@ slug: 3183-vmware-srm-on-netapp-storage
 title: '3183: VMware SRM on NetApp Storage'
 wordpress_id: 1091
 categories:
-- Storage
-- Virtualization
+- Liveblog
 tags:
 - Insight2008
 - NetApp

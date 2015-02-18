@@ -7,8 +7,7 @@ slug: small-tech-ed-schedule-change
 title: Small Tech-Ed Schedule Change
 wordpress_id: 737
 categories:
-- Microsoft
-- Virtualization
+- Information
 tags:
 - Microsoft
 - TechEd2008

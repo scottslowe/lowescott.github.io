@@ -7,10 +7,7 @@ slug: idf-2013-virtualizing-the-network-to-enable-sdi
 title: 'IDF 2013: Virtualizing the Network to Enable SDI'
 wordpress_id: 3290
 categories:
-- General
-- Microsoft
-- Networking
-- Virtualization
+- Liveblog
 tags:
 - IDF2013
 - Microsoft

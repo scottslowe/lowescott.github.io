@@ -7,9 +7,7 @@ slug: significant-networking-problem-with-hyper-v
 title: Significant Networking Problem with Hyper-V
 wordpress_id: 739
 categories:
-- Microsoft
-- Networking
-- Virtualization
+- Information
 tags:
 - HyperV
 - Microsoft

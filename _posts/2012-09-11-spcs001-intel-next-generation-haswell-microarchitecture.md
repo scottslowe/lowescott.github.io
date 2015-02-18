@@ -7,7 +7,7 @@ slug: spcs001-intel-next-generation-haswell-microarchitecture
 title: 'SPCS001: Intel Next-Generation Haswell Microarchitecture'
 wordpress_id: 2841
 categories:
-- General
+- Liveblog
 tags:
 - Hardware
 - IDF2012

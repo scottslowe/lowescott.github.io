@@ -7,7 +7,7 @@ slug: 2031-enhancements-to-netapp-cloning-technology
 title: '2031: Enhancements to NetApp Cloning Technology'
 wordpress_id: 1081
 categories:
-- Storage
+- Liveblog
 tags:
 - Deduplication
 - Insight2008

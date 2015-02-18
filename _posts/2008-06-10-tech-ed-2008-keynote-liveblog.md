@@ -7,8 +7,7 @@ slug: tech-ed-2008-keynote-liveblog
 title: Tech-Ed 2008 Keynote Liveblog
 wordpress_id: 726
 categories:
-- Microsoft
-- Virtualization
+- Liveblog
 tags:
 - HyperV
 - Microsoft

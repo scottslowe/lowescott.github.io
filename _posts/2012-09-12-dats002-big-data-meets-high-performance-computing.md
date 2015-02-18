@@ -7,7 +7,7 @@ slug: dats002-big-data-meets-high-performance-computing
 title: 'DATS002: Big Data Meets High Performance Computing'
 wordpress_id: 2853
 categories:
-- General
+- Liveblog
 tags:
 - IDF2012
 - Intel

@@ -7,7 +7,7 @@ slug: netapp-insight-session-briefs-coming
 title: NetApp Insight Session Briefs Coming
 wordpress_id: 1054
 categories:
-- Storage
+- Information
 tags:
 - Insight2008
 - NetApp

@@ -7,8 +7,7 @@ slug: vir350-system-center-vmm-advanced-integration
 title: 'VIR350: System Center VMM Advanced Integration'
 wordpress_id: 740
 categories:
-- Microsoft
-- Virtualization
+- Liveblog
 tags:
 - HyperV
 - Microsoft

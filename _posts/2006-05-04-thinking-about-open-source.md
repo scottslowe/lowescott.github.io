@@ -7,7 +7,7 @@ slug: thinking-about-open-source
 title: Thinking About Open Source
 wordpress_id: 241
 categories:
-- General
+- Musing
 tags:
 - Apache
 - BSD

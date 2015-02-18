@@ -7,9 +7,7 @@ slug: vmware-weak-spot
 title: VMware Weak Spot
 wordpress_id: 213
 categories:
-- Interoperability
-- Macintosh
-- Virtualization
+- Rant
 tags:
 - Apple
 - ESX

@@ -7,8 +7,7 @@ slug: 3010-a-multistore-primer
 title: '3010: A MultiStore Primer'
 wordpress_id: 1297
 categories:
-- Storage
-- Virtualization
+- Liveblog
 tags:
 - ActiveDirectory
 - CLI

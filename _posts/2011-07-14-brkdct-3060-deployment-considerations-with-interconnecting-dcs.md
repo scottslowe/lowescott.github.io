@@ -7,7 +7,7 @@ slug: brkdct-3060-deployment-considerations-with-interconnecting-dcs
 title: 'BRKDCT-3060: Deployment Considerations with Interconnecting DCs'
 wordpress_id: 2342
 categories:
-- Networking
+- Liveblog
 tags:
 - Cisco
 - CiscoLive2011

@@ -7,7 +7,7 @@ slug: brkdct-2121-virtual-device-context-design-and-implementation-consideration
 title: 'BRKDCT-2121: Virtual Device Context Design and Implementation Considerations'
 wordpress_id: 2340
 categories:
-- Networking
+- Liveblog
 tags:
 - Cisco
 - CiscoLive2011

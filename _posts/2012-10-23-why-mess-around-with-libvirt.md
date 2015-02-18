@@ -7,8 +7,7 @@ slug: why-mess-around-with-libvirt
 title: Why Mess Around with libvirt?
 wordpress_id: 2904
 categories:
-- Interoperability
-- Virtualization
+- Explanation
 tags:
 - Interoperability
 - Libvirt

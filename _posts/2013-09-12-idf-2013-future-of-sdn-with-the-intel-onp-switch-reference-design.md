@@ -7,8 +7,7 @@ slug: idf-2013-future-of-sdn-with-the-intel-onp-switch-reference-design
 title: 'IDF 2013: Future of SDN with the Intel ONP Switch Reference Design'
 wordpress_id: 3293
 categories:
-- General
-- Networking
+- Liveblog
 tags:
 - IDF2013
 - Networking

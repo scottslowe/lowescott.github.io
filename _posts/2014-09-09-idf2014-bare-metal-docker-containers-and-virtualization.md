@@ -7,7 +7,7 @@ slug: idf2014-bare-metal-docker-containers-and-virtualization
 title: 'IDF 2014: Bare Metal, Docker Containers, and Virtualization'
 wordpress_id: 3517
 categories:
-- General
+- Liveblog
 tags:
 - Docker
 - IDF2014

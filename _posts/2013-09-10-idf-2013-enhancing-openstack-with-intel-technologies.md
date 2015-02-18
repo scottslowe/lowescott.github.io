@@ -7,11 +7,7 @@ slug: idf-2013-enhancing-openstack-with-intel-technologies
 title: 'IDF 2013: Enhancing OpenStack with Intel Technologies'
 wordpress_id: 3282
 categories:
-- General
-- Linux
-- Networking
-- Storage
-- Virtualization
+- Liveblog
 tags:
 - Hardware
 - IDF2013

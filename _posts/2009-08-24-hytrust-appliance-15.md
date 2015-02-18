@@ -7,9 +7,7 @@ slug: hytrust-appliance-15
 title: HyTrust Appliance 1.5
 wordpress_id: 1554
 categories:
-- Networking
-- Security
-- Virtualization
+- News
 tags:
 - Networking
 - Security

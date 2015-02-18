@@ -8,7 +8,6 @@ title: IDF 2012 Day 2 Summary and Thoughts
 wordpress_id: 2861
 categories:
 - General
-- Networking
 tags:
 - IDF2012
 - Intel

@@ -7,9 +7,7 @@ slug: vir358-hyper-v-architecture-scenarios-and-networking
 title: 'VIR358: Hyper-V Architecture, Scenarios, and Networking'
 wordpress_id: 738
 categories:
-- Microsoft
-- Networking
-- Virtualization
+- Liveblog
 tags:
 - HyperV
 - Microsoft

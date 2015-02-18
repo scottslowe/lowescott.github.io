@@ -7,8 +7,7 @@ slug: clds006-exploring-new-xeon-e5-optimizations-for-10-gb-ethernet
 title: 'CLDS006: Exploring New Xeon E5 Optimizations for 10 Gb Ethernet'
 wordpress_id: 2858
 categories:
-- Networking
-- Virtualization
+- Liveblog
 tags:
 - FCoE
 - IDF2012

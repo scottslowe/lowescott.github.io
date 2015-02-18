@@ -7,7 +7,7 @@ slug: idf-2014-data-center-mega-session
 title: 'IDF 2014: Data Center Mega-Session'
 wordpress_id: 3524
 categories:
-- General
+- Liveblog
 tags:
 - Hardware
 - IDF2014

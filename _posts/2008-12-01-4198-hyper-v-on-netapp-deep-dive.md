@@ -7,9 +7,7 @@ slug: 4198-hyper-v-on-netapp-deep-dive
 title: '4198: Hyper-V on NetApp Deep Dive'
 wordpress_id: 1071
 categories:
-- Microsoft
-- Storage
-- Virtualization
+- Liveblog
 tags:
 - FibreChannel
 - HyperV

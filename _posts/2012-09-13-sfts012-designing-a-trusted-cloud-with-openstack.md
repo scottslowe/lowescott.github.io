@@ -7,8 +7,7 @@ slug: sfts012-designing-a-trusted-cloud-with-openstack
 title: 'SFTS012: Designing a Trusted Cloud with OpenStack'
 wordpress_id: 2864
 categories:
-- General
-- Security
+- Liveblog
 tags:
 - IDF2012
 - Intel

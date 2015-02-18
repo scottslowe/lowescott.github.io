@@ -7,8 +7,7 @@ slug: no-liveblogging-of-lunch-session
 title: No Liveblogging of Lunch Session
 wordpress_id: 733
 categories:
-- Microsoft
-- Security
+- Information
 tags:
 - Microsoft
 - Security

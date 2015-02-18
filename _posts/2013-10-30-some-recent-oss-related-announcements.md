@@ -7,8 +7,7 @@ slug: some-recent-oss-related-announcements
 title: Some Recent OSS-Related Announcements
 wordpress_id: 3317
 categories:
-- Linux
-- Storage
+- News
 tags:
 - Linux
 - OpenStack

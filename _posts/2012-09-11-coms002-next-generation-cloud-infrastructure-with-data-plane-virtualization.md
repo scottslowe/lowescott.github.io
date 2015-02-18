@@ -7,8 +7,7 @@ slug: coms002-next-generation-cloud-infrastructure-with-data-plane-virtualizatio
 title: 'COMS002: Next Generation Cloud Infrastructure with Data Plane Virtualization'
 wordpress_id: 2844
 categories:
-- Networking
-- Virtualization
+- Liveblog
 tags:
 - IDF2012
 - Intel

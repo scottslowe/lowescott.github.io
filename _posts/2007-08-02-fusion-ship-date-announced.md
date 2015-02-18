@@ -7,8 +7,7 @@ slug: fusion-ship-date-announced
 title: Fusion Ship Date Announced
 wordpress_id: 499
 categories:
-- Macintosh
-- Virtualization
+- News
 tags:
 - Fusion
 - Macintosh

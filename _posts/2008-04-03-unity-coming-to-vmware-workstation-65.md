@@ -7,9 +7,7 @@ slug: unity-coming-to-vmware-workstation-65
 title: Unity Coming to VMware Workstation 6.5
 wordpress_id: 676
 categories:
-- Linux
-- Macintosh
-- Virtualization
+- News
 tags:
 - Linux
 - Macintosh

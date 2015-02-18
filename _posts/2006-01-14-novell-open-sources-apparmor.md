@@ -7,7 +7,7 @@ slug: novell-open-sources-apparmor
 title: Novell Open Sources AppArmor
 wordpress_id: 159
 categories:
-- Linux
+- News
 tags:
 - Linux
 - Novell
