@@ -7,7 +7,7 @@ slug: suggestions-for-processing-mail
 title: Suggestions for Processing Mail
 wordpress_id: 178
 categories:
-- Messaging
+- General
 tags:
 - Messaging
 - Networking

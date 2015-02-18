@@ -7,8 +7,7 @@ slug: learning-nsx-part-9-adding-a-gateway-service
 title: 'Learning NSX, Part 9: Adding a Gateway Service'
 wordpress_id: 3407
 categories:
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - Networking
 - NSX

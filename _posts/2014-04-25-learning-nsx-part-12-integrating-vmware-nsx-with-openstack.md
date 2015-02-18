@@ -7,8 +7,7 @@ slug: learning-nsx-part-12-integrating-vmware-nsx-with-openstack
 title: 'Learning NSX, Part 12: Integrating VMware NSX with OpenStack'
 wordpress_id: 3437
 categories:
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - Networking
 - Neutron

@@ -7,7 +7,7 @@ slug: open-source-blackberry-workaround
 title: Open Source Blackberry Workaround?
 wordpress_id: 177
 categories:
-- Messaging
+- Information
 tags:
 - Messaging
 - Mobility

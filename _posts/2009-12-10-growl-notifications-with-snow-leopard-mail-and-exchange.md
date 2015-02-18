@@ -7,8 +7,7 @@ slug: growl-notifications-with-snow-leopard-mail-and-exchange
 title: Growl Notifications with Snow Leopard Mail and Exchange
 wordpress_id: 1768
 categories:
-- Macintosh
-- Messaging
+- Information
 tags:
 - Exchange
 - Macintosh

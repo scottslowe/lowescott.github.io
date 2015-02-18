@@ -7,12 +7,12 @@ slug: a-closer-look-at-ical-caldav-google-calendar-and-the-iphone
 title: A Closer Look at iCal, CalDAV, Google Calendar, and the iPhone
 wordpress_id: 1109
 categories:
-- Collaboration
-- Macintosh
+- Explanation
 tags:
 - iPhone
 - Macintosh
 - Web
+- Collaboration
 ---
 
 A few weeks ago I posted an article titled [Manually Configuring iCal for Google Calendar and CalDAV][1], in which I provided a way to configure iCal in Leopard to use CalDAV to communicate with Google Calendar. I'd done this once before, but when Google made the CalDAV support "official" they removed the how-to pages and instead pointed everyone to their application to do it automatically. In any case, a bit of experimentation turned up the right settings, so in the event you're interested, have a look there.

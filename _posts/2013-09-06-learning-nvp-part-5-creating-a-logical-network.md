@@ -7,8 +7,7 @@ slug: learning-nvp-part-5-creating-a-logical-network
 title: 'Learning NVP, Part 5: Creating a Logical Network'
 wordpress_id: 3272
 categories:
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - Networking
 - Nicira

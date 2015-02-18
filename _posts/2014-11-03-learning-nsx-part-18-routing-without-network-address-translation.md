@@ -7,8 +7,7 @@ slug: learning-nsx-part-18-routing-without-network-address-translation
 title: 'Learning NSX, Part 18: Routing Without Network Address Translation'
 wordpress_id: 3556
 categories:
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - Networking
 - Neutron

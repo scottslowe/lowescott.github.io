@@ -7,11 +7,11 @@ slug: manually-configuring-ical-for-google-calendar-and-caldav
 title: Manually Configuring iCal for Google Calendar and CalDAV
 wordpress_id: 1078
 categories:
-- Collaboration
-- Macintosh
+- Tutorial
 tags:
 - Macintosh
 - Web
+- Collaboration
 ---
 
 Sometimes I like doing things manually. I can't tell you why, except perhaps to say that I'd rather know exactly what's going on and how things are happening instead of giving over control to a "black box" that does something for me and spits out the results. It's silly, I know, but that's just how I am.

@@ -7,9 +7,7 @@ slug: learning-nvp-part-4-adding-hypervisors-to-nvp
 title: 'Learning NVP, Part 4: Adding Hypervisors to NVP'
 wordpress_id: 3251
 categories:
-- Linux
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - KVM
 - Linux

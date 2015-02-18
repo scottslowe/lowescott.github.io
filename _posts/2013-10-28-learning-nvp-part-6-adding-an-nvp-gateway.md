@@ -7,8 +7,7 @@ slug: learning-nvp-part-6-adding-an-nvp-gateway
 title: 'Learning NVP, Part 6: Adding an NVP Gateway'
 wordpress_id: 3319
 categories:
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - Networking
 - Nicira

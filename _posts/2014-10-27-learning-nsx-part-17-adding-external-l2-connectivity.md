@@ -7,9 +7,7 @@ slug: learning-nsx-part-17-adding-external-l2-connectivity
 title: 'Learning NSX, Part 17: Adding External L2 Connectivity'
 wordpress_id: 3553
 categories:
-- Collaboration
-- Security
-- Virtualization
+- Tutorial
 tags:
 - Networking
 - Neutron
@@ -17,6 +15,7 @@ tags:
 - OpenStack
 - Virtualization
 - VMware
+- Security
 ---
 
 This is part 17 of the Learning NSX blog series. In this post, I'll show you how to add layer 2 (L2) connectivity to your NSX environment, and how to leverage that L2 connectivity in an NSX-powered OpenStack implementation. This will allow you, as an operator of an NSX-powered OpenStack cloud, to offer L2/bridged connectivity to your tenants as an additional option.

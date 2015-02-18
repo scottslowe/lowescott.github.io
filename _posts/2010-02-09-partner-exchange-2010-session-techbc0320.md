@@ -7,8 +7,7 @@ slug: partner-exchange-2010-session-techbc0320
 title: Partner Exchange 2010 Session TECHBC0320
 wordpress_id: 1822
 categories:
-- Microsoft
-- Virtualization
+- Liveblog
 tags:
 - Microsoft
 - Snapshot

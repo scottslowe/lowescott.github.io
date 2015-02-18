@@ -7,8 +7,7 @@ slug: learning-nvp-part-8-an-update-on-the-nvp-to-nsx-transition
 title: 'Learning NVP, Part 8: An Update on the NVP to NSX Transition'
 wordpress_id: 3379
 categories:
-- Networking
-- Virtualization
+- Explanation
 tags:
 - Networking
 - NSX
