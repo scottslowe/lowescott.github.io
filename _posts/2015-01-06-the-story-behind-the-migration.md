@@ -9,6 +9,7 @@ categories:
 tags:
 - Writing
 - Blogging
+- Markdown
 ---
 
 A number of people have asked me why I migrated from WordPress---which powered my blog for 9 years---to Jekyll and GitHub Pages. Now that the migration is finally complete, I can share with you the story behind the migration: why I migrated, the process I followed, and some of the tools I used.

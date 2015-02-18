@@ -15,6 +15,7 @@ tags:
 - Macintosh
 - Productivity
 - Writing
+- Markdown
 ---
 
 In some of the presentations that I give on productivity and efficiency, one of the things I mention is _reducing the friction_; that is, making processes more streamlined so they're easier to perform. In this post, I'm going to describe one way I reduced the friction for producing and publishing blog posts using [BBEdit](http://www.barebones.com/products/bbedit/), [TextSoap](http://www.unmarked.com/textsoap/), [MarsEdit](http://www.read-sweater.com/marsedit/), and some AppleScript.

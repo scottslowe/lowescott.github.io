@@ -18,6 +18,7 @@ tags:
 - OSS
 - Privacy
 - Security
+- Markdown
 ---
 
 About a week ago, I published an article showing you how to [use EncFS and BoxCryptor to provide client-side encryption of Dropbox data][1]. After working with this configuration for a while, I've run across a problem (at least, a problem for me---it might not be a problem for you). The problem lies on the iPad end of things.

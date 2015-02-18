@@ -9,8 +9,9 @@ wordpress_id: 2470
 categories:
 - Tutorial
 tags:
-- Collaboration
 - Macintosh
+- Markdown
+- Productivity
 ---
 
 As you probably already know, I've been working extensively with Markdown (and MultiMarkdown) over the last few months, and it has rapidly become my preferred format for content creation. To help me more extensively leverage Markdown for all my content creation, I came across [this OmniOutliner plug-in](http://fletcherpenney.net/2011/10/omnioutliner_plugin) by Fletcher Penny that allows me to export outlines as Markdown.

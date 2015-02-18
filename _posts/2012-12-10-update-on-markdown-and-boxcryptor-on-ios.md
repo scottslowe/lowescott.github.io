@@ -15,6 +15,7 @@ tags:
 - Macintosh
 - OSS
 - Storage
+- Markdown
 ---
 
 A short while ago, I talked about [how to add client-side encryption to Dropbox using EncFS][1]. In that post, I suggested using BoxCryptor to access your encrypted files. A short time later, though, I uncovered [a potential issue][2] with (what I thought to be) BoxCryptor. I have an update on that issue.

@@ -12,6 +12,7 @@ tags:
 - Macintosh
 - Productivity
 - Writing
+- Markdown
 ---
 
 I don't think that it is any secret that I've become a big fan of [Markdown](http://daringfireball.com/markdown/) (MultiMarkdown to be precise; more on that in a moment) over the last couple of years. Likewise, it's not really a secret that I'm an OS X user, although my "fanboi" status for OS X has waned a bit since the introduction of Lion and Mountain Lion (neither of which are as good, in my opinion, as Snow Leopard, but that's an entirely different discussion---the jury is still out on Mavericks). In this post, I want to share with you a few Markdown tools for OS X that I've been using and that (hopefully) you'll find helpful as well.

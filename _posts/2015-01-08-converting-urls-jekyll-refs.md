@@ -9,6 +9,7 @@ categories:
 tags:
 - Blogging
 - Jekyll
+- Markdown
 ---
 
 In my post about [the story behind the migration][xref-1], I mentioned that I made extensive use of regular expressions ("regexes") to help reformat portions of the Markdown documents that are used by Jekyll to build this site. In this post, I wanted to briefly share one of the regexes I used (and am still using) to convert URLs to Jekyll references.
