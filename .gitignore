@@ -8,3 +8,5 @@ vendor/
 bin/
 Gemfile.lock
 _site/
+_drafts/
+_drafts
