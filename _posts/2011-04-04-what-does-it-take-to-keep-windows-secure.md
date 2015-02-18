@@ -7,8 +7,7 @@ slug: what-does-it-take-to-keep-windows-secure
 title: What Does it Take to Keep Windows Secure?
 wordpress_id: 2255
 categories:
-- Microsoft
-- Security
+- Rant
 tags:
 - Microsoft
 - Security

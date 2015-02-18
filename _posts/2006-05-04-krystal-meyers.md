@@ -7,10 +7,11 @@ slug: krystal-meyers
 title: Krystal Meyers
 wordpress_id: 243
 categories:
-- Personal
+- Review
 tags:
 - Christianity
 - Music
+- Personal
 ---
 
 I've been meaning to write about this young Christian rock artist for a while now, but keep forgetting. Finally, here it is.

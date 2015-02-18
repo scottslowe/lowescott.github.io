@@ -7,7 +7,7 @@ slug: im-confused
 title: I'm Confused
 wordpress_id: 1218
 categories:
-- Microsoft
+- Rant
 tags:
 - Microsoft
 - Windows

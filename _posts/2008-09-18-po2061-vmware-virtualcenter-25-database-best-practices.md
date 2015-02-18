@@ -7,7 +7,7 @@ slug: po2061-vmware-virtualcenter-25-database-best-practices
 title: 'PO2061: VMware VirtualCenter 2.5 Database Best Practices'
 wordpress_id: 947
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

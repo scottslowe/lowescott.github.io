@@ -7,8 +7,7 @@ slug: po1644-vmware-update-manager-performance-and-best-practices
 title: 'PO1644: VMware Update Manager Performance and Best Practices'
 wordpress_id: 946
 categories:
-- Security
-- Virtualization
+- Liveblog
 tags:
 - ESX
 - Security

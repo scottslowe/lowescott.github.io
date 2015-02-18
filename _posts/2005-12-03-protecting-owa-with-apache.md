@@ -7,13 +7,14 @@ slug: protecting-owa-with-apache
 title: Protecting OWA with Apache
 wordpress_id: 134
 categories:
-- Interoperability
-- Messaging
+- Explanation
 tags:
 - Apache
 - Exchange
 - Security
 - SSL
+- Interoperability
+- Messaging
 ---
 
 Outlook Web Access (OWA) is the web-based interface for accessing e-mail and other resources handled by [Microsoft Exchange](http://www.microsoft.com/exchange/). Unfortunately, OWA's popularity also makes it the target of numerous worms and security exploits. As a result, many organizations seek to deploy OWA behind a reverse proxy that can help shield OWA from web-based attacks and exploits. In this posting, I'm going to share information to help build a reverse proxy using [Apache 2.0](http://www.apache.org/httpd/).

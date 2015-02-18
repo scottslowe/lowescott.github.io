@@ -7,8 +7,7 @@ slug: vc105-the-marriage-of-figaro
 title: 'VC105: The Marriage of Figaro'
 wordpress_id: 1320
 categories:
-- Security
-- Virtualization
+- Liveblog
 tags:
 - Security
 - Virtualization

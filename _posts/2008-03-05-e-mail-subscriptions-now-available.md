@@ -8,7 +8,6 @@ title: E-Mail Subscriptions Now Available
 wordpress_id: 650
 categories:
 - General
-- Messaging
 tags:
 - Blogging
 - Messaging

@@ -7,10 +7,11 @@ slug: some-new-christian-music
 title: Some New Christian Music
 wordpress_id: 1396
 categories:
-- Personal
+- Review
 tags:
 - Christianity
 - Music
+- Personal
 ---
 
 I recently purchased some new Christian music to add to my iTunes library; I had a credit with iTunes from some iTunes Gift Cards that my kids gave me for Christmas. After six months, I figured I'd better go ahead and use the iTunes credit or it would disappear.

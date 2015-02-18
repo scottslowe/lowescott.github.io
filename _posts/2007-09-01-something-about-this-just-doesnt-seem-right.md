@@ -7,7 +7,7 @@ slug: something-about-this-just-doesnt-seem-right
 title: Something About This Just Doesn't Seem Right
 wordpress_id: 517
 categories:
-- Microsoft
+- Rant
 tags:
 - Microsoft
 - Networking

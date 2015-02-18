@@ -7,13 +7,13 @@ slug: vsp3205-tech-preview-vstorage-apis
 title: 'VSP3205: Tech Preview, vStorage APIs'
 wordpress_id: 2381
 categories:
-- Storage
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware
 - VMworld2011
 - vSphere
+- Storage
 ---
 
 This is a session blog for VSP3205, titled "Tech Preview: vStorage APIs for VM and Application Granular Data Management." The presenters are Satyam Vaghani and Vijay Ramachandran, both with VMware.

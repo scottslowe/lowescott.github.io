@@ -6,7 +6,7 @@ layout: post
 title: Lifesong by Casting Crowns
 wordpress_id: 93
 categories:
-- Personal
+- Review
 tags:
 - Christianity
 - Music
