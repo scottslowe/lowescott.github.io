@@ -13,6 +13,7 @@ tags:
 - Fusion
 - CLI
 - Vagrant
+- CoreOS
 ---
 
 As a follow-up to [my recent #vBrownBag session][link-1] on "Docker and Friends," I wanted to provide a quick and relatively easy way for VMware administrators to experiment with some of the technologies I demonstrated. Since not everyone has their own OpenStack cloud running in their basement, [Vagrant][link-3] seemed like a reasonable solution. So, in this post, I'll show you how to use Vagrant to experiment with some of the technologies I demonstrated in the #vBrownBag session.

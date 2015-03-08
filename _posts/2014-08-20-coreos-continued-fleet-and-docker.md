@@ -13,6 +13,7 @@ tags:
 - Docker
 - Linux
 - OSS
+- CoreOS
 ---
 
 This post is the third in a series of posts on [CoreOS](http://coreos.com/), this time focusing on the use of [fleet](https://github.com/coreos/fleet) and [Docker](http://docker.com/) to deploy containers across a cluster of systems. This post builds on [my earlier introduction to CoreOS][1] and [the subsequent more in-depth look at etcd][2].

@@ -14,6 +14,7 @@ tags:
 - CLI
 - Linux
 - OpenStack
+- CoreOS
 ---
 
 In this post, I'm going to illustrate one way to deploy [CoreOS](http://coreos.com/) on [OpenStack](http://www.openstack.org/) using Heat. By no means is this intended to be seen as the _only_ way to use Heat to deploy CoreOS, but rather as _one_ way of using Heat to deploy CoreOS. I'm publishing this in the hopes that others will be able to use this as a building block for their own deployments.

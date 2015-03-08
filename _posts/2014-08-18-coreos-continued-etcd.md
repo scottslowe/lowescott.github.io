@@ -13,6 +13,7 @@ tags:
 - JSON
 - Linux
 - OSS
+- CoreOS
 ---
 
 In this post, I'm going to build on [my earlier introduction to CoreOS][1] by taking a slightly more detailed look at [etcd](https://github.com/coreos/etcd/). etcd is a distributed key-value store (more on that in a moment) and is one of the key technologies that I feel distinguishes [CoreOS](http://coreos.com/) from other Linux distributions.

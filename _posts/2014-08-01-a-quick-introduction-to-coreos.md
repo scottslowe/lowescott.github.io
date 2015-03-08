@@ -12,6 +12,7 @@ tags:
 - Docker
 - Linux
 - OpenStack
+- CoreOS
 ---
 
 In this post, I'm going to provide a very quick introduction to [CoreOS](http://www.coreos.com/). CoreOS, in case you haven't heard of it, is a highly streamlined Linux distribution designed with containers, massive server deployments, and distributed systems/applications in mind.
