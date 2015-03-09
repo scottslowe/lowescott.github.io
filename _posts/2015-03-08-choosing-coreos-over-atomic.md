@@ -34,6 +34,14 @@ All in all, the CentOS Atomic Host variant felt _unfinished_. It felt as if, per
 
 I'm sure that the RHEL/CentOS Atomic Host variants will get better over time, but for now I'm sticking with CoreOS.
 
+### Update
+
+Since publishing this post, I've had the opportunity to speak with someone from Red Hat to get some additional information, and I wanted to share that here:
+
+* The officially-released version of RHEL Atomic Host is 7.1, _not_ 7.0. Thus, the 7.0 builds of CentOS Atomic Host with which I was testing actually pre-dated the official release (and, in fact, are no longer available for download). CentOS 7.1 Atomic Host builds should be coming soon. When the 7.1 builds are available, I'll test it again.
+* Initial indications seem to point to an interaction between the use of rpm-ostree and cloud-init (version 0.7.5) as causing the cloud customization problems I described above. This isn't something the Red Hat team saw during their testing, but it's something into which they are currently looking.
+
+My sincere thanks goes to Steve Gordon for taking the time to talk with me about the issues that I uncovered.
 
 
 [link-1]: https://github.com/projectatomic/rpm-ostree
