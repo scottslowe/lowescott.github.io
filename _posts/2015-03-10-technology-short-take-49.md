@@ -3,9 +3,9 @@ author: slowe
 comments: true
 date: 2015-03-10 13:11:00-0700
 layout: post
-title: 'Technology Short Take #48'
+title: 'Technology Short Take #49'
 categories:
-- Informational
+- Information
 tags:
 - Networking
 - Hardware
