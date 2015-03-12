@@ -7,11 +7,13 @@ slug: kicking-the-policy-discussion-into-high-gear
 title: Kicking the Policy Discussion Into High Gear
 wordpress_id: 3433
 categories:
-- Interoperability
+- Information
 tags:
 - Interoperability
 - OpenStack
 - OSS
+- Policy
+- Cloud
 ---
 
 Most IT vendors agree that more extensive use of automation and orchestration in today's data centers are beneficial to customers. The vendors may vary in their approach to providing this automation and orchestration---some may prefer to do it in software (VMware would be one of these, along with other software companies like Microsoft and Red Hat), while others want to do it in hardware. There are advantages and disadvantages to each approach, naturally, and customers need to evaluate the various solutions against their own requirements to find the best fit.
