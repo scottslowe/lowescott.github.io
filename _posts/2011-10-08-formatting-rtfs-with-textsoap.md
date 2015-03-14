@@ -7,11 +7,11 @@ slug: formatting-rtfs-with-textsoap
 title: Formatting RTFs with TextSoap
 wordpress_id: 2446
 categories:
-- Collaboration
-- Macintosh
+- Explanation
 tags:
 - Collaboration
 - Macintosh
+- Writing
 ---
 
 If there's one thing I miss about trying to avoid Microsoft Word and stick with more "open" file formats, it's styles. Yes, styles. See, I'm a long-time Microsoft Word user, and in a previous life I worked in a role where it was my job to provide consistent formatting for some very large documents (300, 500, or more than 700 pages sometimes). In situations like that, styles are an absolute **must**. So, driven by necessity, I learned about styles, how to use them, and eventually grew to rely very heavily on them.

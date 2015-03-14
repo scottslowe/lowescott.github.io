@@ -7,7 +7,7 @@ slug: openstack-architecture-and-design-book-sprint
 title: OpenStack Architecture and Design Book Sprint
 wordpress_id: 3464
 categories:
-- Collaboration
+- Information
 tags:
 - Collaboration
 - OpenStack

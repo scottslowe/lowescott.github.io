@@ -7,9 +7,10 @@ slug: just-about-ready
 title: Just About Ready
 wordpress_id: 117
 categories:
-- Collaboration
+- General
 tags:
 - Blogging
+- Writing
 ---
 
 This new blog is just about ready for public consumption. I just finished configuring the permalink structure so that all posts have a static URL, using a pretty common structure that includes the date of the post in the URL. (This seems to be a reasonably well-accepted practice.)

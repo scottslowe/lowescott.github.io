@@ -7,9 +7,7 @@ slug: upcoming-podcasts
 title: Upcoming Podcasts
 wordpress_id: 2161
 categories:
-- Collaboration
-- Networking
-- Virtualization
+- Information
 tags:
 - Networking
 - Virtualization

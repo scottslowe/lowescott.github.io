@@ -7,8 +7,7 @@ slug: virtualization-interview-posted
 title: Virtualization Interview Posted
 wordpress_id: 788
 categories:
-- Collaboration
-- Virtualization
+- Information
 tags:
 - Blogging
 - HyperV

@@ -7,10 +7,10 @@ slug: spousetivities-at-hp-discover-vienna
 title: Spousetivities at HP Discover Vienna
 wordpress_id: 2457
 categories:
-- Collaboration
-- General
+- Information
 tags:
 - Collaboration
+- Spousetivities
 ---
 
 As many of you probably already know, my wife Crystal ([@crystal_lowe](http://twitter.com/crystal_lowe) on Twitter) runs something called Spousetivities, which organizes activities for spouses traveling to conference cities with conference attendees. (You can learn more about Spousetivities by visiting [the About page](http://spousetivities.com/about/).) In the past, Spousetivities was limited to VMworld. This past year, it expanded to include EMC World as well. And now it's expanding again to include [HP Discover Vienna](https://h30406.www3.hp.com/campaigns/2010/events/discover/vienna/index.php)!

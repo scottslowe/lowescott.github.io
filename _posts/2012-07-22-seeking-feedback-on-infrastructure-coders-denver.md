@@ -7,7 +7,7 @@ slug: seeking-feedback-on-infrastructure-coders-denver
 title: Seeking Feedback on Infrastructure Coders Denver
 wordpress_id: 2686
 categories:
-- Collaboration
+- Information
 tags:
 - Automation
 - Collaboration

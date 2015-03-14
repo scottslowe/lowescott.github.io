@@ -7,7 +7,10 @@ slug: ok-so-authentication-was-easier-than-expected
 title: OK, So Authentication Was Easier Than Expected...
 wordpress_id: 72
 categories:
+- Information
+tags:
 - Collaboration
+- OSS
 ---
 
 ...but SSL is not so easy. I found a workaround for using [Stunnel](http://stunnel.mirt.net/index.html); in order for [INN](http://www.isc.org/products/INN/) to not think it's another news server feeding it information and instead treat it like a reader, I had to alias another IP address and bind Stunnel on that IP address. It works, but it's not my ideal solution.

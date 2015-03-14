@@ -7,9 +7,10 @@ slug: spousetivities-at-ibm-edge-2013
 title: Spousetivities at IBM Edge 2013
 wordpress_id: 3166
 categories:
-- Collaboration
+- Information
 tags:
 - Collaboration
+- Spousetivities
 ---
 
 Regular readers of this site know that my wife, Crystal, runs something called [Spousetivities](http://spousetivities.com). Spousetivities originated out of boredom, essentially---Crystal was traveling with me to VMworld and wanted to find someone to hang out with while I was at the conference. That was VMworld 2008, and since that time she's had activities at [VMworld 2009][1], [VMworld 2010][2] (including [VMworld Europe 2010][3]), VMworld 2011 (both [US][4] and [Europe][5]), and [VMworld 2012][6] (US and Europe). She's also had activities at EMC World (2011 and 2012), [HP Discover EMEA][7], and Dell Storage Forum in Boston. This year, she's added another conference: IBM Edge 2013 in Las Vegas!

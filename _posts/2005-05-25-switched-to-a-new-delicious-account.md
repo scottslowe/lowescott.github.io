@@ -7,7 +7,7 @@ slug: switched-to-a-new-delicious-account
 title: Switched to a New del.icio.us Account
 wordpress_id: 9
 categories:
-- Collaboration
+- Information
 tags:
 - Blogging
 - Web

@@ -7,11 +7,11 @@ slug: an-interview-with-jesse-proudman
 title: An Interview with Jesse Proudman
 wordpress_id: 3384
 categories:
-- Collaboration
-- General
+- Information
 tags:
 - Collaboration
-- General
+- Cloud
+- OpenStack
 ---
 
 I recently had the opportunity to conduct an e-mail interview with Jesse Proudman, founder and CEO of Blue Box. The interview is posted below. While it gets a bit biased toward Blue Box at times (he started the company, after all), there are some interesting points raised.

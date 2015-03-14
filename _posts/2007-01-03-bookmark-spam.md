@@ -7,7 +7,7 @@ slug: bookmark-spam
 title: Bookmark Spam?
 wordpress_id: 396
 categories:
-- Collaboration
+- Rant
 tags:
 - Collaboration
 - Web
