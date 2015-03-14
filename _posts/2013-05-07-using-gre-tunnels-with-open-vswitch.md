@@ -7,10 +7,7 @@ slug: using-gre-tunnels-with-open-vswitch
 title: Using GRE Tunnels with Open vSwitch
 wordpress_id: 3175
 categories:
-- Interoperability
-- Linux
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - CLI
 - GRE

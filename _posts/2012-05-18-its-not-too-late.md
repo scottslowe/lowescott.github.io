@@ -7,10 +7,12 @@ slug: its-not-too-late
 title: It's Not Too Late
 wordpress_id: 2622
 categories:
-- Storage
+- Information
 tags:
 - EMC
 - EMCWorld2012
+- Storage
+- Spousetivities
 ---
 
 It's not too late to sign up for Spousetivities at [EMC World 2012](http://www.emcworld.com/)! The conference is upon us next week, and if you have a spouse/partner/friend/family member traveling with you then you owe it to them to check out Spousetivities. More information on the activities, costs, and the ability to actually register for activities can be found [on the registration page](http://spousetivities-emc2012.eventbrite.com/). Go sign up now!

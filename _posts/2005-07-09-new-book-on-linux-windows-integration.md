@@ -7,11 +7,12 @@ slug: new-book-on-linux-windows-integration
 title: New Book on Linux-Windows Integration
 wordpress_id: 40
 categories:
-- Interoperability
+- News
 tags:
 - LDAP
 - Linux
 - Windows
+- Interoperability
 ---
 
 While searching for Linux-Windows integration articles to assist in my project to unify Linux authentication with Active Directory, I came across an entry in Robbie Allen's [Active Directory Cookbook blog](http://www.rallenhome.com/blog/adcookbook/) that was talking about a new book titled _Linux in a Windows World_.

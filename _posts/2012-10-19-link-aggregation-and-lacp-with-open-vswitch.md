@@ -7,9 +7,7 @@ slug: link-aggregation-and-lacp-with-open-vswitch
 title: Link Aggregation and LACP with Open vSwitch
 wordpress_id: 2893
 categories:
-- Interoperability
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - Interoperability
 - Networking

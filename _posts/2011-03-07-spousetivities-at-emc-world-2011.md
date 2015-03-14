@@ -7,13 +7,13 @@ slug: spousetivities-at-emc-world-2011
 title: Spousetivities at EMC World 2011
 wordpress_id: 2247
 categories:
-- General
-- Storage
+- Information
 tags:
 - Collaboration
 - EMC
 - EMCWorld2011
 - Storage
+- Spousetivities
 ---
 
 Heading to [EMC World 2011](http://www.emcworld.com/) in Las Vegas in May? Cool, I'll probably see you there. What's even cooler, though, is the fact that my wife, Crystal ([@crystal_lowe](http://twitter.com/crystal_lowe) on Twitter) will be, for the first time, organizing spouse activities for EMC World!

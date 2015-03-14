@@ -7,8 +7,9 @@ slug: open-source-office-alternative
 title: Open Source Office Alternative
 wordpress_id: 31
 categories:
-- Interoperability
+- Information
 tags:
+- Interoperability
 - Microsoft
 - OSS
 ---

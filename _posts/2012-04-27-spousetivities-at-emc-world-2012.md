@@ -7,11 +7,12 @@ slug: spousetivities-at-emc-world-2012
 title: Spousetivities at EMC World 2012
 wordpress_id: 2609
 categories:
-- General
-- Storage
+- Information
 tags:
 - EMC
 - EMCWorld2012
+- Storage
+- Spousetivities
 ---
 
 This year at [EMC World 2012](http://www.emcworld.com) (being held once again in Las Vegas, NV), [Spousetivities](http://spousetivities.com) returns for their second year at EMC's user conference. As usual, my wife Crystal---who founded and runs Spousetivities---has a great set of activities planned for any spouses, partners, family members, or friends that will be traveling with EMC World conference attendees. (EMC'ers: those of you attending the TC Conference can have your traveling companions attend Spousetivities too!)

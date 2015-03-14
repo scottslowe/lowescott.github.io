@@ -7,11 +7,11 @@ slug: have-you-registered-yet
 title: Have You Registered Yet?
 wordpress_id: 2267
 categories:
-- General
-- Storage
+- Information
 tags:
 - EMC
 - EMCWorld2011
+- Spousetivities
 ---
 
 This is a very short blog post. In fact, it's probably less of a blog post and more of just a question:

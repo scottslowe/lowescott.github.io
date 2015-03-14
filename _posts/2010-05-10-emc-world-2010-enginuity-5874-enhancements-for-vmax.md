@@ -7,7 +7,7 @@ slug: emc-world-2010-enginuity-5874-enhancements-for-vmax
 title: 'EMC World 2010: Enginuity 5874 Enhancements for VMAX'
 wordpress_id: 1934
 categories:
-- Storage
+- Liveblog
 tags:
 - EMC
 - EMCWorld2010

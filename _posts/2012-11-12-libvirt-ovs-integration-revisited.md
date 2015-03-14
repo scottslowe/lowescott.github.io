@@ -7,10 +7,7 @@ slug: libvirt-ovs-integration-revisited
 title: Libvirt-OVS Integration Revisited
 wordpress_id: 2943
 categories:
-- Interoperability
-- Linux
-- Networking
-- Virtualization
+- Information
 tags:
 - Interoperability
 - Libvirt

@@ -7,13 +7,15 @@ slug: a-new-effort
 title: A New Effort
 wordpress_id: 39
 categories:
-- Interoperability
+- Information
 tags:
 - Kerberos
 - LDAP
 - Linux
 - Microsoft
 - Windows
+- Interoperability
+- ActiveDirectory
 ---
 
 I suppose I should be finishing one project before starting another, but I can't help myself. I'm going to take on the project of integrating my Linux systems with Microsoft Active Directory, so that a single Active Directory account can be used to authenticate to both Windows-based systems as well as Linux-based systems on our network.

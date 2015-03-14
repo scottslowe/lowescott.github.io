@@ -7,11 +7,12 @@ slug: microsofts-counter-move
 title: Microsoft's Counter-Move
 wordpress_id: 119
 categories:
-- Interoperability
+- Musing
 tags:
 - Microsoft
 - OSS
 - Standards
+- Interoperability
 ---
 
 The rallying cry around OpenDocument prompted Microsoft to make its counter-move. As fully expected, Microsoft is trying to [create a standard](http://www.eweek.com/article2/0,1759,1891829,00.asp) based on Microsoft's own (until now) proprietary XML formats. Please tell me you saw this coming, right?

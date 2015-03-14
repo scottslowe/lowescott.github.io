@@ -7,12 +7,14 @@ slug: linux-ad-integration-direction
 title: Linux-AD Integration Direction
 wordpress_id: 47
 categories:
-- Interoperability
+- Explanation
 tags:
 - Kerberos
 - LDAP
 - Linux
 - Microsoft
+- Interoperability
+- ActiveDirectory
 ---
 
 I've spent some time over the last few days researching some of the various ways in which to allow users to login to Linux servers using their credentials from Active Directory. Along the way, I've found some useful articles; notably, [here](http://www.networkcomputing.com/1305/1305ws1.html), [here](http://www.timkennedy.net/docs/Linux+Active_Directory.html), and [here](http://www.newsforge.com/article.pl?sid=04/12/09/2258243). These are also bookmarked in [my del.icio.us](http://del.icio.us/slowe) bookmark list under the [Linux](http://del.icio.us/slowe/Linux) tag.

@@ -7,7 +7,7 @@ slug: open-source-hardware
 title: Open Source Hardware
 wordpress_id: 180
 categories:
-- Interoperability
+- News
 tags:
 - BSD
 - Hardware
@@ -15,6 +15,7 @@ tags:
 - OSS
 - Sun
 - Virtualization
+- Interoperability
 ---
 
 [Sun](http://www.sun.com/) joins [IBM](http://www.ibm.com/) in trying to use the open source software model to help with hardware as well. (Thanks to [Linux-Watch](http://www.linux-watch.com/) for the news.) Creating a new project called [OpenSPARC](http://opensparc.sunsource.net/nonav/index.html), Sun is open sourcing the specifications for its latest SPARC processor, the UltraSPARC T1, code-named "Niagara".

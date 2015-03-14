@@ -7,11 +7,12 @@ slug: opendocument-gets-iso-approval
 title: OpenDocument Gets ISO Approval
 wordpress_id: 240
 categories:
-- Interoperability
+- News
 tags:
 - Microsoft
 - OSS
 - Standards
+- Interoperability
 ---
 
 Mark one up for cross-platform standards: the OpenDocument format, an XML-based file format originally derived from work on [OpenOffice.org](http://www.openoffice.org/) (and Sun's [StarOffice](http://www.sun.com/software/star/staroffice/index.jsp)) has been officially approved as an ISO standard.

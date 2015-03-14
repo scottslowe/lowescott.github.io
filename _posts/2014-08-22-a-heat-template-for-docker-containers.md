@@ -7,13 +7,14 @@ slug: a-heat-template-for-docker-containers
 title: A Heat Template for Docker Containers
 wordpress_id: 3503
 categories:
-- Interoperability
-- Virtualization
+- Explanation
 tags:
 - Automation
 - Docker
 - Linux
 - OpenStack
+- Interoperability
+- Virtualization
 ---
 
 In this post, I'll share a simple template for deploying [Docker](http://www.docker.com/) containers in an OpenStack environment using Heat. Given that Docker is targeted at application deployment, then I felt that using Heat was a more appropriate way of leveraging Docker in an OpenStack environment as opposed to treating Docker as a form of a hypervisor. Later in this post, I'll compare this approach to using a more container-aware solution such as fleet.

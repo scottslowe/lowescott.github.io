@@ -7,8 +7,7 @@ slug: storage-integration-presentation-from-east-tn-vmug
 title: Storage Integration Presentation from East TN VMUG
 wordpress_id: 2149
 categories:
-- Storage
-- Virtualization
+- Information
 tags:
 - EMC
 - Storage
