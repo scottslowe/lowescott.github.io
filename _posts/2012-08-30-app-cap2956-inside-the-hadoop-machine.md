@@ -7,7 +7,7 @@ slug: app-cap2956-inside-the-hadoop-machine
 title: 'APP-CAP2956: Inside the Hadoop Machine'
 wordpress_id: 2802
 categories:
-- Virtualization
+- Liveblog
 tags:
 - OSS
 - Virtualization

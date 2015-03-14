@@ -7,8 +7,7 @@ slug: vsp2117-virtualization-aware-datacenter-networks
 title: 'VSP2117: Virtualization-Aware Datacenter Networks'
 wordpress_id: 2387
 categories:
-- Networking
-- Virtualization
+- Liveblog
 tags:
 - Networking
 - Virtualization

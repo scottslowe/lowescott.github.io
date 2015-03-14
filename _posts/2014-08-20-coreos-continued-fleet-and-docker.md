@@ -7,7 +7,7 @@ slug: coreos-continued-fleet-and-docker
 title: 'CoreOS Continued: Fleet and Docker'
 wordpress_id: 3501
 categories:
-- Linux
+- Education
 tags:
 - CLI
 - Docker

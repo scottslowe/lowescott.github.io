@@ -7,7 +7,7 @@ slug: coreos-continued-etcd
 title: 'CoreOS Continued: etcd'
 wordpress_id: 3499
 categories:
-- Linux
+- Education
 tags:
 - CLI
 - JSON

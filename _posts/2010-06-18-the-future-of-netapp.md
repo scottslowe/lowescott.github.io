@@ -7,7 +7,7 @@ slug: the-future-of-netapp
 title: The Future of NetApp
 wordpress_id: 1976
 categories:
-- Storage
+- Musing
 tags:
 - NetApp
 - Snapshot

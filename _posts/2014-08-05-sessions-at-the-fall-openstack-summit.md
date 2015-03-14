@@ -7,9 +7,7 @@ slug: sessions-at-the-fall-openstack-summit
 title: Sessions at the Fall OpenStack Summit
 wordpress_id: 3489
 categories:
-- Linux
-- Networking
-- Virtualization
+- Information
 tags:
 - Docker
 - KVM
@@ -17,6 +15,7 @@ tags:
 - Networking
 - OpenStack
 - Virtualization
+- Linux
 ---
 
 It's that time again---time for community voting on sessions for the fall OpenStack Summit, being held in Paris this year in early November. I wanted to take a moment and share some of the sessions in which I'm involved and/or that I think might be useful. It would be great if you could take a moment to add your votes for the sessions.

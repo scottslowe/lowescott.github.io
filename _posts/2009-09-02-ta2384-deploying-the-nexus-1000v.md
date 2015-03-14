@@ -7,8 +7,7 @@ slug: ta2384-deploying-the-nexus-1000v
 title: TA2384 - Deploying the Nexus 1000V
 wordpress_id: 1641
 categories:
-- Networking
-- Virtualization
+- Liveblog
 tags:
 - Cisco
 - Networking

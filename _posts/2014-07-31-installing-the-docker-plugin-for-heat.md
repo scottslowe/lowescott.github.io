@@ -7,12 +7,13 @@ slug: installing-the-docker-plugin-for-heat
 title: Installing the Docker Plugin for Heat
 wordpress_id: 3480
 categories:
-- Linux
-- Virtualization
+- Tutorial
 tags:
 - Automation
 - Docker
 - OpenStack
+- Linux
+- Virtualization
 ---
 
 In this post, I'll share with you how I installed the Docker plugin for OpenStack Heat, so that Heat is able to orchestrate the creation of Docker containers in an OpenStack environment. I'm publishing this because I found [the default instructions](https://github.com/openstack/heat/tree/stable/icehouse/contrib/docker/docker) to be a bit too vague to be helpful. By sharing my experience, I hope that others interested in using Docker in their OpenStack environment will benefit.

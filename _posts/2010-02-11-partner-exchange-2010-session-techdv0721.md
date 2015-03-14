@@ -7,8 +7,7 @@ slug: partner-exchange-2010-session-techdv0721
 title: Partner Exchange 2010 Session TECHDV0721
 wordpress_id: 1836
 categories:
-- Security
-- Virtualization
+- Liveblog
 tags:
 - Security
 - VDI

@@ -7,8 +7,7 @@ slug: hytrust-appliance-community-edition
 title: HyTrust Appliance Community Edition
 wordpress_id: 1317
 categories:
-- Security
-- Virtualization
+- News
 tags:
 - ESX
 - Security

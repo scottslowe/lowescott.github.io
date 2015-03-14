@@ -7,7 +7,7 @@ slug: vmworld-2013-day-1-keynote
 title: VMworld 2013 Day 1 Keynote
 wordpress_id: 3255
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMworld2013

@@ -7,7 +7,7 @@ slug: vmworld-2012-keynote-day-2
 title: VMworld 2012 Keynote, Day 2
 wordpress_id: 2782
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

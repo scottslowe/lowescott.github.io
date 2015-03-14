@@ -7,8 +7,7 @@ slug: is-the-pot-calling-the-kettle-black
 title: Is the Pot Calling the Kettle Black?
 wordpress_id: 2279
 categories:
-- Microsoft
-- Virtualization
+- Rant
 tags:
 - HyperV
 - Microsoft

@@ -7,7 +7,7 @@ slug: app-cap2165-operating-cloud-foundry
 title: 'APP-CAP2165: Operating Cloud Foundry'
 wordpress_id: 2796
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

@@ -7,11 +7,11 @@ slug: inaugural-openstack-denver-meetup
 title: Inaugural OpenStack Denver Meetup
 wordpress_id: 3040
 categories:
-- Collaboration
-- Virtualization
+- Information
 tags:
 - Collaboration
 - OpenStack
+- Virtualization
 ---
 
 I'm very excited to announce the [inaugural OpenStack Denver meetup](http://www.meetup.com/OpenStack-Denver/events/95744912/), scheduled for 7 PM on Wednesday, January 9, 2013--only 6 days away!

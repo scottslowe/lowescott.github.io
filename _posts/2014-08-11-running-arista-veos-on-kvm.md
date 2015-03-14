@@ -7,10 +7,7 @@ slug: running-arista-veos-on-kvm
 title: Running Arista vEOS on KVM
 wordpress_id: 3491
 categories:
-- Interoperability
-- Linux
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - KVM
 - Libvirt
@@ -18,6 +15,7 @@ tags:
 - Networking
 - OVS
 - Virtualization
+- Interoperability
 ---
 
 In this post, I'll show you how I got Arista's vEOS software running under KVM to create a virtualized Arista switch. There are a number of other articles that help provide instructions on how to do this, but none of those that I found included the use of [libvirt](http://libvirt.org/) and/or [Open vSwitch (OVS)](http://openvswitch.org/).

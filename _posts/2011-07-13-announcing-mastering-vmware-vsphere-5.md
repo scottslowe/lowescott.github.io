@@ -7,8 +7,7 @@ slug: announcing-mastering-vmware-vsphere-5
 title: Announcing Mastering VMware vSphere 5
 wordpress_id: 2338
 categories:
-- Personal
-- Virtualization
+- News
 tags:
 - Virtualization
 - VMware

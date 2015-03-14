@@ -7,8 +7,7 @@ slug: removing-ovs-configuration-settings
 title: Removing OVS Configuration Settings
 wordpress_id: 3564
 categories:
-- Linux
-- Networking
+- Explanation
 tags:
 - CLI
 - Linux

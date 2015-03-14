@@ -7,15 +7,14 @@ slug: infrastructure-coders-denver-and-openstack-denver-meetups
 title: Infrastructure Coders Denver and OpenStack Denver Meetups
 wordpress_id: 2940
 categories:
-- Collaboration
-- Linux
-- Virtualization
+- Information
 tags:
 - Automation
 - Collaboration
 - Linux
 - OpenStack
 - OSS
+- Virtualization
 ---
 
 It's been quite a while since I [first posted about Infrastructure Coders Denver][1], and---much to my dismay---I haven't made the time to really push this forward as much as I wanted. So, in order to help move this forward a little bit, I've established [a meetup group](http://www.meetup.com/Infracoders-Denver/) where interested parties can join the meetup and we can share information about when and where we'll be meeting. I'll also be disseminating information via [the Infracoders Denver twitter account](http://twitter.com/infracodersdnvr/), so feel free to follow that account (don't worry, it's really low-volume and won't clutter up your timeline).

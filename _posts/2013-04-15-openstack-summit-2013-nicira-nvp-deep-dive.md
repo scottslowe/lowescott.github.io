@@ -7,11 +7,12 @@ slug: openstack-summit-2013-nicira-nvp-deep-dive
 title: 'OpenStack Summit 2013: Nicira NVP Deep Dive'
 wordpress_id: 3134
 categories:
-- General
-- Networking
+- Liveblog
 tags:
 - Networking
 - OpenStack
+- NVP
+- NSX
 ---
 
 This is a "201 level" technical deep dive on Nicira Network Virtualization Platform (NVP). It was supposed to be led by Brad Hedlund, but due to unforeseen circumstances Brad was unable to make it to the Summit. Instead, Dan Wendlandt is leading the session. Dan, if you aren't familiar, was the former Quantum PTL. I'm already familiar with all of this stuff (naturally), but wanted to sit in this session so that I could liveblog it for others' benefit.

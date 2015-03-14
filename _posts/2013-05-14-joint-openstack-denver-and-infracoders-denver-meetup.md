@@ -7,14 +7,13 @@ slug: joint-openstack-denver-and-infracoders-denver-meetup
 title: Joint OpenStack Denver and Infracoders Denver Meetup
 wordpress_id: 3180
 categories:
-- Collaboration
-- Linux
-- Virtualization
+- Information
 tags:
 - Automation
 - Collaboration
 - Linux
 - OpenStack
+- Virtualization
 ---
 
 Next Monday, May 20, the [OpenStack Denver meetup group](http://www.meetup.com/OpenStack-Denver/) will gather jointly with the inaugural meeting of the [Infracoders Denver meetup group](http://www.meetup.com/Infracoders-Denver/) for a talk titled "Infrastructure as Code with Chef and OpenStack." The joint meeting will be held at Innovation Pavilion in Centennial/Englewood (location information [here](http://ipcentennial.com/our-location/)). The event will start at 7PM.

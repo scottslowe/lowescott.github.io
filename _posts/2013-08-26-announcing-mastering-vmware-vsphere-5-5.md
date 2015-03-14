@@ -7,12 +7,12 @@ slug: announcing-mastering-vmware-vsphere-5-5
 title: Announcing Mastering VMware vSphere 5.5
 wordpress_id: 3253
 categories:
-- Personal
-- Virtualization
+- News
 tags:
 - VMware
 - vSphere
 - Writing
+- Virtualization
 ---
 
 Well, the title kind of says it all---yes, there **will** be an update to the popular _Mastering VMware vSphere 5_ book, with new content for the vSphere 5.5 release announced today at VMworld. Availability of the new title is expected in late October or early November, but I believe it's already [available for pre-order on Amazon.](http://www.amazon.com/Mastering-VMware-vSphere-Scott-Lowe/dp/1118661141/ref=sr_1_3/183-8467773-3754858?ie=UTF8&qid=1377463800&sr=8-3&keywords=mastering+vmware+vsphere)

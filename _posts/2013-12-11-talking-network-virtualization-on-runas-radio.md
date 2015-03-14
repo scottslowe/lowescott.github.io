@@ -7,8 +7,7 @@ slug: talking-network-virtualization-on-runas-radio
 title: Talking Network Virtualization on RunAs Radio
 wordpress_id: 3354
 categories:
-- Networking
-- Virtualization
+- Information
 tags:
 - Networking
 - NSX
