@@ -7,8 +7,7 @@ slug: new-users-guide-to-managing-cisco-mds-zones-via-cli
 title: New User's Guide to Managing Cisco MDS Zones via CLI
 wordpress_id: 1694
 categories:
-- Networking
-- Storage
+- Education
 tags:
 - Cisco
 - CLI

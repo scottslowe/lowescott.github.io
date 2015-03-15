@@ -7,9 +7,7 @@ slug: updated-multi-os-puppet-configuration
 title: Updated Multi-OS Puppet Configuration
 wordpress_id: 2676
 categories:
-- Interoperability
-- Linux
-- UNIX
+- Explanation
 tags:
 - Automation
 - BSD
@@ -17,6 +15,7 @@ tags:
 - Linux
 - OSS
 - Puppet
+- UNIX
 ---
 
 I received some great feedback on my post about [using Puppet with multiple operating systems][1]. One of the suggestions was to do a better job of following the "official" Puppet style guide for syntax and file layout. With that in mind, I installed `puppet-lint` on my Puppet master server using `apt-get install rubygems` followed by `gem install puppet-lint`.

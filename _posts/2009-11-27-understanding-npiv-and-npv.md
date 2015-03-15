@@ -7,8 +7,7 @@ slug: understanding-npiv-and-npv
 title: Understanding NPIV and NPV
 wordpress_id: 1746
 categories:
-- Networking
-- Storage
+- Education
 tags:
 - Cisco
 - FibreChannel
@@ -16,6 +15,7 @@ tags:
 - NPIV
 - NPV
 - Storage
+- Networking
 ---
 
 Two technologies that seem to have come to the fore recently are NPIV (N\_Port ID Virtualization) and NPV (N_Port Virtualization). Judging just by the names, you might think that these two technologies are the same thing. While they are related in some aspects and can be used in a complementary way, they are quite different. What I'd like to do in this post is help explain these two technologies, how they are different, and how they can be used. I hope to follow up in future posts with some hands-on examples of configuring these technologies on various types of equipment.

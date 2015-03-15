@@ -7,8 +7,7 @@ slug: full-vm-recovery-with-netapp-snapshots
 title: Full VM Recovery with NetApp Snapshots
 wordpress_id: 558
 categories:
-- Storage
-- Virtualization
+- Tutorial
 tags:
 - ESX
 - iSCSI
@@ -18,6 +17,7 @@ tags:
 - SAN
 - Virtualization
 - VMware
+- Storage
 ---
 
 I guess I'm on a bit of a NetApp kick this week. After discussing (or perhaps revisiting) the idea of recovering files inside VMs using NetApp Snapshots (first [here late last year][1], then again [here][2]), I wanted to take a closer look at full VM recovery using NetApp Snapshots.

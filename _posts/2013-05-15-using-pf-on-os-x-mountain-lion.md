@@ -7,14 +7,13 @@ slug: using-pf-on-os-x-mountain-lion
 title: Using pf on OS X Mountain Lion
 wordpress_id: 3183
 categories:
-- Macintosh
-- Security
-- UNIX
+- Tutorial
 tags:
 - BSD
 - Macintosh
 - Security
 - UNIX
+- CLI
 ---
 
 I've [written before][1] about adding an extra layer of network security to your Macintosh by leveraging the BSD-level `ipfw` firewall, in addition to the standard GUI firewall and additional third-party firewalls (like [Little Snitch](http://www.obdev.at/products/littlesnitch/index.html)). In OS X Lion and OS X Mountain Lion, though, `ipfw` was deprecated in favor of `pf`, the powerful packet filter that I believe originated on OpenBSD. (OS X's version of `pf` is ported from FreeBSD.) In this article, I'm going to show you how to use `pf` on OS X.

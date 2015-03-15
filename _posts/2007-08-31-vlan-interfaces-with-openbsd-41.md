@@ -7,14 +7,14 @@ slug: vlan-interfaces-with-openbsd-41
 title: VLAN Interfaces with OpenBSD 4.1
 wordpress_id: 516
 categories:
-- Networking
-- UNIX
+- Tutorial
 tags:
 - BSD
 - ESX
 - Networking
 - UNIX
 - VLAN
+- Interoperability
 ---
 
 I've been doing some interoperability testing with [VMware ESX Server](http://www.vmware.com/products/vi/esx/) and VLANs (a separate article on that is in the works), and needed a guest OS that supported VLAN interfaces. From my previous (but limited) experience with [OpenBSD](http://www.openbsd.org/), I suspected that VLAN interfaces were indeed supported, and after setting up a quick VM running OpenBSD 4.1 I found that I was indeed correct. Not only are they supported, they are incredibly easy to setup and configure.

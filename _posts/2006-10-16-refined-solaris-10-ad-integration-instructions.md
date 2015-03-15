@@ -7,8 +7,7 @@ slug: refined-solaris-10-ad-integration-instructions
 title: Refined Solaris 10-AD Integration Instructions
 wordpress_id: 346
 categories:
-- Interoperability
-- UNIX
+- Tutorial
 tags:
 - ActiveDirectory
 - Interoperability

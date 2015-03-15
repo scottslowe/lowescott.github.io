@@ -7,8 +7,7 @@ slug: what-if-hypervisors-shared-a-file-system
 title: What If Hypervisors Shared a File System?
 wordpress_id: 1181
 categories:
-- Storage
-- Virtualization
+- Musing
 tags:
 - SAN
 - Storage

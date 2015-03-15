@@ -7,14 +7,14 @@ slug: getting-hiera-working
 title: Getting Hiera Working
 wordpress_id: 2690
 categories:
-- Interoperability
-- Linux
-- UNIX
+- Explanation
 tags:
 - Automation
 - BSD
 - Linux
 - OSS
+- UNIX
+- Interoperability
 ---
 
 As I mentioned in [a previous post][1], the next iteration of my Puppet explorations involves the use of [Hiera](http://projects.puppetlabs.com/projects/hiera). Hiera, a project also managed by Puppet Labs, is described as "a simple pluggable hierarchical database." In the Puppet world, what that means is we can use Hiera to store data values outside of the manifests, then look them up dynamically as the configurations are being compiled and applied to the nodes. In a future post, I'll provide an example of how you could use Hiera in a multi-OS Puppet environment.

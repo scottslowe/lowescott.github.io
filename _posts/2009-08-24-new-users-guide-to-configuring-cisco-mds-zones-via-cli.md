@@ -7,8 +7,7 @@ slug: new-users-guide-to-configuring-cisco-mds-zones-via-cli
 title: New User's Guide to Configuring Cisco MDS Zones via CLI
 wordpress_id: 1556
 categories:
-- Networking
-- Storage
+- Education
 tags:
 - Cisco
 - FibreChannel

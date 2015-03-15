@@ -7,14 +7,13 @@ slug: setting-up-ipfw-on-mac-os-x
 title: Setting Up ipfw on Mac OS X
 wordpress_id: 2577
 categories:
-- Macintosh
-- Security
-- UNIX
+- Tutorial
 tags:
 - BSD
 - Macintosh
 - Security
 - UNIX
+- CLI
 ---
 
 Using multiple layers of security has long been recognized as a useful strategy in hardening your computers against attack or exploit. In this post, I want to explain how to set up and configure the BSD-level `ipfw` firewall that is present in Mac OS X. While `ipfw` is certainly not a security panacea, it can be a solid part of a broader security strategy.

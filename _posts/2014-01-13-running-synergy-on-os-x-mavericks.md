@@ -7,8 +7,7 @@ slug: running-synergy-on-os-x-mavericks
 title: Running Synergy on OS X Mavericks
 wordpress_id: 3396
 categories:
-- Macintosh
-- UNIX
+- Tutorial
 tags:
 - CLI
 - Macintosh

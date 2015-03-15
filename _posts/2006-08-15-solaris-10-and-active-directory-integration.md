@@ -7,8 +7,7 @@ slug: solaris-10-and-active-directory-integration
 title: Solaris 10 and Active Directory Integration
 wordpress_id: 320
 categories:
-- Interoperability
-- UNIX
+- Tutorial
 tags:
 - ActiveDirectory
 - Kerberos
@@ -16,6 +15,7 @@ tags:
 - Solaris
 - Sun
 - UNIX
+- Interoperability
 ---
 
 As with the procedure for [authenticating Linux against Active Directory][1] and [providing Kerberos-based SSO with Apache][2], there are a few steps to be performed. Some of these steps are performed on the Active Directory side, some of them are performed on the [Solaris 10](http://www.sun.com/software/solaris/) system.

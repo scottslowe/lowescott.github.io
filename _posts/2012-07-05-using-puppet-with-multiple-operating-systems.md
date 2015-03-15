@@ -7,15 +7,14 @@ slug: using-puppet-with-multiple-operating-systems
 title: Using Puppet with Multiple Operating Systems
 wordpress_id: 2668
 categories:
-- Interoperability
-- Linux
-- UNIX
+- Explanation
 tags:
 - Automation
 - BSD
 - Interoperability
 - Linux
 - Puppet
+- UNIX
 ---
 
 Over the last few days, I've been working with [the open source edition of Puppet](http://puppetlabs.com/puppet/puppet-open-source/), the configuration management/automation tool. I've learned quite a bit, but I still have a long, long way to go. What I wanted to share in this post is what I learned in using Puppet with clients using different operating systems (OSes). If you are a Puppet expert, I'd love to hear any tips and tricks you might have to help me improve.

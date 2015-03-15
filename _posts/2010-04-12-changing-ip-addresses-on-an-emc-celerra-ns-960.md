@@ -7,7 +7,7 @@ slug: changing-ip-addresses-on-an-emc-celerra-ns-960
 title: Changing IP Addresses on an EMC Celerra NS-960
 wordpress_id: 1876
 categories:
-- Storage
+- Tutorial
 tags:
 - Celerra
 - CLARiiON
