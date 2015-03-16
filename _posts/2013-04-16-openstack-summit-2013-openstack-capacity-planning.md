@@ -7,7 +7,7 @@ slug: openstack-summit-2013-openstack-capacity-planning
 title: 'OpenStack Summit 2013: OpenStack Capacity Planning'
 wordpress_id: 3147
 categories:
-- General
+- Liveblog
 tags:
 - OpenStack
 ---

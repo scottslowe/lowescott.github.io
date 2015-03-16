@@ -7,8 +7,7 @@ slug: using-your-home-dns-servers-with-corporate-vpns
 title: Using Your Home DNS Servers with Corporate VPNs
 wordpress_id: 3236
 categories:
-- Macintosh
-- Networking
+- Tutorial
 tags:
 - Macintosh
 - Networking

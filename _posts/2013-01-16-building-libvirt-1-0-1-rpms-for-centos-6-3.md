@@ -7,14 +7,14 @@ slug: building-libvirt-1-0-1-rpms-for-centos-6-3
 title: Building Libvirt 1.0.1 RPMs for CentOS 6.3
 wordpress_id: 3052
 categories:
-- Linux
-- Virtualization
+- Tutorial
 tags:
 - CentOS
 - CLI
 - Libvirt
 - Linux
 - OSS
+- Virtualization
 ---
 
 In previous articles, I've shown you how to [compile libvirt 0.10.1 on CentOS 6.3][1], but---as several readers have pointed out in the comments to that and other articles---compiling packages from source may not be the best long-term approach. Not only does it make it difficult to keep the system up-to-date, it also makes automating the configuration of the host rather difficult. In this post, I'll show you how to rebuild a source RPM for libvirt 1.0.1 so that it will install (and work) under CentOS 6.3. (These instructions should work for RHEL 6.3, too, but I haven't tested them.)

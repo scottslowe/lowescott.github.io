@@ -7,9 +7,9 @@ slug: how-to-configure-npv-on-a-nexus-5000
 title: How to Configure NPV on a Nexus 5000
 wordpress_id: 1982
 categories:
-- Networking
-- Storage
+- Tutorial
 tags:
+- Networking
 - Cisco
 - FCoE
 - FibreChannel

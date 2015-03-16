@@ -7,10 +7,10 @@ slug: linux-ad-integration-with-windows-server-2003-r2
 title: Linux-AD Integration With Windows Server 2003 R2
 wordpress_id: 235
 categories:
-- Interoperability
-- Linux
-- Microsoft
+- Tutorial
 tags:
+- Microsoft
+- Interoperability
 - ActiveDirectory
 - CentOS
 - Kerberos

@@ -8,7 +8,7 @@ title: 'OpenStack Summit 2013: Considerations for Building a Private Cloud, Fols
   Update'
 wordpress_id: 3136
 categories:
-- General
+- Liveblog
 tags:
 - OpenStack
 ---

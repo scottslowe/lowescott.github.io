@@ -7,11 +7,12 @@ slug: using-mock-to-build-libssh2-1-4-1-rpms-for-centos-6-3
 title: Using Mock to Build libssh2 1.4.1 RPMs for CentOS 6.3
 wordpress_id: 3063
 categories:
-- Linux
+- Tutorial
 tags:
 - CLI
 - Linux
 - OSS
+- CentOS
 ---
 
 As with the related post on [using Mock to rebuild sanlock 2.4 for CentOS 6.3][1], this post might seem a bit odd. Don't worry---I'll tie it into something else very soon. In this post, I'll show you how to use Mock to build RPMs for libssh2 1.4.1 for use with CentOS 6.3.

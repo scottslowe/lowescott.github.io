@@ -7,9 +7,7 @@ slug: the-future-of-the-os
 title: The Future of the OS
 wordpress_id: 378
 categories:
-- Macintosh
-- Microsoft
-- Virtualization
+- Musing
 tags:
 - Apple
 - ESX

@@ -7,7 +7,7 @@ slug: initial-impressions-of-debian-gnulinux-31
 title: Initial Impressions of Debian GNU/Linux 3.1
 wordpress_id: 147
 categories:
-- Linux
+- Review
 tags:
 - Debian
 - Linux

@@ -7,9 +7,9 @@ slug: emc-vplex-launches-today
 title: EMC VPLEX Launches Today
 wordpress_id: 1932
 categories:
-- Storage
-- Virtualization
+- News
 tags:
+- Virtualization
 - EMC
 - Storage
 - VPLEX

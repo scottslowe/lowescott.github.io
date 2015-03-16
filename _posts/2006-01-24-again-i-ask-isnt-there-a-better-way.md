@@ -7,7 +7,7 @@ slug: again-i-ask-isnt-there-a-better-way
 title: "Again I Ask: Isn't There a Better Way?"
 wordpress_id: 165
 categories:
-- Security
+- Rant
 tags:
 - Oracle
 - Security

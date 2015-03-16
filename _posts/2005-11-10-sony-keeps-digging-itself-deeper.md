@@ -7,7 +7,7 @@ slug: sony-keeps-digging-itself-deeper
 title: Sony Keeps Digging Itself Deeper
 wordpress_id: 114
 categories:
-- Security
+- Rant
 tags:
 - Security
 - Windows

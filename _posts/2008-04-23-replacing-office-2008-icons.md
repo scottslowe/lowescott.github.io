@@ -7,8 +7,7 @@ slug: replacing-office-2008-icons
 title: Replacing Office 2008 Icons
 wordpress_id: 691
 categories:
-- Macintosh
-- Microsoft
+- Tutorial
 tags:
 - Macintosh
 - Microsoft

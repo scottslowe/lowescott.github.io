@@ -7,10 +7,9 @@ slug: complete-linux-ad-authentication-details
 title: Complete Linux-AD Authentication Details
 wordpress_id: 143
 categories:
-- Interoperability
-- Linux
-- Microsoft
+- Tutorial
 tags:
+- Interoperability
 - ActiveDirectory
 - Kerberos
 - LDAP

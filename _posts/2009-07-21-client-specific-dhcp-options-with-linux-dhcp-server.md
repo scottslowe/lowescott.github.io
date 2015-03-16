@@ -7,8 +7,7 @@ slug: client-specific-dhcp-options-with-linux-dhcp-server
 title: Client-Specific DHCP Options with Linux DHCP Server
 wordpress_id: 1471
 categories:
-- Linux
-- Networking
+- Explanation
 tags:
 - Linux
 - Networking

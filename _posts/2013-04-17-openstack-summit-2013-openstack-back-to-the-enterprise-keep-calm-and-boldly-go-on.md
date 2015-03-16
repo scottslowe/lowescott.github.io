@@ -8,7 +8,7 @@ title: 'OpenStack Summit 2013: OpenStack Back to the Enterprise, Keep Calm and B
   Go On'
 wordpress_id: 3151
 categories:
-- General
+- Liveblog
 tags:
 - HP
 - OpenStack

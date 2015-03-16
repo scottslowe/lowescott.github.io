@@ -7,7 +7,7 @@ slug: the-ongoing-microsoft-claria-saga
 title: The Ongoing Microsoft-Claria Saga
 wordpress_id: 42
 categories:
-- Microsoft
+- Rant
 tags:
 - Microsoft
 - Security

@@ -7,8 +7,7 @@ slug: using-mock-to-build-libvirt-1-0-1-rpms-for-centos-6-3
 title: Using Mock to Build Libvirt 1.0.1 RPMs for CentOS 6.3
 wordpress_id: 3066
 categories:
-- Linux
-- Virtualization
+- Tutorial
 tags:
 - CentOS
 - CLI

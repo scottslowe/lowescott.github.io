@@ -7,8 +7,7 @@ slug: how-niv-and-fcoe-play-together
 title: How NIV and FCoE Play Together
 wordpress_id: 1868
 categories:
-- Networking
-- Virtualization
+- Explanation
 tags:
 - Cisco
 - FCoE

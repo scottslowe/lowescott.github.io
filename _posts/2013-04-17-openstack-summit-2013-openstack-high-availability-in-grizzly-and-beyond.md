@@ -7,9 +7,11 @@ slug: openstack-summit-2013-openstack-high-availability-in-grizzly-and-beyond
 title: 'OpenStack Summit 2013: OpenStack High Availability in Grizzly and Beyond'
 wordpress_id: 3153
 categories:
-- General
+- Liveblog
 tags:
 - OpenStack
+- Storage
+- Networking
 ---
 
 This is a session titled "More Reliable, More Resilient, More Redundant: OpenStack High Availability in Grizzly and Beyond." The presenter is Florian Haas from Hastexo (@hastexo). Florian is one of the founders of Hastexo, which is a services firm that provides OpenStack services, among other things.

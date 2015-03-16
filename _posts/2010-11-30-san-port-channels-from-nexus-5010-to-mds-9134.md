@@ -7,9 +7,9 @@ slug: san-port-channels-from-nexus-5010-to-mds-9134
 title: SAN Port Channels from Nexus 5010 to MDS 9134
 wordpress_id: 2165
 categories:
-- Networking
-- Storage
+- Tutorial
 tags:
+- Networking
 - Cisco
 - FibreChannel
 - Nexus

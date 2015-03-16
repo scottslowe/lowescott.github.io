@@ -7,11 +7,12 @@ slug: using-mock-to-build-sanlock-2-4-rpms-for-centos-6-3
 title: Using Mock to Build Sanlock 2.4 RPMs for CentOS 6.3
 wordpress_id: 3058
 categories:
-- Linux
+- Tutorial
 tags:
 - CLI
 - Linux
 - OSS
+- CentOS
 ---
 
 The topic of this post might seem a bit strange, but it will all make sense later. In this post, I'll show you how to use Mock to build RPMs for sanlock 2.4 for use with CentOS 6.3.

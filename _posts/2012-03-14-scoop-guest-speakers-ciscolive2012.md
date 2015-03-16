@@ -7,7 +7,7 @@ slug: scoop-guest-speakers-ciscolive2012
 title: 'Scoop: Special Guest Speakers at Cisco Live 2012'
 wordpress_id: 2551
 categories:
-- Networking
+- News
 tags:
 - Networking
 ---

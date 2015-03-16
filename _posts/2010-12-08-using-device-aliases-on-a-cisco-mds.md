@@ -7,7 +7,7 @@ slug: using-device-aliases-on-a-cisco-mds
 title: Using Device Aliases on a Cisco MDS
 wordpress_id: 2171
 categories:
-- Storage
+- Tutorial
 tags:
 - Cisco
 - FibreChannel

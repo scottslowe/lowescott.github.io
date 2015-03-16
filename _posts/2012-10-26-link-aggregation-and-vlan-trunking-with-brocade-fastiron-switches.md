@@ -7,9 +7,7 @@ slug: link-aggregation-and-vlan-trunking-with-brocade-fastiron-switches
 title: Link Aggregation and VLAN Trunking with Brocade FastIron Switches
 wordpress_id: 2907
 categories:
-- Interoperability
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - Interoperability
 - Networking
@@ -18,6 +16,7 @@ tags:
 - VLAN
 - VMware
 - vSphere
+- CLI
 ---
 
 In this post, I'll be sharing with you information on how to do link aggregation (with LACP) and VLAN trunking on a Brocade FastIron switch with both VMware vSphere as well as Open vSwitch (OVS).

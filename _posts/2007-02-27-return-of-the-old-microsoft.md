@@ -7,8 +7,7 @@ slug: return-of-the-old-microsoft
 title: Return of the Old Microsoft
 wordpress_id: 419
 categories:
-- Microsoft
-- Virtualization
+- Rant
 tags:
 - ESX
 - Interoperability

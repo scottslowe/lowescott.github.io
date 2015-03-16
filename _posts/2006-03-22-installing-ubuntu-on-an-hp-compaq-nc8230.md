@@ -7,7 +7,7 @@ slug: installing-ubuntu-on-an-hp-compaq-nc8230
 title: Installing Ubuntu on an HP Compaq nc8230
 wordpress_id: 207
 categories:
-- Linux
+- Information
 tags:
 - HP
 - Linux

@@ -7,9 +7,7 @@ slug: a-quick-and-simple-guide-to-building-an-openbsd-vm
 title: A Quick and Simple Guide to Building an OpenBSD VM
 wordpress_id: 1864
 categories:
-- Macintosh
-- UNIX
-- Virtualization
+- Tutorial
 tags:
 - BSD
 - Fusion

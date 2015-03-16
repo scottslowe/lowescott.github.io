@@ -7,8 +7,7 @@ slug: installing-xcp-xapi-on-ubuntu-server-12-04-lts
 title: Installing XCP-XAPI on Ubuntu Server 12.04 LTS
 wordpress_id: 2654
 categories:
-- Linux
-- Virtualization
+- Tutorial
 tags:
 - Linux
 - Ubuntu
