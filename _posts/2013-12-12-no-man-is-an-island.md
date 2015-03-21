@@ -29,9 +29,9 @@ So, who has helped contribute to my achievements? The full list is too long to p
 
 * Chris McCain (who recently joined VMware and has some great stuff in store---stay tuned!) wrote _Mastering VMware Infrastructure 3_, the book that I would revise to become _Mastering VMware vSphere 4_.
 
-  * Andy Sholomon, formerly with Cisco and now with VCE, was kind enough to provide some infrastructure for me to use when writing _Mastering VMware vSphere 5._ Without it, writing the book would have been much more difficult.
+* Andy Sholomon, formerly with Cisco and now with VCE, was kind enough to provide some infrastructure for me to use when writing _Mastering VMware vSphere 5._ Without it, writing the book would have been much more difficult.
 
-  * Rick Scherer, Duncan Epping, and Jason Boche all served as technical editors for various books that I've written; their contributions and efforts helped make those books better.
+* Rick Scherer, Duncan Epping, and Jason Boche all served as technical editors for various books that I've written; their contributions and efforts helped make those books better.
 
 To all of you: **thank you.**
 
