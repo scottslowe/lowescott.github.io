@@ -7,9 +7,7 @@ slug: no-solaris-ad-integration-update
 title: No Solaris-AD Integration Update
 wordpress_id: 1033
 categories:
-- Interoperability
-- Microsoft
-- UNIX
+- Information
 tags:
 - ActiveDirectory
 - Interoperability

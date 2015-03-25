@@ -7,8 +7,7 @@ slug: this-pretty-much-answers-that-question
 title: This Pretty Much Answers That Question
 wordpress_id: 1224
 categories:
-- Networking
-- UNIX
+- Musing
 tags:
 - Cisco
 - Networking

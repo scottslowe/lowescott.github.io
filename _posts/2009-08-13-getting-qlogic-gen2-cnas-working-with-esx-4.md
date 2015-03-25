@@ -7,8 +7,7 @@ slug: getting-qlogic-gen2-cnas-working-with-esx-4
 title: Getting QLogic Gen2 CNAs Working with ESX 4
 wordpress_id: 1525
 categories:
-- Storage
-- Virtualization
+- Tutorial
 tags:
 - Cisco
 - FCoE
@@ -17,6 +16,7 @@ tags:
 - Virtualization
 - VMware
 - vSphere
+- Storage
 ---
 
 If you've been following my updates on [Twitter](http://twitter.com/scott_lowe), you know that I'm in the process of installing and configuring a Nexus 5000 switch. The Nexus 5010 will provide 10Gb Ethernet and Fibre Channel over Ethernet (FCoE) to the servers and storage arrays in the lab, and I'll be using the equipment to help generate reference architectures and standard configurations for the [ePlus](http://www.eplus.com/) virtualization team.

@@ -7,8 +7,7 @@ slug: why-no-multi-hop-fcoe
 title: Why No Multi-Hop FCoE?
 wordpress_id: 1513
 categories:
-- Networking
-- Storage
+- Explanation
 tags:
 - Cisco
 - FCoE

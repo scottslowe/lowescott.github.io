@@ -7,9 +7,7 @@ slug: iscsi-from-netapp-to-esx-server
 title: iSCSI from NetApp to ESX Server
 wordpress_id: 384
 categories:
-- Interoperability
-- Storage
-- Virtualization
+- Tutorial
 tags:
 - ESX
 - Interoperability

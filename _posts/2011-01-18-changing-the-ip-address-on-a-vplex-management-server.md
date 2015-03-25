@@ -7,7 +7,7 @@ slug: changing-the-ip-address-on-a-vplex-management-server
 title: Changing the IP Address on a VPLEX Management Server
 wordpress_id: 2218
 categories:
-- Storage
+- Tutorial
 tags:
 - EMC
 - Storage

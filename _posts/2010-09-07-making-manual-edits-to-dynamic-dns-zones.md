@@ -7,8 +7,7 @@ slug: making-manual-edits-to-dynamic-dns-zones
 title: Making Manual Edits to Dynamic DNS Zones
 wordpress_id: 2091
 categories:
-- Networking
-- UNIX
+- Tutorial
 tags:
 - BSD
 - Networking

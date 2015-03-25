@@ -7,8 +7,7 @@ slug: not-the-same
 title: Not the Same
 wordpress_id: 23
 categories:
-- Linux
-- UNIX
+- Rant
 tags:
 - BSD
 - Linux

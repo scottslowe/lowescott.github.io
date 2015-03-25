@@ -7,8 +7,7 @@ slug: a-couple-handy-ad-manipulation-tricks
 title: A Couple Handy AD Manipulation Tricks
 wordpress_id: 335
 categories:
-- Microsoft
-- UNIX
+- Tutorial
 tags:
 - ActiveDirectory
 - LDAP

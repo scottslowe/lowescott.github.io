@@ -7,8 +7,7 @@ slug: allegations-regarding-fbi-involvement-with-openbsd
 title: Allegations Regarding FBI Involvement with OpenBSD
 wordpress_id: 2184
 categories:
-- General
-- UNIX
+- Information
 tags:
 - BSD
 - UNIX

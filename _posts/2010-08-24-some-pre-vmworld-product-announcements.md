@@ -7,8 +7,7 @@ slug: some-pre-vmworld-product-announcements
 title: Some Pre-VMworld Product Announcements
 wordpress_id: 2047
 categories:
-- Storage
-- Virtualization
+- News
 tags:
 - EMC
 - Storage

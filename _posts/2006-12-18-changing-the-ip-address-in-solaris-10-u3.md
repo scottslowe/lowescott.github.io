@@ -7,7 +7,7 @@ slug: changing-the-ip-address-in-solaris-10-u3
 title: Changing the IP Address in Solaris 10 U3
 wordpress_id: 388
 categories:
-- UNIX
+- Explanation
 tags:
 - Networking
 - Solaris

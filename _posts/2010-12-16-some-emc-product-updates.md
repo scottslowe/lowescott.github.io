@@ -7,8 +7,7 @@ slug: some-emc-product-updates
 title: Some EMC Product Updates
 wordpress_id: 2186
 categories:
-- Storage
-- Virtualization
+- News
 tags:
 - EMC
 - Storage

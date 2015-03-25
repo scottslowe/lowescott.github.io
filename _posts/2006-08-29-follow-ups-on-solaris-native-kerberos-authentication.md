@@ -7,8 +7,7 @@ slug: follow-ups-on-solaris-native-kerberos-authentication
 title: Follow Ups on Solaris, Native Kerberos Authentication
 wordpress_id: 328
 categories:
-- Interoperability
-- UNIX
+- Information
 tags:
 - ActiveDirectory
 - Kerberos
@@ -16,6 +15,7 @@ tags:
 - SSH
 - UNIX
 - Windows
+- Interoperability
 ---
 
 If you haven't read the previous articles, take a quick moment to review them before continuing:
