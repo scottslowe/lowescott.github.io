@@ -7,10 +7,9 @@ slug: virtualization-short-take-32
 title: 'Virtualization Short Take #32'
 wordpress_id: 1772
 categories:
-- Networking
-- Storage
-- Virtualization
+- Information
 tags:
+- Networking
 - Storage
 - Virtualization
 - VMware

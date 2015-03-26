@@ -7,7 +7,7 @@ slug: virtualization-short-take-9
 title: 'Virtualization Short Take #9'
 wordpress_id: 720
 categories:
-- Virtualization
+- Information
 tags:
 - Citrix
 - ESX

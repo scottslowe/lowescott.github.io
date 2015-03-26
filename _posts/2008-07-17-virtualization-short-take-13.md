@@ -7,9 +7,7 @@ slug: virtualization-short-take-13
 title: 'Virtualization Short Take #13'
 wordpress_id: 766
 categories:
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - HyperV
 - NetApp

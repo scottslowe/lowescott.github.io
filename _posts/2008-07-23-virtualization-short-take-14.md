@@ -7,10 +7,7 @@ slug: virtualization-short-take-14
 title: 'Virtualization Short Take #14'
 wordpress_id: 768
 categories:
-- Macintosh
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Citrix
 - Fusion

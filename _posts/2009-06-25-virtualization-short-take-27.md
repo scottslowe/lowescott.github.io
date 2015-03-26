@@ -7,9 +7,9 @@ slug: virtualization-short-take-27
 title: 'Virtualization Short Take #27'
 wordpress_id: 1423
 categories:
-- Macintosh
-- Virtualization
+- Information
 tags:
+- Macintosh
 - Cisco
 - ESXi
 - Fusion

@@ -7,8 +7,7 @@ slug: virtualization-short-take-6
 title: 'Virtualization Short Take #6'
 wordpress_id: 698
 categories:
-- Microsoft
-- Virtualization
+- Information
 tags:
 - ESX
 - HyperV

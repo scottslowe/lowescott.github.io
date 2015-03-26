@@ -7,7 +7,7 @@ slug: virtualization-short-take-41
 title: 'Virtualization Short Take #41'
 wordpress_id: 1954
 categories:
-- Virtualization
+- Information
 tags:
 - Cisco
 - Citrix

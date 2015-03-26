@@ -7,7 +7,7 @@ slug: virtualization-short-take-39
 title: 'Virtualization Short Take #39'
 wordpress_id: 1912
 categories:
-- Virtualization
+- Information
 tags:
 - EMC
 - HP

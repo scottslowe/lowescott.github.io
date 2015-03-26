@@ -7,7 +7,7 @@ slug: virtualization-short-take-40
 title: 'Virtualization Short Take #40'
 wordpress_id: 1948
 categories:
-- Virtualization
+- Information
 tags:
 - Cisco
 - ESXi

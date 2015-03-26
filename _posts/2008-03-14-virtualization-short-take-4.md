@@ -7,10 +7,7 @@ slug: virtualization-short-take-4
 title: 'Virtualization Short Take #4'
 wordpress_id: 660
 categories:
-- Microsoft
-- Security
-- Storage
-- Virtualization
+- Information
 tags:
 - Citrix
 - Microsoft

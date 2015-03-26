@@ -7,8 +7,7 @@ slug: virtualization-short-take-10
 title: 'Virtualization Short Take #10'
 wordpress_id: 743
 categories:
-- Storage
-- Virtualization
+- Information
 tags:
 - ESX
 - NFS

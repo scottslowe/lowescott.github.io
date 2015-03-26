@@ -7,8 +7,7 @@ slug: virtualization-short-take-11
 title: 'Virtualization Short Take #11'
 wordpress_id: 750
 categories:
-- Storage
-- Virtualization
+- Information
 tags:
 - CLI
 - ESX

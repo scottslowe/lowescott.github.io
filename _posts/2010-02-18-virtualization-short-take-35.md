@@ -7,8 +7,7 @@ slug: virtualization-short-take-35
 title: 'Virtualization Short Take #35'
 wordpress_id: 1840
 categories:
-- Microsoft
-- Virtualization
+- Information
 tags:
 - HyperV
 - Microsoft

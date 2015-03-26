@@ -7,7 +7,7 @@ slug: virtualization-short-take-34
 title: 'Virtualization Short Take #34'
 wordpress_id: 1807
 categories:
-- Virtualization
+- Information
 tags:
 - EMC
 - Fusion

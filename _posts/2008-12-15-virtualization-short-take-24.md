@@ -7,7 +7,7 @@ slug: virtualization-short-take-24
 title: 'Virtualization Short Take #24'
 wordpress_id: 1095
 categories:
-- General
+- Information
 tags:
 - ActiveDirectory
 - EMC
@@ -19,6 +19,7 @@ tags:
 - VMotion
 - VMware
 - VMwareSRM
+- Virtualization
 ---
 
 There's lots of good information flowing around the Internet, and it's becoming increasingly difficult to sort through all the useless stuff to find the valuable gems. Hopefully, some of the links that I have collected here will prove to be more useful than useless!
