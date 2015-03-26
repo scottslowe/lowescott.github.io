@@ -8,10 +8,6 @@ title: In the Works
 wordpress_id: 763
 categories:
 - General
-- Linux
-- Storage
-- UNIX
-- Virtualization
 tags:
 - ActiveDirectory
 - ESX
