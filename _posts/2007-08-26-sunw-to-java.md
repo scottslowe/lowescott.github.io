@@ -7,7 +7,7 @@ slug: sunw-to-java
 title: SUNW to JAVA
 wordpress_id: 513
 categories:
-- UNIX
+- Rant
 tags:
 - Solaris
 - UNIX

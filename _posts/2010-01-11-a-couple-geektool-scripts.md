@@ -7,8 +7,7 @@ slug: a-couple-geektool-scripts
 title: A Couple GeekTool Scripts
 wordpress_id: 1794
 categories:
-- Macintosh
-- UNIX
+- Explanation
 tags:
 - CLI
 - Macintosh

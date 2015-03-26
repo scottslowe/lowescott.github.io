@@ -7,11 +7,11 @@ slug: small-openbsd-38-speed-bump
 title: Small OpenBSD 3.8 Speed Bump
 wordpress_id: 110
 categories:
-- Networking
-- UNIX
+- Information
 tags:
 - BSD
 - UNIX
+- Networking
 ---
 
 My attempts to deploy the latest version of [OpenBSD](http://www.openbsd.org/), version 3.8 (released yesterday), have run into what I hope is only a small speed bump.

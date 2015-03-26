@@ -7,8 +7,7 @@ slug: sshjail-in-centralized-environments
 title: SSHjail in Centralized Environments
 wordpress_id: 446
 categories:
-- Linux
-- UNIX
+- Musing
 tags:
 - Linux
 - OSS

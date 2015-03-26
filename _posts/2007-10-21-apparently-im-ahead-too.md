@@ -7,8 +7,7 @@ slug: apparently-im-ahead-too
 title: Apparently, I'm Ahead Too
 wordpress_id: 563
 categories:
-- Macintosh
-- UNIX
+- Musing
 tags:
 - Macintosh
 - Solaris

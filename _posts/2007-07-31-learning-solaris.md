@@ -7,7 +7,7 @@ slug: learning-solaris
 title: Learning Solaris
 wordpress_id: 497
 categories:
-- UNIX
+- Information
 tags:
 - Linux
 - Solaris

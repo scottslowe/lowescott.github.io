@@ -7,12 +7,12 @@ slug: openbsd-pcn0-driver-issue-resolved
 title: OpenBSD pcn0 Driver Issue Resolved
 wordpress_id: 112
 categories:
-- Networking
-- UNIX
+- Tutorial
 tags:
 - BSD
 - Networking
 - Virtualization
+- UNIX
 ---
 
 Well, sort of resolved. I was never able to make the `pcn` driver (from [OpenBSD][1] 3.8) actually work under [VMware][2], but I did find information on how to disable the `pcn` driver and revert to the older `le` driver.

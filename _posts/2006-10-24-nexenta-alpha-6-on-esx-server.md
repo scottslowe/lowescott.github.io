@@ -7,8 +7,7 @@ slug: nexenta-alpha-6-on-esx-server
 title: Nexenta Alpha 6 on ESX Server
 wordpress_id: 349
 categories:
-- UNIX
-- Virtualization
+- Information
 tags:
 - Debian
 - ESX

@@ -7,7 +7,7 @@ slug: new-bsd-magazine
 title: New BSD Magazine
 wordpress_id: 701
 categories:
-- UNIX
+- News
 tags:
 - BSD
 - UNIX

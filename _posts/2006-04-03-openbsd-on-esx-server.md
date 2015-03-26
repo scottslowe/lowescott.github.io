@@ -7,13 +7,13 @@ slug: openbsd-on-esx-server
 title: OpenBSD on ESX Server
 wordpress_id: 215
 categories:
-- UNIX
-- Virtualization
+- Information
 tags:
 - BSD
 - ESX
 - Virtualization
 - VMware
+- UNIX
 ---
 
 Having already successfully installed [OpenBSD](http://www.openbsd.org/) (version 3.8) on [GSX Server](http://www.vmware.com/products/gsx/), the task now becomes installing OpenBSD 3.8 on [ESX Server](http://www.vmware.com/products/esx/). For the most part, the experience is very similar, but there are a couple of important details.

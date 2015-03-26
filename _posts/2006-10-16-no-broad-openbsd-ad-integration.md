@@ -7,8 +7,7 @@ slug: no-broad-openbsd-ad-integration
 title: No Broad OpenBSD-AD Integration
 wordpress_id: 347
 categories:
-- Interoperability
-- UNIX
+- Information
 tags:
 - ActiveDirectory
 - BSD
