@@ -7,7 +7,7 @@ slug: ta2668-vmware-esx-architectural-directions
 title: 'TA2668: VMware ESX Architectural Directions'
 wordpress_id: 908
 categories:
-- Virtualization
+- Liveblog
 tags:
 - ESX
 - ESXi

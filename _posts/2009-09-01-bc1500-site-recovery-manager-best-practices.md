@@ -7,7 +7,7 @@ slug: bc1500-site-recovery-manager-best-practices
 title: BC1500 - Site Recovery Manager Best Practices
 wordpress_id: 1603
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Storage
 - Virtualization

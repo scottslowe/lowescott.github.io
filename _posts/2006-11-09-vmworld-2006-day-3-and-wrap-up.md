@@ -7,7 +7,7 @@ slug: vmworld-2006-day-3-and-wrap-up
 title: VMworld 2006 Day 3 and Wrap-Up
 wordpress_id: 358
 categories:
-- Virtualization
+- Liveblog
 tags:
 - ESX
 - NetApp

@@ -7,8 +7,7 @@ slug: vmworld-2007-ip-based-storage-sessions
 title: VMworld 2007 IP-Based Storage Sessions
 wordpress_id: 542
 categories:
-- Storage
-- Virtualization
+- Liveblog
 tags:
 - ESX
 - iSCSI

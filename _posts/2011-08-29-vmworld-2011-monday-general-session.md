@@ -7,7 +7,7 @@ slug: vmworld-2011-monday-general-session
 title: VMworld 2011 Monday General Session
 wordpress_id: 2383
 categories:
-- Virtualization
+- Liveblog
 tags:
 - vCloud
 - Virtualization

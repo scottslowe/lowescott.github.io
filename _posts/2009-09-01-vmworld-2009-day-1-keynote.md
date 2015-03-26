@@ -7,7 +7,7 @@ slug: vmworld-2009-day-1-keynote
 title: VMworld 2009 Day 1 Keynote
 wordpress_id: 1575
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

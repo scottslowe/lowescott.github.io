@@ -7,8 +7,7 @@ slug: hyper-v-update-released
 title: Hyper-V Update Released
 wordpress_id: 951
 categories:
-- Microsoft
-- Virtualization
+- News
 tags:
 - Hardware
 - HyperV

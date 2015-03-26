@@ -7,7 +7,7 @@ slug: vmware-esx-35-update-3-is-available
 title: VMware ESX 3.5 Update 3 is Available
 wordpress_id: 1015
 categories:
-- Virtualization
+- News
 tags:
 - ESX
 - ESXi

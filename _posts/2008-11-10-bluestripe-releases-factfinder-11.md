@@ -7,7 +7,7 @@ slug: bluestripe-releases-factfinder-11
 title: BlueStripe Releases FactFinder 1.1
 wordpress_id: 1016
 categories:
-- Virtualization
+- News
 tags:
 - Virtualization
 - VMware

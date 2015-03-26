@@ -7,7 +7,7 @@ slug: ma6580-bridge-the-esxesxi-management-gap-with-vma
 title: 'MA6580: Bridge the ESX/ESXi Management Gap with vMA'
 wordpress_id: 2083
 categories:
-- Virtualization
+- Liveblog
 tags:
 - ESXi
 - Virtualization

@@ -7,8 +7,7 @@ slug: vdi-announcements-at-vmworld-europe-2008
 title: VDI Announcements at VMworld Europe 2008
 wordpress_id: 644
 categories:
-- Storage
-- Virtualization
+- News
 tags:
 - Citrix
 - NetApp

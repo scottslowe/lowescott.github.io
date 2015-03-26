@@ -7,7 +7,7 @@ slug: dv7706-view-composer-technical-deep-dive-and-best-practices
 title: 'DV7706: View Composer Technical Deep Dive and Best Practices'
 wordpress_id: 2079
 categories:
-- Virtualization
+- Liveblog
 tags:
 - VDI
 - Virtualization

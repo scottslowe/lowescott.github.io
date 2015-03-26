@@ -7,7 +7,7 @@ slug: vmworld-2011-tuesday-general-session
 title: VMworld 2011 Tuesday General Session
 wordpress_id: 2385
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

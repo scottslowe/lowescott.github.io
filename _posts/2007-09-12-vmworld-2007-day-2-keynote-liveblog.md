@@ -7,7 +7,7 @@ slug: vmworld-2007-day-2-keynote-liveblog
 title: VMworld 2007 Day 2 Keynote Liveblog
 wordpress_id: 535
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

@@ -7,7 +7,7 @@ slug: searchmyvm
 title: SearchMyVM
 wordpress_id: 856
 categories:
-- Virtualization
+- News
 tags:
 - Virtualization
 - VMware

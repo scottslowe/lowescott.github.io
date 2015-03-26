@@ -7,7 +7,7 @@ slug: vmworld-2007-vcb-solutions-session
 title: VMworld 2007 VCB Solutions Session
 wordpress_id: 543
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Backup
 - iSCSI

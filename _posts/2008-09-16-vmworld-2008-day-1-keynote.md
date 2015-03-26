@@ -7,7 +7,7 @@ slug: vmworld-2008-day-1-keynote
 title: VMworld 2008 Day 1 Keynote
 wordpress_id: 905
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

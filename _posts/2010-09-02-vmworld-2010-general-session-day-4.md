@@ -7,7 +7,7 @@ slug: vmworld-2010-general-session-day-4
 title: VMworld 2010 General Session, Day 4
 wordpress_id: 2087
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

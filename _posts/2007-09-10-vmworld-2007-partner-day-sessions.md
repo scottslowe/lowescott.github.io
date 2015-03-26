@@ -7,7 +7,7 @@ slug: vmworld-2007-partner-day-sessions
 title: VMworld 2007 Partner Day Sessions
 wordpress_id: 531
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Backup
 - ESX

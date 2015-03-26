@@ -7,7 +7,7 @@ slug: vmware-srm-10-update-1-released
 title: VMware SRM 1.0 Update 1 Released
 wordpress_id: 1085
 categories:
-- Virtualization
+- News
 tags:
 - NFS
 - Virtualization

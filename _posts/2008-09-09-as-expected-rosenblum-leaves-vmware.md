@@ -7,7 +7,7 @@ slug: as-expected-rosenblum-leaves-vmware
 title: As Expected, Rosenblum Leaves VMware
 wordpress_id: 877
 categories:
-- Virtualization
+- News
 tags:
 - Virtualization
 - VMware

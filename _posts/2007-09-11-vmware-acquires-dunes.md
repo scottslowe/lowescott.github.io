@@ -7,7 +7,7 @@ slug: vmware-acquires-dunes
 title: VMware Acquires Dunes
 wordpress_id: 533
 categories:
-- Virtualization
+- News
 tags:
 - VDI
 - Virtualization

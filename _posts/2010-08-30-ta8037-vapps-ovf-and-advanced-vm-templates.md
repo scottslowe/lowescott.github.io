@@ -7,7 +7,7 @@ slug: ta8037-vapps-ovf-and-advanced-vm-templates
 title: 'TA8037: vApps, OVF, and Advanced VM Templates'
 wordpress_id: 2055
 categories:
-- Virtualization
+- Liveblog
 tags:
 - Virtualization
 - VMware

@@ -7,7 +7,7 @@ slug: embotics-v-scout
 title: Embotics V-Scout
 wordpress_id: 850
 categories:
-- Virtualization
+- News
 tags:
 - Virtualization
 - VMware
