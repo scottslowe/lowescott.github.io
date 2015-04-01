@@ -7,9 +7,7 @@ slug: walking-a-fine-line
 title: Walking a Fine Line
 wordpress_id: 655
 categories:
-- Security
-- Storage
-- Virtualization
+- Musing
 tags:
 - Security
 - Storage

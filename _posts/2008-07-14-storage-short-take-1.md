@@ -7,7 +7,7 @@ slug: storage-short-take-1
 title: 'Storage Short Take #1'
 wordpress_id: 761
 categories:
-- Storage
+- Information
 tags:
 - Cisco
 - NetApp

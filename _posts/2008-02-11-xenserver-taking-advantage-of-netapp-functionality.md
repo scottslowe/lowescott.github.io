@@ -7,8 +7,7 @@ slug: xenserver-taking-advantage-of-netapp-functionality
 title: XenServer Taking Advantage of NetApp Functionality
 wordpress_id: 630
 categories:
-- Storage
-- Virtualization
+- News
 tags:
 - Citrix
 - NetApp

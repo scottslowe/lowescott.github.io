@@ -7,8 +7,7 @@ slug: sanrad-configuration-basics
 title: Sanrad Configuration Basics
 wordpress_id: 552
 categories:
-- Storage
-- Virtualization
+- Tutorial
 tags:
 - iSCSI
 - Storage

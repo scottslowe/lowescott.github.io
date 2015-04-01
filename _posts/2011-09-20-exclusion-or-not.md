@@ -7,8 +7,7 @@ slug: exclusion-or-not
 title: Exclusion or Not?
 wordpress_id: 2425
 categories:
-- Storage
-- Virtualization
+- Rant
 tags:
 - EMC
 - HP

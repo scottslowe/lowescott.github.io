@@ -7,8 +7,7 @@ slug: fcoe-versus-mr-iovhuh
 title: FCoE versus MR-IOV...huh?
 wordpress_id: 1028
 categories:
-- Storage
-- Virtualization
+- Rant
 tags:
 - Cisco
 - FibreChannel

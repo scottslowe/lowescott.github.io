@@ -7,12 +7,12 @@ slug: file-screens-in-windows-server-2003-r2
 title: File Screens in Windows Server 2003 R2
 wordpress_id: 229
 categories:
-- Microsoft
-- Storage
+- Explanation
 tags:
 - Microsoft
 - Networking
 - Windows
+- Storage
 ---
 
 One nice feature I've discovered in [Windows Server 2003 R2](http://www.microsoft.com/windowsserver2003/default.mspx) is file screens. Now, finally, we have a way to make sure that users aren't storing the wrong types of files on our file servers.

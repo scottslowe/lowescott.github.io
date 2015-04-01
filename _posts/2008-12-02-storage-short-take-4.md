@@ -7,7 +7,7 @@ slug: storage-short-take-4
 title: 'Storage Short Take #4'
 wordpress_id: 1073
 categories:
-- Storage
+- Information
 tags:
 - Deduplication
 - EMC

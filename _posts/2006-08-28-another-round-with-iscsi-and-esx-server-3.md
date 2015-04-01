@@ -7,9 +7,9 @@ slug: another-round-with-iscsi-and-esx-server-3
 title: Another Round with iSCSI and ESX Server 3
 wordpress_id: 327
 categories:
-- Interoperability
-- Storage
+- Explanation
 tags:
+- Interoperability
 - CentOS
 - ESX
 - iSCSI

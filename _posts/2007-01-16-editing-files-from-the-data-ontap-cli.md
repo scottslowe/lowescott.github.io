@@ -7,10 +7,11 @@ slug: editing-files-from-the-data-ontap-cli
 title: Editing Files from the Data ONTAP CLI
 wordpress_id: 402
 categories:
-- Storage
+- Tutorial
 tags:
 - NetApp
 - ONTAP
+- Storage
 ---
 
 While setting up a [Network Appliance](http://www.netapp.com/) storage system today for a customer, I ran into a situation that was a bit puzzling for a moment. I needed to change the IP address on the storage system's clustered controllers, but in order to do that I needed to edit some files in the /etc directory on the root volume. Normally, that wouldn't be a big deal; I'd just mount the root volume (vol0) via CIFS or NFS from my [MacBook Pro](http://www.apple.com/macbookpro/) and go from there.
@@ -29,7 +30,7 @@ So here's how I used the advanced command set to change the IP addresses of the 
 
 3. Created `/etc/hosts.new` (containing the contents of `/etc/hosts` with the changes I needed) using `wrfile /etc/hosts.new`.
 
-4. Verified the contents of `/etc/hosts.new using rdfile.
+4. Verified the contents of `/etc/hosts.new` using rdfile.
 
 5. Renamed `/etc/hosts` to `/etc/hosts.setup` using `mv`.
 

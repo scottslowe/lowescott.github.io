@@ -7,8 +7,7 @@ slug: vmware-consolidated-backup
 title: VMware Consolidated Backup
 wordpress_id: 424
 categories:
-- Storage
-- Virtualization
+- Explanation
 tags:
 - Storage
 - VCB
