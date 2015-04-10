@@ -7,7 +7,7 @@ slug: some-useful-markdown-tools-for-os-x
 title: Some Useful Markdown Tools for OS X
 wordpress_id: 3454
 categories:
-- Macintosh
+- Information
 tags:
 - Macintosh
 - Productivity

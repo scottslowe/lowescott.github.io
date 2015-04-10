@@ -7,8 +7,7 @@ slug: rdp-printer-redirection-with-vmware-view-on-a-mac
 title: RDP Printer Redirection with VMware View on a Mac
 wordpress_id: 2320
 categories:
-- Macintosh
-- Virtualization
+- Tutorial
 tags:
 - Macintosh
 - VDI

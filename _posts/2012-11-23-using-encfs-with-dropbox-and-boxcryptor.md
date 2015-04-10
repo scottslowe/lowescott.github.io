@@ -7,15 +7,13 @@ slug: using-encfs-with-dropbox-and-boxcryptor
 title: Using EncFS with Dropbox and BoxCryptor
 wordpress_id: 2952
 categories:
-- Interoperability
-- Macintosh
-- Security
-- Storage
+- Tutorial
 tags:
 - Encryption
 - Macintosh
 - OSS
 - Storage
+- Interoperability
 ---
 
 Lots of folks like using [Dropbox](http://www.dropbox.com/), the ubiquitous store-and-sync cloud storage service; I am among them. However, concerns over the privacy and security of my data have kept me from using Dropbox for some projects. To help address that, I looked around to find an open, interoperable way of adding an extra layer of encryption onto my data. What I found is described in this post, and it involves using the open source EncFS and OSXFUSE projects along with an application from [BoxCryptor](http://www.boxcryptor.com/) to provide real-time, client-side AES-256 encryption.

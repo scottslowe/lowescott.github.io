@@ -7,7 +7,7 @@ slug: my-number-one-yojimbo-complaint
 title: My Number One Yojimbo Complaint
 wordpress_id: 1758
 categories:
-- Macintosh
+- Rant
 tags:
 - Macintosh
 ---

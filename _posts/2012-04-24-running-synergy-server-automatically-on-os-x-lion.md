@@ -7,7 +7,7 @@ slug: running-synergy-server-automatically-on-os-x-lion
 title: Running Synergy Server Automatically on OS X Lion
 wordpress_id: 2596
 categories:
-- Macintosh
+- Tutorial
 tags:
 - Macintosh
 - OSS
