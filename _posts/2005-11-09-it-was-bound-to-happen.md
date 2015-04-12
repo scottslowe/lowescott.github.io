@@ -7,8 +7,7 @@ slug: it-was-bound-to-happen
 title: It Was Bound to Happen
 wordpress_id: 116
 categories:
-- Linux
-- Security
+- News
 tags:
 - Linux
 - Security

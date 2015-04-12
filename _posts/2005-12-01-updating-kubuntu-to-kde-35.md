@@ -7,7 +7,7 @@ slug: updating-kubuntu-to-kde-35
 title: Updating Kubuntu to KDE 3.5
 wordpress_id: 132
 categories:
-- Linux
+- Explanation
 tags:
 - KDE
 - Linux

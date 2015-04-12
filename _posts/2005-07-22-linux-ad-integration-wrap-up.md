@@ -7,10 +7,9 @@ slug: linux-ad-integration-wrap-up
 title: Linux-AD Integration Wrap-Up
 wordpress_id: 56
 categories:
-- Interoperability
-- Linux
-- Microsoft
+- Information
 tags:
+- Interoperability
 - ActiveDirectory
 - Kerberos
 - LDAP

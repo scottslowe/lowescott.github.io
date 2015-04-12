@@ -7,9 +7,7 @@ slug: in-depth-look-at-the-asr-router
 title: In-Depth Look at the ASR Router
 wordpress_id: 658
 categories:
-- Linux
-- Networking
-- Virtualization
+- Information
 tags:
 - Cisco
 - IOS

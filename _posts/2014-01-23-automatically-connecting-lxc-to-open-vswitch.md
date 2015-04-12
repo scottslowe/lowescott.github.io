@@ -7,14 +7,14 @@ slug: automatically-connecting-lxc-to-open-vswitch
 title: Automatically Connecting LXC to Open vSwitch
 wordpress_id: 3398
 categories:
-- Linux
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - Linux
 - LXC
 - OVS
 - Ubuntu
+- Networking
+- Virtualization
 ---
 
 I've previously discussed using [Open vSwitch (OVS)](http://openvswitch.org/) with [Linux Containers (LXC)](http://linuxcontainers.org/) in a couple of previous posts ([here][1] and [here][2]). In this post, I'm going to show you one way to have your containers automatically connected to OVS on startup without having to use [libvirt](http://libvirt.org/).

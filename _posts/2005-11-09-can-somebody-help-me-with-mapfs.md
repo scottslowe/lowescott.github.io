@@ -7,7 +7,7 @@ slug: can-somebody-help-me-with-mapfs
 title: Can Somebody Help Me With MapFS?
 wordpress_id: 115
 categories:
-- Linux
+- Rant
 tags:
 - Linux
 - OSS

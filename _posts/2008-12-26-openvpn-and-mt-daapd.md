@@ -7,8 +7,7 @@ slug: openvpn-and-mt-daapd
 title: OpenVPN and mt-daapd
 wordpress_id: 1112
 categories:
-- Linux
-- Macintosh
+- Explanation
 tags:
 - Linux
 - Macintosh

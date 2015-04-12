@@ -7,8 +7,7 @@ slug: installing-open-vswitch-on-ubuntu-with-puppet
 title: Installing Open vSwitch on Ubuntu with Puppet
 wordpress_id: 3311
 categories:
-- Linux
-- Networking
+- Explanation
 tags:
 - Automation
 - Linux

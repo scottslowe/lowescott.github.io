@@ -7,9 +7,7 @@ slug: ubuntu-and-mac-os-x-integration
 title: Ubuntu and Mac OS X Integration
 wordpress_id: 1118
 categories:
-- Interoperability
-- Linux
-- Macintosh
+- Tutorial
 tags:
 - Apache
 - Apple

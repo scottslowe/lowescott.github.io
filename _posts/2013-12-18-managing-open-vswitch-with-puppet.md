@@ -7,8 +7,7 @@ slug: managing-open-vswitch-with-puppet
 title: Managing Open vSwitch with Puppet
 wordpress_id: 3388
 categories:
-- Linux
-- Networking
+- Explanation
 tags:
 - Automation
 - Libvirt

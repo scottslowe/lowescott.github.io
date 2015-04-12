@@ -7,7 +7,7 @@ slug: secure-remote-filesystem
 title: Secure Remote Filesystem
 wordpress_id: 128
 categories:
-- Linux
+- Information
 tags:
 - BSD
 - Encryption

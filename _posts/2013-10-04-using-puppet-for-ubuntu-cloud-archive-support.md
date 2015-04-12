@@ -7,7 +7,7 @@ slug: using-puppet-for-ubuntu-cloud-archive-support
 title: Using Puppet for Ubuntu Cloud Archive Support
 wordpress_id: 3303
 categories:
-- Linux
+- Explanation
 tags:
 - Automation
 - Linux

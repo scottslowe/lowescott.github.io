@@ -7,7 +7,7 @@ slug: updating-ubuntu-cloud-archive-support-with-puppet
 title: Updating Ubuntu Cloud Archive Support with Puppet
 wordpress_id: 3386
 categories:
-- Linux
+- Explanation
 tags:
 - Automation
 - Linux

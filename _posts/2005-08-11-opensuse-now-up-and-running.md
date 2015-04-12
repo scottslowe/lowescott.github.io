@@ -7,6 +7,8 @@ slug: opensuse-now-up-and-running
 title: OpenSuSE Now Up and Running
 wordpress_id: 73
 categories:
+- News
+tags:
 - Linux
 ---
 

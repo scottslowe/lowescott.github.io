@@ -7,7 +7,7 @@ slug: trying-a-new-linux-distribution
 title: Trying a New Linux Distribution
 wordpress_id: 49
 categories:
-- Linux
+- Information
 tags:
 - Linux
 ---

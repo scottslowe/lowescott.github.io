@@ -7,7 +7,7 @@ slug: linux-better-than-windows
 title: Linux Better Than Windows?
 wordpress_id: 34
 categories:
-- Linux
+- Musing
 tags:
 - Linux
 - Macintosh

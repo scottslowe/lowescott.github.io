@@ -7,8 +7,7 @@ slug: isolation-of-misbehaving-vms
 title: Isolation of Misbehaving VMs
 wordpress_id: 725
 categories:
-- Linux
-- Virtualization
+- Information
 tags:
 - ESX
 - Linux
@@ -26,4 +25,6 @@ The results are interesting; VMware showed the best protection of well-behaved V
 
 These results are very interesting, but I wonder how much the results would change if we were to use VMware's ESX server product line instead of one of the hosted products like VMware Workstation? As a product representative of "full virtualization" solutions, I'd be curious to know if the results seen with VMware Workstation were also seen with ESX.
 
-In any case, the results are a validation of what we, as consultants, have been talking about: full virtualization provides the best isolation of well-behaved workloads from ill-behaved workloads, preventing a workload in one VM from affecting other workloads due to mishandling of CPU, RAM, disk, or network resources. As the researchers conclude in the paper, "...it is clear that VMware completely protects the well-behaved VMs under all stress tests. Its performance is sometimes substantially lower for the misbehaving VM, but in a commercial hosting environment this would be exactly the right tradeoff to make."
+In any case, the results are a validation of what we, as consultants, have been talking about: full virtualization provides the best isolation of well-behaved workloads from ill-behaved workloads, preventing a workload in one VM from affecting other workloads due to mishandling of CPU, RAM, disk, or network resources. As the researchers conclude in the paper:
+
+>"...it is clear that VMware completely protects the well-behaved VMs under all stress tests. Its performance is sometimes substantially lower for the misbehaving VM, but in a commercial hosting environment this would be exactly the right tradeoff to make."

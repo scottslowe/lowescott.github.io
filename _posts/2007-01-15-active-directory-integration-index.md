@@ -7,8 +7,7 @@ slug: active-directory-integration-index
 title: Active Directory Integration Index
 wordpress_id: 401
 categories:
-- Interoperability
-- Linux
+- Information
 tags:
 - ActiveDirectory
 - BSD

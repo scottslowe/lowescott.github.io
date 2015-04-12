@@ -7,7 +7,7 @@ slug: managing-ssh-authorized-keys-with-puppet
 title: Managing SSH Authorized Keys with Puppet
 wordpress_id: 3313
 categories:
-- Linux
+- Explanation
 tags:
 - Automation
 - Linux

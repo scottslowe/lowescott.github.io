@@ -7,7 +7,7 @@ slug: installing-ubuntu-packages-from-a-specific-repository
 title: Installing Ubuntu Packages from a Specific Repository
 wordpress_id: 3402
 categories:
-- Linux
+- Tutorial
 tags:
 - CLI
 - Linux

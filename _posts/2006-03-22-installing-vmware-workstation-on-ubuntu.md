@@ -7,8 +7,7 @@ slug: installing-vmware-workstation-on-ubuntu
 title: Installing VMware Workstation on Ubuntu
 wordpress_id: 208
 categories:
-- Linux
-- Virtualization
+- Explanation
 tags:
 - Linux
 - Ubuntu

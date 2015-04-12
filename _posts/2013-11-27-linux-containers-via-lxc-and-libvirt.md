@@ -7,9 +7,7 @@ slug: linux-containers-via-lxc-and-libvirt
 title: Linux Containers via LXC and Libvirt
 wordpress_id: 3349
 categories:
-- Linux
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - CLI
 - Libvirt

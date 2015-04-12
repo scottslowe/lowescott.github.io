@@ -7,9 +7,7 @@ slug: where-is-bluebear-going-with-kodiak
 title: Where is Bluebear Going with Kodiak?
 wordpress_id: 1014
 categories:
-- Linux
-- Macintosh
-- Virtualization
+- Musing
 tags:
 - Linux
 - Macintosh

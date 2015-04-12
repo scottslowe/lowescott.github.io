@@ -7,9 +7,7 @@ slug: lxc-open-vswitch-and-gre-tunnels
 title: LXC, Open vSwitch, and GRE Tunnels
 wordpress_id: 3338
 categories:
-- Linux
-- Networking
-- Virtualization
+- Tutorial
 tags:
 - GRE
 - Linux
