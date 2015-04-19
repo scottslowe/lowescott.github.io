@@ -31,9 +31,54 @@ Moving forward, OpenStack Heat is trying to standardize on OpenStack resource ty
 
 Here's the example Heat template you can use to deploy and customize CoreOS on OpenStack:
 
-{% gist lowescott/43ea98cf49ff91445d0f %}
+{% highlight yaml %}
+heat_template_version: 2013-05-23
+description: >
+  A simple Heat template to deploy CoreOS into an existing cluster.
+parameters:
+  network_id:
+    type: string
+    label: Network ID
+    description: ID of existing Neutron network to use
+    default: <ID of Neutron network to which instances should connect>
+  image_id:
+    type: string
+    label: Glance Image ID
+    description: ID of existing Glance image to use
+    default: <ID of CoreOS Glance image>
+resources:
+  instance0_port0:
+    type: OS::Neutron::Port
+    properties:
+      admin_state_up: true
+      network_id: { get_param: network_id }
+      security_groups:
+        - <ID of security group to apply to this Neutron port>
+  instance0:
+    type: OS::Nova::Server
+    properties:
+      name: coreos-04
+      image: { get_param: image_id }
+      flavor: m1.small
+      networks:
+        - port: { get_resource: instance0_port0 }
+      key_name: <Name of SSH key to inject into CoreOS instance>
+      user_data_format: RAW
+      user_data: |
+        #cloud-config
+        coreos:
+          etcd:
+            discovery: https://discovery.etcd.io/<unique cluster ID here>
+            addr: $private_ipv4:4001
+            peer-addr: $private_ipv4:7001
+          units:
+            - name: etcd.service
+              command: start
+            - name: fleet.service
+              command: start
+{% endhighlight %}
 
-(Click [here](https://gist.github.com/lowescott/43ea98cf49ff91445d0f) if you can't see the code block above.)
+(Click [here](https://gist.github.com/lowescott/43ea98cf49ff91445d0f) to view the code block above as a GitHub Gist.)
 
 Let's walk through this template real quick:
 
