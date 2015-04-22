@@ -6,8 +6,11 @@ layout: post
 slug: imap-versamail-and-mailapp
 title: IMAP, VersaMail, and Mail.app
 wordpress_id: 86
-categories:
+categories: Rant
+tags:
 - Interoperability
+- Messaging
+- Macintosh
 ---
 
 I'm continuing to experiment with [VersaMail](http://www.palm.com/us/products/smartphones/treo650/versamail.epl), the e-mail application running on my [palmOne Treo 650 smartphone](http://www.palm.com/us/products/smartphones/treo650/). GPRS quibbles aside, my only complaint is related to the interactions between VersaMail and [Mail.app](http://www.apple.com/macosx/features/mail/).

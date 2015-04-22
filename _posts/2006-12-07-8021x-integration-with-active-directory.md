@@ -6,16 +6,15 @@ layout: post
 slug: 8021x-integration-with-active-directory
 title: 802.1x Integration with Active Directory
 wordpress_id: 382
-categories:
-- Interoperability
-- Microsoft
-- Networking
+categories: Tutorial
 tags:
 - Cisco
 - IOS
 - Macintosh
 - Networking
 - Security
+- Microsoft
+- Interoperability
 ---
 
 The idea behind [802.1x](http://en.wikipedia.org/wiki/802.1x) is to provide Layer 2 authentication; that is, to authenticate LAN clients at the Ethernet layer. (This is before the client gets a DHCP lease or anything of that nature.) With 802.1x in place, rogue users can't just tap into a physical connection on the network. In order to gain network connectivity, the device must authenticate before network traffic is allowed.

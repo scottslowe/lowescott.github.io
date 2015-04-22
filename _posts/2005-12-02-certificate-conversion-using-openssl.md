@@ -6,10 +6,9 @@ layout: post
 slug: certificate-conversion-using-openssl
 title: Certificate Conversion Using OpenSSL
 wordpress_id: 133
-categories:
-- Interoperability
-- Security
+categories: Tutorial
 tags:
+- Interoperability
 - Encryption
 - Linux
 - Macintosh

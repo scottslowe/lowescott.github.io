@@ -6,13 +6,13 @@ layout: post
 slug: watchguard-firebox-vpn-and-active-directory-integration
 title: WatchGuard Firebox VPN and Active Directory Integration
 wordpress_id: 136
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Encryption
 - Security
 - Windows
+- Interoperability
 ---
 
 A short while back, I posted an article on [Cisco PIX VPN and Active Directory integration][1]. Now, I'd like to follow that article up with a version looking at integration between Active Directory and [WatchGuard][2] Firebox VPNs.

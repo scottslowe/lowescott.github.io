@@ -6,8 +6,7 @@ layout: post
 slug: linux-active-directory-and-windows-server-2003-r2-revisited
 title: Linux, Active Directory, and Windows Server 2003 R2 Revisited
 wordpress_id: 315
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - CentOS
