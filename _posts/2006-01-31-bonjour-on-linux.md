@@ -6,8 +6,7 @@ layout: post
 slug: bonjour-on-linux
 title: Bonjour on Linux
 wordpress_id: 169
-categories:
-- Linux
+categories: Information
 tags:
 - Bonjour
 - CentOS

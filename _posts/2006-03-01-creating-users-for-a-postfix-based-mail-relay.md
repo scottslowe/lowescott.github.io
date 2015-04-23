@@ -6,8 +6,7 @@ layout: post
 slug: creating-users-for-a-postfix-based-mail-relay
 title: Creating Users for a Postfix-Based Mail Relay
 wordpress_id: 192
-categories:
-- Linux
+categories: Information
 tags:
 - Linux
 - Messaging

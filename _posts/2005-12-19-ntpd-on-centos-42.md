@@ -6,8 +6,7 @@ layout: post
 slug: ntpd-on-centos-42
 title: NTPd on CentOS 4.2
 wordpress_id: 142
-categories:
-- Linux
+categories: Rant
 tags:
 - CentOS
 - Linux

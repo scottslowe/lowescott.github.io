@@ -6,9 +6,7 @@ layout: post
 slug: working-with-kvm-guests
 title: Working with KVM Guests
 wordpress_id: 2729
-categories:
-- Linux
-- Virtualization
+categories: Education
 tags:
 - KVM
 - Libvirt

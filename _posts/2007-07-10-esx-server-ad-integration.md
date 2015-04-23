@@ -6,9 +6,7 @@ layout: post
 slug: esx-server-ad-integration
 title: ESX Server-AD Integration
 wordpress_id: 488
-categories:
-- Interoperability
-- Virtualization
+categories: Tutorial
 tags:
 - ActiveDirectory
 - ESX
