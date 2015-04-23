@@ -6,8 +6,7 @@ layout: post
 slug: centos-ntpd-problem-mostly-resolved
 title: CentOS NTPd Problem (Mostly) Resolved
 wordpress_id: 144
-categories:
-- Linux
+categories: Information
 tags:
 - BSD
 - CentOS

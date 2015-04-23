@@ -6,10 +6,7 @@ layout: post
 slug: setting-up-a-ccna-study-environment-with-gns3-and-vmware
 title: Setting up a CCNA Study Environment with GNS3 and VMware
 wordpress_id: 1898
-categories:
-- Linux
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - BSD
 - Cisco

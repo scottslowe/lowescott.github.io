@@ -6,10 +6,7 @@ layout: post
 slug: cisco-pix-vpn-and-active-directory-integration
 title: Cisco PIX VPN and Active Directory Integration
 wordpress_id: 121
-categories:
-- Interoperability
-- Networking
-- Security
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Cisco

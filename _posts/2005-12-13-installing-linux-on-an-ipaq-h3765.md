@@ -6,8 +6,7 @@ layout: post
 slug: installing-linux-on-an-ipaq-h3765
 title: Installing Linux on an iPaq H3765
 wordpress_id: 141
-categories:
-- Linux
+categories: Information
 tags:
 - Hardware
 - Linux

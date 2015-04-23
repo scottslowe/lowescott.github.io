@@ -6,9 +6,7 @@ layout: post
 slug: centos-on-esx-server
 title: CentOS on ESX Server
 wordpress_id: 234
-categories:
-- Linux
-- Virtualization
+categories: Information
 tags:
 - CentOS
 - ESX

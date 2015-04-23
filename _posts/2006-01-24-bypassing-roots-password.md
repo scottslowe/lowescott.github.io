@@ -6,8 +6,7 @@ layout: post
 slug: bypassing-roots-password
 title: Bypassing Root's Password
 wordpress_id: 164
-categories:
-- Linux
+categories: Tutorial
 tags:
 - Debian
 - Linux

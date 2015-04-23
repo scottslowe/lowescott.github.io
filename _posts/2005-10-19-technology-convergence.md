@@ -6,9 +6,11 @@ layout: post
 slug: technology-convergence
 title: Technology Convergence
 wordpress_id: 105
-categories:
+categories: Musing
+tags:
 - Interoperability
 - Networking
+- Hardware
 ---
 
 It's about time. I've been waiting for someone to take revolutionary (in my opinion, at least) technologies such as virtualization, blade servers (or any alternative server form factors), and thin-client access and combine them. And that's exactly what [IBM](http://www.ibm.com/), [VMware](http://www.vmware.com/), and [Citrix](http://www.citrix.com/) are doing, as discussed [here](http://www.eweek.com/article2/0,1759,1873113,00.asp).
