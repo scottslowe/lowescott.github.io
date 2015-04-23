@@ -48,7 +48,7 @@ resources:
       networks:
         - port: { get_resource: instance0_port0 }
       key_name: lab
-	  admin_user: ubuntu
+      admin_user: ubuntu
 {% endhighlight %}
 
 This ensured that the specified SSH key was injected for the expected user ("ubuntu", in this case), but it didn't change the odd behaviors once I got logged in. Something was still off.
@@ -87,8 +87,8 @@ resources:
       networks:
         - port: { get_resource: instance0_port0 }
       key_name: lab
-	  admin_user: ubuntu
-	  user_data_format: RAW
+      admin_user: ubuntu
+      user_data_format: RAW
 {% endhighlight %}
 
 That fixed the problem---the error in the console logs went away, I was able to log in as the "ubuntu" user with the specified SSH key, and the instance was configured properly and behaved as one would expect. End of the story, right?
@@ -106,7 +106,7 @@ resources:
       networks:
         - port: { get_resource: instance0_port0 }
       key_name: lab
-	  user_data_format: RAW
+      user_data_format: RAW
 {% endhighlight %}
 
 This produced an Ubuntu instance that was accessible via SSH, injecting the specified key for the "ubuntu" user and properly customizing and configuring the instance. (And, naturally, the earlier error that had appeared in the console logs was no longer present.)
