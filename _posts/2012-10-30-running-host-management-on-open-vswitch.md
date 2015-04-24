@@ -6,9 +6,7 @@ layout: post
 slug: running-host-management-on-open-vswitch
 title: Running Host Management on Open vSwitch
 wordpress_id: 2915
-categories:
-- Linux
-- Networking
+categories: Tutorial
 tags:
 - Linux
 - Networking

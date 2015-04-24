@@ -6,9 +6,7 @@ layout: post
 slug: vlan-trunking-to-guest-domains-with-open-vswitch
 title: VLAN Trunking to Guest Domains with Open vSwitch
 wordpress_id: 3191
-categories:
-- Linux
-- Networking
+categories: Tutorial
 tags:
 - Linux
 - Networking

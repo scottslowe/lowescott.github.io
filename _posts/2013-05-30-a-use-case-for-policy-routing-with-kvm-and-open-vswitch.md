@@ -6,10 +6,7 @@ layout: post
 slug: a-use-case-for-policy-routing-with-kvm-and-open-vswitch
 title: A Use Case for Policy Routing with KVM and Open vSwitch
 wordpress_id: 3195
-categories:
-- Linux
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - KVM
 - Linux

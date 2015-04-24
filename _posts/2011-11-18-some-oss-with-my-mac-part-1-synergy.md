@@ -6,9 +6,7 @@ layout: post
 slug: some-oss-with-my-mac-part-1-synergy
 title: 'Some OSS with my Mac, Part 1: Synergy'
 wordpress_id: 2468
-categories:
-- Linux
-- Macintosh
+categories: Explanation
 tags:
 - Linux
 - Macintosh

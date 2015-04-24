@@ -6,9 +6,7 @@ layout: post
 slug: examining-open-vswitch-traffic-patterns
 title: Examining Open vSwitch Traffic Patterns
 wordpress_id: 3185
-categories:
-- Linux
-- Networking
+categories: Explanation
 tags:
 - Linux
 - Networking

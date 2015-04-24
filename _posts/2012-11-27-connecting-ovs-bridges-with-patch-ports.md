@@ -6,9 +6,7 @@ layout: post
 slug: connecting-ovs-bridges-with-patch-ports
 title: Connecting OVS Bridges with Patch Ports
 wordpress_id: 2967
-categories:
-- Linux
-- Networking
+categories: Tutorial
 tags:
 - Linux
 - Networking

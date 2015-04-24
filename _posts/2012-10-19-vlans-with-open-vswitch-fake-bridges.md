@@ -6,10 +6,7 @@ layout: post
 slug: vlans-with-open-vswitch-fake-bridges
 title: VLANs with Open vSwitch Fake Bridges
 wordpress_id: 2898
-categories:
-- Interoperability
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - Interoperability
 - Networking

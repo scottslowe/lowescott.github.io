@@ -6,9 +6,7 @@ layout: post
 slug: layer-3-routing-with-open-vswitch
 title: Layer 3 Routing with Open vSwitch
 wordpress_id: 2918
-categories:
-- Linux
-- Networking
+categories: Tutorial
 tags:
 - Linux
 - Networking

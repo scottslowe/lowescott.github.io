@@ -6,10 +6,7 @@ layout: post
 slug: wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges
 title: Wrapping libvirt Virtual Networks Around Open vSwitch Fake Bridges
 wordpress_id: 2901
-categories:
-- Interoperability
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - Interoperability
 - Libvirt

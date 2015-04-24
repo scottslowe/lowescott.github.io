@@ -6,10 +6,10 @@ layout: post
 slug: some-oss-with-my-mac-part-2-unison
 title: 'Some OSS with my Mac, Part 2: Unison'
 wordpress_id: 2472
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
+- Storage
 - OSS
 ---
 

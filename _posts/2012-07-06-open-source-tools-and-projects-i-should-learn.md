@@ -6,11 +6,9 @@ layout: post
 slug: open-source-tools-and-projects-i-should-learn
 title: Open Source Tools and Projects I Should Learn
 wordpress_id: 2672
-categories:
-- Interoperability
-- Linux
-- Virtualization
+categories: Musing
 tags:
+- Interoperability
 - Automation
 - KVM
 - Linux

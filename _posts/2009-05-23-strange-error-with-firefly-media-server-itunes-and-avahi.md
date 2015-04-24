@@ -6,10 +6,7 @@ layout: post
 slug: strange-error-with-firefly-media-server-itunes-and-avahi
 title: Strange Error with Firefly Media Server, iTunes, and Avahi
 wordpress_id: 1375
-categories:
-- Linux
-- Macintosh
-- Networking
+categories: Explanation
 tags:
 - Linux
 - Macintosh

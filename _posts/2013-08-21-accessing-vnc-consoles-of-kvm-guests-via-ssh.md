@@ -6,9 +6,7 @@ layout: post
 slug: accessing-vnc-consoles-of-kvm-guests-via-ssh
 title: Accessing VNC Consoles of KVM Guests via SSH
 wordpress_id: 3248
-categories:
-- Linux
-- Virtualization
+categories: Tutorial
 tags:
 - CLI
 - KVM

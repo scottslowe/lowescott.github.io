@@ -6,10 +6,7 @@ layout: post
 slug: a-quick-warning-about-compiling-libvirt
 title: A Quick Warning About Compiling libvirt
 wordpress_id: 2929
-categories:
-- Interoperability
-- Linux
-- Virtualization
+categories: Rant
 tags:
 - Interoperability
 - Libvirt
