@@ -6,9 +6,7 @@ layout: post
 slug: permissions-in-the-esx-server-mui
 title: Permissions in the ESX Server MUI
 wordpress_id: 239
-categories:
-- Linux
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Linux

@@ -6,10 +6,7 @@ layout: post
 slug: ldap-signing-in-ad-integration-situations
 title: LDAP Signing in AD Integration Situations
 wordpress_id: 662
-categories:
-- Interoperability
-- Linux
-- Security
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

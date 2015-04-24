@@ -6,8 +6,7 @@ layout: post
 slug: puppet-user-accounts-and-configuration-files
 title: Puppet, User Accounts, and Configuration Files
 wordpress_id: 3079
-categories:
-- Linux
+categories: Tutorial
 tags:
 - Automation
 - Linux

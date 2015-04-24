@@ -6,9 +6,7 @@ layout: post
 slug: linux-vdi-and-mobile-vm-admin
 title: Linux VDI and Mobile VM Admin
 wordpress_id: 1240
-categories:
-- Linux
-- Virtualization
+categories: News
 tags:
 - Linux
 - UCS

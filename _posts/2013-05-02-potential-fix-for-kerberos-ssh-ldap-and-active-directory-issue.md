@@ -6,10 +6,9 @@ layout: post
 slug: potential-fix-for-kerberos-ssh-ldap-and-active-directory-issue
 title: Potential Fix for Kerberos, SSH, LDAP, and Active Directory Issue
 wordpress_id: 3169
-categories:
-- Interoperability
-- Linux
+categories: Information
 tags:
+- Interoperability
 - ActiveDirectory
 - Kerberos
 - LDAP

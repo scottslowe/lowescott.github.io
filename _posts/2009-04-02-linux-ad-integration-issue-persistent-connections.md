@@ -6,10 +6,7 @@ layout: post
 slug: linux-ad-integration-issue-persistent-connections
 title: 'Linux-AD Integration Issue: Persistent Connections'
 wordpress_id: 1263
-categories:
-- Interoperability
-- Linux
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

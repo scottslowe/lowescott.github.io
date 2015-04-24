@@ -6,9 +6,7 @@ layout: post
 slug: automating-open-vswitch-configuration-with-puppet
 title: Automating Open vSwitch Configuration with Puppet
 wordpress_id: 3100
-categories:
-- Linux
-- Networking
+categories: Tutorial
 tags:
 - Automation
 - Linux

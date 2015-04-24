@@ -6,8 +6,7 @@ layout: post
 slug: linux-wi-fi
 title: Linux Wi-Fi
 wordpress_id: 245
-categories:
-- Linux
+categories: News
 tags:
 - Linux
 - Networking

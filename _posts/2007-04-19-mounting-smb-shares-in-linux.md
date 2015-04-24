@@ -6,10 +6,9 @@ layout: post
 slug: mounting-smb-shares-in-linux
 title: Mounting SMB Shares in Linux
 wordpress_id: 443
-categories:
-- Interoperability
-- Linux
+categories: Information
 tags:
+- Interoperability
 - Linux
 - Networking
 - Samba

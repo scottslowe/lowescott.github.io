@@ -6,8 +6,7 @@ layout: post
 slug: modifying-virtual-user-resources-in-puppet
 title: Modifying Virtual User Resources in Puppet
 wordpress_id: 3093
-categories:
-- Linux
+categories: Explanation
 tags:
 - Automation
 - Linux

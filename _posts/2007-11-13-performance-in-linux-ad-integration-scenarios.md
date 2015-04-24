@@ -6,9 +6,7 @@ layout: post
 slug: performance-in-linux-ad-integration-scenarios
 title: Performance in Linux-AD Integration Scenarios
 wordpress_id: 575
-categories:
-- Interoperability
-- Linux
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

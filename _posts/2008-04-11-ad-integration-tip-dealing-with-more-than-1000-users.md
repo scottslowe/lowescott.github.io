@@ -6,10 +6,7 @@ layout: post
 slug: ad-integration-tip-dealing-with-more-than-1000-users
 title: 'AD Integration Tip: Dealing With More Than 1,000 Users'
 wordpress_id: 681
-categories:
-- Interoperability
-- Linux
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

@@ -6,8 +6,7 @@ layout: post
 slug: using-puppet-for-account-management
 title: Using Puppet for Account Management
 wordpress_id: 2955
-categories:
-- Linux
+categories: Tutorial
 tags:
 - Automation
 - Linux

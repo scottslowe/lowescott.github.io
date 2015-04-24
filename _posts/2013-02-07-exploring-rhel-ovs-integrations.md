@@ -6,9 +6,7 @@ layout: post
 slug: exploring-rhel-ovs-integrations
 title: Exploring RHEL-OVS Integrations
 wordpress_id: 3088
-categories:
-- Linux
-- Networking
+categories: Explanation
 tags:
 - Linux
 - Networking

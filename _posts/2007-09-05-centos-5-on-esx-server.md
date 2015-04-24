@@ -6,9 +6,7 @@ layout: post
 slug: centos-5-on-esx-server
 title: CentOS 5 on ESX Server
 wordpress_id: 519
-categories:
-- Linux
-- Virtualization
+categories: Information
 tags:
 - CentOS
 - ESX
