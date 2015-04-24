@@ -6,15 +6,13 @@ layout: post
 slug: reducing-the-friction-training-a-spam-filter
 title: 'Reducing the Friction: Training a Spam Filter'
 wordpress_id: 3391
-categories:
-- General
-- Macintosh
-- Personal
+categories: Explanation
 tags:
 - Automation
 - Macintosh
 - Personal
 - Productivity
+- Messaging
 ---
 
 I'm back with another "Reducing the Friction" blog post, this time to talk about training an e-mail spam filter. As you may recall if you read one of the earlier posts (may I suggest [this one][1] and [this one][2]?), I use the phrase "reducing the friction" to talk about streamlining and simplifying commonly-performed tasks so as to allow you to improve your own personal efficiency and/or adopt more efficient habits or workflows.

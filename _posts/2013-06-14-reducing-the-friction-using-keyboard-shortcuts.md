@@ -6,10 +6,7 @@ layout: post
 slug: reducing-the-friction-using-keyboard-shortcuts
 title: 'Reducing the Friction: Using Keyboard Shortcuts'
 wordpress_id: 3215
-categories:
-- General
-- Macintosh
-- Personal
+categories: Explanation
 tags:
 - Automation
 - Macintosh

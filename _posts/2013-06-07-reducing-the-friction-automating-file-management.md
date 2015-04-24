@@ -6,10 +6,7 @@ layout: post
 slug: reducing-the-friction-automating-file-management
 title: 'Reducing the Friction: Automating File Management'
 wordpress_id: 3206
-categories:
-- General
-- Macintosh
-- Personal
+categories: Explanation
 tags:
 - Macintosh
 - Productivity

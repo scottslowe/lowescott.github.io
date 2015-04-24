@@ -6,10 +6,7 @@ layout: post
 slug: reducing-the-friction-processing-e-mail
 title: 'Reducing the Friction: Processing E-Mail'
 wordpress_id: 3217
-categories:
-- General
-- Macintosh
-- Personal
+categories: Explanation
 tags:
 - Automation
 - Macintosh

@@ -6,15 +6,13 @@ layout: post
 slug: reducing-the-friction-processing-e-mail-part-2
 title: 'Reducing the Friction: Processing E-Mail, Part 2'
 wordpress_id: 3225
-categories:
-- General
-- Macintosh
-- Personal
+categories: Explanation
 tags:
 - Automation
 - Macintosh
 - Personal
 - Productivity
+- Messaging
 ---
 
 A few weeks ago I published a Reducing the Friction blog post centered on helping to [streamline the tasks involved in processing e-mail][1]. (Recall that there is a distinction between _managing_ e-mail and _processing_ e-mail.) In this Reducing the Friction post, I'd like to revisit the idea of processing e-mail with a slightly different take: using text expanders to streamline composing and replying to e-mail messages.

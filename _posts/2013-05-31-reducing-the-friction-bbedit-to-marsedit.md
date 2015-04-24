@@ -6,10 +6,7 @@ layout: post
 slug: reducing-the-friction-bbedit-to-marsedit
 title: 'Reducing the Friction: BBEdit to MarsEdit'
 wordpress_id: 3199
-categories:
-- General
-- Macintosh
-- Personal
+categories: Explanation
 tags:
 - Blogging
 - Macintosh
