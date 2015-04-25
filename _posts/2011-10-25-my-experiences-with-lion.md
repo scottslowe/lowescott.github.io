@@ -6,8 +6,7 @@ layout: post
 slug: my-experiences-with-lion
 title: My Experiences with Lion
 wordpress_id: 2450
-categories:
-- Macintosh
+categories: Review
 tags:
 - Macintosh
 ---

@@ -6,8 +6,7 @@ layout: post
 slug: making-backup-dvd-copies
 title: Making Backup DVD Copies
 wordpress_id: 123
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Entertainment
 - Macintosh

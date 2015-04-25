@@ -6,8 +6,7 @@ layout: post
 slug: yamb-yet-another-mac-browser
 title: YAMB (Yet Another Mac Browser)
 wordpress_id: 33
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - OSS

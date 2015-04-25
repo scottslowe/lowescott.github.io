@@ -6,8 +6,7 @@ layout: post
 slug: modifying-caminos-exceptions-list-for-cookies
 title: Modifying Camino's Exceptions List for Cookies
 wordpress_id: 48
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 - Web

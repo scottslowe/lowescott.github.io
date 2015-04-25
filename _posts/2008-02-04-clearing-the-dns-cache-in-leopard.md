@@ -6,9 +6,7 @@ layout: post
 slug: clearing-the-dns-cache-in-leopard
 title: Clearing the DNS Cache in Leopard
 wordpress_id: 622
-categories:
-- Macintosh
-- Networking
+categories: Tutorial
 tags:
 - Macintosh
 - Networking

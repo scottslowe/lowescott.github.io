@@ -6,8 +6,7 @@ layout: post
 slug: apple-on-intel
 title: Apple on Intel
 wordpress_id: 11
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Apple
 - Hardware

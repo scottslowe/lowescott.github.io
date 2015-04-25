@@ -6,8 +6,7 @@ layout: post
 slug: mac-users-must-be-careful-too
 title: Mac Users Must Be Careful Too
 wordpress_id: 190
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Macintosh
 - Security

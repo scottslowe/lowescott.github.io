@@ -6,8 +6,7 @@ layout: post
 slug: killing-ads-in-rss-feeds-in-netnewswire
 title: Killing Ads in RSS Feeds in NetNewsWire
 wordpress_id: 491
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 - Web

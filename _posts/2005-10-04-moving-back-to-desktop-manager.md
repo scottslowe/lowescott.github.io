@@ -6,8 +6,7 @@ layout: post
 slug: moving-back-to-desktop-manager
 title: Moving Back to Desktop Manager
 wordpress_id: 99
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - OSS

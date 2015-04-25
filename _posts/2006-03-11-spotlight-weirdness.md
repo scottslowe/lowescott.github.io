@@ -6,8 +6,7 @@ layout: post
 slug: spotlight-weirdness
 title: Spotlight Weirdness
 wordpress_id: 197
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - OSS

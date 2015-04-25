@@ -6,8 +6,7 @@ layout: post
 slug: a-good-launcher
 title: A Good Launcher
 wordpress_id: 152
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - OSS

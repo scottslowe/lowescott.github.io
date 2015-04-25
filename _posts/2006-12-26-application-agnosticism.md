@@ -6,9 +6,7 @@ layout: post
 slug: application-agnosticism
 title: Application Agnosticism
 wordpress_id: 391
-categories:
-- Macintosh
-- Virtualization
+categories: Musing
 tags:
 - Apple
 - Macintosh

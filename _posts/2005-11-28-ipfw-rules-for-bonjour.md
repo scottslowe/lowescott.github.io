@@ -6,8 +6,7 @@ layout: post
 slug: ipfw-rules-for-bonjour
 title: ipfw Rules for Bonjour
 wordpress_id: 124
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 - Networking

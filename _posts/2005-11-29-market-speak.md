@@ -6,8 +6,7 @@ layout: post
 slug: market-speak
 title: Market-speak
 wordpress_id: 129
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 ---

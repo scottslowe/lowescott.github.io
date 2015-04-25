@@ -6,8 +6,7 @@ layout: post
 slug: stupid-tricks-with-the-mac-os-x-firewall
 title: Stupid Tricks With The Mac OS X Firewall
 wordpress_id: 37
-categories:
-- Macintosh
+categories: Rant
 tags:
 - BSD
 - Macintosh

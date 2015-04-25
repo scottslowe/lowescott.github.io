@@ -6,8 +6,7 @@ layout: post
 slug: application-updates
 title: Application Updates
 wordpress_id: 170
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 - OSS

@@ -6,8 +6,7 @@ layout: post
 slug: preferred-mac-os-x-applications
 title: Preferred Mac OS X Applications
 wordpress_id: 16
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - OSS

@@ -6,9 +6,7 @@ layout: post
 slug: apple-and-virtualization
 title: Apple and Virtualization
 wordpress_id: 176
-categories:
-- Macintosh
-- Virtualization
+categories: Musing
 tags:
 - Apple
 - Macintosh

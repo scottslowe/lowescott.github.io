@@ -6,8 +6,7 @@ layout: post
 slug: macbook-pro-unveiled
 title: MacBook Pro Unveiled
 wordpress_id: 154
-categories:
-- Macintosh
+categories: News
 tags:
 - Apple
 - Hardware

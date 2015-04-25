@@ -6,8 +6,7 @@ layout: post
 slug: open-source-on-mac-os-x
 title: Open Source on Mac OS X
 wordpress_id: 100
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - OSS

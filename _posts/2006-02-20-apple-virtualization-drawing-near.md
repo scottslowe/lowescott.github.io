@@ -6,9 +6,7 @@ layout: post
 slug: apple-virtualization-drawing-near
 title: Apple Virtualization Drawing Near
 wordpress_id: 186
-categories:
-- Macintosh
-- Virtualization
+categories: News
 tags:
 - Apple
 - OSS

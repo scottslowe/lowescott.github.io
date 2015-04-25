@@ -6,9 +6,7 @@ layout: post
 slug: vmware-fusion-first-impressions
 title: VMware Fusion First Impressions
 wordpress_id: 353
-categories:
-- Macintosh
-- Virtualization
+categories: Review
 tags:
 - Apple
 - Fusion

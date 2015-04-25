@@ -6,8 +6,7 @@ layout: post
 slug: a-new-life-for-virtue
 title: A New Life for Virtue
 wordpress_id: 196
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - OSS

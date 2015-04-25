@@ -6,9 +6,7 @@ layout: post
 slug: changing-rdp-settings-in-vmware-view-open-client-for-mac
 title: Changing RDP Settings in VMware View Open Client for Mac
 wordpress_id: 2007
-categories:
-- Macintosh
-- Virtualization
+categories: Tutorial
 tags:
 - Macintosh
 - VDI

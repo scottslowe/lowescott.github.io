@@ -6,8 +6,7 @@ layout: post
 slug: bonjour-the-technology-not-the-greeting
 title: Bonjour (The Technology, Not the Greeting)
 wordpress_id: 44
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - Networking

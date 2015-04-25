@@ -6,9 +6,7 @@ layout: post
 slug: mac-os-security-flaw-persists
 title: Mac OS Security Flaw Persists
 wordpress_id: 195
-categories:
-- Macintosh
-- Security
+categories: Information
 tags:
 - Apple
 - Macintosh

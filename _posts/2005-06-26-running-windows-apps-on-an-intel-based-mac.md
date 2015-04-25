@@ -6,8 +6,7 @@ layout: post
 slug: running-windows-apps-on-an-intel-based-mac
 title: Running Windows Apps on an Intel-Based Mac
 wordpress_id: 24
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 - Virtualization

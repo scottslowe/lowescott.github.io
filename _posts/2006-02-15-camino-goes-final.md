@@ -6,8 +6,7 @@ layout: post
 slug: camino-goes-final
 title: Camino Goes Final
 wordpress_id: 179
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 - OSS

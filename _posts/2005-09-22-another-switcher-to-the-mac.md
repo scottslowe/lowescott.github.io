@@ -6,7 +6,8 @@ layout: post
 slug: another-switcher-to-the-mac
 title: Another Switcher to the Mac
 wordpress_id: 91
-categories:
+categories: Information
+tags:
 - Macintosh
 ---
 

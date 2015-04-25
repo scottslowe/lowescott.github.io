@@ -6,8 +6,7 @@ layout: post
 slug: caminos-latest-iteration
 title: Camino's Latest Iteration
 wordpress_id: 43
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - Web

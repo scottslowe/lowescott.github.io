@@ -6,8 +6,7 @@ layout: post
 slug: delicious-client
 title: del.icio.us Client
 wordpress_id: 12
-categories:
-- Macintosh
+categories: Information
 tags:
 - Blogging
 - Macintosh

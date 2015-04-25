@@ -6,8 +6,7 @@ layout: post
 slug: why-i-use-a-mac
 title: Why I Use a Mac
 wordpress_id: 17
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Apache
 - Linux

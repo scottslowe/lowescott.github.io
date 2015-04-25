@@ -6,8 +6,7 @@ layout: post
 slug: virtual-desktops-on-mac-os-x
 title: Virtual Desktops on Mac OS X
 wordpress_id: 96
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - OSS
