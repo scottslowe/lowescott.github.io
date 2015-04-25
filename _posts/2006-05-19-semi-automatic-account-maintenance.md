@@ -6,8 +6,7 @@ layout: post
 slug: semi-automatic-account-maintenance
 title: Semi-Automatic Account Maintenance
 wordpress_id: 254
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Microsoft

@@ -6,8 +6,7 @@ layout: post
 slug: bulk-adding-entries-in-dns
 title: Bulk Adding Entries in DNS
 wordpress_id: 286
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - Microsoft
 - Windows

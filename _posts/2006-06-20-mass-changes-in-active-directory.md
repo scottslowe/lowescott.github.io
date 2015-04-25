@@ -6,8 +6,7 @@ layout: post
 slug: mass-changes-in-active-directory
 title: Mass Changes in Active Directory
 wordpress_id: 272
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - ActiveDirectory
 - LDAP

@@ -6,8 +6,7 @@ layout: post
 slug: mass-password-changes-in-ad-revisited
 title: Mass Password Changes in AD Revisited
 wordpress_id: 250
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Microsoft

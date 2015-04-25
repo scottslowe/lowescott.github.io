@@ -6,8 +6,7 @@ layout: post
 slug: mass-changes-in-active-directory-take-2
 title: Mass Changes in Active Directory, Take 2
 wordpress_id: 307
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Microsoft

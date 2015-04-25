@@ -6,8 +6,7 @@ layout: post
 slug: featureor-flaw
 title: Feature....or Flaw?
 wordpress_id: 547
-categories:
-- Microsoft
+categories: Rant
 tags:
 - Microsoft
 - Security

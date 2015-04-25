@@ -6,9 +6,9 @@ layout: post
 slug: mass-creating-exchange-mailboxes
 title: Mass-Creating Exchange Mailboxes
 wordpress_id: 269
-categories:
-- Microsoft
+categories: Tutorial
 tags:
+- Microsoft
 - ActiveDirectory
 - Exchange
 ---

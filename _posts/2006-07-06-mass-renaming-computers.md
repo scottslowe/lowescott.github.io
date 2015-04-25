@@ -6,8 +6,7 @@ layout: post
 slug: mass-renaming-computers
 title: Mass Renaming Computers
 wordpress_id: 292
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Microsoft

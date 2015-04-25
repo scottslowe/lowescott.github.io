@@ -6,8 +6,7 @@ layout: post
 slug: automating-static-entries-in-wins
 title: Automating Static Entries in WINS
 wordpress_id: 283
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - Microsoft
 - Networking

@@ -6,8 +6,7 @@ layout: post
 slug: semi-automatic-security-groups
 title: Semi-Automatic Security Groups
 wordpress_id: 253
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - ActiveDirectory
 - LDAP
