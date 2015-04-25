@@ -6,8 +6,7 @@ layout: post
 slug: linux-ad-integration-with-windows-server-2008
 title: Linux-AD Integration with Windows Server 2008
 wordpress_id: 487
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - CentOS

@@ -6,8 +6,7 @@ layout: post
 slug: sled-integration-into-active-directory
 title: SLED Integration into Active Directory
 wordpress_id: 432
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Interoperability

@@ -6,8 +6,7 @@ layout: post
 slug: using-vplex-and-data-replication-together
 title: Using VPLEX and Data Replication Together
 wordpress_id: 2188
-categories:
-- Storage
+categories: Explanation
 tags:
 - EMC
 - Storage

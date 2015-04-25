@@ -6,9 +6,7 @@ layout: post
 slug: vplex-webcast
 title: VPLEX Webcast
 wordpress_id: 2009
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - EMC
 - Storage

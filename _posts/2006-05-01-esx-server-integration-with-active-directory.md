@@ -6,14 +6,14 @@ layout: post
 slug: esx-server-integration-with-active-directory
 title: ESX Server Integration with Active Directory
 wordpress_id: 238
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - ESX
 - Kerberos
 - VMware
 - Windows
+- Interoperability
 ---
 
 Having successfully mapped out the steps for Linux/Unix-based hosts to authenticate against Active Directory on Windows Server 2003 R2 (get the [complete details][1]), I now turned my sights toward integrating authentication on [ESX Server](http://www.vmware.com/products/esx/) 2.5.3 with Active Directory as well.

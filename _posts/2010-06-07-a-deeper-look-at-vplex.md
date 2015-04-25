@@ -6,9 +6,7 @@ layout: post
 slug: a-deeper-look-at-vplex
 title: A Deeper Look at VPLEX
 wordpress_id: 1968
-categories:
-- Storage
-- Virtualization
+categories: Education
 tags:
 - EMC
 - Storage

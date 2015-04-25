@@ -6,10 +6,7 @@ layout: post
 slug: distance-vmotion-stretched-cluster
 title: Distance vMotion = Stretched Cluster?
 wordpress_id: 2305
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - Networking
 - Storage

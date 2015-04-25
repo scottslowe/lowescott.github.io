@@ -6,8 +6,7 @@ layout: post
 slug: ldap-based-access-control
 title: LDAP-Based Access Control
 wordpress_id: 331
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - CentOS

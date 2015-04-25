@@ -6,9 +6,7 @@ layout: post
 slug: lacp-with-cisco-switches-and-netapp-vifs
 title: LACP with Cisco Switches and NetApp VIFs
 wordpress_id: 602
-categories:
-- Interoperability
-- Networking
+categories: Tutorial
 tags:
 - Cisco
 - Interoperability

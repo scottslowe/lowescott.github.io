@@ -6,9 +6,7 @@ layout: post
 slug: looking-again-at-vasa
 title: Looking Again at VASA
 wordpress_id: 2373
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - Storage
 - Virtualization

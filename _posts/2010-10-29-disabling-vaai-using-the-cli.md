@@ -6,9 +6,7 @@ layout: post
 slug: disabling-vaai-using-the-cli
 title: Disabling VAAI Using the CLI
 wordpress_id: 2147
-categories:
-- Storage
-- Virtualization
+categories: Tutorial
 tags:
 - CLI
 - Interoperability

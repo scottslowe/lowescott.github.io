@@ -6,9 +6,7 @@ layout: post
 slug: fate-free-will-virtualization-and-storage
 title: Fate, Free Will, Virtualization, and Storage
 wordpress_id: 2452
-categories:
-- Storage
-- Virtualization
+categories: Musing
 tags:
 - EMC
 - Storage

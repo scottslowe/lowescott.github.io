@@ -6,10 +6,7 @@ layout: post
 slug: updated-stretched-cluster-presentation
 title: Updated Stretched Cluster Presentation
 wordpress_id: 2440
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Networking
 - Storage

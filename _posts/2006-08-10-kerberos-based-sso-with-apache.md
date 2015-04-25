@@ -6,8 +6,7 @@ layout: post
 slug: kerberos-based-sso-with-apache
 title: Kerberos-Based SSO with Apache
 wordpress_id: 316
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Apache

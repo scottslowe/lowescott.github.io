@@ -6,10 +6,7 @@ layout: post
 slug: stretched-clustering-presentation
 title: Stretched Clustering Presentation
 wordpress_id: 2293
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Networking
 - Storage

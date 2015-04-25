@@ -6,9 +6,7 @@ layout: post
 slug: a-deeper-look-at-vasa
 title: A Deeper Look at VASA
 wordpress_id: 2368
-categories:
-- Storage
-- Virtualization
+categories: Education
 tags:
 - Storage
 - Virtualization

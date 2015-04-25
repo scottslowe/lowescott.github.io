@@ -6,9 +6,7 @@ layout: post
 slug: cisco-link-aggregation-and-netapp-vifs
 title: Cisco Link Aggregation and NetApp VIFs
 wordpress_id: 471
-categories:
-- Interoperability
-- Networking
+categories: Tutorial
 tags:
 - Cisco
 - Interoperability

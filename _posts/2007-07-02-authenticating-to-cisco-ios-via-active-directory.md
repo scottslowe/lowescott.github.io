@@ -6,9 +6,7 @@ layout: post
 slug: authenticating-to-cisco-ios-via-active-directory
 title: Authenticating to Cisco IOS via Active Directory
 wordpress_id: 482
-categories:
-- Interoperability
-- Networking
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Cisco

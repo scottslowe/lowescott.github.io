@@ -6,8 +6,7 @@ layout: post
 slug: greater-ad-integration-via-nfs-and-automounts
 title: Greater AD Integration via NFS and Automounts
 wordpress_id: 367
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - CentOS

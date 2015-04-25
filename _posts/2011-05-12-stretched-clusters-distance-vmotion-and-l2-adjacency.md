@@ -6,11 +6,9 @@ layout: post
 slug: stretched-clusters-distance-vmotion-and-l2-adjacency
 title: Stretched Clusters, Distance vMotion and L2 Adjacency
 wordpress_id: 2295
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Explanation
 tags:
+- Networking
 - EMC
 - Storage
 - Virtualization

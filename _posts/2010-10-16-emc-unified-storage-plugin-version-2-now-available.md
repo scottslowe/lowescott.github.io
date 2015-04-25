@@ -6,9 +6,7 @@ layout: post
 slug: emc-unified-storage-plugin-version-2-now-available
 title: EMC Unified Storage Plugin Version 2 Now Available
 wordpress_id: 2133
-categories:
-- Storage
-- Virtualization
+categories: News
 tags:
 - EMC
 - Storage

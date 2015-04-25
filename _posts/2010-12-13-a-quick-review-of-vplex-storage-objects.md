@@ -6,9 +6,7 @@ layout: post
 slug: a-quick-review-of-vplex-storage-objects
 title: A Quick Review of VPLEX Storage Objects
 wordpress_id: 2175
-categories:
-- Storage
-- Virtualization
+categories: Education
 tags:
 - EMC
 - SAN
