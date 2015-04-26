@@ -6,9 +6,7 @@ layout: post
 slug: openssh-with-kerberos-and-active-directory
 title: OpenSSH with Kerberos and Active Directory
 wordpress_id: 771
-categories:
-- Interoperability
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

@@ -6,9 +6,7 @@ layout: post
 slug: finding-unix-enabled-accounts-in-active-directory-mmc
 title: Finding UNIX-Enabled Accounts in Active Directory MMC
 wordpress_id: 744
-categories:
-- Interoperability
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

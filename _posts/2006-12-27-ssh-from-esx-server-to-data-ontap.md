@@ -6,8 +6,7 @@ layout: post
 slug: ssh-from-esx-server-to-data-ontap
 title: SSH from ESX Server to Data ONTAP
 wordpress_id: 392
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ESX
 - Interoperability

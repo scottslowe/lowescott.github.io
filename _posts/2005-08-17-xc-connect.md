@@ -6,7 +6,9 @@ layout: post
 slug: xc-connect
 title: XC Connect
 wordpress_id: 77
-categories:
+categories: Information
+tags:
+- Macintosh
 - Interoperability
 ---
 

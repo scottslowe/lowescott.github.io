@@ -6,11 +6,11 @@ layout: post
 slug: follow-up-on-esx-server-integration
 title: Follow Up on ESX Server Integration
 wordpress_id: 251
-categories:
-- Interoperability
+categories: Explanation
 tags:
 - ActiveDirectory
 - ESX
+- Interoperability
 - Kerberos
 - Linux
 - Microsoft

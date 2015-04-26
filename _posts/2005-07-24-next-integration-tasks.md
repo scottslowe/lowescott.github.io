@@ -6,13 +6,13 @@ layout: post
 slug: next-integration-tasks
 title: Next Integration Task(s)
 wordpress_id: 57
-categories:
-- Interoperability
+categories: Information
 tags:
 - Apache
 - Cisco
 - Kerberos
 - Microsoft
+- Interoperability
 ---
 
 With the majority of my Linux servers now authenticating against Active Directory, I'm now able to broaden my integration focus and work on some related tasks:

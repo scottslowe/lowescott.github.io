@@ -6,8 +6,7 @@ layout: post
 slug: mac-os-x-and-local-domains
 title: Mac OS X and .local Domains
 wordpress_id: 150
-categories:
-- Interoperability
+categories: Explanation
 tags:
 - ActiveDirectory
 - Apple
@@ -16,6 +15,7 @@ tags:
 - Microsoft
 - Networking
 - Windows
+- Interoperability
 ---
 
 Some time ago, [Mac OS X Hints](http://www.macosxhints.com/) published a hint I submitted regarding the [use of the `.local` TLD](http://www.macosxhints.com/article.php?story=20040806232315819) (top level domain) with Mac OS X. Specifically, the hint centered around the use of Mac OS X with Active Directory domains using the `.local` TLD. For ease of access, here's that same hint.

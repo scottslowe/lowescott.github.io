@@ -6,14 +6,14 @@ layout: post
 slug: ipsec-mac-os-x-and-windows-server-2003
 title: IPSec, Mac OS X, and Windows Server 2003
 wordpress_id: 66
-categories:
-- Interoperability
-- Networking
+categories: Information
 tags:
 - IPSec
 - Windows
 - Macintosh
 - Encryption
+- Interoperability
+- Networking
 ---
 
 For quite some time now, a minor task I've been experimenting with is establishing transport mode IPSec security associations between [Mac OS X](http://www.apple.com/macosx/) and [Windows Server 2003](http://www.microsoft.com/windowsserver2003/default.mspx). I've been using a freeware IPSec client called [IPSecuritas](http://www.lobotomo.com/products/IPSecuritas/). Up until just a few days ago, I could never get anything to work. After working on getting a PPTP-based VPN working from my [PowerBook](http://www.apple.com/powerbook/), I realized that just as I had to modify my ipfw rules (using BrickHouse) to allow the PPTP traffic, I'd have to modify the rules to allow IPSec traffic as well. Duh!

@@ -6,8 +6,7 @@ layout: post
 slug: apache-as-an-owa-front-end
 title: Apache as an OWA Front-End
 wordpress_id: 277
-categories:
-- Interoperability
+categories: Explanation
 tags:
 - Apache
 - Exchange

@@ -6,9 +6,7 @@ layout: post
 slug: event-logging-in-ad-integration-scenarios
 title: Event Logging in AD Integration Scenarios
 wordpress_id: 348
-categories:
-- Interoperability
-- Security
+categories: Information
 tags:
 - ActiveDirectory
 - CentOS

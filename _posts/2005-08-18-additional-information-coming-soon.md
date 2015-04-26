@@ -6,7 +6,11 @@ layout: post
 slug: additional-information-coming-soon
 title: Additional Information Coming Soon
 wordpress_id: 80
-categories:
+categories: General
+tags:
+- Microsoft
+- Linux
+- CentOS
 - Interoperability
 ---
 

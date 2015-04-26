@@ -6,8 +6,7 @@ layout: post
 slug: one-potential-issue-in-ad-integration-scenarios
 title: One Potential Issue in AD Integration Scenarios
 wordpress_id: 546
-categories:
-- Interoperability
+categories: Explanation
 tags:
 - ActiveDirectory
 - Interoperability
@@ -21,10 +20,8 @@ tags:
 
 Regular readers of this blog know that I like to work on integrating various systems into Active Directory. I've written a couple of articles on the issue:
 
-[Linux-AD Integration, Version 4][1]
-
-[Solaris 10-AD Integration, Version 3][2]
-
+[Linux-AD Integration, Version 4][1]  
+[Solaris 10-AD Integration, Version 3][2]  
 [Active Directory Integration Index][3]
 
 These articles have been pretty successful and from what I understand have helped a fair number of people integrate their non-Windows systems into Active Directory for simplified user management and authentication. Occasionally, though, we run into the odd issue that isn't quite so straightforward to resolve.

@@ -6,12 +6,13 @@ layout: post
 slug: examining-the-needs-of-a-policy-solution
 title: Examining the Needs of a Policy Solution
 wordpress_id: 3468
-categories:
-- Interoperability
+categories: Information
 tags:
+- Cloud
 - Interoperability
 - OpenStack
 - OSS
+- Policy
 ---
 
 In April of this year, we started a series of articles at [Network Heresy](http://networkheresy.com) on the topic of policy in the data center. The first of these articles, which I mentioned [in this post][1], focused on the problem of policy in the data center. This was a great introduction to the need for policy and the challenges with the current ways of addressing policy in the data center.

@@ -6,11 +6,10 @@ layout: post
 slug: iscsi-boot-with-microsoft-mpio
 title: iSCSI Boot with Microsoft MPIO
 wordpress_id: 465
-categories:
-- Interoperability
-- Storage
+categories: Explanation
 tags:
 - iSCSI
+- Interoperability
 - NetApp
 - Networking
 - Storage

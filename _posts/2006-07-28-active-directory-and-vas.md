@@ -6,8 +6,7 @@ layout: post
 slug: active-directory-and-vas
 title: Active Directory and VAS
 wordpress_id: 308
-categories:
-- Interoperability
+categories: Explanation
 tags:
 - ActiveDirectory
 - Interoperability

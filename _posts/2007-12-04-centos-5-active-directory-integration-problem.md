@@ -6,11 +6,11 @@ layout: post
 slug: centos-5-active-directory-integration-problem
 title: CentOS 5 Active Directory Integration Problem
 wordpress_id: 587
-categories:
-- Interoperability
+categories: Information
 tags:
 - ActiveDirectory
 - CentOS
+- Interoperability
 - Kerberos
 - Samba
 ---

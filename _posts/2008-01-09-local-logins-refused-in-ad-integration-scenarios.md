@@ -6,9 +6,7 @@ layout: post
 slug: local-logins-refused-in-ad-integration-scenarios
 title: Local Logins Refused in AD Integration Scenarios
 wordpress_id: 603
-categories:
-- Interoperability
-- Virtualization
+categories: Explanation
 tags:
 - ActiveDirectory
 - ESX

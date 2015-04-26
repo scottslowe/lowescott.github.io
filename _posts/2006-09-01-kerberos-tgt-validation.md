@@ -6,8 +6,7 @@ layout: post
 slug: kerberos-tgt-validation
 title: Kerberos TGT Validation
 wordpress_id: 329
-categories:
-- Interoperability
+categories: Explanation
 tags:
 - ActiveDirectory
 - CentOS

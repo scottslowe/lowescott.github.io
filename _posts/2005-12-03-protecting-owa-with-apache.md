@@ -6,8 +6,7 @@ layout: post
 slug: protecting-owa-with-apache
 title: Protecting OWA with Apache
 wordpress_id: 134
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Apache
 - Exchange

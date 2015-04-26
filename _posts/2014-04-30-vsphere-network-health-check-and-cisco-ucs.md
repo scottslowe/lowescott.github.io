@@ -6,10 +6,7 @@ layout: post
 slug: vsphere-network-health-check-and-cisco-ucs
 title: vSphere Network Health Check and Cisco UCS
 wordpress_id: 3444
-categories:
-- Interoperability
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - Interoperability

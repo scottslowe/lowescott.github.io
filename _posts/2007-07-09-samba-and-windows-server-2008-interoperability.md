@@ -6,9 +6,9 @@ layout: post
 slug: samba-and-windows-server-2008-interoperability
 title: Samba and Windows Server 2008 Interoperability
 wordpress_id: 485
-categories:
-- Interoperability
+categories: Information
 tags:
+- Interoperability
 - Kerberos
 - Samba
 - Windows
@@ -16,9 +16,8 @@ tags:
 
 [Samba](http://www.samba.org/), as I'm sure you already know, is an open source implementation of SMB/CIFS for UNIX, Linux, and similar operating systems. I've found Samba to be extremely helpful in providing some assistance for integration into Active Directory, as evidenced by these articles:
 
-* [Solaris 10-AD Integration, Version 3][1]
-
-* [Linux-AD Integration, Version 4][2]
+[Solaris 10-AD Integration, Version 3][1]  
+[Linux-AD Integration, Version 4][2]
 
 Both of these articles utilize Samba's Active Directory support to help automate the process of joining non-Windows systems to Active Directory for the purpose of authenticating logon requests against Active Directory.
 

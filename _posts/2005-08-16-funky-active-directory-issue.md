@@ -6,13 +6,13 @@ layout: post
 slug: funky-active-directory-issue
 title: Funky Active Directory Issue
 wordpress_id: 78
-categories:
-- Interoperability
-- Microsoft
+categories: Explanation
 tags:
 - ActiveDirectory
 - Microsoft
 - Windows
+- Interoperability
+- Security
 ---
 
 I came across a funky Active Directory issue today. User objects stored in an OU on which permissions had been assigned were "losing" their permissions and their inheritance from the parent OU. For example, if the group "Support Team" had been granted a set of permissions on the OU "Sales", then the user object "Bob Jones" stored in that OU would lose those permissions regularly. Even when the permissions were reassigned, they would disappear again.

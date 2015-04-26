@@ -6,8 +6,7 @@ layout: post
 slug: using-samba-in-linux-ad-integration
 title: Using Samba in Linux-AD Integration
 wordpress_id: 389
-categories:
-- Interoperability
+categories: Tutorial
 tags:
 - ActiveDirectory
 - CentOS
@@ -20,7 +19,7 @@ tags:
 
 Suggestions to use [Samba](http://www.samba.org/) in Linux-AD integration scenarios appeared in the comments for the following articles:
 
-[Linux, Active Directory, and Windows Server 2003 R2 Revisited][1]
+[Linux, Active Directory, and Windows Server 2003 R2 Revisited][1]  
 [Kerberos-Based SSO with Apache][2]
 
 The idea was that Samba could be used to help automate the process of creating the appropriate service principals in Active Directory. Previously, I had recommended the use of `ktpass.exe` and separate user accounts for each service principal (i.e., HOST/ or host/, HTTP/, etc.) because of the limitations of `ktpass.exe` and adding service principals in Active Directory. However, a number of readers pointed out that Samba's `net ads join` and `net ads keytab` commands could help automate and streamline this process.

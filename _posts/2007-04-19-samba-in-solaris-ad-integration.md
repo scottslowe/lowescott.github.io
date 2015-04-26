@@ -6,8 +6,7 @@ layout: post
 slug: samba-in-solaris-ad-integration
 title: Samba in Solaris-AD Integration
 wordpress_id: 444
-categories:
-- Interoperability
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

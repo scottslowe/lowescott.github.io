@@ -6,8 +6,7 @@ layout: post
 slug: old-netware-integration-notes
 title: Old NetWare Integration Notes
 wordpress_id: 663
-categories:
-- Interoperability
+categories: Information
 tags:
 - Interoperability
 - Novell

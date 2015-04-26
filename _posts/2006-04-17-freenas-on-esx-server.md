@@ -6,15 +6,14 @@ layout: post
 slug: freenas-on-esx-server
 title: FreeNAS on ESX Server
 wordpress_id: 225
-categories:
-- Interoperability
-- Virtualization
+categories: Information
 tags:
 - BSD
 - ESX
 - NAS
 - Virtualization
 - VMware
+- Interoperability
 ---
 
 As part of ongoing interoperability testing with [ESX Server](http://www.vmware.com/products/esx/), I tested running [FreeNAS](http://www.freenas.org/) (version 0.65) on ESX Server 2.5.3 today. Since FreeNAS is based on [FreeBSD](http://www.freebsd.org/) (which [VMware](http://www.vmware.com/) states is a supported guest operating system for ESX Server), I didn't really expect any major surprises. I was wrong.

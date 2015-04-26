@@ -6,8 +6,7 @@ layout: post
 slug: more-on-kerberos-authentication-against-active-directory
 title: More on Kerberos Authentication Against Active Directory
 wordpress_id: 324
-categories:
-- Interoperability
+categories: Explanation
 tags:
 - ActiveDirectory
 - Apache
@@ -20,9 +19,9 @@ tags:
 
 I'll break the information down according by the article to which the information pertains. If the information pertains to all the articles equally, it is included in the "All Articles" portion. Links back to the original articles are included.
 
-### All Articles
+## All Articles
 
-#### User Accounts vs. Computer Accounts
+### User Accounts vs. Computer Accounts
 
 One thing in common across all these articles is the need to create special accounts in Active Directory.  I originally recommended the use of computer accounts, but over the course of time additional integration tasks with Kerberos have led me to believe that the user of user accounts, _not_ computer accounts, is the best way to handle this. In a [very early Linux-AD integration article][1], I discussed the use of computer accounts instead of user accounts, and the use of the `ktpass.exe` command to extract a keytab from a computer account. At that time, it seemed reasonable to recommend computer accounts---we were only discussing a single service principal (the host itself), and using a computer account _made sense_.
 
@@ -30,7 +29,7 @@ However, because of the fact that additional accounts will have to be created fo
 
 Finally, the use of user accounts will eliminate some spurious error messages that `ktpass.exe` generates when run against a computer account. Note that these error messages are not substantive; things will still work with a computer account. It's just that `ktpass.exe` appears to have been intended to run against a user account.
 
-#### Updated ktpass.exe Command Line
+### Updated ktpass.exe Command Line
 
 In addition, because of differences in the encryption types supported by Active Directory and many Unix/Linux implementations, I have found that using the "+DesOnly" switch with `ktpass.exe` seems to help.
 
@@ -44,7 +43,7 @@ ktpass.exe -princ host/fqdn@REALM -mapuser DOMAIN\account
 
 Please note that this command, particularly the service principal name (as specified by the "-princ" parameter) is **CASE SENSITIVE.** For example, the host SPN (i.e., "host/fqdn@REALM") that is used by pam\_krb5 and "native" Kerberos/GSSAPI authentication is lowercase. However, the HTTP SPN (used by mod\_auth\_kerb with Apache) needs to be _uppercase._ In both cases, the Kerberos realm (which should be equivalent to the Active Directory DNS domain name) must be in uppercase.
 
-### Linux-AD Integration (Pre-R2)
+## Linux-AD Integration (Pre-R2)
 
 The original article is found [here][3].
 
@@ -65,7 +64,7 @@ Speaking of indexing, if the pam\_login\_attribute is not modified (it defaults 
 
 Last, you may find it useful to edit `/etc/ldap.conf` and change the gecos field mapping from name to cn (i.e., use "nss\_map\_attribute gecos cn" instead of "nss\_map\_attribute gecos name").
 
-### Linux-AD Integration (R2)
+## Linux-AD Integration (R2)
 
 The latest version of these instructions are found [posted here][4].
 
@@ -79,11 +78,11 @@ Again, other than the change to a user account instead of a computer account (as
 
 Otherwise, the revised instructions are reasonably accurate and seem to work pretty well.
 
-### Kerberos-Based SSO with Apache
+## Kerberos-Based SSO with Apache
 
 This article is found [here][5], and already incorporates most of the changes mentioned in this posting. No suggested changes are needed at this time.
 
-### Solaris 10 and AD Integration
+## Solaris 10 and AD Integration
 
 This article can be found posted [here][6].
 

@@ -6,13 +6,12 @@ layout: post
 slug: unix-attributes-tab-and-nispropdll
 title: Unix Attributes Tab and nisprop.dll
 wordpress_id: 372
-categories:
-- Interoperability
-- Microsoft
+categories: Explanation
 tags:
 - ActiveDirectory
 - Interoperability
 - Linux
+- Microsoft
 - UNIX
 ---
 

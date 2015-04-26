@@ -6,13 +6,12 @@ layout: post
 slug: using-mac-idisk-with-a-watchguard-firebox
 title: Using .Mac iDisk with a WatchGuard Firebox
 wordpress_id: 139
-categories:
-- Interoperability
-- Networking
+categories: Explanation
 tags:
 - Macintosh
 - Networking
 - Security
+- Interoperability
 ---
 
 One of the strengths of the [WatchGuard](http://www.watchguard.com/) [Firebox](http://www.watchguard.com/products/appliances.asp) series of firewalls is the inclusion of application-layer proxies for protocols such as SMTP, FTP, and HTTP. Whereas ordinary packet filtering firewalls and stateful inspection firewalls only control traffic based on IP address or TCP/UDP port number, application-layer proxies like those included in the Firebox look deeper into the packet to make decisions on information such as URL or MIME content type (for an HTTP proxy, for example).

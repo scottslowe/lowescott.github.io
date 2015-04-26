@@ -6,9 +6,7 @@ layout: post
 slug: details-on-transparent-rdp-tunneling
 title: Details on Transparent RDP Tunneling
 wordpress_id: 185
-categories:
-- Interoperability
-- Networking
+categories: Explanation
 tags:
 - BSD
 - Encryption
@@ -16,6 +14,7 @@ tags:
 - Security
 - SSL
 - Windows
+- Interoperability
 ---
 
 Quite a long time ago, I posted two short articles on transparent RDP tunneling (read more [here][1] and [here][2]). To be honest, I had forgotten that I hadn't posted more complete details on how exactly I went about making it work. So, to rectify that problem, here are the full details.

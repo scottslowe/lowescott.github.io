@@ -6,8 +6,10 @@ layout: post
 slug: gprs-vs-bluetooth
 title: GPRS vs. Bluetooth
 wordpress_id: 89
-categories:
+categories: Rant
+tags:
 - Interoperability
+- Messaging
 ---
 
 As I've continued using my [Treo 650](http://www.palm.com/us/products/smartphones/treo650/), I've run into an apparent conflict between the Treo's GPRS functionality and Bluetooth HotSync support.

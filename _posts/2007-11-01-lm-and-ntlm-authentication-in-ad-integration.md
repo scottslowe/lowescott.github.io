@@ -6,8 +6,7 @@ layout: post
 slug: lm-and-ntlm-authentication-in-ad-integration
 title: LM and NTLM Authentication in AD Integration
 wordpress_id: 568
-categories:
-- Interoperability
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

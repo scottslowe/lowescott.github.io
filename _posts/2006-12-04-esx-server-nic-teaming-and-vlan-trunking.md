@@ -6,10 +6,7 @@ layout: post
 slug: esx-server-nic-teaming-and-vlan-trunking
 title: ESX Server, NIC Teaming, and VLAN Trunking
 wordpress_id: 377
-categories:
-- Interoperability
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - Cisco
 - ESX
