@@ -31,7 +31,7 @@ resources:
 
 Deploying an instance manually from the same image worked perfectly. So what was the deal?
 
-The first thing I learned was that, in some circumstances (more on this in a moment) defaults to injecting SSH keys (like the key named `lab` specified in the template) to a user account named "ec2-user". Ah! I'd been using the default "ubuntu" account specified in the Ubuntu cloud images. As soon as I changed my SSH command to reference "ec2-user" instead of "ubuntu", then I was able to gain access to the instance.
+The first thing I learned was that, in some circumstances (more on this in a moment), Heat defaults to injecting SSH keys (like the key named `lab` specified in the template) to a user account named "ec2-user". Ah! I'd been using the default "ubuntu" account specified in the Ubuntu cloud images. As soon as I changed my SSH command to reference "ec2-user" instead of "ubuntu", then I was able to gain access to the instance.
 
 However, the problem wasn't completely resolved. Although the hostname had been properly customized, the environment wasn't operating as expected. The shell prompt was a simple `$`, not `username@hostname` that you'd typically see. Auto-completion in the bash shell didn't work. Command history didn't work. Clearly something was still off. (Again, these issues did _not_ appear in manually deployed instances based on the exact same image.)
 
