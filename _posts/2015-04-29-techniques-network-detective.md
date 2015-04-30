@@ -3,7 +3,7 @@ author: slowe
 comments: true
 date: 2015-04-29 16:00:00-0800
 layout: post
-title: Techniques of a Network Detective
+title: "Interop Liveblog: Techniques of a Network Detective"
 categories: Liveblog
 tags:
 - Networking
