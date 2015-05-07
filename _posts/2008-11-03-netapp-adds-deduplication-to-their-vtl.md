@@ -6,8 +6,7 @@ layout: post
 slug: netapp-adds-deduplication-to-their-vtl
 title: NetApp Adds Deduplication to Their VTL
 wordpress_id: 1009
-categories:
-- Storage
+categories: News
 tags:
 - NetApp
 - Storage

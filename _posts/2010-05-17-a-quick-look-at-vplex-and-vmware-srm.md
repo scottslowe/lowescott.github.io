@@ -6,9 +6,7 @@ layout: post
 slug: a-quick-look-at-vplex-and-vmware-srm
 title: A Quick Look at VPLEX and VMware SRM
 wordpress_id: 1946
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - EMC
@@ -17,6 +15,7 @@ tags:
 - VMware
 - VMwareSRM
 - VPLEX
+- Storage
 ---
 
 The announcement of VPLEX last week at EMC World 2010 in Boston has introduced lots of new possibilities in how virtualized data centers should be designed and deployed. Of particular interest to a number of people is how VPLEX interacts with VMware Site Recovery Manager (SRM).

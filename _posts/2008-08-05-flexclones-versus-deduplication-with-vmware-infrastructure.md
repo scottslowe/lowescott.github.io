@@ -6,9 +6,7 @@ layout: post
 slug: flexclones-versus-deduplication-with-vmware-infrastructure
 title: FlexClones Versus Deduplication with VMware Infrastructure
 wordpress_id: 786
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - NetApp

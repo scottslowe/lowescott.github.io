@@ -6,9 +6,7 @@ layout: post
 slug: only-thin-provisioned-in-the-beginning
 title: Only Thin Provisioned in the Beginning
 wordpress_id: 670
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - NAS

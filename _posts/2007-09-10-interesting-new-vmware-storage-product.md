@@ -6,9 +6,7 @@ layout: post
 slug: interesting-new-vmware-storage-product
 title: Interesting New VMware Storage Product
 wordpress_id: 529
-categories:
-- Storage
-- Virtualization
+categories: News
 tags:
 - ESX
 - iSCSI

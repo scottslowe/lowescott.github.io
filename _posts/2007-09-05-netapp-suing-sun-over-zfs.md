@@ -6,8 +6,7 @@ layout: post
 slug: netapp-suing-sun-over-zfs
 title: NetApp Suing Sun over ZFS
 wordpress_id: 520
-categories:
-- Storage
+categories: News
 tags:
 - Apple
 - NetApp

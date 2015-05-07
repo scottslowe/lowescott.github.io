@@ -6,8 +6,7 @@ layout: post
 slug: managing-lun-space-requirements-with-netapp-storage
 title: Managing LUN Space Requirements with NetApp Storage
 wordpress_id: 589
-categories:
-- Storage
+categories: Explanation
 tags:
 - NetApp
 - ONTAP

@@ -6,8 +6,7 @@ layout: post
 slug: falconstor-introduces-a-nas-interface
 title: FalconStor Introduces a NAS Interface
 wordpress_id: 1077
-categories:
-- Storage
+categories: News
 tags:
 - Deduplication
 - Hardware

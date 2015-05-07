@@ -6,15 +6,14 @@ layout: post
 slug: optimizing-iscsi-traffic-with-esx
 title: Optimizing iSCSI Traffic with ESX
 wordpress_id: 479
-categories:
-- Storage
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - iSCSI
 - Networking
 - Virtualization
 - VMware
+- Storage
 ---
 
 A response in [this VMTN forums thread](http://www.vmware.com/community/message.jspa?messageID=604130) by Paul Lalonde got me to thinking about iSCSI traffic, network designs, and the software initiator provided with [ESX Server](http://www.vmware.com/products/vi/esx/). The statement was this (in response to questions about how ESX uses network links to communicate with an iSCSI storage array):
