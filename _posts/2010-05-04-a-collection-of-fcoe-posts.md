@@ -6,8 +6,7 @@ layout: post
 slug: a-collection-of-fcoe-posts
 title: A Collection of FCoE Posts
 wordpress_id: 1914
-categories:
-- Storage
+categories: Information
 tags:
 - FCoE
 - FibreChannel

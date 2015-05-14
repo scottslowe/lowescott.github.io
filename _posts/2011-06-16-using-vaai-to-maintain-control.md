@@ -6,9 +6,7 @@ layout: post
 slug: using-vaai-to-maintain-control
 title: Using VAAI to Maintain Control?
 wordpress_id: 2313
-categories:
-- Storage
-- Virtualization
+categories: Musing
 tags:
 - SAN
 - Storage

@@ -6,9 +6,7 @@ layout: post
 slug: sioc-event-with-emc-mirrorview
 title: SIOC Event with EMC MirrorView
 wordpress_id: 2155
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - EMC
 - Storage

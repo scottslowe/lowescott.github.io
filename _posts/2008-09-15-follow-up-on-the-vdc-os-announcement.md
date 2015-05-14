@@ -6,10 +6,7 @@ layout: post
 slug: follow-up-on-the-vdc-os-announcement
 title: Follow Up on the VDC-OS Announcement
 wordpress_id: 900
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Musing
 tags:
 - Cisco
 - ESX

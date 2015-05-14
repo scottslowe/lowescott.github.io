@@ -6,9 +6,7 @@ layout: post
 slug: very-early-thoughts-about-emc-vipr
 title: Very Early Thoughts about EMC ViPR
 wordpress_id: 3173
-categories:
-- Storage
-- Virtualization
+categories: Musing
 tags:
 - EMC
 - Storage

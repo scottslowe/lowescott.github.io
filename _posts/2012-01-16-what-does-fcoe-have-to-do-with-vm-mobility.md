@@ -6,9 +6,7 @@ layout: post
 slug: what-does-fcoe-have-to-do-with-vm-mobility
 title: What Does FCoE Have To Do With VM Mobility?
 wordpress_id: 2520
-categories:
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - FCoE
 - Storage

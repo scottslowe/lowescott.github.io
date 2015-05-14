@@ -6,9 +6,7 @@ layout: post
 slug: determining-an-optimal-design
 title: Determining an Optimal Design
 wordpress_id: 2423
-categories:
-- Storage
-- Virtualization
+categories: Musing
 tags:
 - Storage
 - Virtualization
