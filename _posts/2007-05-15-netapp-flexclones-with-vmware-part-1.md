@@ -6,9 +6,7 @@ layout: post
 slug: netapp-flexclones-with-vmware-part-1
 title: NetApp FlexClones with VMware, Part 1
 wordpress_id: 455
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - NetApp
 - Storage

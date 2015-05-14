@@ -6,9 +6,7 @@ layout: post
 slug: open-source-vmfs-driver
 title: Open Source VMFS Driver
 wordpress_id: 1213
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Storage
 - VCB

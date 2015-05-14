@@ -6,8 +6,7 @@ layout: post
 slug: quick-guide-to-setting-up-netapp-deduplication
 title: Quick Guide to Setting up NetApp Deduplication
 wordpress_id: 671
-categories:
-- Storage
+categories: Education
 tags:
 - Hardware
 - NAS

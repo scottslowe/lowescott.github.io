@@ -6,10 +6,7 @@ layout: post
 slug: a-few-quick-thoughts-on-the-vce-coalition-announcement
 title: A Few Quick Thoughts on the VCE Coalition Announcement
 wordpress_id: 1724
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Musing
 tags:
 - Cisco
 - EMC

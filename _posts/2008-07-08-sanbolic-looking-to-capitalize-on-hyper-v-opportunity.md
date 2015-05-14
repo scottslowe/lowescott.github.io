@@ -6,10 +6,7 @@ layout: post
 slug: sanbolic-looking-to-capitalize-on-hyper-v-opportunity
 title: Sanbolic Looking to Capitalize on Hyper-V Opportunity
 wordpress_id: 757
-categories:
-- Microsoft
-- Storage
-- Virtualization
+categories: News
 tags:
 - HyperV
 - Microsoft

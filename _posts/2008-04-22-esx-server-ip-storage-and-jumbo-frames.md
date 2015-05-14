@@ -6,9 +6,7 @@ layout: post
 slug: esx-server-ip-storage-and-jumbo-frames
 title: ESX Server, IP Storage, and Jumbo Frames
 wordpress_id: 688
-categories:
-- Storage
-- Virtualization
+categories: Tutorial
 tags:
 - ESX
 - iSCSI

@@ -6,9 +6,7 @@ layout: post
 slug: keeping-thin-vmdks-using-netapp-snaprestore
 title: Keeping Thin VMDKs Using NetApp SnapRestore
 wordpress_id: 680
-categories:
-- Storage
-- Virtualization
+categories: Tutorial
 tags:
 - ESX
 - NetApp

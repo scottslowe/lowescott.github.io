@@ -6,10 +6,7 @@ layout: post
 slug: vendor-responsiveness
 title: Vendor Responsiveness
 wordpress_id: 643
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - Networking

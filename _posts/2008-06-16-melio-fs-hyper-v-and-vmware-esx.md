@@ -6,9 +6,7 @@ layout: post
 slug: melio-fs-hyper-v-and-vmware-esx
 title: Melio FS, Hyper-V, and VMware ESX
 wordpress_id: 742
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - HyperV

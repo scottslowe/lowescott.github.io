@@ -6,8 +6,7 @@ layout: post
 slug: lun-clones-vs-flexclones
 title: LUN Clones vs. FlexClones
 wordpress_id: 458
-categories:
-- Storage
+categories: Explanation
 tags:
 - NetApp
 - Snapshots

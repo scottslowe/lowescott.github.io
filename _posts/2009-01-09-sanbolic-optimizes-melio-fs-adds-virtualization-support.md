@@ -6,10 +6,7 @@ layout: post
 slug: sanbolic-optimizes-melio-fs-adds-virtualization-support
 title: Sanbolic Optimizes Melio FS, Adds Virtualization Support
 wordpress_id: 1131
-categories:
-- Microsoft
-- Storage
-- Virtualization
+categories: News
 tags:
 - Citrix
 - HyperV

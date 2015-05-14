@@ -6,10 +6,7 @@ layout: post
 slug: sanbolic-now-providing-shared-lun-access-for-hyper-v-guests
 title: Sanbolic Now Providing Shared LUN Access for Hyper-V Guests
 wordpress_id: 872
-categories:
-- Microsoft
-- Storage
-- Virtualization
+categories: News
 tags:
 - ESX
 - HyperV

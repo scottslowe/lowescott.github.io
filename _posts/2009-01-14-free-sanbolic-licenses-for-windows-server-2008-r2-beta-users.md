@@ -6,10 +6,7 @@ layout: post
 slug: free-sanbolic-licenses-for-windows-server-2008-r2-beta-users
 title: Free Sanbolic Licenses for Windows Server 2008 R2 Beta Users
 wordpress_id: 1135
-categories:
-- Microsoft
-- Storage
-- Virtualization
+categories: News
 tags:
 - HyperV
 - Microsoft
