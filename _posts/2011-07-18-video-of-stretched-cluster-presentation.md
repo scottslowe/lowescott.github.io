@@ -6,11 +6,10 @@ layout: post
 slug: video-of-stretched-cluster-presentation
 title: Video of Stretched Cluster Presentation
 wordpress_id: 2350
-categories:
+categories: Information
+tags:
 - Networking
 - Storage
-- Virtualization
-tags:
 - Virtualization
 - VMware
 - vSphere

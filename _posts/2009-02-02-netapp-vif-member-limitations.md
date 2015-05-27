@@ -6,9 +6,7 @@ layout: post
 slug: netapp-vif-member-limitations
 title: NetApp VIF Member Limitations
 wordpress_id: 1143
-categories:
-- Networking
-- Storage
+categories: Explanation
 tags:
 - NetApp
 - Networking

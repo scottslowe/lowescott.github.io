@@ -6,9 +6,7 @@ layout: post
 slug: netapp-omnigraffle-stencils
 title: NetApp OmniGraffle Stencils
 wordpress_id: 668
-categories:
-- Macintosh
-- Storage
+categories: Rant
 tags:
 - Macintosh
 - NetApp

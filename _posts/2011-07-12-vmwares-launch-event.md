@@ -6,11 +6,10 @@ layout: post
 slug: vmwares-launch-event
 title: VMware's Launch Event
 wordpress_id: 2330
-categories:
+categories: News
+tags:
 - Security
 - Storage
-- Virtualization
-tags:
 - vCloud
 - Virtualization
 - VMware

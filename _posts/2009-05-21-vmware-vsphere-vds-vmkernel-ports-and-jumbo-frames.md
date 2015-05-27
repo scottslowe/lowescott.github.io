@@ -6,10 +6,7 @@ layout: post
 slug: vmware-vsphere-vds-vmkernel-ports-and-jumbo-frames
 title: VMware vSphere vDS, VMkernel Ports, and Jumbo Frames
 wordpress_id: 1371
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Tutorial
 tags:
 - CLI
 - ESX

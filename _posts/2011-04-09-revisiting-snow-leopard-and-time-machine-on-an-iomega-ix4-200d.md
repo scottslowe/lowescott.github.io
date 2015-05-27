@@ -6,9 +6,7 @@ layout: post
 slug: revisiting-snow-leopard-and-time-machine-on-an-iomega-ix4-200d
 title: Revisiting Snow Leopard and Time Machine on an Iomega ix4-200d
 wordpress_id: 2265
-categories:
-- Macintosh
-- Storage
+categories: Information
 tags:
 - Backup
 - EMC

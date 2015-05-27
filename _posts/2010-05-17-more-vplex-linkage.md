@@ -6,12 +6,11 @@ layout: post
 slug: more-vplex-linkage
 title: More VPLEX Linkage
 wordpress_id: 1944
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - EMC
 - Storage
+- Virtualization
 - VPLEX
 ---
 

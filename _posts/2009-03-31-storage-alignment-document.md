@@ -6,9 +6,7 @@ layout: post
 slug: storage-alignment-document
 title: Storage Alignment Document
 wordpress_id: 1260
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - CLI
 - ESX

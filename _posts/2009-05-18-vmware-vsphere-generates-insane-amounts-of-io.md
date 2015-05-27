@@ -6,9 +6,7 @@ layout: post
 slug: vmware-vsphere-generates-insane-amounts-of-io
 title: VMware vSphere Generates Insane Amounts of I/O
 wordpress_id: 1367
-categories:
-- Storage
-- Virtualization
+categories: News
 tags:
 - EMC
 - ESX

@@ -6,9 +6,7 @@ layout: post
 slug: srm-and-stretched-clusters-webinar
 title: SRM and Stretched Clusters Webinar
 wordpress_id: 2591
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - EMC
 - Storage

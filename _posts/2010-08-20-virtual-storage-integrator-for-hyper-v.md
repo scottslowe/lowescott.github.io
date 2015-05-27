@@ -6,9 +6,7 @@ layout: post
 slug: virtual-storage-integrator-for-hyper-v
 title: Virtual Storage Integrator for Hyper-V
 wordpress_id: 2037
-categories:
-- Storage
-- Virtualization
+categories: News
 tags:
 - EMC
 - Microsoft

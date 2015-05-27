@@ -6,8 +6,7 @@ layout: post
 slug: netapp-blog-aggregator
 title: NetApp Blog Aggregator?
 wordpress_id: 687
-categories:
-- Storage
+categories: Musing
 tags:
 - NAS
 - NetApp

@@ -6,9 +6,7 @@ layout: post
 slug: netapp-snapshot-support
 title: NetApp Snapshot Support
 wordpress_id: 674
-categories:
-- Microsoft
-- Storage
+categories: Information
 tags:
 - Microsoft
 - NetApp

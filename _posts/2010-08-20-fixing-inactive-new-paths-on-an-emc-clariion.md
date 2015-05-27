@@ -6,8 +6,7 @@ layout: post
 slug: fixing-inactive-new-paths-on-an-emc-clariion
 title: Fixing Inactive New Paths on an EMC CLARiiON
 wordpress_id: 2031
-categories:
-- Storage
+categories: Explanation
 tags:
 - CLARiiON
 - EMC
@@ -15,7 +14,7 @@ tags:
 - Storage
 ---
 
-I ran into an issue in the lab today with some VMware ESX 4.0 hosts and some older CLARiiON CX3 arrays. I'd been working to fix up the lab so that it more properly reflects a "best practices" configuration with dual SAN fabrics, dual-homed HBAs and CNAs, network connections spread across multiple physical switches, etc.--you know, all the wonderful things that we recommend to our customers.
+I ran into an issue in the lab today with some VMware ESX 4.0 hosts and some older CLARiiON CX3 arrays. I'd been working to fix up the lab so that it more properly reflects a "best practices" configuration with dual SAN fabrics, dual-homed HBAs and CNAs, network connections spread across multiple physical switches, etc.---you know, all the wonderful things that we recommend to our customers.
 
 As a result of cross-connecting both the HBAs and the CLARiiON's storage processors to both SAN fabrics, I ended up with more paths to the LUNs than I had previously. This was, of course, fully expected. Upon browsing the properties for the datastore in the vSphere Client, however, I still saw only four paths---two target ports on each storage processor---when I expected to see more. Upon closer inspection, I determined that I wasn't seeing the ports on the array that I had recently connected to the second fabric.
 

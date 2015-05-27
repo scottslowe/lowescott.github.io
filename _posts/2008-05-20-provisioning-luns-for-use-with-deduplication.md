@@ -6,8 +6,7 @@ layout: post
 slug: provisioning-luns-for-use-with-deduplication
 title: Provisioning LUNs for Use with Deduplication
 wordpress_id: 711
-categories:
-- Storage
+categories: Information
 tags:
 - NetApp
 - ONTAP

@@ -6,8 +6,7 @@ layout: post
 slug: emc-world-2010-coverage
 title: EMC World 2010 Coverage
 wordpress_id: 1930
-categories:
-- Storage
+categories: Information
 tags:
 - EMC
 - EMCWorld2010

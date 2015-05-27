@@ -6,8 +6,7 @@ layout: post
 slug: using-netapp-deduplication-with-block-storage
 title: Using NetApp Deduplication with Block Storage
 wordpress_id: 692
-categories:
-- Storage
+categories: Explanation
 tags:
 - iSCSI
 - NetApp

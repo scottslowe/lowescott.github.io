@@ -6,9 +6,7 @@ layout: post
 slug: recommended-esx-service-console-partitioning
 title: Recommended ESX Service Console Partitioning
 wordpress_id: 631
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Storage

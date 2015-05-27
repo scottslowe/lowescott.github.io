@@ -6,14 +6,12 @@ layout: post
 slug: openstack-summit-day-1-recap-links
 title: OpenStack Summit Day 1 Recap Links
 wordpress_id: 2884
-categories:
-- General
-- Networking
-- Storage
-- Virtualization
+categories: Information
 tags:
+- Networking
 - OpenStack
 - OSS
+- Storage
 - Virtualization
 ---
 

@@ -6,9 +6,7 @@ layout: post
 slug: storage-vmotion-with-rdms
 title: Storage vMotion with RDMs
 wordpress_id: 2023
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - Storage
 - Virtualization
