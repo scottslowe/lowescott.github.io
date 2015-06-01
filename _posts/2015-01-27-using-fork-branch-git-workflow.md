@@ -121,9 +121,9 @@ Then you can update the master branch in your forked repository:
 
 	git push origin master
 
-And push the deletion of the feature branch to your GitHub repository:
+And push the deletion of the feature branch to your GitHub repository (_update:_ an earlier version of this article listed `git push -d` below):
 
-	git push -d origin <branch name>
+	git push --delete origin <branch name>
 
 And that's it! You've just successfully created a feature branch, made some changes, committed those changes to your repository, pushed them to GitHub, opened a pull request, had your changes merged by the maintainers, and then cleaned up. Pretty neat, eh?
 
