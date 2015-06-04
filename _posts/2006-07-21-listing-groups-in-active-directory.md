@@ -6,8 +6,7 @@ layout: post
 slug: listing-groups-in-active-directory
 title: Listing Groups in Active Directory
 wordpress_id: 305
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

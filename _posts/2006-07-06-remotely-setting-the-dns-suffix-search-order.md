@@ -6,8 +6,7 @@ layout: post
 slug: remotely-setting-the-dns-suffix-search-order
 title: Remotely Setting the DNS Suffix Search Order
 wordpress_id: 293
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

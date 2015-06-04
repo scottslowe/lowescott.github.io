@@ -6,8 +6,7 @@ layout: post
 slug: microsoft-update-troubles-again
 title: Microsoft Update Troubles Again
 wordpress_id: 570
-categories:
-- Microsoft
+categories: Rant
 tags:
 - Microsoft
 - Windows

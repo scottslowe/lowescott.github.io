@@ -6,8 +6,7 @@ layout: post
 slug: finding-recently-created-active-directory-accounts
 title: Finding Recently Created Active Directory Accounts
 wordpress_id: 345
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

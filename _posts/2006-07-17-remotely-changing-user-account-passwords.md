@@ -6,8 +6,7 @@ layout: post
 slug: remotely-changing-user-account-passwords
 title: Remotely Changing User Account Passwords
 wordpress_id: 301
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

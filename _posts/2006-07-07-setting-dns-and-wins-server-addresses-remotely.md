@@ -6,8 +6,7 @@ layout: post
 slug: setting-dns-and-wins-server-addresses-remotely
 title: Setting DNS and WINS Server Addresses Remotely
 wordpress_id: 294
-categories:
-- Microsoft
+categories: Education
 tags:
 - Microsoft
 - Networking

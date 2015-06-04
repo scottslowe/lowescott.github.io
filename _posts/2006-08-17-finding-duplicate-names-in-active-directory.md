@@ -6,8 +6,7 @@ layout: post
 slug: finding-duplicate-names-in-active-directory
 title: Finding Duplicate Names in Active Directory
 wordpress_id: 323
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

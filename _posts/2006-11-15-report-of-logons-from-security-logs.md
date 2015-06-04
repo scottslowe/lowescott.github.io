@@ -6,8 +6,7 @@ layout: post
 slug: report-of-logons-from-security-logs
 title: Report of Logons from Security Logs
 wordpress_id: 363
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

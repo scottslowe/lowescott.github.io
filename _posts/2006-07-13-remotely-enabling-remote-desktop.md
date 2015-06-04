@@ -6,8 +6,7 @@ layout: post
 slug: remotely-enabling-remote-desktop
 title: Remotely Enabling Remote Desktop
 wordpress_id: 296
-categories:
-- Microsoft
+categories: Education
 tags:
 - Microsoft
 - Windows

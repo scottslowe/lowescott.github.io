@@ -6,8 +6,7 @@ layout: post
 slug: complex-queries-against-active-directory
 title: Complex Queries Against Active Directory
 wordpress_id: 311
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

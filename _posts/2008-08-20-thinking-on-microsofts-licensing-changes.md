@@ -6,9 +6,7 @@ layout: post
 slug: thinking-on-microsofts-licensing-changes
 title: Thinking on Microsoft's Licensing Changes
 wordpress_id: 833
-categories:
-- Microsoft
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - ESXi

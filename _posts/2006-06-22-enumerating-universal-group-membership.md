@@ -6,8 +6,7 @@ layout: post
 slug: enumerating-universal-group-membership
 title: Enumerating Universal Group Membership
 wordpress_id: 273
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

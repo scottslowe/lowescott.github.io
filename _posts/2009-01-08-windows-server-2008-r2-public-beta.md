@@ -6,9 +6,7 @@ layout: post
 slug: windows-server-2008-r2-public-beta
 title: Windows Server 2008 R2 Public Beta
 wordpress_id: 1126
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - HyperV
 - Microsoft

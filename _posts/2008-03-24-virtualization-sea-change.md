@@ -6,9 +6,7 @@ layout: post
 slug: virtualization-sea-change
 title: Virtualization Sea Change?
 wordpress_id: 666
-categories:
-- Microsoft
-- Virtualization
+categories: Musing
 tags:
 - Citrix
 - HyperV

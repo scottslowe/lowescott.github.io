@@ -6,8 +6,7 @@ layout: post
 slug: monitoring-event-logs-with-log-parser
 title: Monitoring Event Logs with Log Parser
 wordpress_id: 304
-categories:
-- Microsoft
+categories: Education
 tags:
 - Microsoft
 - Networking

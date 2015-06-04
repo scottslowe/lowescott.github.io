@@ -6,9 +6,7 @@ layout: post
 slug: svvp-certifications-for-vmware-vsphere
 title: SVVP Certifications for VMware vSphere
 wordpress_id: 1421
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - ESX
 - ESXi

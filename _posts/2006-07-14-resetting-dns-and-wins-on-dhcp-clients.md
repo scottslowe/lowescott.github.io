@@ -6,8 +6,7 @@ layout: post
 slug: resetting-dns-and-wins-on-dhcp-clients
 title: Resetting DNS and WINS on DHCP Clients
 wordpress_id: 297
-categories:
-- Microsoft
+categories: Education
 tags:
 - Microsoft
 - Networking

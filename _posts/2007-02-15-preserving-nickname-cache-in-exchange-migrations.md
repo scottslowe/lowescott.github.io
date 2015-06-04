@@ -6,8 +6,7 @@ layout: post
 slug: preserving-nickname-cache-in-exchange-migrations
 title: Preserving Nickname Cache in Exchange Migrations
 wordpress_id: 413
-categories:
-- Microsoft
+categories: Education
 tags:
 - Exchange
 - Microsoft

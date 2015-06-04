@@ -6,9 +6,7 @@ layout: post
 slug: my-thoughts-on-the-live-migration-quick-migration-discussion
 title: My Thoughts on the Live Migration-Quick Migration Discussion
 wordpress_id: 696
-categories:
-- Microsoft
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - HyperV

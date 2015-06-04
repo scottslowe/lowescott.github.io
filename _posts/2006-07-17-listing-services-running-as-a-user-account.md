@@ -6,8 +6,7 @@ layout: post
 slug: listing-services-running-as-a-user-account
 title: Listing Services Running as a User Account
 wordpress_id: 300
-categories:
-- Microsoft
+categories: Education
 tags:
 - ActiveDirectory
 - Microsoft

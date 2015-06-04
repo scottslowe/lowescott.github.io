@@ -6,9 +6,7 @@ layout: post
 slug: vmware-workstation-beats-hyper-v
 title: VMware Workstation Beats Hyper-V?
 wordpress_id: 777
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - HyperV
 - Microsoft
