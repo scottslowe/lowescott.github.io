@@ -6,9 +6,7 @@ layout: post
 slug: network-overlays-vs-network-virtualization
 title: Network Overlays vs. Network Virtualization
 wordpress_id: 3140
-categories:
-- Networking
-- Virtualization
+categories: Rant
 tags:
 - Networking
 - Virtualization

@@ -6,9 +6,7 @@ layout: post
 slug: vista-on-intel-based-macs
 title: Vista on Intel-Based Macs
 wordpress_id: 199
-categories:
-- Macintosh
-- Microsoft
+categories: Information
 tags:
 - Apple
 - Macintosh

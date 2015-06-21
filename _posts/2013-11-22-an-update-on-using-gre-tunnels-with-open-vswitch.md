@@ -6,9 +6,7 @@ layout: post
 slug: an-update-on-using-gre-tunnels-with-open-vswitch
 title: An Update on Using GRE Tunnels with Open vSwitch
 wordpress_id: 3333
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - GRE
 - Linux

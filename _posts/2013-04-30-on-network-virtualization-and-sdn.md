@@ -6,9 +6,7 @@ layout: post
 slug: on-network-virtualization-and-sdn
 title: On Network Virtualization and SDN
 wordpress_id: 3162
-categories:
-- Networking
-- Virtualization
+categories: Rant
 tags:
 - Networking
 - SDN

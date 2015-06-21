@@ -6,8 +6,7 @@ layout: post
 slug: advanced-spotlight-queries-in-the-mac-gui
 title: Advanced Spotlight Queries in the Mac GUI
 wordpress_id: 2695
-categories:
-- Macintosh
+categories: Tutorial
 tags:
 - CLI
 - Macintosh

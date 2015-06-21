@@ -6,9 +6,7 @@ layout: post
 slug: resources-for-networking-and-network-virtualization
 title: Resources for Networking and Network Virtualization
 wordpress_id: 3213
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Networking
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: my-tiger-upgrade
 title: My Tiger Upgrade
 wordpress_id: 198
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 ---

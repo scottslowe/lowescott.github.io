@@ -6,9 +6,7 @@ layout: post
 slug: 8-things-to-help-keep-your-mac-secure
 title: 8 Things to Help Keep Your Mac Secure
 wordpress_id: 2583
-categories:
-- Macintosh
-- Security
+categories: Information
 tags:
 - Macintosh
 - Security
