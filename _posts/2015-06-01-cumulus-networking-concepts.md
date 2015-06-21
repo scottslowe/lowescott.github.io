@@ -9,6 +9,7 @@ tags:
 - Linux
 - Networking
 - CLI
+- Cumulus
 ---
 
 As I've recently had the opportunity to start working with [Cumulus Linux][link-1] (running on a [Dell S6000-ON][link-2] switch), in this post I wanted to share a few concepts I've learned about networking with Cumulus Linux.
