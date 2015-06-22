@@ -9,6 +9,7 @@ tags:
 - Docker
 - Linux
 - CLI
+- DockerCon2015
 ---
 
 This is a liveblog for the day 1 general session at DockerCon 2015, taking place this week (today and tomorrow, anyway) at the Marriott Marquis in San Francisco, CA. This is my first DockerCon, and I'm looking forward to picking up lots of new knowledge.
