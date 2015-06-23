@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2015-06-22 17:45:00-0800
+date: 2015-06-22 23:30:00-0000
 layout: post
 title: "Liveblog: Docker Networking"
 categories: Liveblog
@@ -9,6 +9,7 @@ tags:
 - Docker
 - DockerCon2015
 - Networking
+redirect_from: /2015/06/23/docker-networking/
 ---
 
 This is a liveblog of the Docker Networking breakout session. This session is led by Madhu Venugopal and Jana Radhakrishnan, both formerly of Socketplane (and now with Docker following the acquisition). They are introduced by John Willis, also formerly of Socketplane and well-known within the DevOps community.

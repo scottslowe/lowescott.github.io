@@ -1,13 +1,14 @@
 ---
 author: slowe
 comments: true
-date: 2015-06-22 16:40:00-0800
+date: 2015-06-22 23:00:00-0000
 layout: post
 title: "Liveblog: Resilient Routing and Discovery"
 categories: Liveblog
 tags:
 - Docker
 - DockerCon2015
+redirect_from: /2015/06/23/resilient-routing-discovery/
 ---
 
 This is a liveblog of the DockerCon 2015 session on resilient routing and discovery, part of the "Advanced Tech" track. Simon Eskilden ([@Sirupsen][link-1] on Twitter) from Shopify is the speaker for this session.
