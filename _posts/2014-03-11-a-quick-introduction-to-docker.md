@@ -102,7 +102,7 @@ The syntax for a Dockerfile is `INSTRUCTION arguments`, where "INSTRUCTION" refe
 
 * The CMD instruction tells what command/daemon to run when the container launches.
 
-I don't have room here for a full Dockerfile tutorial, but Docker themselves has [a great one](https://www.docker.io/learn/dockerfile/). Suffice it to say that if you want anything more complex than a simple bash shell, you're probably going to need to use a Dockerfile.
+I don't have room here for a full Dockerfile tutorial, but Docker themselves has [a great one](http://docs.docker.com/userguide/dockerimages/#building-an-image-from-a-dockerfile). Suffice it to say that if you want anything more complex than a simple bash shell, you're probably going to need to use a Dockerfile.
 
 Once you have a working Dockerfile (just as a heads-up, the above example doesn't actually work---sorry), you can create a Docker image from that Dockerfile using the `docker build` command. Once you have a working image, you can then base other Docker containers on _that_ image (using the FROM instruction in a subsequent Dockerfile).
 
