@@ -31,7 +31,7 @@ With that information in hand, I built an Ansible playbook that created an Ansib
   sudo: yes
 {% endhighlight %}
 
-Every Ansible playbook starts with this header, and these lines tell it against which hosts (via the `hosts:` line) to execute the playbook, and which user account (via the `remote_user:` line) to use when connecting to those hosts. By using variables on these lines, it meant I could specify these values on the command-line---which in turn meant I had very granular control over which servers I wanted to effect and how Ansible would connect to those servers.
+Every Ansible playbook starts with this header, and these lines tell it against which hosts (via the `hosts:` line) to execute the playbook, and which user account (via the `remote_user:` line) to use when connecting to those hosts. By using variables on these lines, it meant I could specify these values on the command-line---which in turn meant I had very granular control over which servers I wanted to affect and how Ansible would connect to those servers.
 
 Let's look at an example. I knew that my preseed file always created a user account (I'll call that account "admin"). I also knew that the preseed file assigned a standard password to that account. Now, I _could_ have used this account for Ansible to connect, but I preferred to have a dedicated account for Ansible. So, using a command like this (which I've line-wrapped for your readability):
 
