@@ -26,8 +26,8 @@ As I dug into Ansible, I found something that proved to be very important: it's 
 With that information in hand, I built an Ansible playbook that created an Ansible user account and installed an SSH key for that user account (this was accomplished using the "user" and "authorized_key" Ansible modules). The playbook did a couple other things as well, like handle `sudo` access for this new account. There's nothing special about the tasks in the playbook; the trick, in my opinion, is in the playbook header:
 
 {% highlight yaml %}
-- hosts: '{{ hosts }}'
-  remote_user: '{{ user }}'
+- hosts: '{% raw %}{{ hosts }}{% endraw %}'
+  remote_user: '{% raw %}{{ user }}{% endraw %}'
   sudo: yes
 {% endhighlight %}
 
