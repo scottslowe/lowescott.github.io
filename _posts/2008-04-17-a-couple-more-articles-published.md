@@ -6,9 +6,7 @@ layout: post
 slug: a-couple-more-articles-published
 title: A Couple More Articles Published
 wordpress_id: 684
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Networking
 - Virtualization

@@ -6,9 +6,7 @@ layout: post
 slug: some-thoughts-and-questions-about-stt
 title: Some Thoughts and Questions About STT
 wordpress_id: 2548
-categories:
-- Networking
-- Virtualization
+categories: Musing
 tags:
 - Networking
 - Virtualization

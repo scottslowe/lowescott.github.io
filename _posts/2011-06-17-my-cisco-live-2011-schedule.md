@@ -6,8 +6,7 @@ layout: post
 slug: my-cisco-live-2011-schedule
 title: My Cisco Live 2011 Schedule
 wordpress_id: 2318
-categories:
-- Networking
+categories: Information
 tags:
 - Cisco
 - Collaboration

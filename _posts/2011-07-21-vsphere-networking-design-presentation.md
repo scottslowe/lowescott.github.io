@@ -6,9 +6,7 @@ layout: post
 slug: vsphere-networking-design-presentation
 title: vSphere Networking Design Presentation
 wordpress_id: 2354
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Networking
 - Virtualization

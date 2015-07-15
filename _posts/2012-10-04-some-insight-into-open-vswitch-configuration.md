@@ -6,9 +6,7 @@ layout: post
 slug: some-insight-into-open-vswitch-configuration
 title: Some Insight into Open vSwitch Configuration
 wordpress_id: 2872
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Networking
 - OSS

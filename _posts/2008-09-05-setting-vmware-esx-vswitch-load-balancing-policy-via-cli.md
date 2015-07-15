@@ -6,14 +6,13 @@ layout: post
 slug: setting-vmware-esx-vswitch-load-balancing-policy-via-cli
 title: Setting VMware ESX vSwitch Load Balancing Policy via CLI
 wordpress_id: 861
-categories:
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - ESX
 - Networking
 - Virtualization
 - VMware
+- CLI
 ---
 
 I see this question popping up a lot, so I thought I'd just throw up this quick blog entry with the command that's necessary to set the load balancing policy for a VMware ESX vSwitch.

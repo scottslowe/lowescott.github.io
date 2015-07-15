@@ -6,12 +6,12 @@ layout: post
 slug: connecting-a-nexus-2148-to-a-nexus-5010
 title: Connecting a Nexus 2148 to a Nexus 5010
 wordpress_id: 2167
-categories:
-- Networking
+categories: Tutorial
 tags:
 - Cisco
 - Networking
 - Nexus
+- CLI
 ---
 
 The Cisco Nexus 2000 series fabric extender (or "fex") is an implementation of [network interface virtualization][1]. Because the Nexus 2000 fabric extender acts as a remote line card to the upstream IV-capable bridge (a Nexus 5000 series switch, typically), all the configuration takes place on the upstream bridge. In this post, I'll describe how to connect a  Nexus 2148T to a Nexus 5010. In reality, the process is incredibly simple and not really worthy of a blog post, but in the interest of completeness I'll document it here.

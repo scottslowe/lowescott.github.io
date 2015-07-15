@@ -6,10 +6,7 @@ layout: post
 slug: a-couple-vendor-meetings-at-vmworld-2011
 title: A Couple Vendor Meetings at VMworld 2011
 wordpress_id: 2389
-categories:
-- Networking
-- Security
-- Virtualization
+categories: Information
 tags:
 - Networking
 - Security

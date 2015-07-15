@@ -6,12 +6,12 @@ layout: post
 slug: a-few-references-for-ccna-certification
 title: A Few References for CCNA Certification
 wordpress_id: 2287
-categories:
-- Networking
+categories: Information
 tags:
 - Certification
 - Cisco
 - Macintosh
+- Networking
 - Virtualization
 - VMware
 ---

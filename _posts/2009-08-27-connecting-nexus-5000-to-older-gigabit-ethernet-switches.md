@@ -6,13 +6,13 @@ layout: post
 slug: connecting-nexus-5000-to-older-gigabit-ethernet-switches
 title: Connecting Nexus 5000 to Older Gigabit Ethernet Switches
 wordpress_id: 1567
-categories:
-- Networking
+categories: Tutorial
 tags:
 - Cisco
 - HP
 - Networking
 - Nexus
+- CLI
 ---
 
 One of the things that confused me when I first started working with the Nexus 5000 line was how I would connect this 10Gb Ethernet switch to older 1Gb Ethernet switches, like the older Cisco Catalyst or HP ProCurve switches that I also have in the lab. It turns out---many of you probably already know this---that the first 8 ports on a Nexus 5010 and the first 16 ports on Nexus 5020 can be configured to operate as Gigabit Ethernet ports. You can use these ports to connect to older Gigabit Ethernet switches.

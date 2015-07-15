@@ -6,9 +6,7 @@ layout: post
 slug: ciscos-data-center-launch
 title: Cisco's Data Center Launch
 wordpress_id: 2251
-categories:
-- Networking
-- Virtualization
+categories: News
 tags:
 - Cisco
 - FCoE

@@ -6,15 +6,15 @@ layout: post
 slug: connecting-cisco-catalyst-2960-s-to-nexus-5010
 title: Connecting Cisco Catalyst 2960-S to Nexus 5010
 wordpress_id: 2277
-categories:
-- Networking
+categories: Explanation
 tags:
 - Cisco
 - Networking
 - Nexus
+- CLI
 ---
 
-As part of the all-star team that is currently heads down in preparation for some cool stuff that will be at EMC World 2011 in just a couple of weeks, today I needed to connect a Cisco Catalyst 2960-S to a Nexus 5010 over a 10GbE connection. Simple enough, right?
+As part of the all-star team that is currently heads down in preparation for some cool stuff that will be at EMC World 2011 in just a couple of weeks, today I needed to connect a Cisco Catalyst 2960-S to a Nexus 5010 over a 10GbE connection. Simple enough, right? You would think so, but as it turns out there was a bit more involved than I suspected.
 
 And it was simple, too---configure each side as a VLAN trunk, make sure the port on each side is enabled (not administratively down), and plug in a Cisco-branded TwinAx cable. All set! Well...except for the fact that only certain "versions" of the TwinAx SFP+ cables are supported with the 2960-S (see [this page](http://www.cisco.com/en/US/docs/interfaces_modules/transceiver_modules/compatibility/matrix/OL_6974.html)). Fortunately, someone at Cisco was smart enough to include the version number in the part number on the SFPs on the end of the TwinAx cables, so it only took a few minutes to find the right version of the cable. Pull the old cable, put in the new cable.
 

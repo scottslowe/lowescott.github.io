@@ -6,9 +6,7 @@ layout: post
 slug: esx-server-and-the-native-vlan
 title: ESX Server and the Native VLAN
 wordpress_id: 574
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Networking

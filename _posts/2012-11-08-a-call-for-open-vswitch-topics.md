@@ -6,9 +6,7 @@ layout: post
 slug: a-call-for-open-vswitch-topics
 title: A Call for Open vSwitch Topics
 wordpress_id: 2937
-categories:
-- Networking
-- Virtualization
+categories: Education
 tags:
 - Networking
 - OSS

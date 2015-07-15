@@ -6,8 +6,7 @@ layout: post
 slug: call-for-networking-topics
 title: Call for Networking Topics
 wordpress_id: 3116
-categories:
-- Networking
+categories: Education
 tags:
 - Networking
 ---

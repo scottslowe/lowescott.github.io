@@ -6,10 +6,7 @@ layout: post
 slug: a-couple-more-articles-published-2
 title: A Couple More Articles Published
 wordpress_id: 1008
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Information
 tags:
 - NetApp
 - Networking
