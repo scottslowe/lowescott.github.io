@@ -6,8 +6,7 @@ layout: post
 slug: follow-up-on-windows-server-2003-r2-schema
 title: Follow Up on Windows Server 2003 R2 Schema
 wordpress_id: 244
-categories:
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Microsoft

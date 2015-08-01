@@ -6,8 +6,7 @@ layout: post
 slug: microsoft-promises-not-to-sue
 title: Microsoft Promises Not to Sue
 wordpress_id: 126
-categories:
-- Microsoft
+categories: News
 tags:
 - Microsoft
 - Standards

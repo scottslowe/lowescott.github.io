@@ -6,9 +6,9 @@ layout: post
 slug: windows-phones-home
 title: Windows Phones Home
 wordpress_id: 264
-categories:
-- Microsoft
+categories: News
 tags:
+- Microsoft
 - Privacy
 - Security
 - Windows

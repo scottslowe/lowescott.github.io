@@ -6,9 +6,7 @@ layout: post
 slug: microsoft-virtual-server-management-tool-being-readied
 title: Microsoft Virtual Server Management Tool Being Readied
 wordpress_id: 227
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - Microsoft
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: windows-server-2003-r2-schema
 title: Windows Server 2003 R2 Schema
 wordpress_id: 231
-categories:
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Microsoft

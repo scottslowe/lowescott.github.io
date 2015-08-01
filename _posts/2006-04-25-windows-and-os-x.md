@@ -1,13 +1,12 @@
 ---
 author: slowe
 comments: false
-date: 2006-04-25 21:54:25+00:00
+date: 2006-04-25 11:54:25+00:00
 layout: post
 slug: windows-and-os-x
 title: Windows and OS X
 wordpress_id: 232
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Apple
 - IBM

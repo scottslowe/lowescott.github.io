@@ -6,9 +6,9 @@ layout: post
 slug: my-thoughts-on-windows-hypervisor
 title: My Thoughts on Windows Hypervisor
 wordpress_id: 259
-categories:
-- Microsoft
+categories: Musing
 tags:
+- Microsoft
 - Virtualization
 - Windows
 ---

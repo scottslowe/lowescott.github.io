@@ -6,8 +6,7 @@ layout: post
 slug: winfs-axed
 title: WinFS Axed
 wordpress_id: 281
-categories:
-- Microsoft
+categories: News
 tags:
 - Microsoft
 - Storage

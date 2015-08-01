@@ -6,8 +6,7 @@ layout: post
 slug: windows-powershell
 title: Windows PowerShell
 wordpress_id: 236
-categories:
-- Microsoft
+categories: News
 tags:
 - Microsoft
 - Windows

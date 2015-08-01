@@ -6,8 +6,7 @@ layout: post
 slug: windows-server-update-services
 title: Windows Server Update Services
 wordpress_id: 233
-categories:
-- Microsoft
+categories: Information
 tags:
 - Microsoft
 - Security

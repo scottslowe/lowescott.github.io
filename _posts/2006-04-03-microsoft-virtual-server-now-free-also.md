@@ -6,9 +6,7 @@ layout: post
 slug: microsoft-virtual-server-now-free-also
 title: Microsoft Virtual Server Now Free Also
 wordpress_id: 216
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - Linux
 - Microsoft
@@ -17,7 +15,7 @@ tags:
 - Windows
 ---
 
-Seeking to counter recent moves by virtualization market leader VMware, Microsoft announced today that Virtual Server 2005 R2 Enterprise Edition was a free product. (The excellent [virtualization.info](http://virtualization.info/) blog [alerted its readers to this development](http://www.virtualization.info/2006/03/microsoft-to-release-virtual-server.html) _last week_. Good work, Alessandro!)
+Seeking to counter recent moves by virtualization market leader VMware, Microsoft announced today that Virtual Server 2005 R2 Enterprise Edition is a free product. (The excellent [virtualization.info](http://virtualization.info/) blog [alerted its readers to this development](http://www.virtualization.info/2006/03/microsoft-to-release-virtual-server.html) _last week_. Good work, Alessandro!)
 
 More information is also available from the _eWeek_ [coverage on the announcement](http://www.eweek.com/article2/0,1759,1945069,00.asp).
 

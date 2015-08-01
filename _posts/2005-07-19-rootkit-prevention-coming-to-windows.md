@@ -6,8 +6,7 @@ layout: post
 slug: rootkit-prevention-coming-to-windows
 title: Rootkit Prevention Coming to Windows
 wordpress_id: 55
-categories:
-- Microsoft
+categories: Information
 tags:
 - Microsoft
 - Security

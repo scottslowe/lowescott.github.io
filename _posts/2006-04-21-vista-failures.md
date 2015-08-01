@@ -6,8 +6,7 @@ layout: post
 slug: vista-failures
 title: Vista Failures
 wordpress_id: 230
-categories:
-- Microsoft
+categories: Information
 tags:
 - Microsoft
 - Vista

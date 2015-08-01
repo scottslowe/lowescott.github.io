@@ -6,8 +6,7 @@ layout: post
 slug: windows-server-2003-r2-as-member-server
 title: Windows Server 2003 R2 as Member Server
 wordpress_id: 242
-categories:
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Microsoft

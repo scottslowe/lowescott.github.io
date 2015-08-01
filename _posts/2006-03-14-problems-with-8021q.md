@@ -6,14 +6,13 @@ layout: post
 slug: problems-with-8021q
 title: Problems with 802.1Q
 wordpress_id: 201
-categories:
-- Macintosh
-- Networking
+categories: Information
 tags:
 - Apple
 - Macintosh
 - Networking
 - Standards
+- VLAN
 ---
 
 I stumbled across a [forum on Apple's web site](http://discussions.apple.com/thread.jspa?threadID=378673) this morning (referred to me in turn by [Derrick Story's request for MacBook Pro feedback](http://www.oreillynet.com/mac/blog/2006/03/what_are_your_macbook_pro_impr.html)) that makes me glad I'm not yet able to afford a [MacBook Pro](http://www.apple.com/macbookpro/).

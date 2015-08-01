@@ -6,9 +6,9 @@ layout: post
 slug: have-you-seen-error-id-c10308a2
 title: Have You Seen Error ID c10308a2?
 wordpress_id: 90
-categories:
-- Microsoft
+categories: Rant
 tags:
+- Microsoft
 - ActiveDirectory
 - Exchange
 - Windows

@@ -6,8 +6,11 @@ layout: post
 slug: inability-to-add-or-modify-e-mail-addresses
 title: Inability to Add or Modify E-Mail Addresses
 wordpress_id: 88
-categories:
+categories: Information
+tags:
 - Microsoft
+- ActiveDirectory
+- Windows
 ---
 
 This is a follow-up to my posting titled "[Another Funky AD Issue][1]", in which I described a situation with a customer where support staff are unable to modify or add an e-mail address to a mail-enabled or mailbox-enabled user or contact after it has been created.

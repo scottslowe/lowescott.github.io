@@ -6,9 +6,7 @@ layout: post
 slug: apple-leopard-virtualization-rumor
 title: Apple Leopard Virtualization Rumor
 wordpress_id: 210
-categories:
-- Macintosh
-- Virtualization
+categories: Musing
 tags:
 - Apple
 - Macintosh

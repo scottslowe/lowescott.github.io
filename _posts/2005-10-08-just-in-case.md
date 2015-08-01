@@ -6,8 +6,11 @@ layout: post
 slug: just-in-case
 title: Just in Case
 wordpress_id: 102
-categories:
+categories: Information
+tags:
+- ActiveDirectory
 - Microsoft
+- Security
 ---
 
 I've mentioned the bug discussed in [KB905809](http://support.microsoft.com/default.aspx?scid=kb;en-us;905809) several times in this blog. In reading those posts (or reading the KB article), you've probably seen that you can use the `SC.EXE` command to set the security descriptors on the Service Control Manager to fix the bug. What happens, though, if you mess up the `SC.EXE` command?

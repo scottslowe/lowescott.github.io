@@ -6,9 +6,7 @@ layout: post
 slug: watch-out-ie-users
 title: Watch Out, IE Users
 wordpress_id: 28
-categories:
-- Microsoft
-- Security
+categories: Rant
 tags:
 - Firefox
 - IE

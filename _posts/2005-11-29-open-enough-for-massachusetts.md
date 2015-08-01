@@ -6,8 +6,7 @@ layout: post
 slug: open-enough-for-massachusetts
 title: Open Enough for Massachusetts
 wordpress_id: 127
-categories:
-- Microsoft
+categories: News
 tags:
 - Microsoft
 - Standards

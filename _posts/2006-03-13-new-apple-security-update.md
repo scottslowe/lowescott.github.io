@@ -6,12 +6,11 @@ layout: post
 slug: new-apple-security-update
 title: New Apple Security Update
 wordpress_id: 200
-categories:
-- Macintosh
-- Security
+categories: News
 tags:
 - Apple
 - Macintosh
+- Microsoft
 - Security
 ---
 

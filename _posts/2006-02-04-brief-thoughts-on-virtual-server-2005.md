@@ -6,9 +6,7 @@ layout: post
 slug: brief-thoughts-on-virtual-server-2005
 title: Brief Thoughts on Virtual Server 2005
 wordpress_id: 173
-categories:
-- Microsoft
-- Virtualization
+categories: Review
 tags:
 - Microsoft
 - Networking
@@ -20,7 +18,7 @@ I just installed Virtual Server 2005 for a customer yesterday, and I thought I'd
 
 Here are my thoughts regarding Virtual Server 2005, in no particular order:
 
-* First of all, I don't like web-based interfaces. I just dont. I'd rather have a traditional application any day of the week.
+* First of all, I don't like web-based interfaces. I just don't. I'd rather have a traditional application any day of the week.
 
 * If you absolutely _must_ use a web-based interface, at least make it browser- and platform-independent. The Virtual Server 2005 interface uses ActiveX controls, which means you must use Internet Explorer on Windows.
 
