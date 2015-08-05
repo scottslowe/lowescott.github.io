@@ -6,9 +6,7 @@ layout: post
 slug: ok-i-had-to-comment-on-this
 title: OK, I Had to Comment on This
 wordpress_id: 592
-categories:
-- Microsoft
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Microsoft

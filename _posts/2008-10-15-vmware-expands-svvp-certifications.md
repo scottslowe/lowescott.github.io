@@ -6,9 +6,7 @@ layout: post
 slug: vmware-expands-svvp-certifications
 title: VMware Expands SVVP Certifications
 wordpress_id: 989
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - Citrix
 - ESX

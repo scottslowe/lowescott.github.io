@@ -6,12 +6,12 @@ layout: post
 slug: data-ontap-upgrade
 title: Data ONTAP Upgrade
 wordpress_id: 464
-categories:
-- Storage
+categories: Rant
 tags:
 - Macintosh
 - NetApp
 - ONTAP
+- Storage
 ---
 
 To be honest, there are times when using [Mac OS X](http://www.apple.com/macosx/) can be difficult. With the overwhelming installed base of Windows and the attention of the media darling Linux, vendors will often provide instructions on how to do something with Windows or Linux, but not from Mac OS X. Sometimes the Linux instructions work, but many times they don't, and the Windows instructions typically involve running some sort of Windows executable that won't, of course, run on Mac OS X. What is one to do, then?

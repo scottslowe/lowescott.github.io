@@ -6,8 +6,7 @@ layout: post
 slug: failed-disks-with-the-data-ontap-simulator
 title: Failed Disks with the Data ONTAP Simulator
 wordpress_id: 509
-categories:
-- Storage
+categories: Information
 tags:
 - NetApp
 - Storage

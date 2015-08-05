@@ -6,9 +6,7 @@ layout: post
 slug: proving-vmware-over-nfs
 title: Proving VMware Over NFS
 wordpress_id: 605
-categories:
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - NAS

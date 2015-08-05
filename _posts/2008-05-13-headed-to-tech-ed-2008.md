@@ -6,9 +6,7 @@ layout: post
 slug: headed-to-tech-ed-2008
 title: Headed to Tech-Ed 2008
 wordpress_id: 707
-categories:
-- Microsoft
-- Virtualization
+categories: General
 tags:
 - HyperV
 - Microsoft

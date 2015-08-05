@@ -6,9 +6,7 @@ layout: post
 slug: nfs-for-vmware-storage
 title: NFS for VMware Storage
 wordpress_id: 548
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - NAS
 - NetApp

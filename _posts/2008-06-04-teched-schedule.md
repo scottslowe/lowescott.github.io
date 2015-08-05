@@ -6,9 +6,7 @@ layout: post
 slug: teched-schedule
 title: TechEd Schedule
 wordpress_id: 721
-categories:
-- Microsoft
-- Virtualization
+categories: General
 tags:
 - HyperV
 - Microsoft

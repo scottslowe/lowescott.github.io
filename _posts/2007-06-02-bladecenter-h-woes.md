@@ -6,11 +6,10 @@ layout: post
 slug: bladecenter-h-woes
 title: BladeCenter H Woes
 wordpress_id: 463
-categories:
-- General
+categories: Rant
+tags:
 - Networking
 - Storage
-tags:
 - Hardware
 - IBM
 - iSCSI

@@ -6,15 +6,14 @@ layout: post
 slug: creating-ucs-service-profiles-part-1-networking-elements
 title: 'Creating UCS Service Profiles Part 1: Networking Elements'
 wordpress_id: 1916
-categories:
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - Cisco
 - Hardware
 - Networking
 - UCS
 - VLAN
+- Virtualization
 ---
 
 This article is part 1 of a series of posts that provide some additional information on creating UCS service profiles. In this part of the series, I provide some guidelines on networking-related elements that should be created before you create a UCS service profile. By creating these elements before creating the service profiles or service profile template, the process of creating the service profile or service profile template is a bit smoother.

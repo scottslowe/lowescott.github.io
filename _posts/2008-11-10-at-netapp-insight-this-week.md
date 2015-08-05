@@ -6,8 +6,7 @@ layout: post
 slug: at-netapp-insight-this-week
 title: At NetApp Insight This Week
 wordpress_id: 1022
-categories:
-- Storage
+categories: General
 tags:
 - NetApp
 - Storage

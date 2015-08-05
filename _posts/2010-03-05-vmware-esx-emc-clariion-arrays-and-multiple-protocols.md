@@ -6,9 +6,7 @@ layout: post
 slug: vmware-esx-emc-clariion-arrays-and-multiple-protocols
 title: VMware ESX, EMC CLARiiON Arrays, and Multiple Protocols
 wordpress_id: 1856
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - EMC
 - FibreChannel

@@ -6,9 +6,7 @@ layout: post
 slug: netapp-ossv-with-vmware-esx-server
 title: NetApp OSSV with VMware ESX Server
 wordpress_id: 718
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - NetApp

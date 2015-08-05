@@ -6,9 +6,7 @@ layout: post
 slug: nifty-nfs-vmware-trick
 title: Nifty NFS-VMware Trick
 wordpress_id: 550
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - NAS
 - NetApp

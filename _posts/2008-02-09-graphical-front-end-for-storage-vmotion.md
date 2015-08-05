@@ -6,9 +6,7 @@ layout: post
 slug: graphical-front-end-for-storage-vmotion
 title: Graphical Front-End for Storage VMotion
 wordpress_id: 628
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Storage
 - Virtualization

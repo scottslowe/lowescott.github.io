@@ -6,13 +6,12 @@ layout: post
 slug: using-ip-based-storage-with-vmware-vsphere-on-cisco-ucs
 title: Using IP-Based Storage with VMware vSphere on Cisco UCS
 wordpress_id: 1815
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - iSCSI
 - NFS
+- Storage
 - UCS
 - Vblock
 - Virtualization

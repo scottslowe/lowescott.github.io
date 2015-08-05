@@ -6,8 +6,7 @@ layout: post
 slug: more-on-microsofts-calling-home-problem
 title: More on Microsoft's Calling Home Problem
 wordpress_id: 270
-categories:
-- Microsoft
+categories: Rant
 tags:
 - Microsoft
 - Privacy

@@ -6,9 +6,7 @@ layout: post
 slug: creating-ucs-service-profiles-part-2-storage-elements
 title: 'Creating UCS Service Profiles Part 2: Storage Elements'
 wordpress_id: 1918
-categories:
-- Storage
-- Virtualization
+categories: Tutorial
 tags:
 - Cisco
 - Hardware

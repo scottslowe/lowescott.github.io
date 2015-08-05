@@ -6,12 +6,12 @@ layout: post
 slug: creating-ucs-service-profiles-part-4-all-together-now
 title: 'Creating UCS Service Profiles Part 4: All Together Now'
 wordpress_id: 1940
-categories:
-- Virtualization
+categories: Tutorial
 tags:
 - Cisco
 - Hardware
 - UCS
+- Virtualization
 ---
 
 This is the fourth and final post in my series on creating Cisco Unified Computing System (UCS) service profiles. What I've tried to do so far in this series is define the various elements that I recommend you create or define before you start trying to create a service profile or service profile template. Certainly you could start creating service profiles right off the bat, but I've found it easier to have all these other elements defined first. In [part 1][1] of the series, I showed you what networking-related elements to define. In [part 2][2] of the series, I described the storage-related elements, and in [part 3][3] of the series I covered the remaining elements.

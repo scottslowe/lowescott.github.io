@@ -6,12 +6,12 @@ layout: post
 slug: creating-ucs-service-profiles-part-3-other-elements
 title: 'Creating UCS Service Profiles Part 3: Other Elements'
 wordpress_id: 1926
-categories:
-- Virtualization
+categories: Tutorial
 tags:
 - Cisco
 - Hardware
 - UCS
+- Virtualization
 ---
 
 This is part 3 of a series of posts on the various elements involved in creating UCS service profiles. In [part 1][1], I discussed the networking-related elements. In [part 2][2], I covered the storage-related elements. In this post, I'll discuss all other elements. The next and final post will bring all the elements together and create a service profile or service profile template.

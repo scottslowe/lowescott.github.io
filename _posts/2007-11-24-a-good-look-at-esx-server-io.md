@@ -6,8 +6,7 @@ layout: post
 slug: a-good-look-at-esx-server-io
 title: A Good Look at ESX Server I/O
 wordpress_id: 583
-categories:
-- Storage
+categories: Information
 tags:
 - ESX
 - NetApp
