@@ -60,6 +60,7 @@ script
 
 chdir /var/etcd
 exec /usr/local/bin/etcd >>/var/log/etcd.log 2>&1
+end script
 {% endhighlight %}
 
 This is a reasonably straightforward Upstart script, so I won't bother spending a great deal of time explaining it. Note that if you chose not to move the `etcd` binary to `/usr/local/bin`, you'll have to edit this Upstart script to point to the correct location of the binary.
