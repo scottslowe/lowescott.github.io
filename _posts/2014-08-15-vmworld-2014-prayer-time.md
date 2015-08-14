@@ -6,9 +6,7 @@ layout: post
 slug: vmworld-2014-prayer-time
 title: VMworld 2014 Prayer Time
 wordpress_id: 3497
-categories:
-- General
-- Personal
+categories: Information
 tags:
 - Christianity
 - Personal
