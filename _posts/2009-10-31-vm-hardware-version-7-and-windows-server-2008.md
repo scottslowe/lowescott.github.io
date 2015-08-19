@@ -6,9 +6,7 @@ layout: post
 slug: vm-hardware-version-7-and-windows-server-2008
 title: VM Hardware Version 7 and Windows Server 2008
 wordpress_id: 1718
-categories:
-- Microsoft
-- Virtualization
+categories: Information
 tags:
 - Microsoft
 - Virtualization
