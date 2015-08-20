@@ -6,8 +6,7 @@ layout: post
 slug: new-version-of-esxpress-supports-vsphere
 title: New Version of esXpress Supports vSphere
 wordpress_id: 1479
-categories:
-- Virtualization
+categories: News
 tags:
 - Backup
 - Deduplication

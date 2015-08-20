@@ -6,8 +6,7 @@ layout: post
 slug: im-writing-a-book
 title: I'm Writing a Book!
 wordpress_id: 1142
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - Writing

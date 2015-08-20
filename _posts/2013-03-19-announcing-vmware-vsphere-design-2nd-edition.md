@@ -6,8 +6,7 @@ layout: post
 slug: announcing-vmware-vsphere-design-2nd-edition
 title: Announcing VMware vSphere Design, 2nd Edition
 wordpress_id: 3113
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

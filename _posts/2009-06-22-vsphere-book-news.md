@@ -6,8 +6,7 @@ layout: post
 slug: vsphere-book-news
 title: vSphere Book News
 wordpress_id: 1409
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

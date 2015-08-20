@@ -6,8 +6,7 @@ layout: post
 slug: im-speaking-at-virtualization-congress-2009
 title: I'm Speaking at Virtualization Congress 2009!
 wordpress_id: 1141
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 ---

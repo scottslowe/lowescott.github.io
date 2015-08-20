@@ -6,8 +6,7 @@ layout: post
 slug: mastering-vmware-vsphere-40
 title: Mastering VMware vSphere 4.0
 wordpress_id: 1309
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

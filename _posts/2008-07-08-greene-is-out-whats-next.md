@@ -6,8 +6,7 @@ layout: post
 slug: greene-is-out-whats-next
 title: Greene is Out; What's Next?
 wordpress_id: 756
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

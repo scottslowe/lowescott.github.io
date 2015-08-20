@@ -6,8 +6,7 @@ layout: post
 slug: vmware-releases-a-trio-of-new-products
 title: VMware Releases a Trio of New Products
 wordpress_id: 1461
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

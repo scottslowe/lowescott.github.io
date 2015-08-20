@@ -6,8 +6,7 @@ layout: post
 slug: mastering-vmware-vsphere-4-is-out
 title: Mastering VMware vSphere 4 is Out!
 wordpress_id: 1535
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

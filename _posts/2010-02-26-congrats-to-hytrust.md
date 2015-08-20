@@ -6,8 +6,7 @@ layout: post
 slug: congrats-to-hytrust
 title: Congrats to HyTrust
 wordpress_id: 1852
-categories:
-- Virtualization
+categories: News
 tags:
 - Security
 - Virtualization

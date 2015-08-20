@@ -6,8 +6,7 @@ layout: post
 slug: vwire-launched
 title: vWire Launched
 wordpress_id: 1389
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: partner-exchange-2010-session-techmgt0921
 title: Partner Exchange 2010 Session TECHMGT0921
 wordpress_id: 1832
-categories:
-- Virtualization
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

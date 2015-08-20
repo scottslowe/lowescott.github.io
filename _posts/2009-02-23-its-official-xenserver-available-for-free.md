@@ -6,8 +6,7 @@ layout: post
 slug: its-official-xenserver-available-for-free
 title: 'It''s Official: XenServer Available for Free'
 wordpress_id: 1207
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - Virtualization

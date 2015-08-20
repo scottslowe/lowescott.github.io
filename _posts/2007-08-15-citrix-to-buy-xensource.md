@@ -6,8 +6,7 @@ layout: post
 slug: citrix-to-buy-xensource
 title: Citrix to buy XenSource
 wordpress_id: 504
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - Microsoft

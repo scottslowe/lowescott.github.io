@@ -6,8 +6,7 @@ layout: post
 slug: announcement-vmware-vsphere-training-video
 title: 'Announcement: VMware vSphere Training Video'
 wordpress_id: 2580
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

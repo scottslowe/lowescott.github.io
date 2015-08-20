@@ -6,8 +6,7 @@ layout: post
 slug: mastering-vmware-vsphere-5-now-available
 title: Mastering VMware vSphere 5 Now Available
 wordpress_id: 2442
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

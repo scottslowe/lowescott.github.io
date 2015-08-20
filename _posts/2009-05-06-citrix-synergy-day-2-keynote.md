@@ -6,8 +6,7 @@ layout: post
 slug: citrix-synergy-day-2-keynote
 title: Citrix Synergy Day 2 Keynote
 wordpress_id: 1319
-categories:
-- Virtualization
+categories: Liveblog
 tags:
 - Apple
 - Citrix

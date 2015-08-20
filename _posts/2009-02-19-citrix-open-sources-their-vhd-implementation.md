@@ -6,8 +6,7 @@ layout: post
 slug: citrix-open-sources-their-vhd-implementation
 title: Citrix Open Sources Their VHD Implementation
 wordpress_id: 1205
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - HyperV

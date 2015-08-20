@@ -6,8 +6,7 @@ layout: post
 slug: get-used-to-vsphere
 title: Get Used to vSphere
 wordpress_id: 1103
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: general-session-at-vmware-pex-2012-day-1
 title: General Session at VMware PEX 2012 Day 1
 wordpress_id: 2536
-categories:
-- Virtualization
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

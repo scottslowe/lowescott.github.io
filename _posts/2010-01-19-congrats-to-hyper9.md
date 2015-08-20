@@ -6,8 +6,7 @@ layout: post
 slug: congrats-to-hyper9
 title: Congrats to Hyper9
 wordpress_id: 1800
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 ---

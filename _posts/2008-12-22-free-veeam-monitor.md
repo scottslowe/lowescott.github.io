@@ -6,8 +6,7 @@ layout: post
 slug: free-veeam-monitor
 title: Free Veeam Monitor
 wordpress_id: 1108
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - ESXi

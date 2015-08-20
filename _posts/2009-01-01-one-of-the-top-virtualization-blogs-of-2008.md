@@ -6,8 +6,7 @@ layout: post
 slug: one-of-the-top-virtualization-blogs-of-2008
 title: One of the "Top Virtualization Blogs" of 2008
 wordpress_id: 1115
-categories:
-- Virtualization
+categories: News
 tags:
 - Blogging
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: vmware-keynote-automating-dr-with-vmware-srm
 title: VMware Keynote - Automating DR with VMware SRM
 wordpress_id: 938
-categories:
-- Virtualization
+categories: Liveblog
 tags:
 - Virtualization
 - VMotion

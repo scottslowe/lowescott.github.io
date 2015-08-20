@@ -6,8 +6,7 @@ layout: post
 slug: vsphere-4-available-for-download
 title: vSphere 4 Available for Download
 wordpress_id: 1369
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

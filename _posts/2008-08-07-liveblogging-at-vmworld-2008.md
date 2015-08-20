@@ -6,8 +6,7 @@ layout: post
 slug: liveblogging-at-vmworld-2008
 title: Liveblogging at VMworld 2008
 wordpress_id: 805
-categories:
-- Virtualization
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

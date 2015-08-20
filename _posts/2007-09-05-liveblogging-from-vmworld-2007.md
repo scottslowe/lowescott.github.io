@@ -6,11 +6,11 @@ layout: post
 slug: liveblogging-from-vmworld-2007
 title: Liveblogging from VMworld 2007
 wordpress_id: 518
-categories:
-- Virtualization
+categories: Liveblog
 tags:
 - Virtualization
 - VMware
+- VMworld2007
 ---
 
 Like [Alessandro at virtualization.info](http://www.virtualization.info/2007/09/virtualizationinfo-will-blog-live-from.html) and [Vincent at Virtrix](http://virtrix.blogspot.com/2007/09/virtrix-will-blog-live-from-vmworld.html), I'll be liveblogging next week from VMworld 2007 in San Francisco, CA, USA. (I actually thought I had announced this fact in a previous blog post about VMworld 2007, but I went back and looked and apparently I didn't. Go figure.)

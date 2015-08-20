@@ -6,8 +6,7 @@ layout: post
 slug: citrix-synergy-day-1-keynote
 title: Citrix Synergy Day 1 Keynote
 wordpress_id: 1315
-categories:
-- Virtualization
+categories: Liveblog
 tags:
 - Citrix
 - VDI

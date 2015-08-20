@@ -6,8 +6,7 @@ layout: post
 slug: new-vsphere-resource-by-train-signal
 title: New vSphere Resource by Train Signal
 wordpress_id: 2199
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

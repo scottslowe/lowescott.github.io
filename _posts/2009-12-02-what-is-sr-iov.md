@@ -6,8 +6,7 @@ layout: post
 slug: what-is-sr-iov
 title: What is SR-IOV?
 wordpress_id: 1760
-categories:
-- Virtualization
+categories: Education
 tags:
 - Hardware
 - HyperV

@@ -6,8 +6,7 @@ layout: post
 slug: vmm-beta-15-is-here
 title: VMM Beta 1.5 is Here
 wordpress_id: 1140
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - iPhone

@@ -6,8 +6,7 @@ layout: post
 slug: vmware-vexpert-program-officially-launched
 title: VMware vExpert Program Officially Launched
 wordpress_id: 1134
-categories:
-- Virtualization
+categories: News
 tags:
 - vExpert
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: new-version-of-hyper9-available
 title: New Version of Hyper9 Available
 wordpress_id: 1475
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 ---

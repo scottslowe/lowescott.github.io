@@ -6,8 +6,7 @@ layout: post
 slug: hyper9-vmm-released
 title: Hyper9 VMM Released
 wordpress_id: 1390
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - HyperV
