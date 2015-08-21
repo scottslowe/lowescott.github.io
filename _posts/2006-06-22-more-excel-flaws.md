@@ -6,8 +6,7 @@ layout: post
 slug: more-excel-flaws
 title: More Excel Flaws
 wordpress_id: 274
-categories:
-- Security
+categories: News
 tags:
 - Microsoft
 - Office

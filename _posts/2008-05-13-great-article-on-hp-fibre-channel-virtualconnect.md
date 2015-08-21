@@ -6,8 +6,7 @@ layout: post
 slug: great-article-on-hp-fibre-channel-virtualconnect
 title: Great Article on HP Fibre Channel VirtualConnect
 wordpress_id: 706
-categories:
-- Storage
+categories: Information
 tags:
 - Hardware
 - SAN

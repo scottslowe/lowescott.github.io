@@ -6,10 +6,7 @@ layout: post
 slug: configuration-for-protecting-vmotion
 title: Configuration for Protecting VMotion
 wordpress_id: 653
-categories:
-- Networking
-- Security
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - ESX

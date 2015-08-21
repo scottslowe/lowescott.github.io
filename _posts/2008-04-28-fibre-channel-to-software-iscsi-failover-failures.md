@@ -6,9 +6,7 @@ layout: post
 slug: fibre-channel-to-software-iscsi-failover-failures
 title: Fibre Channel to Software iSCSI Failover Failures
 wordpress_id: 695
-categories:
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - iSCSI

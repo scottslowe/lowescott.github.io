@@ -6,9 +6,7 @@ layout: post
 slug: the-changing-face-of-virtualization
 title: The Changing Face of Virtualization
 wordpress_id: 880
-categories:
-- Macintosh
-- Virtualization
+categories: Rant
 tags:
 - Apple
 - Fusion

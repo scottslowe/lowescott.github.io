@@ -6,9 +6,7 @@ layout: post
 slug: disabling-rdp-clipboard-redirection
 title: Disabling RDP Clipboard Redirection
 wordpress_id: 559
-categories:
-- Microsoft
-- Virtualization
+categories: Explanation
 tags:
 - Microsoft
 - VDI

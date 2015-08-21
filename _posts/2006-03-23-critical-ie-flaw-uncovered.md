@@ -6,8 +6,7 @@ layout: post
 slug: critical-ie-flaw-uncovered
 title: Critical IE Flaw Uncovered
 wordpress_id: 209
-categories:
-- Security
+categories: News
 tags:
 - Microsoft
 - Security

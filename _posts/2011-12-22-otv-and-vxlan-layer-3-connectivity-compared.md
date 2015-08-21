@@ -6,9 +6,7 @@ layout: post
 slug: otv-and-vxlan-layer-3-connectivity-compared
 title: OTV and VXLAN Layer 3 Connectivity Compared
 wordpress_id: 2506
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Networking
 - OTV

@@ -6,9 +6,9 @@ layout: post
 slug: listing-unique-projects-used-by-mailtags
 title: Listing Unique Projects Used by MailTags
 wordpress_id: 510
-categories:
-- Macintosh
+categories: Tutorial
 tags:
+- CLI
 - Macintosh
 - Tagging
 - Tags

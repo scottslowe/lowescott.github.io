@@ -6,9 +6,7 @@ layout: post
 slug: revisiting-vxlan-and-layer-3-connectivity
 title: Revisiting VXLAN and Layer 3 Connectivity
 wordpress_id: 2496
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Networking
 - OTV

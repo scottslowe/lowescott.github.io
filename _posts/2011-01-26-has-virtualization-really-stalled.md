@@ -6,8 +6,7 @@ layout: post
 slug: has-virtualization-really-stalled
 title: Has Virtualization Really Stalled?
 wordpress_id: 2226
-categories:
-- Virtualization
+categories: Musing
 tags:
 - Virtualization
 - VMware

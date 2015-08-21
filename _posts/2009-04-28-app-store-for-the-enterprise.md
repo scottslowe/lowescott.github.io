@@ -6,8 +6,7 @@ layout: post
 slug: app-store-for-the-enterprise
 title: App Store for the Enterprise?
 wordpress_id: 1313
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Virtualization
 - VMware

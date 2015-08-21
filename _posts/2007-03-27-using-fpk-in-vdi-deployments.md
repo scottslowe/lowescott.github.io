@@ -6,8 +6,7 @@ layout: post
 slug: using-fpk-in-vdi-deployments
 title: Using FPK in VDI Deployments
 wordpress_id: 435
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - VDI

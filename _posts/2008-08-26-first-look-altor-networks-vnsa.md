@@ -6,10 +6,7 @@ layout: post
 slug: first-look-altor-networks-vnsa
 title: 'First Look: Altor Networks VNSA'
 wordpress_id: 843
-categories:
-- Networking
-- Security
-- Virtualization
+categories: Review
 tags:
 - ESX
 - ESXi

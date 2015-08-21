@@ -6,8 +6,7 @@ layout: post
 slug: omnifocus-for-iphone-first-impressions
 title: OmniFocus for iPhone First Impressions
 wordpress_id: 959
-categories:
-- Macintosh
+categories: Review
 tags:
 - Apple
 - iPhone

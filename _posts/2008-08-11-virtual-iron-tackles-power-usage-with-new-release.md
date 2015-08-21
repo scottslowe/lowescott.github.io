@@ -6,8 +6,7 @@ layout: post
 slug: virtual-iron-tackles-power-usage-with-new-release
 title: Virtual Iron Tackles Power Usage with New Release
 wordpress_id: 800
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMotion

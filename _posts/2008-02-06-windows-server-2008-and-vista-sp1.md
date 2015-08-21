@@ -6,9 +6,7 @@ layout: post
 slug: windows-server-2008-and-vista-sp1
 title: Windows Server 2008 and Vista SP1
 wordpress_id: 624
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - Microsoft
 - Virtualization

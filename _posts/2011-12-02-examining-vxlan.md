@@ -6,9 +6,7 @@ layout: post
 slug: examining-vxlan
 title: Examining VXLAN
 wordpress_id: 2488
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Networking
 - vCloud

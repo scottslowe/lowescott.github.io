@@ -6,9 +6,9 @@ layout: post
 slug: listing-all-unique-mailtags-keywords
 title: Listing All Unique MailTags Keywords
 wordpress_id: 511
-categories:
-- Macintosh
+categories: Tutorial
 tags:
+- CLI
 - Macintosh
 - Tagging
 - Tags

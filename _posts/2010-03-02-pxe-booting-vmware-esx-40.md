@@ -6,8 +6,7 @@ layout: post
 slug: pxe-booting-vmware-esx-40
 title: PXE Booting VMware ESX 4.0
 wordpress_id: 1854
-categories:
-- Virtualization
+categories: Tutorial
 tags:
 - Cisco
 - ESX

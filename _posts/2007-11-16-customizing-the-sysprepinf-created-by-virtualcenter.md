@@ -6,8 +6,7 @@ layout: post
 slug: customizing-the-sysprepinf-created-by-virtualcenter
 title: Customizing the Sysprep.inf Created by VirtualCenter
 wordpress_id: 580
-categories:
-- Virtualization
+categories: Tutorial
 tags:
 - Microsoft
 - VDI

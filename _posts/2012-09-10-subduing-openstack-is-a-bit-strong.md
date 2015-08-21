@@ -6,8 +6,7 @@ layout: post
 slug: subduing-openstack-is-a-bit-strong
 title: Subduing OpenStack Is a Bit Strong
 wordpress_id: 2822
-categories:
-- Virtualization
+categories: Rant
 tags:
 - OpenStack
 - OSS

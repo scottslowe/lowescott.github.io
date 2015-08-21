@@ -6,8 +6,7 @@ layout: post
 slug: theres-got-to-be-a-better-way
 title: There's Got to be a Better Way
 wordpress_id: 59
-categories:
-- Security
+categories: Rant
 tags:
 - Security
 ---

@@ -6,9 +6,7 @@ layout: post
 slug: understanding-nic-utilization-in-vmware-esx
 title: Understanding NIC Utilization in VMware ESX
 wordpress_id: 764
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - ESX

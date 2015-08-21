@@ -6,9 +6,7 @@ layout: post
 slug: creating-a-bootable-esxi-usb-stick-on-mac-os-x
 title: Creating a Bootable ESXi USB Stick on Mac OS X
 wordpress_id: 1127
-categories:
-- Macintosh
-- Virtualization
+categories: Tutorial
 tags:
 - ESXi
 - Macintosh

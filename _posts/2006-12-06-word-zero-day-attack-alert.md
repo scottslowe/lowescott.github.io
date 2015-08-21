@@ -6,9 +6,9 @@ layout: post
 slug: word-zero-day-attack-alert
 title: Word Zero-Day Attack Alert
 wordpress_id: 380
-categories:
-- Security
+categories: News
 tags:
+- Microsoft
 - Office
 - Security
 ---

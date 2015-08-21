@@ -6,8 +6,7 @@ layout: post
 slug: fixing-repeating-itunes-firewall-prompt
 title: Fixing Repeating iTunes Firewall Prompt
 wordpress_id: 2490
-categories:
-- Macintosh
+categories: Tutorial
 tags:
 - Macintosh
 - Security

@@ -6,8 +6,7 @@ layout: post
 slug: configuring-inter-vlan-routing
 title: Configuring Inter-VLAN Routing
 wordpress_id: 1902
-categories:
-- Networking
+categories: Tutorial
 tags:
 - Cisco
 - CLI

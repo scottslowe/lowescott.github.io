@@ -6,9 +6,9 @@ layout: post
 slug: converting-ssl-certificates-with-openssl
 title: Converting SSL Certificates with OpenSSL
 wordpress_id: 276
-categories:
-- Security
+categories: Tutorial
 tags:
+- CLI
 - Encryption
 - Interoperability
 - Security

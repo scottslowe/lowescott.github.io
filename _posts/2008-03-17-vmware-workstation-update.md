@@ -6,8 +6,7 @@ layout: post
 slug: vmware-workstation-update
 title: VMware Workstation Update
 wordpress_id: 661
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

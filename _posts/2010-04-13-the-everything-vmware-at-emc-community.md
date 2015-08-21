@@ -6,11 +6,10 @@ layout: post
 slug: the-everything-vmware-at-emc-community
 title: The Everything VMware at EMC Community
 wordpress_id: 1880
-categories:
-- Storage
-- Virtualization
+categories: News
 tags:
 - EMC
+- Storage
 - Virtualization
 - VMware
 ---

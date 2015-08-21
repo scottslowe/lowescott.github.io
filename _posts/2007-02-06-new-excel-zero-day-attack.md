@@ -6,8 +6,7 @@ layout: post
 slug: new-excel-zero-day-attack
 title: New Excel Zero-Day Attack
 wordpress_id: 409
-categories:
-- Security
+categories: News
 tags:
 - Macintosh
 - Microsoft

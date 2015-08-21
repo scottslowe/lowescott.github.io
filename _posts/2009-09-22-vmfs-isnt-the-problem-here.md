@@ -6,8 +6,7 @@ layout: post
 slug: vmfs-isnt-the-problem-here
 title: VMFS Isn't the Problem Here
 wordpress_id: 1660
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Backup
 - Virtualization

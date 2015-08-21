@@ -6,8 +6,7 @@ layout: post
 slug: killing-ads-in-rss-feeds-in-vienna
 title: Killing Ads in RSS Feeds in Vienna
 wordpress_id: 2574
-categories:
-- Macintosh
+categories: Tutorial
 tags:
 - Macintosh
 ---

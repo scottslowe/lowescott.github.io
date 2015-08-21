@@ -6,10 +6,7 @@ layout: post
 slug: vmotion-and-vlan-security
 title: VMotion and VLAN Security
 wordpress_id: 651
-categories:
-- Networking
-- Security
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Networking

@@ -6,9 +6,7 @@ layout: post
 slug: security-flaw-found-in-vmware
 title: Security Flaw Found in VMware
 wordpress_id: 146
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - Security
 - Virtualization

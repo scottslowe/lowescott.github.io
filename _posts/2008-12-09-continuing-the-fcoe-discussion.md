@@ -6,8 +6,7 @@ layout: post
 slug: continuing-the-fcoe-discussion
 title: Continuing the FCoE Discussion
 wordpress_id: 1088
-categories:
-- Storage
+categories: Musing
 tags:
 - FibreChannel
 - iSCSI

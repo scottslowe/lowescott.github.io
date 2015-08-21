@@ -6,9 +6,7 @@ layout: post
 slug: emc-celerra-optimizations-for-vmware-on-nfs
 title: EMC Celerra Optimizations for VMware on NFS
 wordpress_id: 1809
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - Celerra
 - EMC

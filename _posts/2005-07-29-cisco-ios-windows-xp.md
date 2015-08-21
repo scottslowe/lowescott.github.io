@@ -6,8 +6,7 @@ layout: post
 slug: cisco-ios-windows-xp
 title: Cisco IOS = Windows XP?
 wordpress_id: 60
-categories:
-- Security
+categories: Musing
 tags:
 - Cisco
 - Security

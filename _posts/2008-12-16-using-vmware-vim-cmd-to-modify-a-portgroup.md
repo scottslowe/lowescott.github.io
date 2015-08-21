@@ -6,9 +6,7 @@ layout: post
 slug: using-vmware-vim-cmd-to-modify-a-portgroup
 title: Using vmware-vim-cmd to Modify a Portgroup
 wordpress_id: 1100
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Networking

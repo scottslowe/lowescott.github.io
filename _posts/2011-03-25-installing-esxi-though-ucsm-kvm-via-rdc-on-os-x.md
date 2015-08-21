@@ -6,9 +6,7 @@ layout: post
 slug: installing-esxi-though-ucsm-kvm-via-rdc-on-os-x
 title: Installing ESXi though UCSM KVM via RDC on OS X
 wordpress_id: 2249
-categories:
-- Macintosh
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - ESXi

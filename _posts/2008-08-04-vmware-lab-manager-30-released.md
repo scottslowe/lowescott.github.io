@@ -6,8 +6,7 @@ layout: post
 slug: vmware-lab-manager-30-released
 title: VMware Lab Manager 3.0 Released
 wordpress_id: 784
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - Virtualization
