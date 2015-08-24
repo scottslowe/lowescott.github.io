@@ -6,9 +6,7 @@ layout: post
 slug: gestaltit-tech-field-day
 title: GestaltIT Tech Field Day
 wordpress_id: 1728
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Storage
 - Virtualization

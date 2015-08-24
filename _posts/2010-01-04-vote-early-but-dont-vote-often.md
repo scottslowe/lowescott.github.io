@@ -6,11 +6,7 @@ layout: post
 slug: vote-early-but-dont-vote-often
 title: Vote Early (But Don't Vote Often)
 wordpress_id: 1780
-categories:
-- General
-- Networking
-- Storage
-- Virtualization
+categories: General
 tags:
 - Networking
 - Storage

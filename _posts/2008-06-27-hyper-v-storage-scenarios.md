@@ -6,10 +6,7 @@ layout: post
 slug: hyper-v-storage-scenarios
 title: Hyper-V Storage Scenarios
 wordpress_id: 751
-categories:
-- Microsoft
-- Storage
-- Virtualization
+categories: Information
 tags:
 - HyperV
 - iSCSI

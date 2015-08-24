@@ -6,8 +6,7 @@ layout: post
 slug: vmware-lab-manager-design-considerations
 title: 'VMware Lab Manager Design Considerations '
 wordpress_id: 1678
-categories:
-- Virtualization
+categories: GuestAuthor
 tags:
 - Virtualization
 - VMware

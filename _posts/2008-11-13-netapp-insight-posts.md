@@ -6,8 +6,7 @@ layout: post
 slug: netapp-insight-posts
 title: NetApp Insight Posts
 wordpress_id: 1027
-categories:
-- Storage
+categories: General
 tags:
 - NetApp
 - Storage

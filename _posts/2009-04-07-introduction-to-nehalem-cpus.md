@@ -6,8 +6,7 @@ layout: post
 slug: introduction-to-nehalem-cpus
 title: Introduction to "Nehalem" CPUs
 wordpress_id: 1272
-categories:
-- Education
+categories: GuestAuthor
 tags:
 - Hardware
 - Intel

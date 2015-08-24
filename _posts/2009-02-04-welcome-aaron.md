@@ -6,8 +6,7 @@ layout: post
 slug: welcome-aaron
 title: Welcome, Aaron!
 wordpress_id: 1158
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - General

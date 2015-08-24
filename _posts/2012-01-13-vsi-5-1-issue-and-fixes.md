@@ -6,9 +6,7 @@ layout: post
 slug: vsi-5-1-issue-and-fixes
 title: VSI 5.1 Issue and Fixes
 wordpress_id: 2516
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - EMC
 - Storage

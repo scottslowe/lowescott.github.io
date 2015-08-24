@@ -6,9 +6,7 @@ layout: post
 slug: notes-on-some-vmworld-vendor-meetings
 title: Notes on Some VMworld Vendor Meetings
 wordpress_id: 1637
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Storage
 - Virtualization

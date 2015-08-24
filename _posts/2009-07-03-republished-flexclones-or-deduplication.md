@@ -6,9 +6,7 @@ layout: post
 slug: republished-flexclones-or-deduplication
 title: 'Republished: FlexClones or Deduplication?'
 wordpress_id: 1438
-categories:
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - NetApp
 - Storage

@@ -6,9 +6,7 @@ layout: post
 slug: storage-array-snapshots-with-vmware
 title: Storage Array Snapshots with VMware
 wordpress_id: 722
-categories:
-- Storage
-- Virtualization
+categories: News
 tags:
 - Snapshots
 - Storage

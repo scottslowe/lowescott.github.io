@@ -6,10 +6,7 @@ layout: post
 slug: ucs-class-wrap-up
 title: UCS Class Wrap-Up
 wordpress_id: 1507
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - ESX

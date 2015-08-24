@@ -6,10 +6,7 @@ layout: post
 slug: virtualization-congress-2009-sessions
 title: Virtualization Congress 2009 Sessions
 wordpress_id: 1121
-categories:
-- Networking
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Networking
 - Storage

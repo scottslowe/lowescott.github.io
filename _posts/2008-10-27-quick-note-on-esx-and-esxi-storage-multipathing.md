@@ -6,9 +6,7 @@ layout: post
 slug: quick-note-on-esx-and-esxi-storage-multipathing
 title: Quick Note on ESX and ESXi Storage Multipathing
 wordpress_id: 1001
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - ESXi

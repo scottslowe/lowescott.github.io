@@ -6,9 +6,7 @@ layout: post
 slug: important-note-regarding-vmware-over-nfs
 title: Important Note Regarding VMware over NFS
 wordpress_id: 991
-categories:
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - NAS
 - NetApp

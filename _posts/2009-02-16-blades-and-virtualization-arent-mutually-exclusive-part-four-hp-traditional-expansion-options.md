@@ -6,8 +6,7 @@ layout: post
 slug: blades-and-virtualization-arent-mutually-exclusive-part-four-hp-traditional-expansion-options
 title: "Blades and Virtualization Aren't Mutually Exclusive: Part Four, HP Traditional Expansion Options"
 wordpress_id: 1188
-categories:
-- Virtualization
+categories: GuestAuthor
 tags:
 - bladevrack
 - Hardware

@@ -6,9 +6,7 @@ layout: post
 slug: netapp-rcu-and-vsc
 title: NetApp RCU and VSC
 wordpress_id: 1533
-categories:
-- Storage
-- Virtualization
+categories: Review
 tags:
 - NetApp
 - Storage

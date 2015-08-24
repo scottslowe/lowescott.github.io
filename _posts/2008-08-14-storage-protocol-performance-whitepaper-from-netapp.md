@@ -6,9 +6,7 @@ layout: post
 slug: storage-protocol-performance-whitepaper-from-netapp
 title: Storage Protocol Performance Whitepaper from NetApp
 wordpress_id: 821
-categories:
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - FibreChannel
 - iSCSI

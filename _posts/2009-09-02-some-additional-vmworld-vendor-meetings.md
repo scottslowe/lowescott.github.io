@@ -6,9 +6,7 @@ layout: post
 slug: some-additional-vmworld-vendor-meetings
 title: Some Additional VMworld Vendor Meetings
 wordpress_id: 1639
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - FibreChannel
 - Storage

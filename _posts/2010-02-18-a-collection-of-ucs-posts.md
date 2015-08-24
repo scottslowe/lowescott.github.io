@@ -6,8 +6,7 @@ layout: post
 slug: a-collection-of-ucs-posts
 title: A Collection of UCS Posts
 wordpress_id: 1842
-categories:
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - Hardware

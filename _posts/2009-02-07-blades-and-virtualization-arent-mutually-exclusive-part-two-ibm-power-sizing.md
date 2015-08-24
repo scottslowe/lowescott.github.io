@@ -6,8 +6,7 @@ layout: post
 slug: blades-and-virtualization-arent-mutually-exclusive-part-two-ibm-power-sizing
 title: "Blades and Virtualization Aren't Mutually Exclusive: Part Two, IBM Power Sizing"
 wordpress_id: 1162
-categories:
-- Virtualization
+categories: GuestAuthor
 tags:
 - bladevrack
 - Hardware

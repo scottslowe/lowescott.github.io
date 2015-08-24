@@ -6,8 +6,7 @@ layout: post
 slug: learning-about-emc-storage
 title: Learning About EMC Storage
 wordpress_id: 1656
-categories:
-- Storage
+categories: General
 tags:
 - EMC
 - Storage

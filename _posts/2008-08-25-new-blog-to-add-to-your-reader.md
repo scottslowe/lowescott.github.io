@@ -6,9 +6,7 @@ layout: post
 slug: new-blog-to-add-to-your-reader
 title: New Blog to Add to Your Reader
 wordpress_id: 841
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Blogging
 - NetApp

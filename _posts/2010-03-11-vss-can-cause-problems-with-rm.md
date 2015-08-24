@@ -6,9 +6,7 @@ layout: post
 slug: vss-can-cause-problems-with-rm
 title: VSS Can Cause Problems with RM
 wordpress_id: 1860
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - Snapshot
 - Virtualization

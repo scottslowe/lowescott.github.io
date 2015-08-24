@@ -6,8 +6,7 @@ layout: post
 slug: alas-bladevault-is-no-more
 title: Alas, BladeVault is No More
 wordpress_id: 1175
-categories:
-- General
+categories: Information
 tags:
 - Blogging
 - General

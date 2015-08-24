@@ -6,9 +6,7 @@ layout: post
 slug: netapp-igroup-strategies-for-vmware-esx
 title: NetApp iGroup Strategies for VMware ESX
 wordpress_id: 964
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - FibreChannel

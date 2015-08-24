@@ -6,9 +6,7 @@ layout: post
 slug: a-few-srm-discussion-points
 title: A Few SRM Discussion Points
 wordpress_id: 802
-categories:
-- Storage
-- Virtualization
+categories: Explanation
 tags:
 - Storage
 - Virtualization

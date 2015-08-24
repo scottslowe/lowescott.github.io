@@ -6,9 +6,7 @@ layout: post
 slug: vmware-esx-and-esxi-san-io-issue
 title: VMware ESX and ESXi SAN I/O Issue
 wordpress_id: 1133
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - ESX
 - ESXi

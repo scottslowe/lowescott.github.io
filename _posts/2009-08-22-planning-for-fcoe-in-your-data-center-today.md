@@ -6,9 +6,7 @@ layout: post
 slug: planning-for-fcoe-in-your-data-center-today
 title: Planning for FCoE in Your Data Center Today
 wordpress_id: 1539
-categories:
-- Storage
-- Virtualization
+categories: GuestAuthor
 tags:
 - Cisco
 - FCoE
@@ -17,6 +15,7 @@ tags:
 - NFS
 - SAN
 - Storage
+- Virtualization
 - VMware
 - vSphere
 excerpt: "Here are some thoughts on planning for Fibre Channel over Ethernet (FCoE) in your data center."

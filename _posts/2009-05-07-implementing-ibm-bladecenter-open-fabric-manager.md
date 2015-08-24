@@ -6,7 +6,7 @@ layout: post
 slug: implementing-ibm-bladecenter-open-fabric-manager
 title: Implementing IBM BladeCenter Open Fabric Manager
 wordpress_id: 1323
-categories: Information
+categories: GuestAuthor
 tags:
 - FibreChannel
 - Hardware

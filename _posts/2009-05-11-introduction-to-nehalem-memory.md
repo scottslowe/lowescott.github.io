@@ -6,8 +6,7 @@ layout: post
 slug: introduction-to-nehalem-memory
 title: Introduction to Nehalem Memory
 wordpress_id: 1339
-categories:
-- Education
+categories: GuestAuthor
 tags:
 - Hardware
 - Nehalem

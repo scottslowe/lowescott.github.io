@@ -6,9 +6,7 @@ layout: post
 slug: svmotion-syntax
 title: SVMotion Syntax
 wordpress_id: 1137
-categories:
-- Storage
-- Virtualization
+categories: Information
 tags:
 - CLI
 - Storage

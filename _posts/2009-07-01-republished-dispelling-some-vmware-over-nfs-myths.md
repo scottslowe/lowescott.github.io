@@ -6,9 +6,7 @@ layout: post
 slug: republished-dispelling-some-vmware-over-nfs-myths
 title: 'Republished: Dispelling Some VMware over NFS Myths'
 wordpress_id: 1434
-categories:
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - NFS
 - Storage

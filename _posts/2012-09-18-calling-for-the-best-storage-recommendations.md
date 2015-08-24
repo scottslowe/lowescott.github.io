@@ -6,9 +6,7 @@ layout: post
 slug: calling-for-the-best-storage-recommendations
 title: Calling for the Best Storage Recommendations
 wordpress_id: 2868
-categories:
-- Storage
-- Virtualization
+categories: Rant
 tags:
 - Storage
 - Virtualization
