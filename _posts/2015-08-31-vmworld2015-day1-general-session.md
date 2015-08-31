@@ -3,7 +3,7 @@ author: slowe
 comments: true
 date: 2015-08-31 11:10:00-0800
 layout: post
-title: title
+title: VMworld 2015 Day 1 General Session Liveblog
 categories: Liveblog
 tags:
 - VMworld2015
@@ -36,3 +36,5 @@ This leads to a quick demo of Mobile Backend as a Service as provided by a VMwar
 Li then recaps what she discussed, following the ages-old mantra of "tell people what you're going to tell them, tell them, and then tell them what you told them."
 
 Fathers takes over from Li to summarize what's been shown. I'm going to wrap-up the liveblog at this point, since I have a meeting in just a few minutes and the session is now wrapping up.
+
+**UPDATE**: Sorry about the incorrect title when I first published; I had to run from the Hang Space to a customer meeting and should have done a better job of proofreading.
