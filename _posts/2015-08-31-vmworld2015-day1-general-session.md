@@ -11,7 +11,7 @@ tags:
 - Virtualization
 ---
 
-This is a liveblog for the Day 1 general session at VMworld 2015 in San Francisco. For many people, VMworld started yesterday with the Welcome Receptio in the Solutions Exchange, but today marks the official kick-off to the event. I'll have to end this liveblog shortly before the general session ends in order to make it to some customer meetings.
+This is a liveblog for the Day 1 general session at VMworld 2015 in San Francisco. For many people, VMworld started yesterday with the Welcome Reception in the Solutions Exchange, but today marks the official kick-off to the event. I'll have to end this liveblog shortly before the general session ends in order to make it to some customer meetings.
 
 The keynote kicks off with a short video about the VMware Cloud Academy, where both "legacy" and "cloud-native" apps can enjoy the Unified Hybrid Cloud. Following that video, Carl Eschenbach takes the stage (along with some "apps"). Eschenbach sets the stage for the session by talking about the momentum and volume of success that VMware has enjoyed (and continues to enjoy). He also calls out VMware's philanthropic efforts, via the VMware Foundation and the #vGiveBack program.
 
