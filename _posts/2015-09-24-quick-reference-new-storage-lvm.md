@@ -59,3 +59,5 @@ Make a mount point where this new logical volume will be mounted:
     mkdir -p /mnt/vmstore
 
 Edit `/etc/fstab` to specify the UUID of the new logical volume, the mount point, the file system, and other necessary information. Once you're done, mount the new storage with `mount -a`. All done!
+
+**UPDATE**: Reader Rutger van Esch pointed out that it's not necessary to create the partition before creating the physical volume; you can actually create the physical volume directly on the block device using `pvcreate /dev/sdb`. This makes it easier to do online resizing later down the road. Thanks Rutger!
