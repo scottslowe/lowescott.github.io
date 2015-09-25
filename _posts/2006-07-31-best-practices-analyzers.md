@@ -6,8 +6,7 @@ layout: post
 slug: best-practices-analyzers
 title: Best Practices Analyzers
 wordpress_id: 310
-categories:
-- Microsoft
+categories: Information
 tags:
 - Exchange
 - Microsoft

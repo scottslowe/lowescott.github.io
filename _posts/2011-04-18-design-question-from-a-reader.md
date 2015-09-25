@@ -6,9 +6,7 @@ layout: post
 slug: design-question-from-a-reader
 title: Design Question from a Reader
 wordpress_id: 2273
-categories:
-- Microsoft
-- Virtualization
+categories: Musing
 tags:
 - Microsoft
 - Storage

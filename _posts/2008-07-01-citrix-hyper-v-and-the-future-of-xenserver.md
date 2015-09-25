@@ -6,9 +6,7 @@ layout: post
 slug: citrix-hyper-v-and-the-future-of-xenserver
 title: Citrix, Hyper-V, and the Future of XenServer
 wordpress_id: 753
-categories:
-- Microsoft
-- Virtualization
+categories: Musing
 tags:
 - Citrix
 - HyperV

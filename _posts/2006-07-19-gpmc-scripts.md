@@ -6,8 +6,7 @@ layout: post
 slug: gpmc-scripts
 title: GPMC Scripts
 wordpress_id: 303
-categories:
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Microsoft

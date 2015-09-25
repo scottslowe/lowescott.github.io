@@ -6,10 +6,7 @@ layout: post
 slug: more-on-hyper-v-and-nic-teaming
 title: More on Hyper-V and NIC Teaming
 wordpress_id: 746
-categories:
-- Microsoft
-- Networking
-- Virtualization
+categories: Rant
 tags:
 - HyperV
 - Microsoft

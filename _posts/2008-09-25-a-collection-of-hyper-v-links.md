@@ -6,9 +6,7 @@ layout: post
 slug: a-collection-of-hyper-v-links
 title: A Collection of Hyper-V Links
 wordpress_id: 953
-categories:
-- Microsoft
-- Virtualization
+categories: Information
 tags:
 - HyperV
 - Microsoft

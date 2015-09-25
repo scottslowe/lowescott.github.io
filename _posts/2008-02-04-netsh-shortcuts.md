@@ -6,9 +6,7 @@ layout: post
 slug: netsh-shortcuts
 title: Netsh Shortcuts
 wordpress_id: 621
-categories:
-- Microsoft
-- Networking
+categories: Information
 tags:
 - Microsoft
 - Networking

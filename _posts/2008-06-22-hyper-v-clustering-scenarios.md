@@ -6,9 +6,7 @@ layout: post
 slug: hyper-v-clustering-scenarios
 title: Hyper-V Clustering Scenarios
 wordpress_id: 745
-categories:
-- Microsoft
-- Virtualization
+categories: Information
 tags:
 - HyperV
 - Microsoft

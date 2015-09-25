@@ -6,9 +6,7 @@ layout: post
 slug: quick-migration-revisited
 title: Quick Migration Revisited
 wordpress_id: 677
-categories:
-- Microsoft
-- Virtualization
+categories: Musing
 tags:
 - HyperV
 - Microsoft

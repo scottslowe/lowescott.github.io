@@ -6,9 +6,7 @@ layout: post
 slug: a-discussion-with-jeff-woolsey
 title: A Discussion with Jeff Woolsey
 wordpress_id: 730
-categories:
-- Microsoft
-- Virtualization
+categories: Information
 tags:
 - Citrix
 - HyperV

@@ -6,9 +6,7 @@ layout: post
 slug: windows-7-microsoft-security-essentials-and-proxy-servers
 title: Windows 7, Microsoft Security Essentials, and Proxy Servers
 wordpress_id: 2043
-categories:
-- Microsoft
-- Security
+categories: Rant
 tags:
 - Microsoft
 - Networking

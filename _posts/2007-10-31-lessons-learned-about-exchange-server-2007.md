@@ -6,8 +6,7 @@ layout: post
 slug: lessons-learned-about-exchange-server-2007
 title: Lessons Learned About Exchange Server 2007
 wordpress_id: 567
-categories:
-- Microsoft
+categories: Rant
 tags:
 - ActiveDirectory
 - Exchange

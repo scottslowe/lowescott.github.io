@@ -6,9 +6,7 @@ layout: post
 slug: vmware-esx-svvp-validation-apparently-limited
 title: VMware ESX SVVP Validation Apparently Limited
 wordpress_id: 949
-categories:
-- Microsoft
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - Microsoft

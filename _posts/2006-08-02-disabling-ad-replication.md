@@ -6,8 +6,7 @@ layout: post
 slug: disabling-ad-replication
 title: Disabling AD Replication
 wordpress_id: 312
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Microsoft

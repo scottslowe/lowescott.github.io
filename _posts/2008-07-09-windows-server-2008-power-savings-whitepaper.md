@@ -6,8 +6,7 @@ layout: post
 slug: windows-server-2008-power-savings-whitepaper
 title: Windows Server 2008 Power Savings Whitepaper
 wordpress_id: 758
-categories:
-- Microsoft
+categories: Information
 tags:
 - HyperV
 - Microsoft

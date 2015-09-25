@@ -6,8 +6,7 @@ layout: post
 slug: erroneous-mail-relay-error-with-exchange
 title: Erroneous Mail Relay Error with Exchange
 wordpress_id: 326
-categories:
-- Microsoft
+categories: Explanation
 tags:
 - ActiveDirectory
 - Exchange

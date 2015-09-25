@@ -6,9 +6,7 @@ layout: post
 slug: switching-to-the-mac
 title: Switching to the Mac
 wordpress_id: 708
-categories:
-- Macintosh
-- Microsoft
+categories: Information
 tags:
 - Apple
 - Macintosh

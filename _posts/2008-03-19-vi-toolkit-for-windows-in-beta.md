@@ -6,9 +6,7 @@ layout: post
 slug: vi-toolkit-for-windows-in-beta
 title: VI Toolkit for Windows in Beta
 wordpress_id: 665
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - Microsoft
 - Virtualization

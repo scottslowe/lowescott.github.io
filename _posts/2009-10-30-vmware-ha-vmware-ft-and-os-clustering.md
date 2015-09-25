@@ -6,9 +6,7 @@ layout: post
 slug: vmware-ha-vmware-ft-and-os-clustering
 title: VMware HA, VMware FT, and OS Clustering
 wordpress_id: 1716
-categories:
-- Microsoft
-- Virtualization
+categories: Education
 tags:
 - Microsoft
 - Virtualization

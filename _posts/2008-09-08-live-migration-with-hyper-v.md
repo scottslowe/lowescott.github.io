@@ -6,9 +6,7 @@ layout: post
 slug: live-migration-with-hyper-v
 title: Live Migration with Hyper-V
 wordpress_id: 869
-categories:
-- Microsoft
-- Virtualization
+categories: News
 tags:
 - HyperV
 - Microsoft

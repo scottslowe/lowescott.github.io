@@ -6,9 +6,9 @@ layout: post
 slug: oddity-with-windows-nfs-server
 title: Oddity with Windows NFS Server
 wordpress_id: 586
-categories:
-- Microsoft
+categories: Information
 tags:
+- Microsoft
 - NFS
 - Windows
 ---

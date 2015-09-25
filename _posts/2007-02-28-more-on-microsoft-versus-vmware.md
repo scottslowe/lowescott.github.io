@@ -6,9 +6,7 @@ layout: post
 slug: more-on-microsoft-versus-vmware
 title: More on Microsoft versus VMware
 wordpress_id: 420
-categories:
-- Microsoft
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Microsoft

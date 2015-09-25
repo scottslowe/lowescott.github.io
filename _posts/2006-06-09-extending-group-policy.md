@@ -6,9 +6,9 @@ layout: post
 slug: extending-group-policy
 title: Extending Group Policy
 wordpress_id: 265
-categories:
-- Microsoft
+categories: Information
 tags:
+- Microsoft
 - ActiveDirectory
 - Firefox
 - Interoperability

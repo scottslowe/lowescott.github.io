@@ -6,9 +6,7 @@ layout: post
 slug: more-on-memory-overcommitment
 title: More on Memory Overcommitment
 wordpress_id: 664
-categories:
-- Microsoft
-- Virtualization
+categories: Rant
 tags:
 - Citrix
 - HyperV

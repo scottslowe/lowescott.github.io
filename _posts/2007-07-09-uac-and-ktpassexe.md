@@ -6,8 +6,7 @@ layout: post
 slug: uac-and-ktpassexe
 title: UAC and ktpass.exe
 wordpress_id: 486
-categories:
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Microsoft

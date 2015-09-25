@@ -6,8 +6,7 @@ layout: post
 slug: group-policy-resources
 title: Group Policy Resources
 wordpress_id: 290
-categories:
-- Microsoft
+categories: Information
 tags:
 - ActiveDirectory
 - Microsoft

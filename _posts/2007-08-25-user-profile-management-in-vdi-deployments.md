@@ -6,10 +6,9 @@ layout: post
 slug: user-profile-management-in-vdi-deployments
 title: User Profile Management in VDI Deployments
 wordpress_id: 512
-categories:
-- Microsoft
-- Virtualization
+categories: Explanation
 tags:
+- Microsoft
 - VDI
 - Virtualization
 - VMware

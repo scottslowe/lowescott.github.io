@@ -6,8 +6,7 @@ layout: post
 slug: nis-on-windows-server-2008
 title: NIS on Windows Server 2008
 wordpress_id: 484
-categories:
-- Microsoft
+categories: Rant
 tags:
 - Microsoft
 ---

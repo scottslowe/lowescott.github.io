@@ -6,8 +6,7 @@ layout: post
 slug: delayed-replication-dcs-and-authoritative-restores
 title: Delayed Replication DCs and Authoritative Restores
 wordpress_id: 492
-categories:
-- Microsoft
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Microsoft

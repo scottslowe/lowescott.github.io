@@ -6,10 +6,7 @@ layout: post
 slug: now-ciscos-participation-in-svvp-becomes-clearer
 title: Now Cisco's Participation in SVVP Becomes Clearer
 wordpress_id: 962
-categories:
-- Microsoft
-- Networking
-- Virtualization
+categories: News
 tags:
 - Cisco
 - Microsoft

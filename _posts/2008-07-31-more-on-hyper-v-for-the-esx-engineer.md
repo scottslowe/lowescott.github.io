@@ -6,9 +6,7 @@ layout: post
 slug: more-on-hyper-v-for-the-esx-engineer
 title: More on Hyper-V for the ESX Engineer
 wordpress_id: 775
-categories:
-- Microsoft
-- Virtualization
+categories: Explanation
 tags:
 - HyperV
 - Microsoft

@@ -6,11 +6,10 @@ layout: post
 slug: windows-server-2008-beta-3-on-esx-server
 title: Windows Server 2008 Beta 3 on ESX Server
 wordpress_id: 460
-categories:
-- Microsoft
-- Virtualization
+categories: Information
 tags:
 - ESX
+- Microsoft
 - Virtualization
 - VMware
 - Windows
