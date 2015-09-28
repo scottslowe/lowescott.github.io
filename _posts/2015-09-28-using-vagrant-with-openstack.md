@@ -42,7 +42,7 @@ Next, create a `Vagrantfile` with the right settings. The full list of settings 
 
 Here's a sample snippet from a `Vagrantfile` for use with the OpenStack provider:
 
-{% highlight ruby ´%}
+{% highlight ruby %}
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Specify the default SSH username and private key
