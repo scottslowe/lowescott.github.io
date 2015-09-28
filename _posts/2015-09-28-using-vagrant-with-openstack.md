@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2015-09-25 09:30:00-0700
+date: 2015-09-28 09:45:00-0700
 layout: post
 title: Using Vagrant with OpenStack
 categories: Tutorial
@@ -9,6 +9,7 @@ tags:
 - Vagrant
 - OpenStack
 - CLI
+redirect_from: /2015/09/25/using-vagrant-with-openstack/
 ---
 
 In [my earlier post][xref-1] on using Docker Machine with OpenStack, I talked about combining technologies in a "provider/consumer" model. In this post, I'm going to talk about creating this provider/consumer model using a different combination of technologies: [OpenStack][link-1] as the infrastructure provider and [Vagrant][link-2] for consuming that infrastructure.
