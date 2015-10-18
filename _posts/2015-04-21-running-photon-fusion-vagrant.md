@@ -12,6 +12,7 @@ tags:
 - CLI
 - Fusion
 - Virtualization
+- Photon
 ---
 
 Most of you have probably picked up on the news of VMware's new container-optimized Linux distribution, code-named "Photon". (More details [here][link-1].) In this post, I'm going to provide a _very_ quick walkthrough on running Photon on [VMware Fusion][link-2] via [Vagrant][link-3]. This walkthrough will leverage [a Vagrant box for Photon][link-7] that has already been created.
