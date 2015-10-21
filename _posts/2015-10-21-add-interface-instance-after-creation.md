@@ -22,9 +22,10 @@ First, create the Neutron network port:
 
 If you want to attach a security group to the port (probably a good idea), then modify the command to look like this:
 
-    neutron port-create --security-group <Security group name> <Neutron network name>
+    neutron port-create --security-group <Security group name> \
+    <Neutron network name>
 
-Note that you can add multiple `--security-group` parameters to the command in order to specify multiple security groups to the port.
+Note that you can add multiple `--security-group` parameters to the command in order to specify multiple security groups on the port.
 
 You'll note in the output of the `neutron port-create` command it will tell you the IP address that has been assigned to this new port. Use the IP address to determine the new port's unique ID with this command:
 
