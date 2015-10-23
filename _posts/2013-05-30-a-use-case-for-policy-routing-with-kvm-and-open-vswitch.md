@@ -36,9 +36,18 @@ First, you'll create a custom policy routing table, as outlined [here][1]. I'll 
 
 Next, you'll need to modify `/etc/network/interfaces` for the `tep0` interface so that a custom policy routing rule and custom route are installed whenever this interface is brought up. The new configuration stanza would look something like this:
 
-{% gist lowescott/5665588 %}
+{% highlight text %}
+auto tep0
+iface tep0 inet static
+  address 192.168.200.10
+  netmask 255.255.255.0
+  network 192.168.200.0
+  broadcast 192.168.200.255
+  post-up ip rule add from 192.168.200.10 lookup tunnel
+  post-up ip route add default via 192.168.200.1 dev tep0 table tunnel
+{% endhighlight %}
 
-(If the configuration stanza doesn't appear above, click [here](https://gist.github.com/lowescott/5665588).)
+(Click [here](https://gist.github.com/lowescott/5665588) for the same information as a GitHub Gist.)
 
 Finally, you'll want to ensure that `mgmt0` is properly configured in `/etc/network/interfaces`. No special configuration is required there, just the use of the `gateway` directive to install the default route. Ubuntu will install the default route into the main table automatically, making it a "system-wide" default route that will be used unless a policy routing rule dictates otherwise.
 
