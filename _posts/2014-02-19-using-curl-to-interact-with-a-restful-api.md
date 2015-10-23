@@ -103,9 +103,23 @@ When you put it all together, it looks something like this (substituting appropr
 
 As I mentioned earlier, you're passing JSON-encoded data to the NSX controller; here are the contents of the `new-switch.json` file referenced in the above command example:
 
-{% gist lowescott/9103770 %}
+{% highlight json %}
+{
+  "display_name": "test-lswitch", 
+  "port_isolation_enabled": false, 
+  "transport_zones": [
+    {
+      "zone_uuid": "dca3d854-b329-5458-b711-0df2d5762d7a", 
+      "binding_config": {}, 
+      "transport_type": "stt"
+    }
+  ], 
+  "replication_mode": "source", 
+  "type": "LogicalSwitchConfig"
+}
+{% endhighlight %}
 
-If you can't see the code block, please click [here](https://gist.github.com/lowescott/9103770).
+(Click [here](https://gist.github.com/lowescott/9103770) for this JSON data as a GitHub gist.)
 
 Once again, I recommend piping the output of this command through `python -m json.tool`, as what you'll get back on a successful call is some useful JSON data that includes, among other things, the UUID of the object (logical switch, in this case) that you just created. You can use this UUID in subsequent API calls to list properties, change properties, add logical switch ports, etc.
 
