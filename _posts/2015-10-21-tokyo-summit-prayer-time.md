@@ -17,7 +17,7 @@ If you're interested in attending, here are the details.
 
 **What:** A brief time of prayer  
 
-**Where:** The coy pond outside the Grand Prince Hotel Takanawa (the coy pond in front of the orange building on [this map][link-1] of the Summit campus)
+**Where:** The koi pond outside the Grand Prince Hotel Takanawa (the koi pond in front of the orange building on [the Summit campus map][link-1])
 
 **When:** Tuesday, October 27 through Thursday, October 29, at 8:00 am each day (this should give you time to grab some breakfast before the keynotes and sessions start at 9:00 am)
 
@@ -29,7 +29,7 @@ You don't need to RSVP to let me know you'll be there, although you can if you'd
 
 I look forward to meeting you there!
 
-**UPDATE:** It turns out the pool I had originally chosen isn't accessible to the general public, so we need to move the location. I've updated the post to reflect that we are now meeting at the coy pond directly in front of the Grand Prince Hotel Takanawa (building #4, the orange building on the Summit map).
+**UPDATE:** It turns out the pool I had originally chosen isn't accessible to the general public, so we need to move the location. I've updated the post to reflect that we are now meeting at the koi pond directly in front of the Grand Prince Hotel Takanawa (building #4, the orange building on the Summit map).
 
 
-[link-1]: https://www.openstack.org/assets/tokyo-summit/OSTokyo-Map-Campus-Overview.jpg
+[link-1]: https://www.openstack.org/summit/tokyo-2015/campus-maps/
