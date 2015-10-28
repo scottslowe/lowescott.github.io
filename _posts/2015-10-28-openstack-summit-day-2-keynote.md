@@ -3,7 +3,7 @@ author: slowe
 comments: true
 date: 2015-10-28
 layout: post
-title: OpenStack Summit Tokyo Day 2 Keynote
+title: OpenStack Summit 2015 Day 2 Keynote
 categories: Liveblog
 tags:
 - OpenStack
