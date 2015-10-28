@@ -62,7 +62,7 @@ Here's the syntax for using the `openstack` driver for Docker Machine:
     --openstack-username <OpenStack username of user> \
     --openstack-password <password of OpenStack user account> \
     --openstack-tenant-name <name of OpenStack tenant> \
-    --openstack_auth_url http://<IP address of controller>:5000/v2.0 \
+    --openstack-auth-url http://<IP address of controller>:5000/v2.0 \
     --openstack-flavor-id <ID of flavor to use> \
     --openstack-image-id <ID of image to use> \
     --openstack-net-name <name of private network> \
@@ -99,6 +99,9 @@ Some readers may be wondering why one might use Docker Machine in an OpenStack e
 Here's my line of thinking. OpenStack is really more of an _infrastructure orchestration tool_, designed for provisioning infrastructure (VMs, volumes, networks, routers, etc.). Will it evolve over time to be more "application-aware"? Probably, but that's not where it is today. Docker, on the other hand, is more an an _application provisioning tool_, designed to simplify how developers, operators, and organizations deploy applications. Will it evolve over time to be more involved in infrastructure? Most likely, but that's not really where its strengths are found today. Docker needs infrastructure, and OpenStack supplies infrastructure. By combining Docker Machine and OpenStack, you create what is (in my opinion) a nice "consumer/provider" relationship between OpenStack (which provides infrastructure) and Docker (which consumes infrastructure to deploy applications).
 
 Anyway, that's my 2 cents. I hope you found this information to be helpful, and feel free to hit me up on Twitter or drop me an e-mail if you have any feedback. Thanks!
+
+**UPDATE:** Nathan Ness pointed out that there was an error in the command for the OpenStack driver; it should be `--openstack-auth-url` instead of `--openstack_auth_url`. I've corrected the post. Thanks!
+
 
 
 [link-1]: https://docs.docker.com/machine/drivers/openstack/
