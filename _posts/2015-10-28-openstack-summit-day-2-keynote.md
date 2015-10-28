@@ -10,7 +10,7 @@ tags:
 - OSS
 ---
 
-Mark Collier, COO of the OpenStack Foundation, takes the stage to kick things off. He starts with a story about meeting new people, learning new things, and sharing OpenStack stories, and encourages attendees to participate in all of these things.
+Mark Collier, COO of the OpenStack Foundation, takes the stage to kick things off. He starts with a story about meeting new people, learning new things, and sharing OpenStack stories, and encourages attendees to participate in all of these things while they are here at the Summit.
 
 Mark then transitions into a discussion of Liberty (the latest release), and revisits Jonathan Bryce's discussion of the new organizational model ("the Big Tent"). He specifically calls out Astara and Kuryr as new projects in the Big Tent model. Out of curiosity, he looked at development activity for all the various projects to see which project was the "most active". It turns out that Neutron was the most active project across all of the various OpenStack projects. According to the user survey last year, 68% were running Neutron. In the most recent user survey, that number climbed to 89%---meaning the vast majority of OpenStack clouds in production are now running Neutron.
 
