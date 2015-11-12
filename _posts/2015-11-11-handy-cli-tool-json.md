@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2015-11-20
+date: 2015-11-11
 layout: post
 title: A Handy CLI Tool for Working with JSON
 categories: Tutorial
@@ -9,6 +9,7 @@ tags:
 - JSON
 - OSS
 - CLI
+redirect_from: /2015/11/20/handy-cli-tool-json/
 ---
 
 While I was at [Kubecon][link-2] this past week, one of the presenters showed off a handy CLI tool for working with JSON. It's called [`jq`][link-1], and in this post I'm going to show you a few ways to use `jq`. For the source of JSON output, I'll use the [OpenStack][link-3] APIs.
