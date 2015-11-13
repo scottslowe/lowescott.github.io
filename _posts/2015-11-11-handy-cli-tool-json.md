@@ -4,7 +4,7 @@ comments: true
 date: 2015-11-11
 layout: post
 title: A Handy CLI Tool for Working with JSON
-categories: Tutorial
+categories: Education
 tags:
 - JSON
 - OSS
