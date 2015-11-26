@@ -18,11 +18,11 @@ As a result of this security certificate snafu, I started looking for ways to mi
 
 Fortunately, both vendors allow for what I call "sidegrade" licenses that enable you to switch, without additional cost, from a MAS version to a non-MAS version purchased directly from the vendor. Allow me to publicly say **"Kudos!"** to these two vendors for looking out for their customers and promoting customer choice in how their software is consumed. I was able to quickly and easily switch both apps from the MAS version to the direct version (without a loss of data, might I add).
 
-Unfortunately, I'm still left with a number of MAS-only apps for which there does not appear to be a suitable replacement. Aside from Tweetbot ([the Twitter client scene on OS X is as pitiful as it has ever been][link-4]), the bulk of these remaining applications are Apple-provided apps (like GarageBand and the like) that I very rarely (if ever) use. For the developers of the apps I _do_ still use (Tweetbot, Day One, Deckset, Downcast, and Patterns), allow me to encourage you to follow in the footsteps of _many_ other Mac developers and begin offering your applications independently as well as via the MAS. Believe me, your customers will thank you for it.
+Unfortunately, I'm still left with a number of MAS-only apps for which there does not appear to be a suitable replacement. Aside from Tweetbot ([the Twitter client scene on OS X is as pitiful as it has ever been][xref-1]), the bulk of these remaining applications are Apple-provided apps (like GarageBand and the like) that I very rarely (if ever) use. For the developers of the apps I _do_ still use (Tweetbot, Day One, Deckset, Downcast, and Patterns), allow me to encourage you to follow in the footsteps of _many_ other Mac developers and begin offering your applications independently as well as via the MAS. Believe me, your customers will thank you for it.
 
 
 
 [link-1]: http://www.busymac.com/busycal/index.html
 [link-2]: https://www.codeux.com/textual/
 [link-3]: http://www.macrumors.com/2015/11/12/mac-app-store-apps-damaged-expired-receipts-issue/
-[link-4]: http://blog.scottlowe.org/2009/04/05/the-perfect-mac-twitter-client/
+[xref-1]: {% post_url 2009-04-05-the-perfect-mac-twitter-client %}

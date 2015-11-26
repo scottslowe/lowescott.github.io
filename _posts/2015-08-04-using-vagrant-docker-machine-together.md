@@ -21,7 +21,7 @@ In my case, I needed to be able to easily create/destroy/recreate a couple of Do
 
 As it turns out, you can combine these two tools to gain some of the flexibility I needed in my specific circumstances. This allows you to use Vagrant (and the associated provider; VMware Fusion in my case) to handle the VM provisioning, and then use Docker Machine to provision Docker into the Vagrant-managed VMs. Here's how it works.
 
-1. First, create a Vagrant environment that defines the VM(s) you want created and managed by Vagrant. I won't cover that here, but you can review [my list of Vagrant-tagged articles][link-5] for more information on how you might accomplish this step.
+1. First, create a Vagrant environment that defines the VM(s) you want created and managed by Vagrant. I won't cover that here, but you can review [my list of Vagrant-tagged articles][xref-1] for more information on how you might accomplish this step.
 2. Use `vagrant up` to instantiate the VM(s) you defined in your Vagrant environment.
 3. Once Vagrant has created and started the VMs, verify that you have SSH connectivity using `vagrant ssh` (or `vagrant ssh <VM-name>` if you have more than one VM in the Vagrant environment).
 4. Provision Docker into the new VM(s) using this command (note that I've line-wrapped the command here with backslashes):
@@ -56,4 +56,4 @@ I hope someone else finds this useful.
 [link-2]: https://www.docker.com/
 [link-3]: https://docs.docker.com/machine/
 [link-4]: http://www.vmware.com/products/fusion/
-[link-5]: http://blog.scottlowe.org/tags/#Vagrant
+[xref-1]: {{ site.url }}/tags/#Vagrant
