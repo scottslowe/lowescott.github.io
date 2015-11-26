@@ -60,7 +60,7 @@ end
 
 This `Vagrantfile` is pretty simple, and I've added comments to help explain each command present. As in my earlier post, I've stored this file in a `host` subdirectory off the main project directory.
 
-The real meat of this post, though, is the use of a separate YAML file to provide the details on the Docker containers that Vagrant should create. This is a technique I've used elsewhere (see [here][link-2] for an example). In this particular case, I've used a file named `containers.yml`, the contents of which look like this:
+The real meat of this post, though, is the use of a separate YAML file to provide the details on the Docker containers that Vagrant should create. This is a technique I've used elsewhere (see [here][xref-2] for an example). In this particular case, I've used a file named `containers.yml`, the contents of which look like this:
 
 {% highlight yaml %}
 ---
