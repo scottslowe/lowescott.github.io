@@ -19,7 +19,7 @@ As is becoming my custom, you can find resources to help you replicate this envi
 
 Before I get into the details, I want to just very quickly recap some information from my earlier post on using Docker with Vagrant:
 
-* Vagrant has a built-in Docker provider (present since versioni 1.6).
+* Vagrant has a built-in Docker provider (present since version 1.6).
 * Unless running on Linux, Vagrant will (by default) spin up an instance of a boot2docker VM on which to host the Docker containers. If you decide to modify this behavior (see the earlier post for full details), you'll end up with a second `Vagrantfile` that manages the host VM.
 * Vagrant also has a Docker provisioner that is capable of installing Docker onto a host VM.
 * As with all other Vagrant projects, there will be a main `Vagrantfile` that controls the specific Docker containers Vagrant will instantiate on the host VM.
@@ -147,5 +147,5 @@ As I mentioned earlier, sample `Vagrantfiles` and supporting documentation to re
 [link-1]: https://github.com/lowescott/learning-tools
 [link-2]: http://www.vmware.com/products/fusion/
 [link-3]: http://www.virtualbox.org/
-[xref-1]: {% post_url 2015-02-11-using-docker-with-vagrant %}
+[xref-1]: {% post_url 2015-02-10-using-docker-with-vagrant %}
 [xref-2]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
