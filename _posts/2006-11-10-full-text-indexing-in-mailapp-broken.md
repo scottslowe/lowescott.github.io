@@ -6,8 +6,7 @@ layout: post
 slug: full-text-indexing-in-mailapp-broken
 title: Full-Text Indexing in Mail.app Broken
 wordpress_id: 360
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Macintosh
 ---

@@ -6,8 +6,7 @@ layout: post
 slug: new-ie-flaws
 title: New IE Flaws
 wordpress_id: 288
-categories:
-- Security
+categories: News
 tags:
 - IE
 - Microsoft

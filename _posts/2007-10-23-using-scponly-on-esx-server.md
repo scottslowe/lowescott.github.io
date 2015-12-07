@@ -6,9 +6,7 @@ layout: post
 slug: using-scponly-on-esx-server
 title: Using scponly on ESX Server
 wordpress_id: 565
-categories:
-- Security
-- Virtualization
+categories: Tutorial
 tags:
 - ESX
 - Security

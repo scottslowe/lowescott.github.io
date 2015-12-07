@@ -6,8 +6,7 @@ layout: post
 slug: trying-quicksilver
 title: Trying Quicksilver
 wordpress_id: 299
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Macintosh
 - OSS

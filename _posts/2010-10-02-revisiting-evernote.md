@@ -6,8 +6,7 @@ layout: post
 slug: revisiting-evernote
 title: Revisiting Evernote
 wordpress_id: 2127
-categories:
-- Macintosh
+categories: Review
 tags:
 - Macintosh
 - Productivity

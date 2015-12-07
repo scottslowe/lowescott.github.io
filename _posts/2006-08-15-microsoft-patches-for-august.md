@@ -6,8 +6,7 @@ layout: post
 slug: microsoft-patches-for-august
 title: Microsoft Patches for August
 wordpress_id: 321
-categories:
-- Security
+categories: News
 tags:
 - Microsoft
 - Office
@@ -17,7 +16,7 @@ tags:
 
 This MSRC blog posting outlines the [patches that were released](http://blogs.technet.com/msrc/archive/2006/08/09/445600.aspx) last Tuesday, and provides links to the security bulletins for each patch.
 
-<aside>An interesting statistic: according to [this article](http://www.darkreading.com/document.asp?doc_id=101047&f_src=darkreading_section_318), [Microsoft](http://www.microsoft.com/) has released more patches in the first 8 months of 2006 than in all of 2004 and 2005 _combined._ I don't know if that makes me feel more secure---in that they are patching more vulnerabilities instead of not patching them---or less secure.</aside>
+&lt;aside&gt;An interesting statistic: according to [this article](http://www.darkreading.com/document.asp?doc_id=101047&f_src=darkreading_section_318), [Microsoft](http://www.microsoft.com/) has released more patches in the first 8 months of 2006 than in all of 2004 and 2005 _combined._ I don't know if that makes me feel more secure---in that they are patching more vulnerabilities instead of not patching them---or less secure.&lt;/aside&gt;
 
 The [MS06-040](http://www.microsoft.com/technet/security/Bulletin/MS06-040.mspx) bulletin is the one critical patch that is really getting everyone's attention; this is the one that is deemed to be "wormable," capable of creating a self-replicating worm such as Blaster or Slammer. In fact, there were [reports of limited attacks](http://www.eweek.com/article2/0,1759,2002966,00.asp) using the exploit patched by MS06-040. According to a [follow-up posting](http://blogs.technet.com/msrc/archive/2006/08/13/446268.aspx) on the MSRC blog, these attacks were limited in nature and only affected Windows 2000 (see this [MSRC posting](http://blogs.technet.com/msrc/archive/2006/08/13/446396.aspx) as well).
 

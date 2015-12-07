@@ -6,9 +6,7 @@ layout: post
 slug: keep-your-eyes-on-hytrust
 title: Keep Your Eyes on HyTrust
 wordpress_id: 2097
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - Cisco
 - Networking

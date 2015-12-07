@@ -6,9 +6,7 @@ layout: post
 slug: esx-security-issues
 title: ESX Security Issues
 wordpress_id: 399
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - ESX
 - Security

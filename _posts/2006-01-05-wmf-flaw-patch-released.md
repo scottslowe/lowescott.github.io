@@ -6,8 +6,7 @@ layout: post
 slug: wmf-flaw-patch-released
 title: WMF Flaw Patch Released
 wordpress_id: 151
-categories:
-- Security
+categories: News
 tags:
 - Microsoft
 - Security

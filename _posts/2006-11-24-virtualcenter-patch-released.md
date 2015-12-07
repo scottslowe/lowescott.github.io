@@ -6,9 +6,7 @@ layout: post
 slug: virtualcenter-patch-released
 title: VirtualCenter Patch Released
 wordpress_id: 371
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - Security
 - Virtualization

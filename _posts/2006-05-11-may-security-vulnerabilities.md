@@ -6,8 +6,7 @@ layout: post
 slug: may-security-vulnerabilities
 title: May Security Vulnerabilities
 wordpress_id: 246
-categories:
-- Security
+categories: News
 tags:
 - Exchange
 - Microsoft

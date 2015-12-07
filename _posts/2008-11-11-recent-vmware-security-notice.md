@@ -6,9 +6,7 @@ layout: post
 slug: recent-vmware-security-notice
 title: Recent VMware Security Notice
 wordpress_id: 1025
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - ESX
 - ESXi

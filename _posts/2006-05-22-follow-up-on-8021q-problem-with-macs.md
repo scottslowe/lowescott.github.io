@@ -6,9 +6,7 @@ layout: post
 slug: follow-up-on-8021q-problem-with-macs
 title: Follow Up on 802.1Q Problem With Macs
 wordpress_id: 255
-categories:
-- Macintosh
-- Networking
+categories: News
 tags:
 - Apple
 - Macintosh

@@ -6,8 +6,7 @@ layout: post
 slug: cocoalicious-update
 title: Cocoalicious Update
 wordpress_id: 462
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 - Web

@@ -6,10 +6,11 @@ layout: post
 slug: equal-opportunity-security-flaw
 title: Equal Opportunity Security Flaw
 wordpress_id: 36
-categories:
-- Security
+categories: News
 tags:
 - Security
+- Linux
+- BSD
 ---
 
 At least it can't be said that I only identify and write about Microsoft-related security flaws. (I'd like to not have to write about security flaws at all, but that doesn't look like it's going to happen.)

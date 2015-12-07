@@ -6,8 +6,7 @@ layout: post
 slug: first-post-from-new-macbook-pro
 title: First Post from new MacBook Pro
 wordpress_id: 352
-categories:
-- Macintosh
+categories: Review
 tags:
 - Apple
 - Hardware

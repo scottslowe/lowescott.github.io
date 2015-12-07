@@ -6,8 +6,7 @@ layout: post
 slug: dead-powerbook
 title: Dead PowerBook
 wordpress_id: 450
-categories:
-- Macintosh
+categories: Personal
 tags:
 - Apple
 - Hardware

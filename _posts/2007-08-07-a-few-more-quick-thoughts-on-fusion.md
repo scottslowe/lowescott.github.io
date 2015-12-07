@@ -6,9 +6,7 @@ layout: post
 slug: a-few-more-quick-thoughts-on-fusion
 title: A Few More Quick Thoughts on Fusion
 wordpress_id: 501
-categories:
-- Macintosh
-- Virtualization
+categories: Review
 tags:
 - Fusion
 - Macintosh

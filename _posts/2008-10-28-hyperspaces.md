@@ -6,8 +6,7 @@ layout: post
 slug: hyperspaces
 title: Hyperspaces
 wordpress_id: 1004
-categories:
-- Macintosh
+categories: Review
 tags:
 - Macintosh
 ---

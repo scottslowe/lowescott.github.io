@@ -6,8 +6,7 @@ layout: post
 slug: checkpoint-sourcefire-acquisition-dies
 title: CheckPoint-Sourcefire Acquisition Dies
 wordpress_id: 212
-categories:
-- Security
+categories: News
 tags:
 - OSS
 - Security

@@ -6,8 +6,7 @@ layout: post
 slug: symantec-kaspersky-using-cloaking-too
 title: Symantec, Kaspersky Using Cloaking Too
 wordpress_id: 158
-categories:
-- Security
+categories: Rant
 tags:
 - Microsoft
 - Security

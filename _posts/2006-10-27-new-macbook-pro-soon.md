@@ -6,8 +6,7 @@ layout: post
 slug: new-macbook-pro-soon
 title: New MacBook Pro Soon
 wordpress_id: 351
-categories:
-- Macintosh
+categories: Personal
 tags:
 - Apple
 - Hardware

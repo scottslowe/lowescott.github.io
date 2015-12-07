@@ -6,8 +6,7 @@ layout: post
 slug: more-wmf-flaws-uncovered
 title: More WMF Flaws Uncovered
 wordpress_id: 153
-categories:
-- Security
+categories: News
 tags:
 - Microsoft
 - Security

@@ -6,9 +6,7 @@ layout: post
 slug: next-gen-stuff-verifying-the-sha-1-fingerprint
 title: 'Next-Gen Stuff: Verifying the SHA-1 Fingerprint'
 wordpress_id: 1254
-categories:
-- Security
-- Virtualization
+categories: Tutorial
 tags:
 - CLI
 - ESX

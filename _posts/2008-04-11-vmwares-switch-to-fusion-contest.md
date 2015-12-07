@@ -6,9 +6,7 @@ layout: post
 slug: vmwares-switch-to-fusion-contest
 title: VMware's Switch to Fusion Contest
 wordpress_id: 682
-categories:
-- Macintosh
-- Virtualization
+categories: Information
 tags:
 - Fusion
 - Macintosh

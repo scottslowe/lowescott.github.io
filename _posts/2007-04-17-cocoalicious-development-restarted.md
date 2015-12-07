@@ -6,8 +6,7 @@ layout: post
 slug: cocoalicious-development-restarted
 title: Cocoalicious Development Restarted
 wordpress_id: 442
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 - OSS

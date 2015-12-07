@@ -6,8 +6,7 @@ layout: post
 slug: delicious-api-change
 title: del.icio.us API Change
 wordpress_id: 317
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Collaboration
 - Macintosh

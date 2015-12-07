@@ -6,8 +6,7 @@ layout: post
 slug: office-and-ie-under-fire-again
 title: Office and IE Under Fire (Again)
 wordpress_id: 342
-categories:
-- Security
+categories: News
 tags:
 - IE
 - Office

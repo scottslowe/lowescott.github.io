@@ -6,8 +6,7 @@ layout: post
 slug: trying-two-new-apps
 title: Trying Two New Apps
 wordpress_id: 461
-categories:
-- Macintosh
+categories: Personal
 tags:
 - Macintosh
 - Networking

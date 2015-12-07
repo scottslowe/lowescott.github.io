@@ -6,8 +6,7 @@ layout: post
 slug: rootkit-technology-in-sony-drm
 title: Rootkit Technology in Sony DRM
 wordpress_id: 111
-categories:
-- Security
+categories: Rant
 tags:
 - Security
 - Windows

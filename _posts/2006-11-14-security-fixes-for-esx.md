@@ -6,9 +6,7 @@ layout: post
 slug: security-fixes-for-esx
 title: Security Fixes for ESX
 wordpress_id: 362
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - ESX
 - Security

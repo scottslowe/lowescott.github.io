@@ -6,8 +6,7 @@ layout: post
 slug: cocoalicious-woes
 title: Cocoalicious Woes
 wordpress_id: 338
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Macintosh
 - Web

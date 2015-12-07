@@ -6,8 +6,7 @@ layout: post
 slug: hyperspaces-updated
 title: Hyperspaces Updated
 wordpress_id: 1202
-categories:
-- Macintosh
+categories: Review
 tags:
 - Macintosh
 ---

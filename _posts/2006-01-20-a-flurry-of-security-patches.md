@@ -6,8 +6,7 @@ layout: post
 slug: a-flurry-of-security-patches
 title: A Flurry of Security Patches
 wordpress_id: 162
-categories:
-- Security
+categories: News
 tags:
 - Microsoft
 - Oracle

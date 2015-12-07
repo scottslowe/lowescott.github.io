@@ -6,8 +6,7 @@ layout: post
 slug: first-windows-vista-viruses-unleashed
 title: First Windows Vista viruses unleashed
 wordpress_id: 67
-categories:
-- Security
+categories: News
 tags:
 - Microsoft
 - Windows

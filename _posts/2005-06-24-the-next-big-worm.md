@@ -6,8 +6,7 @@ layout: post
 slug: the-next-big-worm
 title: The Next Big Worm?
 wordpress_id: 22
-categories:
-- Security
+categories: Musing
 tags:
 - Microsoft
 - Security

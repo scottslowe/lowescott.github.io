@@ -6,8 +6,11 @@ layout: post
 slug: protecting-against-openssl-sslv2-flaw
 title: Protecting Against OpenSSL SSLv2 Flaw
 wordpress_id: 104
-categories:
+categories: Tutorial
+tags:
 - Security
+- Linux
+- Web
 ---
 
 The [recent flaw](http://www.openssl.org/news/secadv_20051011.txt) in [OpenSSL](http://www.openssl.org/) (versions prior to 0.9.7h and 0.9.8a) highlights the fact that SSL is not a security panacea. (You can get more information about this flaw from the link above, from [this _eWeek_ article](http://www.eweek.com/article2/0,1759,1870003,00.asp), or from [this Netcraft post](http://news.netcraft.com/archives/2005/10/11/openssl_patches_security_hole.html).)

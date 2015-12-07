@@ -6,8 +6,7 @@ layout: post
 slug: cocoalicious-fix
 title: Cocoalicious Fix
 wordpress_id: 341
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 - Web

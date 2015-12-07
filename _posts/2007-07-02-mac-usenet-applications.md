@@ -6,8 +6,7 @@ layout: post
 slug: mac-usenet-applications
 title: Mac Usenet Applications
 wordpress_id: 483
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Macintosh
 - Networking

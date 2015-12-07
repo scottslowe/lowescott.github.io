@@ -6,8 +6,7 @@ layout: post
 slug: dangerous-stuff
 title: Dangerous Stuff
 wordpress_id: 19
-categories:
-- Security
+categories: Rant
 tags:
 - Macintosh
 - Security
