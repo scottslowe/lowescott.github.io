@@ -3,7 +3,7 @@ author: slowe
 comments: true
 date: 2015-12-04
 layout: post
-title: A Use Case for an SSH Bastion Host
+title: One Use Case for an SSH Bastion Host
 categories: Explanation
 tags:
 - Linux
