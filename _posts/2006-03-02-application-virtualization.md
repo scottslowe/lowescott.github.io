@@ -6,9 +6,7 @@ layout: post
 slug: application-virtualization
 title: Application Virtualization
 wordpress_id: 193
-categories:
-- Networking
-- Virtualization
+categories: Rant
 tags:
 - Citrix
 - Networking

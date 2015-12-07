@@ -6,9 +6,7 @@ layout: post
 slug: the-return-of-virtualization-short-takes
 title: The Return of Virtualization Short Takes
 wordpress_id: 1386
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - EMC
 - HP

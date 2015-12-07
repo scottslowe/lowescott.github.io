@@ -6,9 +6,7 @@ layout: post
 slug: changing-vnic-port-group-assignment-in-vmware-with-powershell
 title: Changing vNIC Port Group Assignment in VMware with PowerShell
 wordpress_id: 1119
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Networking

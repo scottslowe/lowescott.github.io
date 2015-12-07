@@ -6,9 +6,7 @@ layout: post
 slug: viewing-cdp-data-on-vmware-esx
 title: Viewing CDP Data on VMware ESX
 wordpress_id: 1251
-categories:
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - Cisco
 - CLI

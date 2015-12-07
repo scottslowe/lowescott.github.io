@@ -6,9 +6,7 @@ layout: post
 slug: new-vlan-article-at-searchvmwarecom
 title: New VLAN Article at SearchVMware.com
 wordpress_id: 590
-categories:
-- Networking
-- Virtualization
+categories: News
 tags:
 - Networking
 - Virtualization

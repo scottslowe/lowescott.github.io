@@ -6,9 +6,7 @@ layout: post
 slug: vmotion-layer-2-adjacency-requirement
 title: vMotion Layer 2 Adjacency Requirement
 wordpress_id: 2025
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Networking
 - Virtualization

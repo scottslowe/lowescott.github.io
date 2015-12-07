@@ -6,9 +6,7 @@ layout: post
 slug: blades-wont-die-but-they-will-change
 title: Blades Won't Die, But They Will Change
 wordpress_id: 1429
-categories:
-- Networking
-- Virtualization
+categories: Musing
 tags:
 - Cisco
 - FCoE

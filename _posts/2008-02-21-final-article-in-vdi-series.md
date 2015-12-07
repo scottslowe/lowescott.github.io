@@ -6,9 +6,7 @@ layout: post
 slug: final-article-in-vdi-series
 title: Final Article in VDI Series
 wordpress_id: 640
-categories:
-- Networking
-- Virtualization
+categories: News
 tags:
 - Networking
 - VDI

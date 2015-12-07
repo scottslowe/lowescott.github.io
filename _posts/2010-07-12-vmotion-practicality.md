@@ -6,9 +6,7 @@ layout: post
 slug: vmotion-practicality
 title: vMotion Practicality
 wordpress_id: 1995
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - Networking

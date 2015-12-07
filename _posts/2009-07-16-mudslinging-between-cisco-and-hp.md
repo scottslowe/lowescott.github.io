@@ -6,9 +6,7 @@ layout: post
 slug: mudslinging-between-cisco-and-hp
 title: Mudslinging Between Cisco and HP
 wordpress_id: 1463
-categories:
-- General
-- Networking
+categories: Rant
 tags:
 - Cisco
 - Hardware

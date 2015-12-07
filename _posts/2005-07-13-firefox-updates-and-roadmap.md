@@ -6,8 +6,7 @@ layout: post
 slug: firefox-updates-and-roadmap
 title: Firefox Updates and Roadmap
 wordpress_id: 45
-categories:
-- Networking
+categories: News
 tags:
 - Firefox
 - Microsoft

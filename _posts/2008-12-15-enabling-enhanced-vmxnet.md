@@ -6,9 +6,7 @@ layout: post
 slug: enabling-enhanced-vmxnet
 title: Enabling Enhanced VMXNet
 wordpress_id: 1098
-categories:
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - ESX
 - Networking

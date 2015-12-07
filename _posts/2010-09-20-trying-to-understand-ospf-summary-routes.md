@@ -6,8 +6,7 @@ layout: post
 slug: trying-to-understand-ospf-summary-routes
 title: Trying to Understand OSPF Summary Routes
 wordpress_id: 2107
-categories:
-- Networking
+categories: Musing
 tags:
 - Cisco
 - Networking

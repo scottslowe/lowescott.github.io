@@ -6,9 +6,7 @@ layout: post
 slug: netronome-and-io-virtualization
 title: Netronome and I/O Virtualization
 wordpress_id: 1511
-categories:
-- Networking
-- Virtualization
+categories: Musing
 tags:
 - Hardware
 - Networking

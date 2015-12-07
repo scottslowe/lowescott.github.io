@@ -6,9 +6,7 @@ layout: post
 slug: cutting-yourself-on-the-double-edged-sword
 title: Cutting Yourself on the Double-Edged Sword
 wordpress_id: 1702
-categories:
-- Networking
-- Virtualization
+categories: Rant
 tags:
 - Cisco
 - FCoE

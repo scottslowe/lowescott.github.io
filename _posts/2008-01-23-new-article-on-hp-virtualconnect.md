@@ -6,9 +6,7 @@ layout: post
 slug: new-article-on-hp-virtualconnect
 title: New Article on HP VirtualConnect
 wordpress_id: 613
-categories:
-- Networking
-- Virtualization
+categories: News
 tags:
 - ESX
 - Hardware

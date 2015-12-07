@@ -6,9 +6,7 @@ layout: post
 slug: vmware-esx-nic-teaming-and-vlan-trunking-with-hp-procurve
 title: VMware ESX, NIC Teaming, and VLAN Trunking with HP ProCurve
 wordpress_id: 862
-categories:
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - ESX
 - Hardware

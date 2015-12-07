@@ -6,8 +6,7 @@ layout: post
 slug: application-specific-vpns
 title: Application-Specific VPNs
 wordpress_id: 140
-categories:
-- Networking
+categories: Explanation
 tags:
 - Encryption
 - IPSec

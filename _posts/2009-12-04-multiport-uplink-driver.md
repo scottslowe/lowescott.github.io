@@ -6,9 +6,7 @@ layout: post
 slug: multiport-uplink-driver
 title: Multiport Uplink Driver
 wordpress_id: 1762
-categories:
-- Networking
-- Virtualization
+categories: News
 tags:
 - Networking
 - Virtualization

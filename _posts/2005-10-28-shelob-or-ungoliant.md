@@ -6,7 +6,8 @@ layout: post
 slug: shelob-or-ungoliant
 title: Shelob (or Ungoliant)
 wordpress_id: 107
-categories:
+categories: Rant
+tags:
 - Networking
 - Security
 ---

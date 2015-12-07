@@ -6,8 +6,7 @@ layout: post
 slug: follow-up-on-access-based-enumeration
 title: Follow Up on Access-Based Enumeration
 wordpress_id: 74
-categories:
-- Networking
+categories: Review
 tags:
 - Microsoft
 - Networking

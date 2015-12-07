@@ -6,9 +6,7 @@ layout: post
 slug: netronome-1-year-later
 title: Netronome, 1 Year Later
 wordpress_id: 2141
-categories:
-- Networking
-- Virtualization
+categories: Musing
 tags:
 - Hardware
 - Networking

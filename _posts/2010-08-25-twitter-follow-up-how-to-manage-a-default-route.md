@@ -6,8 +6,7 @@ layout: post
 slug: twitter-follow-up-how-to-manage-a-default-route
 title: 'Twitter Follow-Up: How to Manage a Default Route?'
 wordpress_id: 2051
-categories:
-- Networking
+categories: Musing
 tags:
 - Cisco
 - Networking

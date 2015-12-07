@@ -6,8 +6,7 @@ layout: post
 slug: link-state-tracking-in-blade-deployments
 title: Link State Tracking in Blade Deployments
 wordpress_id: 476
-categories:
-- Networking
+categories: Tutorial
 tags:
 - Cisco
 - Hardware

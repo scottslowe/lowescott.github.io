@@ -6,8 +6,7 @@ layout: post
 slug: access-based-enumeration
 title: Access-Based Enumeration
 wordpress_id: 38
-categories:
-- Networking
+categories: News
 tags:
 - Microsoft
 - Networking

@@ -6,9 +6,7 @@ layout: post
 slug: vlans-on-esx-with-nortel-switches
 title: VLANs on ESX with Nortel Switches
 wordpress_id: 747
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Networking

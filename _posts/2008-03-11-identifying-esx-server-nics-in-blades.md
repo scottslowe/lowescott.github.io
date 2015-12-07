@@ -6,9 +6,7 @@ layout: post
 slug: identifying-esx-server-nics-in-blades
 title: Identifying ESX Server NICs in Blades
 wordpress_id: 656
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - ESX
