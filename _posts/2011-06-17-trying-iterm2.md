@@ -6,8 +6,7 @@ layout: post
 slug: trying-iterm2
 title: Trying iTerm2
 wordpress_id: 2316
-categories:
-- Macintosh
+categories: Review
 tags:
 - CLI
 - Macintosh

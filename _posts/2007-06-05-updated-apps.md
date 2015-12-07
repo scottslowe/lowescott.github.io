@@ -6,8 +6,7 @@ layout: post
 slug: updated-apps
 title: Updated Apps
 wordpress_id: 467
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 - Web

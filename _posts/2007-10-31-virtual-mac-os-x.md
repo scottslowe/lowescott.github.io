@@ -6,9 +6,7 @@ layout: post
 slug: virtual-mac-os-x
 title: Virtual Mac OS X
 wordpress_id: 566
-categories:
-- Macintosh
-- Virtualization
+categories: Musing
 tags:
 - Apple
 - Macintosh

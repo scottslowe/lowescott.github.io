@@ -6,8 +6,7 @@ layout: post
 slug: terminal-services-client
 title: Terminal Services Client
 wordpress_id: 414
-categories:
-- Macintosh
+categories: Review
 tags:
 - Macintosh
 - Microsoft

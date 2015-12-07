@@ -6,12 +6,12 @@ layout: post
 slug: this-is-what-snow-leopard-needs
 title: This is What Snow Leopard Needs
 wordpress_id: 997
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Apple
 - Macintosh
 - ZFS
+- Storage
 ---
 
 Before the release of Mac OS X 10.5 "Leopard," the computing world was abuzz with the possible inclusion of ZFS---Zettabyte File System---into the new operating system. That rumor was largely fueled by the rumors swirling around about what would officially become known as Time Machine. It turns out that ZFS _did_ make its way into Leopard, albeit on a read-only basis, and it isn't the technology behind Time Machine.

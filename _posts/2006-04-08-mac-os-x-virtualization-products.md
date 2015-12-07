@@ -6,13 +6,11 @@ layout: post
 slug: mac-os-x-virtualization-products
 title: Mac OS X Virtualization Products
 wordpress_id: 223
-categories:
-- Macintosh
-- Virtualization
+categories: News
 tags:
 - Apple
 - Linux
-- Microsoft
+- Macintosh
 - Virtualization
 - VMware
 - Windows

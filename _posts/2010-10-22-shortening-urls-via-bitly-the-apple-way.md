@@ -6,8 +6,7 @@ layout: post
 slug: shortening-urls-via-bitly-the-apple-way
 title: Shortening URLs via bit.ly the Apple Way
 wordpress_id: 2139
-categories:
-- Macintosh
+categories: Tutorial
 tags:
 - Macintosh
 - Web

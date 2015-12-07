@@ -6,8 +6,7 @@ layout: post
 slug: a-quicksilver-primer
 title: A Quicksilver Primer
 wordpress_id: 2311
-categories:
-- Macintosh
+categories: Education
 tags:
 - Apple
 - Macintosh

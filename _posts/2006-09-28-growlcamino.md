@@ -6,8 +6,7 @@ layout: post
 slug: growlcamino
 title: GrowlCamino
 wordpress_id: 343
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 ---

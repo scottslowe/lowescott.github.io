@@ -6,14 +6,10 @@ layout: post
 slug: blasts-from-the-past
 title: Blasts from the Past
 wordpress_id: 1117
-categories:
-- General
-- Macintosh
-- Virtualization
+categories: General
 tags:
 - ActiveDirectory
 - Cisco
-- General
 - HyperV
 - Macintosh
 - NetApp

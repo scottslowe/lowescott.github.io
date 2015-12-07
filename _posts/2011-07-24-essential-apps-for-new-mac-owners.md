@@ -6,8 +6,7 @@ layout: post
 slug: essential-apps-for-new-mac-owners
 title: Essential Apps for New Mac Owners
 wordpress_id: 2356
-categories:
-- Macintosh
+categories: Information
 tags:
 - Apple
 - Macintosh

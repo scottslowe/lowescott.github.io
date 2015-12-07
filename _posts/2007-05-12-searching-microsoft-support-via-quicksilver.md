@@ -6,8 +6,7 @@ layout: post
 slug: searching-microsoft-support-via-quicksilver
 title: Searching Microsoft Support via Quicksilver
 wordpress_id: 453
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 - Microsoft

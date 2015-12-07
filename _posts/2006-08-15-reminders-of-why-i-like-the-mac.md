@@ -6,8 +6,7 @@ layout: post
 slug: reminders-of-why-i-like-the-mac
 title: Reminders of Why I Like the Mac
 wordpress_id: 322
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Interoperability
 - Macintosh

@@ -6,8 +6,7 @@ layout: post
 slug: omnigraffle-just-keeps-getting-better
 title: OmniGraffle Just Keeps Getting Better
 wordpress_id: 836
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 ---

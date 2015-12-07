@@ -6,9 +6,7 @@ layout: post
 slug: mac-rdp-client-wishlist
 title: Mac RDP Client Wishlist
 wordpress_id: 598
-categories:
-- Macintosh
-- Networking
+categories: Rant
 tags:
 - Macintosh
 - Networking

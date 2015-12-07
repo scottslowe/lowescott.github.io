@@ -6,8 +6,7 @@ layout: post
 slug: apple-iphone
 title: Apple iPhone
 wordpress_id: 397
-categories:
-- Macintosh
+categories: News
 tags:
 - Apache
 - Macintosh

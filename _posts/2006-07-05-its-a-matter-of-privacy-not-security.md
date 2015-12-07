@@ -6,8 +6,7 @@ layout: post
 slug: its-a-matter-of-privacy-not-security
 title: It's a Matter of Privacy, Not Security
 wordpress_id: 291
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Apple
 - Macintosh

@@ -6,8 +6,7 @@ layout: post
 slug: virtuedesktops-to-cease-development
 title: VirtueDesktops to Cease Development
 wordpress_id: 430
-categories:
-- Macintosh
+categories: News
 tags:
 - Macintosh
 - OSS

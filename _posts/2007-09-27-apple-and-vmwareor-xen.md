@@ -6,9 +6,7 @@ layout: post
 slug: apple-and-vmwareor-xen
 title: Apple and VMware...or Xen?
 wordpress_id: 549
-categories:
-- Macintosh
-- Virtualization
+categories: Musing
 tags:
 - Apple
 - Citrix

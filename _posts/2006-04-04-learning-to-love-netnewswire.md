@@ -6,8 +6,7 @@ layout: post
 slug: learning-to-love-netnewswire
 title: Learning to Love NetNewsWire
 wordpress_id: 222
-categories:
-- Macintosh
+categories: Review
 tags:
 - Macintosh
 - Web

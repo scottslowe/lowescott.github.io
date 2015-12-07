@@ -6,8 +6,7 @@ layout: post
 slug: my-first-few-weeks-with-the-macbook-pro
 title: My First Few Weeks with the MacBook Pro
 wordpress_id: 364
-categories:
-- Macintosh
+categories: Review
 tags:
 - Apple
 - Macintosh
@@ -15,7 +14,7 @@ tags:
 
 There were two concerns I had about buying a [MacBook Pro](http://www.apple.com/macbookpro/), neither of them huge concerns but sufficient enough nevertheless. The first was the heat; there were just _so many_ reports of MBPs running hot. (Yes, I know that this was primarily early-run MBPs.) The second was the performance of non-Universal applications.
 
-I'm happy to report that both of these concerns are unfounded. I've had my MBP under some fairly significant loads in the last few days; just today, for example, I had VMware Fusion running (with a Windows XP Professional VM running Visio 2002 Professional), Mail, iCal, Camino, NetNewsWire, Address Book, Terminal, Microsoft Word, ecto, and four Remote Desktop Connection sessions all running simultaneously. The MBP was a very warm above the keyboard, but not any more so than my old PowerBook G4 and certainly not enough to make me really worried.
+I'm happy to report that both of these concerns are unfounded. I've had my MBP under some fairly significant loads in the last few days; just today, for example, I had VMware Fusion running (with a Windows XP Professional VM running Visio 2002 Professional), Mail, iCal, Camino, NetNewsWire, Address Book, Terminal, Microsoft Word, ecto, and four Remote Desktop Connection sessions all running simultaneously. The MBP was very warm above the keyboard, but not any more so than my old PowerBook G4 and certainly not enough to make me really worried.
 
 Even on previous occasions, when I've had Cyberduck, multiple SSH sessions and tunnels, X11, and tons of applications open, it still hasn't gotten hot enough for me to be concerned. Warm? Yes. Overly hot? Not in my opinion.
 

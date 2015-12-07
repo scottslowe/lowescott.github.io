@@ -6,8 +6,7 @@ layout: post
 slug: a-couple-cool-mac-discoveries
 title: A Couple Cool Mac Discoveries
 wordpress_id: 318
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - ActiveDirectory
 - Interoperability

@@ -6,8 +6,7 @@ layout: post
 slug: the-perfect-mac-twitter-client
 title: The Perfect Mac Twitter Client
 wordpress_id: 1267
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Macintosh
 - Web

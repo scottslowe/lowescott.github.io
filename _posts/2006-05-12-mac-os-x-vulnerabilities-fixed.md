@@ -6,7 +6,8 @@ layout: post
 slug: mac-os-x-vulnerabilities-fixed
 title: Mac OS X Vulnerabilities Fixed
 wordpress_id: 248
-categories:
+categories: News
+tags:
 - Macintosh
 - Security
 ---

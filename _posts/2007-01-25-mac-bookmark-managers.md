@@ -6,8 +6,7 @@ layout: post
 slug: mac-bookmark-managers
 title: Mac Bookmark Managers
 wordpress_id: 406
-categories:
-- Macintosh
+categories: Review
 tags:
 - Collaboration
 - Macintosh

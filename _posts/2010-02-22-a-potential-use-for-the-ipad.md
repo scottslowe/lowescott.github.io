@@ -6,8 +6,7 @@ layout: post
 slug: a-potential-use-for-the-ipad
 title: A Potential Use for the iPad
 wordpress_id: 1850
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Apple
 - Macintosh

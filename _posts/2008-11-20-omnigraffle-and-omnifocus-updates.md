@@ -6,8 +6,7 @@ layout: post
 slug: omnigraffle-and-omnifocus-updates
 title: OmniGraffle and OmniFocus Updates
 wordpress_id: 1044
-categories:
-- Macintosh
+categories: News
 tags:
 - iPhone
 - Macintosh

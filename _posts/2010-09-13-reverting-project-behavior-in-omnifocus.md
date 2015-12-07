@@ -6,8 +6,7 @@ layout: post
 slug: reverting-project-behavior-in-omnifocus
 title: Reverting Project Behavior in OmniFocus
 wordpress_id: 2103
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 - Productivity
