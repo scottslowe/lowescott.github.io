@@ -53,7 +53,7 @@ Welcome to Technology Short Take #57. I hope you find something useful here!
 * Microsoft's focus on Windows Server 2016 is increasing; I also saw [this post on moving to Nano Server][link-9], the new "subset" of Server Core, that will make its appearance in Windows Server 2016. It appears that applications that were written for Nano Server may require some porting/modification, which in turn may negatively impact the adoption of Nano Server among Microsoft's customers and ISVs.
 * Need a "cheat sheet," so to speak, for VMware's cloud-native applications initiatives? [Look no further.][link-3]
 * This post is slightly older (it's from June 2015), but still helpful, especially if you're trying to wrap your mind around the idea of a "pod" in Kubernetes. The article discusses [patterns for composite containers][link-18]---in other words, examples where a pod (a group of containers) make the ideal use case. As I said, it's definitely worth reading if you're (relatively) new to the Kubernetes scene and are trying to get some concrete examples of how the Kubernetes concepts play out.
-* Just because I can: here's an article on [updating OS X using the command-line `softwareupdate` tool][link-21]. Have fun.
+* Just because I can: here's an article on [updating OS X using the command-line `softwareupdate` tool][link-20]. Have fun.
 * Tyler Cross has an article on [using YAML as YAML with Ansible][link-28]. This may sound weird, but if you've worked with Ansible you know it supports both YAML and a "YAML-like" syntax. Tyler's article argues for using "pure" YAML, a suggestion that I second (I switched my playbooks to YAML some time ago and found them to be much more readable).
 
 ## Storage
