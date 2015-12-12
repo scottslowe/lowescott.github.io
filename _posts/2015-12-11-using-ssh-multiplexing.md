@@ -56,11 +56,14 @@ Note that some older versions of OpenSSH may have had some issues with combining
 
 I hope you've found this article helpful. If you have any questions, I would love to chat with you [on Twitter][link-5]. Thanks for reading!
 
+**UPDATE:** Jake Robinson pointed out to me on Twitter that OpenSSH 5.1 added a `MaxSessions` parameter to `sshd_config`. The default value is 10, meaning that at most 10 multiplexed connections are allowed. See [the OpenSSH 5.1 release notes][link-6] for full details. Thanks Jake!
+
 
 [link-1]: https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Multiplexing
 [link-2]: https://en.wikipedia.org/wiki/Multiplexing
 [link-3]: http://www.ansible.com/
 [link-4]: http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/ssh_config.5?query=ssh%5fconfig&arch=i386
 [link-5]: https://twitter.com/scott_lowe
+[link-6]: http://www.openssh.com/txt/release-5.1
 [xref-1]: {% post_url 2015-11-21-using-ssh-bastion-host %}
 [xref-2]: {% post_url 2015-12-04-use-case-ssh-bastion-host %}
