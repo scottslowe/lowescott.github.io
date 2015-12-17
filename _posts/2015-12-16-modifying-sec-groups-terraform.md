@@ -78,6 +78,8 @@ Fortunately, there is a workaround, and it's a simple (albeit currently undocume
 
 As you can see in [the GitHub issue for this problem][link-3], it's likely that this potential problem will be documented in the Terraform documentation soon.
 
+**UPDATE:** I issued a pull request (and it was subsequently merged) to add some documentation recommending that users reference the security group using the `name` attribute. As of today (17 Dec 2015), the update wasn't yet live on the Terraform website, but it should be soon.
+
 
 [link-1]: http://terraform.io
 [link-2]: http://www.openstack.org
