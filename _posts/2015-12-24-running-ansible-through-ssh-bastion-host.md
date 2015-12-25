@@ -14,7 +14,7 @@ tags:
 
 This post will expand on some previous posts---one showing you [how to set up and use an SSH bastion host][xref-1] and a second [describing one use case for an SSH bastion host][xref-2]---to show how the popular configuration management tool [Ansible][link-3] can be used through an SSH bastion host.
 
-The configuration/setup required to run Ansible through an SSH bastion host is actually reasonably straightforward, but I saw a _lot_ of incomplete articles out there as I was working through this myself. My hope is to supplement the existing articles, as well as the Ansible documenation, to make this sort of configuration easier for others to embrace and understand.
+The configuration/setup required to run Ansible through an SSH bastion host is actually reasonably straightforward, but I saw a _lot_ of incomplete articles out there as I was working through this myself. My hope is to supplement the existing articles, as well as the Ansible documentation, to make this sort of configuration easier for others to embrace and understand.
 
 ## Prerequisites
 
