@@ -37,7 +37,7 @@ Here's hoping you find this new book helpful and informative! Remember, the Earl
 
 
 [link-1]: http://shop.oreilly.com/product/0636920042082.do
-[link-2]: http://jedelman.com/
+[link-2]: http://jedelman.com/home/the-network-automation-book/
 [link-3]: http://keepingitclassless.net/2015/12/training-next-generation-network-engineer/
 [link-4]: http://shop.oreilly.com/category/early-release.do
 [link-5]: https://twitter.com/jedelman8
