@@ -35,7 +35,7 @@ Managing information is a bit more challenging in that there are many different 
 
 For note-based information, I tried (multiple times) to use a tool like Evernote, but it just didn't/doesn't fit into my workflow. Instead, I use a series of text files stored in a [Dropbox][link-20] folder (using my naming convention and tags, of course). For URLs, I capture the URL as a `.webloc` file (using an AppleScript bound to a hotkey, of course!), which can be opened on OS X or iOS (and, as it turns out, is an XML file so it's not that hard to extract the URL on other OSes as well). Since it's then a file, then it falls back under the guidelines for organizing files (I store these on Dropbox as well).
 
-There you have it---an update on my organizational/productivity setup as of early 2016. If you have any questions or feedback, I'd love to hear them; feel free to e-mail me (my address is on this site) or hit me up on Twitter. Thanks for reading, and I hope you find something useful here!
+There you have it---an update on my organizational/productivity setup as of early 2016. If you have any questions or feedback, I'd love to hear them; feel free to e-mail me (my address is on this site) or [hit me up on Twitter][link-19]. Thanks for reading, and I hope you find something useful here!
 
 
 [link-1]: https://www.codeux.com/textual/
