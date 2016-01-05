@@ -29,7 +29,7 @@ As it turns out, you can combine these two tools to gain some of the flexibility
         docker-machine create -d generic \
         --generic-ssh-user vagrant \
         --generic-ssh-key ~/.vagrant.d/insecure_private_key \
-        --generic IP address <IP address of VM> \
+        --generic-ip-address <IP address of VM> \
         --engine-install-url "https://test.docker.com" \
         <vm-name>
 
