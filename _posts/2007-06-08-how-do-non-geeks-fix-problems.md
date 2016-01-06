@@ -6,9 +6,7 @@ layout: post
 slug: how-do-non-geeks-fix-problems
 title: How Do Non-Geeks Fix Problems?
 wordpress_id: 470
-categories:
-- Macintosh
-- Networking
+categories: Rant
 tags:
 - Cisco
 - Macintosh
