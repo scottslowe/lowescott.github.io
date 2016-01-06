@@ -6,9 +6,7 @@ layout: post
 slug: some-technical-books-im-reading
 title: Some Technical Books I'm Reading
 wordpress_id: 2269
-categories:
-- Security
-- Virtualization
+categories: Review
 tags:
 - OSS
 - Security
