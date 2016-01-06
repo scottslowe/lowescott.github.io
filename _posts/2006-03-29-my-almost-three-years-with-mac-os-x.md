@@ -6,8 +6,7 @@ layout: post
 slug: my-almost-three-years-with-mac-os-x
 title: My Almost Three Years with Mac OS X
 wordpress_id: 211
-categories:
-- Macintosh
+categories: Personal
 tags:
 - Apple
 - Linux
