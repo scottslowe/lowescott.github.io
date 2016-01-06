@@ -6,12 +6,11 @@ layout: post
 slug: getting-things-done-on-my-mac
 title: Getting Things Done on my Mac
 wordpress_id: 623
-categories:
-- Macintosh
-- Personal
+categories: Explanation
 tags:
 - Macintosh
 - Personal
+- Productivity
 ---
 
 As part of transitioning into [my new role][1] at ePlus, I've been having to change some of the ways that I track my responsibilities and outstanding tasks. For many, many years I've been driven by customer-facing projects, and I centered my organization---document filing strategies, keywords, e-mail folders, tasks, etc.--around these projects. It was pretty easy to know what needed to be done when you're implementing a farm of ESX Servers, or installing a new storage area network.

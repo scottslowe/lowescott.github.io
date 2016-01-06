@@ -6,10 +6,10 @@ layout: post
 slug: getting-things-done-on-my-mac-part-ii
 title: Getting Things Done on my Mac, Part II
 wordpress_id: 634
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
+- Productivity
 ---
 
 A short while ago I wrote about how I was trying a new way of [getting things done on my Mac][1]. Since I published that blog entry, I've made some progress on wrapping myself around some of the tools and addressing some of the shortcomings I'd found. Since there may be others out there facing the same situation, I thought it would be useful to share my experience here.
