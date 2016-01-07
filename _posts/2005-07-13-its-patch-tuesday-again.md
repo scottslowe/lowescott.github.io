@@ -6,8 +6,7 @@ layout: post
 slug: its-patch-tuesday-again
 title: It's Patch Tuesday Again
 wordpress_id: 46
-categories:
-- Security
+categories: News
 tags:
 - Microsoft
 - Security
