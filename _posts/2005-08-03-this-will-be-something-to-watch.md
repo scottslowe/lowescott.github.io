@@ -6,7 +6,9 @@ layout: post
 slug: this-will-be-something-to-watch
 title: This Will Be Something to Watch
 wordpress_id: 62
-categories:
+categories: News
+tags:
+- Encryption
 - Networking
 - Security
 ---

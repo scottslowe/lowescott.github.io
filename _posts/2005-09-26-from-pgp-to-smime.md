@@ -6,7 +6,10 @@ layout: post
 slug: from-pgp-to-smime
 title: From PGP to S/MIME
 wordpress_id: 95
-categories:
+categories: Rant
+tags:
+- Encryption
+- Macintosh
 - Security
 ---
 

@@ -6,8 +6,10 @@ layout: post
 slug: hackers-at-defcon-race-to-expose-cisco-internet-flaw
 title: Hackers at Defcon race to expose Cisco Internet flaw
 wordpress_id: 61
-categories:
+categories: Rant
+tags:
 - Security
+- Cisco
 ---
 
 A recent article from _Computerworld_, [Hackers at Defcon race to expose Cisco Internet flaw](http://www.computerworld.com/securitytopics/security/story/0,10801,103607,00.html), states: "Computer hackers at this weekend's Defcon 13 hacker event worked to expose a flaw publicized last week that could allow an attacker to take control of Cisco Systems Inc. routers."
