@@ -6,8 +6,7 @@ layout: post
 slug: mac-firewall-wierdness
 title: Mac Firewall Wierdness
 wordpress_id: 266
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Apple
 - Macintosh

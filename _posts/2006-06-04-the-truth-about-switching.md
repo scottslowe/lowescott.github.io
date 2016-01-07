@@ -6,11 +6,11 @@ layout: post
 slug: the-truth-about-switching
 title: The Truth About Switching
 wordpress_id: 261
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Apple
 - Windows
+- Macintosh
 ---
 
 While browsing [digg.com](http://digg.com/), I came across this article regarding the [truth about switching to the Mac](http://utilware.com/switching.html). It's pretty accurate, too, both on the good points as well as the bad points (and yes, there are a few bad points).
