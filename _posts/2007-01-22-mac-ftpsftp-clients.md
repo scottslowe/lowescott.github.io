@@ -6,8 +6,7 @@ layout: post
 slug: mac-ftpsftp-clients
 title: Mac FTP/SFTP Clients
 wordpress_id: 404
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Encryption
 - FTP
