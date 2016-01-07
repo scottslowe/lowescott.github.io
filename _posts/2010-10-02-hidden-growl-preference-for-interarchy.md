@@ -6,10 +6,10 @@ layout: post
 slug: hidden-growl-preference-for-interarchy
 title: Hidden Growl Preference for Interarchy
 wordpress_id: 2129
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
+- FTP
 ---
 
 [Interarchy](http://nolobe.com/interarchy/) is a well-known FTP/SFTP client for Mac OS X that I've used off and on for a few years. It's been mostly off in recent times as I tended to use [Cyberduck](http://cyberduck.ch/), but since Cyberduck's AppleScript support got whacked in a recent update I've been re-evaluating Interarchy again.
