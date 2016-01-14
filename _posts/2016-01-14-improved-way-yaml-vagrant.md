@@ -59,7 +59,7 @@ What do I mean by this? You may be aware that once a Vagrant environment has bee
 The output of that command will look something like this (along with some other text after the listing):
 
     id       name    provider      state       directory
-    ---------------------------------------------------------------------------
+    ----------------------------------------------------------------------
     8fa3dfc  trusty  vmware_fusion not running /home/slowe/vagrant/trusty
 
 Using the value in the `id` column (`8fa3dfc`, in this example), you could run various Vagrant commands, like `vagrant up 8fa3dfc` or `vagrant halt 8fa3dfc`, even when you aren't in the directory where the Vagrant environment was defined. This is a pretty handy feature, but it _doesn't work_ if you use the Vagrant + YAML approach listed above. It errors out, indicating that it can't find the referenced YAML file (`servers.yml`, for example).
