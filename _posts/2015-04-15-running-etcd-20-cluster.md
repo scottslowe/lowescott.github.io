@@ -21,7 +21,7 @@ To help you follow along, I've created a set of files that will allow you to use
 
 ## Installing the Base OS
 
-You don't need anything special when setting up etcd; a straightforward Ubuntu Server 14.04 x64 installation will work just fine. If you're using the files in my learning-tools repository, you'll see that Vagrant simply turns up a VM based on a plain-jane Ubuntu 14.04 box. If you're building this from scratch (why?!), simply create a VM and install Ubuntu 14.04 into it. As long as it has Internet connectivity, that's all that's needed.
+You don't need anything special when setting up etcd; a straightforward Ubuntu Server 14.04 x64 installation will work just fine. If you're using the files in [my learning-tools repository][link-3], you'll see that Vagrant simply turns up a VM based on a plain-jane Ubuntu 14.04 box. If you're building this from scratch (why?!), simply create a VM and install Ubuntu 14.04 into it. As long as it has Internet connectivity, that's all that's needed.
 
 ## Installing etcd
 
@@ -31,7 +31,9 @@ Installing etcd is very straightforward:
 
 2. Unpack the downloaded `.tar.gz` file using `tar xvzf <filename>`.
 
-3. Optionally, change into the newly-created directory (named `etcd-2.0.9-linux-amd64` by default) and use `mv` to move the `etcd` and `etcdctl` binaries to a more permanent location on your system. (These are statically linked binaries, so feel free to put them wherever it makes sense to you. I chose to put them in `/usr/local/bin`.)
+3. Create the `/var/etcd` directory for etcd to use as its data directory.
+
+4. Optionally, change into the newly-created directory (named `etcd-2.0.9-linux-amd64` by default) and use `mv` to move the `etcd` and `etcdctl` binaries to a more permanent location on your system. (These are statically linked binaries, so feel free to put them wherever it makes sense to you. I chose to put them in `/usr/local/bin`.)
 
 That's it. Just make a note of where the `etcd` binary is stored, as you'll need to know that location later.
 
@@ -63,11 +65,11 @@ exec /usr/local/bin/etcd >>/var/log/etcd.log 2>&1
 end script
 {% endhighlight %}
 
-This is a reasonably straightforward Upstart script, so I won't bother spending a great deal of time explaining it. Note that if you chose not to move the `etcd` binary to `/usr/local/bin`, you'll have to edit this Upstart script to point to the correct location of the binary.
+This is a reasonably straightforward Upstart script, so I won't bother spending a great deal of time explaining it. Note that if you chose not to move the `etcd` binary to `/usr/local/bin`, you'll have to edit this Upstart script to point to the correct location of the binary. Also, if you choose to use something other than `/var/etcd` as the data directory, you'll need to edit this Upstart script appropriately. Consider the script above to be an example from which you can build one appropriate to your environment.
 
 I did find that the `if [ -f "/etc/default/etcd" ]; then` test---and subsequently sourcing the contents of that file---doesn't work with Upstart (they should be removed from this Upstart script, but I haven't bothered yet). The original idea was to define the necessary environment variables in `/etc/default/etcd`, but no amount of effort could make it work. I _could_ embed the environment variables in the Upstart script itself, but that seemed like a hack (and not a good one). Finally, a couple folks pointed me to [override files][link-6], which worked perfectly.
 
-The Upstart script itself (listed above) goes into `/etc/init` as `etcd.conf`. The override file also goes into `/etc/init` but it named (quite intuitively) `etcd.override`. Here's the contents of the override file:
+The Upstart script itself (listed above) goes into `/etc/init` as `etcd.conf`. The override file also goes into `/etc/init` but is named (quite intuitively) `etcd.override`. Here's the contents of the override file:
 
 {% highlight text %}
 # Override file for etcd Upstart script providing some environment variables
@@ -100,6 +102,7 @@ You can verify the operation of etcd by running a command like `etcdctl member l
 ## Additional Resources
 
 You can find the Upstart script, machine-specific override files, a provisioning script, and a Vagrantfile for replicating a three-node etcd 2.0 cluster on Ubuntu 14.04 in the "etcd-2.0" directory of [my learning-tools GitHub repository][link-3]. It was tested with Vagrant 1.7.2, the VMware plugin for Vagrant, and Fusion 6.0.5. It should work on VMware Workstation, but I haven't tested it there. (Feedback is welcome.)
+
 
 [link-1]: https://github.com/coreos/etcd
 [link-2]: https://coreos.com
