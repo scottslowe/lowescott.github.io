@@ -16,7 +16,7 @@ tags:
 - UNIX
 ---
 
-To setup a simple NAT router/firewall using [OpenBSD](http://www.openbsd.org/), use these steps as a general guideline. I'm assuming that you have general knowledge of OpenBSD.
+To setup a simple NAT router/firewall using [OpenBSD](http://www.openbsd.org/), use these steps as a general guideline. I'm assuming that you have general knowledge of OpenBSD. This article applies to OpenBSD 3.9.
 
 First, configure the network interfaces appropriately. Typically, this will involve editing the `hostname.<NIC type>` file. In a [VMware ESX Server](http://www.vmware.com/products/vi/esx/) environment, OpenBSD uses pcn0 for the first virtual NIC, pcn1 for the second virtual NIC, etc., so the appropriate configuration files would be `hostname.pcn0`, `hostname.pcn1`, and so forth.
 
