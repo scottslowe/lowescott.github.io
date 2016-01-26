@@ -6,7 +6,7 @@ layout: post
 slug: planning-for-fcoe-in-your-data-center-today
 title: Planning for FCoE in Your Data Center Today
 wordpress_id: 1539
-categories: GuestAuthor
+categories: Education
 tags:
 - Cisco
 - FCoE
@@ -18,12 +18,11 @@ tags:
 - Virtualization
 - VMware
 - vSphere
+- GuestPost
 excerpt: "Here are some thoughts on planning for Fibre Channel over Ethernet (FCoE) in your data center."
 ---
 
-By [Aaron Delp](http://blog.aarondelp.com/)  
-Twitter: [aarondelp](http://twitter.com/aarondelp)  
-FriendFeed (Delicious, Twitter, & all my blogs in one spot): [aarondelp](http://friendfeed.com/aarondelp)
+_By Aaron Delp_
 
 This week I've had the privilege of attending a Cisco Nexus 5000/7000 class. I have learned a tremendous amount about FCoE this week and after some conversations with Scott about the topic, I wanted to tackle it one more time from a different point of view. I have included a list of some of Scott's FCoE articles at the bottom for those interested in a more in-depth analysis.
 

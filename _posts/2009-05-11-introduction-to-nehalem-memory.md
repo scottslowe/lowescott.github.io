@@ -6,17 +6,16 @@ layout: post
 slug: introduction-to-nehalem-memory
 title: Introduction to Nehalem Memory
 wordpress_id: 1339
-categories: GuestAuthor
+categories: Education
 tags:
 - Hardware
 - Nehalem
 - Intel
+- GuestPost
 excerpt: "I wanted to follow up on my previous article on the Intel Nehalem CPUs with some additional information on memory configurations."
 ---
 
-By [Aaron Delp](http://blog.aarondelp.com/)  
-Twitter: [aarondelp](http://twitter.com/aarondelp)  
-FriendFeed (Delicious, Twitter, & all my blogs in one spot): [aarondelp](http://friendfeed.com/aarondelp)
+_By Aaron Delp_
 
 I wanted to relay some information regarding choosing memory speeds and types for the new Intel Xeon 5500 (Nehalem family) processors. As stated in my previous [article on the Nehalem CPUs][1], there are some decisions that need to be made when choosing the memory and processor combinations. Lets start off with what the memory architecture looks like.
 

@@ -6,17 +6,16 @@ layout: post
 slug: implementing-ibm-bladecenter-open-fabric-manager
 title: Implementing IBM BladeCenter Open Fabric Manager
 wordpress_id: 1323
-categories: GuestAuthor
+categories: Education
 tags:
 - FibreChannel
 - Hardware
 - IBM
+- GuestPost
 excerpt: "Here are some notes I gathered from a recent implementation of IBM's BladeCenter Open Fabric Manager (BOFM)."
 ---
 
-By [Aaron Delp](http://blog.aarondelp.com/)  
-Twitter: [aarondelp](http://twitter.com/aarondelp)  
-FriendFeed (Delicious, Twitter, & all my blogs in one spot): [aarondelp](http://www.friendfeed.com/aarondelp)
+_By Aaron Delp_
 
 A few months ago I implemented the Basic version IBM's BladeCenter Open Fabric Manager (BOFM) and I wanted to share some of my notes with everyone. It has been awhile so this is very high level; most of the small details have since fallen out of my head.
 

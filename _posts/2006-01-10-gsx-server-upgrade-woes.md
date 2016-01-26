@@ -6,8 +6,7 @@ layout: post
 slug: gsx-server-upgrade-woes
 title: GSX Server Upgrade Woes
 wordpress_id: 155
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Linux
 - Networking

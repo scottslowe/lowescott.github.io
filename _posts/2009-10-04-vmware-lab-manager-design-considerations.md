@@ -6,17 +6,16 @@ layout: post
 slug: vmware-lab-manager-design-considerations
 title: 'VMware Lab Manager Design Considerations '
 wordpress_id: 1678
-categories: GuestAuthor
+categories: Education
 tags:
 - Virtualization
 - VMware
 - vSphere
+- GuestPost
 excerpt: "I've done a number of VMware Lab Manager white boarding sessions, and I want to share a few of my design notes and the reason for each."
 ---
 
-By [Aaron Delp](http://blog.aarondelp.com/)  
-Twitter: [aarondelp](http://twitter.com/aarondelp)  
-FriendFeed (Delicious, Twitter, & all my blogs in one spot): [aarondelp](http://friendfeed.com/aarondelp)
+_By Aaron Delp_
 
 I have done a number of VMware Lab Manager white boarding sessions and I want to share a few of my design notes and the reason for each. Most of items come from my installation experience and the version 4 release notes. Here they are in no particular order.
 

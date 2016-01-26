@@ -6,18 +6,18 @@ layout: post
 slug: introduction-to-nehalem-cpus
 title: Introduction to "Nehalem" CPUs
 wordpress_id: 1272
-categories: GuestAuthor
+categories: Education
 tags:
 - Hardware
 - Intel
 - Nehalem
+- GuestPost
 excerpt: "This post provides an introduction to some of the technical details surrounding Intel's new Nehalem CPUs."
 ---
 
-By [Aaron Delp](http://blog.aarondelp.com/)  
-Twitter: [aarondelp](http://twitter.com/aarondelp)
+_By Aaron Delp_
 
-Hello everyone! Its Aaron again. Im sorry for falling off the radar for a bit. A new generation of Intel processors is upon us and I felt the need to come out of seclusion to share some recent findings regarding the new architecture. Todays article will explore the new processor offerings. I will be following this up with one (or more depending on the length) about the memory architecture and interconnects.
+Hello everyone! It's Aaron again. Im sorry for falling off the radar for a bit. A new generation of Intel processors is upon us and I felt the need to come out of seclusion to share some recent findings regarding the new architecture. Todays article will explore the new processor offerings. I will be following this up with one (or more depending on the length) about the memory architecture and interconnects.
 
 There is one simple reason why I wrote this article. You can no longer pick a processor based on clock speed. The Nehalem processors have levels now and each level provides additional features and functionality lacking in the lower levels. You will need to be careful when choosing a processor if you are looking for certain features. Here is a quick table listing the models and the features:
 

@@ -6,7 +6,7 @@ layout: post
 slug: blades-and-virtualization-arent-mutually-exclusive-part-one-hp-power-sizing
 title: "Blades and Virtualization Aren't Mutually Exclusive: Part One, HP Power Sizing"
 wordpress_id: 1144
-categories: GuestAuthor
+categories: Education
 tags:
 - bladevrack
 - Hardware
@@ -14,6 +14,7 @@ tags:
 - IBM
 - Virtualization
 - VMware
+- GuestPost
 ---
 
 _By Aaron Delp_

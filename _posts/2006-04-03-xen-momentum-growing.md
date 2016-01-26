@@ -6,8 +6,7 @@ layout: post
 slug: xen-momentum-growing
 title: Xen Momentum Growing
 wordpress_id: 217
-categories:
-- Virtualization
+categories: News
 tags:
 - HP
 - IBM

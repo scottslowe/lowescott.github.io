@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-layers
 title: Virtualization Layers
 wordpress_id: 237
-categories:
-- Virtualization
+categories: Musing
 tags:
 - Citrix
 - ESX

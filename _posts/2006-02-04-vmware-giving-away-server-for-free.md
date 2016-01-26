@@ -6,8 +6,7 @@ layout: post
 slug: vmware-giving-away-server-for-free
 title: VMware Giving Away Server for Free?
 wordpress_id: 172
-categories:
-- Virtualization
+categories: Musing
 tags:
 - Networking
 - Virtualization

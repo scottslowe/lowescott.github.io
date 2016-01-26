@@ -6,8 +6,7 @@ layout: post
 slug: new-open-source-virtualization-project
 title: New Open Source Virtualization Project
 wordpress_id: 156
-categories:
-- Virtualization
+categories: News
 tags:
 - Networking
 - OSS
