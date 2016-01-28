@@ -6,7 +6,8 @@ layout: post
 slug: car-whisperer-puts-hackers-in-the-drivers-seat
 title: "'Car Whisperer' puts hackers in the driver's seat"
 wordpress_id: 68
-categories:
+categories: News
+tags:
 - Security
 ---
 

@@ -6,8 +6,7 @@ layout: post
 slug: new-delicious-links
 title: New del.icio.us Links
 wordpress_id: 14
-categories:
-- Security
+categories: Information
 tags:
 - Apache
 - OSS
