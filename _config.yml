@@ -6,7 +6,6 @@ highlighter:         pygments
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           /:year/:month/:day/:title/
-relative_permalinks: true
 
 # Setup
 title:               "Scott's Weblog"
