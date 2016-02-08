@@ -24,8 +24,8 @@ author:
   twitter:           scott_lowe
 
 # Feed customization
-feed:
-  path: /feed/
+#feed:
+#  path: /feed/
 
 # Custom vars
 version:             1.0.0
