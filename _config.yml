@@ -9,6 +9,7 @@ permalink:           /:year/:month/:day/:title/
 
 # Setup
 title:               "Scott's Weblog"
+name:				 "Scott's Weblog"
 tagline:             "The weblog of an IT pro specializing in virtualization, networking, open source, and cloud computing"
 description:         "Offering technical posts and how-to articles from an IT pro specializing in virtualization, networking, open source, & cloud computing"
 url:                 http://blog.scottlowe.org
