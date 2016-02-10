@@ -4,7 +4,7 @@ comments: true
 date: 2016-01-07
 layout: post
 title: Launching a New Podcast
-categories: News
+categories: Podcast
 tags:
 - Podcast
 - Career
