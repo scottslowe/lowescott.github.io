@@ -143,6 +143,6 @@ The output from this command will look something like this:
     trunks              : []
     vlan_mode           : []
 
-In learning how to use LACP with OVS, I found [this article](https://brezular.wordpress.com/2011/12/04/part4-openvswitch-playing-with-bonding-on-openvswitch/) to be extremely helpful.
+In learning how to use LACP with OVS, I found [this article](http://brezular.com/2011/12/04/openvswitch-playing-with-bonding-on-openvswitch/) to be extremely helpful.
 
 If you have questions, or have additional information to share with me and/or other readers, please speak up in the comments. Thanks!
