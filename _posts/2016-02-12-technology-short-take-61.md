@@ -65,7 +65,7 @@ Welcome to Technology Short Take #61. I've tried to find a nice range of article
 ## Virtualization
 
 * Frank Denneman shares some [insights into CPU and memory configurations of ESXi hosts][link-30], based on data gathered by PernixData Cloud. In some respects, the results look (mostly) similar to the data I used to see when I was doing vSphere installations---dual-socket servers seem to still be the sweet spot for many environments, though the number of cores per socket is higher now than in years past, as is the amount of RAM.
-* Frank has also launched [the vSphere Desiogn Pocketbook v3][link-31], which (in his words) is "a platform for all the virtualization community members to broadcast their knowledge."
+* Frank has also launched [the vSphere Design Pocketbook v3][link-31], which (in his words) is "a platform for all the virtualization community members to broadcast their knowledge."
 * Rick Scherer has a post up on [how to change the ESXi hostname on an EVO:RAIL appliance][link-32].
 * Have you heard about [the new edition of the PowerCLI book][link-33]? I've long thought that this book didn't receive the attention it merits; I'm hoping this new edition is a smash success. It deserves it.
 * Granted, this use case is probably a bit rare, but in the event you need it: William Lam has a post on [how to limit the number of physical CPU sockets in an ESXi host][link-34]. William, as usual, has been churning out an _insane_ number of very useful blog posts; be sure to check [his site][link-35] for the latest.
