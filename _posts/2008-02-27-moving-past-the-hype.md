@@ -6,9 +6,7 @@ layout: post
 slug: moving-past-the-hype
 title: Moving Past the Hype
 wordpress_id: 646
-categories:
-- Security
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Security

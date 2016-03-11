@@ -6,9 +6,7 @@ layout: post
 slug: virtualization-security-guidelines
 title: Virtualization Security Guidelines
 wordpress_id: 564
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - Security
 - Virtualization

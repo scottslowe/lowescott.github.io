@@ -6,8 +6,7 @@ layout: post
 slug: statistically-secure
 title: Statistically Secure
 wordpress_id: 478
-categories:
-- Security
+categories: Musing
 tags:
 - Apple
 - Linux

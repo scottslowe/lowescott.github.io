@@ -6,9 +6,7 @@ layout: post
 slug: virtual-security
 title: Virtual Security
 wordpress_id: 205
-categories:
-- Security
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - Security

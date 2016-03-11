@@ -6,8 +6,7 @@ layout: post
 slug: improving-windows-security
 title: Improving Windows Security
 wordpress_id: 309
-categories:
-- Security
+categories: Information
 tags:
 - Macintosh
 - Microsoft

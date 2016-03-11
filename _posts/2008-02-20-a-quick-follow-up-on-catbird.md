@@ -6,10 +6,7 @@ layout: post
 slug: a-quick-follow-up-on-catbird
 title: A Quick Follow Up on Catbird
 wordpress_id: 639
-categories:
-- Networking
-- Security
-- Virtualization
+categories: News
 tags:
 - Networking
 - Security

@@ -6,8 +6,7 @@ layout: post
 slug: even-microsoft-knows-it
 title: Even Microsoft Knows It
 wordpress_id: 219
-categories:
-- Security
+categories: Rant
 tags:
 - IE
 - Microsoft

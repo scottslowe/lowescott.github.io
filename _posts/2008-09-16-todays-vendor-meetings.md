@@ -6,9 +6,7 @@ layout: post
 slug: todays-vendor-meetings
 title: Today's Vendor Meetings
 wordpress_id: 902
-categories:
-- Security
-- Virtualization
+categories: Information
 tags:
 - Security
 - Virtualization

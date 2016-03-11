@@ -6,9 +6,7 @@ layout: post
 slug: virtual-security-concerns
 title: Virtual Security Concerns
 wordpress_id: 428
-categories:
-- Security
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - Networking

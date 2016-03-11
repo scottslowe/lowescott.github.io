@@ -6,8 +6,7 @@ layout: post
 slug: assorted-links
 title: Assorted Links
 wordpress_id: 313
-categories:
-- Security
+categories: News
 tags:
 - Apple
 - Cisco

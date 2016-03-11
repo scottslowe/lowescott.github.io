@@ -6,9 +6,7 @@ layout: post
 slug: various-odds-and-ends
 title: Various Odds and Ends
 wordpress_id: 556
-categories:
-- Security
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Kerberos
@@ -16,6 +14,7 @@ tags:
 - Linux
 - Microsoft
 - NFS
+- Security
 - Virtualization
 - VMware
 - Windows

@@ -6,8 +6,7 @@ layout: post
 slug: mcafee-mac-os-x-whitepaper
 title: McAfee Mac OS X Whitepaper
 wordpress_id: 263
-categories:
-- Security
+categories: Rant
 tags:
 - Apple
 - Macintosh

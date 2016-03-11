@@ -6,9 +6,7 @@ layout: post
 slug: the-dark-side-of-virtualization
 title: The Dark Side of Virtualization
 wordpress_id: 683
-categories:
-- Security
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - Security

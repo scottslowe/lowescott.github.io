@@ -6,9 +6,7 @@ layout: post
 slug: vi-plugins-expose-a-problem
 title: VI Plugins Expose a Problem
 wordpress_id: 642
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - Security
 - Virtualization
