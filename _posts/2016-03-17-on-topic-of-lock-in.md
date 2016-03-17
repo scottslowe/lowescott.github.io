@@ -34,8 +34,3 @@ The thing that gets me is when people place avoiding lock-in (which is impossibl
 The point is not to try to avoid lock-in---because you can't---but to recognize that "lock-in" is simply another variable to be considered in the overall design and architecture of your system. As a variable to be considered in design, you can then place an appropriate emphasis on minimizing lock-in versus solving business applications versus operational costs versus the cost of future migrations versus...well, you get the idea.
 
 Let's stop placing the avoidance of "lock in" above other equally important design considerations and instead focus on finding the _best_ solution for the problem at hand.
-
-
-[link-1]: 
-[link-2]: 
-[link-3]: 
