@@ -19,7 +19,7 @@ The issue (described [here on GitHub][link-4], among other places) involves a co
 
 The end result is that when you try to create a Vagrant VM with multiple network interfaces, it fails. Using a single network interface is fine; the issue only rears its head when you want to use multiple network interfaces. I don't know about you, but _I_ use multiple network interfaces quite frequently, so this is a real problem for me. Fortunately, there's a workaround.
 
-As you may know, I'm a fan of using parameterized data stored in YAML files with Vagrant (see here and here for more information). So most of my Vagrant environments have this snippet of code in the `Vagrantfile`:
+As you may know, I'm a fan of using parameterized data stored in YAML files with Vagrant (see [here][xref-1] and [here][xref-2] for more information). So most of my Vagrant environments have this snippet of code in the `Vagrantfile`:
 
 ``` ruby
 if server['ip_addr'] != nil
