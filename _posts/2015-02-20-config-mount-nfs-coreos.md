@@ -13,6 +13,7 @@ tags:
 - Docker
 - Storage
 - OpenStack
+- CoreOS
 ---
 
 I've written about [CoreOS][link-1] a fair amount (see [here][xref-1], [here][xref-2], and [here][xref-3]), but one of the things that is both good and bad about CoreOS is the automatic update mechanism. It's good because you know your systems will stay up to date, but it's bad if you haven't taken the time to properly address how automatic updates will affect your environment (for example, you've manually started some [Docker][link-5] containers instead of using [systemd][link-6] unit files---when the CoreOS system reboots after an update, your Docker containers will no longer be running). Re-architecting your environment to fully account for this change in architecture and behavior is a larger discussion than can be addressed in a single blog post, but in this post I want to at least tackle one small part of the discussion: separating your persistent data. In this post, I'll show you how to mount an NFS share on a CoreOS instance deployed on [OpenStack][link-2] (or any cloud that leverages cloud-init).
