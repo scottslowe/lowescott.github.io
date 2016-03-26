@@ -10,6 +10,7 @@ tags:
 - OpenStack
 - OSS
 - CLI
+- AWS
 ---
 
 In this post, I'm going to provide a quick introduction to [Terraform][link-1], a tool that is used to provision and configure infrastructure. Terraform allows you to define infrastructure configurations and then have those configurations implemented/created by Terraform automatically. In this respect, you could compare Terraform to similar solutions like [OpenStack][link-2] Heat, AWS CloudFormation, and others.

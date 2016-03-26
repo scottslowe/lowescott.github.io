@@ -9,6 +9,7 @@ tags:
 - VMware
 - vSphere
 - Cloud
+- AWS
 ---
 
 By now you've probably seen or heard the news about Ravello Systems launching Inception---the ability to run nested VMware ESXi on AWS or GCE, including the ability to run VMs on these nested ESXi instances. ([Here's Ravello's press release.][link-1])
