@@ -6,10 +6,10 @@ layout: post
 slug: mind-mapping
 title: Mind Mapping
 wordpress_id: 823
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
+- Productivity
 ---
 
 If you are looking for a decent mind mapping application for Mac OS X, [MindNode](http://www.mindnode.com/) is an application you should definitely consider. I stumbled across MindNode a few days ago while browsing iusethis.com, and after using it since then I have to say I really enjoy it.

@@ -6,13 +6,13 @@ layout: post
 slug: a-crude-document-management-system
 title: A Crude Document Management System
 wordpress_id: 340
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - Office
 - Tagging
 - Tags
+- Productivity
 ---
 
 My rudimentary "document management system" is comprised of a variety of technologies, some built into [Mac OS X](http://www.apple.com/macosx/) and some added on via separate third-party applications. At the core of the system is [Spotlight](http://www.apple.com/macosx/features/spotlight/), the search engine that is the object of a love-hate relationship with many Mac users. Despite Spotlight's shortcomings, it is still a very useful tool to have. (I will have to admit that I am sure I am still not taking full advantage of Spotlight's abilities.)

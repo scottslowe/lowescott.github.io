@@ -6,8 +6,7 @@ layout: post
 slug: cancel-or-allow
 title: Cancel or Allow?
 wordpress_id: 410
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Apple
 - Macintosh

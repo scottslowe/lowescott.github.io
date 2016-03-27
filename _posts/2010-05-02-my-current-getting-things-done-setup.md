@@ -6,8 +6,7 @@ layout: post
 slug: my-current-getting-things-done-setup
 title: My Current Getting Things Done Setup
 wordpress_id: 1910
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 - Personal
