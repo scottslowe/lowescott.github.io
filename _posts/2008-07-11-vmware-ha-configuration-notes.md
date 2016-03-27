@@ -6,9 +6,7 @@ layout: post
 slug: vmware-ha-configuration-notes
 title: VMware HA Configuration Notes
 wordpress_id: 759
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Networking

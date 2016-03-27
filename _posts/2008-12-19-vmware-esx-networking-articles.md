@@ -6,9 +6,7 @@ layout: post
 slug: vmware-esx-networking-articles
 title: VMware ESX Networking Articles
 wordpress_id: 1101
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - CLI

@@ -6,8 +6,7 @@ layout: post
 slug: using-multiple-vlans-with-hp-virtual-connect-flex-10
 title: Using Multiple VLANs with HP Virtual Connect Flex-10
 wordpress_id: 1457
-categories:
-- Networking
+categories: Explanation
 tags:
 - Hardware
 - HP

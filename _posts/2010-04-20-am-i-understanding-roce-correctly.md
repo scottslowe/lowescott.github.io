@@ -6,8 +6,7 @@ layout: post
 slug: am-i-understanding-roce-correctly
 title: Am I Understanding RoCE Correctly?
 wordpress_id: 1886
-categories:
-- Networking
+categories: Explanation
 tags:
 - FCoE
 - Networking

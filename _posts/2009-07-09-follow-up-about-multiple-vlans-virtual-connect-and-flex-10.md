@@ -6,9 +6,7 @@ layout: post
 slug: follow-up-about-multiple-vlans-virtual-connect-and-flex-10
 title: Follow-Up About Multiple VLANs, Virtual Connect, and Flex-10
 wordpress_id: 1459
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Hardware
 - HP

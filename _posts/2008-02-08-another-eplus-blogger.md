@@ -6,9 +6,7 @@ layout: post
 slug: another-eplus-blogger
 title: Another ePlus Blogger
 wordpress_id: 627
-categories:
-- General
-- Networking
+categories: General
 tags:
 - Blogging
 - Cisco

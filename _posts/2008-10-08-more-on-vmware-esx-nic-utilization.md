@@ -6,9 +6,7 @@ layout: post
 slug: more-on-vmware-esx-nic-utilization
 title: More on VMware ESX NIC Utilization
 wordpress_id: 978
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - ESX

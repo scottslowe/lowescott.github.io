@@ -6,9 +6,7 @@ layout: post
 slug: using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect
 title: Using VMware ESX Virtual Switch Tagging with HP Virtual Connect
 wordpress_id: 1446
-categories:
-- Networking
-- Virtualization
+categories: Tutorial
 tags:
 - Hardware
 - HP

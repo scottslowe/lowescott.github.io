@@ -6,9 +6,7 @@ layout: post
 slug: vlans-and-port-groups
 title: VLANs and Port Groups
 wordpress_id: 226
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - ESX
