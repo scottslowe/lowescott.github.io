@@ -6,9 +6,7 @@ layout: post
 slug: unity-definitely-real
 title: 'Unity: Definitely Real!'
 wordpress_id: 469
-categories:
-- Macintosh
-- Virtualization
+categories: News
 tags:
 - Apple
 - Fusion

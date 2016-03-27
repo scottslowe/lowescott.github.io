@@ -6,8 +6,7 @@ layout: post
 slug: windows-defections
 title: Windows Defections
 wordpress_id: 415
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Macintosh
 - Vista
@@ -22,7 +21,7 @@ The latest is Scot Finnie, who in [this latest article](http://www.computerworld
 
 >Bye-bye Windows! My three-month Macintosh trial has ended, but my permanent gig with the Mac is just getting started. Apple's MacBook Pro and Mac OS X are now my computer and operating system of choice.
 
-A while back, there were [rumblings](http://radar.oreilly.com/archives/2006/06/ubuntu_linux_a_threat_to_mac_o.html) that a couple of high-profile defections from Mac OS X to Linux were "canaries in the Mac OS X and Red Hat coal mines" and that [Apple should be worried](http://www.kottke.org/remainder/06/06/11361.html). When Mac OS X first started gaining ground, lots of "alpha geeks" adopted the platform; but, honestly, most of these were already UNIX-heads or Linux-heads to begin with, and I think they were really just looking for an alternative to Microsoft. That is, people who were already inclined to a Unix-like platform were more likely to jump ship than those firmly entrenched in the Windows camp.
+A while back, there were [rumblings](http://radar.oreilly.com/archives/2006/06/ubuntu_linux_a_threat_to_mac_o.html) that a couple of high-profile defections from Mac OS X to Linux were "canaries in the Mac OS X and Red Hat coal mines" and that [Apple should be worried](http://www.kottke.org/remainder/06/06/11361.html). When Mac OS X first started gaining ground, lots of "alpha geeks" adopted the platform; but, honestly, most of these were already UNIX-heads or Linux-heads to begin with, and I think they were really just looking for an alternative to Microsoft. That is, people who were already inclined to a UNIX-like platform were more likely to jump ship than those firmly entrenched in the Windows camp.
 
 Now, though, we are seeing the Windows die-hards switching platforms. This isn't simply moving from one UNIX-like platform to a different UNIX-like platform. Mac OS X is _nothing_ like Windows, and switching from one platform to another is a pretty significant effort. Clearly, there must be a reason why these long-time Windows users are switching. These aren't your average Windows users---these are Windows power users, users who have championed the Windows platform for years. Now they're switching to the Mac.
 

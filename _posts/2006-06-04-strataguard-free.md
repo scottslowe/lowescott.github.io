@@ -6,12 +6,12 @@ layout: post
 slug: strataguard-free
 title: StrataGuard Free
 wordpress_id: 260
-categories:
-- Security
+categories: News
 tags:
 - Linux
 - Networking
 - OSS
+- Security
 - Virtualization
 - VMware
 ---

@@ -6,8 +6,7 @@ layout: post
 slug: textmate-revisited
 title: TextMate Revisited
 wordpress_id: 789
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 - Writing

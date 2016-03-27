@@ -6,8 +6,7 @@ layout: post
 slug: macbook-pro-efi-firmware-update
 title: MacBook Pro EFI Firmware Update
 wordpress_id: 365
-categories:
-- Macintosh
+categories: News
 tags:
 - Apple
 - Macintosh

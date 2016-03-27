@@ -6,8 +6,7 @@ layout: post
 slug: leopard-upgrade
 title: Leopard Upgrade
 wordpress_id: 609
-categories:
-- Macintosh
+categories: Information
 tags:
 - Apple
 - Blogging

@@ -6,9 +6,7 @@ layout: post
 slug: vmware-addressing-virtual-security-concerns
 title: VMware Addressing Virtual Security Concerns
 wordpress_id: 505
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - Networking
 - Security

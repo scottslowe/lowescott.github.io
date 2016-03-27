@@ -6,8 +6,7 @@ layout: post
 slug: new-folders-with-quicksilver
 title: New Folders with Quicksilver
 wordpress_id: 1311
-categories:
-- Macintosh
+categories: Tutorial
 tags:
 - Macintosh
 ---

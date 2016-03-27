@@ -6,9 +6,7 @@ layout: post
 slug: unity-real-or-rumor
 title: 'Unity: Real or Rumor?'
 wordpress_id: 468
-categories:
-- Macintosh
-- Virtualization
+categories: News
 tags:
 - Fusion
 - Macintosh

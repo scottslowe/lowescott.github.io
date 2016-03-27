@@ -6,9 +6,7 @@ layout: post
 slug: vmsight-in-vdi-environments
 title: vmSight in VDI Environments
 wordpress_id: 837
-categories:
-- Security
-- Virtualization
+categories: News
 tags:
 - Security
 - VDI
