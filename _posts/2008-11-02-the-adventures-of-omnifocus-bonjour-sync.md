@@ -6,14 +6,13 @@ layout: post
 slug: the-adventures-of-omnifocus-bonjour-sync
 title: The Adventures of OmniFocus Bonjour Sync
 wordpress_id: 1007
-categories:
-- Macintosh
-- Networking
+categories: Explanation
 tags:
 - Apple
 - iPhone
 - Macintosh
 - Networking
+- Wireless
 ---
 
 I've made no secret of the fact that I use and enjoy [OmniFocus](http://www.omnigroup.com/applications/omnifocus/), a GTD application from the fine folks at OmniGroup. (Just for the record, I also use and enjoy [OmniGraffle](http://www.omnigroup.com/applications/omnigraffle/) and [OmniOutliner](http://www.omnigroup.com/applications/omnioutliner/). Doesn't that qualify me for a free license to [OmniPlan](http://www.omnigroup.com/applications/omniplan/)?) In fact, one of the driving factors for purchasing my iPhone---aside from the fact that it's cool and I wanted one---was the fact that OmniGroup also had an [iPhone version of OmniFocus](http://www.omnigroup.com/applications/omnifocus/iphone/).

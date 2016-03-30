@@ -6,9 +6,7 @@ layout: post
 slug: virtual-consoles-inside-virtual-machines
 title: Virtual Consoles Inside Virtual Machines
 wordpress_id: 366
-categories:
-- Macintosh
-- Virtualization
+categories: Information
 tags:
 - Macintosh
 - Virtualization

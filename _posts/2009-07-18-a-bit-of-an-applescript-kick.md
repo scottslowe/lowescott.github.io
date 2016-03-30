@@ -6,8 +6,7 @@ layout: post
 slug: a-bit-of-an-applescript-kick
 title: A Bit of an AppleScript Kick
 wordpress_id: 1467
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - Productivity

@@ -6,13 +6,12 @@ layout: post
 slug: vmware-fusion-team-blog
 title: VMware Fusion Team Blog
 wordpress_id: 625
-categories:
-- Macintosh
-- Virtualization
+categories: News
 tags:
 - Fusion
 - Macintosh
 - VMware
+- Virtualization
 ---
 
 I just received a note from VMware announcing the launch of the VMware Fusion Team blog, aka [Team Fusion](http://blogs.vmware.com/teamfusion/). The RSS feed for Team Fusion is [here](http://blogs.vmware.com/teamfusion/rss.xml).

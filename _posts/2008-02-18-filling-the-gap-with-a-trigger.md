@@ -6,8 +6,7 @@ layout: post
 slug: filling-the-gap-with-a-trigger
 title: Filling the Gap With a Trigger
 wordpress_id: 636
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Apple
 - Macintosh

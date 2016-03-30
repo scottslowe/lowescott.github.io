@@ -6,8 +6,7 @@ layout: post
 slug: the-power-of-quicksilver
 title: The Power of Quicksilver
 wordpress_id: 555
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Macintosh
 - Music

@@ -6,8 +6,7 @@ layout: post
 slug: applescripts-for-yojimbo-camino-and-skim
 title: AppleScripts for Yojimbo, Camino, and Skim
 wordpress_id: 2285
-categories:
-- Macintosh
+categories: Information
 tags:
 - Apple
 - Collaboration

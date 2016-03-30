@@ -6,8 +6,7 @@ layout: post
 slug: activesync-on-the-iphone
 title: ActiveSync on the iPhone
 wordpress_id: 652
-categories:
-- Macintosh
+categories: News
 tags:
 - Apple
 - Exchange

@@ -6,8 +6,7 @@ layout: post
 slug: quicksilver-ssh-plugin
 title: Quicksilver SSH Plugin
 wordpress_id: 581
-categories:
-- Macintosh
+categories: Information
 tags:
 - Macintosh
 - SSH

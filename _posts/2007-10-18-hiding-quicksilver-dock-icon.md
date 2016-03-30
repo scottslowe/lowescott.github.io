@@ -6,8 +6,7 @@ layout: post
 slug: hiding-quicksilver-dock-icon
 title: Hiding Quicksilver Dock Icon
 wordpress_id: 561
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - Macintosh
 ---

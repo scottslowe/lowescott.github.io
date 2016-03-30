@@ -6,8 +6,7 @@ layout: post
 slug: new-apple-store
 title: New Apple Store
 wordpress_id: 279
-categories:
-- Macintosh
+categories: Personal
 tags:
 - Apple
 - Hardware

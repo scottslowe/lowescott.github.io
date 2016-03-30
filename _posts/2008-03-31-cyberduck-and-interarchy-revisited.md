@@ -6,9 +6,7 @@ layout: post
 slug: cyberduck-and-interarchy-revisited
 title: Cyberduck and Interarchy Revisited
 wordpress_id: 669
-categories:
-- Macintosh
-- Networking
+categories: Review
 tags:
 - Macintosh
 - Networking

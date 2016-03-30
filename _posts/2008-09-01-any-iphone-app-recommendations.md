@@ -6,8 +6,7 @@ layout: post
 slug: any-iphone-app-recommendations
 title: Any iPhone App Recommendations?
 wordpress_id: 846
-categories:
-- Macintosh
+categories: Review
 tags:
 - Apple
 - Exchange

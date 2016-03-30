@@ -6,13 +6,13 @@ layout: post
 slug: networking-diagramming-on-the-mac
 title: Networking Diagramming on the Mac
 wordpress_id: 403
-categories:
-- Macintosh
+categories: Rant
 tags:
 - Macintosh
 - Microsoft
 - Office
 - VMware
+- Networking
 ---
 
 I spent the entire day trying to create a professional looking network diagram for a customer who recently installed an iSCSI-based SAN (a Network Appliance storage system, by the way). I didn't want generic rectangles and boxes; I wanted nice icons. Preferably vendor-specific icons. Is that so much to ask?

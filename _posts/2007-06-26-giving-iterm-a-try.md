@@ -6,10 +6,10 @@ layout: post
 slug: giving-iterm-a-try
 title: Giving iTerm a Try
 wordpress_id: 477
-categories:
-- Macintosh
+categories: Musing
 tags:
 - Macintosh
+- CLI
 ---
 
 It invariably occurs that, regardless of whether I'm on a computer running [Microsoft Windows Server 2003](http://www.microsoft.com/windowsserver/default.mspx), some flavor of Linux or UNIX, or [Mac OS X](http://www.apple.com/macosx/), I open a command prompt at some point or another during my session. I can't really explain why; it's just how I work. I find it faster to type `ipconfig /all` to get the networking configuration on a Windows box than right-clicking on My Network Places, selecting Properties, right-clicking the network connection, selecting Properties---you get the idea. I suppose it dates from my MS-DOS days, where I didn't really have any other choice but to use the command line.

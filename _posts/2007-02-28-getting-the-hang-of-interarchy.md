@@ -6,8 +6,7 @@ layout: post
 slug: getting-the-hang-of-interarchy
 title: Getting the Hang of Interarchy
 wordpress_id: 421
-categories:
-- Macintosh
+categories: Explanation
 tags:
 - FTP
 - Macintosh

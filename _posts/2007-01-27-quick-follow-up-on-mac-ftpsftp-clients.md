@@ -6,8 +6,7 @@ layout: post
 slug: quick-follow-up-on-mac-ftpsftp-clients
 title: Quick Follow Up on Mac FTP/SFTP Clients
 wordpress_id: 407
-categories:
-- Macintosh
+categories: Review
 tags:
 - ActiveDirectory
 - FTP

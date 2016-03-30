@@ -6,9 +6,7 @@ layout: post
 slug: solaris-10-x86-on-mac-os-x
 title: Solaris 10 x86 on Mac OS X
 wordpress_id: 374
-categories:
-- Macintosh
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Macintosh

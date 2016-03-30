@@ -6,9 +6,7 @@ layout: post
 slug: swsoft-disagrees-with-cnet-benchmarks
 title: SWsoft Disagrees with CNET Benchmarks
 wordpress_id: 515
-categories:
-- Macintosh
-- Virtualization
+categories: Rant
 tags:
 - Macintosh
 - Virtualization

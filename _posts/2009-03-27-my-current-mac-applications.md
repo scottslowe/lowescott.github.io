@@ -6,8 +6,7 @@ layout: post
 slug: my-current-mac-applications
 title: My Current Mac Applications
 wordpress_id: 1259
-categories:
-- Macintosh
+categories: Information
 tags:
 - Apple
 - Blogging
