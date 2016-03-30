@@ -7,7 +7,7 @@ title: Spousetivities in Tokyo
 categories: Information
 tags:
 - OpenStack
-- Personal
+- Spousetivities
 ---
 
 Regular readers of this site know that my wife, Crystal, organizes spouse activities (aka "Spousetivities", like the combination of "spouse" and "activities") at conferences. This year she's adding activities in Tokyo, Japan, in conjunction with the Fall OpenStack Summit!
