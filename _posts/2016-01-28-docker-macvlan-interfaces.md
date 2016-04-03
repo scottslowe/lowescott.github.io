@@ -59,11 +59,11 @@ Finally, launch a Docker container attached to the Docker network you just creat
 
 This will drop you at a Bash prompt in an Ubuntu container. From here, you can use `ping` to verify connectivity to other systems. You can also run `ip -d link list` within the container; note the last line of the output (shown here):
 
-{% highlight text %}
+```
 7: eth0@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN mode DEFAULT group default
     link/ether 5a:7b:f3:63:51:68 brd ff:ff:ff:ff:ff:ff promiscuity 0
     macvlan  mode bridge
-{% endhighlight %}
+```
 
 This clearly shows that the interface in the Docker container is a macvlan interface.
 

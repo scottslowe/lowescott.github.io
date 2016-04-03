@@ -27,14 +27,14 @@ If you get an error or the `lsmod` command returns no results, then you may have
 
 Once you have KVM and Libvirt installed and working correctly, you'll start by defining a Libvirt network to which any VMs you create will be connected. This snippet of XML code defines a Libvirt network that uses macvtap interfaces associated with the `eth1` physical interface:
 
-{% highlight xml %}
+``` xml
 <network>
   <name>macvtap-net</name>
   <forward mode="bridge">
     <interface dev="eth1"/>
   </forward>
 </network>
-{% endhighlight %}
+```
 
 You would use the `virsh net-define` command with this XML to define the actual Libvirt network. Assuming the XML code above was stored in a file named `macvtap-def.xml`, you'd run this command:
 
@@ -55,10 +55,10 @@ Obviously, you'd need to change `/home/user` in the above command to the actual 
 
 Once this command completes, you'll have a KVM guest domain running and attached to a macvtap interface. You can see the new macvtap interface by running `ip link list`; you'll see an entry similar to the one shown below:
 
-{% highlight text %}
+```
 5: macvtap0@eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN mode DEFAULT group default qlen 500
     link/ether 52:54:00:5c:15:d6 brd ff:ff:ff:ff:ff:ff
-{% endhighlight %}
+```
 
 If you get into the KVM guest domain (you can do this by running `virsh vncdisplay cirros` and noting the VNC display where the guest's console is accessible, then using SSH port forwarding to make that port accessible to your system), you'll see that the MAC address of the macvtap interface on the host is identical to the MAC address of the virtual interface in the guest. This is a by-product of how macvtap/macvlan interfaces work; since there is no "intermediate" device or TAP interface, the MAC addresses on the host and in the guest will match (it is essentially the _same_ interface in both places).
 

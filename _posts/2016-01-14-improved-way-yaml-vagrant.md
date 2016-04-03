@@ -17,7 +17,7 @@ In this post, I'd like to share with you an improved way to use YAML with [Vagra
 
 Here's the _original_ snippet of a `Vagrantfile` that I shared in that first Vagrant/YAML post:
 
-{% highlight ruby %}
+``` ruby
 # -*- mode: ruby -*-
 # # vi: set ft=ruby :
  
@@ -46,7 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 end
-{% endhighlight %}
+```
 
 The "magic," so to speak, comes from the `servers = YAML.load_file('servers.yml')` line, where Vagrant loads the information from the external YAML file named "servers.yml" into an array. The `servers.each` loop later iterates through the entries in the array, creating and configuring a VM for each record in the YAML file.
 
@@ -66,19 +66,20 @@ Using the value in the `id` column (`8fa3dfc`, in this example), you could run v
 
 The fix for this is to modify the line where Vagrant loads the data from the YAML file. This is the original line, which produces the inability to use global Vagrant commands:
 
-{% highlight ruby %}
+``` ruby
 servers = YAML.load_file('servers.yaml')
-{% endhighlight %}
+```
 
 The fixed/corrected/improved version looks like this:
 
-{% highlight ruby %}
+``` ruby
 servers = YAML.load_file(File.join(File.dirname(__FILE__), 'servers.yml'))
-{% endhighlight %}
+```
 
 The difference here is that the second command creates the full path to the referenced YAML file (by determining the directory name of the `Vagrantfile`, referred to by the special `__FILE__` variable, and then appending the name of the YAML file itself).
 
 With this approach, you're now able to use global Vagrant commands from any directory without an error. I've recently modified all the Vagrant environments in [my GitHub "learning-tools" repository][link-2] to use this new approach, so that should make those environments a bit easier to use.
+
 
 [link-1]: http://www.vagrantup.com/
 [link-2]: https://github.com/lowescott/learning-tools

@@ -18,7 +18,7 @@ If you're unfamiliar with Vagrant, I'd start with [my introduction to Vagrant][x
 
 To use a JSON-formatted data file as an external data source for Vagrant, the code in the `Vagrantfile` looks really similar to the code you'd use for YAML:
 
-{% highlight ruby %}
+``` ruby
 # -*- mode: ruby -*-
 # # vi: set ft=ruby :
  
@@ -47,13 +47,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end # config.vm.define
   end # servers.each
 end # Vagrant.configure
-{% endhighlight %}
+```
 
 For the most part, this `Vagrantfile` is very similar to what I've already shown you when using an external YAML data file. The line starting with `servers = ...` is what pulls in the data from the external JSON file; the `JSON.parse` command (method? function?) is required to parse the JSON-formatted data into a hash that we reference later in the `servers.each` loop. The loop itself is otherwise exactly what I've already used in other examples of using an external data file.
 
 And what does the external data file look like? Here's a JSON-formatted data file that would work with this `Vagrantfile`:
 
-{% highlight json %}
+``` json
 [
     {
         "name": "jessie",
@@ -71,7 +71,7 @@ And what does the external data file look like? Here's a JSON-formatted data fil
         "ip_addr": "192.168.100.102"
     }
 ]
-{% endhighlight %}
+```
 
 Naturally, you could extend this external JSON-formatted data file to do other things. Here's a few examples:
 
