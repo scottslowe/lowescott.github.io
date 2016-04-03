@@ -36,10 +36,13 @@ Yes, you saw that right: Docker Machine will remove the pre-existing SSH keypair
 
 Based on a quick review of the [GitHub issues for Docker Machine][link-4], this is "expected" and "normal," and the expectation is for users to simply re-provision the keypair into OpenStack again via manual means. Personally, I find this behavior to run completely counter to what I would expect. However, until this behavior is changed/fixed in a future release, please plan accordingly when using Docker Machine with OpenStack.
 
+**UPDATE:** Nathan LeClaire, one of the Docker Machine maintainers, has opened [a new GitHub issue][link-5] to track this behavior.
+
 
 
 [link-1]: https://www.docker.com/products/docker-machine
 [link-2]: http://www.openstack.org/
 [link-3]: https://docs.docker.com/machine/drivers/openstack/
 [link-4]: https://github.com/docker/machine/issues/
+[link-5]: https://github.com/docker/machine/issues/3261
 [xref-1]: {% post_url 2015-09-24-using-docker-machine-with-openstack %}
