@@ -13,7 +13,7 @@ tags:
 - Virtualization
 ---
 
-Welcome to Technology Short Take #64. Normally, I tried to publish Short Takes on Friday, but this past Friday was April Fools' Day. Given the propensity for "real" information to get lost among all the pranks, I decided to push this article back to today. Unlike most of what is published around April Fools' Day, hopefully everything here is helpful, informative, and useful!
+Welcome to Technology Short Take #64. Normally, I try to publish Short Takes on Friday, but this past Friday was April Fools' Day. Given the propensity for "real" information to get lost among all the pranks, I decided to push this article back to today. Unlike most of what is published around April Fools' Day, hopefully everything here is helpful, informative, and useful!
 
 ## Networking
 
