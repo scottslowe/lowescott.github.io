@@ -10,6 +10,8 @@ tags:
 - OpenStack
 - CLI
 - OSS
+- Terraform
+- Security
 ---
 
 In this post I'd like to discuss a potential (minor) issue with modifying [OpenStack][link-2] security groups with [Terraform][link-1]. I call this a "potential minor" issue because there is an easy workaround, which I'll detail in this post. I wanted to bring it to my readers' attention, though, because as of this blog post this matter had not yet been documented.
