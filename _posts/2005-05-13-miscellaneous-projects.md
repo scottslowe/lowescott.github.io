@@ -6,9 +6,9 @@ layout: post
 slug: miscellaneous-projects
 title: Miscellaneous Projects
 wordpress_id: 4
-categories:
-- Networking
+categories: Information
 tags:
+- Networking
 - Messaging
 - Microsoft
 - Newsgroups

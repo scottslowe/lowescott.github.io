@@ -6,8 +6,7 @@ layout: post
 slug: some-cool-networking-stuff
 title: Some Cool Networking Stuff
 wordpress_id: 15
-categories:
-- Networking
+categories: Information
 tags:
 - HP
 - Networking
@@ -18,4 +17,4 @@ I setup some cool networking stuff today with some [HP](http://www.hp.com/) ProC
 
 I know it's nothing unusual (I'm sure there are those of you out there that do this stuff everyday), but I was particularly pleased at how smoothly we managed to make the conversion for all 12 locations.  Plus, I'd done this before many times with [Cisco](http://www.cisco.com/) equipment, but this was only the second time using HP equipment.
 
-I'll probably do a write-up of this on my [company web site](http://www.mercurionsystems.com/). If you are interested in more details, look there soon.
+I'll probably do a write-up of this on my company web site. If you are interested in more details, look there soon.

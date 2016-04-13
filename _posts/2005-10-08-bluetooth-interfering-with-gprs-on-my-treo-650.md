@@ -6,7 +6,8 @@ layout: post
 slug: bluetooth-interfering-with-gprs-on-my-treo-650
 title: Bluetooth Interfering with GPRS on my Treo 650
 wordpress_id: 103
-categories:
+categories: Rant
+tags:
 - Networking
 ---
 

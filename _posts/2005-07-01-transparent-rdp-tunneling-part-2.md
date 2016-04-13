@@ -6,9 +6,9 @@ layout: post
 slug: transparent-rdp-tunneling-part-2
 title: Transparent RDP Tunneling, Part 2
 wordpress_id: 29
-categories:
-- Networking
+categories: Information
 tags:
+- Networking
 - Encryption
 - OSS
 - SSL
