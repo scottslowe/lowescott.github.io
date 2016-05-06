@@ -28,7 +28,7 @@ Note that there's no provider configuration here; instead, it relies on the use 
 
 First up is the `vars.tf` file. I won't post the full file here (go see [the GitHub repo][link-5] for the full file), but here's a snippet:
 
-```
+``` text
 # Image ID for CoreOS Stable 899.13.0 image
 variable "image" {
     default = "6ebd5b1e-f5d5-4bf7-9ca8-713a2696307f"
@@ -46,7 +46,7 @@ All these values are referenced by `main.tf`, which is the core part of the Terr
 
 The contents of `main.tf` are pretty self-explanatory. For example, here's a snippet that attaches a tenant logical router to the newly-created subnet and an external provider network:
 
-```
+``` text
 # Attach Swarm router to new Swarm network created earlier
 resource "openstack_networking_router_interface_v2" "swarm-rtr-if" {
     router_id = "${openstack_networking_router_v2.swarm-rtr.id}"
@@ -58,7 +58,7 @@ Not shown here but also included in `main.tf` and referenced here are the tenant
 
 The code for defining the instances is fairly straightforward as well, with one new addition that you may not have seen before:
 
-```
+``` text
 resource "openstack_compute_instance_v2" "node-01" {
     name = "node-01"
     image_id = "${var.image}"
@@ -114,7 +114,7 @@ This cloud-init script does a couple of things:
 
 The last part is the `output.tf` file, which contains only enough information to have Terraform spit out the floating IP address for each instance launched, like this:
 
-```
+``` text
 output "addr-node-01" {
     value = "${openstack_compute_floatingip_v2.node-01-fip.address}"
 }
