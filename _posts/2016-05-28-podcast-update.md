@@ -31,7 +31,7 @@ I've already updated the iTunes podcast listing to reflect the new podcast feed,
 
 So, to recap, here are the appropriate feeds for the podcast:
 
-Web site RSS feed: [http://fullstackjourney.com/feed.xml][link-7]
+Web site RSS feed: [http://fullstackjourney.com/feed.xml][link-7]  
 Podcast RSS feed: [http://fullstackjourney.com/podcast.xml][link-8]
 
 If you have any questions or run into any issues, _please_ let me know.
