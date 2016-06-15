@@ -24,9 +24,17 @@ In any case, along the way I'm trying to make the whole process as repeatable an
 
 First off, you'll want to get your hands on the [Puppet Labs apt module from the Forge](http://forge.puppetlabs.com/puppetlabs/apt). Once you've gotten that installed on your Puppet server (a simple `puppet module install puppetlabs/apt` on any recent version of Puppet should knock that out for you), then you can use this snippet of code in a manifest:
 
-{% gist lowescott/6827241 %}
+``` puppet
+apt::source { 'ubuntu-cloud':
+  location          =>  'http://ubuntu-cloud.archive.canonical.com/ubuntu',
+  repos             =>  'main',
+  release           =>  'precise-updates/grizzly',
+  include_src       =>  false,
+  required_packages =>  'ubuntu-cloud-keyring',
+}
+```
 
-(In case the code above doesn't show up, you can also view it [here](https://gist.github.com/lowescott/6827241).)
+(You can download this code from [here](https://gist.github.com/lowescott/6827241), if you'd like.)
 
 Once you put this into the Puppet manifest and then refresh the system's configuration, you should see a file named `ubuntu-cloud.list` appear in the `/etc/apt/sources.list.d` directory on your Ubuntu system. (By the way, I usually wrap that code in a conditional like `if $::operatingsystem == 'Ubuntu'` or similar.) Once that file is there, simply run `apt-get update` and you should now be able to install packages from the Ubuntu Cloud Archive.
 

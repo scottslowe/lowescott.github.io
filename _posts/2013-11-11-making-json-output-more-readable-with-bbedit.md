@@ -24,26 +24,49 @@ BBEdit Text Filters, as you may already know, simply take the current text (or s
 
 In this case, you're going to use an extremely simple Bash shell script containing a single Python command to transform JSON-serialized output into a more human-readable format.
 
-First, let's take a look at some JSON-serialized output. Here's the output from an API call to NVP/NSX to list the logical switches:
+First, let's take a look at some JSON-serialized output. Here's [a GitHub gist][gist-1] that shows the output from an API call to NVP/NSX to list the logical switches.
 
-{% gist lowescott/7370184 %}
-
-(To view the information if the code block isn't available, click [here](https://gist.github.com/lowescott/7370184).)
-
-It _is_ human-readable, but just barely. How can we make this a bit easier for humans to read and parse? Well, it turns out that OS X (and probably most recent flavors of Linux) come with a version of Python pre-installed, and the pre-installed version of Python comes with the ability to "prettify" (make more human readable) JSON text. (In the case of OS X 10.8 "Mountain Lion", the pre-installed version of Python is version 2.7.2.) With grateful thanks to the folks on Twitter who introduced me to this trick, the command you would use in this instance is as follows:
+As you can see, it _is_ human-readable, but just barely. How can we make this a bit easier for humans to read and parse? Well, it turns out that OS X (and probably most recent flavors of Linux) come with a version of Python pre-installed, and the pre-installed version of Python comes with the ability to "prettify" (make more human readable) JSON text. (In the case of OS X 10.8 "Mountain Lion", the pre-installed version of Python is version 2.7.2.) With grateful thanks to the folks on Twitter who introduced me to this trick, the command you would use in this instance is as follows:
 
     python -m json.tool
 
 Very simple, right? To turn this into a BBEdit Text Filter, we need only wrap this into a very simple shell script, such as this:
 
-{% gist lowescott/7364842 %}
+``` bash
+#!/bin/sh
 
-(If you aren't able to see the code block above, please click [here](https://gist.github.com/lowescott/7364842).)
+python -m json.tool
+```
 
 Place this script (or a link to this script) in the `~/Library/Application Support/BBEdit/Text Filters` directory, restart BBEdit, and you should be good to go. Now you can copy and paste the output from an API call like the output above, run it through this text filter, and get output that looks like this:
 
-{% gist lowescott/7370142 %}
+``` json
+{
+    "result_count": 3, 
+    "results": [
+        {
+            "_href": "/ws.v1/lswitch/3ca2d5ef-6a0f-4392-9ec1-a6645234bc55", 
+            "_schema": "/ws.v1/schema/LogicalSwitchConfig", 
+            "type": "LogicalSwitchConfig"
+        }, 
+        {
+            "_href": "/ws.v1/lswitch/81f51868-2142-48a8-93ff-ef612249e025", 
+            "_schema": "/ws.v1/schema/LogicalSwitchConfig", 
+            "type": "LogicalSwitchConfig"
+        }, 
+        {
+            "_href": "/ws.v1/lswitch/9fed3467-dd74-421b-ab30-7bc9bfae6248", 
+            "_schema": "/ws.v1/schema/LogicalSwitchConfig", 
+            "type": "LogicalSwitchConfig"
+        }
+    ]
+}
+```
 
-(Click [here](https://gist.github.com/lowescott/7370142) if the code block above isn't visible.)
+(Want this as [a GitHub gist][gist-3]?)
 
 Given that I'm new to a lot of this stuff, I'm sure that I have probably overlooked something along the way. There might be better and/or more efficient ways of handling this, or better tools to use. If you have any suggestions on how to improve any of this---or just suggestions on how I might do better in my API explorations---feel free to speak out in the comments below.
+
+[gist-1]: https://gist.github.com/lowescott/7370184
+[gist-2]: https://gist.github.com/lowescott/7364842
+[gist-3]: https://gist.github.com/lowescott/7370142

@@ -21,11 +21,33 @@ I recently moved my e-mail services off Google and onto [Fastmail](http://www.fa
 
 (Note that, as a Mac user, most of my tips focus on Mac applications. If you're a user of another platform, I do apologize---but I can only speak about what I use myself.)
 
-To help make this easier, I came up with this bit of AppleScript:
+To help make this easier, I came up with a bit of AppleScript:
 
-{% gist lowescott/7990921 %}
+``` applescript
+-- This script moves messages to a spam training folder
+-- Set some default values to be used later in the script; not all values may be used
+property destMailbox : "Spam Training"
+property destAccount : "example.com"
 
-(Click [here](https://gist.github.com/lowescott/7990921) if you don't see a code block above this paragraph.)
+-- Handler called when running script from script menu
+on run
+    tell application "Mail"
+        set theSelectedMessages to selection
+        if ((count of theSelectedMessages) < 1) then
+            beep
+            return
+        end if
+        repeat with theMessage in theSelectedMessages
+            if (read status of theMessage) is false then
+                set read status of theMessage to true
+            end if
+            move theMessage to mailbox destMailbox of account destAccount
+        end repeat
+    end tell
+end run
+```
+
+You can download this script [from GitHub][gist-1], if that's helpful.
 
 To make this work on your system, all you need to do is just change the two `property` declarations at the top. Set them to the correct values for your system.
 
@@ -36,3 +58,4 @@ I hope this helps someone out there!
 [1]: {% post_url 2013-06-21-reducing-the-friction-processing-e-mail %}
 [2]: {% post_url 2013-07-19-reducing-the-friction-processing-e-mail-part-2 %}
 [3]: {% post_url 2013-12-04-divorcing-google %}
+[gist-1]: https://gist.github.com/lowescott/7990921

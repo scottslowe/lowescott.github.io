@@ -37,9 +37,27 @@ For the purposes of this first attempt at using Puppet, I decided I would try to
 
 2. It took care of getting the SSL certificates signed and in place.
 
-Now that all the preliminaries are out of the way, let's get into my specific configuration, and what I want to share with you. If you've looked at Puppet at all, you'll recall that the "trifecta," so to speak, of Puppet manifests (a manifest is Puppet's declarative configuration file) is the use of the file-package-service combination of resources, like this:
+Now that all the preliminaries are out of the way, let's get into my specific configuration, and what I want to share with you. If you've looked at Puppet at all, you'll recall that the "trifecta," so to speak, of Puppet manifests (a manifest is Puppet's declarative configuration file) is the use of the file-package-service combination of resources, like this simple example:
 
-{% gist lowescott/4142468 %}
+``` puppet
+file { "ntp.conf" :
+  path            => "/etc/ntp.conf",
+  owner           => "root",
+  group           => "root",
+  mode            => 644,
+  source          => "puppet:///modules/ntp/ntp.conf",
+}
+
+package { "ntp":
+  ensure          => installed,
+}
+
+service { "ntp":
+  require         => File["ntp.conf"],
+  subscribe       => File["ntp.conf"],
+  ensure          => running,
+}
+```
 
 Obviously, this is just an example; you'd want/need to customize the values specified above for the various resources for your particular installation. The point is that it's very common (as I understand it) to have this file-package-service combination in Puppet manifests.
 
@@ -47,7 +65,22 @@ This is all well and good, but what about when you need to manage multiple OSes 
 
 Dominic Cleal's blog gave me [the kickstart I needed](http://m0dlx.com/blog/Puppet_manifests__a_multi_OS_style_guide.html) to get started down the path to a multi-OS manifest. At first I experimented with conditionals in the manifest, like this:
 
-{% gist lowescott/4142471 %}
+``` puppet
+file { "ntp.conf":
+  path            => $operatingsystem ? {
+    "OpenBSD"     => "/etc/ntpd.conf",
+    default       => "/etc/ntp.conf",
+  },
+  owner           => "root",
+  group           => $operatingsystem ? {
+    "OpenBSD"     => "wheel",
+    default       => "root",
+  },
+  mode            => 644,
+  source          => [ "file:///modules/ntp/ntpd.conf.$operatingsystem",
+                       "file:///modules/ntp/ntp.conf", ],
+}
+```
 
 That worked fine for the file definition, but it broke down when I got to the package definition. Why? OpenBSD packages require that you define a source, but other platforms don't necessarily need (or want) a source defined.
 
@@ -59,11 +92,25 @@ Never one to give up so easily (and thanks for encouraging words on Twitter, Cod
 
 Let's assume I used this sort of definition in `ntp::common`:
 
-{% gist lowescott/4142477 %}
+``` puppet
+file { "ntp.conf":
+  path            => "/etc/ntp.conf",
+  owner           => "root",
+  group           => "root",
+  mode            => 644,
+  source          => "puppet:///modules/ntp/ntp.conf",
+}
+```
 
 If that's the case, then _this_ is the syntax I needed in the `ntp::openbsd` subclass:
 
-{% gist lowescott/4142478 %}
+``` puppet
+File["ntp.conf"] {
+  path            => "/etc/ntpd.conf",
+  group           => "wheel",
+  source          => "puppet:///modules/ntp/ntpd.conf.openbsd",
+}
+```
 
 See what that does? By using the `File["ntp.conf"]` syntax instead of the `file { "ntp.conf" }` syntax, I simply referred back to an existing resource and overrode the previously-defined values. This allowed me to create OS-specific subclasses with OS-specific settings. In turn, that allows me to manage different OSes using a single module with subclasses. If I ever need to add a new OS to be managed, I can simply add another subclass with the OS-specific settings and I'm off to the races.
 
