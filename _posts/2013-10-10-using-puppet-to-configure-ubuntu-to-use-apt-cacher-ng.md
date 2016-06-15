@@ -21,9 +21,14 @@ In this post, I'll share a brief snippet of Puppet code that allows you to autom
 
 This snippet of Puppet code will take care of configuring apt to use a local Apt-Cacher-NG instance:
 
-{% gist lowescott/6924675 %}
+``` puppet
+class {'apt':
+  proxy_host        =>  'apt-cacher-ng.example.com',
+  proxy_port        =>  '3142',
+}
+```
 
-(In the event the code block above isn't shown, you can also see it [here](https://gist.github.com/lowescott/6924675).)
+(You can also see this code block as a GitHub Gist [here](https://gist.github.com/lowescott/6924675).)
 
 This is a really simple block of code, but I'm publishing it here just for the sake of completeness and in the remote event someone else will find it useful. Because this a distro-specific thing (only applies to Debian and Debian derivatives like Ubuntu), you might want to wrap this in a conditional (like `If $::osfamily == 'Debian'` or similar) to prevent errors in the event this manifest is (accidentally) applied to a non-Debian distribution.
 

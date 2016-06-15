@@ -47,9 +47,16 @@ Once you've made these changes to the container's configuration, then you're rea
 
 Your script---the one referenced on the `lxc.network.script.up` in the container's configuration file---should look something like this:
 
-{% gist lowescott/8569424 %}
+```
+#!/bin/bash
 
-(If you can't see the code block above, please click [here](https://gist.github.com/lowescott/8569424).)
+BRIDGE="br-int"
+ovs-vsctl --may-exist add-br $BRIDGE
+ovs-vsctl --if-exists del-port $BRIDGE $5
+ovs-vsctl --may-exist add-port $BRIDGE $5
+```
+
+(Please click [here](https://gist.github.com/lowescott/8569424) to see this as a GitHub Gist.)
 
 LXC passes five parameters to the script when it is called:
 

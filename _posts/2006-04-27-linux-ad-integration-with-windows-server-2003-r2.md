@@ -46,11 +46,11 @@ For each Linux-based server that will be authenticating against Active Directory
 
 2. Use the following command at a command prompt to configure the new computer account:  
 
-{% highlight dosbatch %}
+``` text
 ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$
 -crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL
 -out filename
-{% endhighlight %}
+```
 
 Of course, you'll need to substitute the appropriate values for "fqdn" (the fully-qualified domain name of the computer), "REALM" (the DNS name of your Active Directory domain in UPPERCASE), "DOMAIN" (the NetBIOS name of your Active Directory domain), "password" (the password that will be set for the new computer account), and "filename" (the keytab that will be generated and must be copied over to the Linux computer).
 
@@ -64,13 +64,9 @@ Follow the steps below to configure the Linux server for authentication against 
 
 2. Be sure that time is being properly synchronized between Active Directory and the Linux server in question. Kerberos requires time synchronization.
 
-3. Edit the `krb5.conf` file to look something like this, substituting your actual host names and domain names where appropriate:  
+3. Edit the `krb5.conf` file to look something like [this][gist-1], substituting your actual host names and domain names where appropriate.
 
-	{% gist lowescott/67a3f8c36270c7e6376b %}
-
-4. Edit the `/etc/ldap.conf` file to look something like this, substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate.  
-
-	{% gist lowescott/a7c89505c46a13d95ebe %}
+4. Edit the `/etc/ldap.conf` file to look something like [this][gist-2], substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate.
 
 5. Securely copy the file created using the `ktpass.exe` utility above to the Linux server in question, placing it in the `/etc` directory as `krb5.keytab`. (SFTP or SCP are excellent candidates for this.)
 
@@ -88,3 +84,5 @@ This configuration was tested on Red Hat Linux 9.0 as well as CentOS 4.3.
 
 [1]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
 [2]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
+[gist-1]: https://gist.github.com/lowescott/67a3f8c36270c7e6376b
+[gist-2]: https://gist.github.com/lowescott/a7c89505c46a13d95ebe
