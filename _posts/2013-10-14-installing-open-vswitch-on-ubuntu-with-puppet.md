@@ -25,11 +25,48 @@ This code makes a couple of assumptions:
 
 2. It assumes that you have Debian packages for OVS in that internal Apt repository. Depending on which version of OVS you need (I needed a newer version than was available in the public repositories), you might be able to get away with just using the public repositories.
 
-OK, with the assumptions out of the way, let's have a look at the code:
+OK, with the assumptions out of the way, let's have a look at the code. If you're interested in downloading this code (for your own use or modification), please click [here](https://gist.github.com/lowescott/6938382).
 
-{% gist lowescott/6938382 %}
+``` puppet
+if $::operatingsystem == 'Ubuntu' {
 
-(Click [here](https://gist.github.com/lowescott/6938382) if the code block above isn't visible.)
+  # Install prerequisite packages
+  package {'make':
+    ensure            => 'installed',
+  }
+
+  package {'dkms':
+    ensure            => 'installed',
+  }
+
+  package {'libc6-dev':
+    ensure            => 'installed',
+  }
+
+  # Install Open vSwitch common files from internal repository
+  package {'openvswitch-common':
+    ensure            => 'installed',
+    name              => 'openvswitch-common',
+    require           => Apt::Source['internal'],
+  }
+
+  # Install Open vSwitch switch from internal repository
+  package {'openvswitch-switch':
+    ensure            => 'installed',
+    name              => 'openvswitch-switch',
+    require           => Apt::Source['internal'],
+  }
+
+  # Install Open vSwitch kernel module form internal repository
+  package {'openvswitch-datapath-dkms':
+    ensure            => 'installed',
+    name              => 'openvswitch-datapath-dkms',
+    require           => [ Apt::Source['internal'],
+                          Package['make'], Package['dkms'],
+                          Package['libc6-dev'] ],
+  }
+}
+```
 
 The code is fairly straightforward; the key is making sure that the appropriate packages are installed _before_ you attempt to install the OVS DKMS module. This is reflected in the `require` statement for the `openvswitch-datapath-dkms` package.
 

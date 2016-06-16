@@ -20,7 +20,17 @@ In this post, I'm going to show you a way to automate the configuration of [Open
 
 I wish I could say that this method of automating OVS with Puppet was clever, but---to be honest---it's really more of a brutish hack that anything else. In an earlier post, I described [some integrations between RHEL and OVS][1] that allows you to use interface configuration files in `/etc/sysconfig/network-scripts` to configure portions of OVS. For example, you could use this interface configuration file to create an OVS internal interface for management traffic:
 
-{% gist lowescott/4733835 %}
+``` text
+DEVICE="mgmt0"
+BOOTPROTO="static"
+ONBOOT="yes"
+DEVICETYPE="ovs"
+TYPE="OVSIntPort"
+IPADDR=10.11.12.13
+NETMASK=255.255.255.0
+OVS_BRIDGE="ovsbr0"
+HOTPLUG="no"
+```
 
 Further, based on a number of the Puppet-related posts I've written ([this one][2], for example), you probably know that Puppet has the ability to enforce the presence and contents of file-based resources.
 
@@ -28,11 +38,21 @@ So, Puppet can create and manage files, and files can be used to configure OVS. 
 
 Here's a snippet of Puppet code that could be used to automate the configuration of OVS to use an internal interface for management traffic:
 
-{% gist lowescott/5025745 %}
+``` puppet
+# This code declares a file resource to manage an interface
+# configuration script on RHEL/RHEL variants for automated
+# configuration of OVS.
+#
+file {'/etc/sysconfig/network-scripts/ifcfg-mgmt0':
+  ensure                =>  'present',
+  source                =>  'puppet:///modules/module-name/ovs-ifcfg-mgmt0',
+}
+```
 
 As I said, this is a bit of a brutish hack---not an elegant solution, but one that works. Naturally, because this builds on the RHEL-OVS integrations, you'll need to do an `ifdown` and/or `ifup` to make the change(s) effective. (One could likely use an `exec` statement in the Puppet manifest to run these commands for you.) Another drawback is that this only works on RHEL and RHEL variants, whereas both OVS and Puppet are far more widely supported. Still, it might come in handy in some situations.
 
 If you have corrections, clarifications, or suggestions, please feel free to speak up in the comments below. Courteous comments are both encouraged and welcomed!
+
 
 [1]: {% post_url 2013-02-07-exploring-rhel-ovs-integrations %}
 [2]: {% post_url 2012-07-05-using-puppet-with-multiple-operating-systems %}

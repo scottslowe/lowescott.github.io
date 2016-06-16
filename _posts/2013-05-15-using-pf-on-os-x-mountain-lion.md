@@ -48,13 +48,48 @@ I'll assume you're going to use option #2. What you'll need, then, are (at a min
 
 Since we're bypassing the existing configuration file, all you really need is an extremely simple configuration file that points to your anchor and loads it, like this:
 
-{% gist lowescott/5581696 %}
+    anchor "org.scottlowe.pf"
+    load anchor "org.scottlowe.pf" from "/etc/pf.anchors/org.scottlowe.pf.rules"
 
 The other file you need has the actual options and rules that will be passed to `pf` when it starts. You can get fancy here and use a separate file to define macros and tables, or you can bundle the macros and tables in with the rules. Whatever approach you take, be **sure** that you have the commands in this file in the right order: options, normalization, queueing, translation, and filtering. Failure to put things in the right order will cause `pf` not to enable and will leave your system without this additional layer of network protection.
 
-A _very_ simple set of rules in an anchor might look something like this:
+A _very_ simple set of rules in an anchor might look something like this (click [here](https://gist.github.com/lowescott/5581710) for an option to download this code snippet):
 
-{% gist lowescott/5581710 %}
+``` text
+# Options
+set block-policy drop
+set fingerprints "/etc/pf.os"
+set ruleset-optimization basic
+set skip on lo0
+
+# Normalization
+# Scrub incoming packets
+scrub in all no-df
+
+# Queueing
+
+# Translation
+
+# Filtering
+# Antispoof
+antispoof log quick for { lo0 en0 en2 }
+
+# Block by default
+block in log
+
+# Block to/from illegal destinations or sources
+block in log quick from no-route to any
+
+# Allow critical system traffic
+pass in quick inet proto udp from any port 67 to any port 68
+
+# Allow ICMP from home LAN
+pass in log proto icmp from 192.168.254.0/24
+
+# Allow outgoing traffic
+pass out inet proto tcp from any to any keep state
+pass out inet proto udp from any to any keep state
+```
 
 Naturally, you'd want to customize these rules to fit your environment. At the end of this article I provide some additional resources that might help with this task.
 
@@ -62,7 +97,7 @@ Once you have the configuration file in place and at least one anchor defined wi
 
 _However_, there is one additional thing you might want to do first---test your rules to be sure everything is correct. Use this command in a terminal window while running as an administrative user:
 
-    sudo pfctl -v -n -f <em><path to configuration file></em>
+    sudo pfctl -v -n -f <path to configuration file>
 
 If this command reports errors, go back and fix them before proceeding.
 
@@ -70,9 +105,35 @@ If this command reports errors, go back and fix them before proceeding.
 
 Creating the launchd item simply involves creating a properly-formatted XML file and placing it in `/Library/LaunchDaemons`. It must be owned by root, otherwise it won't be processed at all. If you aren't clear on how to make sure it's owned by root, go do a bit of reading on `sudo` and `chown`.
 
-Here's a launchd item you might use for `pf`:
+Here's a launchd item you might use for `pf` (click [here](https://gist.github.com/lowescott/5581726) for an option to download this code snippet):
 
-{% gist lowescott/5581726 %}
+``` xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer/DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Label</key>
+        <string>org.scottlowe.pf.plist</string>
+        <key>Program</key>
+        <string>/sbin/pfctl</string>
+        <key>ProgramArguments</key>
+        <array>
+                <string>/sbin/pfctl</string>
+                <string>-e</string>
+                <string>-f</string>
+                <string>/etc/pf.anchors/org.scottlowe.pf.conf</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>ServiceDescription</key>
+        <string>FreeBSD Packet Filter (pf) daemon</string>
+    <key>StandardErrorPath</key>
+        <string>/var/log/pf.log</string>
+        <key>StandardOutPath</key>
+        <string>/var/log/pf.log</string>
+</dict>
+</plist>
+```
 
 A few notes about this launchd item:
 
@@ -89,5 +150,6 @@ Once this file is in place with the right ownership, you can either use `launchc
 Finally, it's important to note that I found a few different web sites helpful during my experimentations with `pf` on OS X. [This write-up](http://krypted.com/mac-os-x/a-cheat-sheet-for-using-pf-in-os-x-lion-and-up/) was written with Lion in mind, but applies equally well to Mountain Lion, and [this site](https://calomel.org/pf_config.html)--while clearly focused on OpenBSD and FreeBSD---was nevertheless quite helpful as well.
 
 It should go without saying, but I'll say it nevertheless: courteous comments are welcome! Feel free to add your thoughts, ideas, questions, or corrections below.
+
 
 [1]: {% post_url 2012-04-05-setting-up-ipfw-on-mac-os-x %}

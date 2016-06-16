@@ -19,7 +19,15 @@ In an earlier post on [using Puppet to manage user accounts][1], I showed how I 
 
 To refresh your memory, this is how the virtual user resources were being realized on individual nodes:
 
-{% gist lowescott/4050236 %}
+``` puppet
+node default {
+}
+
+node 'server.domain.net' {
+  include accounts
+  realize (Accounts::Virtual['johndoe'])
+}
+```
 
 Note the use of capitalized "Account::Virtual", which means we are referring to a specific, defined (virtually defined, at least) resource.
 
@@ -33,7 +41,11 @@ A web search took me to [this Google Groups thread](https://groups.google.com/fo
 
 Armed with that information, I added this code to the `nodes.pp` manifest to modify the group membership for a realized virtual resource on specific nodes:
 
-{% gist lowescott/4740843 %}
+``` puppet
+User <| title == 'johndoe' |> {
+  groups              =>  'othergroup',
+}
+```
 
 That worked! On the nodes where this code was added, the account named "johndoe" was added to the group "othergroup" successfully.
 
@@ -46,6 +58,7 @@ Great, so this solution works, but really the bigger questions are these:
 Yes, I could modify the `accounts::virtual` class to include supplementary group memberships, and that's probably a better long-term solution. However, that requires more testing, since you're modifying code that affects user accounts across a number of systems. This solution, on the other hand, is pretty quick and relatively safe.
 
 Thoughts? Ideas? I'd love to hear your feedback, so speak up in the comments below.
+
 
 [1]: {% post_url 2012-11-25-using-puppet-for-account-management %}
 [2]: {% post_url 2012-07-05-using-puppet-with-multiple-operating-systems %}

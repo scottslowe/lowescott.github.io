@@ -63,9 +63,34 @@ With this setting in place, the OS installed into the guest domain will be able 
 
 If the manual method of configuring OVS seems a bit cumbersome, using the libvirt integration makes it _much_ easier.
 
-Basically, you'll follow the configuration outlined in [this blog post][2] to create a libvirt network that corresponds to an OVS bridge. Here's an example of the XML code to accomplish this task:
+Basically, you'll follow the configuration outlined in [this blog post][2] to create a libvirt network that corresponds to an OVS bridge. Here's an example of the XML code to accomplish this task (click [here][gist-1] for an option to download this code snippet):
 
-{% gist lowescott/4057683 %}
+``` xml
+<network>
+  <name>ovs-network</name>
+  <forward mode='bridge'/>
+  <bridge name='ovsbr0'/>
+  <virtualport type='openvswitch'/>
+  <portgroup name='vlan-01' default='yes'>
+  </portgroup>
+  <portgroup name='vlan-02'>
+    <vlan>
+      <tag id='2'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-03'>
+    <vlan>
+      <tag id='3'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-all'>
+    <vlan trunk='yes'>
+      <tag id='2'/>
+      <tag id='3'/>
+    </vlan>
+  </portgroup>
+</network>
+```
 
 Of particular interest for what we're trying to accomplish here is the very last section, the portgroup named "vlan-all." Note that for this specific portgroup, the `vlan` element has a property that specifies it is a trunk, and then there are multiple `tag` elements that list each VLAN ID that will be trunked across this network into the guest domain.
 
@@ -77,9 +102,17 @@ Using this configuration, when we create the guest domain and specify that it is
 
 Once you've followed the steps outlined above and have OVS configured correctly, then you're ready to configure the OS in the guest domain. Keep in mind that I'm using Ubuntu 12.04 in this post, but you're welcome to use any operating system that supports VLAN tags.
 
-Assuming that eth0 is the interface in the guest domain that is receiving tagged traffic from OVS, this snippet in `/etc/network/interfaces` will create and configure a VLAN interface:
+Assuming that eth0 is the interface in the guest domain that is receiving tagged traffic from OVS, this snippet in `/etc/network/interfaces` will create and configure a VLAN interface (click [here][gist-2] for an option to download this snippet):
 
-{% gist lowescott/5658227 %}
+``` text
+auto eth0.20
+iface eth0.20 inet static
+  vlan-raw-device eth0
+  address 192.168.20.200
+  netmask 255.255.255.0
+  network 192.168.20.0
+  broadcast 192.168.20.255
+```
 
 Technically, the "raw-vlan-device" line isn't needed because the parent device name is in the name of the VLAN device, but I like to include it for completeness and ease of debugging. (Your mileage may vary, of course.) The number on the end of the eth0 (for example, eth0.20) corresponds to the VLAN ID (VLAN 20, in this case) being passed up by OVS.
 
@@ -89,5 +122,8 @@ You can repeat this configuration for multiple VLAN interfaces.
 
 I'll have to admit that I can't immediately think of some useful use cases for this sort of configuration. At first glance, you might think that it would be useful in situations where you need logical separation, but I think there are better ways than VLANs to accomplish this task (and those ways are probably simpler). I primarily set out to document this in order to better solidify my knowledge of how OVS works and is configured. However, I'd be happy to hear from others on what they think might be interesting or useful use cases for this sort of configuration. Feel free to add your thoughts in the comments below. Courteous comments are always welcome!
 
+
+[gist-1]: https://gist.github.com/lowescott/4057683
+[gist-2]: https://gist.github.com/lowescott/5658227
 [1]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
 [2]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}

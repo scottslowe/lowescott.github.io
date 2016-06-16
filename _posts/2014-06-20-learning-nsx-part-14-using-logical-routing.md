@@ -101,9 +101,20 @@ The `neutron router-show` command will return output about the specified logical
 
 The `neutron` CLI client also offers commands to update a logical router's routing table (to add or remove static routes, for example), or to connect a logical router to an external network (to set an uplink, in other words).
 
-If you want to create a logical router as part of a stack created via OpenStack Orchestration (Heat), you could use this YAML snippet in a HOT-formatted template to create a distributed logical router (click [here](https://gist.github.com/lowescott/6affeae4551e4fb0aafb) if you can't see the code block below):
+If you want to create a logical router as part of a stack created via OpenStack Orchestration (Heat), you could use this YAML snippet in a HOT-formatted template to create a distributed logical router (click [here](https://gist.github.com/lowescott/6affeae4551e4fb0aafb) for an option to download this code snippet):
 
-{% gist lowescott/6affeae4551e4fb0aafb %}
+``` yaml
+heat_template_version: 2013-05-23
+description: >
+  A simple Heat template to create a distributed logical router.
+resources:
+  router0:
+    type: OS::Neutron::Router
+    properties:
+      admin_state_up: True
+      name: distributed-router
+      value_specs: { distributed: "True" }
+```
 
 OpenStack Heat also offers resource types for setting the router's external gateway and creating router interfaces (logical router ports). If you aren't familiar with OpenStack Heat, you might find [this introduction][1] useful.
 

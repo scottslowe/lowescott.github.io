@@ -28,9 +28,30 @@ Now, that sounds simple enough, but let's look at some examples to really bring 
 
 First, here's an example of a set of name/value pairs (I've taken the liberty of making the raw output from the API calls more readable for clarity's sake; raw JSON data typically wouldn't have line returns or whitespace):
 
-{% gist lowescott/7370142 %}
+``` json
+{
+    "result_count": 3, 
+    "results": [
+        {
+            "_href": "/ws.v1/lswitch/3ca2d5ef-6a0f-4392-9ec1-a6645234bc55", 
+            "_schema": "/ws.v1/schema/LogicalSwitchConfig", 
+            "type": "LogicalSwitchConfig"
+        }, 
+        {
+            "_href": "/ws.v1/lswitch/81f51868-2142-48a8-93ff-ef612249e025", 
+            "_schema": "/ws.v1/schema/LogicalSwitchConfig", 
+            "type": "LogicalSwitchConfig"
+        }, 
+        {
+            "_href": "/ws.v1/lswitch/9fed3467-dd74-421b-ab30-7bc9bfae6248", 
+            "_schema": "/ws.v1/schema/LogicalSwitchConfig", 
+            "type": "LogicalSwitchConfig"
+        }
+    ]
+}
+```
 
-(Click [here](https://gist.github.com/lowescott/7370142) if you don't see a code block above.)
+(Click [here](https://gist.github.com/lowescott/7370142) for an option to download the code snippet above.)
 
 Let's break that down a bit:
 

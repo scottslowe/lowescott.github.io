@@ -30,9 +30,30 @@ In [presentations that I've given on personal efficiency](https://speakerdeck.co
 
 In looking at these steps, it occurs to me that there are 2 places where we can "reduce the friction," i.e., make repetitive tasks easier, and that's in steps #2 and #3. In this post, I'm going to focus on #3. I'll try to address #2 in a future post.
 
-Obviously, how we tackle automating the task of filing messages away according to some system will depend on the system we use. I use a system whereby all messages are filed away by year. All the messages in 2012 get archived into a 2012 folder (or mailbox), messages from 2013 are filed into a 2013 mailbox, etc. To help simplify this process, I wrote an AppleScript that takes the selected messages and moves them to a folder. Here's the script (if you don't see the script below, click [here](https://gist.github.com/lowescott/5788136)):
+Obviously, how we tackle automating the task of filing messages away according to some system will depend on the system we use. I use a system whereby all messages are filed away by year. All the messages in 2012 get archived into a 2012 folder (or mailbox), messages from 2013 are filed into a 2013 mailbox, etc. To help simplify this process, I wrote an AppleScript that takes the selected messages and moves them to a folder. Here's the script (click [here](https://gist.github.com/lowescott/5788136) for an option to download the script):
 
-{% gist lowescott/5788136 %}
+``` applescript
+-- This script moves messages to a mailbox for the current year
+-- Set some default values to be used later in the script
+property theMailbox : "Archive"
+
+-- Handler called when running script from script menu
+on run
+  tell application "Mail"
+        set theSelectedMessages to selection
+        if ((count of theSelectedMessages) < 1) then
+            beep
+            return
+        end if
+        repeat with theMessage in theSelectedMessages
+            if (read status of theMessage) is false then
+                set read status of theMessage to true
+            end if
+            move theMessage to mailbox theMailbox
+        end repeat
+    end tell
+end run
+```
 
 For my particular system, I change the value of the variable `theMailbox` every year to correspond to a mailbox for that year (i.e., 2011, 2012, 2013). Then, to further streamline the process, I bound the AppleScript to a Mail.app-specific keyboard shortcut using [FastScripts](http://www.red-sweater.com/fastscripts/), as I outlined in an earlier Reducing the Friction blog post on [using keyboard shortcuts][1]. Now, the process of filing a message into this year's archive folder is a simple keyboard shortcut away. Super easy!
 
@@ -40,9 +61,29 @@ If you use a system where you file to a few different folders, you could use mul
 
 I think part of the reason my people use lots of different folders if that they use the folders as a way of categorizing messages---each folder represents a particular category, project, person, group, customer, etc. I found an alternate way of handling this categorization process by using a tool called [MailTags](http://indev.ca/MailTags.html). MailTags is an extremely powerful add-in to Mail.app that allows you to assign keywords, projects, due dates, notes, etc., to mail messages. Further, it allows you to build Smart Mailboxes (saved searches) on any of these properties as well. If you use Mail.app, I **highly** recommend MailTags.
 
-As I said, I archive all messages for a given year into a single mailbox. To help with the categorization of messages (or to help provide additional context to every message), I assign at least one keyword to every message. Where applicable, I also assign a project. You can create rules in Mail.app that will automatically assign keywords and/or projects, and I highly recommend that. However, you'll also want to make it very easy to assign keywords manually. Fortunately, MailTags supports AppleScript, so I was able to write a quick script (click [here](https://gist.github.com/lowescott/5788104) if you can't see it below) to do that:
+As I said, I archive all messages for a given year into a single mailbox. To help with the categorization of messages (or to help provide additional context to every message), I assign at least one keyword to every message. Where applicable, I also assign a project. You can create rules in Mail.app that will automatically assign keywords and/or projects, and I highly recommend that. However, you'll also want to make it very easy to assign keywords manually. Fortunately, MailTags supports AppleScript, so I was able to write a quick script to do this (click [here](https://gist.github.com/lowescott/5788104) for an option to download the script):
 
-{% gist lowescott/5788104 %}
+``` applescript
+-- This script assigns MailTags keywords to the selected messages
+-- Set some default values to be used later in the script
+property assignedKeywords : {"Personal"}
+
+-- Handler called when running script from script menu
+on run
+  tell application "Mail"
+        set theSelectedMessages to selection
+        if ((count of theSelectedMessages) < 1) then
+            beep
+            return
+        end if
+        using terms from application "MailTagsHelper"
+            repeat with theMessage in theSelectedMessages
+                set keywords of theMessage to assignedKeywords
+            end repeat
+        end using terms from
+    end tell
+end run
+```
 
 If you want to assign multiple keywords, just modify the script to change the value of `assignedKeywords` to something like this:
 
@@ -53,5 +94,6 @@ Naturally, you could modify this script to assign a project (I'll leave that as 
 When used in conjunction with a good set of rules, I think these scripts can really make step #3 of the four-step mail processing pipeline a lot easier.
 
 Of course, this is just how _I_ work, and your own workflow might be very different. I encourage you, though, to examine your workflow and see if there are ways you could "reduce the friction." I hope this post provides some ideas to help make that happen.
+
 
 [1]: {% post_url 2013-06-14-reducing-the-friction-using-keyboard-shortcuts %}

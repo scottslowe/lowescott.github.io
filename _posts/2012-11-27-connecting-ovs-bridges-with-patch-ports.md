@@ -26,7 +26,11 @@ Graphically, you can think of patch ports like this:
 
 To create a patch port, it's quite easy. This group of commands will create a patch port:
 
-{% gist lowescott/4156141 %}
+``` bash
+ovs-vsctl add-port <bridge name> <port name>
+ovs-vsctl set interface <port name> type=patch
+ovs-vsctl set interface <port name> options:peer=<peer name>
+```
 
 You would repeat these commands for each bridge you want connected to another bridge. To connect two bridges, you would repeat them twice---once for the first bridge (specifying the patch port on the 2nd bridge as the peer), and again for the second bridge (specifying the patch port on the 1st bridge as the peer). Or, as the manpage puts it:
 
@@ -34,7 +38,27 @@ You would repeat these commands for each bridge you want connected to another br
 
 Once you've run through the commands, running `ovs-vsctl show` will reveal a configuration that would look something like this (obviously your bridge names, port names, and interface names will vary):
 
-{% gist lowescott/4156175 %}
+``` text
+    Bridge "ovsbr2"
+        Port "ovsbr2"
+            Interface "ovsbr2"
+                type: internal
+        Port "patch2-0"
+            Interface "patch2-0"
+                type: patch
+                options: {peer="patch0-2"}
+    Bridge "ovsbr0"
+        Port "bond0"
+            Interface "eth0"
+            Interface "eth2"
+        Port "patch0-2"
+            Interface "patch0-2"
+                type: patch
+                options: {peer="patch2-0"}
+        Port "ovsbr0"
+            Interface "ovsbr0"
+                type: internal
+```
 
 Let's review this a bit:
 

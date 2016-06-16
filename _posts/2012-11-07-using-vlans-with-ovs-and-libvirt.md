@@ -51,7 +51,32 @@ The easiest way I've found to create the virtual network is to craft the network
 
 Here's some sample XML code (I'll break down the relevant parts after the code):
 
-{% gist lowescott/4057683 %}
+``` xml
+<network>
+  <name>ovs-network</name>
+  <forward mode='bridge'/>
+  <bridge name='ovsbr0'/>
+  <virtualport type='openvswitch'/>
+  <portgroup name='vlan-01' default='yes'>
+  </portgroup>
+  <portgroup name='vlan-02'>
+    <vlan>
+      <tag id='2'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-03'>
+    <vlan>
+      <tag id='3'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-all'>
+    <vlan trunk='yes'>
+      <tag id='2'/>
+      <tag id='3'/>
+    </vlan>
+  </portgroup>
+</network>
+```
 
 The key takeaways from this snippet of XML are:
 
@@ -71,7 +96,12 @@ As far as I'm aware, to include the appropriate network definitions in the domai
 
 Here's the relevant snippet of domain XML configuration:
 
-{% gist lowescott/4057779 %}
+``` xml
+<interface type='network'>
+  <mac address='11:22:33:44:55:66'/>
+  <source network='ovs-network' portgroup='vlan-02'/>
+</interface>
+```
 
 You'll likely have more configuration entries in your domain configuration, but the important one is the `<source network=...>` element, where you'll specify both the name of the network you created **as well as** the name of the portgroup to which this domain should be attached.
 
@@ -86,6 +116,7 @@ Once the appropriate configuration is in place, you can see the OVS configuratio
 In this post, I've shown you how to create libvirt virtual networks that integrate with OVS to provide persistent VLAN configurations for domains connected to an OVS bridge. The key benefit that arises from this configuration is that you longer need to know to which OVS port a given domain is connected. Because the VLAN configuration is stored _with_ the domain and applied to OVS automatically when the domain is started, you can be assured that a domain will always be attached to the correct VLAN when it starts.
 
 As usual, I encourage your feedback on this article. If you have questions, thoughts, corrections, or clarifications, you are invited to speak up in the comments below.
+
 
 [1]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
 [2]: {% post_url 2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges %}
