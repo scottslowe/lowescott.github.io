@@ -30,7 +30,13 @@ Since one of my Linux servers had crashed anyway, I decided to try out the Samba
 
 2. Next, Samba must be properly configured. I used the following settings in `/etc/samba/smb.conf`:
 
-	{% gist lowescott/c837a866ede246d9e96b %}
+    ``` text
+    workgroup = <NetBIOS name of AD domain> 
+    security = ads
+    realm = <DNS name of AD domain>
+    use kerberos keytab = true
+    password server = <Space-delimited list of AD DCs>
+    ```
 
 3. For full Linux-AD integration, you must configure the nss\_ldap client. Again, I'll refer you to any one of the various AD integration articles I've written for more details on a suggested nss\_ldap configuration. When nss\_ldap is correctly configured, you should be able to do a `getent password <username>` and get back a list of properties (including UID, home directory, login shell, etc.) for that username.
 
@@ -45,6 +51,7 @@ At this point, you can configure PAM appropriately (again, refer to one of the p
 I used this process to integrate a new [CentOS](http://www.centos.org/) 4.4 server into Active Directory without any problems whatsoever. I used the Kerberos, LDAP, nsswitch.conf, and PAM configurations from [this Linux-AD integration article][1] within the framework of the steps listed above and ran into only one problem (that was the issue with the differing DNS domains). Otherwise, it worked just fine.
 
 Thanks to those readers who suggested the use of Samba!
+
 
 [1]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
 [2]: {% post_url 2006-08-10-kerberos-based-sso-with-apache %}

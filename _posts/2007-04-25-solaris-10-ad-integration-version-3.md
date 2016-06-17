@@ -91,7 +91,13 @@ _This_ is the key to getting ADS support into Samba on Solaris 10. I won't go in
 
 Once the CSWsamba package and related packages are installed, we'll need to configure Samba by creating `/opt/csw/etc/samba/smb.conf` with the following contents:
 
-{% gist lowescott/c837a866ede246d9e96b %}
+``` text
+workgroup = <NetBIOS name of AD domain> 
+security = ads
+realm = <DNS name of AD domain>
+use kerberos keytab = true
+password server = <Space-delimited list of AD DCs>
+```
 
 At this point, we are ready to configure Kerberos and then proceed with testing the configuration and join the Active Directory domain.
 
@@ -99,7 +105,7 @@ At this point, we are ready to configure Kerberos and then proceed with testing 
 
 Solaris keeps its Kerberos configuration in the `/etc/krb5` directory as `krb5.conf`. Edit this file using your editor of choice to look something like the one below. Depending upon how you configured Solaris during the installation, some of this configuration may already be present.
 
-{% highlight text %}
+``` ini
 [libdefaults]
         default_realm = EXAMPLE.COM
         dns_lookup_kdc = true
@@ -128,7 +134,7 @@ Solaris keeps its Kerberos configuration in the `/etc/krb5` directory as `krb5.c
         renewable = true
         forwardable= true
         }
-{% endhighlight %}
+```
 
 There will also be a file named `cswkrb5.conf` in the `/etc` directory; you can configure this file with the contents of the [libdefaults], [realms], and [domain_realms] sections as listed above. You don't need to include the [logging] or [appdefaults] sections in this file.
 
@@ -138,7 +144,7 @@ Note that you can't simply copy and paste from here to the Solaris configuration
 
 We'll use the native Solaris `ldapclient` utility to configure the LDAP support in Solaris. The command you'll type in looks something like this (please _don't_ copy and paste this, as it contains generic/incorrect information that won't work!):
 
-{% highlight text %}
+``` text
 ldapclient manual \
 -a credentialLevel=proxy \
 -a authenticationMethod=simple \
@@ -162,7 +168,7 @@ ldapclient manual \
 -a objectClassMap=shadow:shadowAccount=user \
 -a serviceSearchDescriptor=passwd:dc=example,dc=com?sub \
 -a serviceSearchDescriptor=group:dc=example,dc=com?sub
-{% endhighlight %}
+```
 
 The easiest way to handle this would probably be to copy it into a blank text file, edit it to include the specific details for your network, and then paste it into a terminal session on the Solaris server.
 
@@ -192,7 +198,7 @@ Test DNS resolution using the `nslookup` command. As mentioned previously, be su
 
 The `/etc/pam.conf` file controls the PAM (Pluggable Authentication Mechanism) configuration on Solaris. You'll need to edit the `/etc/pam.conf` file to look something like what's shown below. I've edited away all the non-essential sections, so only change the sections listed below.
 
-{% highlight text %}
+``` text
 # Default definition for Authentication management
 #
 other   auth requisite          pam_authtok_get.so.1
@@ -207,7 +213,7 @@ other   account requisite       pam_roles.so.1
 other   account sufficient      pam_unix_account.so.1
 other   account required        pam_ldap.so.1
 #
-{% endhighlight %}
+```
 
 With this configuration in place, Solaris will use Kerberos authentication and will retrieve account information via LDAP.
 
@@ -246,6 +252,7 @@ As with previous instructions, these instructions don't address password managem
 ## How I Tested
 
 This testing was done using Solaris 10 11/06 (Update 3) running on VMware ESX Server 3.0.1. Active Directory was running on a pair of servers with Windows Server 2003 R2, also virtual machines on ESX Server. Authentication testing was performed using SSH from a client system running Mac OS X.
+
 
 [1]: {% post_url 2006-10-16-refined-solaris-10-ad-integration-instructions %}
 [2]: {% post_url 2006-08-15-solaris-10-and-active-directory-integration %}

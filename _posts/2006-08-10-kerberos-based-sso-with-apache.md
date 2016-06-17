@@ -27,11 +27,11 @@ These steps need to be repeated for each Apache server that will authenticating 
 
 2. For each account that was created, run the `ktpass.exe` command to generate a unique keytab for each account. The command will look something like this (substitute the appropriate values where necessary):  
 
-{% highlight dosbatch %}
+``` text
 ktpass -princ HTTP/fqdn@REALM -mapuser DOMAIN\account  
 -crypto DES-CBC-MD5 +DesOnly -pass password -ptype KRB5_NT_PRINCIPAL  
 -out filename
-{% endhighlight %}
+```
 
 Be sure to specify a unique output filename (so that you don't overwrite files; each server/account will needs its own unique file). I suggest using the server's name as the filename, i.e., something like `lnxservername.keytab`.
 
@@ -47,7 +47,19 @@ Repeat these steps for each Apache server. In case I haven't already mentioned t
 
 2. Add the following directives to the Apache configuration, either in `httpd.conf` or in the `conf.d` directory in its own file (my installation of mod_auth_kerb created an `auth_kerb.conf` in `conf.d`). You'll need to substitute the correct values for the KrbAuthRealms directive (which should be your Active Directory domain name in UPPERCASE) and the location and name of your keytab (which you'll copy over in the next step):
 
-	{% gist lowescott/276f8a87211bc422754f %}
+    ``` apache
+    LoadModule auth_kerb_module modules/mod_auth_kerb.so  
+
+    <Location /secured>  
+      AuthType Kerberos  
+      AuthName "Kerberos Login"  
+      KrbMethodNegotiate On  
+      KrbMethodK5Passwd On  
+      KrbAuthRealms EXAMPLE.COM  
+      Krb5KeyTab /etc/httpd/conf/httpd.keytab  
+      require valid-user  
+    </Location>
+    ```
 
 3. Securely copy over the keytab for this server from the Windows server where it was generated using `ktpass.exe` earlier. SFTP or SCP are good candidates. Once the file has been copied over, rename it and place it in the right location, as specified in the configuration entered above.
 

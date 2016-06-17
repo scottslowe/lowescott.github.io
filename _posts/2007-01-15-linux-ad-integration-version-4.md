@@ -54,17 +54,11 @@ Follow the steps below to configure the Linux server for authentication against 
 
 3. Be sure that time is being properly synchronized between Active Directory and the Linux server in question. Kerberos requires time synchronization. Configure the NTP daemon if necessary.
 
-4. Edit the `/etc/krb5.conf` file to look something like this, substituting your actual host names and domain names where appropriate:
+4. Edit the `/etc/krb5.conf` file to look something like [this](https://gist.github.com/lowescott/67a3f8c36270c7e6376b), substituting your actual host names and domain names where appropriate.
 
-	{% gist lowescott/67a3f8c36270c7e6376b %}
+5. Edit the `/etc/ldap.conf` file to look something like [this](https://gist.github.com/lowescott/7ad13c8839a546b760df), substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate. (**Note:** These schema mappings assume that you are using the newer schema extensions provided by Windows Server 2003 R2. If you are using SFU 3.5 instead, you will need to use the schema mappings described [here][1].)
 
-5. Edit the `/etc/ldap.conf` file to look something like this, substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate. (**Note:** These schema mappings assume that you are using the newer schema extensions provided by Windows Server 2003 R2. If you are using SFU 3.5 instead, you will need to use the schema mappings described [here][1].)  
-
-	{% gist lowescott/7ad13c8839a546b760df %}
-
-6. Configure PAM (this varies according to Linux distributions) to use `pam_krb5` for authentication. Many modern distributions use a stacking mechanism whereby one file can be modified and those changes will applied to all the various PAM-aware services. For example, in Red Hat-based distributions, the `system-auth` file is referenced by most other PAM-aware services. Here's a properly edited `/etc/pam.d/system-auth` file taken from CentOS 4.4 (some lines have been wrapped for readability; do not wrap them when editing the file):  
-
-	{% gist lowescott/0e47e27dd5e515963daf %}
+6. Configure PAM (this varies according to Linux distributions) to use `pam_krb5` for authentication. Many modern distributions use a stacking mechanism whereby one file can be modified and those changes will applied to all the various PAM-aware services. For example, in Red Hat-based distributions, the `system-auth` file is referenced by most other PAM-aware services. [Here's](https://gist.github.com/lowescott/0e47e27dd5e515963daf) a properly edited `/etc/pam.d/system-auth` file taken from CentOS 4.4 (some lines have been wrapped for readability; do not wrap them when editing the file).
 
 7. Edit the `/etc/nsswitch.conf` file to include "ldap" as a lookup source for passwd, shadow, and groups.
 
@@ -86,7 +80,13 @@ To join the Linux server to Active Directory, follow these steps:
 
 1. Verify the Samba configuration. Be sure the following settings are specified in `/etc/samba/smb.conf`:  
 
-	{% gist lowescott/c837a866ede246d9e96b %}
+	``` text
+    workgroup = <NetBIOS name of AD domain> 
+    security = ads
+    realm = <DNS name of AD domain>
+    use kerberos keytab = true
+    password server = <Space-delimited list of AD DCs>
+    ```
 
 2. Use `kdestroy` to destroy any existing Kerberos credentials you may have; then run `kinit <Domain administrative account>@AD.DOMAIN.NAME` to get a Kerberos ticket for an account that is a domain administrator account.
 
@@ -109,6 +109,7 @@ Once you've settled on and implemented a system for dealing with home directorie
 What's not addressed in this article? Password management. In this configuration, users will most likely _not_ be able to change their password from the Linux servers and have that change properly reflected in Active Directory. I'll try to work on that for version 5 of the instructions.
 
 I hope you find this information helpful. As always, feel free to post corrections, additions, or suggestions in the comments below.
+
 
 [1]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
 [2]: {% post_url 2006-11-28-unix-attributes-tab-and-nispropdll %}

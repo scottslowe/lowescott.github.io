@@ -44,35 +44,47 @@ On the SLED 10 client setup your config files as illustrated in the following ex
 
 We'll start first with the `/etc/hosts` file:
 
-{% gist lowescott/65f7e80db9da414cba80 %}
+``` text
+127.0.0.1 localhost
+10.10.10.1 WINDOWS-DC-HOSTNAME.DOMAIN.COM WINDOWS-DC-HOSTNAME
+# special IPv6 addresses
+::1 localhost ipv6-localhost ipv6-loopback
 
-Next, we configure the `krb5.conf` file:
+fe00::0 ipv6-localnet
 
-{% gist lowescott/3eb79dec00dc8e754b6c %}
+ff00::0 ipv6-mcastprefix
+ff02::1 ipv6-allnodes
+ff02::2 ipv6-allrouters
+ff02::3 ipv6-allhosts
+127.0.0.2 client-hostname.DOMAIN.COM client-hostname
+```
 
-Once Kerberos is configured, we configure LDAP via `ldap.conf`:
+Next, we configure the `krb5.conf` file. In the interest of brevity, I won't paste it into this article; rather, just follow [this link](https://gist.github.com/lowescott/3eb79dec00dc8e754b6c) to view it on GitHub (and have the option to download it).
 
-{% gist lowescott/29aed4672a012946f1cb %}
+Once Kerberos is configured, we configure LDAP via `ldap.conf`. Again, just follow [this link](https://gist.github.com/lowescott/29aed4672a012946f1cb) to view the full file.
 
-And then configure the Name Switch Service to use LDAP:
+And then configure the Name Switch Service to use LDAP. [This link](https://gist.github.com/lowescott/55f2ddd14214499a629c) will show you a properly-formatted NSS configuration.
 
-{% gist lowescott/55f2ddd14214499a629c %}
+Almost there---next we need to make sure that time synchronization is working, since this is a prerequisite for Kerberos authentication. To make sure time synchronization is working, we'll configure NTP using a configuration similar to [this configuration](https://gist.github.com/lowescott/1375d23864c8ad41498a).
 
-Almost there---next we need to make sure that time synchronization is working, since this is a prerequisite for Kerberos authentication. To make sure time synchronization is working, we'll configure NTP:
+At this point we have Kerberos authentication configured, LDAP configured, NSS configured to use LDAP, and time synchronization configured and running. Now we need to get Samba configured to help automate the process of integrating into Active Directory. A sample configuration such as [this one](https://gist.github.com/lowescott/790ffff17a56e2d21189) would get the job done.
 
-{% gist lowescott/1375d23864c8ad41498a %}
-
-At this point we have Kerberos authentication configured, LDAP configured, NSS configured to use LDAP, and time synchronization configured and running. Now we need to get Samba configured to help automate the process of integrating into Active Directory.
-
-{% gist lowescott/790ffff17a56e2d21189 %}
-
-SLED uses PAM (Pluggable Authentication Mechanism) to control authentication and authorization, so we next need to configure PAM to use Kerberos and LDAP, where necessary. There are a number of files that need to be configured to make this happen:
-
-{% gist lowescott/2f3bb6cd609cc2926178 %}
+SLED uses PAM (Pluggable Authentication Mechanism) to control authentication and authorization, so we next need to configure PAM to use Kerberos and LDAP, where necessary. There are a number of files that need to be configured to make this happen; [this GitHub gist](https://gist.github.com/lowescott/2f3bb6cd609cc2926178) shows the various files and how each would need to be configured.
 
 All these files are in turn referenced by a "master" PAM configuration file, like this:
 
-{% gist lowescott/d4075093e719bd6f8912 %}
+``` text
+#%PAM-1.0
+###########line above is part of this file#################
+#/etc/pam.d/su config file
+###########################################################
+#auth sufficient pam_rootok.so
+auth include common-auth
+account include common-account
+password include common-password
+session include common-session
+session optional pam_xauth.so
+```
 
 Once all these configuration files are in place, we can proceed with the following steps:
 
@@ -112,5 +124,6 @@ Some additional resources and information:
 [http://forums.fedoraforum.org/archive/index.php/t-29825.html](http://forums.fedoraforum.org/archive/index.php/t-29825.html)
 
 Thanks again to Shannon VanWagner for sharing this information with me so that I could post it here. As always, feel free to post any questions, clarifications, or corrections in the comments below.
+
 
 [1]: {% post_url 2006-11-28-unix-attributes-tab-and-nispropdll %}

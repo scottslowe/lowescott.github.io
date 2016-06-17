@@ -28,9 +28,21 @@ Let's look at each of these.
 
 ## Adding a Subclass
 
-To add a subclass to manage the configuration files, I created `config.pp` and placed it in the `manifests` folder for the accounts module. Here's a simplified look at the contents of that file:
+To add a subclass to manage the configuration files, I created `config.pp` and placed it in the `manifests` folder for the accounts module. Here's a simplified look at the contents of that file (click [here](https://gist.github.com/lowescott/4274021) if you'd like to download this code snippet):
 
-{% gist lowescott/4274021 %}
+``` puppet
+class accounts::config {
+
+  # Place a file in /etc/profile.d to manage the prompt
+  file { '/etc/profile.d/prompt.sh':
+    ensure      =>  'present',
+    source      =>  'puppet:///modules/config/profiled-prompt.sh',
+    mode        =>  '0644',
+    owner       =>  '0',
+    group       =>  '0',
+  }
+}
+```
 
 This is pretty straightforward Puppet code; it creates a managed file resource and specifies that the file be sourced from the Puppet master server. The full and actual `accounts::config` subclass that I'm using has a number of managed file resources, including files in `/etc/skel`, but I've omitted that here for the sake of brevity. (The other file resources that are defined look very much like the example shown, so I didn't see any point in including them.) The `config.pp` also uses some values from an `accounts::params` subclass and some conditionals to manage different files on different operating systems.
 
@@ -42,24 +54,52 @@ To fix that, we create a dependency.
 
 Before running into this situation, I was pretty familiar with creating dependencies. For example, if you were defining a class for a particular daemon to run on Linux, you might use the Puppet package-file-service "trifecta", and you might include a dependency, like this (entirely fictional) example. Note in this example that the file resource is dependent on the package resource, and the service resource is dependent on the file resource (as denoted by the capitalized Package and File instances):
 
-{% gist lowescott/4664664 %}
+``` puppet
+class foo {
+  package { 'foo':
+    ensure      =>  'present',
+  }
+
+  file { '/etc/foo.conf':
+    ensure      =>  'present',
+    source      =>  'puppet:///modules/foo/foo_conf',
+    mode        =>  '0600',
+    require     =>  Package['foo'],
+  }
+
+  service { 'foo':
+    ensure      =>  'running',
+    require     =>  File['/etc/foo.conf'],
+  }
+}
+```
 
 (My apologies if my syntax for this fictional example isn't perfect---I didn't run it through `puppet-lint`.)
 
 The problem in this particular case, though, is that I didn't need a dependency on a single file; I needed a dependency on a whole group of files. To further complicate matters, the files on which the dependency existed might change between operating systems. For example, I might (and do) have different files on RHEL/CentOS than on Ubuntu/Debian. So how to accomplish this? The answer is actually quite simple: **create a dependency on the subclass, not the individual resources.**
 
-So, without the dependency, the code to define the virtual users looked like this:
+With the dependency on the subclass, the code to define the virtual users looks like this:
 
-{% gist lowescott/4054229 %}
+``` puppet
+# Used to define virtual users on Puppet-managed systems
+# Includes subclass dependency on accounts::config
+#
+class accounts {
+ 
+  @accounts::virtual { 'johndoe':
+    uid             =>  1001,
+    realname        =>  'John Doe',
+    pass            =>  '<password hash goes here>',
+    require         =>  Class['accounts::config'],
+  }
+}
+```
 
-With the dependency, the code to define the virtual users looks like this:
-
-{% gist lowescott/4664807 %}
-
-The only difference between the two (other than changes in the comments at the top) is the addition of the `require` statement, which creates a dependency not on a single resource but instead to an entire subclass---the `accounts::config` subclass, which in turn has a variety of file resources that are managed according to operating system.
+The use of the `require` statement creates a dependency not on a single resource but instead to an entire subclass---the `accounts::config` subclass, which in turn has a variety of file resources that are managed according to operating system.
 
 It's such a simple solution I can't believe I didn't see it at first, and when it was pointed out to me (via the #puppet IRC channel, thanks), I had a "Duh!" moment. Even though it is a simple and straightforward solution, if I overlooked it then others might overlook it as well---a problem that hopefully this blog post will help fix.
 
 As always, I welcome feedback from readers, so feel free to weigh in with questions, clarifications, or corrections. Courteous comments are always welcome!
+
 
 [1]: {% post_url 2012-11-25-using-puppet-for-account-management %}
