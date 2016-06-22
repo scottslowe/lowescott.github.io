@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2016-06-20
+date: 2016-06-21
 layout: post
 title: DockerCon 2016 Day 2 Keynote
 categories: Liveblog
@@ -9,6 +9,8 @@ tags:
 - Docker
 - OSS
 - Linux
+- DockerCon2016
+redirect_from: /2016/06/20/dockercon-2016-day-2-keynote/
 ---
 
 This is a liveblog for the day 2 keynote of DockerCon 2016, which wraps up today in Seattle, WA. While today's pre-keynote warm-up doesn't include laser-equipped kittens, the music is much more upbeat and energetic (as opposed to yesterday's more somber, dramatic music). If the number of laptops on the podium is any indicator (yesterday it was a cue to the number of demos planned), then today's keynote will include a few demos as well.

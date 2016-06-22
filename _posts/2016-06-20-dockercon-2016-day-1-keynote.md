@@ -9,6 +9,7 @@ tags:
 - Docker
 - OSS
 - Linux
+- DockerCon2016
 ---
 
 This is a liveblog for the day 1 keynote of DockerCon 2016, taking place over the next couple of days in Seattle, WA. Before the keynote starts in earnest, Gordon the Turtle entertains attendees with some "special" Docker containers that affect the display on the main stage: showing butterflies, playing sounds, launching a Docker-customized version of Pac-Man, or initiating a full-out battle of laser-shooting kittens.
