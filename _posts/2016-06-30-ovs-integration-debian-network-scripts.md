@@ -42,6 +42,8 @@ So, if you're having issues making OVS integration with the Debian network scrip
 
 For other OVS-related content, have a look at any of [my OVS-tagged articles][link-5].
 
+**UPDATE:** Another reader contacted me to say that the `_SYSTEMCTL_SKIP_REDIRECT` setting may help in situations where you need to restart OVS (perhaps due to an update or similar). Without this setting, VM interfaces may be disconnected from the bridge. I haven't tested or verified this, so keep that in mind.
+
 
 [link-1]: http://openvswitch.org/
 [link-2]: https://www.debian.org/
