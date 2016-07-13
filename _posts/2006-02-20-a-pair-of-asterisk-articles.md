@@ -6,12 +6,12 @@ layout: post
 slug: a-pair-of-asterisk-articles
 title: A Pair of Asterisk Articles
 wordpress_id: 188
-categories:
-- Networking
+categories: Information
 tags:
 - CentOS
 - Linux
 - OSS
+- Networking
 - Telephony
 - Virtualization
 - VMware

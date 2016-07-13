@@ -6,8 +6,7 @@ layout: post
 slug: cisco-nat-issue-resolved
 title: Cisco NAT Issue Resolved
 wordpress_id: 163
-categories:
-- Networking
+categories: Information
 tags:
 - Cisco
 - NAT
@@ -32,5 +31,6 @@ So, to fix the problem, we modified the access list to specifically _exclude_ th
 This took care of the apparent conflict between the dynamic NAT setup and the static NAT setup (which was accomplished using an ordinary `ip nat inside source` command), and the setup has worked without any problems since then.
 
 Now, if I could just figure out why my GRE-over-IPSec tunnels aren't working, I'd be in really good shape...
+
 
 [1]: {% post_url 2006-01-14-cisco-nat-issue %}

@@ -6,8 +6,7 @@ layout: post
 slug: some-initial-mpls-reading
 title: Some Initial MPLS Reading
 wordpress_id: 2486
-categories:
-- Networking
+categories: Information
 tags:
 - MPLS
 - Networking

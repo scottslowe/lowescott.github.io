@@ -6,8 +6,7 @@ layout: post
 slug: need-some-help-with-subnetting
 title: Need Some Help With Subnetting?
 wordpress_id: 2143
-categories:
-- Networking
+categories: Information
 tags:
 - Networking
 ---

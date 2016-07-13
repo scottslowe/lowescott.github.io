@@ -6,9 +6,7 @@ layout: post
 slug: recent-virtualization-links
 title: Recent Virtualization Links
 wordpress_id: 611
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Networking

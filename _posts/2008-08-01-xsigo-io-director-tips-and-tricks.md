@@ -6,9 +6,7 @@ layout: post
 slug: xsigo-io-director-tips-and-tricks
 title: Xsigo I/O Director Tips and Tricks
 wordpress_id: 774
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Hardware
 - Networking

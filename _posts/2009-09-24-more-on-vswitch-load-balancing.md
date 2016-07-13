@@ -6,9 +6,7 @@ layout: post
 slug: more-on-vswitch-load-balancing
 title: More on vSwitch Load Balancing
 wordpress_id: 1662
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - Cisco
 - IOS

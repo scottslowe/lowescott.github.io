@@ -6,8 +6,7 @@ layout: post
 slug: cisco-nat-issue
 title: Cisco NAT Issue
 wordpress_id: 157
-categories:
-- Networking
+categories: Rant
 tags:
 - Cisco
 - NAT

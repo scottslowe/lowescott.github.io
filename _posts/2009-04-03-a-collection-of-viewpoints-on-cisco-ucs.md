@@ -6,9 +6,7 @@ layout: post
 slug: a-collection-of-viewpoints-on-cisco-ucs
 title: A Collection of Viewpoints on Cisco UCS
 wordpress_id: 1266
-categories:
-- Networking
-- Virtualization
+categories: Rant
 tags:
 - Cisco
 - FCoE
