@@ -44,9 +44,9 @@ You should see your network namespace listed there, ready for you to use.
 
 ## Assigning Interfaces to Network Namespaces
 
-Creating the network namespace is only the beginning; the next part is to assign interfaces to the namespaces, and then configure those interfaces for network connectivity. One thing that threw me off early in my exploration of network namespaces was that you couldn't assign physical interfaces to a namespace. How in the world were you supposed to use them, then?
+Creating the network namespace is only the beginning; the next part is to assign interfaces to the namespaces, and then configure those interfaces for network connectivity. One thing that threw me off early in my exploration of network namespaces was that you couldn't assign physical interfaces to a namespace (see the update at the bottom of this post). How in the world were you supposed to use them, then?
 
-It turns out you can only assign virtual Ethernet (veth) interfaces to a network namespace. Virtual Ethernet interfaces are an interesting construct; they always come in pairs, and they are connected like a tube---whatever comes in one veth interface will come out the other peer veth interface. As a result, you can use veth interfaces to connect a network namespace to the outside world via the "default" or "global" namespace where physical interfaces exist.
+It turns out you can only assign virtual Ethernet (veth) interfaces to a network namespace (incorrect; see the update at the end of this post). Virtual Ethernet interfaces are an interesting construct; they always come in pairs, and they are connected like a tube---whatever comes in one veth interface will come out the other peer veth interface. As a result, you can use veth interfaces to connect a network namespace to the outside world via the "default" or "global" namespace where physical interfaces exist.
 
 Let's see how that's done. First, you'd create the veth pair:
 
@@ -103,6 +103,14 @@ Once the veth1 interface is up, you can verify that the network configuration of
 This part of it threw me for a while. I can't really explain why, but it did. Once I'd figured it out, it was obvious. To connect a network namespace to the physical network, _just use a bridge._ In my case, I used an Open vSwitch (OVS) bridge, but a standard Linux bridge would work as well. Place one or more physical interfaces as well as one of the veth interfaces in the bridge, and---bam!---there you go. Naturally, if you had different namespaces, you'd probably want/need to connect them to different physical networks or different VLANs on the physical network.
 
 So there you go---an introduction to Linux network namespaces. It's quite likely I'll build on this content later, so while it seems a bit obscure right now just hang on to this knowledge. In the meantime, if you have questions, clarifications, or other information worth sharing with other readers, please feel free to speak up in the comments.
+
+**UPDATE:** As I discovered after publishing this post, it most certainly _is_ possible to assign various types of network interfaces to network namespaces, including physical interfaces. (I'm not sure why I ran into problems when I first wrote this post.) In any case, to assign a physical interface to a network namespace, you'd use this command:
+
+    ip link set dev <device> netns <namespace>
+
+Sorry for the confusion!
+
+
 
 [1]: {% post_url 2013-05-29-a-quick-introduction-to-linux-policy-routing %}
 [2]: {% post_url 2013-05-30-a-use-case-for-policy-routing-with-kvm-and-open-vswitch %}
