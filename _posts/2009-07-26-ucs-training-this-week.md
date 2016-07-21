@@ -6,9 +6,7 @@ layout: post
 slug: ucs-training-this-week
 title: UCS Training This Week
 wordpress_id: 1481
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - Travel

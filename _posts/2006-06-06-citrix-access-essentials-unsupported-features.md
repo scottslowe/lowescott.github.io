@@ -6,9 +6,9 @@ layout: post
 slug: citrix-access-essentials-unsupported-features
 title: Citrix Access Essentials Unsupported Features
 wordpress_id: 262
-categories:
-- Networking
+categories: Rant
 tags:
+- Networking
 - Citrix
 ---
 

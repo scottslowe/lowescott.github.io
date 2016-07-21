@@ -6,9 +6,7 @@ layout: post
 slug: ucs-training-day-1-wrap-up
 title: UCS Training, Day 1 Wrap-Up
 wordpress_id: 1485
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - FCoE

@@ -6,11 +6,10 @@ layout: post
 slug: hp-c-class-training
 title: HP c-Class Training
 wordpress_id: 449
-categories:
-- General
-- Networking
+categories: Information
 tags:
 - Hardware
+- HP
 - Networking
 - SAN
 ---

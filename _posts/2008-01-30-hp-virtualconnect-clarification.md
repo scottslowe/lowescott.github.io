@@ -6,9 +6,7 @@ layout: post
 slug: hp-virtualconnect-clarification
 title: HP VirtualConnect Clarification
 wordpress_id: 619
-categories:
-- Networking
-- Virtualization
+categories: Explanation
 tags:
 - HP
 - Networking

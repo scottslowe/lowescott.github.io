@@ -6,8 +6,7 @@ layout: post
 slug: some-useful-hp-blade-information
 title: Some Useful HP Blade Information
 wordpress_id: 667
-categories:
-- Networking
+categories: Information
 tags:
 - Hardware
 - HP

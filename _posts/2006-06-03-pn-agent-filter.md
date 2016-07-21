@@ -6,9 +6,9 @@ layout: post
 slug: pn-agent-filter
 title: PN Agent Filter
 wordpress_id: 258
-categories:
-- Networking
+categories: News
 tags:
+- Networking
 - Citrix
 ---
 

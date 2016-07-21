@@ -6,15 +6,15 @@ layout: post
 slug: cisco-ucs-virtualization-optimized-cnas
 title: Cisco UCS Virtualization-Optimized CNAs
 wordpress_id: 1244
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - Networking
 - Virtualization
 - VMware
 - vSphere
+- UCS
+- Hardware
 ---
 
 There's some great information being shared in the comments to my ["More on Cisco UCS"][1] post. So good, in fact, that I thought it entirely and completely appropriate to bring that information into the limelight with a full-blown post.

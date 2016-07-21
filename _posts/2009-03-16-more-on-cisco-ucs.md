@@ -6,15 +6,14 @@ layout: post
 slug: more-on-cisco-ucs
 title: More on Cisco UCS
 wordpress_id: 1239
-categories:
-- Networking
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - FCoE
 - Hardware
 - Networking
 - Virtualization
+- UCS
 ---
 
 The entire IT world is abuzz with talk of Cisco's Unified Computing System (UCS). I pointed out a few of the [various UCS announcements][1] in this earlier post, and now I'd like to just expand a little bit upon the solution.
