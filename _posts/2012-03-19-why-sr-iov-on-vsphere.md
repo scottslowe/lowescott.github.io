@@ -6,8 +6,7 @@ layout: post
 slug: why-sr-iov-on-vsphere
 title: Why SR-IOV on vSphere?
 wordpress_id: 2564
-categories:
-- Virtualization
+categories: Musing
 tags:
 - Hardware
 - HyperV
