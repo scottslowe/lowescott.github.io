@@ -6,8 +6,7 @@ layout: post
 slug: sr-iov-support-in-the-next-version-of-hyper-v
 title: SR-IOV Support in the Next Version of Hyper-V
 wordpress_id: 2558
-categories:
-- Virtualization
+categories: News
 tags:
 - Hardware
 - HyperV
