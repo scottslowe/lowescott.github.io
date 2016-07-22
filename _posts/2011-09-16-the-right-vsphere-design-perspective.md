@@ -13,6 +13,10 @@ tags:
 - Virtualization
 - VMware
 - vSphere
+- Cisco
+- UCS
+- HP
+- Hardware
 ---
 
 I was on a conference call the other day where the topic of the call was [VMware View 5.0](http://www.vmware.com/products/view/overview.html). If you attended VMworld---or even if you didn't, it's been kind of hard to miss---you know already that VMware made significant improvements to PCoIP in View 5. For one reason or another, the topic of [the Teradici PCoIP offload card](http://www.teradici.com/pcoip/pcoip-products/pcoip-server-offload-card.php) came up on the call, and other participants in the call were immediately asking about the availability of the card in mezzanine card format for blade server implementations. (Continue reading, and at the end I'll tell you the answer I received to that question.)
