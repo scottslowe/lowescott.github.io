@@ -13,7 +13,7 @@ I live with my wife, Crystal, and our kids in the Denver, CO area. When I'm not 
 
 ## Professional Information
 
-I've been in the Information Technology field for more than 20 years, starting out with desktop support. Along the way, I worked as an instructor, a technical trainer and Microsoft Certified Trainer (MCT), systems administrator, IT manager, systems engineer, consultant, Chief Technology Officer (CTO) for a small start-up, and practice lead for a national VAR's VMware practice. Most recently, I worked as a forward-looking technologist for a large enterprise storage vendor based in the northeast US. Currently, I work as an engineering architect for VMware, focusing on network virtualization and software-defined networking (SDN).
+I've been in the Information Technology field for more than 20 years, starting out with desktop support. Along the way, I worked as an instructor, a technical trainer and Microsoft Certified Trainer (MCT), systems administrator, IT manager, systems engineer, consultant, Chief Technology Officer (CTO) for a small start-up, and practice lead for a national VAR's VMware practice. Most recently, I worked as a forward-looking technologist for a large enterprise storage vendor based in the northeast US. Currently, I work as an engineering architect for VMware, focusing on open source, cloud computing, network virtualization, and software-defined networking (SDN).
 
 In addition, I am a former contributor to [SearchVMware.com][1], a VMware-focused website with technical articles, how-to's, tips, and news. I also had some articles published on [SearchServerVirtualization.com][2] and I am a former columnist for [Virtualization Review][3] magazine.
 
