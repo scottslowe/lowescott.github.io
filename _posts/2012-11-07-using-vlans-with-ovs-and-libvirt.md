@@ -19,7 +19,7 @@ tags:
 - VLAN
 ---
 
-In previous posts, I've shown you how to use [Open vSwitch (OVS) with VLANs through fake bridges][1], as well as how to [wrap libvirt virtual network around OVS fake bridges][2]. Both of these techniques are acceptable for configuring VLANs with OVS, but in this post I want to talk about using VLANs with OVS via a greater level of [libvirt](http://libvirt.org) integration. This has been talked about [elsewhere](http://www.siliconloons.com/?p=305), but I wasn't able to make it work until libvirt 1.0.0 was released. (**Update:** I was able to make it work with an earlier version. See [here][3].)
+In previous posts, I've shown you how to use [Open vSwitch (OVS) with VLANs through fake bridges][1], as well as how to [wrap libvirt virtual networks around OVS fake bridges][2]. Both of these techniques are acceptable for configuring VLANs with OVS, but in this post I want to talk about using VLANs with OVS via a greater level of [libvirt](http://libvirt.org) integration. This has been talked about [elsewhere](http://www.siliconloons.com/?p=305), but I wasn't able to make it work until libvirt 1.0.0 was released. (**Update:** I was able to make it work with an earlier version. See [here][3].)
 
 First, let's recap what we know so far. If you know the port to which a particular domain (guest VM) is connected, you can configure that particular port as a VLAN trunk like this:
 
