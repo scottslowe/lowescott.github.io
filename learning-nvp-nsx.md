@@ -5,7 +5,7 @@ layout: page
 permalink: /learning-nvp-nsx/
 ---
 
-For ease of reference, here are links to all of the entries in the "Learning NVP/NSX" blog series.
+For ease of reference, here are links to all of the entries in the "Learning NVP/NSX" blog series. (General note: this content applies to the NVP 3.x/NSX-mh [multi-hypervisor] 4.x release. It does _not_ apply to the NSX-v [NSX for vSphere] 6.x releases.)
 
 [Part 1: High-Level Architecture][1]: This post provides an overview of NVP/NSX and the core components. *(published 5/21/13)*
 
