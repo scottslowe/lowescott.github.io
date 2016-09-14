@@ -49,7 +49,6 @@ Host bastion.example.com
   Hostname bastion.example.com
   User ubuntu
   IdentityFile ~/.ssh/private_key.pem
-  ForwardAgent yes
   ControlMaster auto
   ControlPath ~/.ssh/ansible-%r@%h:%p
   ControlPersist 5m
@@ -58,7 +57,7 @@ Host bastion.example.com
 What does this configuration file do? Here's a quick rundown:
 
 * The `Host 10.10.10.*` line indicates that _all_ hosts in that subnet will use the settings defined in that block; specifically, all hosts will be accessed using the `ProxyCommand` setting and connect via `bastion.example.com` using the specified private key.
-* The `Host bastion.example.com` combines settings for acting as an SSH bastion host (such as the `ForwardAgent` setting) with settings for using SSH multiplexing (like the `ControlMaster` and `ControlPersist` settings).
+* The `Host bastion.example.com` combines settings for acting as an SSH bastion host with settings for using SSH multiplexing (the `ControlMaster`, `ControlPath`, and `ControlPersist` settings).
 
 You can store this file wherever you like, but make note of where the file is stored as you'll need that for the next step: configuring Ansible to use the custom SSH settings.
 
@@ -88,9 +87,12 @@ To again remind you why this might be useful, consider the ability to use Ansibl
 
 ## Other Resources
 
-[This article][link-4] has information on setting up Ansible Tower for agent forwarding and the use of an SSH bastion host. Also, [this GitHub gist][link-1] has much of the same information as this article, so you may find it helpful in combination with this article or others.
+[This article][link-4] has information on setting up Ansible Tower for the use of an SSH bastion host. Also, [this GitHub gist][link-1] has much of the same information as this article, so you may find it helpful in combination with this article or others.
 
 If you have any questions or want more information, [hit me up on Twitter][link-5] and I'll do my best to help you out.
+
+**UPDATE 14 Sep 2016:** I've removed the information on SSH agent forwarding from this article, as it is not required when using an SSH bastion host.
+
 
 
 [link-1]: https://gist.github.com/seansawyer/8fe009e67f7e01344328
