@@ -11,6 +11,7 @@ tags:
 - Vagrant
 - CLI
 - Fusion
+- YAML
 ---
 
 In this post, I'll provide an example of using YAML to create a multi-container Docker environment in Vagrant. I made a brief mention of this technique in my earlier post talking about [how to use Docker with Vagrant][xref-1], but wanted to provide an example. For me, I know that examples are often quite helpful when I'm learning something new. Since one of my primary goals here is to help enable others to learn these technologies, I figured an example would be helpful. So, to that end, here's an example that I hope will help others.

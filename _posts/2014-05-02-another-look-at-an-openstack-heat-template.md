@@ -15,6 +15,7 @@ tags:
 - Interoperability
 - Networking
 - Virtualization
+- YAML
 ---
 
 In an earlier post, I provided [an introduction to OpenStack Heat][1], and provided an example Heat template that launched two instances with a logical network and a logical router. Here I am going to provide another view of a Heat template that does the same thing, but uses YAML and the HOT format instead of JSON and the CFN format.

@@ -9,6 +9,7 @@ tags:
 - Vagrant
 - CLI
 - Virtualization
+- YAML
 ---
 
 In this post, I'd like to share with you an improved way to use YAML with [Vagrant][link-1]. I first discussed the use of YAML with Vagrant in [a post on simplifying multi-machine Vagrant environments][xref-1], where I simply factored out variable data into an external YAML file. The original approach I described had (at least) one significant drawback, though, which this new approach adddresses.
