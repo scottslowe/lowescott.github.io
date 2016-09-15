@@ -35,7 +35,7 @@ In my use of Vagrant, I prefer to keep the Vagrant configuration (stored in the 
 
 Here's a snippet of a `Vagrantfile` you could use to instantiate AWS instances using Vagrant:
 
-``` yaml
+``` ruby
 # Require the AWS provider plugin
 require 'vagrant-aws'
 
