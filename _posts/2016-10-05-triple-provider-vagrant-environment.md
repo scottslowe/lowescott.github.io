@@ -130,8 +130,8 @@ These two provider-specific blocks look a fair amount like the AWS-specific bloc
 
 So, to use this environment, one needs only to edit the external YAML file and set three AWS-specific settings (region, keypair name, and private key path), then run the appropriate command for his or her particular environment:
 
-`vagrant up --provider=aws` (to spin up instances on AWS)
-`vagrant up --provider=virtualbox` (to spin up VirtualBox VMs locally)
+`vagrant up --provider=aws` (to spin up instances on AWS)  
+`vagrant up --provider=virtualbox` (to spin up VirtualBox VMs locally)  
 `vagrant up --provider=vmware_fusion` (to use Fusion to create local VMs)
 
 Using this sort of technique to support multiple providers in a single Vagrant environment provides a clean, consistent workflow regardless of backend provider. Naturally, this could be extended to include other providers using the same basic techniques I've used here. I'll leave that as an exercise to the readers.
