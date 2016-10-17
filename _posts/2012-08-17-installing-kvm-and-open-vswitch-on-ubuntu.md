@@ -112,7 +112,7 @@ In any case, here's the `/etc/network/interfaces` that I used (IP addresses and 
     
     # The primary network interface
     auto eth0
-    iface eth0 inet static
+    iface eth0 inet manual
     
     # The OVS bridge interface
     auto br0
