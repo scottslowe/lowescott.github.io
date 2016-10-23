@@ -67,8 +67,8 @@ Provisioning (creating) AWS infrastructure is pretty straightforward. Here's a s
     ec2_group:
       name: "ansible-sec-group"
       description: "New SG for Ansible-created instances"
-      region: "{{ region }}"
-      vpc_id: "{{ vpcid }}"
+      region: "{% raw %}{{ region }}{% endraw %}"
+      vpc_id: "{% raw %}{{ vpcid }}{% endraw %}"
       rules:
         - proto: "tcp"
           from_port: 22
@@ -81,11 +81,11 @@ Provisioning (creating) AWS infrastructure is pretty straightforward. Here's a s
 
   - name: "Provision an EC2 instance"
     ec2:
-      key_name: "{{ sshkey }}"
-      group_id: "{{ secgrp.group_id }}"
-      instance_type: "{{ type }}"
-      ec2_region: "{{ region }}"
-      image: "{{ ami }}"
+      key_name: "{% raw %}{{ sshkey }}{% endraw %}"
+      group_id: "{% raw %}{{ secgrp.group_id }}{% endraw %}"
+      instance_type: "{% raw %}{{ type }}{% endraw %}"
+      ec2_region: "{% raw %}{{ region }}{% endraw %}"
+      image: "{% raw %}{{ ami }}{% endraw %}"
       wait: true
       count: 1
       instance_tags:
@@ -123,16 +123,16 @@ To tear down infrastructure, you'll need to leverage the `ec2.py` dynamic invent
   - name: "Remove tagged EC2 instances from security group"
     ec2:
       state: "running"
-      region: "{{ region }}"
-      instance_ids: "{{ ec2_id }}"
+      region: "{% raw %}{{ region }}{% endraw %}"
+      instance_ids: "{% raw %}{{ ec2_id }}{% endraw %}"
       group_id: ""
     delegate_to: "localhost"
       
   - name: "Terminate tagged EC2 instances"
     ec2:
       state: "absent"
-      region: "{{ region }}"
-      instance_ids: "{{ ec2_id }}"
+      region: "{% raw %}{{ region }}{% endraw %}"
+      instance_ids: "{% raw %}{{ ec2_id }}{% endraw %}"
       wait: true
     delegate_to: "localhost"
 
@@ -147,7 +147,7 @@ To tear down infrastructure, you'll need to leverage the `ec2.py` dynamic invent
     ec2_group:
       name: "ansible-sec-group"
       description: "New SG for Ansible-created instances"
-      region: "{{ region }}"
+      region: "{% raw %}{{ region }}{% endraw %}"
       state: "absent"
 ```
 
