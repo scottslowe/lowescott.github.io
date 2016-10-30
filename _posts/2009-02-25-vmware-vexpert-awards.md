@@ -6,8 +6,7 @@ layout: post
 slug: vmware-vexpert-awards
 title: VMware vExpert Awards
 wordpress_id: 1210
-categories:
-- Virtualization
+categories: Personal
 tags:
 - vExpert
 - Virtualization

@@ -4,8 +4,7 @@ comments: true
 date: 2015-04-06 15:00:00-0700
 layout: post
 title: The Plain Text Productivity Experiment
-categories:
-- Information
+categories: Information
 tags:
 - Productivity
 - Macintosh

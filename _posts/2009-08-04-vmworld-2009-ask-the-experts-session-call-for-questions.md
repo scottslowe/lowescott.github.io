@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2009-ask-the-experts-session-call-for-questions
 title: 'VMworld 2009 Ask the Experts Session: Call For Questions!'
 wordpress_id: 1509
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

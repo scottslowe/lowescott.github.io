@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-1
 title: 'Virtualization Short Take #1'
 wordpress_id: 626
-categories:
-- Information
+categories: Information
 tags:
 - iSCSI
 - NFS

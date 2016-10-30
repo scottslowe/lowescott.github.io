@@ -6,8 +6,7 @@ layout: post
 slug: installing-kvm-on-centos-6-3
 title: Installing KVM on CentOS 6.3
 wordpress_id: 2807
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CentOS
 - KVM

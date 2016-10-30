@@ -6,11 +6,10 @@ layout: post
 slug: question-to-my-readers
 title: Question to my Readers
 wordpress_id: 1306
-categories:
-- General
+categories: General
 tags:
 - Blogging
-- General
+- Writing
 ---
 
 One of the things that I thought might be interesting, perhaps even useful, to the readers would be to present various views on virtualization, cloud computing, etc., from industry executives. My first foray into this sort of thing was the recent [e-mail interview][1] with Surgient CTO, Dave Malcolm.

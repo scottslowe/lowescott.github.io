@@ -6,8 +6,7 @@ layout: post
 slug: understanding-network-interface-virtualization
 title: Understanding Network Interface Virtualization
 wordpress_id: 1862
-categories:
-- Education
+categories: Education
 tags:
 - Cisco
 - Networking

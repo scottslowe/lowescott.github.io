@@ -6,8 +6,7 @@ layout: post
 slug: idf-2012-day-2-summary-and-thoughts
 title: IDF 2012 Day 2 Summary and Thoughts
 wordpress_id: 2861
-categories:
-- General
+categories: Information
 tags:
 - IDF2012
 - Intel

@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-46
 title: 'Technology Short Take #46'
 wordpress_id: 3560
-categories:
-- Information
+categories: Information
 tags:
 - Docker
 - Hardware

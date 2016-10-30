@@ -6,8 +6,7 @@ layout: post
 slug: another-reason-not-to-use-pvscsi-or-vmxnet3
 title: Another Reason Not to Use PVSCSI or VMXNET3
 wordpress_id: 1440
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Virtualization
 - VMware

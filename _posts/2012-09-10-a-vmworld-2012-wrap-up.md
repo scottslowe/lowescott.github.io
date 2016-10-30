@@ -6,8 +6,7 @@ layout: post
 slug: a-vmworld-2012-wrap-up
 title: A VMworld 2012 Wrap-Up
 wordpress_id: 2825
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

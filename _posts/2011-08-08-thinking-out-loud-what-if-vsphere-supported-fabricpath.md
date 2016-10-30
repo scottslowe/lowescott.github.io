@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-what-if-vsphere-supported-fabricpath
 title: 'Thinking Out Loud: What if vSphere Supported FabricPath?'
 wordpress_id: 2366
-categories:
-- Musing
+categories: Musing
 tags:
 - Cisco
 - Networking

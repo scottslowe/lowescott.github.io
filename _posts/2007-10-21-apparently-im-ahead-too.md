@@ -6,8 +6,7 @@ layout: post
 slug: apparently-im-ahead-too
 title: Apparently, I'm Ahead Too
 wordpress_id: 563
-categories:
-- Musing
+categories: Musing
 tags:
 - Macintosh
 - Solaris

@@ -6,10 +6,10 @@ layout: post
 slug: what-i-want-to-do-when-i-grow-up
 title: What I Want To Do When I Grow Up
 wordpress_id: 189
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
+- Career
 ---
 
 As some of you may already know, I've been wrestling with an important career decision for quite a while now. In thinking about this decision, I've had to take an honest look at what I really want to do. What brings me the most satisfaction in my career? In other words, what do I want to do when I grow up?

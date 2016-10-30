@@ -6,8 +6,7 @@ layout: post
 slug: tags-rss-and-other-site-changes
 title: Tags, RSS, and Other Site Changes
 wordpress_id: 298
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Collaboration

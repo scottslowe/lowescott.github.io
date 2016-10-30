@@ -6,8 +6,7 @@ layout: post
 slug: new-book-on-linux-windows-integration
 title: New Book on Linux-Windows Integration
 wordpress_id: 40
-categories:
-- News
+categories: News
 tags:
 - LDAP
 - Linux

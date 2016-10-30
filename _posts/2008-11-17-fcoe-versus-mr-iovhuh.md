@@ -6,8 +6,7 @@ layout: post
 slug: fcoe-versus-mr-iovhuh
 title: FCoE versus MR-IOV...huh?
 wordpress_id: 1028
-categories:
-- Rant
+categories: Rant
 tags:
 - Cisco
 - FibreChannel

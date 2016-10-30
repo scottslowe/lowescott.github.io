@@ -6,8 +6,7 @@ layout: post
 slug: vi-35-expected-in-december
 title: VI 3.5 Expected in December
 wordpress_id: 553
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - Virtualization

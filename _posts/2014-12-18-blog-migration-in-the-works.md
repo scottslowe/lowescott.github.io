@@ -5,8 +5,7 @@ date: 2014-12-18
 layout: post
 slug: blog-migration-in-the-works
 title: Blog Migration in the Works
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Writing

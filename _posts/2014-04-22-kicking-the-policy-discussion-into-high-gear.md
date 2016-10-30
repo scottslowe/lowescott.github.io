@@ -6,8 +6,7 @@ layout: post
 slug: kicking-the-policy-discussion-into-high-gear
 title: Kicking the Policy Discussion Into High Gear
 wordpress_id: 3433
-categories:
-- Information
+categories: Information
 tags:
 - Interoperability
 - OpenStack

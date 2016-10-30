@@ -6,8 +6,7 @@ layout: post
 slug: synergies
 title: Synergies
 wordpress_id: 203
-categories:
-- Musing
+categories: Musing
 tags:
 - Citrix
 - Networking

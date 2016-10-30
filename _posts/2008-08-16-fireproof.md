@@ -6,8 +6,7 @@ layout: post
 slug: fireproof
 title: Fireproof
 wordpress_id: 828
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

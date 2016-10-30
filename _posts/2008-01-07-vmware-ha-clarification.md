@@ -6,8 +6,7 @@ layout: post
 slug: vmware-ha-clarification
 title: VMware HA Clarification?
 wordpress_id: 601
-categories:
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: cliff-ive-used-vmware-in-production
 title: Cliff, I've Used VMware in Production
 wordpress_id: 475
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Virtualization
 - VMware

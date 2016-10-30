@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-17 13:40:00-0700
 layout: post
 title: Vagrant Box for Learning Open vSwitch
-categories:
-- Information
+categories: Information
 tags:
 - OVS
 - Vagrant

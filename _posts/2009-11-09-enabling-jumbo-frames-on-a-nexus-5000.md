@@ -6,8 +6,7 @@ layout: post
 slug: enabling-jumbo-frames-on-a-nexus-5000
 title: Enabling Jumbo Frames on a Nexus 5000
 wordpress_id: 1732
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Cisco
 - Networking

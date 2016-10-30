@@ -6,8 +6,7 @@ layout: post
 slug: need-prayer
 title: Need Prayer
 wordpress_id: 709
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

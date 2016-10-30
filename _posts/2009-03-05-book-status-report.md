@@ -6,8 +6,7 @@ layout: post
 slug: book-status-report
 title: Book Status Report
 wordpress_id: 1220
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - Writing

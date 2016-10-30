@@ -6,8 +6,7 @@ layout: post
 slug: strange-ntpd-problem-on-centos-41
 title: Strange NTPd Problem on CentOS 4.1
 wordpress_id: 76
-categories:
-- Rant
+categories: Rant
 tags:
 - Linux
 ---

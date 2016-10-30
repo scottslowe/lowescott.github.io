@@ -6,8 +6,7 @@ layout: post
 slug: keeping-priorities-in-check
 title: Keeping Priorities in Check
 wordpress_id: 79
-categories:
-- Rant
+categories: Rant
 tags:
 - Personal
 - Christianity

@@ -6,8 +6,7 @@ layout: post
 slug: mks-client-updated
 title: MKS Client Updated
 wordpress_id: 496
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - Virtualization

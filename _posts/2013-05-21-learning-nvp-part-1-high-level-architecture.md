@@ -6,8 +6,7 @@ layout: post
 slug: learning-nvp-part-1-high-level-architecture
 title: 'Learning NVP, Part 1: High-Level Architecture'
 wordpress_id: 3188
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Networking
 - Nicira

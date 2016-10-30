@@ -6,9 +6,7 @@ layout: post
 slug: help-me-out
 title: Help Me Out
 wordpress_id: 2001
-categories:
-- General
-- Personal
+categories: Personal
 tags:
 - Personal
 ---

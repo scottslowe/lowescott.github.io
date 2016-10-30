@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-23
 title: 'Technology Short Take #23'
 wordpress_id: 2633
-categories:
-- Information
+categories: Information
 tags:
 - Citrix
 - FCoE

@@ -6,8 +6,7 @@ layout: post
 slug: viridian-feature-set-trimmed
 title: Viridian Feature Set Trimmed
 wordpress_id: 451
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - Microsoft

@@ -6,8 +6,7 @@ layout: post
 slug: learning-solaris
 title: Learning Solaris
 wordpress_id: 497
-categories:
-- Information
+categories: Information
 tags:
 - Linux
 - Solaris

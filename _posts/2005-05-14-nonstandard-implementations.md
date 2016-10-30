@@ -6,8 +6,7 @@ layout: post
 slug: nonstandard-implementations
 title: Nonstandard Implementations
 wordpress_id: 5
-categories:
-- Rant
+categories: Rant
 tags:
 - Encryption
 - Exchange

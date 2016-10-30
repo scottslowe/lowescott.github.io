@@ -6,8 +6,7 @@ layout: post
 slug: vipluginscom
 title: VIPlugins.com
 wordpress_id: 633
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

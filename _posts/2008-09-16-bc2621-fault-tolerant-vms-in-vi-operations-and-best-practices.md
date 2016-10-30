@@ -6,8 +6,7 @@ layout: post
 slug: bc2621-fault-tolerant-vms-in-vi-operations-and-best-practices
 title: 'BC2621: Fault-Tolerant VMs in VI: Operations and Best Practices'
 wordpress_id: 907
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMotion

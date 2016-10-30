@@ -6,8 +6,7 @@ layout: post
 slug: iscsi-on-solaris-10-x86
 title: iSCSI on Solaris 10 x86
 wordpress_id: 379
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CentOS
 - Interoperability

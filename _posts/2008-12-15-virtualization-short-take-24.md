@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-24
 title: 'Virtualization Short Take #24'
 wordpress_id: 1095
-categories:
-- Information
+categories: Information
 tags:
 - ActiveDirectory
 - EMC

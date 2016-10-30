@@ -6,8 +6,7 @@ layout: post
 slug: using-puppet-with-multiple-operating-systems
 title: Using Puppet with Multiple Operating Systems
 wordpress_id: 2668
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Automation
 - BSD

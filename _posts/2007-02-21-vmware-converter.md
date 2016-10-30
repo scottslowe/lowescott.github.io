@@ -6,8 +6,7 @@ layout: post
 slug: vmware-converter
 title: VMware Converter
 wordpress_id: 416
-categories:
-- Virtualization
+categories: Review
 tags:
 - P2V
 - Virtualization

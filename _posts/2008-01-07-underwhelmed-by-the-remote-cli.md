@@ -6,8 +6,7 @@ layout: post
 slug: underwhelmed-by-the-remote-cli
 title: Underwhelmed by the Remote CLI
 wordpress_id: 600
-categories:
-- Virtualization
+categories: Rant
 tags:
 - CLI
 - ESX

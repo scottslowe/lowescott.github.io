@@ -4,8 +4,7 @@ comments: true
 date: 2015-04-15 14:35:00-0700
 layout: post
 title: Running an etcd 2.0 Cluster on Ubuntu 14.04
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Ubuntu
 - Linux

@@ -6,8 +6,7 @@ layout: post
 slug: problem-with-markdown-files-in-boxcryptor-on-ios
 title: Problem with Markdown Files in BoxCryptor on iOS
 wordpress_id: 2982
-categories:
-- Information
+categories: Information
 tags:
 - Encryption
 - Interoperability

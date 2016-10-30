@@ -6,8 +6,7 @@ layout: post
 slug: vcdx-design-exam-post-mortem
 title: VCDX Design Exam Post-Mortem
 wordpress_id: 1726
-categories:
-- Virtualization
+categories: Review
 tags:
 - Virtualization
 - VMware

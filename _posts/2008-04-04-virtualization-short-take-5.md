@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-5
 title: 'Virtualization Short Take #5'
 wordpress_id: 679
-categories:
-- Information
+categories: Information
 tags:
 - ESX
 - Microsoft

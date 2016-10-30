@@ -6,8 +6,7 @@ layout: post
 slug: microsoft-buying-kidaro
 title: Microsoft Buying Kidaro
 wordpress_id: 657
-categories:
-- News
+categories: News
 tags:
 - Microsoft
 - VDI

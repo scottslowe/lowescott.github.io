@@ -6,8 +6,7 @@ layout: post
 slug: vmware-ha-failover-capacity-changes
 title: VMware HA Failover Capacity Changes
 wordpress_id: 596
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Virtualization

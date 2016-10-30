@@ -6,8 +6,7 @@ layout: post
 slug: fusion-ship-date-announced
 title: Fusion Ship Date Announced
 wordpress_id: 499
-categories:
-- News
+categories: News
 tags:
 - Fusion
 - Macintosh

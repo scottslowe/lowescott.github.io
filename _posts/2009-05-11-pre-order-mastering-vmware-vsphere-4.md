@@ -6,8 +6,7 @@ layout: post
 slug: pre-order-mastering-vmware-vsphere-4
 title: Pre-Order Mastering VMware vSphere 4
 wordpress_id: 1355
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

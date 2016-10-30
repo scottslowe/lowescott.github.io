@@ -6,8 +6,7 @@ layout: post
 slug: latest-vdi-article-published
 title: Latest VDI Article Published
 wordpress_id: 594
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - VDI

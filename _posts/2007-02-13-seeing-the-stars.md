@@ -6,8 +6,7 @@ layout: post
 slug: seeing-the-stars
 title: Seeing the Stars
 wordpress_id: 412
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

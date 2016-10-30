@@ -6,8 +6,7 @@ layout: post
 slug: attending-the-next-generation-vmware-launch-event
 title: Attending the Next-Generation VMware Launch Event
 wordpress_id: 1271
-categories:
-- Virtualization
+categories: Information
 tags:
 - Blogging
 - Virtualization

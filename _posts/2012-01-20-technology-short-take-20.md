@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-20
 title: 'Technology Short Take #20'
 wordpress_id: 2525
-categories:
-- Information
+categories: Information
 tags:
 - Networking
 - Storage

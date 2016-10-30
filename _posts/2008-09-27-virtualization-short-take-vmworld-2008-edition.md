@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-vmworld-2008-edition
 title: Virtualization Short Take - VMworld 2008 Edition
 wordpress_id: 957
-categories:
-- Information
+categories: Information
 tags:
 - Cisco
 - EMC

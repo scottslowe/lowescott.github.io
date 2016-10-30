@@ -6,8 +6,7 @@ layout: post
 slug: hyper-v-architectural-issue
 title: Hyper-V Architectural Issue
 wordpress_id: 597
-categories:
-- Virtualization
+categories: Information
 tags:
 - HyperV
 - Microsoft

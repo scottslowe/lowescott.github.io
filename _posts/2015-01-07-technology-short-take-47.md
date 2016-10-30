@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-07
 layout: post
 title: 'Technology Short Take #47'
-categories:
-- Information
+categories: Information
 tags:
 - Networking
 - Hardware

@@ -4,8 +4,7 @@ comments: false
 date: 2015-01-05 
 layout: post
 title: Blog Migration Complete
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Writing

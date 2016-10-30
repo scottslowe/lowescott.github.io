@@ -6,8 +6,7 @@ layout: post
 slug: compiling-libvirt-0-10-1-on-centos-6-3
 title: Compiling libvirt 0.10.1 on CentOS 6.3
 wordpress_id: 2810
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CLI
 - CentOS

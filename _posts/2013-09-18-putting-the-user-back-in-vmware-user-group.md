@@ -6,8 +6,7 @@ layout: post
 slug: putting-the-user-back-in-vmware-user-group
 title: Putting the User Back in VMware User Group
 wordpress_id: 3299
-categories:
-- Virtualization
+categories: News
 tags:
 - Collaboration
 - Virtualization

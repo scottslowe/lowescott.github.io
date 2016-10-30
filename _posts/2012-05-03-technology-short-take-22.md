@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-22
 title: 'Technology Short Take #22'
 wordpress_id: 2617
-categories:
-- Information
+categories: Information
 tags:
 - Hardware
 - Microsoft

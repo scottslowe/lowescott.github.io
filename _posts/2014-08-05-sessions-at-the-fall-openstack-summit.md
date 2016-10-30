@@ -6,8 +6,7 @@ layout: post
 slug: sessions-at-the-fall-openstack-summit
 title: Sessions at the Fall OpenStack Summit
 wordpress_id: 3489
-categories:
-- Information
+categories: Information
 tags:
 - Docker
 - KVM

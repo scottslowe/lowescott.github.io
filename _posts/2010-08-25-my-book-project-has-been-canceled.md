@@ -6,8 +6,7 @@ layout: post
 slug: my-book-project-has-been-canceled
 title: My Book Project Has Been Canceled
 wordpress_id: 2049
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: vmware-referral-program
 title: VMware Referral Program
 wordpress_id: 579
-categories:
-- Virtualization
+categories: Information
 tags:
 - Fusion
 - Virtualization

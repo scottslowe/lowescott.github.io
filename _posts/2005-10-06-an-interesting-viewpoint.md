@@ -6,8 +6,7 @@ layout: post
 slug: an-interesting-viewpoint
 title: An Interesting Viewpoint
 wordpress_id: 101
-categories:
-- Musing
+categories: Musing
 tags:
 - Collaboration
 - Privacy

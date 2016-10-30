@@ -6,8 +6,7 @@ layout: post
 slug: strange-esx-server-error
 title: Strange ESX Server Error
 wordpress_id: 284
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Virtualization

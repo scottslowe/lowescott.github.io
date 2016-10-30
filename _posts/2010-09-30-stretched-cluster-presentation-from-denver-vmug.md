@@ -6,8 +6,7 @@ layout: post
 slug: stretched-cluster-presentation-from-denver-vmug
 title: Stretched Cluster Presentation from Denver VMUG
 wordpress_id: 2121
-categories:
-- Information
+categories: Presentation
 tags:
 - Networking
 - Storage

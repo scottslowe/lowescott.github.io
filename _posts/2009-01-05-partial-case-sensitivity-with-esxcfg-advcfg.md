@@ -6,8 +6,7 @@ layout: post
 slug: partial-case-sensitivity-with-esxcfg-advcfg
 title: Partial Case Sensitivity with esxcfg-advcfg
 wordpress_id: 1120
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - CLI
 - ESX

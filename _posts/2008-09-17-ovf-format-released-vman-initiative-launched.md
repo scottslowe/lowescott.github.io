@@ -6,8 +6,7 @@ layout: post
 slug: ovf-format-released-vman-initiative-launched
 title: OVF Format Released, VMAN Initiative Launched
 wordpress_id: 929
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: brkcrs-2031-multilayer-campus-architectures-and-design-principles
 title: 'BRKCRS-2031: Multilayer Campus Architectures and Design Principles'
 wordpress_id: 2324
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Cisco
 - CiscoLive2011

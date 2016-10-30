@@ -6,8 +6,7 @@ layout: post
 slug: vsphere-41-links
 title: vSphere 4.1 Links
 wordpress_id: 2095
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

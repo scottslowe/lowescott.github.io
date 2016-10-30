@@ -6,8 +6,7 @@ layout: post
 slug: content-creation-and-mind-mapping
 title: Content Creation and Mind Mapping
 wordpress_id: 2436
-categories:
-- Information
+categories: Information
 tags:
 - Macintosh
 - Productivity

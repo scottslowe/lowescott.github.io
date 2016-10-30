@@ -6,8 +6,7 @@ layout: post
 slug: iscsi-and-esx-server-3
 title: iSCSI and ESX Server 3
 wordpress_id: 295
-categories:
-- Explanation
+categories: Explanation
 tags:
 - ESX
 - Interoperability

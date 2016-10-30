@@ -6,7 +6,7 @@ layout: post
 slug: vsphere-on-nfs-design-considerations-presentation
 title: vSphere on NFS Design Considerations Presentation
 wordpress_id: 2663
-categories: Information
+categories: Presentation
 tags:
 - NAS
 - NFS

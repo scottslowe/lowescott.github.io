@@ -6,8 +6,7 @@ layout: post
 slug: potential-problem-with-esx-30x-and-virtualcenter-25
 title: Potential Problem with ESX 3.0.x and VirtualCenter 2.5
 wordpress_id: 675
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

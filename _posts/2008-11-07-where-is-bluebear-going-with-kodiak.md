@@ -6,8 +6,7 @@ layout: post
 slug: where-is-bluebear-going-with-kodiak
 title: Where is Bluebear Going with Kodiak?
 wordpress_id: 1014
-categories:
-- Musing
+categories: Musing
 tags:
 - Linux
 - Macintosh

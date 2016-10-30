@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-29
 title: 'Technology Short Take #29'
 wordpress_id: 3082
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - Cisco

@@ -6,8 +6,7 @@ layout: post
 slug: resetting-the-root-password-on-vmware-esx-40
 title: Resetting the Root Password on VMware ESX 4.0
 wordpress_id: 1796
-categories:
-- Explanation
+categories: Explanation
 tags:
 - ESX
 - Linux

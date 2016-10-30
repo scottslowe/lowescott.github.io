@@ -6,8 +6,7 @@ layout: post
 slug: badmail-and-exchange-2003
 title: Badmail and Exchange 2003
 wordpress_id: 50
-categories:
-- Information
+categories: Information
 tags:
 - Exchange
 - Messaging

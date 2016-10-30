@@ -6,8 +6,7 @@ layout: post
 slug: nailing-our-colours-to-the-mast
 title: Nailing Our Colours to the Mast
 wordpress_id: 645
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

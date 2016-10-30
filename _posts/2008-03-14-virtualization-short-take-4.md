@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-4
 title: 'Virtualization Short Take #4'
 wordpress_id: 660
-categories:
-- Information
+categories: Information
 tags:
 - Citrix
 - Microsoft

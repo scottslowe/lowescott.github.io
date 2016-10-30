@@ -6,8 +6,7 @@ layout: post
 slug: hps-proliant-g6-servers
 title: HP's ProLiant G6 Servers
 wordpress_id: 1270
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Hardware
 - HP

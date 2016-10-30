@@ -6,8 +6,7 @@ layout: post
 slug: ta8233-prioritizing-storage-resource-allocation-using-storage-io-control
 title: 'TA8233: Prioritizing Storage Resource Allocation Using Storage I/O Control'
 wordpress_id: 2085
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Storage
 - Virtualization

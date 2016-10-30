@@ -6,8 +6,7 @@ layout: post
 slug: presentation-from-australia-vmug-conferences
 title: Presentation from Australia VMUG Conferences
 wordpress_id: 2541
-categories:
-- Virtualization
+categories: Presentation
 tags:
 - Networking
 - Storage

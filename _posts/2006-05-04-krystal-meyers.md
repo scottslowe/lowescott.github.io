@@ -6,8 +6,7 @@ layout: post
 slug: krystal-meyers
 title: Krystal Meyers
 wordpress_id: 243
-categories:
-- Review
+categories: Review
 tags:
 - Christianity
 - Music

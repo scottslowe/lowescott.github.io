@@ -6,8 +6,7 @@ layout: post
 slug: to-my-wife-thank-you
 title: 'To My Wife: Thank You'
 wordpress_id: 705
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
 ---

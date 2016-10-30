@@ -6,8 +6,7 @@ layout: post
 slug: fusion-beta-2
 title: Fusion Beta 2
 wordpress_id: 422
-categories:
-- News
+categories: News
 tags:
 - Fusion
 - Macintosh

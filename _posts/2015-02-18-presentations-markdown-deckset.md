@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-18 09:55:00-0700
 layout: post
 title: Presentations in Markdown Using Deckset
-categories:
-- Review
+categories: Review
 tags:
 - Macintosh
 - Productivity

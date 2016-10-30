@@ -6,10 +6,10 @@ layout: post
 slug: no-not-that-scott-lowe
 title: No, Not That Scott Lowe
 wordpress_id: 748
-categories:
-- General
+categories: General
 tags:
 - Blogging
+- Writing
 ---
 
 I suppose it was bound to happen at some point.

@@ -6,8 +6,7 @@ layout: post
 slug: indestructible
 title: Indestructible
 wordpress_id: 494
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

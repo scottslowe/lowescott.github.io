@@ -6,8 +6,7 @@ layout: post
 slug: using-mock-to-build-libssh2-1-4-1-rpms-for-centos-6-3
 title: Using Mock to Build libssh2 1.4.1 RPMs for CentOS 6.3
 wordpress_id: 3063
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CLI
 - Linux

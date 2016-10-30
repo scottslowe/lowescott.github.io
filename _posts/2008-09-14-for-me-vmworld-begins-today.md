@@ -6,8 +6,7 @@ layout: post
 slug: for-me-vmworld-begins-today
 title: For Me, VMworld Begins Today
 wordpress_id: 893
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

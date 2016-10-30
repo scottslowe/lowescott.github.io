@@ -6,8 +6,7 @@ layout: post
 slug: xensource-bidding-war
 title: XenSource Bidding War
 wordpress_id: 507
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - Microsoft

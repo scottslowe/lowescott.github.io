@@ -6,8 +6,7 @@ layout: post
 slug: triangle-area-vmug-meeting-next-week
 title: Triangle Area VMUG Meeting Next Week
 wordpress_id: 1754
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

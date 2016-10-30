@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-3
 title: 'Virtualization Short Take #3'
 wordpress_id: 649
-categories:
-- Information
+categories: Information
 tags:
 - Exchange
 - Microsoft

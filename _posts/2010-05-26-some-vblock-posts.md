@@ -6,8 +6,7 @@ layout: post
 slug: some-vblock-posts
 title: Some Vblock Posts
 wordpress_id: 1958
-categories:
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - EMC

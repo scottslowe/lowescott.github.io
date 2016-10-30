@@ -6,8 +6,7 @@ layout: post
 slug: strange-vcb-error
 title: Strange VCB Error
 wordpress_id: 502
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Backup
 - ESX

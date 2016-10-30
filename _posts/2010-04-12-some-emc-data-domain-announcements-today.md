@@ -6,8 +6,7 @@ layout: post
 slug: some-emc-data-domain-announcements-today
 title: Some EMC Data Domain Announcements Today
 wordpress_id: 1878
-categories:
-- News
+categories: News
 tags:
 - Backup
 - EMC

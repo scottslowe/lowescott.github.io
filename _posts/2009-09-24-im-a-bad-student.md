@@ -6,12 +6,12 @@ layout: post
 slug: im-a-bad-student
 title: I'm a Bad Student
 wordpress_id: 1666
-categories:
-- Personal
+categories: Rant
 tags:
 - Personal
 - Storage
 - Virtualization
+- EMC
 ---
 
 As I mentioned a short while ago, I'm in the process of [learning about EMC storage][1]. To that end, I managed to get my hands on a copy of _Information Storage and Management: Storing, Managing, and Protecting Digital Information_ (Wiley, 2009; [available on Amazon](http://www.amazon.com/Information-Storage-Management-Managing-Protecting/dp/0470294213/ref=sr_1_1?ie=UTF8&qid=1253834833&sr=8-1)). While general in nature, the book has a fair number of EMC-specific product examples.

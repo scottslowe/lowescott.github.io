@@ -6,8 +6,7 @@ layout: post
 slug: one-more-tech-ed-schedule-change
 title: One More Tech-Ed Schedule Change
 wordpress_id: 741
-categories:
-- Information
+categories: Information
 tags:
 - Microsoft
 - TechEd2008

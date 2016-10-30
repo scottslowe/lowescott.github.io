@@ -6,8 +6,7 @@ layout: post
 slug: vmware-fusion-20-beta-1
 title: VMware Fusion 2.0 Beta 1
 wordpress_id: 700
-categories:
-- News
+categories: News
 tags:
 - Fusion
 - Macintosh

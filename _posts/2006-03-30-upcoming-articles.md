@@ -6,8 +6,7 @@ layout: post
 slug: upcoming-articles
 title: Upcoming Articles
 wordpress_id: 214
-categories:
-- General
+categories: General
 tags:
 - Citrix
 - Microsoft

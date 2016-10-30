@@ -6,8 +6,7 @@ layout: post
 slug: miscellaneous-tidbits
 title: Miscellaneous Tidbits
 wordpress_id: 247
-categories:
-- General
+categories: Information
 tags:
 - Citrix
 - Microsoft

@@ -6,8 +6,7 @@ layout: post
 slug: learning-nsx-part-14-using-logical-routing
 title: 'Learning NSX, Part 14: Using Logical Routing'
 wordpress_id: 3466
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Networking
 - Neutron

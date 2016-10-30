@@ -6,8 +6,7 @@ layout: post
 slug: vima-rolls-out
 title: VIMA Rolls Out
 wordpress_id: 1002
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - ESXi

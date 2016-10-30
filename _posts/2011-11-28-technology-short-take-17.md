@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-17
 title: 'Technology Short Take #17'
 wordpress_id: 2474
-categories:
-- Information
+categories: Information
 tags:
 - Citrix
 - EMC

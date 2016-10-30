@@ -6,8 +6,7 @@ layout: post
 slug: tagging-tactics
 title: Tagging Tactics
 wordpress_id: 160
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Tagging

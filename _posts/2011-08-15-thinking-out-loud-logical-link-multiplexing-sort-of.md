@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-logical-link-multiplexing-sort-of
 title: 'Thinking Out Loud: Logical Link Multiplexing (Sort Of)'
 wordpress_id: 2370
-categories:
-- Musing
+categories: Musing
 tags:
 - Networking
 - Virtualization

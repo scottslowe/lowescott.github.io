@@ -6,8 +6,7 @@ layout: post
 slug: a-brief-update-on-the-personal-side-of-things
 title: A Brief Update on the Personal Side of Things
 wordpress_id: 776
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

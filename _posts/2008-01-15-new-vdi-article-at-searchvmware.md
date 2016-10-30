@@ -6,8 +6,7 @@ layout: post
 slug: new-vdi-article-at-searchvmware
 title: New VDI Article at SearchVMware
 wordpress_id: 607
-categories:
-- Virtualization
+categories: News
 tags:
 - VDI
 - Virtualization

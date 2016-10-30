@@ -6,8 +6,7 @@ layout: post
 slug: second-vdi-article-published
 title: Second VDI Article Published
 wordpress_id: 573
-categories:
-- Virtualization
+categories: News
 tags:
 - VDI
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: spouse-activities-confirmation
 title: Spouse Activities Confirmation
 wordpress_id: 848
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

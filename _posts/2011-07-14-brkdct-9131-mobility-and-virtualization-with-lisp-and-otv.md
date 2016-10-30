@@ -6,8 +6,7 @@ layout: post
 slug: brkdct-9131-mobility-and-virtualization-with-lisp-and-otv
 title: 'BRKDCT-9131: Mobility and Virtualization with LISP and OTV'
 wordpress_id: 2346
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Cisco
 - CiscoLive2011

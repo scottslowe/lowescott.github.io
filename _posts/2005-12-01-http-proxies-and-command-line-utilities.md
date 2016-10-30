@@ -6,9 +6,9 @@ layout: post
 slug: http-proxies-and-command-line-utilities
 title: HTTP Proxies and Command-Line Utilities
 wordpress_id: 131
-categories:
-- Information
+categories: Information
 tags:
+- CLI
 - Linux
 - Networking
 ---

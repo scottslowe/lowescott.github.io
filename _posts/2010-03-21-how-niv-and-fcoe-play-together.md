@@ -6,8 +6,7 @@ layout: post
 slug: how-niv-and-fcoe-play-together
 title: How NIV and FCoE Play Together
 wordpress_id: 1868
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Cisco
 - FCoE

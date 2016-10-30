@@ -6,8 +6,7 @@ layout: post
 slug: fix-for-strange-issue-booting-kvm-guests
 title: Fix for Strange Issue Booting KVM Guests
 wordpress_id: 3472
-categories:
-- Explanation
+categories: Explanation
 tags:
 - KVM
 - Linux

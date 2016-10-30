@@ -6,8 +6,7 @@ layout: post
 slug: desktop-virtualization-interview-with-eric-hanselman-of-leostream
 title: Desktop Virtualization Interview with Eric Hanselman of Leostream
 wordpress_id: 1312
-categories:
-- Virtualization
+categories: Interview
 tags:
 - VDI
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-12-networking-edition
 title: 'Technology Short Take #12: Networking Edition'
 wordpress_id: 2299
-categories:
-- Information
+categories: Information
 tags:
 - Cisco
 - FCoE

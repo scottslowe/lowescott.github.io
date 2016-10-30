@@ -4,8 +4,7 @@ comments: true
 date: 2015-03-06 09:07:00-0700
 layout: post
 title: Running a Small Docker Swarm Cluster
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Docker
 - Linux

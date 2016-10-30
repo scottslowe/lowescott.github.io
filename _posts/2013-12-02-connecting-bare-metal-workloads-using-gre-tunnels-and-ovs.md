@@ -6,8 +6,7 @@ layout: post
 slug: connecting-bare-metal-workloads-using-gre-tunnels-and-ovs
 title: Connecting Bare Metal Workloads Using GRE Tunnels and OVS
 wordpress_id: 3340
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - GRE
 - KVM

@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2008-last-minute-spouse-activities-update
 title: VMworld 2008 Last Minute Spouse Activities Update
 wordpress_id: 890
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

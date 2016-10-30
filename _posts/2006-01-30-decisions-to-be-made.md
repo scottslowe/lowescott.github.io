@@ -6,8 +6,7 @@ layout: post
 slug: decisions-to-be-made
 title: Decisions To Be Made
 wordpress_id: 168
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 ---

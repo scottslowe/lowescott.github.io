@@ -6,8 +6,7 @@ layout: post
 slug: 3010-a-multistore-primer
 title: '3010: A MultiStore Primer'
 wordpress_id: 1297
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - ActiveDirectory
 - CLI

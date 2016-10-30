@@ -6,8 +6,7 @@ layout: post
 slug: first-session-of-vmworld-2007-day-1
 title: First Session of VMworld 2007, Day 1
 wordpress_id: 534
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Microsoft
 - Virtualization

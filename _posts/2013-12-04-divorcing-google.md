@@ -6,8 +6,7 @@ layout: post
 slug: divorcing-google
 title: Divorcing Google
 wordpress_id: 3375
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 - Messaging

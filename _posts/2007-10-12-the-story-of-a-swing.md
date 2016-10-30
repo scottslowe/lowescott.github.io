@@ -6,8 +6,7 @@ layout: post
 slug: the-story-of-a-swing
 title: The Story of a Swing
 wordpress_id: 560
-categories:
-- General
+categories: Rant
 tags:
 - Collaboration
 ---

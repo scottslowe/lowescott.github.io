@@ -6,8 +6,7 @@ layout: post
 slug: vmware-esx-cpu-scheduling-information
 title: VMware ESX CPU Scheduling Information
 wordpress_id: 752
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Virtualization

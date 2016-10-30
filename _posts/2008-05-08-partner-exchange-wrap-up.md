@@ -6,8 +6,7 @@ layout: post
 slug: partner-exchange-wrap-up
 title: Partner Exchange Wrap-Up
 wordpress_id: 704
-categories:
-- Virtualization
+categories: Information
 tags:
 - VDI
 - Virtualization

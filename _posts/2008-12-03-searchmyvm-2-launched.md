@@ -6,8 +6,7 @@ layout: post
 slug: searchmyvm-2-launched
 title: SearchMyVM 2 Launched
 wordpress_id: 1080
-categories:
-- News
+categories: News
 tags:
 - Virtualization
 - VMware

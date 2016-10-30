@@ -6,8 +6,7 @@ layout: post
 slug: shaohannahs-hope
 title: Shaohannah's Hope
 wordpress_id: 3
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

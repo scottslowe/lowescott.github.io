@@ -6,12 +6,12 @@ layout: post
 slug: follow-me-on-twitter
 title: Follow Me on Twitter
 wordpress_id: 891
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - VMworld2008
 - Web
+- Collaboration
 ---
 
 I'm not yet convinced of the value of [Twitter](http://twitter.com/), but I've signed up for an account and I'll be posting updates during VMworld 2008. My Twitter username is [scott_lowe](http://twitter.com/scott_lowe), so feel free to follow me via Twitter if you'd like.

@@ -6,8 +6,7 @@ layout: post
 slug: hyper9-goes-ga
 title: Hyper9 Goes GA
 wordpress_id: 1245
-categories:
-- News
+categories: News
 tags:
 - Virtualization
 - VMware

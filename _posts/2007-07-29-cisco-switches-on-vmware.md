@@ -6,8 +6,7 @@ layout: post
 slug: cisco-switches-on-vmware
 title: Cisco Switches on VMware
 wordpress_id: 495
-categories:
-- Virtualization
+categories: Musing
 tags:
 - Cisco
 - ESX

@@ -6,8 +6,7 @@ layout: post
 slug: update-on-vmware-server
 title: Update on VMware Server
 wordpress_id: 174
-categories:
-- Virtualization
+categories: News
 tags:
 - Networking
 - Virtualization

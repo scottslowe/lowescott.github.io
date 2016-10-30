@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-27
 title: 'Virtualization Short Take #27'
 wordpress_id: 1423
-categories:
-- Information
+categories: Information
 tags:
 - Macintosh
 - Cisco

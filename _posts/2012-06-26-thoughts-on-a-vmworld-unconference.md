@@ -6,8 +6,7 @@ layout: post
 slug: thoughts-on-a-vmworld-unconference
 title: Thoughts on a VMworld Unconference
 wordpress_id: 2651
-categories:
-- Musing
+categories: Musing
 tags:
 - Collaboration
 - Virtualization

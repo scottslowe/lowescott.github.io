@@ -6,11 +6,11 @@ layout: post
 slug: finally-home-from-vmworld-2007
 title: Finally Home from VMworld 2007
 wordpress_id: 545
-categories:
-- General
+categories: Information
 tags:
 - Travel
 - VMworld2007
+- Personal
 ---
 
 After hitting VMworld 2007 in San Francisco hot and heavy (and trying to liveblog as many sessions as possible, as well as the keynotes), my wife and I took yesterday to do some additional sightseeing beyond what [we'd done on Sunday][1] prior.

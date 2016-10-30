@@ -6,8 +6,7 @@ layout: post
 slug: follow-ups-on-solaris-native-kerberos-authentication
 title: Follow Ups on Solaris, Native Kerberos Authentication
 wordpress_id: 328
-categories:
-- Information
+categories: Information
 tags:
 - ActiveDirectory
 - Kerberos

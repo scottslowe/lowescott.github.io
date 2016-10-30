@@ -6,8 +6,7 @@ layout: post
 slug: embracing-diversity
 title: Embracing Diversity
 wordpress_id: 334
-categories:
-- Musing
+categories: Musing
 tags:
 - CentOS
 - ESX

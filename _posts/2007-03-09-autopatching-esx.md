@@ -6,8 +6,7 @@ layout: post
 slug: autopatching-esx
 title: Autopatching ESX
 wordpress_id: 426
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Security

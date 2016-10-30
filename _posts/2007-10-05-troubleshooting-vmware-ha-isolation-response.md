@@ -6,8 +6,7 @@ layout: post
 slug: troubleshooting-vmware-ha-isolation-response
 title: Troubleshooting VMware HA Isolation Response
 wordpress_id: 554
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - NFS

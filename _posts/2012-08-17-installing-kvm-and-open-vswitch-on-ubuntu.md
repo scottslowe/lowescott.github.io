@@ -6,8 +6,7 @@ layout: post
 slug: installing-kvm-and-open-vswitch-on-ubuntu
 title: Installing KVM and Open vSwitch on Ubuntu
 wordpress_id: 2722
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - KVM
 - Linux

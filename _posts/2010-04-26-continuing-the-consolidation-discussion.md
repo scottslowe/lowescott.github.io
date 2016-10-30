@@ -6,8 +6,7 @@ layout: post
 slug: continuing-the-consolidation-discussion
 title: Continuing the Consolidation Discussion
 wordpress_id: 1906
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: very-high-quality-vs-just-good-enough
 title: Very High Quality vs. Just Good Enough
 wordpress_id: 278
-categories:
-- General
+categories: Rant
 tags:
 - Apple
 - HP

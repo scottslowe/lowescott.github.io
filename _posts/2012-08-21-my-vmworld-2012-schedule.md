@@ -6,8 +6,7 @@ layout: post
 slug: my-vmworld-2012-schedule
 title: My VMworld 2012 Schedule
 wordpress_id: 2726
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 - Virtualization

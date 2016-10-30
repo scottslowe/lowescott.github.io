@@ -6,8 +6,7 @@ layout: post
 slug: is-sun-preparing-to-take-on-cisco
 title: Is Sun Preparing to Take on Cisco?
 wordpress_id: 1222
-categories:
-- Musing
+categories: Musing
 tags:
 - Cisco
 - Hardware

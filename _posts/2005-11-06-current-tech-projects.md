@@ -6,8 +6,7 @@ layout: post
 slug: current-tech-projects
 title: Current Tech Projects
 wordpress_id: 113
-categories:
-- Information
+categories: Information
 tags:
 - BSD
 - Exchange

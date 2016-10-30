@@ -6,8 +6,7 @@ layout: post
 slug: spouse-activities-at-vmworld-2012
 title: Spouse Activities at VMworld 2012
 wordpress_id: 2698
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

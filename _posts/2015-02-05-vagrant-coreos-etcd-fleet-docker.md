@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-05 11:50:00-0700
 layout: post
 title: Using Vagrant with CoreOS, etcd, fleet, and Docker
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Linux
 - Docker

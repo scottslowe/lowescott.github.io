@@ -6,8 +6,7 @@ layout: post
 slug: a-month-with-localscope
 title: A Month with Localscope
 wordpress_id: 2283
-categories:
-- Review
+categories: Review
 tags:
 - Apple
 - iPhone

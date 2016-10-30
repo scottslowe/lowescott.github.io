@@ -6,8 +6,7 @@ layout: post
 slug: deploying-coreos-on-openstack-using-heat
 title: Deploying CoreOS on OpenStack Using Heat
 wordpress_id: 3495
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Automation
 - CLI

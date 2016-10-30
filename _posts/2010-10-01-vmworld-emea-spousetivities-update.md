@@ -6,12 +6,12 @@ layout: post
 slug: vmworld-emea-spousetivities-update
 title: VMworld EMEA Spousetivities Update
 wordpress_id: 2125
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware
 - VMworld2010
+- Spousetivities
 ---
 
 I'll make this one short and sweet. As many of you probably already know, my wife (Crystal) has been organizing spouse activities---now affectionately called "Spousetivities"--for VMware-related conferences for a few years now. This year, she's extending Spousetivities to VMworld EMEA in Copenhagen, Denmark.

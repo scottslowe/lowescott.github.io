@@ -6,8 +6,7 @@ layout: post
 slug: vlan-trunking-between-nexus-5010-and-dell-powerconnect-switches
 title: VLAN Trunking Between Nexus 5010 and Dell PowerConnect Switches
 wordpress_id: 2169
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Cisco
 - Networking

@@ -6,8 +6,7 @@ layout: post
 slug: my-vmworld-2009-schedule
 title: My VMworld 2009 Schedule
 wordpress_id: 1550
-categories:
-- Information
+categories: Information
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: win-a-copy-of-pro-puppet
 title: Win a Copy of Pro Puppet
 wordpress_id: 3309
-categories:
-- News
+categories: News
 tags:
 - Linux
 - Automation

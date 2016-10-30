@@ -6,8 +6,7 @@ layout: post
 slug: this-vmworld-thing-is-like-watching-a-train-wreck
 title: This VMworld Thing is Like Watching a Train Wreck
 wordpress_id: 1380
-categories:
-- Rant
+categories: Rant
 tags:
 - Citrix
 - Microsoft

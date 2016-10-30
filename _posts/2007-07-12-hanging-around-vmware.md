@@ -6,9 +6,9 @@ layout: post
 slug: hanging-around-vmware
 title: 'Hanging Around #vmware'
 wordpress_id: 489
-categories:
-- Virtualization
+categories: Information
 tags:
+- Collaboration
 - Virtualization
 - VMware
 ---

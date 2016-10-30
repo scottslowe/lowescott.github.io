@@ -6,8 +6,7 @@ layout: post
 slug: bluebear-and-kodiak
 title: Bluebear and Kodiak
 wordpress_id: 845
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - ESXi

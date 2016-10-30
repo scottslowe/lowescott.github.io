@@ -6,9 +6,7 @@ layout: post
 slug: im-honored-too
 title: I'm Honored, Too
 wordpress_id: 765
-categories:
-- General
-- Virtualization
+categories: General
 tags:
 - Blogging
 - Virtualization

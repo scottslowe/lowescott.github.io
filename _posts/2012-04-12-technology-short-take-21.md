@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-21
 title: 'Technology Short Take #21'
 wordpress_id: 2587
-categories:
-- Information
+categories: Information
 tags:
 - Networking
 - Security

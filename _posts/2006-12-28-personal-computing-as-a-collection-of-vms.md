@@ -6,8 +6,7 @@ layout: post
 slug: personal-computing-as-a-collection-of-vms
 title: Personal Computing as a Collection of VMs?
 wordpress_id: 393
-categories:
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - Linux

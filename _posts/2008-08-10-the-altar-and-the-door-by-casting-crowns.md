@@ -6,8 +6,7 @@ layout: post
 slug: the-altar-and-the-door-by-casting-crowns
 title: The Altar and the Door by Casting Crowns
 wordpress_id: 808
-categories:
-- Review
+categories: Review
 tags:
 - Christianity
 - Music

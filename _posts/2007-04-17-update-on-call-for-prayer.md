@@ -6,8 +6,7 @@ layout: post
 slug: update-on-call-for-prayer
 title: Update on Call for Prayer
 wordpress_id: 441
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

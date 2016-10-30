@@ -6,8 +6,7 @@ layout: post
 slug: announcement-double-takes-hyper-v-product-support
 title: 'Announcement: Double-Take''s Hyper-V Product Support'
 wordpress_id: 728
-categories:
-- News
+categories: News
 tags:
 - HyperV
 - Microsoft

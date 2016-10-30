@@ -6,8 +6,7 @@ layout: post
 slug: calculating-vmware-ha-failover-capacity
 title: Calculating VMware HA Failover Capacity
 wordpress_id: 588
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Virtualization

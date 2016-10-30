@@ -6,8 +6,7 @@ layout: post
 slug: getting-hiera-working
 title: Getting Hiera Working
 wordpress_id: 2690
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Automation
 - BSD

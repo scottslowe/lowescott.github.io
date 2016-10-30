@@ -6,8 +6,7 @@ layout: post
 slug: need-a-favor
 title: Need a Favor
 wordpress_id: 1013
-categories:
-- General
+categories: General
 tags:
 - Travel
 ---

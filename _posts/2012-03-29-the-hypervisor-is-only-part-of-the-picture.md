@@ -6,8 +6,7 @@ layout: post
 slug: the-hypervisor-is-only-part-of-the-picture
 title: The Hypervisor is Only Part of the Picture
 wordpress_id: 2570
-categories:
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - ESXi

@@ -6,8 +6,7 @@ layout: post
 slug: setting-up-the-tools-for-contributing-to-openstack-documentation
 title: Setting up the Tools for Contributing to OpenStack Documentation
 wordpress_id: 3558
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CLI
 - Collaboration

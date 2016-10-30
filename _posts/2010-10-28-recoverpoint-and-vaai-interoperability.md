@@ -6,8 +6,7 @@ layout: post
 slug: recoverpoint-and-vaai-interoperability
 title: RecoverPoint and VAAI Interoperability
 wordpress_id: 2145
-categories:
-- Explanation
+categories: Explanation
 tags:
 - EMC
 - Interoperability

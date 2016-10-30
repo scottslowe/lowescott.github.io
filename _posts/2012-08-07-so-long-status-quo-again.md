@@ -6,11 +6,10 @@ layout: post
 slug: so-long-status-quo-again
 title: So Long, Status Quo (Again)
 wordpress_id: 2718
-categories:
-- Personal
+categories: Personal
 tags:
 - EMC
-- Personal
+- Career
 - Virtualization
 - VMware
 ---

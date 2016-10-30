@@ -6,8 +6,7 @@ layout: post
 slug: esx-security-vulnerabilities
 title: ESX Security Vulnerabilities
 wordpress_id: 437
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - Security

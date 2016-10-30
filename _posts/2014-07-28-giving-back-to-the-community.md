@@ -6,12 +6,9 @@ layout: post
 slug: giving-back-to-the-community
 title: Giving Back to the Community
 wordpress_id: 3477
-categories:
-- General
-- Personal
-- Virtualization
+categories: News
 tags:
-- General
+- Virtualization
 - Personal
 - VMware
 - VMworld2014

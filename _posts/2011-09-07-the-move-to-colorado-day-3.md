@@ -6,9 +6,9 @@ layout: post
 slug: the-move-to-colorado-day-3
 title: 'The Move to Colorado: Day 3'
 wordpress_id: 2399
-categories:
-- Personal
+categories: Personal
 tags:
+- Travel
 - Personal
 ---
 

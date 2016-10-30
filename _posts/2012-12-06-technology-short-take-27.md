@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-27
 title: 'Technology Short Take #27'
 wordpress_id: 2998
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - CentOS

@@ -6,8 +6,7 @@ layout: post
 slug: matthew-wests-new-album
 title: Matthew West's New Album
 wordpress_id: 52
-categories:
-- Review
+categories: Review
 tags:
 - Christianity
 - Personal

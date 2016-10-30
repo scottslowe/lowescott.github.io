@@ -6,13 +6,13 @@ layout: post
 slug: new-year-new-challenges-new-opportunities
 title: New Year, New Challenges, New Opportunities
 wordpress_id: 3074
-categories:
-- Personal
+categories: Personal
 tags:
 - Networking
 - Nicira
 - Virtualization
 - VMware
+- Career
 ---
 
 I suppose there's no sense in beating around the bush. As the blog post title indicates, I'm taking on a new set of challenges (and a new set of opportunities) in 2013--and the way to do that is in a new role with a new company. So, effective 2/8/2013, I am leaving EMC Corporation to join the former Nicira group at VMware, working directly for Martin Casado. I'll be working with folks like Brad Hedlund (see [his announcement here](http://bradhedlund.com/2012/12/04/the-start-of-an-epic-adventure-with-vmware-advancing-the-software-defined-virtual-network/)), Bruce Davie, and Teemu Koponen. I'm truly awed by the talent on this team.

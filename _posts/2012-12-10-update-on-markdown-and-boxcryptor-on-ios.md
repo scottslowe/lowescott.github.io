@@ -6,8 +6,7 @@ layout: post
 slug: update-on-markdown-and-boxcryptor-on-ios
 title: Update on Markdown and BoxCryptor on iOS
 wordpress_id: 3006
-categories:
-- Information
+categories: Information
 tags:
 - Encryption
 - Interoperability

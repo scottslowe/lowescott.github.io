@@ -6,8 +6,7 @@ layout: post
 slug: brief-leostream-update
 title: Brief Leostream Update
 wordpress_id: 719
-categories:
-- Virtualization
+categories: Information
 tags:
 - VDI
 - Virtualization

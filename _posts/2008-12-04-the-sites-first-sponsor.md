@@ -6,11 +6,9 @@ layout: post
 slug: the-sites-first-sponsor
 title: The Site's First Sponsor
 wordpress_id: 1084
-categories:
-- General
+categories: General
 tags:
 - Blogging
-- General
 - Web
 ---
 

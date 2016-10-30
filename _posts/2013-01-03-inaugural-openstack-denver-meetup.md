@@ -6,8 +6,7 @@ layout: post
 slug: inaugural-openstack-denver-meetup
 title: Inaugural OpenStack Denver Meetup
 wordpress_id: 3040
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 - OpenStack

@@ -6,8 +6,7 @@ layout: post
 slug: enhanced-vmotion-announcement
 title: Enhanced VMotion Announcement
 wordpress_id: 538
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMotion

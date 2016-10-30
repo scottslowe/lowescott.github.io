@@ -6,8 +6,7 @@ layout: post
 slug: very-brief-thoughts-on-the-keynote
 title: Very Brief Thoughts on the Keynote
 wordpress_id: 925
-categories:
-- Virtualization
+categories: Musing
 tags:
 - VDI
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: some-vsphere-5-video-content
 title: Some vSphere 5 Video Content
 wordpress_id: 2461
-categories:
-- Virtualization
+categories: Information
 tags:
 - EMC
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: editing-files-from-the-data-ontap-cli
 title: Editing Files from the Data ONTAP CLI
 wordpress_id: 402
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - NetApp
 - ONTAP

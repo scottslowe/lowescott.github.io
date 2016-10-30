@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-diy-network-virtualization
 title: 'Thinking Out Loud: DIY Network Virtualization?'
 wordpress_id: 3262
-categories:
-- Musing
+categories: Musing
 tags:
 - IPSec
 - Linux

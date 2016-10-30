@@ -6,8 +6,7 @@ layout: post
 slug: open-source-network-redesign
 title: Open Source Network Redesign
 wordpress_id: 2715
-categories:
-- Information
+categories: Information
 tags:
 - Interoperability
 - BSD

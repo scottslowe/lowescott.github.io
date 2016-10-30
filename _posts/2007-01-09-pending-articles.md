@@ -6,8 +6,7 @@ layout: post
 slug: pending-articles
 title: Pending Articles
 wordpress_id: 398
-categories:
-- General
+categories: General
 tags:
 - ActiveDirectory
 - ESX

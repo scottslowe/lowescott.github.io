@@ -6,8 +6,7 @@ layout: post
 slug: bluestripe-extends-factfinder-to-red-hat-linux
 title: BlueStripe Extends FactFinder to Red Hat Linux
 wordpress_id: 1223
-categories:
-- News
+categories: News
 tags:
 - Linux
 - Virtualization

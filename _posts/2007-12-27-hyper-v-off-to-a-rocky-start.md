@@ -6,8 +6,7 @@ layout: post
 slug: hyper-v-off-to-a-rocky-start
 title: Hyper-V Off to a Rocky Start
 wordpress_id: 595
-categories:
-- Virtualization
+categories: Information
 tags:
 - HyperV
 - Microsoft

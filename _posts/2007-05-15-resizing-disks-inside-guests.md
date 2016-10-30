@@ -6,8 +6,7 @@ layout: post
 slug: resizing-disks-inside-guests
 title: Resizing Disks Inside Guests
 wordpress_id: 456
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Hardware
 - Linux

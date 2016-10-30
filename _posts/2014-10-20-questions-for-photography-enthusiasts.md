@@ -6,11 +6,9 @@ layout: post
 slug: questions-for-photography-enthusiasts
 title: Questions for Photography Enthusiasts
 wordpress_id: 3549
-categories:
-- General
+categories: Personal
 tags:
-- General
-- Personal
+- Photography
 ---
 
 It's no secret that I'm something of a photography enthusiast. To me, photography is a relaxing puzzle of how to assemble all the various pieces---setting, lighting, exposure, composition, etc.---to create just the right image. I'm not an expert, but that's OK; I just do this for fun and to relax. If you'd like to see a small sampling of some of the photos I've taken, I publish some of them [here on 500px.com](https://500px.com/slowe).

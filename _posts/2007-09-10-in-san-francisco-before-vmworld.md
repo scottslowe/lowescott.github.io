@@ -6,11 +6,11 @@ layout: post
 slug: in-san-francisco-before-vmworld
 title: In San Francisco Before VMworld
 wordpress_id: 528
-categories:
-- General
+categories: Information
 tags:
 - Travel
 - VMware
+- VMworld2007
 ---
 
 Before I embarked on the busy schedule that is VMworld this year in San Francisco, my wife and I spent the day today strolling leisurely around the city. Before we'd even known it, we'd covered a total of about 6 or maybe 7 miles on foot, and seen more of the city than we'd planned on visiting today.

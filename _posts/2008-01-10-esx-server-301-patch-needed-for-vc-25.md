@@ -6,8 +6,7 @@ layout: post
 slug: esx-server-301-patch-needed-for-vc-25
 title: ESX Server 3.0.1 Patch Needed for VC 2.5
 wordpress_id: 604
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - Virtualization

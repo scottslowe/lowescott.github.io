@@ -6,8 +6,7 @@ layout: post
 slug: hp-buys-lefthand-networks
 title: HP Buys LeftHand Networks
 wordpress_id: 960
-categories:
-- News
+categories: News
 tags:
 - Hardware
 - HP

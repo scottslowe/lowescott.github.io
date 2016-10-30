@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-30
 title: 'Virtualization Short Take #30'
 wordpress_id: 1676
-categories:
-- Information
+categories: Information
 tags:
 - ESX
 - ESXi

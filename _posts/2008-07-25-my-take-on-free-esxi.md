@@ -6,8 +6,7 @@ layout: post
 slug: my-take-on-free-esxi
 title: My Take on Free ESXi
 wordpress_id: 769
-categories:
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - ESXi

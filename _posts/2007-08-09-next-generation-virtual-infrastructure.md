@@ -6,8 +6,7 @@ layout: post
 slug: next-generation-virtual-infrastructure
 title: Next-Generation Virtual Infrastructure
 wordpress_id: 503
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - Virtualization

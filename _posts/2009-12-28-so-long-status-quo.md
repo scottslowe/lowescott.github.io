@@ -6,12 +6,12 @@ layout: post
 slug: so-long-status-quo
 title: So Long Status Quo
 wordpress_id: 1776
-categories:
-- Personal
+categories: Personal
 tags:
 - Cisco
 - EMC
 - VMware
+- Career
 ---
 
 Fans of Christian artist [Nichole Nordeman](http://www.nicholenordeman.com/) will recognize the title of this post as a line coming from the chorus of her hit song "Brave" (from the album of the same name). The words go something like this:

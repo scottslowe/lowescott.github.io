@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-11 10:50:00-0700
 layout: post
 title: Multi-Container Docker with YAML and Vagrant
-categories:
-- Education
+categories: Education
 tags:
 - Docker
 - Vagrant

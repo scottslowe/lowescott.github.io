@@ -6,8 +6,7 @@ layout: post
 slug: connecting-lxc-to-open-vswitch-using-libvirt
 title: Connecting LXC to Open vSwitch Using Libvirt
 wordpress_id: 3369
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Libvirt
 - Linux

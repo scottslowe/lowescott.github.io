@@ -6,8 +6,7 @@ layout: post
 slug: inf-bco2655-ft-for-smp-vms-tech-preview
 title: 'INF-BCO2655: FT for SMP VMs Tech Preview'
 wordpress_id: 2799
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: cloud-hosted-cloud-management-via-platform9
 title: Cloud-Hosted Cloud Management via Platform9
 wordpress_id: 3493
-categories:
-- News
+categories: News
 tags:
 - Docker
 - KVM

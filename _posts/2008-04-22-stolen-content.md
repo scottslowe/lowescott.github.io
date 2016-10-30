@@ -6,8 +6,7 @@ layout: post
 slug: stolen-content
 title: Stolen Content
 wordpress_id: 689
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Web

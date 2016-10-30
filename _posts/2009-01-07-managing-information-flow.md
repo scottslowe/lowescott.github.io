@@ -6,11 +6,9 @@ layout: post
 slug: managing-information-flow
 title: Managing Information Flow
 wordpress_id: 1124
-categories:
-- General
+categories: Personal
 tags:
 - Blogging
-- General
 - Productivity
 - Web
 - Writing

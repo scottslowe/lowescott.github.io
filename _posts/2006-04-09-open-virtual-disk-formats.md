@@ -6,8 +6,7 @@ layout: post
 slug: open-virtual-disk-formats
 title: Open Virtual Disk Formats
 wordpress_id: 224
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Microsoft
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: technical-document-posted
 title: Technical Document Posted
 wordpress_id: 75
-categories:
-- Information
+categories: Information
 tags:
 - Interoperability
 - ActiveDirectory

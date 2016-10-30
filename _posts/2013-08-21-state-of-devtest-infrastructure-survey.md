@@ -6,8 +6,7 @@ layout: post
 slug: state-of-devtest-infrastructure-survey
 title: State of Dev/Test Infrastructure Survey
 wordpress_id: 3246
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 ---

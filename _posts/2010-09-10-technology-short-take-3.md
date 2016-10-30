@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-3
 title: 'Technology Short Take #3'
 wordpress_id: 2099
-categories:
-- Information
+categories: Information
 tags:
 - FCoE
 - HyperV

@@ -6,8 +6,7 @@ layout: post
 slug: marathon-everrun-2g-and-everrun-vm-lockstep
 title: Marathon everRun 2G and everRun VM Lockstep
 wordpress_id: 1308
-categories:
-- News
+categories: News
 tags:
 - Citrix
 - Microsoft

@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-its-not-just-the-technology
 title: "Thinking Out Loud: It's Not Just the Technology"
 wordpress_id: 1798
-categories:
-- Musing
+categories: Musing
 tags:
 - Collaboration
 - ToL

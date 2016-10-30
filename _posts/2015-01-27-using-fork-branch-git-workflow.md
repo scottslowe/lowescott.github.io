@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-27 13:40:00-0800
 layout: post
 title: Using the Fork-and-Branch Git Workflow
-categories:
-- Education
+categories: Education
 tags:
 - Git
 - Linux

@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-22
 title: 'Virtualization Short Take #22'
 wordpress_id: 1024
-categories:
-- Information
+categories: Information
 tags:
 - Citrix
 - Fusion

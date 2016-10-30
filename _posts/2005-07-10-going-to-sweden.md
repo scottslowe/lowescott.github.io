@@ -6,8 +6,7 @@ layout: post
 slug: going-to-sweden
 title: Going to Sweden
 wordpress_id: 41
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
 - Travel

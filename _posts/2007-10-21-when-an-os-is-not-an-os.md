@@ -6,8 +6,7 @@ layout: post
 slug: when-an-os-is-not-an-os
 title: When an OS is not an OS
 wordpress_id: 562
-categories:
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - Microsoft

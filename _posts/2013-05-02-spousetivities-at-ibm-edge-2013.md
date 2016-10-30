@@ -6,8 +6,7 @@ layout: post
 slug: spousetivities-at-ibm-edge-2013
 title: Spousetivities at IBM Edge 2013
 wordpress_id: 3166
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 - Spousetivities

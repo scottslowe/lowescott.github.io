@@ -6,11 +6,11 @@ layout: post
 slug: cloud-computing-interview-with-dave-malcom-cto-of-surgient
 title: Cloud Computing Interview with Dave Malcolm, CTO of Surgient
 wordpress_id: 1301
-categories:
-- Virtualization
+categories: Interview
 tags:
 - Virtualization
 - VMware
+- Cloud
 ---
 
 I recently had the pleasure of conducting an e-mail interview with Surgient's Chief Technology Officer, Dave Malcolm. I've reprinted the question and answer session here. Enjoy!

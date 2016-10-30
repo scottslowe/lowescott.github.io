@@ -6,8 +6,7 @@ layout: post
 slug: i-tried-to-like-postbox-i-really-did
 title: I Tried to Like Postbox, I Really Did
 wordpress_id: 1261
-categories:
-- Rant
+categories: Rant
 tags:
 - Macintosh
 - Messaging

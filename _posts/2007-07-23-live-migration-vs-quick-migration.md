@@ -6,8 +6,7 @@ layout: post
 slug: live-migration-vs-quick-migration
 title: Live Migration vs. Quick Migration
 wordpress_id: 493
-categories:
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Microsoft

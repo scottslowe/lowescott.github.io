@@ -6,8 +6,7 @@ layout: post
 slug: solaris-10-update-4-on-esx-server-2
 title: Solaris 10 Update 4 on ESX Server
 wordpress_id: 526
-categories:
-- Information
+categories: Information
 tags:
 - ESX
 - Solaris

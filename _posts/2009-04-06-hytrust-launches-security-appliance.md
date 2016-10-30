@@ -6,8 +6,7 @@ layout: post
 slug: hytrust-launches-security-appliance
 title: HyTrust Launches Security Appliance
 wordpress_id: 1269
-categories:
-- News
+categories: News
 tags:
 - ActiveDirectory
 - CLI

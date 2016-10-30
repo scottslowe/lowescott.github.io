@@ -6,8 +6,7 @@ layout: post
 slug: vmware-ha-problem-with-update-3
 title: VMware HA Problem with Update 3
 wordpress_id: 1094
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - ESXi

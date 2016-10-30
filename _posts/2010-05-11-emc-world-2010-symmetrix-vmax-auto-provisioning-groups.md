@@ -6,8 +6,7 @@ layout: post
 slug: emc-world-2010-symmetrix-vmax-auto-provisioning-groups
 title: 'EMC World 2010: Symmetrix VMAX Auto-Provisioning Groups'
 wordpress_id: 1938
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - EMC
 - EMCWorld2010

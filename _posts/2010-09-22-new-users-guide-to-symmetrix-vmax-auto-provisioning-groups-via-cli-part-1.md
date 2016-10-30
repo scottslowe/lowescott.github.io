@@ -6,8 +6,7 @@ layout: post
 slug: new-users-guide-to-symmetrix-vmax-auto-provisioning-groups-via-cli-part-1
 title: New User's Guide to Symmetrix VMAX Auto Provisioning Groups via CLI, Part 1
 wordpress_id: 2109
-categories:
-- Education
+categories: Education
 tags:
 - CLI
 - EMC

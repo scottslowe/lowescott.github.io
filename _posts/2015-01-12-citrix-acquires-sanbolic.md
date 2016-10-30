@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-12 09:12:00-0800
 layout: post
 title: Citrix Acquires Sanbolic
-categories:
-- News
+categories: News
 tags:
 - Virtualization
 - Citrix

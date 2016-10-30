@@ -6,8 +6,7 @@ layout: post
 slug: installing-the-vi-power-documenter
 title: Installing the VI Power Documenter
 wordpress_id: 1086
-categories:
-- Virtualization
+categories: Tutorial
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: vir367-hyper-v-security-and-best-practices
 title: 'VIR367: Hyper-V Security and Best Practices'
 wordpress_id: 727
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - HyperV
 - Microsoft

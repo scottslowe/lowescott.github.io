@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-18
 title: 'Technology Short Take #18'
 wordpress_id: 2500
-categories:
-- Information
+categories: Information
 tags:
 - HyperV
 - Macintosh

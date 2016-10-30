@@ -6,8 +6,7 @@ layout: post
 slug: vmware-view-client-for-mac-with-pcoip
 title: VMware View Client for Mac with PCoIP
 wordpress_id: 2504
-categories:
-- Virtualization
+categories: Review
 tags:
 - VDI
 - Virtualization

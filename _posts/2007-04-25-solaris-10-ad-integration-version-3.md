@@ -6,8 +6,7 @@ layout: post
 slug: solaris-10-ad-integration-version-3
 title: Solaris 10-AD Integration, Version 3
 wordpress_id: 447
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Interoperability

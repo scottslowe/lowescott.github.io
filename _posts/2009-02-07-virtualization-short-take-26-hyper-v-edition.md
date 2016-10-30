@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-26-hyper-v-edition
 title: 'Virtualization Short Take #26, Hyper-V Edition'
 wordpress_id: 1170
-categories:
-- Information
+categories: Information
 tags:
 - HyperV
 - Microsoft

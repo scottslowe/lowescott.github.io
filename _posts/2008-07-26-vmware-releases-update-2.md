@@ -6,8 +6,7 @@ layout: post
 slug: vmware-releases-update-2
 title: VMware Releases Update 2
 wordpress_id: 770
-categories:
-- News
+categories: News
 tags:
 - ESX
 - ESXi

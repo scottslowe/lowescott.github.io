@@ -6,8 +6,7 @@ layout: post
 slug: ok-so-authentication-was-easier-than-expected
 title: OK, So Authentication Was Easier Than Expected...
 wordpress_id: 72
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 - OSS

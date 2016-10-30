@@ -6,8 +6,7 @@ layout: post
 slug: xen-trademark-policy
 title: Xen Trademark Policy
 wordpress_id: 717
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Citrix
 - Virtualization

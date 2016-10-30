@@ -6,8 +6,7 @@ layout: post
 slug: spousetivities-at-emc-world-2011
 title: Spousetivities at EMC World 2011
 wordpress_id: 2247
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 - EMC

@@ -6,8 +6,7 @@ layout: post
 slug: solaris-10-and-active-directory-integration
 title: Solaris 10 and Active Directory Integration
 wordpress_id: 320
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - ActiveDirectory
 - Kerberos

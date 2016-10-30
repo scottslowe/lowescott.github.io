@@ -6,8 +6,7 @@ layout: post
 slug: momentum-building-around-xen
 title: Momentum Building Around Xen
 wordpress_id: 618
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - Virtualization

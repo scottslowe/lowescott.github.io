@@ -6,8 +6,7 @@ layout: post
 slug: a-new-effort
 title: A New Effort
 wordpress_id: 39
-categories:
-- Information
+categories: Information
 tags:
 - Kerberos
 - LDAP

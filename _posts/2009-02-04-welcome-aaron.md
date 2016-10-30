@@ -9,7 +9,7 @@ wordpress_id: 1158
 categories: General
 tags:
 - Blogging
-- General
+- Writing
 - Hardware
 ---
 

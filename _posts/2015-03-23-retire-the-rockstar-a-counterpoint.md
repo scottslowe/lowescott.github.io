@@ -4,8 +4,7 @@ comments: true
 date: 2015-03-23 07:44:00-0500
 layout: post
 title: 'Retiring the Rockstar: A Counterpoint'
-categories:
-- Rant
+categories: Rant
 tags:
 - Collaboration
 - Productivity

@@ -6,8 +6,7 @@ layout: post
 slug: hyper-v-released
 title: Hyper-V Released
 wordpress_id: 749
-categories:
-- News
+categories: News
 tags:
 - HyperV
 - Microsoft

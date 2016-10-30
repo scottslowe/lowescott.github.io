@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2007-top-support-issues-session
 title: VMworld 2007 Top Support Issues Session
 wordpress_id: 544
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - ESX
 - Networking

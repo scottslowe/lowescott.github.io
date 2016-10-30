@@ -6,11 +6,9 @@ layout: post
 slug: posts-from-the-past-december-2012
 title: Posts From the Past, December 2012
 wordpress_id: 2995
-categories:
-- General
+categories: General
 tags:
 - Blogging
-- General
 - Writing
 ---
 

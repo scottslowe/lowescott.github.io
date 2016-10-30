@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-37
 title: 'Virtualization Short Take #37'
 wordpress_id: 1870
-categories:
-- Information
+categories: Information
 tags:
 - Cisco
 - HyperV

@@ -6,8 +6,7 @@ layout: post
 slug: the-os-is-dead-long-live-the-os
 title: The OS is Dead, Long Live the OS
 wordpress_id: 2567
-categories:
-- Musing
+categories: Musing
 tags:
 - HyperV
 - Microsoft

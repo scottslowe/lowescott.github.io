@@ -6,8 +6,7 @@ layout: post
 slug: the-future-of-the-os
 title: The Future of the OS
 wordpress_id: 378
-categories:
-- Musing
+categories: Musing
 tags:
 - Apple
 - ESX

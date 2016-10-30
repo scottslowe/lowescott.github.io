@@ -6,8 +6,7 @@ layout: post
 slug: idf-2014-open-source-storage-optimizations
 title: 'IDF 2014: Open Source Storage Optimizations'
 wordpress_id: 3529
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Hardware
 - IDF2014

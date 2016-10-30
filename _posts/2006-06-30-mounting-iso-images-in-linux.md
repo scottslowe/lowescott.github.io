@@ -6,9 +6,9 @@ layout: post
 slug: mounting-iso-images-in-linux
 title: Mounting ISO Images in Linux
 wordpress_id: 285
-categories:
-- Information
+categories: Information
 tags:
+- CLI
 - Linux
 - OSS
 ---

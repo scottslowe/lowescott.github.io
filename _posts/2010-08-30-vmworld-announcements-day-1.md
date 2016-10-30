@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-announcements-day-1
 title: VMworld Announcements, Day 1
 wordpress_id: 2057
-categories:
-- News
+categories: News
 tags:
 - Networking
 - Security

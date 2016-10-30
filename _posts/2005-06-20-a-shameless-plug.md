@@ -6,8 +6,7 @@ layout: post
 slug: a-shameless-plug
 title: A Shameless Plug
 wordpress_id: 18
-categories:
-- Personal
+categories: Personal
 tags:
 - Web
 ---

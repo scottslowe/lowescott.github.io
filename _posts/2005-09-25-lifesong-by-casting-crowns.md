@@ -5,8 +5,7 @@ date: 2005-09-25 09:06:08+00:00
 layout: post
 title: Lifesong by Casting Crowns
 wordpress_id: 93
-categories:
-- Review
+categories: Review
 tags:
 - Christianity
 - Music

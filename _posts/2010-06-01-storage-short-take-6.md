@@ -6,8 +6,7 @@ layout: post
 slug: storage-short-take-6
 title: 'Storage Short Take #6'
 wordpress_id: 1960
-categories:
-- Information
+categories: Information
 tags:
 - EMC
 - EMCWorld2010

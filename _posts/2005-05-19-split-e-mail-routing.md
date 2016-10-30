@@ -6,8 +6,7 @@ layout: post
 slug: split-e-mail-routing
 title: Split E-Mail Routing
 wordpress_id: 8
-categories:
-- Information
+categories: Information
 tags:
 - Messaging
 - Postfix

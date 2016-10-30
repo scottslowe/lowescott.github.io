@@ -6,8 +6,7 @@ layout: post
 slug: link-aggregation-and-vlan-trunking-with-brocade-fastiron-switches
 title: Link Aggregation and VLAN Trunking with Brocade FastIron Switches
 wordpress_id: 2907
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Interoperability
 - Networking

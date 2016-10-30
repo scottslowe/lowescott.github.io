@@ -6,8 +6,7 @@ layout: post
 slug: vsphere-ha-and-vapps
 title: vSphere HA and vApps
 wordpress_id: 2463
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Virtualization
 - VMware

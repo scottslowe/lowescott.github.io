@@ -6,11 +6,11 @@ layout: post
 slug: tracking-my-own-published-articles
 title: Tracking My Own Published Articles
 wordpress_id: 760
-categories:
-- General
+categories: Information
 tags:
 - Web
 - Writing
+- Blogging
 ---
 
 For those that are interested, I've started bookmarking all my own published articles. They're viewable [on Delicious.com with the tag "Articles"](http://delicious.com/slowe/Articles), and you can also subscribe to the [RSS feed for that tag](http://feeds.delicious.com/v2/rss/slowe/Articles) as well. I was having a hard time keeping track of all the URLs where my articles had been published, so I thought I'd just go ahead and bookmark them so I had them for future reference.

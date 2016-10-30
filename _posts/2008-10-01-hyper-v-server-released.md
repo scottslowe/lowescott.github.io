@@ -6,8 +6,7 @@ layout: post
 slug: hyper-v-server-released
 title: Hyper-V Server Released
 wordpress_id: 961
-categories:
-- News
+categories: News
 tags:
 - HyperV
 - Microsoft

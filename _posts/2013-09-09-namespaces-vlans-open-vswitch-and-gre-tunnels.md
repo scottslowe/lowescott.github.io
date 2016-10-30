@@ -6,8 +6,7 @@ layout: post
 slug: namespaces-vlans-open-vswitch-and-gre-tunnels
 title: Namespaces, VLANs, Open vSwitch, and GRE Tunnels
 wordpress_id: 3274
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CLI
 - GRE

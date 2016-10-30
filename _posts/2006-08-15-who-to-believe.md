@@ -6,8 +6,7 @@ layout: post
 slug: who-to-believe
 title: Who to Believe?
 wordpress_id: 319
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

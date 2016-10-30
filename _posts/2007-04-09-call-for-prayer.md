@@ -6,8 +6,7 @@ layout: post
 slug: call-for-prayer
 title: Call For Prayer
 wordpress_id: 439
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

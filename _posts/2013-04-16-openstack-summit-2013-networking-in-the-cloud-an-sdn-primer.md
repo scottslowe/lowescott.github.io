@@ -6,8 +6,7 @@ layout: post
 slug: openstack-summit-2013-networking-in-the-cloud-an-sdn-primer
 title: 'OpenStack Summit 2013: Networking In the Cloud, an SDN Primer'
 wordpress_id: 3149
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Networking
 - OpenStack

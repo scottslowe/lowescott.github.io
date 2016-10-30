@@ -6,8 +6,7 @@ layout: post
 slug: random-reboots-with-vmware-esx-35-update-3
 title: Random Reboots with VMware ESX 3.5 Update 3
 wordpress_id: 1110
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - ESXi

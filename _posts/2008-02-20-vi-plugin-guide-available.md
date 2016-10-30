@@ -6,8 +6,7 @@ layout: post
 slug: vi-plugin-guide-available
 title: VI Plugin Guide Available
 wordpress_id: 637
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: how-to-create-a-metalun
 title: How To Create a MetaLUN
 wordpress_id: 1704
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - EMC
 - Storage

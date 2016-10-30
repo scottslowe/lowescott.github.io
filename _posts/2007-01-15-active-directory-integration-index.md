@@ -6,8 +6,7 @@ layout: post
 slug: active-directory-integration-index
 title: Active Directory Integration Index
 wordpress_id: 401
-categories:
-- Information
+categories: Information
 tags:
 - ActiveDirectory
 - BSD

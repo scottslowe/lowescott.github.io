@@ -6,8 +6,7 @@ layout: post
 slug: modifying-dhcp-client-operation-on-openbsd
 title: Modifying DHCP Client Operation on OpenBSD
 wordpress_id: 221
-categories:
-- Explanation
+categories: Explanation
 tags:
 - UNIX
 - BSD

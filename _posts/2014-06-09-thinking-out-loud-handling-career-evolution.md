@@ -6,10 +6,9 @@ layout: post
 slug: thinking-out-loud-handling-career-evolution
 title: 'Thinking Out Loud: Handling Career Evolution'
 wordpress_id: 3458
-categories:
-- Musing
+categories: Musing
 tags:
-- General
+- Career
 - Personal
 - ToL
 ---

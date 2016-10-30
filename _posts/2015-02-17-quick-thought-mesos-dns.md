@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-17 10:42:00-0700
 layout: post
 title: A Quick Thought About Mesos-DNS
-categories:
-- Rant
+categories: Rant
 tags:
 - ToL
 - Docker

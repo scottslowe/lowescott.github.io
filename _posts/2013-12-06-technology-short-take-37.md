@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-37
 title: 'Technology Short Take #37'
 wordpress_id: 3371
-categories:
-- Information
+categories: Information
 tags:
 - Macintosh
 - ESXi

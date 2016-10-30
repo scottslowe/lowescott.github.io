@@ -6,8 +6,7 @@ layout: post
 slug: submit-a-question-for-vmworld-2009-ask-the-experts-session
 title: Submit a Question for VMworld 2009 Ask the Experts Session
 wordpress_id: 1450
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: josh-bates
 title: Josh Bates
 wordpress_id: 306
-categories:
-- Review
+categories: Review
 tags:
 - Christianity
 - Music

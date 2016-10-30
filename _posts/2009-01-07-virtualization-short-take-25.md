@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-25
 title: 'Virtualization Short Take #25'
 wordpress_id: 1122
-categories:
-- Information
+categories: Information
 tags:
 - Citrix
 - ESX

@@ -6,8 +6,7 @@ layout: post
 slug: new-category-added
 title: New Category Added
 wordpress_id: 218
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: intro-to-io-virtualization
 title: Intro to I/O Virtualization
 wordpress_id: 697
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

@@ -6,12 +6,12 @@ layout: post
 slug: summary-of-cdp-articles
 title: Summary of CDP Articles
 wordpress_id: 1366
-categories:
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - CLI
 - IOS
+- Networking
 - Virtualization
 - VMware
 - vSphere

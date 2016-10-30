@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-7
 title: 'Technology Short Take #7'
 wordpress_id: 2163
-categories:
-- Information
+categories: Information
 tags:
 - Cisco
 - FCoE

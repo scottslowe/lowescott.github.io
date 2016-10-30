@@ -6,8 +6,7 @@ layout: post
 slug: an-interview-with-jesse-proudman
 title: An Interview with Jesse Proudman
 wordpress_id: 3384
-categories:
-- Information
+categories: Interview
 tags:
 - Collaboration
 - Cloud

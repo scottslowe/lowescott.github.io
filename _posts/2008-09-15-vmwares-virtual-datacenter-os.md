@@ -6,8 +6,7 @@ layout: post
 slug: vmwares-virtual-datacenter-os
 title: VMware's Virtual Datacenter OS
 wordpress_id: 895
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - ESXi

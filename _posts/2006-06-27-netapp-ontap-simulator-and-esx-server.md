@@ -6,8 +6,7 @@ layout: post
 slug: netapp-ontap-simulator-and-esx-server
 title: NetApp ONTAP Simulator and ESX Server
 wordpress_id: 280
-categories:
-- Explanation
+categories: Explanation
 tags:
 - ESX
 - Hardware

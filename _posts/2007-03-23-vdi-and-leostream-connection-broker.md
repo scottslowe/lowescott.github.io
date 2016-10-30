@@ -6,8 +6,7 @@ layout: post
 slug: vdi-and-leostream-connection-broker
 title: VDI and Leostream Connection Broker
 wordpress_id: 433
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ActiveDirectory
 - ESX

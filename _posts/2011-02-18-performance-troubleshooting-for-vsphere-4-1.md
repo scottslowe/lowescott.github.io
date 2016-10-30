@@ -6,8 +6,7 @@ layout: post
 slug: performance-troubleshooting-for-vsphere-4-1
 title: Performance Troubleshooting for vSphere 4.1
 wordpress_id: 2244
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

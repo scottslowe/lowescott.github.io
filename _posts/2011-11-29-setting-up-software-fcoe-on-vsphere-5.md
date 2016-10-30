@@ -6,8 +6,7 @@ layout: post
 slug: setting-up-software-fcoe-on-vsphere-5
 title: Setting up Software FCoE on vSphere 5
 wordpress_id: 2482
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - FCoE
 - Networking

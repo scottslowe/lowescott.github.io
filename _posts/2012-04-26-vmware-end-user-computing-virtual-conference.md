@@ -6,8 +6,7 @@ layout: post
 slug: vmware-end-user-computing-virtual-conference
 title: VMware End-User Computing Virtual Conference
 wordpress_id: 2604
-categories:
-- Virtualization
+categories: News
 tags:
 - VDI
 - Virtualization

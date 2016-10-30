@@ -6,8 +6,7 @@ layout: post
 slug: starttls-and-imap-in-mailapp
 title: STARTTLS and IMAP in Mail.app
 wordpress_id: 30
-categories:
-- Information
+categories: Information
 tags:
 - Encryption
 - IMAP

@@ -6,8 +6,7 @@ layout: post
 slug: in-the-works
 title: In the Works
 wordpress_id: 763
-categories:
-- General
+categories: General
 tags:
 - ActiveDirectory
 - ESX

@@ -6,8 +6,7 @@ layout: post
 slug: vsp1682-vmware-vsphere-clustering-qa
 title: 'VSP1682: VMware vSphere Clustering Q&A'
 wordpress_id: 2377
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

@@ -4,8 +4,7 @@ comments: true
 date: 2015-04-19 07:05:00-0700
 layout: post
 title: Running an etcd-Backed Docker Swarm Cluster
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Docker
 - Linux

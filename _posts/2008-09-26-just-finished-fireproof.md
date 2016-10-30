@@ -6,8 +6,7 @@ layout: post
 slug: just-finished-fireproof
 title: Just Finished Fireproof
 wordpress_id: 955
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

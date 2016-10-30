@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-hp-flex-10-design-considerations
 title: 'Thinking Out Loud: HP Flex-10 Design Considerations'
 wordpress_id: 1571
-categories:
-- Musing
+categories: Musing
 tags:
 - HP
 - Networking

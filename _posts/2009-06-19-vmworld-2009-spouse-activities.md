@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2009-spouse-activities
 title: VMworld 2009 Spouse Activities
 wordpress_id: 1395
-categories:
-- Virtualization
+categories: News
 tags:
 - Travel
 - Virtualization

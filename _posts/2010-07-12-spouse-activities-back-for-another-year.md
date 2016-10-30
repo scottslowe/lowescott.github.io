@@ -6,12 +6,12 @@ layout: post
 slug: spouse-activities-back-for-another-year
 title: 'Spouse Activities: Back for Another Year!'
 wordpress_id: 1993
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware
 - VMworld2010
+- Spousetivities
 ---
 
 Have you ever attended a technology conference and had your spouse go with you? More than likely, your spouse just sat around the hotel room, bored, waiting for you to get back after a long day of sessions and lectures and labs. Then, when you're tired and just want to relax, your spouse wants to go out on the town, explore, and see some cool stuff. Does that sound familiar?

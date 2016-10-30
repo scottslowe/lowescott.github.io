@@ -6,8 +6,7 @@ layout: post
 slug: setting-up-ipfw-on-mac-os-x
 title: Setting Up ipfw on Mac OS X
 wordpress_id: 2577
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - BSD
 - Macintosh

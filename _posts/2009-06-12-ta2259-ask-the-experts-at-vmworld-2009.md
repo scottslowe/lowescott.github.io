@@ -6,8 +6,7 @@ layout: post
 slug: ta2259-ask-the-experts-at-vmworld-2009
 title: TA2259 Ask the Experts at VMworld 2009
 wordpress_id: 1394
-categories:
-- Virtualization
+categories: Information
 tags:
 - EMC
 - Virtualization

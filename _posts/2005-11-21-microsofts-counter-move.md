@@ -6,8 +6,7 @@ layout: post
 slug: microsofts-counter-move
 title: Microsoft's Counter-Move
 wordpress_id: 119
-categories:
-- Musing
+categories: Musing
 tags:
 - Microsoft
 - OSS

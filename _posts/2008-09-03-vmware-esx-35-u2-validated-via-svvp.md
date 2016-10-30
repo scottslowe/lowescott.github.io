@@ -6,8 +6,7 @@ layout: post
 slug: vmware-esx-35-u2-validated-via-svvp
 title: VMware ESX 3.5 U2 Validated via SVVP
 wordpress_id: 852
-categories:
-- News
+categories: News
 tags:
 - ESX
 - Microsoft

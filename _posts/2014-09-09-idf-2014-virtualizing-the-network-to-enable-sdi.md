@@ -6,8 +6,7 @@ layout: post
 slug: idf-2014-virtualizing-the-network-to-enable-sdi
 title: 'IDF 2014: Virtualizing the Network to Enable SDI'
 wordpress_id: 3515
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Hardware
 - IDF2014

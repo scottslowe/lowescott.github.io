@@ -6,8 +6,7 @@ layout: post
 slug: joy-in-the-morning
 title: Joy in the Morning?
 wordpress_id: 411
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

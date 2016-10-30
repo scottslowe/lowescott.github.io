@@ -6,8 +6,7 @@ layout: post
 slug: linux-ad-integration-success
 title: Linux-AD Integration Success!
 wordpress_id: 51
-categories:
-- Information
+categories: Information
 tags:
 - Interoperability
 - ActiveDirectory

@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-26 12:01:00-0800
 layout: post
 title: Using Git with GitHub
-categories:
-- Education
+categories: Education
 tags:
 - Git
 - Collaboration

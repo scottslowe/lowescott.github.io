@@ -6,8 +6,7 @@ layout: post
 slug: storage-vmotion-plugin
 title: Storage VMotion Plugin
 wordpress_id: 632
-categories:
-- Virtualization
+categories: News
 tags:
 - Storage
 - Virtualization

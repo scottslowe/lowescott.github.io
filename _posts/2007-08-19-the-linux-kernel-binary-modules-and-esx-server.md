@@ -6,8 +6,7 @@ layout: post
 slug: the-linux-kernel-binary-modules-and-esx-server
 title: The Linux Kernel, Binary Modules, and ESX Server
 wordpress_id: 506
-categories:
-- Musing
+categories: Musing
 tags:
 - ESX
 - Linux

@@ -6,10 +6,10 @@ layout: post
 slug: weblog-moved-to-a-new-host
 title: Weblog Moved to a New Host
 wordpress_id: 275
-categories:
-- General
+categories: General
 tags:
 - Blogging
+- Web
 ---
 
 As of last night, I've moved this weblog to a new host. Now that I'm not running my own business anymore (I went to work for ePlus Technology [a few months ago][1]), it didn't really make sense for me to have all this equipment (including the server that was running this weblog). I couldn't really justify paying for Internet service with a static IP address and hosting all my own equipment at home. In addition, maintaining that equipment and the operating system(s) was starting to become difficult since I was no longer working from home and working at an office instead.

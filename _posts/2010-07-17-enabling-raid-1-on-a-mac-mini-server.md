@@ -6,8 +6,7 @@ layout: post
 slug: enabling-raid-1-on-a-mac-mini-server
 title: Enabling RAID 1 on a Mac Mini Server
 wordpress_id: 1997
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Macintosh
 - Storage

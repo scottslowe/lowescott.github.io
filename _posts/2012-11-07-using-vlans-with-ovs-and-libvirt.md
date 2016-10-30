@@ -6,8 +6,7 @@ layout: post
 slug: using-vlans-with-ovs-and-libvirt
 title: Using VLANs with OVS and libvirt
 wordpress_id: 2934
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Interoperability
 - Libvirt

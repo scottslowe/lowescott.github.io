@@ -6,8 +6,7 @@ layout: post
 slug: macintosh-virtualization-heating-up
 title: Macintosh Virtualization Heating Up
 wordpress_id: 376
-categories:
-- Virtualization
+categories: Musing
 tags:
 - Fusion
 - Macintosh

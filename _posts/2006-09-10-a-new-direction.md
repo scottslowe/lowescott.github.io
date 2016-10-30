@@ -6,8 +6,7 @@ layout: post
 slug: a-new-direction
 title: A New Direction
 wordpress_id: 332
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

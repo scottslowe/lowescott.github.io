@@ -6,8 +6,7 @@ layout: post
 slug: assorted-vmware-tools
 title: Assorted VMware Tools
 wordpress_id: 490
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

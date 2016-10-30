@@ -6,11 +6,9 @@ layout: post
 slug: it-knowledge-exchange
 title: IT Knowledge Exchange
 wordpress_id: 1195
-categories:
-- General
+categories: General
 tags:
 - Blogging
-- General
 - Web
 ---
 

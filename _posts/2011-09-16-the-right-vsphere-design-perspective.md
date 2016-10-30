@@ -6,8 +6,7 @@ layout: post
 slug: the-right-vsphere-design-perspective
 title: The Right vSphere Design Perspective
 wordpress_id: 2421
-categories:
-- Virtualization
+categories: Musing
 tags:
 - VDI
 - Virtualization

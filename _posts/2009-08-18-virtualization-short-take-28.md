@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-28
 title: 'Virtualization Short Take #28'
 wordpress_id: 1537
-categories:
-- Information
+categories: Information
 tags:
 - Cisco
 - Nexus

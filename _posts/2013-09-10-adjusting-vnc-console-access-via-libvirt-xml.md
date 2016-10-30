@@ -6,8 +6,7 @@ layout: post
 slug: adjusting-vnc-console-access-via-libvirt-xml
 title: Adjusting VNC Console Access via Libvirt XML
 wordpress_id: 3276
-categories:
-- Explanation
+categories: Explanation
 tags:
 - CLI
 - KVM

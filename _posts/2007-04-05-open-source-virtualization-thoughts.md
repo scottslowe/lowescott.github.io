@@ -6,8 +6,7 @@ layout: post
 slug: open-source-virtualization-thoughts
 title: Open Source Virtualization Thoughts
 wordpress_id: 436
-categories:
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - OSS

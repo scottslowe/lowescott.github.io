@@ -6,8 +6,7 @@ layout: post
 slug: spousetivities-at-hp-discover-vienna
 title: Spousetivities at HP Discover Vienna
 wordpress_id: 2457
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 - Spousetivities

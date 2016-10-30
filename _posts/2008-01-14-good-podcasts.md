@@ -6,10 +6,10 @@ layout: post
 slug: good-podcasts
 title: Good Podcasts
 wordpress_id: 606
-categories:
-- General
+categories: Musing
 tags:
 - Blogging
+- Podcast
 ---
 
 Up until now, I haven't really messed around with listening to podcasts. I know all about them, what they are, how they work, and all that wonderful jazz. But I typically have not listened to podcasts at all.

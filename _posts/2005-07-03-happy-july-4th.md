@@ -6,8 +6,7 @@ layout: post
 slug: happy-july-4th
 title: Happy July 4th!
 wordpress_id: 32
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

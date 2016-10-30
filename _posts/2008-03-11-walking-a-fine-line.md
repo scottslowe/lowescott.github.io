@@ -6,8 +6,7 @@ layout: post
 slug: walking-a-fine-line
 title: Walking a Fine Line
 wordpress_id: 655
-categories:
-- Musing
+categories: Musing
 tags:
 - Security
 - Storage

@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2009-spouse-activities-faqs-and-updates
 title: VMworld 2009 Spouse Activities FAQs and Updates
 wordpress_id: 1548
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

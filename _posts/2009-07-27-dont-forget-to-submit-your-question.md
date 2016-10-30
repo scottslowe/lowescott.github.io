@@ -6,8 +6,7 @@ layout: post
 slug: dont-forget-to-submit-your-question
 title: Don't Forget to Submit Your Question!
 wordpress_id: 1489
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

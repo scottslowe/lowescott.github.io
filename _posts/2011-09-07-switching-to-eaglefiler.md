@@ -6,8 +6,7 @@ layout: post
 slug: switching-to-eaglefiler
 title: Switching to EagleFiler
 wordpress_id: 2413
-categories:
-- Information
+categories: Information
 tags:
 - Macintosh
 - Personal

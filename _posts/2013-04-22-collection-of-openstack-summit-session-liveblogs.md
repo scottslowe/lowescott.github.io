@@ -6,10 +6,11 @@ layout: post
 slug: collection-of-openstack-summit-session-liveblogs
 title: Collection of OpenStack Summit Session Liveblogs
 wordpress_id: 3158
-categories:
-- General
+categories: Liveblog
 tags:
 - OpenStack
+- Puppet
+- Networking
 ---
 
 I had the pleasure of attending the OpenStack Summit in Portland, OR last week. It was my first time at the OpenStack Summit, and it was great to meet lots of folks in the OpenStack community as well as be exposed to some more in-depth and detailed OpenStack information. While I was there I tried to liveblog as many sessions as I was able; here are links to the various session liveblogs that I managed to publish. Enjoy!
@@ -31,6 +32,7 @@ I had the pleasure of attending the OpenStack Summit in Portland, OR last week. 
 [OpenStack High Availability in Grizzly and Beyond][8]
 
 If anyone has any other liveblog sessions that should be added to this list, drop me a comment and let me know.
+
 
 [1]: {% post_url 2013-04-15-openstack-summit-2013-getting-from-grizzly-to-havana-a-devops-upgrade-pattern %}
 [2]: {% post_url 2013-04-15-openstack-summit-2013-nicira-nvp-deep-dive %}

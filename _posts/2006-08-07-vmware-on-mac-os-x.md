@@ -6,8 +6,7 @@ layout: post
 slug: vmware-on-mac-os-x
 title: VMware on Mac OS X
 wordpress_id: 314
-categories:
-- Virtualization
+categories: Musing
 tags:
 - Apple
 - ESX

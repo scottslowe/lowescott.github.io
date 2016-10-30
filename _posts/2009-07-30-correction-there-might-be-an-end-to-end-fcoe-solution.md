@@ -6,8 +6,7 @@ layout: post
 slug: correction-there-might-be-an-end-to-end-fcoe-solution
 title: 'Correction: There Might be an End-to-End FCoE Solution'
 wordpress_id: 1501
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Cisco
 - FCoE

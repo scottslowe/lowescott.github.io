@@ -6,8 +6,7 @@ layout: post
 slug: brkdct-2081-cisco-fabricpath-technology-and-design
 title: 'BRKDCT-2081: Cisco FabricPath Technology and Design'
 wordpress_id: 2336
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Cisco
 - CiscoLive2011

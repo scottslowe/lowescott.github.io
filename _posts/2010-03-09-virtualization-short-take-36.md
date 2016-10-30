@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-36
 title: 'Virtualization Short Take #36'
 wordpress_id: 1858
-categories:
-- Information
+categories: Information
 tags:
 - NFS
 - Virtualization

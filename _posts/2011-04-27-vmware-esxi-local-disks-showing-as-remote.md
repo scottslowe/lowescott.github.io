@@ -6,8 +6,7 @@ layout: post
 slug: vmware-esxi-local-disks-showing-as-remote
 title: VMware ESXi Local Disks Showing as Remote
 wordpress_id: 2281
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Interoperability
 - Cisco

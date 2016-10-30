@@ -6,8 +6,7 @@ layout: post
 slug: esx-firewall-oddity
 title: ESX Firewall Oddity
 wordpress_id: 333
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Networking

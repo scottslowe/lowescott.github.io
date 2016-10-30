@@ -6,8 +6,7 @@ layout: post
 slug: how-i-build-the-technology-short-takes
 title: How I Build the Technology Short Takes
 wordpress_id: 3071
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Productivity
 - Writing

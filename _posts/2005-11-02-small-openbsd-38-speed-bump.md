@@ -6,8 +6,7 @@ layout: post
 slug: small-openbsd-38-speed-bump
 title: Small OpenBSD 3.8 Speed Bump
 wordpress_id: 110
-categories:
-- Information
+categories: Information
 tags:
 - BSD
 - UNIX

@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-day-0-wrap-up-and-links
 title: VMworld Day 0 Wrap-Up and Links
 wordpress_id: 1573
-categories:
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - EMC

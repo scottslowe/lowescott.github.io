@@ -6,8 +6,7 @@ layout: post
 slug: learning-nsx-part-15-nsx-gateways-gateway-services-and-logical-routers
 title: 'Learning NSX, Part 15: NSX Gateways, Gateway Services, and Logical Routers'
 wordpress_id: 3470
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Networking
 - Neutron

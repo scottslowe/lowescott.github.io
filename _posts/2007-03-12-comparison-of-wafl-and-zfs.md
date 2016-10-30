@@ -6,8 +6,7 @@ layout: post
 slug: comparison-of-wafl-and-zfs
 title: Comparison of WAFL and ZFS
 wordpress_id: 427
-categories:
-- Information
+categories: Information
 tags:
 - NetApp
 - ONTAP

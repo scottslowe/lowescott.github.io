@@ -6,8 +6,7 @@ layout: post
 slug: citrix-announces-xenserver-5
 title: Citrix Announces XenServer 5
 wordpress_id: 896
-categories:
-- News
+categories: News
 tags:
 - Citrix
 - Microsoft

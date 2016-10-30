@@ -6,8 +6,7 @@ layout: post
 slug: configuring-mailapp-and-iphone-with-google-imap
 title: Configuring Mail.app and iPhone with Google IMAP
 wordpress_id: 1139
-categories:
-- Explanation
+categories: Explanation
 tags:
 - iPhone
 - Macintosh

@@ -6,8 +6,7 @@ layout: post
 slug: vsphere-40-quick-start-guide
 title: vSphere 4.0 Quick Start Guide
 wordpress_id: 1756
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

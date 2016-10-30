@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-12-storage-edition
 title: 'Technology Short Take #12: Storage Edition'
 wordpress_id: 2291
-categories:
-- Information
+categories: Information
 tags:
 - CLARiiON
 - EMC

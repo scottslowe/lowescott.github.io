@@ -6,8 +6,7 @@ layout: post
 slug: bookmark-spam
 title: Bookmark Spam?
 wordpress_id: 396
-categories:
-- Rant
+categories: Rant
 tags:
 - Collaboration
 - Web

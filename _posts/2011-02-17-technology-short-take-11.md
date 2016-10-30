@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-11
 title: 'Technology Short Take #11'
 wordpress_id: 2240
-categories:
-- Information
+categories: Information
 tags:
 - Cisco
 - CLARiiON

@@ -6,8 +6,7 @@ layout: post
 slug: vmware-ha-in-action
 title: VMware HA in Action
 wordpress_id: 405
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Virtualization
 - VMware

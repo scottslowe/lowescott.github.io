@@ -6,8 +6,7 @@ layout: post
 slug: open-source-hardware
 title: Open Source Hardware
 wordpress_id: 180
-categories:
-- News
+categories: News
 tags:
 - BSD
 - Hardware

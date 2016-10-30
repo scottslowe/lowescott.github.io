@@ -6,8 +6,7 @@ layout: post
 slug: updated-launchd-property-list-file-for-synergy
 title: Updated launchd Property List File for Synergy
 wordpress_id: 2601
-categories:
-- Information
+categories: Information
 tags:
 - Macintosh
 - OSS

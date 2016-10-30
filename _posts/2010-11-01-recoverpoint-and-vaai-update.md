@@ -6,8 +6,7 @@ layout: post
 slug: recoverpoint-and-vaai-update
 title: RecoverPoint and VAAI Update
 wordpress_id: 2151
-categories:
-- Information
+categories: Information
 tags:
 - EMC
 - Interoperability

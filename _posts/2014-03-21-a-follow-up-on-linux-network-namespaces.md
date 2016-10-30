@@ -6,8 +6,7 @@ layout: post
 slug: a-follow-up-on-linux-network-namespaces
 title: A Follow Up on Linux Network Namespaces
 wordpress_id: 3425
-categories:
-- Explanation
+categories: Explanation
 tags:
 - CLI
 - Linux

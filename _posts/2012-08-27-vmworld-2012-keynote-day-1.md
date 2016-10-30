@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2012-keynote-day-1
 title: VMworld 2012 Keynote, Day 1
 wordpress_id: 2732
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

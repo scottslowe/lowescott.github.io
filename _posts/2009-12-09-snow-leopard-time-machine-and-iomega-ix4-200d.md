@@ -6,8 +6,7 @@ layout: post
 slug: snow-leopard-time-machine-and-iomega-ix4-200d
 title: Snow Leopard, Time Machine, and Iomega ix4-200d
 wordpress_id: 1766
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Backup
 - EMC

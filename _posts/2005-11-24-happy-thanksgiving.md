@@ -6,10 +6,10 @@ layout: post
 slug: happy-thanksgiving
 title: Happy Thanksgiving!
 wordpress_id: 122
-categories:
-- Personal
+categories: General
 tags:
 - Christianity
+- Personal
 ---
 
 For those of you that celebrate the holiday, I'd like to wish you a very happy Thanksgiving. May the Lord richly bless you in the coming year!

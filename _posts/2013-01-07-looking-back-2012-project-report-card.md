@@ -6,8 +6,7 @@ layout: post
 slug: looking-back-2012-project-report-card
 title: 'Looking Back: 2012 Project Report Card'
 wordpress_id: 3043
-categories:
-- Personal
+categories: Personal
 tags:
 - Certification
 - Cisco

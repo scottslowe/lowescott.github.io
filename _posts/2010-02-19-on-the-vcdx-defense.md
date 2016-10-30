@@ -6,8 +6,7 @@ layout: post
 slug: on-the-vcdx-defense
 title: On the VCDX Defense
 wordpress_id: 1846
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Virtualization
 - VMware

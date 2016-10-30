@@ -6,8 +6,7 @@ layout: post
 slug: some-useful-unix-commands-on-your-mac
 title: Some Useful UNIX Commands on your Mac
 wordpress_id: 2358
-categories:
-- Information
+categories: Information
 tags:
 - CLI
 - Macintosh

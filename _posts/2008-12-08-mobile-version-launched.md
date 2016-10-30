@@ -6,10 +6,8 @@ layout: post
 slug: mobile-version-launched
 title: Mobile Version Launched!
 wordpress_id: 1087
-categories:
-- General
+categories: General
 tags:
-- General
 - iPhone
 - Web
 ---

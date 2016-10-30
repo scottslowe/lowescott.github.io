@@ -6,8 +6,7 @@ layout: post
 slug: openstack-summit-2013-building-ha-openstack-with-puppet-in-20-minutes
 title: 'OpenStack Summit 2013: Building HA OpenStack with Puppet in 20 Minutes'
 wordpress_id: 3138
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Automation
 - OpenStack

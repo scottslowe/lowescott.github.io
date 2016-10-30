@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-20 10:02:00-0700
 layout: post
 title: Enabling and Mounting NFS on CoreOS
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Linux
 - CLI

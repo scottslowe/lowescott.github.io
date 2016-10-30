@@ -6,8 +6,7 @@ layout: post
 slug: a-bit-harsh-dont-you-think
 title: A Bit Harsh, Don't You Think?
 wordpress_id: 1774
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Citrix
 - Virtualization

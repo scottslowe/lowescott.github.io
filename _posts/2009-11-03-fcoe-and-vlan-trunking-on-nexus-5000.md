@@ -6,8 +6,7 @@ layout: post
 slug: fcoe-and-vlan-trunking-on-nexus-5000
 title: FCoE and VLAN Trunking on Nexus 5000
 wordpress_id: 1722
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Cisco
 - FCoE

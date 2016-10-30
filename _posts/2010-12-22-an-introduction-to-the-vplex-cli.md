@@ -6,8 +6,7 @@ layout: post
 slug: an-introduction-to-the-vplex-cli
 title: An Introduction to the VPLEX CLI
 wordpress_id: 2194
-categories:
-- Education
+categories: Education
 tags:
 - CLI
 - EMC

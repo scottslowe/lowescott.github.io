@@ -6,8 +6,7 @@ layout: post
 slug: hyper9-virtualization-mobile-manager-beta-invitations
 title: Hyper9 Virtualization Mobile Manager Beta Invitations
 wordpress_id: 1365
-categories:
-- Virtualization
+categories: Information
 tags:
 - Citrix
 - ESX

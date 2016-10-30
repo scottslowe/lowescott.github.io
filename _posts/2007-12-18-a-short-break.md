@@ -6,8 +6,7 @@ layout: post
 slug: a-short-break
 title: A Short Break
 wordpress_id: 593
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Personal

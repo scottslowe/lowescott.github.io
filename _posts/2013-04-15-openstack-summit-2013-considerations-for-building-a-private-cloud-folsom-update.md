@@ -7,8 +7,7 @@ slug: openstack-summit-2013-considerations-for-building-a-private-cloud-folsom-u
 title: 'OpenStack Summit 2013: Considerations for Building a Private Cloud, Folsom
   Update'
 wordpress_id: 3136
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - OpenStack
 ---

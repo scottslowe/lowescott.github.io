@@ -6,8 +6,7 @@ layout: post
 slug: various-vmware-links
 title: Various VMware Links
 wordpress_id: 431
-categories:
-- Virtualization
+categories: Information
 tags:
 - Backup
 - ESX

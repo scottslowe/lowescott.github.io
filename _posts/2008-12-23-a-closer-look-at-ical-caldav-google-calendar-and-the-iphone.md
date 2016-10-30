@@ -6,8 +6,7 @@ layout: post
 slug: a-closer-look-at-ical-caldav-google-calendar-and-the-iphone
 title: A Closer Look at iCal, CalDAV, Google Calendar, and the iPhone
 wordpress_id: 1109
-categories:
-- Explanation
+categories: Explanation
 tags:
 - iPhone
 - Macintosh

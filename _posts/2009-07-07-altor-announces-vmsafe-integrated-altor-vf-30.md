@@ -6,8 +6,7 @@ layout: post
 slug: altor-announces-vmsafe-integrated-altor-vf-30
 title: Altor Announces VMsafe-Integrated Altor VF 3.0
 wordpress_id: 1448
-categories:
-- News
+categories: News
 tags:
 - Security
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: hyper9-beta-invitations
 title: Hyper9 Beta Invitations
 wordpress_id: 999
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

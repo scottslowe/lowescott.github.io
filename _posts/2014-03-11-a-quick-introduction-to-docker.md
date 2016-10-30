@@ -6,8 +6,7 @@ layout: post
 slug: a-quick-introduction-to-docker
 title: A Quick Introduction to Docker
 wordpress_id: 3418
-categories:
-- Education
+categories: Education
 tags:
 - Docker
 - Linux

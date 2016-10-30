@@ -6,8 +6,7 @@ layout: post
 slug: brkcom-3002-network-redundancy-and-load-balancing-designs-for-ucs-blade-servers
 title: 'BRKCOM-3002: Network Redundancy and Load Balancing Designs for UCS Blade Servers'
 wordpress_id: 2334
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Cisco
 - CiscoLive2011

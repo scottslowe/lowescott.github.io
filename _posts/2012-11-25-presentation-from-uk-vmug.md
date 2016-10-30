@@ -6,8 +6,7 @@ layout: post
 slug: presentation-from-uk-vmug
 title: Presentation from UK VMUG
 wordpress_id: 2964
-categories:
-- Information
+categories: Presentation
 tags:
 - Collaboration
 - Virtualization

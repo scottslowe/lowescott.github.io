@@ -6,9 +6,9 @@ layout: post
 slug: hidden-vaai-command
 title: Hidden VAAI Command
 wordpress_id: 2429
-categories:
-- Virtualization
+categories: Explanation
 tags:
+- Storage
 - Virtualization
 - VMware
 - vSphere

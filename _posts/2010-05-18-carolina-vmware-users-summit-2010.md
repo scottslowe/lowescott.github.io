@@ -6,8 +6,7 @@ layout: post
 slug: carolina-vmware-users-summit-2010
 title: Carolina VMware Users Summit 2010
 wordpress_id: 1950
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

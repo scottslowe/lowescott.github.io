@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-32
 title: 'Technology Short Take #32'
 wordpress_id: 3171
-categories:
-- Information
+categories: Information
 tags:
 - Hardware
 - iSCSI

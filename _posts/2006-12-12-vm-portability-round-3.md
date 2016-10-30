@@ -6,8 +6,7 @@ layout: post
 slug: vm-portability-round-3
 title: VM Portability, Round 3
 wordpress_id: 383
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Interoperability

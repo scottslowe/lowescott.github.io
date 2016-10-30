@@ -6,11 +6,10 @@ layout: post
 slug: iphone-irony
 title: iPhone Irony
 wordpress_id: 1048
-categories:
-- Rant
+categories: Rant
 tags:
 - Apple
-- General
+- Web
 - iPhone
 ---
 

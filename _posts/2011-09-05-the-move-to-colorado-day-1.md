@@ -6,10 +6,10 @@ layout: post
 slug: the-move-to-colorado-day-1
 title: 'The Move to Colorado: Day 1'
 wordpress_id: 2393
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
+- Travel
 ---
 
 **The move to Colorado has begun.** I'm typing this from a hotel in Nashville, TN, where we wrapped up our day 1 travel just a short while ago. We'll be here only one night, leaving in the morning to get to Kansas City for our second night.

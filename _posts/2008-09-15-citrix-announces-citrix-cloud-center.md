@@ -6,8 +6,7 @@ layout: post
 slug: citrix-announces-citrix-cloud-center
 title: Citrix Announces Citrix Cloud Center
 wordpress_id: 897
-categories:
-- Virtualization
+categories: News
 tags:
 - Citrix
 - Virtualization

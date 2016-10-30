@@ -6,8 +6,7 @@ layout: post
 slug: other-vmworld-2008-resources
 title: Other VMworld 2008 Resources
 wordpress_id: 911
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

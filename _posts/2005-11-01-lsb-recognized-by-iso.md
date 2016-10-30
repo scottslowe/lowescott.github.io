@@ -6,8 +6,7 @@ layout: post
 slug: lsb-recognized-by-iso
 title: LSB Recognized by ISO
 wordpress_id: 109
-categories:
-- News
+categories: News
 tags:
 - Linux
 - Standards

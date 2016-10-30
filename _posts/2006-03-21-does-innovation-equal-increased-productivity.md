@@ -6,8 +6,7 @@ layout: post
 slug: does-innovation-equal-increased-productivity
 title: Does Innovation Equal Increased Productivity?
 wordpress_id: 206
-categories:
-- Rant
+categories: Rant
 tags:
 - Microsoft
 - Office

@@ -6,8 +6,7 @@ layout: post
 slug: a-testimony-of-love
 title: A Testimony of Love
 wordpress_id: 804
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

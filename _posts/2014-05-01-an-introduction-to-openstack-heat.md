@@ -6,8 +6,7 @@ layout: post
 slug: an-introduction-to-openstack-heat
 title: An Introduction to OpenStack Heat
 wordpress_id: 3446
-categories:
-- Education
+categories: Education
 tags:
 - Automation
 - JSON

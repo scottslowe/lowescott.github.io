@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-06
 layout: post
 title: The Story Behind the Migration
-categories:
-- General
+categories: General
 tags:
 - Writing
 - Blogging

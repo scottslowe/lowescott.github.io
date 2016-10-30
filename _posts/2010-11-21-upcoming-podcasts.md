@@ -6,8 +6,7 @@ layout: post
 slug: upcoming-podcasts
 title: Upcoming Podcasts
 wordpress_id: 2161
-categories:
-- Information
+categories: Information
 tags:
 - Networking
 - Virtualization

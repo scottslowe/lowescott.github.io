@@ -6,8 +6,7 @@ layout: post
 slug: openbsd-41-on-esx-server-301
 title: OpenBSD 4.1 on ESX Server 3.0.1
 wordpress_id: 459
-categories:
-- Explanation
+categories: Explanation
 tags:
 - BSD
 - ESX

@@ -6,8 +6,7 @@ layout: post
 slug: ok-this-is-funny
 title: OK, This is Funny
 wordpress_id: 822
-categories:
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - ESXi

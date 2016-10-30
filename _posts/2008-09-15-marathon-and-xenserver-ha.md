@@ -6,8 +6,7 @@ layout: post
 slug: marathon-and-xenserver-ha
 title: Marathon and XenServer HA
 wordpress_id: 898
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Citrix
 - Virtualization

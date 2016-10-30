@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2014-day-1-keynote
 title: VMworld 2014 Day 1 Keynote
 wordpress_id: 3505
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

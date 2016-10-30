@@ -6,12 +6,10 @@ layout: post
 slug: my-milestone-moment
 title: My Milestone Moment
 wordpress_id: 1908
-categories:
-- General
-- Personal
+categories: Personal
 tags:
 - EMC
-- Personal
+- Career
 ---
 
 In [a recent post](http://www.pollypearson.com/main/2010/04/day-in-the-life-of-employment-branding.html) over on her site, fellow EMC'er Polly Pearson asked this question: in your day today, did you do what you hoped to be doing when you had that "milestone moment" as a kid?

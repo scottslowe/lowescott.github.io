@@ -6,8 +6,7 @@ layout: post
 slug: hytrust-appliance-community-edition
 title: HyTrust Appliance Community Edition
 wordpress_id: 1317
-categories:
-- News
+categories: News
 tags:
 - ESX
 - Security

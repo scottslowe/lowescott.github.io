@@ -6,8 +6,7 @@ layout: post
 slug: formatting-rtfs-with-textsoap
 title: Formatting RTFs with TextSoap
 wordpress_id: 2446
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Collaboration
 - Macintosh

@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-15
 title: 'Technology Short Take #15'
 wordpress_id: 2434
-categories:
-- Information
+categories: Information
 tags:
 - FCoE
 - LISP

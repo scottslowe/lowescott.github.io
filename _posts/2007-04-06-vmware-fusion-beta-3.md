@@ -6,8 +6,7 @@ layout: post
 slug: vmware-fusion-beta-3
 title: VMware Fusion Beta 3
 wordpress_id: 438
-categories:
-- News
+categories: News
 tags:
 - Apple
 - Fusion

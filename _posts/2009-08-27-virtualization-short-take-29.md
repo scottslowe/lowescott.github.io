@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-29
 title: 'Virtualization Short Take #29'
 wordpress_id: 1569
-categories:
-- Information
+categories: Information
 tags:
 - EMC
 - iSCSI

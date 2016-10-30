@@ -6,11 +6,10 @@ layout: post
 slug: no-man-is-an-island
 title: No Man is an Island
 wordpress_id: 3382
-categories:
-- Rant
+categories: Rant
 tags:
 - Collaboration
-- General
+- Career
 - Personal
 - Writing
 ---

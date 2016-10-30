@@ -6,8 +6,7 @@ layout: post
 slug: error-connecting-to-vm-console
 title: Error Connecting to VM Console
 wordpress_id: 508
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Networking

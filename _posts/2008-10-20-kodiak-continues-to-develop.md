@@ -6,8 +6,7 @@ layout: post
 slug: kodiak-continues-to-develop
 title: Kodiak Continues to Develop
 wordpress_id: 993
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 ---

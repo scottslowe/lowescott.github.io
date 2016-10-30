@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-14
 title: 'Technology Short Take #14'
 wordpress_id: 2415
-categories:
-- Information
+categories: Information
 tags:
 - FCoE
 - Networking

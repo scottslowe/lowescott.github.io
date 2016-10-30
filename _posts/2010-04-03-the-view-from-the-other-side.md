@@ -6,13 +6,13 @@ layout: post
 slug: the-view-from-the-other-side
 title: The View from the Other Side
 wordpress_id: 1872
-categories:
-- Virtualization
+categories: Rant
 tags:
 - UCS
 - Virtualization
 - VMware
 - vSphere
+- Hardware
 ---
 
 Steve Chambers at ViewYonder recently published an article [countering the common "all my eggs in one basket" argument](http://viewyonder.com/2010/03/28/dont-be-a-chicken-cram-your-eggs-into-vsphere-on-ucs/) that is so frequently used as an argument against virtualization. Apparently, a comment in my [Virtualization Short Take #37][1] post led him to believe that I am not, in his words, "fully on board yet". So, I thought it might be helpful to discuss the view from the other side---from the perspective of those who aren't "fully on board yet".

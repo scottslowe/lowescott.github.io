@@ -6,8 +6,7 @@ layout: post
 slug: my-vmworld-schedule
 title: My VMworld Schedule
 wordpress_id: 514
-categories:
-- Virtualization
+categories: Information
 tags:
 - Travel
 - Virtualization

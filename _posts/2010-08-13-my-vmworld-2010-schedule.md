@@ -6,8 +6,7 @@ layout: post
 slug: my-vmworld-2010-schedule
 title: My VMworld 2010 Schedule
 wordpress_id: 2013
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

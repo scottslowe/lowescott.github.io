@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-ovs-and-the-enterprise
 title: 'Thinking Out Loud: OVS and the Enterprise'
 wordpress_id: 2889
-categories:
-- Musing
+categories: Musing
 tags:
 - Linux
 - Networking

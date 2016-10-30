@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-8
 title: 'Technology Short Take #8'
 wordpress_id: 2182
-categories:
-- Information
+categories: Information
 tags:
 - Cisco
 - EMC

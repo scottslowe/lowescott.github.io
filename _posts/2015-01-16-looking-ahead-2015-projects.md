@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-16 11:05:00-0800
 layout: post
 title: 'Looking Ahead: My 2015 Projects'
-categories:
-- Personal
+categories: Personal
 tags:
 - OpenStack
 - OSS

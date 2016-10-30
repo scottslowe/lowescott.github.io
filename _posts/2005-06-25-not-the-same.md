@@ -6,8 +6,7 @@ layout: post
 slug: not-the-same
 title: Not the Same
 wordpress_id: 23
-categories:
-- Rant
+categories: Rant
 tags:
 - BSD
 - Linux

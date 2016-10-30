@@ -6,10 +6,10 @@ layout: post
 slug: looking-back-looking-forward
 title: Looking Back, Looking Forward
 wordpress_id: 2201
-categories:
-- General
+categories: General
 tags:
 - Blogging
+- Writing
 ---
 
 Everyone else is doing it, so I figured I might as well also: publish something about how the site fared during 2010. I'm going to do that, yes, but I'm also going to talk a little bit about my commitments to the site (and to the readers) for 2011.

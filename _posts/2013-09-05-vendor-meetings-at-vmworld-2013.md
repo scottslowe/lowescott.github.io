@@ -6,8 +6,7 @@ layout: post
 slug: vendor-meetings-at-vmworld-2013
 title: Vendor Meetings at VMworld 2013
 wordpress_id: 3269
-categories:
-- General
+categories: Information
 tags:
 - Encryption
 - FCoE

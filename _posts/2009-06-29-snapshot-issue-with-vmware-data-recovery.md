@@ -6,8 +6,7 @@ layout: post
 slug: snapshot-issue-with-vmware-data-recovery
 title: Snapshot Issue with VMware Data Recovery
 wordpress_id: 1427
-categories:
-- Virtualization
+categories: Information
 tags:
 - Backup
 - Snapshot

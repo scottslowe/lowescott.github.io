@@ -6,8 +6,7 @@ layout: post
 slug: clds001-odca-and-usage-models-for-cloud-computing
 title: 'CLDS001: ODCA and Usage Models for Cloud Computing'
 wordpress_id: 2847
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - IDF2012
 - Intel

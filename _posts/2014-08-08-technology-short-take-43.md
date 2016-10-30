@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-43
 title: 'Technology Short Take #43'
 wordpress_id: 3484
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - BSD

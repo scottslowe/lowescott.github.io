@@ -6,8 +6,7 @@ layout: post
 slug: rebuilding-my-rss-subscriptions
 title: Rebuilding My RSS Subscriptions
 wordpress_id: 202
-categories:
-- General
+categories: Rant
 tags:
 - Blogging
 - Web

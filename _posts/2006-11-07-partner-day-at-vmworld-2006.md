@@ -6,8 +6,7 @@ layout: post
 slug: partner-day-at-vmworld-2006
 title: Partner Day at VMworld 2006
 wordpress_id: 354
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

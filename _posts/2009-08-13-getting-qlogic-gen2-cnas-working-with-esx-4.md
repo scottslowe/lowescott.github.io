@@ -6,8 +6,7 @@ layout: post
 slug: getting-qlogic-gen2-cnas-working-with-esx-4
 title: Getting QLogic Gen2 CNAs Working with ESX 4
 wordpress_id: 1525
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Cisco
 - FCoE

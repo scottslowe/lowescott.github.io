@@ -6,10 +6,10 @@ layout: post
 slug: comment-spam
 title: Comment Spam
 wordpress_id: 256
-categories:
-- General
+categories: General
 tags:
 - Blogging
+- WordPress
 ---
 
 The level of comment spam I've been receiving over the last few days has suddenly skyrocketed (as in approximately 200 spam comments in just a couple of days). It was time to do something.

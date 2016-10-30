@@ -6,8 +6,7 @@ layout: post
 slug: hyper-v-update-released
 title: Hyper-V Update Released
 wordpress_id: 951
-categories:
-- News
+categories: News
 tags:
 - Hardware
 - HyperV

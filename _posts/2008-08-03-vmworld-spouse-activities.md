@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-spouse-activities
 title: VMworld Spouse Activities
 wordpress_id: 783
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: more-hyper9-beta-invitations-available
 title: More Hyper9 Beta Invitations Available
 wordpress_id: 1079
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Virtualization

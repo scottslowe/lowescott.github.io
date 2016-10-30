@@ -6,10 +6,10 @@ layout: post
 slug: trying-a-new-linux-distribution
 title: Trying a New Linux Distribution
 wordpress_id: 49
-categories:
-- Information
+categories: Information
 tags:
 - Linux
+- CentOS
 ---
 
 I'm not a Linux expert, so I haven't really spent a great deal of time wandering the various Linux distributions to see which one(s) I really like. I have been primarily using Red Hat Linux 9.0 (RH9), even though it's an older distribution with an older kernel that is no longer supported. I tried the Fedora Core distributions, but just kept coming back to trusty old RH9.

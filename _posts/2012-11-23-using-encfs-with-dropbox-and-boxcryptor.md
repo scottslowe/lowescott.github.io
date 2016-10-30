@@ -6,8 +6,7 @@ layout: post
 slug: using-encfs-with-dropbox-and-boxcryptor
 title: Using EncFS with Dropbox and BoxCryptor
 wordpress_id: 2952
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Encryption
 - Macintosh

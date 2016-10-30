@@ -6,8 +6,7 @@ layout: post
 slug: a-quick-thought-regarding-cloud-computing
 title: A Quick Thought Regarding Cloud Computing
 wordpress_id: 1132
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Standards
 - Virtualization

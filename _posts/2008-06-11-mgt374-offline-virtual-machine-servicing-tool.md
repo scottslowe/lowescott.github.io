@@ -6,8 +6,7 @@ layout: post
 slug: mgt374-offline-virtual-machine-servicing-tool
 title: 'MGT374: Offline Virtual Machine Servicing Tool'
 wordpress_id: 736
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - HyperV
 - Microsoft

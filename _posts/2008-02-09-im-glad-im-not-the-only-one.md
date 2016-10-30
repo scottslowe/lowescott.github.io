@@ -6,8 +6,7 @@ layout: post
 slug: im-glad-im-not-the-only-one
 title: I'm Glad I'm Not The Only One
 wordpress_id: 629
-categories:
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Virtualization

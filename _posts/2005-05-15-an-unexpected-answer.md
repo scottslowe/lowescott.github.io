@@ -6,8 +6,7 @@ layout: post
 slug: an-unexpected-answer
 title: An Unexpected Answer
 wordpress_id: 7
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

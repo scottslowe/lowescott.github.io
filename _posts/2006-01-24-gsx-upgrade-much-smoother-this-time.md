@@ -6,8 +6,7 @@ layout: post
 slug: gsx-upgrade-much-smoother-this-time
 title: GSX Upgrade Much Smoother This Time
 wordpress_id: 166
-categories:
-- Virtualization
+categories: Information
 tags:
 - CentOS
 - Linux

@@ -6,8 +6,7 @@ layout: post
 slug: vmware-weak-spot
 title: VMware Weak Spot
 wordpress_id: 213
-categories:
-- Rant
+categories: Rant
 tags:
 - Apple
 - ESX

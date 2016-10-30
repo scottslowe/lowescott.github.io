@@ -6,12 +6,12 @@ layout: post
 slug: vmware-vcloud-event-with-paul-maritz
 title: VMware vCloud Event with Paul Maritz
 wordpress_id: 1605
-categories:
-- Virtualization
+categories: Liveblog
 tags:
 - Virtualization
 - VMware
 - VMworld2009
+- vCloud
 ---
 
 This special event with Paul Maritz around VMware's vCloud initiative took place back in the same general hall as the morning keynote. The subject of this special meeting is VMware's cloud offerings.

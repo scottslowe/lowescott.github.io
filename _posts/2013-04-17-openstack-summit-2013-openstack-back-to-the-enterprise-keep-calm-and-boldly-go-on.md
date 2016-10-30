@@ -7,8 +7,7 @@ slug: openstack-summit-2013-openstack-back-to-the-enterprise-keep-calm-and-boldl
 title: 'OpenStack Summit 2013: OpenStack Back to the Enterprise, Keep Calm and Boldly
   Go On'
 wordpress_id: 3151
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - HP
 - OpenStack

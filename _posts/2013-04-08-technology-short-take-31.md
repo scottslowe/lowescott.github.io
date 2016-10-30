@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-31
 title: 'Technology Short Take #31'
 wordpress_id: 3129
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - iSCSI

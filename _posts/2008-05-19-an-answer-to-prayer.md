@@ -6,8 +6,7 @@ layout: post
 slug: an-answer-to-prayer
 title: An Answer to Prayer
 wordpress_id: 710
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

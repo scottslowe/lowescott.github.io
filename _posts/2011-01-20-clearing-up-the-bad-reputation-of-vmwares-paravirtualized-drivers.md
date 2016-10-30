@@ -6,8 +6,7 @@ layout: post
 slug: clearing-up-the-bad-reputation-of-vmwares-paravirtualized-drivers
 title: Clearing Up the Bad Reputation of VMware's Paravirtualized Drivers
 wordpress_id: 2222
-categories:
-- Virtualization
+categories: Information
 tags:
 - Networking
 - Storage

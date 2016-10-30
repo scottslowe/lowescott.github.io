@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-the-future-of-vlans
 title: 'Thinking Out Loud: The Future of VLANs'
 wordpress_id: 3219
-categories:
-- Musing
+categories: Musing
 tags:
 - Networking
 - Virtualization

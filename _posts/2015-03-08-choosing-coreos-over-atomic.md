@@ -4,8 +4,7 @@ comments: true
 date: 2015-03-08 16:00:00-0700
 layout: post
 title: Choosing CoreOS over Project Atomic
-categories:
-- Information
+categories: Information
 tags:
 - Linux
 - Docker

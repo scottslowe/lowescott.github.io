@@ -6,8 +6,7 @@ layout: post
 slug: esx-iscsi-basic-configuration-from-the-cli
 title: ESX iSCSI Basic Configuration from the CLI
 wordpress_id: 481
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - ESX
 - Interoperability

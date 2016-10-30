@@ -6,8 +6,7 @@ layout: post
 slug: some-notes-on-solaris-ad-integration
 title: Some Notes on Solaris-AD Integration
 wordpress_id: 585
-categories:
-- Information
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

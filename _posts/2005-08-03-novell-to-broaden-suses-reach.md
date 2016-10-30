@@ -6,8 +6,7 @@ layout: post
 slug: novell-to-broaden-suses-reach
 title: Novell to Broaden SuSE's Reach
 wordpress_id: 64
-categories:
-- News
+categories: News
 tags:
 - Linux
 - Novell

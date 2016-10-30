@@ -6,8 +6,7 @@ layout: post
 slug: wordpress-upgrade
 title: WordPress Upgrade
 wordpress_id: 423
-categories:
-- General
+categories: General
 tags:
 - Web
 - WordPress

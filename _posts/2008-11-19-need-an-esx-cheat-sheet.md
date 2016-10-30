@@ -6,8 +6,7 @@ layout: post
 slug: need-an-esx-cheat-sheet
 title: Need an ESX Cheat Sheet?
 wordpress_id: 1032
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Virtualization

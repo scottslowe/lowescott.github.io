@@ -6,8 +6,7 @@ layout: post
 slug: installing-the-docker-plugin-for-heat
 title: Installing the Docker Plugin for Heat
 wordpress_id: 3480
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Automation
 - Docker

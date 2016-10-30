@@ -6,8 +6,7 @@ layout: post
 slug: automatically-connecting-lxc-to-open-vswitch
 title: Automatically Connecting LXC to Open vSwitch
 wordpress_id: 3398
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Linux
 - LXC

@@ -6,8 +6,7 @@ layout: post
 slug: vmware-vsphere-pro-video-training
 title: VMware vSphere Pro Video Training
 wordpress_id: 1838
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

@@ -6,9 +6,7 @@ layout: post
 slug: happy-thanksgiving-3
 title: Happy Thanksgiving!
 wordpress_id: 1046
-categories:
-- General
-- Personal
+categories: General
 tags:
 - Personal
 ---

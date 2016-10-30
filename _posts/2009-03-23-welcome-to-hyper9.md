@@ -6,12 +6,9 @@ layout: post
 slug: welcome-to-hyper9
 title: Welcome to Hyper9!
 wordpress_id: 1249
-categories:
-- General
-- Virtualization
+categories: General
 tags:
 - Blogging
-- General
 - Virtualization
 - Web
 ---

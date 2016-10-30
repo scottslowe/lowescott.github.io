@@ -6,8 +6,7 @@ layout: post
 slug: e-mail-subscriptions-now-available
 title: E-Mail Subscriptions Now Available
 wordpress_id: 650
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Messaging

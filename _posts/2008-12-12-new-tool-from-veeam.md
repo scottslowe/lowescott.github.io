@@ -6,8 +6,7 @@ layout: post
 slug: new-tool-from-veeam
 title: New Tool from Veeam?
 wordpress_id: 1093
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

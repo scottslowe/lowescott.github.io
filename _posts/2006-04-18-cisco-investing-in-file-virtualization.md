@@ -6,8 +6,7 @@ layout: post
 slug: cisco-investing-in-file-virtualization
 title: Cisco Investing in File Virtualization
 wordpress_id: 228
-categories:
-- News
+categories: News
 tags:
 - Cisco
 - Networking

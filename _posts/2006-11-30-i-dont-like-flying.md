@@ -6,8 +6,7 @@ layout: post
 slug: i-dont-like-flying
 title: I Don't Like Flying
 wordpress_id: 375
-categories:
-- Rant
+categories: Rant
 tags:
 - Personal
 - Travel

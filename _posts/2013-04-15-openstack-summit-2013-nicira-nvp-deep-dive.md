@@ -6,8 +6,7 @@ layout: post
 slug: openstack-summit-2013-nicira-nvp-deep-dive
 title: 'OpenStack Summit 2013: Nicira NVP Deep Dive'
 wordpress_id: 3134
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Networking
 - OpenStack

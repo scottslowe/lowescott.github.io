@@ -6,8 +6,7 @@ layout: post
 slug: my-rss-subscriptions
 title: My RSS Subscriptions
 wordpress_id: 171
-categories:
-- General
+categories: Information
 tags:
 - Blogging
 - Web

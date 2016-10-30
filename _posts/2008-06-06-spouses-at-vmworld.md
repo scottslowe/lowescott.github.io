@@ -6,8 +6,7 @@ layout: post
 slug: spouses-at-vmworld
 title: Spouses at VMworld
 wordpress_id: 724
-categories:
-- Virtualization
+categories: Information
 tags:
 - Travel
 - Virtualization

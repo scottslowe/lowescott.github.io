@@ -6,8 +6,7 @@ layout: post
 slug: new-bsd-magazine
 title: New BSD Magazine
 wordpress_id: 701
-categories:
-- News
+categories: News
 tags:
 - BSD
 - UNIX

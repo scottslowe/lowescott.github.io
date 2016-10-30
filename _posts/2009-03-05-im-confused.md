@@ -6,8 +6,7 @@ layout: post
 slug: im-confused
 title: I'm Confused
 wordpress_id: 1218
-categories:
-- Rant
+categories: Rant
 tags:
 - Microsoft
 - Windows

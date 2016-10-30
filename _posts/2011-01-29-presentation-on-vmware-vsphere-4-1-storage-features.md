@@ -6,8 +6,7 @@ layout: post
 slug: presentation-on-vmware-vsphere-4-1-storage-features
 title: Presentation on VMware vSphere 4.1 Storage Features
 wordpress_id: 2231
-categories:
-- Information
+categories: Presentation
 tags:
 - Storage
 - Virtualization

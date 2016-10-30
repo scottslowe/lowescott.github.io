@@ -6,8 +6,7 @@ layout: post
 slug: vmware-vsphere-4-administration-instant-reference-now-available
 title: VMware vSphere 4 Administration Instant Reference Now Available
 wordpress_id: 1764
-categories:
-- News
+categories: News
 tags:
 - Virtualization
 - VMware

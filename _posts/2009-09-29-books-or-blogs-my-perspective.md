@@ -6,11 +6,11 @@ layout: post
 slug: books-or-blogs-my-perspective
 title: 'Books or Blogs: My Perspective'
 wordpress_id: 1672
-categories:
-- General
+categories: Rant
 tags:
 - Personal
 - Writing
+- Blogging
 ---
 
 A short while ago, I came across [this article](http://www.jeremyfilliben.com/2009/09/technical-writing-books-or-blogs.html) (I believe it was in a tweet posted by co-worker and fellow blogger [Colin McNamara](http://www.colinmcnamara.com/)). In the article, the author asks this question: For technical folks interested in writing, what's the best approach---books or blogs?

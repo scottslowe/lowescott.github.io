@@ -6,8 +6,7 @@ layout: post
 slug: linux-on-laptops
 title: Linux on Laptops
 wordpress_id: 98
-categories:
-- Musing
+categories: Musing
 tags:
 - Linux
 ---

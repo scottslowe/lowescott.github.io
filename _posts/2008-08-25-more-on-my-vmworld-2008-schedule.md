@@ -6,8 +6,7 @@ layout: post
 slug: more-on-my-vmworld-2008-schedule
 title: More on my VMworld 2008 Schedule
 wordpress_id: 839
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

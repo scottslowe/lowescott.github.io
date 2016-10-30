@@ -6,8 +6,7 @@ layout: post
 slug: vmware-this-is-wrong
 title: VMware, This is Wrong
 wordpress_id: 1377
-categories:
-- Rant
+categories: Rant
 tags:
 - Cisco
 - EMC

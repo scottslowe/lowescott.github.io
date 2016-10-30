@@ -6,8 +6,7 @@ layout: post
 slug: weirdness-with-virtual-ethernet-interfaces-on-ubuntu
 title: Weirdness with Virtual Ethernet Interfaces on Ubuntu
 wordpress_id: 3373
-categories:
-- Rant
+categories: Rant
 tags:
 - CLI
 - Linux

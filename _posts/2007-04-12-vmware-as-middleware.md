@@ -6,8 +6,7 @@ layout: post
 slug: vmware-as-middleware
 title: VMware as Middleware
 wordpress_id: 440
-categories:
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Hardware

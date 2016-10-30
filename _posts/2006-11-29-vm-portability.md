@@ -6,8 +6,7 @@ layout: post
 slug: vm-portability
 title: VM Portability
 wordpress_id: 373
-categories:
-- Virtualization
+categories: Information
 tags:
 - Macintosh
 - Virtualization

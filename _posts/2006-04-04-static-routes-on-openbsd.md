@@ -6,8 +6,7 @@ layout: post
 slug: static-routes-on-openbsd
 title: Static Routes on OpenBSD
 wordpress_id: 220
-categories:
-- Explanation
+categories: Explanation
 tags:
 - UNIX
 - BSD

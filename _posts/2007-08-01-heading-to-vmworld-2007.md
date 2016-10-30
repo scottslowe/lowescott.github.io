@@ -6,8 +6,7 @@ layout: post
 slug: heading-to-vmworld-2007
 title: Heading to VMworld 2007!
 wordpress_id: 498
-categories:
-- Virtualization
+categories: Information
 tags:
 - Travel
 - Virtualization

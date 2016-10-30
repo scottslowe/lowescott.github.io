@@ -6,8 +6,7 @@ layout: post
 slug: dst-changes-and-esx-server
 title: DST Changes and ESX Server
 wordpress_id: 408
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Virtualization

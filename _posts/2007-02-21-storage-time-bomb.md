@@ -6,8 +6,7 @@ layout: post
 slug: storage-time-bomb
 title: Storage Time Bomb?
 wordpress_id: 417
-categories:
-- Virtualization
+categories: Rant
 tags:
 - SAN
 - Security

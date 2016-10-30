@@ -6,8 +6,7 @@ layout: post
 slug: modifying-qcow-images-with-guestfish
 title: Modifying QCOW Images with Guestfish
 wordpress_id: 3423
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CLI
 - Linux

@@ -6,8 +6,7 @@ layout: post
 slug: whats-this-all-about-anyway
 title: What's This All About, Anyway?
 wordpress_id: 161
-categories:
-- General
+categories: Rant
 tags:
 - Privacy
 - Web

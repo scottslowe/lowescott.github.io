@@ -6,8 +6,7 @@ layout: post
 slug: iforum-218-what-the-other-virtualization-guys-dont-want-you-to-know
 title: "iForum 218: What the Other Virtualization Guys Don't Want You to Know"
 wordpress_id: 1321
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Citrix
 - HyperV

@@ -6,8 +6,7 @@ layout: post
 slug: using-pf-on-os-x-mountain-lion
 title: Using pf on OS X Mountain Lion
 wordpress_id: 3183
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - BSD
 - Macintosh

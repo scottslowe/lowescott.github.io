@@ -6,8 +6,7 @@ layout: post
 slug: file-screens-in-windows-server-2003-r2
 title: File Screens in Windows Server 2003 R2
 wordpress_id: 229
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Microsoft
 - Networking

@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-06 16:29:00-0700
 layout: post
 title: A Quick Introduction to Consul
-categories:
-- Education
+categories: Education
 tags:
 - Linux
 - CLI

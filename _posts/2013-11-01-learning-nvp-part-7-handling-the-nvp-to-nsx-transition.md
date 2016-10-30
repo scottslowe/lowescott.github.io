@@ -6,8 +6,7 @@ layout: post
 slug: learning-nvp-part-7-handling-the-nvp-to-nsx-transition
 title: 'Learning NVP, Part 7: Handling the NVP to NSX Transition'
 wordpress_id: 3322
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Networking
 - Nicira

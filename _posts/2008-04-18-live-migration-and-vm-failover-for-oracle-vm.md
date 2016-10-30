@@ -6,8 +6,7 @@ layout: post
 slug: live-migration-and-vm-failover-for-oracle-vm
 title: Live Migration and VM Failover for Oracle VM?
 wordpress_id: 686
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - Xen

@@ -6,8 +6,7 @@ layout: post
 slug: double-take-softwares-workload-optimization-suite
 title: Double-Take Software's Workload Optimization Suite
 wordpress_id: 1268
-categories:
-- News
+categories: News
 tags:
 - ESX
 - HyperV

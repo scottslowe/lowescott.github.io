@@ -6,8 +6,7 @@ layout: post
 slug: using-gnu-screen-with-ssh
 title: Using GNU Screen with SSH
 wordpress_id: 2322
-categories:
-- Explanation
+categories: Explanation
 tags:
 - CLI
 - Macintosh

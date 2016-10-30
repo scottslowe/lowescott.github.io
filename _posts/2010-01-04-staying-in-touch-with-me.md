@@ -6,8 +6,7 @@ layout: post
 slug: staying-in-touch-with-me
 title: Staying in Touch with Me
 wordpress_id: 1778
-categories:
-- General
+categories: Personal
 tags:
 - Personal
 ---

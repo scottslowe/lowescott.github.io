@@ -6,8 +6,7 @@ layout: post
 slug: vmware-partner-exchange-starts-tomorrow
 title: VMware Partner Exchange Starts Tomorrow
 wordpress_id: 699
-categories:
-- Virtualization
+categories: Information
 tags:
 - Travel
 - Virtualization

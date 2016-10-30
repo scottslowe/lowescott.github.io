@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-16
 title: 'Technology Short Take #16'
 wordpress_id: 2455
-categories:
-- Information
+categories: Information
 tags:
 - HyperV
 - Microsoft

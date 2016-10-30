@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-why-not-mpls-in-ip
 title: 'Thinking Out Loud: Why Not MPLS-in-IP?'
 wordpress_id: 2648
-categories:
-- Musing
+categories: Musing
 tags:
 - Networking
 - Virtualization

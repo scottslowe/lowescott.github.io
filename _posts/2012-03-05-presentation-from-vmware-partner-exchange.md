@@ -6,8 +6,7 @@ layout: post
 slug: presentation-from-vmware-partner-exchange
 title: Presentation from VMware Partner Exchange
 wordpress_id: 2544
-categories:
-- Virtualization
+categories: Presentation
 tags:
 - Networking
 - Storage

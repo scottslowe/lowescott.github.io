@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-28 09:19:00-0700
 layout: post
 title: Why Comments Aren't Available Yet
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Writing

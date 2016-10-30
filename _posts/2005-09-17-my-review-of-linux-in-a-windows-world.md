@@ -6,8 +6,7 @@ layout: post
 slug: my-review-of-linux-in-a-windows-world
 title: 'My review of "Linux in a Windows World"'
 wordpress_id: 87
-categories:
-- Review
+categories: Review
 tags:
 - Windows
 - Linux

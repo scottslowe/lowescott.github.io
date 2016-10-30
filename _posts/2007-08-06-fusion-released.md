@@ -6,8 +6,7 @@ layout: post
 slug: fusion-released
 title: Fusion Released
 wordpress_id: 500
-categories:
-- News
+categories: News
 tags:
 - Fusion
 - Macintosh

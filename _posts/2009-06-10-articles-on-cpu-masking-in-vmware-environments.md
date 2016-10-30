@@ -6,8 +6,7 @@ layout: post
 slug: articles-on-cpu-masking-in-vmware-environments
 title: Articles on CPU Masking in VMware Environments
 wordpress_id: 1391
-categories:
-- Virtualization
+categories: Information
 tags:
 - Hardware
 - Virtualization

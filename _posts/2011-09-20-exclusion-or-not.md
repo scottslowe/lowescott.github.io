@@ -6,8 +6,7 @@ layout: post
 slug: exclusion-or-not
 title: Exclusion or Not?
 wordpress_id: 2425
-categories:
-- Rant
+categories: Rant
 tags:
 - EMC
 - HP

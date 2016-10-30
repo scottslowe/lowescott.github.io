@@ -6,8 +6,7 @@ layout: post
 slug: recent-cisco-product-launch
 title: Recent Cisco Product Launch
 wordpress_id: 2530
-categories:
-- News
+categories: News
 tags:
 - Cisco
 - Networking

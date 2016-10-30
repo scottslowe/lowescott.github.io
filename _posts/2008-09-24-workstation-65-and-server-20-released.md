@@ -6,8 +6,7 @@ layout: post
 slug: workstation-65-and-server-20-released
 title: Workstation 6.5 and Server 2.0 Released
 wordpress_id: 950
-categories:
-- News
+categories: News
 tags:
 - Virtualization
 - VMware

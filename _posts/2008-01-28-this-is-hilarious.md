@@ -6,8 +6,7 @@ layout: post
 slug: this-is-hilarious
 title: This is Hilarious
 wordpress_id: 615
-categories:
-- Rant
+categories: Rant
 tags:
 - Microsoft
 ---

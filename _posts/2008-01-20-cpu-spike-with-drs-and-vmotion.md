@@ -6,8 +6,7 @@ layout: post
 slug: cpu-spike-with-drs-and-vmotion
 title: CPU Spike with DRS and VMotion
 wordpress_id: 610
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Virtualization

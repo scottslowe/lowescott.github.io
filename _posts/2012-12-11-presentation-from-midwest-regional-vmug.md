@@ -6,8 +6,7 @@ layout: post
 slug: presentation-from-midwest-regional-vmug
 title: Presentation from Midwest Regional VMUG
 wordpress_id: 3024
-categories:
-- Information
+categories: Presentation
 tags:
 - Collaboration
 - Productivity

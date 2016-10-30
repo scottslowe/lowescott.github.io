@@ -6,8 +6,7 @@ layout: post
 slug: vlan-interfaces-with-openbsd-41
 title: VLAN Interfaces with OpenBSD 4.1
 wordpress_id: 516
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - BSD
 - ESX

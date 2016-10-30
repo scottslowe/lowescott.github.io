@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-33
 title: 'Technology Short Take #33'
 wordpress_id: 3204
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - Hardware

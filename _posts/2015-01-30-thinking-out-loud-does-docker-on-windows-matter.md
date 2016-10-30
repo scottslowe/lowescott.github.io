@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-30 11:20:00-0700
 layout: post
 title: 'Thinking Out Loud: Does Docker on Windows Matter?'
-categories:
-- Musing
+categories: Musing
 tags:
 - ToL
 - Windows

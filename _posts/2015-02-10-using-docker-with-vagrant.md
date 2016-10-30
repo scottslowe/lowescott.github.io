@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-10 14:25:00-0700
 layout: post
 title: Using Docker with Vagrant
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Docker
 - Vagrant

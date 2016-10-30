@@ -6,8 +6,7 @@ layout: post
 slug: ta2668-vmware-esx-architectural-directions
 title: 'TA2668: VMware ESX Architectural Directions'
 wordpress_id: 908
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - ESX
 - ESXi

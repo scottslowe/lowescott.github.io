@@ -6,8 +6,7 @@ layout: post
 slug: more-discussion-on-vmware-ha-failover-capacity
 title: More Discussion on VMware HA Failover Capacity
 wordpress_id: 591
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: restoring-vcb-full-backups-with-vmware-converter
 title: Restoring VCB Full Backups with VMware Converter
 wordpress_id: 425
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Backup
 - ESX

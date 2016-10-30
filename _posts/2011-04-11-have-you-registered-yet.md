@@ -6,8 +6,7 @@ layout: post
 slug: have-you-registered-yet
 title: Have You Registered Yet?
 wordpress_id: 2267
-categories:
-- Information
+categories: Information
 tags:
 - EMC
 - EMCWorld2011

@@ -6,10 +6,10 @@ layout: post
 slug: the-practicality-perspective
 title: The Practicality Perspective
 wordpress_id: 27
-categories:
-- General
+categories: Rant
 tags:
 - Macintosh
+- Productivity
 ---
 
 A recent opinion article from [_eWeek_](http://www.eweek.com/) titled ["Hot Ideas Don't Always Win the Race"](http://www.eweek.com/article2/0,1759,1826033,00.asp) (or "Just too hot an idea," in the print version of _eWeek_) takes a very practical view of Apple's move to the Intel platform. Basically, while the PowerPC is technologically superior to x86 CPUs, the best technology doesn't always win.  We saw this with OS/2 (far superior to Windows 95) and the MCA bus architecture, among others.

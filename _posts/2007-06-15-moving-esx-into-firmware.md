@@ -6,8 +6,7 @@ layout: post
 slug: moving-esx-into-firmware
 title: Moving ESX Into Firmware
 wordpress_id: 473
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - Hardware

@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-31
 title: 'Virtualization Short Take #31'
 wordpress_id: 1744
-categories:
-- Information
+categories: Information
 tags:
 - EMC
 - ESXi

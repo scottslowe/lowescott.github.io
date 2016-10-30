@@ -6,8 +6,7 @@ layout: post
 slug: p2v-with-ibm-blades
 title: P2V With IBM Blades
 wordpress_id: 1010
-categories:
-- Virtualization
+categories: Information
 tags:
 - Hardware
 - IBM

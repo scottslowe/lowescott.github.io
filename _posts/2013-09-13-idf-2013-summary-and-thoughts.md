@@ -6,8 +6,7 @@ layout: post
 slug: idf-2013-summary-and-thoughts
 title: IDF 2013 Summary and Thoughts
 wordpress_id: 3297
-categories:
-- General
+categories: Information
 tags:
 - Hardware
 - IDF2013

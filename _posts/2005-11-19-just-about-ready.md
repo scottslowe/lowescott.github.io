@@ -6,8 +6,7 @@ layout: post
 slug: just-about-ready
 title: Just About Ready
 wordpress_id: 117
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Writing

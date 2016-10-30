@@ -6,8 +6,7 @@ layout: post
 slug: authentication-and-ssl-easier-than-expected
 title: Authentication and SSL Easier Than Expected
 wordpress_id: 71
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 - SSL

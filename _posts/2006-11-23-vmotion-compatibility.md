@@ -6,8 +6,7 @@ layout: post
 slug: vmotion-compatibility
 title: VMotion Compatibility
 wordpress_id: 370
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Hardware
 - Virtualization

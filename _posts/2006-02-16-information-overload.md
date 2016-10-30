@@ -6,8 +6,7 @@ layout: post
 slug: information-overload
 title: Information Overload
 wordpress_id: 184
-categories:
-- Rant
+categories: Rant
 tags:
 - Blogging
 - Networking

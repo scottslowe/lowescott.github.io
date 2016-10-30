@@ -6,8 +6,10 @@ layout: post
 slug: back-from-sweden
 title: Back From Sweden
 wordpress_id: 83
-categories:
+categories: Personal
+tags:
 - Personal
+- Travel
 ---
 
 We (my wife and I) got back from Sweden on Wednesday, after a thoroughly unpleasant flight experience. After 8 hours of flight in the middle seat, delays in the flight back from Stockholm caused us to miss our flight in Newark, NJ, introducing yet another delay in our return home. Finally, around 6:00 PM EDT, we arrived at the Raleigh-Durham airport, only 3 hours behind our original arrival time. Keep in mind, though, the 6 hour time difference between Raleigh and Sweden; to our bodies, it's now 12:00 AM midnight _the next day_ and we've been traveling for a grand total of 18 hours (we left Stockholm around 6:00 AM in the morning). Let's just say that it wasn't the most pleasant flight experience we've ever had.

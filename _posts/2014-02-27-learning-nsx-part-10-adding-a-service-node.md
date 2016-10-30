@@ -6,8 +6,7 @@ layout: post
 slug: learning-nsx-part-10-adding-a-service-node
 title: 'Learning NSX, Part 10: Adding a Service Node'
 wordpress_id: 3411
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Networking
 - Neutron

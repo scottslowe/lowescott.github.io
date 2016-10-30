@@ -6,8 +6,7 @@ layout: post
 slug: a-heat-template-for-docker-containers
 title: A Heat Template for Docker Containers
 wordpress_id: 3503
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Automation
 - Docker

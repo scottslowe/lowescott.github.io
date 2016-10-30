@@ -6,8 +6,7 @@ layout: post
 slug: mid-year-project-update
 title: Mid-Year Project Update
 wordpress_id: 2643
-categories:
-- Personal
+categories: Personal
 tags:
 - Certification
 - Cisco

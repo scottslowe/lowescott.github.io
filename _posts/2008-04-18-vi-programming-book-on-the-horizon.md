@@ -6,8 +6,7 @@ layout: post
 slug: vi-programming-book-on-the-horizon
 title: VI Programming Book on the Horizon
 wordpress_id: 685
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

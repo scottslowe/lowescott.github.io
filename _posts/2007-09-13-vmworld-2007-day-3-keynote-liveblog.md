@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2007-day-3-keynote-liveblog
 title: VMworld 2007 Day 3 Keynote Liveblog
 wordpress_id: 541
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: learning-nsx-part-13-revisiting-logical-networking
 title: 'Learning NSX, Part 13: Revisiting Logical Networking'
 wordpress_id: 3441
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Networking
 - Neutron

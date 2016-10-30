@@ -6,8 +6,7 @@ layout: post
 slug: linux-ad-integration-version-4
 title: Linux-AD Integration, Version 4
 wordpress_id: 400
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - ActiveDirectory
 - CentOS

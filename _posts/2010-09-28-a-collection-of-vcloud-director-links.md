@@ -6,8 +6,7 @@ layout: post
 slug: a-collection-of-vcloud-director-links
 title: A Collection of vCloud Director Links
 wordpress_id: 2113
-categories:
-- Virtualization
+categories: Information
 tags:
 - vCloud
 - Virtualization

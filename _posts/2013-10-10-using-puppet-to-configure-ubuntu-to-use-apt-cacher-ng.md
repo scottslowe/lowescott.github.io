@@ -6,8 +6,7 @@ layout: post
 slug: using-puppet-to-configure-ubuntu-to-use-apt-cacher-ng
 title: Using Puppet to Configure Ubuntu to use Apt-Cacher-NG
 wordpress_id: 3307
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Automation
 - Linux

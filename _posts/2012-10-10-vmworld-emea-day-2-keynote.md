@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-emea-day-2-keynote
 title: VMworld EMEA Day 2 Keynote
 wordpress_id: 2878
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

@@ -6,8 +6,7 @@ layout: post
 slug: new-vmotion-boundary
 title: New VMotion Boundary
 wordpress_id: 434
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Hardware
 - Virtualization

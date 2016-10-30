@@ -6,8 +6,7 @@ layout: post
 slug: happy-thanksgiving-2
 title: Happy Thanksgiving!
 wordpress_id: 582
-categories:
-- Personal
+categories: General
 tags:
 - Christianity
 ---

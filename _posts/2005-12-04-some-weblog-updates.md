@@ -6,10 +6,10 @@ layout: post
 slug: some-weblog-updates
 title: Some Weblog Updates
 wordpress_id: 135
-categories:
-- General
+categories: General
 tags:
 - Blogging
+- WordPress
 ---
 
 There's been a few updates to this weblog over the last few days. Nothing major, just a few minor changes here and there.

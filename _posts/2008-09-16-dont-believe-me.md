@@ -6,8 +6,7 @@ layout: post
 slug: dont-believe-me
 title: Don't Believe Me?
 wordpress_id: 904
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Virtualization
 - VMworld2008

@@ -6,8 +6,7 @@ layout: post
 slug: are-you-a-vmware-developer
 title: Are You a VMware Developer?
 wordpress_id: 1491
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

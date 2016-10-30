@@ -6,8 +6,7 @@ layout: post
 slug: minor-linux-ad-hiccup-fixed-hopefully
 title: Minor Linux-AD Hiccup Fixed (Hopefully)
 wordpress_id: 53
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Interoperability
 - ActiveDirectory

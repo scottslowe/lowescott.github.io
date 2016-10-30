@@ -4,8 +4,7 @@ comments: true
 date: 2015-03-12 08:35:00-0700
 layout: post
 title: A Quick Update on OpenStack Congress
-categories:
-- Information
+categories: Information
 tags:
 - OpenStack
 - Cloud

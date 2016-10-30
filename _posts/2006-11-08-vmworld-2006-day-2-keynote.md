@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2006-day-2-keynote
 title: VMworld 2006 Day 2 Keynote
 wordpress_id: 357
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

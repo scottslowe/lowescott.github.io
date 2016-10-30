@@ -6,8 +6,7 @@ layout: post
 slug: blogging-for-the-right-reasons
 title: Blogging for the Right Reasons
 wordpress_id: 1970
-categories:
-- Rant
+categories: Rant
 tags:
 - Blogging
 - Personal

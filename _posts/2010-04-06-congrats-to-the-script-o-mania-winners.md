@@ -6,8 +6,7 @@ layout: post
 slug: congrats-to-the-script-o-mania-winners
 title: Congrats to the Script-O-Mania Winners
 wordpress_id: 1874
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

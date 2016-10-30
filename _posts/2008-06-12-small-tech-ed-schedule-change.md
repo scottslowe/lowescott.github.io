@@ -6,8 +6,7 @@ layout: post
 slug: small-tech-ed-schedule-change
 title: Small Tech-Ed Schedule Change
 wordpress_id: 737
-categories:
-- Information
+categories: Information
 tags:
 - Microsoft
 - TechEd2008

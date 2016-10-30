@@ -6,8 +6,11 @@ layout: post
 slug: unrelated-items
 title: Unrelated Items
 wordpress_id: 92
-categories:
-- General
+categories: General
+tags:
+- Blogging
+- WordPress
+- Web
 ---
 
 I have a few things I wanted to mention here, but none of them were really long enough to warrant their own entry. So, I'm lumping them all together here.

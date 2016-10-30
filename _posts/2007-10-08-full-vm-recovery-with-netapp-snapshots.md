@@ -6,8 +6,7 @@ layout: post
 slug: full-vm-recovery-with-netapp-snapshots
 title: Full VM Recovery with NetApp Snapshots
 wordpress_id: 558
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - ESX
 - iSCSI

@@ -6,8 +6,7 @@ layout: post
 slug: shortening-urls-via-bitly-from-the-cli
 title: Shortening URLs via bit.ly from the CLI
 wordpress_id: 2135
-categories:
-- Information
+categories: Information
 tags:
 - CLI
 - Macintosh

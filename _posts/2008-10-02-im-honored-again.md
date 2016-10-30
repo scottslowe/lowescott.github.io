@@ -6,11 +6,12 @@ layout: post
 slug: im-honored-again
 title: I'm Honored Again
 wordpress_id: 963
-categories:
-- Personal
+categories: Personal
 tags:
 - Storage
 - Blogging
+- VMware
+- Virtualization
 ---
 
 Back in July, I was [recognized][1] as #2 in the "Top 10 blogs that VMware administrators must read." I was honored by my inclusion in that list along with some very well-recognized names.

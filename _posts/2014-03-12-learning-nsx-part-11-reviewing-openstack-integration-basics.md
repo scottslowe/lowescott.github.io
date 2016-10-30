@@ -6,8 +6,7 @@ layout: post
 slug: learning-nsx-part-11-reviewing-openstack-integration-basics
 title: 'Learning NSX, Part 11: Reviewing OpenStack Integration Basics'
 wordpress_id: 3421
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Networking
 - Neutron

@@ -6,8 +6,7 @@ layout: post
 slug: learning-nsx-part-17-adding-external-l2-connectivity
 title: 'Learning NSX, Part 17: Adding External L2 Connectivity'
 wordpress_id: 3553
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Networking
 - Neutron

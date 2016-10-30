@@ -6,8 +6,7 @@ layout: post
 slug: brksan-3707-advanced-san-services
 title: 'BRKSAN-3707: Advanced SAN Services'
 wordpress_id: 2344
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Cisco
 - CiscoLive2011

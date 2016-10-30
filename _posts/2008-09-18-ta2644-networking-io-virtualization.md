@@ -6,8 +6,7 @@ layout: post
 slug: ta2644-networking-io-virtualization
 title: 'TA2644: Networking I/O Virtualization'
 wordpress_id: 941
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Networking
 - Virtualization

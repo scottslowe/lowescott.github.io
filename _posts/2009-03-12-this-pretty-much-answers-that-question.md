@@ -6,8 +6,7 @@ layout: post
 slug: this-pretty-much-answers-that-question
 title: This Pretty Much Answers That Question
 wordpress_id: 1224
-categories:
-- Musing
+categories: Musing
 tags:
 - Cisco
 - Networking

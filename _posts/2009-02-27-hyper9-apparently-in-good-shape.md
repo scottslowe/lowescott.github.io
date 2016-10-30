@@ -6,8 +6,7 @@ layout: post
 slug: hyper9-apparently-in-good-shape
 title: Hyper9 Apparently in Good Shape
 wordpress_id: 1215
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 ---

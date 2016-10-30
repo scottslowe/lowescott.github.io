@@ -6,11 +6,11 @@ layout: post
 slug: cisco-ucs-announcements
 title: Cisco UCS Announcements
 wordpress_id: 1235
-categories:
-- Virtualization
+categories: News
 tags:
 - Cisco
 - UCS
+- Hardware
 - Virtualization
 ---
 

@@ -6,8 +6,7 @@ layout: post
 slug: a-new-slogan-for-vmware
 title: A New Slogan for VMware
 wordpress_id: 899
-categories:
-- Virtualization
+categories: Musing
 tags:
 - Virtualization
 - VMware

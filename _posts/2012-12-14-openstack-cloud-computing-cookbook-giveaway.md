@@ -6,8 +6,7 @@ layout: post
 slug: openstack-cloud-computing-cookbook-giveaway
 title: OpenStack Cloud Computing Cookbook Giveaway
 wordpress_id: 3035
-categories:
-- General
+categories: General
 tags:
 - OpenStack
 - OSS

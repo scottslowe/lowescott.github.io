@@ -6,8 +6,7 @@ layout: post
 slug: using-curl-to-interact-with-a-restful-api
 title: Using Curl to Interact with a RESTful API
 wordpress_id: 3404
-categories:
-- Education
+categories: Education
 tags:
 - CLI
 - Linux

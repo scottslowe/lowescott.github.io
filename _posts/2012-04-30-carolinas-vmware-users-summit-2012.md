@@ -6,8 +6,7 @@ layout: post
 slug: carolinas-vmware-users-summit-2012
 title: Carolinas VMware Users Summit 2012
 wordpress_id: 2614
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

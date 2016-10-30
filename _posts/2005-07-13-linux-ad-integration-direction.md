@@ -6,8 +6,7 @@ layout: post
 slug: linux-ad-integration-direction
 title: Linux-AD Integration Direction
 wordpress_id: 47
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Kerberos
 - LDAP

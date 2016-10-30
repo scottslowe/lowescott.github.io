@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-35
 title: 'Technology Short Take #35'
 wordpress_id: 3265
-categories:
-- Information
+categories: Information
 tags:
 - CLI
 - Networking

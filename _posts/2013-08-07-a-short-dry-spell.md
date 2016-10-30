@@ -6,9 +6,7 @@ layout: post
 slug: a-short-dry-spell
 title: A Short Dry Spell
 wordpress_id: 3231
-categories:
-- General
-- Personal
+categories: General
 tags:
 - Blogging
 - Personal

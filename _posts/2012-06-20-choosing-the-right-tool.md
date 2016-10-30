@@ -6,10 +6,9 @@ layout: post
 slug: choosing-the-right-tool
 title: Choosing the Right Tool
 wordpress_id: 2637
-categories:
-- Musing
+categories: Musing
 tags:
-- General
+- Productivity
 - Macintosh
 ---
 

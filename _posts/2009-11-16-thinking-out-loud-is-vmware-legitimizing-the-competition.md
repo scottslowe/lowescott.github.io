@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-is-vmware-legitimizing-the-competition
 title: 'Thinking Out Loud: Is VMware Legitimizing the Competition?'
 wordpress_id: 1736
-categories:
-- Musing
+categories: Musing
 tags:
 - Citrix
 - HyperV

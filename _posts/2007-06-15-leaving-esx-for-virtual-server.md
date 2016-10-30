@@ -6,8 +6,7 @@ layout: post
 slug: leaving-esx-for-virtual-server
 title: Leaving ESX for Virtual Server?
 wordpress_id: 472
-categories:
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Microsoft

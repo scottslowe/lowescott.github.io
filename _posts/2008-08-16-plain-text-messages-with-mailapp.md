@@ -6,8 +6,7 @@ layout: post
 slug: plain-text-messages-with-mailapp
 title: Plain Text Messages with Mail.app
 wordpress_id: 825
-categories:
-- Rant
+categories: Rant
 tags:
 - Exchange
 - Macintosh

@@ -6,8 +6,7 @@ layout: post
 slug: more-on-cpu-masking
 title: More on CPU Masking
 wordpress_id: 474
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Hardware

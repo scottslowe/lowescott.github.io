@@ -6,9 +6,7 @@ layout: post
 slug: in-case-you-hadnt-noticed
 title: In Case You Hadn't Noticed
 wordpress_id: 659
-categories:
-- General
-- Virtualization
+categories: General
 tags:
 - Blogging
 - Virtualization

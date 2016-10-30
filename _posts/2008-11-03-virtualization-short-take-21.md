@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-21
 title: 'Virtualization Short Take #21'
 wordpress_id: 1011
-categories:
-- Information
+categories: Information
 tags:
 - HyperV
 - VDI

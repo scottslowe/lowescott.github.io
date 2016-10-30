@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-36
 title: 'Technology Short Take #36'
 wordpress_id: 3315
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - CLI

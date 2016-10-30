@@ -6,11 +6,9 @@ layout: post
 slug: train-signal-welcome
 title: Train Signal, Welcome!
 wordpress_id: 1381
-categories:
-- General
+categories: General
 tags:
 - Blogging
-- General
 - VMware
 - vSphere
 ---

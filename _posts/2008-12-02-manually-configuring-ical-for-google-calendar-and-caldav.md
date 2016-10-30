@@ -6,8 +6,7 @@ layout: post
 slug: manually-configuring-ical-for-google-calendar-and-caldav
 title: Manually Configuring iCal for Google Calendar and CalDAV
 wordpress_id: 1078
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Macintosh
 - Web

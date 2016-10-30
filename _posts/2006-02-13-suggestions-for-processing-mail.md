@@ -6,8 +6,7 @@ layout: post
 slug: suggestions-for-processing-mail
 title: Suggestions for Processing Mail
 wordpress_id: 178
-categories:
-- General
+categories: Musing
 tags:
 - Messaging
 - Networking

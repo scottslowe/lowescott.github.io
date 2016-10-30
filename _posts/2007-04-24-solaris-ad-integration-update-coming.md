@@ -6,8 +6,7 @@ layout: post
 slug: solaris-ad-integration-update-coming
 title: Solaris-AD Integration Update Coming
 wordpress_id: 445
-categories:
-- Information
+categories: Information
 tags:
 - ActiveDirectory
 - Interoperability

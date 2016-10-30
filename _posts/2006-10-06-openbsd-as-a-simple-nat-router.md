@@ -6,8 +6,7 @@ layout: post
 slug: openbsd-as-a-simple-nat-router
 title: OpenBSD as a Simple NAT Router
 wordpress_id: 344
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - BSD
 - ESX

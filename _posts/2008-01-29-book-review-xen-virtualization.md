@@ -6,8 +6,7 @@ layout: post
 slug: book-review-xen-virtualization
 title: 'Book Review: Xen Virtualization'
 wordpress_id: 617
-categories:
-- Review
+categories: Review
 tags:
 - Linux
 - Virtualization

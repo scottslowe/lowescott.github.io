@@ -6,8 +6,7 @@ layout: post
 slug: openbsd-on-esx-server
 title: OpenBSD on ESX Server
 wordpress_id: 215
-categories:
-- Information
+categories: Information
 tags:
 - BSD
 - ESX

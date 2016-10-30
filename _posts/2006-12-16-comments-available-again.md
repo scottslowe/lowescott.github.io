@@ -6,8 +6,7 @@ layout: post
 slug: comments-available-again
 title: Comments Available Again
 wordpress_id: 387
-categories:
-- General
+categories: General
 tags:
 - Web
 ---

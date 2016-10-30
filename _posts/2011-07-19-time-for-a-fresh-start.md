@@ -6,10 +6,10 @@ layout: post
 slug: time-for-a-fresh-start
 title: Time for a Fresh Start
 wordpress_id: 2352
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
+- Travel
 ---
 
 I'll bet that when you saw the title for this post, your first thought was that I was leaving EMC and starting a new job with a new employer. C'mon, admit it! No, I'm staying at EMC; this post is about getting a fresh start in a new location. That's right; I'm relocating to the Denver, CO area. In fact, I signed lease papers on a house in the Castle Pines North area, just south of Denver, yesterday afternoon.

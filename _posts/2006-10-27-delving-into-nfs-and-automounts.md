@@ -6,8 +6,7 @@ layout: post
 slug: delving-into-nfs-and-automounts
 title: Delving into NFS and Automounts
 wordpress_id: 350
-categories:
-- Information
+categories: Information
 tags:
 - ActiveDirectory
 - CentOS

@@ -6,8 +6,7 @@ layout: post
 slug: a-good-article-for-those-new-to-ldap
 title: A Good Article for Those New to LDAP
 wordpress_id: 20
-categories:
-- Information
+categories: Information
 tags:
 - LDAP
 - Novell

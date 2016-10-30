@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2008-spouse-activities-schedule
 title: VMworld 2008 Spouse Activities Schedule
 wordpress_id: 835
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

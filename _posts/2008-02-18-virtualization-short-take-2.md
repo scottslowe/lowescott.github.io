@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-2
 title: 'Virtualization Short Take #2'
 wordpress_id: 635
-categories:
-- Information
+categories: Information
 tags:
 - ESX
 - Storage

@@ -6,8 +6,7 @@ layout: post
 slug: storage-short-take-5
 title: 'Storage Short Take #5'
 wordpress_id: 1742
-categories:
-- Information
+categories: Information
 tags:
 - EMC
 - FCoE

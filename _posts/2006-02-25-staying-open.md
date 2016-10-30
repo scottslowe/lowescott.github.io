@@ -6,8 +6,7 @@ layout: post
 slug: staying-open
 title: Staying Open
 wordpress_id: 191
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 ---

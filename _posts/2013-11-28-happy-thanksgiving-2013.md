@@ -6,8 +6,7 @@ layout: post
 slug: happy-thanksgiving-2013
 title: Happy Thanksgiving 2013
 wordpress_id: 3347
-categories:
-- General
+categories: General
 tags:
 - Personal
 ---

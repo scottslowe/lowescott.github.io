@@ -6,8 +6,7 @@ layout: post
 slug: my-first-articles
 title: My First Articles!
 wordpress_id: 569
-categories:
-- Virtualization
+categories: News
 tags:
 - VDI
 - Virtualization

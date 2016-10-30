@@ -6,8 +6,7 @@ layout: post
 slug: sneaking-around-vmotion-limitations
 title: Sneaking Around VMotion Limitations
 wordpress_id: 339
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Hardware
 - Virtualization

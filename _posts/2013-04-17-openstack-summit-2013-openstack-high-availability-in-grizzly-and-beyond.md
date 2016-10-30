@@ -6,8 +6,7 @@ layout: post
 slug: openstack-summit-2013-openstack-high-availability-in-grizzly-and-beyond
 title: 'OpenStack Summit 2013: OpenStack High Availability in Grizzly and Beyond'
 wordpress_id: 3153
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - OpenStack
 - Storage

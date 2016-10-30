@@ -6,8 +6,7 @@ layout: post
 slug: a-few-thoughts-on-xen
 title: A Few Thoughts on Xen
 wordpress_id: 638
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Citrix
 - ESX

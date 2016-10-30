@@ -6,8 +6,7 @@ layout: post
 slug: spousetivities-at-vmworld-emea-2011
 title: Spousetivities at VMworld EMEA 2011
 wordpress_id: 2427
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

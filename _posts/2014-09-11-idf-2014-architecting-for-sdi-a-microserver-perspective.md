@@ -6,8 +6,7 @@ layout: post
 slug: idf-2014-architecting-for-sdi-a-microserver-perspective
 title: 'IDF 2014: Architecting for SDI, a Microserver Perspective'
 wordpress_id: 3531
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Hardware
 - IDF2014

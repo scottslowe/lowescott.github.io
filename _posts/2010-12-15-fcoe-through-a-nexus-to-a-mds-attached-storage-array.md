@@ -6,8 +6,7 @@ layout: post
 slug: fcoe-through-a-nexus-to-a-mds-attached-storage-array
 title: FCoE through a Nexus to a MDS-Attached Storage Array
 wordpress_id: 2177
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Cisco
 - EMC

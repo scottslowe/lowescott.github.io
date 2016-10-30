@@ -6,12 +6,12 @@ layout: post
 slug: vmworld-2010-spouse-activities-calendar
 title: VMworld 2010 Spouse Activities Calendar
 wordpress_id: 2041
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware
 - VMworld2010
+- Spousetivities
 ---
 
 As many of you already know, this year is the third year that my wife, Crystal, is planning activities for spouses (i.e., "spousetivites") who are in San Francisco with their VMworld-attending significant others. Crystal has even launched her own site, [Spousetivities.com](http://spousetivities.com/), where you can find more information as well.

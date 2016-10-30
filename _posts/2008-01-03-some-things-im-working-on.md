@@ -6,9 +6,7 @@ layout: post
 slug: some-things-im-working-on
 title: Some Things I'm Working On
 wordpress_id: 599
-categories:
-- General
-- Virtualization
+categories: General
 tags:
 - ActiveDirectory
 - ESX

@@ -6,8 +6,7 @@ layout: post
 slug: the-future-of-netapp
 title: The Future of NetApp
 wordpress_id: 1976
-categories:
-- Musing
+categories: Musing
 tags:
 - NetApp
 - Snapshot

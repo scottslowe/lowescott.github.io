@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-6
 title: 'Technology Short Take #6'
 wordpress_id: 2159
-categories:
-- Information
+categories: Information
 tags:
 - Networking
 - Storage

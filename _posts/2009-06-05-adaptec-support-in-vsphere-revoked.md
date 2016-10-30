@@ -6,12 +6,12 @@ layout: post
 slug: adaptec-support-in-vsphere-revoked
 title: Adaptec Support in vSphere Revoked?
 wordpress_id: 1388
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - ESXi
 - Hardware
+- Storage
 - Virtualization
 - VMware
 - vSphere

@@ -6,8 +6,7 @@ layout: post
 slug: its-not-too-late
 title: It's Not Too Late
 wordpress_id: 2622
-categories:
-- Information
+categories: Information
 tags:
 - EMC
 - EMCWorld2012

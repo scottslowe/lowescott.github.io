@@ -6,8 +6,7 @@ layout: post
 slug: idf-2013-rack-scale-architecture-for-cloud
 title: 'IDF 2013: Rack Scale Architecture for Cloud'
 wordpress_id: 3288
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Hardware
 - IDF2013

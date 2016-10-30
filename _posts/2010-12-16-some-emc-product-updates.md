@@ -6,8 +6,7 @@ layout: post
 slug: some-emc-product-updates
 title: Some EMC Product Updates
 wordpress_id: 2186
-categories:
-- News
+categories: News
 tags:
 - EMC
 - Storage

@@ -6,8 +6,7 @@ layout: post
 slug: i-love-having-my-content-stolen
 title: I Love Having My Content Stolen
 wordpress_id: 1425
-categories:
-- Rant
+categories: Rant
 tags:
 - Blogging
 - Writing

@@ -6,8 +6,7 @@ layout: post
 slug: new-vi-plugin
 title: New VI Plugin
 wordpress_id: 641
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

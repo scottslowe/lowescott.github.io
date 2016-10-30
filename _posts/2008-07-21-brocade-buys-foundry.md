@@ -6,8 +6,7 @@ layout: post
 slug: brocade-buys-foundry
 title: Brocade Buys Foundry
 wordpress_id: 767
-categories:
-- News
+categories: News
 tags:
 - Cisco
 - Networking

@@ -6,8 +6,7 @@ layout: post
 slug: vm6-vmex-21-release
 title: VM6 VMex 2.1 Release
 wordpress_id: 1956
-categories:
-- News
+categories: News
 tags:
 - HyperV
 - Microsoft

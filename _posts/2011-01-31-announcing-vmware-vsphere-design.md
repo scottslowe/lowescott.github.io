@@ -6,8 +6,7 @@ layout: post
 slug: announcing-vmware-vsphere-design
 title: Announcing VMware vSphere Design
 wordpress_id: 2233
-categories:
-- News
+categories: News
 tags:
 - Virtualization
 - VMware

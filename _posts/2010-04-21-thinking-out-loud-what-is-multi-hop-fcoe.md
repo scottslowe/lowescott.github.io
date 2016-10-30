@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-what-is-multi-hop-fcoe
 title: 'Thinking Out Loud: What is multi-hop FCoE?'
 wordpress_id: 1888
-categories:
-- Musing
+categories: Musing
 tags:
 - Cisco
 - FCoE

@@ -6,11 +6,11 @@ layout: post
 slug: next-gen-stuff-enabling-cdp-in-esxesxi
 title: 'Next-Gen Stuff: Enabling CDP in ESX/ESXi'
 wordpress_id: 1225
-categories:
-- Virtualization
+categories: Tutorial
 tags:
 - Cisco
 - ESXi
+- Networking
 - Virtualization
 - VMware
 - vSphere

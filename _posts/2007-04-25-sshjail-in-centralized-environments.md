@@ -6,8 +6,7 @@ layout: post
 slug: sshjail-in-centralized-environments
 title: SSHjail in Centralized Environments
 wordpress_id: 446
-categories:
-- Musing
+categories: Musing
 tags:
 - Linux
 - OSS

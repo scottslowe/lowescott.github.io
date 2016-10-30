@@ -6,8 +6,7 @@ layout: post
 slug: closing-comments-on-old-posts
 title: Closing Comments on Old Posts
 wordpress_id: 3538
-categories:
-- General
+categories: General
 tags:
 - Collaboration
 - Writing

@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2007-session-on-advanced-diagnostics-log-analysis
 title: VMworld 2007 Session on Advanced Diagnostics Log Analysis
 wordpress_id: 539
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - ESX
 - Virtualization

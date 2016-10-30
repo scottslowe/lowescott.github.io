@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2013-day-2-keynote
 title: VMworld 2013 Day 2 Keynote
 wordpress_id: 3257
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Networking
 - Storage

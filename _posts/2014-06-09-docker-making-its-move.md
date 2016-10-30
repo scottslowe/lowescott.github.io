@@ -6,8 +6,7 @@ layout: post
 slug: docker-making-its-move
 title: Docker Making Its Move
 wordpress_id: 3462
-categories:
-- News
+categories: News
 tags:
 - Docker
 - Linux

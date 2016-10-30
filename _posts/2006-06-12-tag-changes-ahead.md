@@ -6,8 +6,7 @@ layout: post
 slug: tag-changes-ahead
 title: Tag Changes Ahead
 wordpress_id: 268
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Tags

@@ -6,8 +6,7 @@ layout: post
 slug: learning-nvp-part-2-nvp-controllers
 title: 'Learning NVP, Part 2: NVP Controllers'
 wordpress_id: 3239
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Networking
 - Nicira

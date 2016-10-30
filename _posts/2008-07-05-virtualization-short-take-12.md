@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-12
 title: 'Virtualization Short Take #12'
 wordpress_id: 754
-categories:
-- Information
+categories: Information
 tags:
 - Apple
 - Cisco

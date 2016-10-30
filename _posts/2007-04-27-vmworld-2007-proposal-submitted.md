@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2007-proposal-submitted
 title: VMworld 2007 Proposal Submitted
 wordpress_id: 448
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

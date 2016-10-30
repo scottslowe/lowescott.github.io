@@ -6,8 +6,7 @@ layout: post
 slug: some-new-christian-music
 title: Some New Christian Music
 wordpress_id: 1396
-categories:
-- Review
+categories: Review
 tags:
 - Christianity
 - Music

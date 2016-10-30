@@ -6,8 +6,7 @@ layout: post
 slug: more-vmworld-2008-day-2-coverage
 title: More VMworld 2008 Day 2 Coverage
 wordpress_id: 931
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

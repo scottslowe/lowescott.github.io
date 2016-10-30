@@ -6,8 +6,7 @@ layout: post
 slug: 2011-carolina-vmware-user-summit-coming-up
 title: 2011 Carolina VMware User Summit Coming Up
 wordpress_id: 2257
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware

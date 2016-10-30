@@ -6,8 +6,7 @@ layout: post
 slug: recovering-data-inside-vms-using-netapp-snapshots
 title: Recovering Data Inside VMs Using NetApp Snapshots
 wordpress_id: 394
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - ESX
 - NetApp

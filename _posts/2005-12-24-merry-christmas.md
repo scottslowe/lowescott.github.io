@@ -6,8 +6,7 @@ layout: post
 slug: merry-christmas
 title: Merry Christmas!
 wordpress_id: 145
-categories:
-- Personal
+categories: General
 tags:
 - Christianity
 - Personal

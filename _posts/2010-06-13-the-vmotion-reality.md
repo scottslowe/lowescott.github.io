@@ -6,8 +6,7 @@ layout: post
 slug: the-vmotion-reality
 title: The vMotion Reality
 wordpress_id: 1974
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Networking
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: brief-impressions-of-centos-41
 title: Brief Impressions of CentOS 4.1
 wordpress_id: 69
-categories:
-- Review
+categories: Review
 tags:
 - Linux
 - CentOS

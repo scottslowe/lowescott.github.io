@@ -6,8 +6,7 @@ layout: post
 slug: summary-of-cisco-live-2011-blog-posts
 title: Summary of Cisco Live 2011 Blog Posts
 wordpress_id: 2348
-categories:
-- Information
+categories: Information
 tags:
 - Cisco
 - CiscoLive2011

@@ -6,8 +6,7 @@ layout: post
 slug: some-ucs-links
 title: Some UCS Links
 wordpress_id: 2019
-categories:
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - Hardware

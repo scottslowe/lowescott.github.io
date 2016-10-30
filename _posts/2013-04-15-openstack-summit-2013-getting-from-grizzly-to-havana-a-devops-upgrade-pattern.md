@@ -6,8 +6,7 @@ layout: post
 slug: openstack-summit-2013-getting-from-grizzly-to-havana-a-devops-upgrade-pattern
 title: 'OpenStack Summit 2013: Getting from Grizzly to Havana, a DevOps Upgrade Pattern'
 wordpress_id: 3132
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - OpenStack
 ---

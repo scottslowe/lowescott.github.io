@@ -6,12 +6,12 @@ layout: post
 slug: another-collection-of-ucs-posts
 title: Another Collection of UCS Posts
 wordpress_id: 1884
-categories:
-- Virtualization
+categories: Information
 tags:
 - Cisco
 - Hardware
 - UCS
+- Virtualization
 ---
 
 It's been a couple of months since I posted my last collection of UCS-related posts. Since that time, I've collected a few more posts, so here's another collection of UCS posts (in no particular order).

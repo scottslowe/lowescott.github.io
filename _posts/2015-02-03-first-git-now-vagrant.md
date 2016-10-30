@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-03 08:10:00-0700
 layout: post
 title: First Git, now Vagrant
-categories:
-- General
+categories: General
 tags:
 - Git
 - Vagrant

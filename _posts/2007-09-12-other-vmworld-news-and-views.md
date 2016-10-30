@@ -6,8 +6,7 @@ layout: post
 slug: other-vmworld-news-and-views
 title: Other VMworld News and Views
 wordpress_id: 536
-categories:
-- Virtualization
+categories: Information
 tags:
 - Microsoft
 - Virtualization

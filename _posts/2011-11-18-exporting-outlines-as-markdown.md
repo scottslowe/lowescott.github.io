@@ -6,8 +6,7 @@ layout: post
 slug: exporting-outlines-as-markdown
 title: Exporting Outlines as Markdown
 wordpress_id: 2470
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Macintosh
 - Markdown

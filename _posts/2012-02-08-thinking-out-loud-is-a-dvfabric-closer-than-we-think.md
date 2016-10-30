@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-is-a-dvfabric-closer-than-we-think
 title: 'Thinking Out Loud: Is A dvFabric Closer Than We Think?'
 wordpress_id: 2533
-categories:
-- Musing
+categories: Musing
 tags:
 - FCoE
 - FibreChannel

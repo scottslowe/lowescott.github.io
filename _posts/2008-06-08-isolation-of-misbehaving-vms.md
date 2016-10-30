@@ -6,8 +6,7 @@ layout: post
 slug: isolation-of-misbehaving-vms
 title: Isolation of Misbehaving VMs
 wordpress_id: 725
-categories:
-- Information
+categories: Information
 tags:
 - ESX
 - Linux

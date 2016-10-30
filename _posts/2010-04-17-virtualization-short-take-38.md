@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-38
 title: 'Virtualization Short Take #38'
 wordpress_id: 1882
-categories:
-- Information
+categories: Information
 tags:
 - Storage
 - Virtualization

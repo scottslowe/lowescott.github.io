@@ -6,8 +6,7 @@ layout: post
 slug: a-couple-of-product-announcements
 title: A Couple of Product Announcements
 wordpress_id: 990
-categories:
-- News
+categories: News
 tags:
 - Security
 - Virtualization

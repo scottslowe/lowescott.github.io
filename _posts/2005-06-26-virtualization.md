@@ -6,11 +6,11 @@ layout: post
 slug: virtualization
 title: Virtualization
 wordpress_id: 25
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Networking
 - Virtualization
+- Career
 ---
 
 I'm a big fan of [virtualization](http://en.wikipedia.org/wiki/Virtualization/). I love the [VMware](http://www.vmware.com/) products ([VMware Workstation](http://www.vmware.com/products/desktop/ws_features.html), [GSX Server](http://www.vmware.com/products/server/gsx_features.html), and [ESX Server](http://www.vmware.com/products/server/esx_features.html)) and, as I have mentioned in previous posts, use Microsoft's [Virtual PC](http://www.microsoft.com/mac/products/virtualpc/virtualpc.aspx) product currently (but only because VMware doesn't have a Mac version of VMware Workstation). I'm looking forward to hardware-based virtualization technologies such as AMD's Pacifica (discussed briefly [here](http://www.eweek.com/article2/0,1759,1780606,00.asp) and [here](http://www.eweek.com/article2/0,1759,1820551,00.asp)) and Intel's [Vanderpool](http://www.intel.com/technology/computing/vptech/) technology. I'm very much hoping that [Apple](http://www.apple.com/) will take the plunge and build in virtualization support in Mac OS X 10.5, aka "Leopard".

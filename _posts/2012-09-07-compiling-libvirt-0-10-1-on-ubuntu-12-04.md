@@ -6,8 +6,7 @@ layout: post
 slug: compiling-libvirt-0-10-1-on-ubuntu-12-04
 title: Compiling libvirt 0.10.1 on Ubuntu 12.04
 wordpress_id: 2819
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CLI
 - KVM

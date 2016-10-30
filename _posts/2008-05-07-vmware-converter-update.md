@@ -6,8 +6,7 @@ layout: post
 slug: vmware-converter-update
 title: VMware Converter Update
 wordpress_id: 702
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

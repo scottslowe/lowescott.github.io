@@ -6,9 +6,7 @@ layout: post
 slug: giving-thanks-on-thanksgiving
 title: Giving Thanks on Thanksgiving
 wordpress_id: 2476
-categories:
-- General
-- Personal
+categories: General
 tags:
 - Personal
 ---

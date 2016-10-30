@@ -6,8 +6,7 @@ layout: post
 slug: another-take-on-lifesong
 title: Another Take on Life(song)
 wordpress_id: 120
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Music

@@ -6,8 +6,7 @@ layout: post
 slug: articles-in-progress
 title: Articles in Progress
 wordpress_id: 678
-categories:
-- General
+categories: General
 tags:
 - ActiveDirectory
 - Blogging

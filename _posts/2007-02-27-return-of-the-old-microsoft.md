@@ -6,8 +6,7 @@ layout: post
 slug: return-of-the-old-microsoft
 title: Return of the Old Microsoft
 wordpress_id: 419
-categories:
-- Rant
+categories: Rant
 tags:
 - ESX
 - Interoperability

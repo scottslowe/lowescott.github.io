@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-20
 title: 'Virtualization Short Take #20'
 wordpress_id: 998
-categories:
-- Information
+categories: Information
 tags:
 - ESXi
 - HyperV

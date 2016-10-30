@@ -6,8 +6,7 @@ layout: post
 slug: thinking-about-intel-rack-scale-architecture
 title: Thinking About Intel Rack-Scale Architecture
 wordpress_id: 3536
-categories:
-- Musing
+categories: Musing
 tags:
 - Hardware
 - IDF2014

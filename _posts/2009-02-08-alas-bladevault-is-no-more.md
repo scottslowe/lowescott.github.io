@@ -9,7 +9,7 @@ wordpress_id: 1175
 categories: Information
 tags:
 - Blogging
-- General
+- Web
 - HP
 - IBM
 ---

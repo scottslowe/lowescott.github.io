@@ -6,8 +6,7 @@ layout: post
 slug: learning-nsx-part-16-routing-to-multiple-external-vlans
 title: 'Learning NSX, Part 16: Routing to Multiple External VLANs'
 wordpress_id: 3544
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Networking
 - Neutron

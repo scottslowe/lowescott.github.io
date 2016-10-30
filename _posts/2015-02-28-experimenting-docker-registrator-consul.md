@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-28 16:00:00-0700
 layout: post
 title: Experimenting with Docker, Registrator, and Consul
-categories:
-- Information
+categories: Information
 tags:
 - Docker
 - Networking

@@ -6,8 +6,7 @@ layout: post
 slug: ta2659-managing-esx-in-a-cos-less-world
 title: 'TA2659: Managing ESX in a COS-less World'
 wordpress_id: 927
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - CLI
 - ESX

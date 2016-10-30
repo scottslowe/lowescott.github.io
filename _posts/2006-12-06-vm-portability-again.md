@@ -6,8 +6,7 @@ layout: post
 slug: vm-portability-again
 title: VM Portability Again
 wordpress_id: 381
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - ESX
 - Macintosh

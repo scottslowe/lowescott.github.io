@@ -6,8 +6,7 @@ layout: post
 slug: thoughts-on-a-couple-of-books
 title: Thoughts on a Couple of Books
 wordpress_id: 2629
-categories:
-- Review
+categories: Review
 tags:
 - Linux
 - Virtualization

@@ -6,11 +6,11 @@ layout: post
 slug: site-search-tags
 title: Site Search Tags
 wordpress_id: 267
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Web
+- WordPress
 ---
 
 I've updated the site to use a tagging plugin called [Ultimate Tag Warrior](http://www.neato.co.nz/ultimate-tag-warrior/). It's taken some time to get things working the way I'd like, but it's working now and I'm really pleased with how things have turned out. Read on for more details.

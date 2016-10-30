@@ -6,8 +6,7 @@ layout: post
 slug: a-quick-introduction-to-vagrant
 title: A Quick Introduction to Vagrant
 wordpress_id: 3534
-categories:
-- Education
+categories: Education
 tags:
 - CLI
 - Linux

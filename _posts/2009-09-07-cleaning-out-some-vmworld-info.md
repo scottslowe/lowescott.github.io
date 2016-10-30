@@ -6,8 +6,7 @@ layout: post
 slug: cleaning-out-some-vmworld-info
 title: Cleaning Out Some VMworld Info
 wordpress_id: 1649
-categories:
-- Virtualization
+categories: Information
 tags:
 - Security
 - Virtualization

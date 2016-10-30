@@ -6,8 +6,7 @@ layout: post
 slug: puppetconf-2013-ticket-giveaway
 title: PuppetConf 2013 Ticket Giveaway
 wordpress_id: 3223
-categories:
-- News
+categories: News
 tags:
 - Automation
 - Puppet

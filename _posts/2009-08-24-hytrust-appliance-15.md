@@ -6,8 +6,7 @@ layout: post
 slug: hytrust-appliance-15
 title: HyTrust Appliance 1.5
 wordpress_id: 1554
-categories:
-- News
+categories: News
 tags:
 - Networking
 - Security

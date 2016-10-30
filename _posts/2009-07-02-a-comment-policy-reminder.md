@@ -6,11 +6,9 @@ layout: post
 slug: a-comment-policy-reminder
 title: A Comment Policy Reminder
 wordpress_id: 1436
-categories:
-- General
+categories: General
 tags:
 - Blogging
-- General
 ---
 
 I encourage open discussion and conversation here on my site, and I'm thrilled that readers feel welcome to share their viewpoints (even when those viewpoints differ from my own). To help foster this sense of free discourse, there are two rules upon which I insist for all comments:

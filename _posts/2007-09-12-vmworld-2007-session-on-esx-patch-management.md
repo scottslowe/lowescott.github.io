@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2007-session-on-esx-patch-management
 title: VMworld 2007 Session on ESX Patch Management
 wordpress_id: 537
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - ESX
 - Virtualization

@@ -6,8 +6,7 @@ layout: post
 slug: thinking-out-loud-targeting-the-real-problem
 title: 'Thinking Out Loud: Targeting the Real Problem'
 wordpress_id: 3125
-categories:
-- Musing
+categories: Musing
 tags:
 - Networking
 - OpenFlow

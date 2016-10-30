@@ -6,8 +6,7 @@ layout: post
 slug: viscosity-a-mac-openvpn-client
 title: Viscosity, a Mac OpenVPN Client
 wordpress_id: 1041
-categories:
-- Information
+categories: Information
 tags:
 - BSD
 - IPSec

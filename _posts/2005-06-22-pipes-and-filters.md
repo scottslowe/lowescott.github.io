@@ -6,8 +6,7 @@ layout: post
 slug: pipes-and-filters
 title: Pipes and Filters
 wordpress_id: 21
-categories:
-- Rant
+categories: Rant
 tags:
 - Linux
 - UNIX

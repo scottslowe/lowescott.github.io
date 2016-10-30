@@ -6,12 +6,12 @@ layout: post
 slug: spouse-activities-update
 title: Spouse Activities Update
 wordpress_id: 2011
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - VMware
 - VMworld2010
+- Spousetivities
 excerpt: "VMworld 2010 in San Francisco, CA, is right around the corner! Here's a quick update on the activities planned for spouses along with some information on activities planning and deadlines."
 ---
 

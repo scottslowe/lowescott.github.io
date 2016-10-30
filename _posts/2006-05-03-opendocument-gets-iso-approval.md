@@ -6,8 +6,7 @@ layout: post
 slug: opendocument-gets-iso-approval
 title: OpenDocument Gets ISO Approval
 wordpress_id: 240
-categories:
-- News
+categories: News
 tags:
 - Microsoft
 - OSS

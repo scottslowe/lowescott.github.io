@@ -6,8 +6,7 @@ layout: post
 slug: multi-machine-vagrant-with-yaml
 title: Multi-Machine Vagrant with YAML
 wordpress_id: 3551
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Automation
 - Linux

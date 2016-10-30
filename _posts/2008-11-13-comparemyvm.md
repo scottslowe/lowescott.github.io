@@ -6,8 +6,7 @@ layout: post
 slug: comparemyvm
 title: CompareMyVM
 wordpress_id: 1026
-categories:
-- News
+categories: News
 tags:
 - Virtualization
 - Collaboration

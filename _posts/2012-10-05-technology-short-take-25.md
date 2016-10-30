@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-25
 title: 'Technology Short Take #25'
 wordpress_id: 2875
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - KVM

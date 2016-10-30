@@ -6,8 +6,7 @@ layout: post
 slug: updated-multi-os-puppet-configuration
 title: Updated Multi-OS Puppet Configuration
 wordpress_id: 2676
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Automation
 - BSD

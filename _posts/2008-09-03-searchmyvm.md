@@ -6,8 +6,7 @@ layout: post
 slug: searchmyvm
 title: SearchMyVM
 wordpress_id: 856
-categories:
-- News
+categories: News
 tags:
 - Virtualization
 - VMware

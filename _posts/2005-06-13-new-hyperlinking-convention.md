@@ -6,8 +6,7 @@ layout: post
 slug: new-hyperlinking-convention
 title: New Hyperlinking Convention
 wordpress_id: 13
-categories:
-- General
+categories: General
 tags:
 - Blogging
 - Web

@@ -6,8 +6,7 @@ layout: post
 slug: vm-file-level-recovery-with-netapp-snapshots
 title: VM File-Level Recovery with NetApp Snapshots
 wordpress_id: 557
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - ESX
 - NetApp

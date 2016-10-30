@@ -6,8 +6,7 @@ layout: post
 slug: internal-news-server-up-and-running
 title: Internal News Server Up and Running
 wordpress_id: 70
-categories:
-- Information
+categories: Information
 tags:
 - OSS
 - Collaboration

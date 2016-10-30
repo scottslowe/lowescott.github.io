@@ -4,8 +4,7 @@ comments: true
 date: 2015-02-10 10:33:00-0700
 layout: post
 title: 'Technology Short Take #48'
-categories:
-- Information
+categories: Information
 tags:
 - Networking
 - Git

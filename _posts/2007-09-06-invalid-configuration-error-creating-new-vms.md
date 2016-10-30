@@ -6,8 +6,7 @@ layout: post
 slug: invalid-configuration-error-creating-new-vms
 title: Invalid Configuration Error Creating New VMs
 wordpress_id: 525
-categories:
-- Virtualization
+categories: Musing
 tags:
 - ESX
 - Storage

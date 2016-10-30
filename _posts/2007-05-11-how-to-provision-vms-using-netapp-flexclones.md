@@ -6,8 +6,7 @@ layout: post
 slug: how-to-provision-vms-using-netapp-flexclones
 title: How to Provision VMs Using NetApp FlexClones
 wordpress_id: 452
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - NetApp
 - Storage

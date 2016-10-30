@@ -6,8 +6,7 @@ layout: post
 slug: inf-vsp1423-esxtop-for-advanced-users
 title: 'INF-VSP1423: esxtop for Advanced Users'
 wordpress_id: 2779
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - ESXi
 - Virtualization

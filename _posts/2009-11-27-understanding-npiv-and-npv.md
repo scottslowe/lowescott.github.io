@@ -6,8 +6,7 @@ layout: post
 slug: understanding-npiv-and-npv
 title: Understanding NPIV and NPV
 wordpress_id: 1746
-categories:
-- Education
+categories: Education
 tags:
 - Cisco
 - FibreChannel

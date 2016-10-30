@@ -6,8 +6,7 @@ layout: post
 slug: new-virtualization-wiki
 title: New Virtualization Wiki
 wordpress_id: 1201
-categories:
-- Virtualization
+categories: Information
 tags:
 - Virtualization
 - Web

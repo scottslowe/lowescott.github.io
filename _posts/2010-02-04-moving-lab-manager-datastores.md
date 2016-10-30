@@ -6,8 +6,7 @@ layout: post
 slug: moving-lab-manager-datastores
 title: Moving Lab Manager Datastores
 wordpress_id: 1820
-categories:
-- Information
+categories: Information
 tags:
 - Storage
 - Virtualization

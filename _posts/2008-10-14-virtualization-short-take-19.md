@@ -6,8 +6,7 @@ layout: post
 slug: virtualization-short-take-19
 title: 'Virtualization Short Take #19'
 wordpress_id: 987
-categories:
-- Information
+categories: Information
 tags:
 - HyperV
 - NFS

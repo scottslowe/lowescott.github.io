@@ -6,10 +6,10 @@ layout: post
 slug: exciting-new-opportunity
 title: Exciting New Opportunity
 wordpress_id: 551
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
+- Writing
 ---
 
 I'm extremely excited about a new opportunity that has just recently opened up for me. I've been offered the opportunity to do some writing for a VMware-focused web site that will be launching shortly. I can't disclose the name of the site or anything like that (at least, not as far as I know), but I'll be sure to let everyone know when the site goes live.

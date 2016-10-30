@@ -6,8 +6,7 @@ layout: post
 slug: vsphere-design-guide-giveaway
 title: vSphere Design Guide Giveaway
 wordpress_id: 3120
-categories:
-- News
+categories: News
 tags:
 - VMware
 - vSphere

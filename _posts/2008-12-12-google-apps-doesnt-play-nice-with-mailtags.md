@@ -6,8 +6,7 @@ layout: post
 slug: google-apps-doesnt-play-nice-with-mailtags
 title: Google Apps Doesn't Play Nice with MailTags
 wordpress_id: 1092
-categories:
-- Information
+categories: Information
 tags:
 - Macintosh
 - Messaging

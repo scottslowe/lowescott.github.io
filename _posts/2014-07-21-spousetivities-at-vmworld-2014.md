@@ -6,11 +6,11 @@ layout: post
 slug: spousetivities-at-vmworld-2014
 title: Spousetivities at VMworld 2014
 wordpress_id: 3475
-categories:
-- Virtualization
+categories: News
 tags:
 - VMware
 - VMworld2014
+- Virtualization
 ---
 
 Long-time readers know that since VMworld 2008 in Las Vegas, my wife Crystal has been organizing spouse activities---aka "Spousetivities"--for spouses, partners, family members, and friends traveling with VMworld conference attendees. This is a true labor of love for Crystal; she works tirelessly to gather sponsors, organize activities, and handle the logistics for the events. Although registration is opening a bit later than usual this year (Crystal's been sick and in the hospital recently), [registration for Spousetivities at VMworld 2014 in San Francisco is now open](http://vmworld2014-spousetivities.eventbrite.com).

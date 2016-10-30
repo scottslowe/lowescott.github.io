@@ -6,8 +6,7 @@ layout: post
 slug: why-i-might-leave-os-x
 title: Why I Might Leave OS X
 wordpress_id: 2979
-categories:
-- Rant
+categories: Rant
 tags:
 - iPhone
 - Linux

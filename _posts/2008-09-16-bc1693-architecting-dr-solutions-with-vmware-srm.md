@@ -6,8 +6,7 @@ layout: post
 slug: bc1693-architecting-dr-solutions-with-vmware-srm
 title: 'BC1693: Architecting DR Solutions with VMware SRM'
 wordpress_id: 910
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

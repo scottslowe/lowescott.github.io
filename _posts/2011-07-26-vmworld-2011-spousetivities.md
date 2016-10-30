@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2011-spousetivities
 title: VMworld 2011 Spousetivities
 wordpress_id: 2360
-categories:
-- Virtualization
+categories: News
 tags:
 - Virtualization
 - VMware

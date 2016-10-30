@@ -6,8 +6,7 @@ layout: post
 slug: infrastructure-coders-denver-and-openstack-denver-meetups
 title: Infrastructure Coders Denver and OpenStack Denver Meetups
 wordpress_id: 2940
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - Collaboration

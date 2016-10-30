@@ -6,8 +6,7 @@ layout: post
 slug: storage-short-take-3
 title: 'Storage Short Take #3'
 wordpress_id: 847
-categories:
-- Information
+categories: Information
 tags:
 - EMC
 - Hardware

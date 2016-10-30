@@ -6,8 +6,7 @@ layout: post
 slug: returning-home
 title: Returning Home
 wordpress_id: 359
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
 ---

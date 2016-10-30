@@ -6,8 +6,7 @@ layout: post
 slug: technology-short-take-40
 title: 'Technology Short Take #40'
 wordpress_id: 3428
-categories:
-- Information
+categories: Information
 tags:
 - Hardware
 - HyperV

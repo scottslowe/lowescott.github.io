@@ -4,8 +4,7 @@ comments: true
 date: 2015-01-08 03:42:00-08:00
 layout: post
 title: Converting URLs to Jekyll References
-categories:
-- Explanation
+categories: Explanation
 tags:
 - Blogging
 - Jekyll

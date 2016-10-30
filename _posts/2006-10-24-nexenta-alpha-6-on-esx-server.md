@@ -6,8 +6,7 @@ layout: post
 slug: nexenta-alpha-6-on-esx-server
 title: Nexenta Alpha 6 on ESX Server
 wordpress_id: 349
-categories:
-- Information
+categories: Information
 tags:
 - Debian
 - ESX

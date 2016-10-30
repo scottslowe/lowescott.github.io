@@ -6,8 +6,7 @@ layout: post
 slug: is-power-the-key-to-controlling-the-cloud
 title: Is Power the Key to Controlling the Cloud?
 wordpress_id: 1006
-categories:
-- Musing
+categories: Musing
 tags:
 - Microsoft
 - Virtualization

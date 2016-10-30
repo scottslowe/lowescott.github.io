@@ -6,8 +6,7 @@ layout: post
 slug: joint-openstack-denver-and-infracoders-denver-meetup
 title: Joint OpenStack Denver and Infracoders Denver Meetup
 wordpress_id: 3180
-categories:
-- Information
+categories: Information
 tags:
 - Automation
 - Collaboration

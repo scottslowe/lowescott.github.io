@@ -4,8 +4,7 @@ comments: true
 date: 2015-04-21 11:55:00-0700
 layout: post
 title: Running Photon on Fusion via Vagrant
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Linux
 - Vagrant

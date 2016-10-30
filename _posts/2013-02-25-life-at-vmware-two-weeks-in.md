@@ -6,11 +6,11 @@ layout: post
 slug: life-at-vmware-two-weeks-in
 title: Life at VMware, Two Weeks In
 wordpress_id: 3102
-categories:
-- General
+categories: Personal
 tags:
 - Nicira
 - VMware
+- Career
 ---
 
 Today marks my "two week anniversary" in [my new role at VMware][1]. So far, it's been everything that I thought it would be---exciting, but also challenging.

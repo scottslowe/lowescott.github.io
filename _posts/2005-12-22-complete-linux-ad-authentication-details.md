@@ -6,8 +6,7 @@ layout: post
 slug: complete-linux-ad-authentication-details
 title: Complete Linux-AD Authentication Details
 wordpress_id: 143
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Interoperability
 - ActiveDirectory

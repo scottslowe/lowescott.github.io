@@ -6,8 +6,7 @@ layout: post
 slug: no-broad-openbsd-ad-integration
 title: No Broad OpenBSD-AD Integration
 wordpress_id: 347
-categories:
-- Information
+categories: Information
 tags:
 - ActiveDirectory
 - BSD

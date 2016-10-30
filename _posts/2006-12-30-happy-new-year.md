@@ -6,8 +6,7 @@ layout: post
 slug: happy-new-year
 title: Happy New Year!
 wordpress_id: 395
-categories:
-- General
+categories: General
 tags:
 - Christianity
 - Personal

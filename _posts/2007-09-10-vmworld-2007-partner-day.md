@@ -6,8 +6,7 @@ layout: post
 slug: vmworld-2007-partner-day
 title: VMworld 2007 Partner Day
 wordpress_id: 530
-categories:
-- News
+categories: News
 tags:
 - ESX
 - Hardware

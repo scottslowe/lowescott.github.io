@@ -6,8 +6,7 @@ layout: post
 slug: why-is-microsoft-fighting-so-hard
 title: Why is Microsoft Fighting so Hard?
 wordpress_id: 466
-categories:
-- Virtualization
+categories: Rant
 tags:
 - ESX
 - Microsoft

@@ -6,8 +6,7 @@ layout: post
 slug: apparent-datetime-issue-with-update-2
 title: Apparent Date/Time Issue With Update 2
 wordpress_id: 813
-categories:
-- Virtualization
+categories: News
 tags:
 - ESX
 - ESXi

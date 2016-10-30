@@ -4,8 +4,7 @@ comments: true
 date: 2015-05-11 07:13:00-0700
 layout: post
 title: Using PXE with virt-install
-categories:
-- Information
+categories: Information
 tags:
 - Linux
 - KVM

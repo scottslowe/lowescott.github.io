@@ -6,8 +6,7 @@ layout: post
 slug: building-libvirt-1-0-1-rpms-for-centos-6-3
 title: Building Libvirt 1.0.1 RPMs for CentOS 6.3
 wordpress_id: 3052
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - CentOS
 - CLI

@@ -6,10 +6,10 @@ layout: post
 slug: the-move-to-colorado-day-2
 title: 'The Move to Colorado: Day 2'
 wordpress_id: 2397
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
+- Travel
 ---
 
 I've just wrapped up Day 2 of my road trip to Colorado. I started the day in Nashville, TN and ended the day in Kansas City, KS (actually Overland Park). If I had two words to describe today, those words would be _windy_ and _corn_.

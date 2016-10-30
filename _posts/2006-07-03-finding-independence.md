@@ -6,8 +6,7 @@ layout: post
 slug: finding-independence
 title: Finding Independence
 wordpress_id: 289
-categories:
-- Personal
+categories: Personal
 tags:
 - Christianity
 - Personal

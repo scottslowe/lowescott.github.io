@@ -6,11 +6,9 @@ layout: post
 slug: site-maintenance
 title: Site Maintenance
 wordpress_id: 1243
-categories:
-- General
+categories: General
 tags:
 - Blogging
-- General
 - Web
 ---
 

@@ -6,8 +6,7 @@ layout: post
 slug: my-ubuntu-mac-article-is-popular-i-guess
 title: My Ubuntu-Mac Article is Popular, I Guess
 wordpress_id: 1129
-categories:
-- Information
+categories: Information
 tags:
 - Linux
 - Macintosh

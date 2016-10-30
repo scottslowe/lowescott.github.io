@@ -6,11 +6,11 @@ layout: post
 slug: spousetivities-at-a-new-conference
 title: Spousetivities at a New Conference
 wordpress_id: 2626
-categories:
-- General
+categories: Information
 tags:
-- General
 - Personal
+- VMware
+- EMC
 ---
 
 In case you hadn't heard, [Spousetivities](http://spousetivities.com/)--the spouse activities that had their genesis at VMworld 2008 in Las Vegas---has expanded once again! Last year, Spousetivities expanded to include EMC World, and just last week Crystal concluded her second year of activities at EMC World 2012 in Las Vegas. This year, Spousetivities expands to not only include VMworld and EMC World, but also [Dell Storage Forum 2012](http://www.dellstorageforum.com/), located this year in Boston, MA.

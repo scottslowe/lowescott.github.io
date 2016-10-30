@@ -6,8 +6,7 @@ layout: post
 slug: openbsd-39-on-esx-server
 title: OpenBSD 3.9 on ESX Server
 wordpress_id: 252
-categories:
-- Explanation
+categories: Explanation
 tags:
 - BSD
 - ESX

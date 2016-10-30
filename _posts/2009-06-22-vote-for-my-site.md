@@ -6,11 +6,11 @@ layout: post
 slug: vote-for-my-site
 title: Vote for My Site!
 wordpress_id: 1407
-categories:
-- Virtualization
+categories: Rant
 tags:
 - Blogging
 - Virtualization
+- VMware
 ---
 
 Last week, Eric Siebert issued a call for the community to [vote on the top 5 VMware blogs](http://vsphere-land.com/news/heres-your-chance-to-pick-the-top-vmware-blogs.html). If you haven't already voted in Eric's [survey](https://vsphere-land.justsurvey.me/506ca756773), please go over now and be sure to cast a vote to keep me in the top 5 of Eric's list.

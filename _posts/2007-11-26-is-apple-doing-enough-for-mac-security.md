@@ -6,8 +6,7 @@ layout: post
 slug: is-apple-doing-enough-for-mac-security
 title: Is Apple Doing Enough for Mac Security?
 wordpress_id: 584
-categories:
-- Rant
+categories: Rant
 tags:
 - Apple
 - Macintosh

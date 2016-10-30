@@ -6,8 +6,7 @@ layout: post
 slug: no-liveblog-for-ta2441
 title: No Liveblog for TA2441
 wordpress_id: 945
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Networking
 - Virtualization

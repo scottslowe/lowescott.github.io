@@ -6,8 +6,7 @@ layout: post
 slug: some-recent-oss-related-announcements
 title: Some Recent OSS-Related Announcements
 wordpress_id: 3317
-categories:
-- News
+categories: News
 tags:
 - Linux
 - OpenStack

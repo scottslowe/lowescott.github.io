@@ -6,8 +6,7 @@ layout: post
 slug: problem-with-vmxnet3-driver
 title: Problem with VMXNET3 Driver
 wordpress_id: 2480
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Microsoft
 - Networking

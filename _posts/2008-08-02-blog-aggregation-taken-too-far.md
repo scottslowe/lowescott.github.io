@@ -6,10 +6,9 @@ layout: post
 slug: blog-aggregation-taken-too-far
 title: Blog Aggregation Taken Too Far
 wordpress_id: 778
-categories:
-- Rant
+categories: Rant
 tags:
-- General
+- Writing
 - Blogging
 - Web
 ---

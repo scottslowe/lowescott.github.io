@@ -6,8 +6,7 @@ layout: post
 slug: vsp3205-tech-preview-vstorage-apis
 title: 'VSP3205: Tech Preview, vStorage APIs'
 wordpress_id: 2381
-categories:
-- Liveblog
+categories: Liveblog
 tags:
 - Virtualization
 - VMware

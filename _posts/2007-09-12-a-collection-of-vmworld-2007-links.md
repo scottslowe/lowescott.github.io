@@ -6,8 +6,7 @@ layout: post
 slug: a-collection-of-vmworld-2007-links
 title: A Collection of VMworld 2007 Links
 wordpress_id: 540
-categories:
-- Virtualization
+categories: Information
 tags:
 - ESX
 - Hardware

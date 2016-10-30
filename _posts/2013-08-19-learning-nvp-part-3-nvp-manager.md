@@ -6,8 +6,7 @@ layout: post
 slug: learning-nvp-part-3-nvp-manager
 title: 'Learning NVP, Part 3: NVP Manager'
 wordpress_id: 3244
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - Networking
 - Nicira

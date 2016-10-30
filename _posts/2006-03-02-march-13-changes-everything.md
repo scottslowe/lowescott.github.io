@@ -6,8 +6,7 @@ layout: post
 slug: march-13-changes-everything
 title: March 13 Changes Everything
 wordpress_id: 194
-categories:
-- Personal
+categories: Personal
 tags:
 - Personal
 ---

@@ -6,8 +6,7 @@ layout: post
 slug: book-review-vmware-esx-server-in-the-enterprise
 title: 'Book Review: VMware ESX Server in the Enterprise'
 wordpress_id: 694
-categories:
-- Review
+categories: Review
 tags:
 - ESX
 - Virtualization

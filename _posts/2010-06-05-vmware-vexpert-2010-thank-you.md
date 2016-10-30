@@ -6,8 +6,7 @@ layout: post
 slug: vmware-vexpert-2010-thank-you
 title: 'VMware vExpert 2010: Thank You!'
 wordpress_id: 1966
-categories:
-- Virtualization
+categories: Personal
 tags:
 - vExpert
 - Virtualization

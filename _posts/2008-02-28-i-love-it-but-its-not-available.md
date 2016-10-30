@@ -6,8 +6,7 @@ layout: post
 slug: i-love-it-but-its-not-available
 title: I Love It, But It's Not Available
 wordpress_id: 647
-categories:
-- Rant
+categories: Rant
 tags:
 - NAS
 - NetApp

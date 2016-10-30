@@ -6,8 +6,7 @@ layout: post
 slug: merry-christmas-3
 title: Merry Christmas!
 wordpress_id: 2190
-categories:
-- General
+categories: General
 tags:
 - Personal
 ---

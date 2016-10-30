@@ -6,8 +6,7 @@ layout: post
 slug: vmware-vsphere-review-in-the-works
 title: VMware vSphere Review in the Works
 wordpress_id: 1384
-categories:
-- Virtualization
+categories: General
 tags:
 - ESX
 - ESXi

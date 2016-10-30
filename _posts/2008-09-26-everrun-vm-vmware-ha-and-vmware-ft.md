@@ -6,8 +6,7 @@ layout: post
 slug: everrun-vm-vmware-ha-and-vmware-ft
 title: everRun VM, VMware HA, and VMware FT
 wordpress_id: 954
-categories:
-- Virtualization
+categories: Explanation
 tags:
 - Citrix
 - ESX

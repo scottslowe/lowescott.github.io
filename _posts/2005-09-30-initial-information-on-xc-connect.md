@@ -6,8 +6,7 @@ layout: post
 slug: initial-information-on-xc-connect
 title: Initial Information on XC Connect
 wordpress_id: 97
-categories:
-- Information
+categories: Information
 tags:
 - Collaboration
 ---

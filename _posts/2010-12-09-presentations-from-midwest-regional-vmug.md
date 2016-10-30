@@ -6,8 +6,7 @@ layout: post
 slug: presentations-from-midwest-regional-vmug
 title: Presentations from Midwest Regional VMUG
 wordpress_id: 2173
-categories:
-- Virtualization
+categories: Presentation
 tags:
 - Storage
 - Virtualization

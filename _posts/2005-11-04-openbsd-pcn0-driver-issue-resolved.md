@@ -6,8 +6,7 @@ layout: post
 slug: openbsd-pcn0-driver-issue-resolved
 title: OpenBSD pcn0 Driver Issue Resolved
 wordpress_id: 112
-categories:
-- Tutorial
+categories: Tutorial
 tags:
 - BSD
 - Networking
