@@ -39,6 +39,8 @@ Once you've done these two steps, then you're good to go to use Vagrant to spin 
 
 I'll update this post as soon as the fix rolls into a Vagrant release and this workaround is no longer needed.
 
+**UPDATE 2016-11-19**: This fix is now available in Vagrant 1.8.7.
+
 
 
 [link-1]: https://vmware.github.io/photon/
