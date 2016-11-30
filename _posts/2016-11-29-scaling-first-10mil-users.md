@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2016-11-29
+date: 2016-11-29 09:00:00+00:00
 layout: post
 title: 'Liveblog: Scaling to Your First 10 Million Users'
 categories: Liveblog

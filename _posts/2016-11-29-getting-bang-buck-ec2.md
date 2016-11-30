@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2016-11-29
+date: 2016-11-29 15:00:00+00:00
 layout: post
 title: 'Liveblog: Getting the Most Bang for Your Buck with EC2'
 categories: Liveblog

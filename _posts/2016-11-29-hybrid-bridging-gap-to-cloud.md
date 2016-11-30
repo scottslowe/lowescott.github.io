@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2016-11-29
+date: 2016-11-29 11:00:00+00:00
 layout: post
 title: 'Liveblog: Hybrid Architectures, Bridging the Gap to the Cloud'
 categories: Liveblog
