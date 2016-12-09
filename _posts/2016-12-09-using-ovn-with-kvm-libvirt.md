@@ -31,7 +31,7 @@ Ready? Let's jump in!
 
 The biggest "challenge" here is package availability---many Linux distributions don't have packages available for OVS 2.6.0, which is the first release with non-experimental support of OVN. If you're an Ubuntu user, then you can use the Ubuntu Cloud Archive for the OpenStack "Newton" release, which includes OVS/OVN 2.6.0 packages. For other distributions, you'll probably need to compile from source. In that case, the [OVS installation documentation][link-4] is quite accurate and usable.
 
-For the purposes of this post, I'll assume you're using Ubuntu 16.04 and will pull packages from the Ubuntu Cloud Archive. Instructions for using the Ubuntu Cloud Archive are here; once you've added the UCA repository for Newton, installing OVS and OVN is just a matter of running `apt install` (or `apt-get install`) to install the following packages:
+For the purposes of this post, I'll assume you're using Ubuntu 16.04 and will pull packages from the Ubuntu Cloud Archive. Instructions for using the Ubuntu Cloud Archive are [here][link-5]; once you've added the UCA repository for Newton, installing OVS and OVN is just a matter of running `apt install` (or `apt-get install`) to install the following packages:
 
 * openvswitch-common
 * openvswitch-switch
