@@ -52,7 +52,7 @@ Once the packages are installed, then it's necessary to configure OVN appropriat
 
         ovs-vsctl set Open_vSwitch . \
         external_ids:ovn-remote="tcp:CENTRAL_IP:6642" \
-        external_ids:ovn-nb="tcp:CENTRAL_IP:6614" \
+        external_ids:ovn-nb="tcp:CENTRAL_IP:6641" \
         external_ids:ovn-encap-ip=<IP address on this system> \
         external_ids:ovn-encap-type=geneve
 
