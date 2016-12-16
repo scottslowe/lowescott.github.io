@@ -19,7 +19,7 @@ Here's a quick update on where things stand so far.
 
 ## Linux Distribution
 
-I've looked at a far number of Linux distributions. I tried [Elementary OS][link-2], which [some have raved about][link-1] but which I found too simplistic. I also went back and looked again at Ubuntu derivatives like [Linux Mint][link-3]. Given that Ubuntu is itself derived from Debian, I also took a look at [Debian "Jessie"][link-11]. Finally, I tested [Fedora 25][link-4]. For a number of reasons---which I'll describe in more detail in a moment---I've settled on [Ubuntu 16.04][link-5].
+I've looked at a fair number of Linux distributions. I tried [Elementary OS][link-2], which [some have raved about][link-1] but which I found too simplistic. I also went back and looked again at Ubuntu derivatives like [Linux Mint][link-3]. Given that Ubuntu is itself derived from Debian, I also took a look at [Debian "Jessie"][link-11]. Finally, I tested [Fedora 25][link-4]. For a number of reasons---which I'll describe in more detail in a moment---I've settled on [Ubuntu 16.04][link-5].
 
 So, why Ubuntu 16.04 "Xenial Xerus"? Keep in mind that the reasons I list below are _my_ reasons, and may not apply to you or your situation. I also realize that some of these points tread on "religious war" territory, so I'll just say again that it's up to each individual to find what works best for her/him.
 
