@@ -19,7 +19,7 @@ This script takes advantage of two tools: `pandoc` and `sed`. `pandoc` is [a thi
 
 Here's the script, heavily commented so as to make it easier to understand what's happening:
 
-``` shell
+{% highlight text %}
 #!/usr/bin/env bash
 
 # Assign help text to variable for user later
@@ -60,7 +60,7 @@ pandoc --from=opml --to=markdown_mmd --atx-headers $SRC | \
 sed -e 's/^## /* /g' | \
 sed -e 's/^### /    * /g' | \
 sed -e 's/^#### /        * /g' > $DST
-```
+{% endhighlight %}
 
 Although the script is really straightforward, let's break it down just a bit:
 
