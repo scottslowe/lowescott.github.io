@@ -73,6 +73,7 @@ Nothing this time around!
 * Bill Ho shares the results of some [experimenting with instant clone ESXi on vSAN][link-5] for home lab testing. This is all unsupported stuff, of course, but that hasn't stopped home-labbers before.
 * Kyle Ruddy has a post on [getting started with Datacenter CLI (DCLI)][link-15], a new CLI tool that's designed to take advantage of the RESTful APIs introduced with vSphere 6.5. While I'm stoked to see more CLI-centric, scriptable tools being introduced, I do have to wonder why VMware adopted (seemingly) non-standard things like using "+" symbols for command-line options. Why not stick with the standard "-" (for short form) or "--" (for long form) conventions? I hope there's a good technical reason. If not, making it different just for the sake of being different only adds to the "friction" of someone wanting to use it.
 * William Lam has some information on [automated vSphere lab deployment][link-19] for vSphere 6.0u2 and vSphere 6.5.
+* Roman Dodin [shares a handy Python script][link-27] he wrote called `brvirt` (billed as when "brctl meets virsh"). The script helps manage the relationship between bridge interfaces and VM interfaces. It's [available via GitHub][link-28].
 
 ## Career/Soft Skills
 
@@ -110,4 +111,6 @@ I hope the rest of your 2016 is pleasant, uneventful, and enjoyable! Happy New Y
 [link-24]: https://medium.com/@kief/https-medium-com-kief-using-pipelines-to-manage-environments-with-infrastructure-as-code-b37285a1cbf5#.qqzsylx16
 [link-25]: http://automation.ipspace.net/Example:Creating_Ansible_Inventory_from_Vagrant_SSH_Configuration
 [link-26]: http://billho.website/?p=801
+[link-27]: http://noshut.ru/2016/12/brvirt-when-brctl-meets-virsh/
+[link-28]: https://github.com/hellt/brvirt
 [xref-1]: {% post_url 2007-02-16-terminal-services-client %}
