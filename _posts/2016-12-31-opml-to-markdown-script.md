@@ -19,7 +19,7 @@ This script takes advantage of two tools: `pandoc` and `sed`. `pandoc` is [a thi
 
 Here's the script, heavily commented so as to make it easier to understand what's happening:
 
-``` bash
+``` shell
 #!/usr/bin/env bash
 
 # Assign help text to variable for user later
