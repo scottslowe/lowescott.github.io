@@ -39,5 +39,5 @@ Thanks!
 
 [link-1]: http://pandoc.org/
 [link-2]: https://github.com/lowescott/scripts
-[xref-1]: {% post_url 2014-05-09-some-useful-markdown-tols-for-os-x %}
+[xref-1]: {% post_url 2014-05-19-some-useful-markdown-tools-for-os-x %}
 [xref-2]: {% post_url 2016-12-16-linux-migration-initial-progress-report %}
