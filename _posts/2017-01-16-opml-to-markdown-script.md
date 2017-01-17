@@ -21,7 +21,7 @@ The script has two basic parts:
 
 1. A `pandoc` command converts the OPML to MultiMarkdown. The command looks something like this:
 
-        pandoc --from=opml --to=markdown_mmd --atx-headers $SRC
+        pandoc --from=opml --to=markdown_mmd --atx-headers
 
     The result of the command is sent to STDOUT.
 
