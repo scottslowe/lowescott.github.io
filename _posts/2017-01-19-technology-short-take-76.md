@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2017-01-19
+date: 2017-01-19 11:00:00-0700
 layout: post
 title: 'Technology Short Take #76'
 categories: Information

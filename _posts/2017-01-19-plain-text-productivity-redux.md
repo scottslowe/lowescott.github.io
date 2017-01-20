@@ -1,7 +1,7 @@
 ---
 author: slowe
 comments: true
-date: 2017-01-19
+date: 2017-01-19 15:00:00-0700
 layout: post
 title: Plain Text Productivity Redux
 categories: Explanation
