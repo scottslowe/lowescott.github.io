@@ -4,7 +4,7 @@ comments: true
 date: 2017-02-01
 layout: post
 title: 'The Linux Migration: Final Linux Distro Selection'
-categories: Tutorial
+categories: Information
 tags:
 - Linux
 - CLI
