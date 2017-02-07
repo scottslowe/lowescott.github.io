@@ -10,6 +10,7 @@ tags:
 - Macintosh
 - Virtualization
 - CLI
+- VirtualBox
 ---
 
 One of the things I often tell people is, "Use the right tool for the job." As technologists, we shouldn't get so locked onto any one technology or product that we can't see when other technologies or products might solve a particular problem more effectively. It's for this reason that I recently made [VirtualBox][link-2]---not [VMware Fusion][link-1]---my primary virtualization provider for [Vagrant][link-3] environments.
