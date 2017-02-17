@@ -39,7 +39,7 @@ Here's the process I followed:
 
         sudo ln -s /opt/sublime_text/sublime_text /usr/bin/subl
 
-And that's it. You can now launch ST3 from the Fedora Overview screen, or by running `subl` in your terminal. (Side note: I have noted that running `subl` without first launching ST3 via the GUI creates an additional icon in the Dash. This may not be a big deal for you. If you don't like that, launch ST3 first via the GUI, then use `subl` all you like.)
+And that's it. You can now launch ST3 from the Fedora Overview screen, or by running `subl` in your terminal. (Side note: I have noted that running `subl` without first launching ST3 via the GUI creates an additional icon in the Dash. This may not be a big deal for you. If you don't like that, launch ST3 first via the GUI, then use `subl` all you like. Or, use the fix described in [this post][xref-1].)
 
 Enjoy!
 
@@ -47,3 +47,4 @@ Enjoy!
 
 [link-1]: http://www.sublimetext.com/
 [link-2]: https://getfedora.org/
+[xref-1]: {% post_url 2017-02-16-fixing-double-sublime-text-icons-on-fedora-25 %}
