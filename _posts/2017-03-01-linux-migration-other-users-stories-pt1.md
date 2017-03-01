@@ -3,7 +3,7 @@ author: slowe
 comments: true
 date: 2017-03-01
 layout: post
-title: 'The Linux Migration: Other Users' Stories, Part 1'
+title: "The Linux Migration: Other Users' Stories, Part 1"
 categories: Information
 tags:
 - Linux
