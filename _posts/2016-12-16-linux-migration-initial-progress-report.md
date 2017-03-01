@@ -31,6 +31,8 @@ So, why Ubuntu 16.04 "Xenial Xerus"? Keep in mind that the reasons I list below 
 
 * _User interface:_ Despite some misgivings over the Unity interface, I've found that I prefer it to GNOME 3 and Classic GNOME. I know that many people will disagree with me here, and that's fine. It's what works for _me_.
 
+(Update: After a few weeks and some additional testing, I've switched to Fedora 25 with GNOME 3. See [this post][xref-3] for more details.)
+
 ## Data Formats
 
 This is a big issue, and one that anyone seeking to migrate off OS X (or Windows, for that matter) must address. I'd already made the move to [Markdown][link-6] (MultiMarkdown, technically) for a great deal of my content generation, and I'd made the switch to [Sublime Text][link-7] (ST) as my primary editor. ST is a cross-platform app, so I can switch to ST on Linux and preserve the majority of my user experience.
@@ -70,3 +72,4 @@ As you can see, there's still lots of work to do and lots of questions to answer
 [link-15]: https://www.omnigroup.com/omnifocus
 [xref-1]: {% post_url 2012-11-30-why-i-might-leave-os-x %}
 [xref-2]: {% post_url 2015-04-06-plain-text-productivity-experiment %}
+[xref-3]: {% post_url 2017-02-01-linux-migration-final-distro-selection %}
