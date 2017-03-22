@@ -27,7 +27,7 @@ Each option has its advantages and disadvantages, naturally:
 
 * If you choose to go down the IMAP/SMTP route, you'll have lots of flexibility in choosing an e-mail client ([Thunderbird][link-2], [Evolution][link-3], [Geary][link-4], and [KMail][link-5], just to name a few).
 * _However_, IMAP/SMTP doesn't provide address book lookup (you'd need LDAP support for that), which may make using these protocols in a larger corporate environment a bit more challenging.
-* If you choose Exchange Web Services, you have precisely _two_ options from which to choose: Thunderbird with [the paid Exquilla add-on][link-6], or Evolution.
+* If you choose Exchange Web Services, you have a couple different options from which to choose. If you want to use a client with EWS support, you can use either Thunderbird with [the paid Exquilla add-on][link-6], or Evolution. There's also a package called [DavMail][link-12] that essentially acts like an EWS proxy and will let you use any IMAP client.
 * Choosing EWS generally also gives you address book lookups and _maybe_ some calendaring support (again, more on that in part 2).
 * Browser-based access is pretty self-explanatory, and the pros and cons are also pretty self-explanatory.
 
@@ -60,4 +60,5 @@ In the next post on corporate collaboration, I'll discuss calendaring.
 [link-9]: https://addons.mozilla.org/en-us/thunderbird/addon/enigmail/
 [link-10]: https://addons.mozilla.org/en-us/thunderbird/addon/quicktext/
 [link-11]: https://addons.mozilla.org/en-us/thunderbird/addon/gnotifier/
+[link-12]: http://davmail.sourceforge.net/
 [xref-1]: {% post_url 2016-12-16-linux-migration-initial-progress-report %}
