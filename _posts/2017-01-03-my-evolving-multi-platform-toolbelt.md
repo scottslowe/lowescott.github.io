@@ -35,11 +35,14 @@ A few days ago [I posted a tweet][link-1] about a new tool I'd (re-)discovered c
 
 * _Enpass:_ This multi-platform password manager supports OS X, Linux, iOS, and Android (other platforms are supported, but those four are the only platforms I use). It's not quite as feature-rich or polished as [1Password][link-14] (which supports OS X, Windows, iOS, and Android), but it will do for now. (Hey Agile Bits, all you need is a Linux version of 1Password---hint, hint.)
 
+* _TaskPaper-formatted text files for task management:_ I've adopted the TaskPaper format for using plain text files for task management. Check out [this post][xref-2] for more details.
+
+* _Firefox and Firefox Sync:_ For web browsing, I'm using [Mozilla Firefox][link-16] and Firefox Sync across Linux, OS X, iOS, and Android. I'll occasionally use Google Chrome as needed.
+
 Some tools that I'm still evaluating:
 
 * Hexchat (for IRC; works great on Linux and also supports OS X and Windows)
 * XMind (for mind mapping; works OK on Linux but haven't tested it on OS X yet)
-* TaskPaper-formatted plain text files for task management (more on that in a future post)
 
 Well, that's it for now. I'll keep this post updated as my toolbelt evolves. In the meantime, if you have any suggestions for tools that I should evaluate, feel free to [hit me up on Twitter][link-15] (or Wire, for that matter).
 
@@ -60,4 +63,6 @@ Well, that's it for now. I'll keep this post updated as my toolbelt evolves. In 
 [link-13]: https://fruux.com/
 [link-14]: https://1password.com/
 [link-15]: https://twitter.com/scott_lowe/
+[link-16]: https://www.mozilla.org/en-US/firefox/
 [xref-1]: {% post_url 2016-09-28-why-now-using-virtualbox-with-vagrant %}
+[xref-2]: {% post_url 2017-01-19-plain-text-productivity-redux %}
