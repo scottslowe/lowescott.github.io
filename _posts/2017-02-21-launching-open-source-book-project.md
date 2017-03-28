@@ -31,6 +31,8 @@ I decided _against_ using GitBook to host the Git repository for the book. Inste
 
 Stay tuned for more updates as this project progresses.
 
+**UPDATE 28 March 2017:** I'm canceling this project. See this post for more details.
+
 
 
 [link-1]: http://openvswitch.org/
@@ -42,3 +44,4 @@ Stay tuned for more updates as this project progresses.
 [link-7]: https://github.com/lowescott/ovs-cookbook/pulls
 [link-8]: https://git-scm.com/
 [xref-1]: {% post_url 2017-01-31-looking-ahead-2017-projects %}
+[xref-2]: {% post_url 2017-03-28-canceling-ovs-cookbook-project %}
