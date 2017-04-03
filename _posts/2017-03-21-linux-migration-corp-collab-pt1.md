@@ -11,6 +11,7 @@ tags:
 - Fedora
 - Messaging
 - Exchange
+- Collaboration
 ---
 
 One major aspect of [my migration to Linux as my primary desktop OS][xref-1] is how well it integrates with corporate communication and collaboration systems. Based on the feedback I've gotten from others on Twitter, this is a major concern for a lot of folks out there. In fact, a number of folks have indicated that this is the _only_ thing keeping them from migrating to Linux. There are a number of different aspects to "corporate communication and collaboration," so I'm breaking this down into multiple posts (each post will discuss one particular aspect). In this post, I'll discuss integration with corporate e-mail.
