@@ -37,7 +37,7 @@ If, on the other hand, your employer has selected Skype for Business (S4B)---as 
 
 * There's no official client for Skype for Business (S4B) for Linux. So, one way or another, you _will_ be using a third-party client.
 * I mentioned in the previous section [the Linux client for S4B from tel.red][link-2]. (The client is called Sky or Sky Linux.) My testing with Sky has been less than stellar, unfortunately. I've encountered search bugs that make it impossible to look up folks from the corporate directory, which means that if the user isn't already in your contacts list then you can't chat with them. (I've opened a support case with tel.red, and I'll update this post with more information once it's available.)
-* Pidgin has [a SIPE plugin][link-7] that interoperates with Office 365/S4B. Unfortunately, there's no way to search for contacts ("buddies" in the Pidgin parlance), which greatly limits its effectiveness. Thus, this plugin is good for only the most basic chat functionality when other users are already in your contacts list.
+* Pidgin has [a SIPE plugin][link-7] that interoperates with Office 365/S4B. Originally, I thought that there was no way to search for contacts ("buddies" on Pidgin parlance) with the SIPE plugin, but an astute reader showed me that it is, in fact, possible (go to the Accounts menu, select the SIPE (or "Office Communicator") account name, and look for "Contact search...").
 
 My employer uses both S4B as well as Slack (and some other internal tools that are specific to my employer), so it's a mixed bag. I'm using the Sky Linux client as well as the SIPE plugin for Pidgin to try to address the S4B side, and running the Slack client to address the Slack side.
 
