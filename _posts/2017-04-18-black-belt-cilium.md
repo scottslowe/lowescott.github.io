@@ -3,7 +3,7 @@ author: slowe
 comments: true
 date: 2017-04-18
 layout: post
-title: 'DockerCon 2017 Black Belt Session: Cilium for Network and Application Security'
+title: 'Liveblog: Cilium for Network and Application Security with BPF and XDP'
 categories: Liveblog
 tags:
 - Networking

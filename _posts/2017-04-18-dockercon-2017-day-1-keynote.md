@@ -3,7 +3,7 @@ author: slowe
 comments: true
 date: 2017-04-18
 layout: post
-title: DockerCon 2017 Day 1 Keynote
+title: 'Liveblog: DockerCon 2017 Day 1 Keynote'
 categories: Liveblog
 tags:
 - Docker
