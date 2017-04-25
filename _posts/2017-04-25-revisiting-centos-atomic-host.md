@@ -48,6 +48,6 @@ So what's the final verdict? The answer certainly isn't as clear-cut as my misin
 [link-4]: https://www.openstack.org/
 [link-5]: https://www.ansible.com/
 [link-6]: https://coreos.com/
-[xref-1]: {% post_url 2015-03-08-choosing-coreos-over-atomic.md %}
+[xref-1]: {% post_url 2015-03-08-choosing-coreos-over-atomic %}
 [xref-2]: {% post_url 2017-03-02-customizing-docker-centos-atomic-host %}
 [xref-3]: {% post_url 2017-03-29-easily-finding-latest-coreos-ami-id %}
