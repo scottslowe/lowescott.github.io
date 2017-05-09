@@ -54,6 +54,6 @@ Until then, if you're looking for a new way to handle output formats for your Ma
 
 
 [link-1]: http://daringfireball.com/markdown/
-[link-2]: http://fletcherpenny.net/multimarkdown/
+[link-2]: http://fletcherpenney.net/multimarkdown/
 [link-3]: http://blog.codybunch.com/2017/04/17/On-Computerized-Note-Taking/
 [link-4]: https://www.digitalocean.com/community/tutorials/how-to-use-makefiles-to-automate-repetitive-tasks-on-an-ubuntu-vps
