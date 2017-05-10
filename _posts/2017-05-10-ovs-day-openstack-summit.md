@@ -48,6 +48,10 @@ Ben Pfaff led the audience through an OVN tutorial using OVN and DevStack. The t
 
 This session described a mechanism that eBay is using to scale OVN in a Kubernetes environment; they add a new component---called "Baker", a play on the fact that OVN is often pronounced "oven"---that leverages etcd to provide as scale-out layer above the OVN northbound database for additional scale. The session also shared some performance details around Baker+OVN+Neutron.
 
+## New Approach to OVS Datapath Performance
+
+This session described an alternate approach to an OVS datapath that would supposedly marry the benefits of the OVS kernel datapath (integrated in the Linux kernel) and the DPDK datapath. If I understood the presentation correctly, though, this new approach would require "re-upstreaming" into the Linux kernel, which is not an insignificant effort.
+
 That wrapped up the OVS Open Source Day at the OpenStack Summit. I _think_ the audio from the sessions may have been recorded; if I find any information on where those recordings may be available, I'll update this post.
 
 
