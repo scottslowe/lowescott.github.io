@@ -25,7 +25,7 @@ In my introduction on using SSH bastion hosts (linked above)---or in just about 
 
 Normally, that information would go into `~/.ssh/config`, which is the default SSH configuration file.
 
-In my case, I only allow public key authentication to "trusted" systems (I don't want SSH throwing my private key at systems unless I've instructed it to do so). So, in my `~/.ssh/config` file, I allow public key authentication only for specific hosts but not for all hosts. I do that using a configuration that looks something like this (IP addresses and SSH keys have been changed to protect the innocent):
+In my case, I only allow public key authentication to "trusted" systems (I vaguely recall an article I read a while ago about a potential concern regarding the key exchange, though I can't find that article now). So, in my `~/.ssh/config` file, I allow public key authentication only for specific hosts but not for all hosts. I do that using a configuration that looks something like this (IP addresses and SSH keys have been changed to protect the innocent):
 
     Host 192.168.100.*
       PubkeyAuthentication yes
@@ -37,7 +37,7 @@ In my case, I only allow public key authentication to "trusted" systems (I don't
     Host *
       PubkeyAuthentication no
 
-In this case, SSH public key authentication is allowed to my home subnet and to localhost (this is necessary for [Vagrant][link-2] to work as expected when using [VirtualBox][link-3], by the way), but it is _not_ permitted for all other hosts. Call me paranoid, but I'd rather not have my private keys thrown at systems unless I know it's happening.
+In this case, SSH public key authentication is allowed to my home subnet and to localhost (this is necessary for [Vagrant][link-2] to work as expected when using [VirtualBox][link-3], by the way), but it is _not_ permitted for all other hosts. Call me paranoid.
 
 By now you're probably thinking, "Duly noted, Scott is a bit wacko, but what does this have to do with bastion hosts?"
 
@@ -85,6 +85,8 @@ Why? In retrospect, it's an obvious reason, but it took me quite a while to find
 With this custom configuration in place (and assuming a default configuration like mine that disallows public key authentication by default), then you're able to run `ssh -F ssh.cfg private1` and you'll be connected to the private cloud instance via the bastion, authenticated using the specified key pair. (Clearly, I've glossed over details like resolving host names, so you'd need to ensure your instances have DNS entries or use `Host` directives in your custom SSH configuration).
 
 The key takeaway: if you're using custom SSH configurations with SSH bastion hosts, then---depending on your setup---you may need to make sure your `ProxyCommand` setting _also_ references the custom configuration.
+
+**UPDATE:** Several folks have contacted me regarding the SSH key exchange, and how the private key never actually leaves the client. I've updated the post accordingly. I'll keep looking for the original article that sparked my concern over limiting public key authentication, and if I find it I'll add the link here. Thanks for the feedback!
 
 
 
