@@ -29,5 +29,5 @@ I hope to see you there!
 
 
 
-[link-1]: http://www.vmworld.com/
+[link-1]: http://www.vmworld.com
 [link-2]: https://twitter.com/scott_lowe
